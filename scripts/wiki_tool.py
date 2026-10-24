@@ -6,6 +6,7 @@ import hashlib
 import ipaddress
 import json
 import re
+import string
 import sys
 import tempfile
 import urllib.request
@@ -59,6 +60,8 @@ def load_modules(root):
         days.add(day)
     if 'benchmark' not in ids:
         raise ValueError('模块清单缺少 benchmark')
+    if any(row['id'] == 'benchmark' and row['weekday'] != 6 for row in rows):
+        raise ValueError('benchmark 必须安排在周日')
     return sorted(rows, key=lambda row: row['weekday'])
 
 
@@ -100,11 +103,11 @@ def curriculum_errors(root, topics, sources, modules):
     errors = []
     module_ids = {row['id'] for row in modules}
     levels = {'understand', 'derive', 'build', 'evaluate'}
-    def inside_file(value):
+    def inside_file(value, directory=root):
         if not isinstance(value, str) or not value.strip():
             return False
         path = (root / value).resolve()
-        return path.is_relative_to(root) and path.is_file()
+        return path.is_relative_to(directory) and path.is_file()
     for module in modules:
         if not inside_file(module['page']):
             errors.append(f'{module["id"]}: 模块页面不存在或越界')
@@ -119,7 +122,7 @@ def curriculum_errors(root, topics, sources, modules):
         if topic.get('depth') == 'reproduced' or topic.get('practice_status') == 'executed':
             if not inside_file(topic.get('experiment_record')):
                 errors.append(f'{key}: 缺少复现实验记录')
-        if not inside_file(topic.get('page')):
+        if not inside_file(topic.get('page'), root / 'wiki'):
             continue
         body = markdown_prose((root / topic['page']).read_text(encoding='utf-8'))
         parts = re.split(r'^##\s+(.+)$', body, flags=re.M)
@@ -130,7 +133,8 @@ def curriculum_errors(root, topics, sources, modules):
             content = re.sub(r'\b(?:TODO|TBD|FIXME|PLACEHOLDER)\b|待补充|待完善|待填写|占位符', '', content, flags=re.I)
             if len(re.sub(r'[\W_]+', '', content)) < 20:
                 errors.append(f'{key}: {heading}章节缺失或为空')
-    registered = {(root / t['page']).resolve() for t in topics.values() if inside_file(t.get('page'))}
+    registered = {(root / t['page']).resolve() for t in topics.values()
+                  if inside_file(t.get('page'), root / 'wiki')}
     for path in (root / 'wiki/topics').rglob('*.md'):
         if path.resolve() not in registered:
             errors.append(f'{path.name}: 主题文件未登记')
@@ -224,7 +228,7 @@ def check(root, curriculum=False):
         path = (root / page).resolve()
         if topic.get('module') not in module_ids:
             errors.append(f'{topic["id"]}: 非法模块')
-        if not path.is_relative_to(root) or not path.is_file():
+        if not path.is_relative_to(root / 'wiki') or not path.is_file():
             errors.append(f'{topic["id"]}: 页面不存在或越界')
         if path in paths:
             errors.append(f'{topic["id"]}: 页面重复')
@@ -233,9 +237,15 @@ def check(root, curriculum=False):
         if claim.get('topic') not in topics:
             errors.append(f'{claim["id"]}: 未知主题')
         evidence = claim.get('evidence', [])
+        if not isinstance(evidence, list):
+            errors.append(f'{claim["id"]}: 证据必须是数组')
+            continue
         if not evidence:
             errors.append(f'{claim["id"]}: 缺少证据')
         for ref in evidence:
+            if not isinstance(ref, dict):
+                errors.append(f'{claim["id"]}: 证据项必须是对象')
+                continue
             src = sources.get(ref.get('source_id'))
             if (not src or not isinstance(src.get('version'), str)
                     or not src['version'].strip()
@@ -269,8 +279,7 @@ def check(root, curriculum=False):
         if any(p in {'.git', '.venv', 'flux', 'site'} for p in path.relative_to(root).parts):
             continue
         body = markdown_prose(path.read_text(encoding='utf-8'))
-        for target in re.findall(r'(?<!!)\[[^\]\n]+\]\(([^)]+)\)', body):
-            target = target.strip('<>')
+        for target in markdown_link_targets(body):
             parsed = urlsplit(target)
             if parsed.scheme or not parsed.path:
                 continue
@@ -283,6 +292,46 @@ def check(root, curriculum=False):
         else:
             errors.extend(curriculum_errors(root, topics, sources, modules))
     return errors
+
+
+def markdown_link_targets(body):
+    """读取普通行内链接目的地，分离标题并保留平衡括号。"""
+    ending = re.compile(
+        r'''\s*\)|\s+(?:"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|\((?:\\.|[^()\\])*\))\s*\)''')
+    for match in re.finditer(r'(?<!!)\[(?:\\.|[^\]\\\n])+\]\(', body):
+        pos = match.end()
+        while pos < len(body) and body[pos].isspace():
+            pos += 1
+        angle = body.startswith('<', pos)
+        if angle:
+            pos += 1
+        target, depth = [], 0
+        while pos < len(body):
+            char = body[pos]
+            if char == '\\' and pos + 1 < len(body) and body[pos + 1] in string.punctuation:
+                target.append(body[pos + 1])
+                pos += 2
+                continue
+            if angle:
+                if char in '<>\r\n':
+                    break
+            else:
+                if char.isspace() or (char == ')' and depth == 0):
+                    break
+                if char == '(':
+                    depth += 1
+                elif char == ')':
+                    depth -= 1
+            target.append(char)
+            pos += 1
+        if angle:
+            if pos == len(body) or body[pos] != '>':
+                continue
+            pos += 1
+        elif depth:
+            continue
+        if ending.match(body, pos):
+            yield ''.join(target)
 
 
 def plan(day, root=None):
@@ -344,8 +393,9 @@ def parse_feed(xml, feed_id):
 
 def fetch_feed(url):
     parsed = urlsplit(url)
-    host = parsed.hostname or ''
-    if parsed.scheme != 'https' or parsed.username or parsed.password or not host or host.lower() == 'localhost':
+    host = (parsed.hostname or '').rstrip('.').lower()
+    if (parsed.scheme != 'https' or parsed.username or parsed.password or not host
+            or host == 'localhost' or host.endswith('.localhost')):
         raise ValueError('订阅地址必须是无凭证的 HTTPS 域名')
     try:
         ipaddress.ip_address(host)
