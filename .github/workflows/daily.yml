@@ -1,0 +1,76 @@
+name: 每日来源巡检
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: wiki-source-candidates
+  cancel-in-progress: false
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: 准备独立候选历史
+        shell: bash
+        run: |
+          set -euo pipefail
+          set +e
+          git ls-remote --exit-code --heads origin refs/heads/updates/candidates > "$RUNNER_TEMP/candidate-ref"
+          result=$?
+          set -e
+          if [ "$result" -eq 0 ]; then
+            git fetch --no-tags origin refs/heads/updates/candidates
+            git worktree add --detach "$RUNNER_TEMP/wiki-history" FETCH_HEAD
+          elif [ "$result" -eq 2 ]; then
+            git worktree add --detach "$RUNNER_TEMP/wiki-history" HEAD
+          else
+            exit "$result"
+          fi
+          mkdir -p "$RUNNER_TEMP/wiki-candidates"
+          if [ -f "$RUNNER_TEMP/wiki-history/candidates/state.json" ]; then
+            cp "$RUNNER_TEMP/wiki-history/candidates/state.json" "$RUNNER_TEMP/wiki-candidates/state.json"
+          fi
+          git rev-parse HEAD > "$RUNNER_TEMP/wiki-candidates/baseline.txt"
+          python scripts/wiki_tool.py plan > "$RUNNER_TEMP/wiki-candidates/study-plan.json"
+      - name: 顺序抓取来源候选
+        id: collect
+        continue-on-error: true
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+        run: |
+          ulimit -v 1048576
+          python scripts/wiki_tool.py discover --output "$RUNNER_TEMP/wiki-candidates"
+      - name: 保存候选与检查点
+        if: always() && steps.collect.outcome != 'skipped'
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f "$RUNNER_TEMP/wiki-candidates/latest.json"
+          mkdir -p "$RUNNER_TEMP/wiki-history/candidates"
+          cp -R "$RUNNER_TEMP/wiki-candidates/." "$RUNNER_TEMP/wiki-history/candidates/"
+          git -C "$RUNNER_TEMP/wiki-history" add candidates
+          if ! git -C "$RUNNER_TEMP/wiki-history" diff --cached --quiet; then
+            git -C "$RUNNER_TEMP/wiki-history" -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'chore(wiki): 更新来源候选' -m 'Co-Authored-By: Flux <flux@bytedance.com>'
+            git -C "$RUNNER_TEMP/wiki-history" push origin HEAD:refs/heads/updates/candidates
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: source-candidates-${{ github.run_id }}
+          path: ${{ runner.temp }}/wiki-candidates
+          retention-days: 30
+          if-no-files-found: warn
+      - name: 反映抓取失败
+        if: steps.collect.outcome == 'failure'
+        run: exit 1

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "transformers",
+    "module": "network",
+    "url": "https://github.com/huggingface/transformers/releases.atom",
+    "kind": "release_or_commit_feed",
+    "review_required": true
+  },
+  {
+    "id": "trl",
+    "module": "training",
+    "url": "https://github.com/huggingface/trl/releases.atom",
+    "kind": "release_or_commit_feed",
+    "review_required": true
+  },
+  {
+    "id": "vllm",
+    "module": "inference",
+    "url": "https://github.com/vllm-project/vllm/releases.atom",
+    "kind": "release_or_commit_feed",
+    "review_required": true
+  },
+  {
+    "id": "sglang",
+    "module": "inference",
+    "url": "https://github.com/sgl-project/sglang/releases.atom",
+    "kind": "release_or_commit_feed",
+    "review_required": true
+  },
+  {
+    "id": "mcp",
+    "module": "harness",
+    "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commits/main.atom",
+    "kind": "release_or_commit_feed",
+    "review_required": true
+  },
+  {
+    "id": "skills",
+    "module": "harness",
+    "url": "https://github.com/agentskills/agentskills/commits/main.atom",
+    "kind": "release_or_commit_feed",
+    "review_required": true
+  },
+  {
+    "id": "graphrag",
+    "module": "knowledge",
+    "url": "https://github.com/microsoft/graphrag/releases.atom",
+    "kind": "release_or_commit_feed",
+    "review_required": true
+  },
+  {
+    "id": "lightrag",
+    "module": "knowledge",
+    "url": "https://github.com/HKUDS/LightRAG/releases.atom",
+    "kind": "release_or_commit_feed",
+    "review_required": true
+  },
+  {
+    "id": "swebench",
+    "module": "agents",
+    "url": "https://github.com/SWE-bench/SWE-bench/releases.atom",
+    "kind": "release_or_commit_feed",
+    "review_required": true
+  },
+  {
+    "id": "osworld",
+    "module": "agents",
+    "url": "https://github.com/xlang-ai/OSWorld/commits/main.atom",
+    "kind": "release_or_commit_feed",
+    "review_required": true
+  }
+]

@@ -1,0 +1,28 @@
+name: 知识补充或更正
+description: 提交带原始来源的学习问题或知识更正
+title: '知识更新：'
+body:
+  - type: input
+    id: topic
+    attributes:
+      label: 主题名称或稳定 ID
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 原始资料与具体位置
+      description: 请给出公开链接、版本、章节及实际阅读范围。
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: 哪一项认识需要改变
+      description: 区分来源原述、个人推断和自行复现实验。
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: 受影响页面与剩余问题

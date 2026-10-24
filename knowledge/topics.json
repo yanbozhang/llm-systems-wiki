@@ -1,0 +1,251 @@
+[
+  {
+    "id": "transformer",
+    "title": "Transformer与自回归生成",
+    "module": "network",
+    "page": "wiki/topics/Transformer与自回归生成.md",
+    "aliases": [],
+    "coverage": "baseline",
+    "page_version": 1,
+    "last_checked": "2026-10-24"
+  },
+  {
+    "id": "attention-heads",
+    "title": "MHA与MQA及GQA",
+    "module": "network",
+    "page": "wiki/topics/MHA与MQA及GQA.md",
+    "aliases": [],
+    "coverage": "baseline",
+    "page_version": 1,
+    "last_checked": "2026-10-24"
+  },
+  {
+    "id": "position",
+    "title": "位置编码与RoPE",
+    "module": "network",
+    "page": "wiki/topics/位置编码与RoPE.md",
+    "aliases": [],
+    "coverage": "baseline",
+    "page_version": 1,
+    "last_checked": "2026-10-24"
+  },
+  {
+    "id": "ffn-norm",
+    "title": "前馈网络与归一化",
+    "module": "network",
+    "page": "wiki/topics/前馈网络与归一化.md",
+    "aliases": [],
+    "coverage": "baseline",
+    "page_version": 1,
+    "last_checked": "2026-10-24"
+  },
+  {
+    "id": "pretraining",
+    "title": "预训练目标与数据",
+    "module": "training",
+    "page": "wiki/topics/预训练目标与数据.md",
+    "aliases": [],
+    "coverage": "baseline",
+    "page_version": 1,
+    "last_checked": "2026-10-24"
+  },
+  {
+    "id": "sft",
+    "title": "监督微调与LoRA",
+    "module": "training",
+    "page": "wiki/topics/监督微调与LoRA.md",
+    "aliases": [
+      "SFT",
+      "LoRA"
+    ],
+    "coverage": "baseline",
+    "page_version": 1,
+    "last_checked": "2026-10-24"
+  },
+  {
+    "id": "preference",
+    "title": "偏好学习与DPO",
+    "module": "training",
+    "page": "wiki/topics/偏好学习与DPO.md",
+    "aliases": [],
+    "coverage": "baseline",
+    "page_version": 1,
+    "last_checked": "2026-10-24"
+  },
+  {
+    "id": "policy-optimization",
+    "title": "策略优化与GRPO",
+    "module": "training",
+    "page": "wiki/topics/策略优化与GRPO.md",
+    "aliases": [],
+    "coverage": "baseline",
+    "page_version": 1,
+    "last_checked": "2026-10-24"
+  },
+  {
+    "id": "prefill-decode",
+    "title": "Prefill与Decode",
+    "module": "inference",
+    "page": "wiki/topics/Prefill与Decode.md",
+    "aliases": [],
+    "coverage": "baseline",
+    "page_version": 1,
+    "last_checked": "2026-10-24"
+  },
+  {
+    "id": "kv-cache",
+    "title": "KV缓存原理与显存估算",
+    "module": "inference",
+    "page": "wiki/topics/KV缓存原理与显存估算.md",
+    "aliases": [
+      "KV Cache",
+      "键值缓存"
+    ],
+    "coverage": "baseline",
+    "page_version": 1,
+    "last_checked": "2026-10-24"
+  },
+  {
+    "id": "cache-scheduling",
+    "title": "缓存分页与连续批处理",
+    "module": "inference",
+    "page": "wiki/topics/缓存分页与连续批处理.md",
+    "aliases": [],
+    "coverage": "baseline",
+    "page_version": 1,
+    "last_checked": "2026-10-24"
+  },
+  {
+    "id": "inference-frameworks",
+    "title": "推理框架与性能实验",
+    "module": "inference",
+    "page": "wiki/topics/推理框架与性能实验.md",
+    "aliases": [],
+    "coverage": "baseline",
+    "page_version": 1,
+    "last_checked": "2026-10-24"
+  },
+  {
+    "id": "agent-loop",
+    "title": "Harness任务循环",
+    "module": "harness",
+    "page": "wiki/topics/Harness任务循环.md",
+    "aliases": [],
+    "coverage": "baseline",
+    "page_version": 1,
+    "last_checked": "2026-10-24"
+  },
+  {
+    "id": "context",
+    "title": "上下文选择与压缩",
+    "module": "harness",
+    "page": "wiki/topics/上下文选择与压缩.md",
+    "aliases": [],
+    "coverage": "baseline",
+    "page_version": 1,
+    "last_checked": "2026-10-24"
+  },
+  {
+    "id": "memory",
+    "title": "Agent记忆与保鲜",
+    "module": "harness",
+    "page": "wiki/topics/Agent记忆与保鲜.md",
+    "aliases": [],
+    "coverage": "baseline",
+    "page_version": 1,
+    "last_checked": "2026-10-24"
+  },
+  {
+    "id": "tools-skills",
+    "title": "工具协议与MCP及Skill",
+    "module": "harness",
+    "page": "wiki/topics/工具协议与MCP及Skill.md",
+    "aliases": [],
+    "coverage": "baseline",
+    "page_version": 1,
+    "last_checked": "2026-10-24"
+  },
+  {
+    "id": "rag",
+    "title": "RAG与引用回答",
+    "module": "knowledge",
+    "page": "wiki/topics/RAG与引用回答.md",
+    "aliases": [],
+    "coverage": "baseline",
+    "page_version": 1,
+    "last_checked": "2026-10-24"
+  },
+  {
+    "id": "ingestion",
+    "title": "来源接入与版本管理",
+    "module": "knowledge",
+    "page": "wiki/topics/来源接入与版本管理.md",
+    "aliases": [],
+    "coverage": "baseline",
+    "page_version": 1,
+    "last_checked": "2026-10-24"
+  },
+  {
+    "id": "hybrid-search",
+    "title": "混合检索与重排",
+    "module": "knowledge",
+    "page": "wiki/topics/混合检索与重排.md",
+    "aliases": [],
+    "coverage": "baseline",
+    "page_version": 1,
+    "last_checked": "2026-10-24"
+  },
+  {
+    "id": "graph-wiki",
+    "title": "GraphRAG与LLMWiki",
+    "module": "knowledge",
+    "page": "wiki/topics/GraphRAG与LLMWiki.md",
+    "aliases": [
+      "LLM Wiki",
+      "GraphRAG"
+    ],
+    "coverage": "baseline",
+    "page_version": 1,
+    "last_checked": "2026-10-24"
+  },
+  {
+    "id": "task-loop",
+    "title": "业务Agent任务闭环",
+    "module": "agents",
+    "page": "wiki/topics/业务Agent任务闭环.md",
+    "aliases": [],
+    "coverage": "baseline",
+    "page_version": 1,
+    "last_checked": "2026-10-24"
+  },
+  {
+    "id": "gui-agent",
+    "title": "GUI定位与执行",
+    "module": "agents",
+    "page": "wiki/topics/GUI定位与执行.md",
+    "aliases": [],
+    "coverage": "baseline",
+    "page_version": 1,
+    "last_checked": "2026-10-24"
+  },
+  {
+    "id": "coding-agent",
+    "title": "AI代码开发与反馈",
+    "module": "agents",
+    "page": "wiki/topics/AI代码开发与反馈.md",
+    "aliases": [],
+    "coverage": "baseline",
+    "page_version": 1,
+    "last_checked": "2026-10-24"
+  },
+  {
+    "id": "agent-evaluation",
+    "title": "Agent评测与失败归因",
+    "module": "agents",
+    "page": "wiki/topics/Agent评测与失败归因.md",
+    "aliases": [],
+    "coverage": "baseline",
+    "page_version": 1,
+    "last_checked": "2026-10-24"
+  }
+]

@@ -1,0 +1,514 @@
+[
+  {
+    "id": "rel-transformer-pretraining",
+    "from": "transformer",
+    "to": "pretraining",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "rel-transformer-prefill-decode",
+    "from": "transformer",
+    "to": "prefill-decode",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "rel-transformer-position",
+    "from": "transformer",
+    "to": "position",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "pre-transformer-attention-heads",
+    "from": "transformer",
+    "to": "attention-heads",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先掌握Transformer与自回归生成再学习MHA与MQA及GQA",
+    "version": 1
+  },
+  {
+    "id": "rel-attention-heads-kv-cache",
+    "from": "attention-heads",
+    "to": "kv-cache",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "pre-transformer-position",
+    "from": "transformer",
+    "to": "position",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先掌握Transformer与自回归生成再学习位置编码与RoPE",
+    "version": 1
+  },
+  {
+    "id": "rel-position-kv-cache",
+    "from": "position",
+    "to": "kv-cache",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "rel-position-context",
+    "from": "position",
+    "to": "context",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "pre-transformer-ffn-norm",
+    "from": "transformer",
+    "to": "ffn-norm",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先掌握Transformer与自回归生成再学习前馈网络与归一化",
+    "version": 1
+  },
+  {
+    "id": "rel-ffn-norm-pretraining",
+    "from": "ffn-norm",
+    "to": "pretraining",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "pre-transformer-pretraining",
+    "from": "transformer",
+    "to": "pretraining",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先掌握Transformer与自回归生成再学习预训练目标与数据",
+    "version": 1
+  },
+  {
+    "id": "rel-pretraining-sft",
+    "from": "pretraining",
+    "to": "sft",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "rel-pretraining-agent-evaluation",
+    "from": "pretraining",
+    "to": "agent-evaluation",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "pre-pretraining-sft",
+    "from": "pretraining",
+    "to": "sft",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先掌握预训练目标与数据再学习监督微调与LoRA",
+    "version": 1
+  },
+  {
+    "id": "rel-sft-preference",
+    "from": "sft",
+    "to": "preference",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "pre-sft-preference",
+    "from": "sft",
+    "to": "preference",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先掌握监督微调与LoRA再学习偏好学习与DPO",
+    "version": 1
+  },
+  {
+    "id": "rel-preference-policy-optimization",
+    "from": "preference",
+    "to": "policy-optimization",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "pre-preference-policy-optimization",
+    "from": "preference",
+    "to": "policy-optimization",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先掌握偏好学习与DPO再学习策略优化与GRPO",
+    "version": 1
+  },
+  {
+    "id": "rel-policy-optimization-agent-evaluation",
+    "from": "policy-optimization",
+    "to": "agent-evaluation",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "pre-transformer-prefill-decode",
+    "from": "transformer",
+    "to": "prefill-decode",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先掌握Transformer与自回归生成再学习Prefill与Decode",
+    "version": 1
+  },
+  {
+    "id": "rel-prefill-decode-cache-scheduling",
+    "from": "prefill-decode",
+    "to": "cache-scheduling",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "pre-prefill-decode-kv-cache",
+    "from": "prefill-decode",
+    "to": "kv-cache",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先掌握Prefill与Decode再学习KV缓存原理与显存估算",
+    "version": 1
+  },
+  {
+    "id": "rel-kv-cache-attention-heads",
+    "from": "kv-cache",
+    "to": "attention-heads",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "rel-kv-cache-position",
+    "from": "kv-cache",
+    "to": "position",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "rel-kv-cache-memory",
+    "from": "kv-cache",
+    "to": "memory",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "pre-kv-cache-cache-scheduling",
+    "from": "kv-cache",
+    "to": "cache-scheduling",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先掌握KV缓存原理与显存估算再学习缓存分页与连续批处理",
+    "version": 1
+  },
+  {
+    "id": "rel-cache-scheduling-inference-frameworks",
+    "from": "cache-scheduling",
+    "to": "inference-frameworks",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "rel-cache-scheduling-context",
+    "from": "cache-scheduling",
+    "to": "context",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "pre-cache-scheduling-inference-frameworks",
+    "from": "cache-scheduling",
+    "to": "inference-frameworks",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先掌握缓存分页与连续批处理再学习推理框架与性能实验",
+    "version": 1
+  },
+  {
+    "id": "rel-inference-frameworks-agent-evaluation",
+    "from": "inference-frameworks",
+    "to": "agent-evaluation",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "rel-agent-loop-task-loop",
+    "from": "agent-loop",
+    "to": "task-loop",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "rel-agent-loop-tools-skills",
+    "from": "agent-loop",
+    "to": "tools-skills",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "rel-agent-loop-agent-evaluation",
+    "from": "agent-loop",
+    "to": "agent-evaluation",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "pre-agent-loop-context",
+    "from": "agent-loop",
+    "to": "context",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先掌握Harness任务循环再学习上下文选择与压缩",
+    "version": 1
+  },
+  {
+    "id": "rel-context-memory",
+    "from": "context",
+    "to": "memory",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "rel-context-rag",
+    "from": "context",
+    "to": "rag",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "rel-context-kv-cache",
+    "from": "context",
+    "to": "kv-cache",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "pre-context-memory",
+    "from": "context",
+    "to": "memory",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先掌握上下文选择与压缩再学习Agent记忆与保鲜",
+    "version": 1
+  },
+  {
+    "id": "rel-memory-ingestion",
+    "from": "memory",
+    "to": "ingestion",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "rel-memory-graph-wiki",
+    "from": "memory",
+    "to": "graph-wiki",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "pre-agent-loop-tools-skills",
+    "from": "agent-loop",
+    "to": "tools-skills",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先掌握Harness任务循环再学习工具协议与MCP及Skill",
+    "version": 1
+  },
+  {
+    "id": "rel-tools-skills-graph-wiki",
+    "from": "tools-skills",
+    "to": "graph-wiki",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "pre-context-rag",
+    "from": "context",
+    "to": "rag",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先掌握上下文选择与压缩再学习RAG与引用回答",
+    "version": 1
+  },
+  {
+    "id": "rel-rag-hybrid-search",
+    "from": "rag",
+    "to": "hybrid-search",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "rel-rag-graph-wiki",
+    "from": "rag",
+    "to": "graph-wiki",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "pre-rag-ingestion",
+    "from": "rag",
+    "to": "ingestion",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先掌握RAG与引用回答再学习来源接入与版本管理",
+    "version": 1
+  },
+  {
+    "id": "rel-ingestion-memory",
+    "from": "ingestion",
+    "to": "memory",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "rel-ingestion-agent-evaluation",
+    "from": "ingestion",
+    "to": "agent-evaluation",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "pre-rag-hybrid-search",
+    "from": "rag",
+    "to": "hybrid-search",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先掌握RAG与引用回答再学习混合检索与重排",
+    "version": 1
+  },
+  {
+    "id": "rel-hybrid-search-graph-wiki",
+    "from": "hybrid-search",
+    "to": "graph-wiki",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "pre-rag-graph-wiki",
+    "from": "rag",
+    "to": "graph-wiki",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先掌握RAG与引用回答再学习GraphRAG与LLMWiki",
+    "version": 1
+  },
+  {
+    "id": "rel-graph-wiki-ingestion",
+    "from": "graph-wiki",
+    "to": "ingestion",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "rel-graph-wiki-cache-scheduling",
+    "from": "graph-wiki",
+    "to": "cache-scheduling",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "pre-agent-loop-task-loop",
+    "from": "agent-loop",
+    "to": "task-loop",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先掌握Harness任务循环再学习业务Agent任务闭环",
+    "version": 1
+  },
+  {
+    "id": "rel-task-loop-gui-agent",
+    "from": "task-loop",
+    "to": "gui-agent",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "rel-task-loop-coding-agent",
+    "from": "task-loop",
+    "to": "coding-agent",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "rel-task-loop-agent-evaluation",
+    "from": "task-loop",
+    "to": "agent-evaluation",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "pre-task-loop-gui-agent",
+    "from": "task-loop",
+    "to": "gui-agent",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先掌握业务Agent任务闭环再学习GUI定位与执行",
+    "version": 1
+  },
+  {
+    "id": "rel-gui-agent-agent-evaluation",
+    "from": "gui-agent",
+    "to": "agent-evaluation",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "pre-task-loop-coding-agent",
+    "from": "task-loop",
+    "to": "coding-agent",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先掌握业务Agent任务闭环再学习AI代码开发与反馈",
+    "version": 1
+  },
+  {
+    "id": "rel-coding-agent-agent-evaluation",
+    "from": "coding-agent",
+    "to": "agent-evaluation",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "pre-task-loop-agent-evaluation",
+    "from": "task-loop",
+    "to": "agent-evaluation",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先掌握业务Agent任务闭环再学习Agent评测与失败归因",
+    "version": 1
+  },
+  {
+    "id": "rel-agent-evaluation-inference-frameworks",
+    "from": "agent-evaluation",
+    "to": "inference-frameworks",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  },
+  {
+    "id": "rel-agent-evaluation-policy-optimization",
+    "from": "agent-evaluation",
+    "to": "policy-optimization",
+    "type": "related",
+    "basis": "编辑性关联阅读，不声明因果或方法改进",
+    "version": 1
+  }
+]

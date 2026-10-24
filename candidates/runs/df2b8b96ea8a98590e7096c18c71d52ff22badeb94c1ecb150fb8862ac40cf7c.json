@@ -1,0 +1,1358 @@
+{
+  "checked_at": "2026-10-24T16:00:00.037553+08:00",
+  "status": "changed",
+  "candidates": [
+    {
+      "id": "38894a997d31771437e39580d32ee565d04d708bc0c64bdb56b0e8ed5b3905ed",
+      "feed_id": "transformers",
+      "entry_id": "tag:github.com,2008:Repository/155220641/v5.20.2",
+      "title": "Patch release v5.20.2",
+      "url": "https://github.com/huggingface/transformers/releases/tag/v5.20.2",
+      "updated": "2026-10-19T17:45:37Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "116e41b6c89014c92046c68978879d844e36ae9178ed802a37231c777145ebd2",
+      "feed_id": "transformers",
+      "entry_id": "tag:github.com,2008:Repository/155220641/v5.20.1",
+      "title": "Release v5.20.1",
+      "url": "https://github.com/huggingface/transformers/releases/tag/v5.20.1",
+      "updated": "2026-10-16T13:02:29Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "a5b2c6ab43076a956b7638ef1a066a56298f51fe12e6b3f2c060ef43b266abbe",
+      "feed_id": "transformers",
+      "entry_id": "tag:github.com,2008:Repository/155220641/v5.20.0",
+      "title": "Release v5.20.0",
+      "url": "https://github.com/huggingface/transformers/releases/tag/v5.20.0",
+      "updated": "2026-10-15T18:05:36Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "9480f9afabe4570caf1ed0b266e81d32087ce4d7e4df851d413f8ce319edda0b",
+      "feed_id": "transformers",
+      "entry_id": "tag:github.com,2008:Repository/155220641/v5.19.0",
+      "title": "Release v5.19.0",
+      "url": "https://github.com/huggingface/transformers/releases/tag/v5.19.0",
+      "updated": "2026-10-06T16:39:23Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "8b123b8bfa6e69bcc256c3eeac48d50d0bc8c699cc45a4096a0658937f8fc79c",
+      "feed_id": "transformers",
+      "entry_id": "tag:github.com,2008:Repository/155220641/v5.18.0",
+      "title": "Release 5.18.0",
+      "url": "https://github.com/huggingface/transformers/releases/tag/v5.18.0",
+      "updated": "2026-09-30T16:46:27Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "1127708c70796e0c008369dc7f6feca377c01495ad9a6ca1d51c0ce6d8593f63",
+      "feed_id": "transformers",
+      "entry_id": "tag:github.com,2008:Repository/155220641/v5.17.0",
+      "title": "Release 5.17.0",
+      "url": "https://github.com/huggingface/transformers/releases/tag/v5.17.0",
+      "updated": "2026-09-10T12:03:18Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "9544451368431e277a2b1975a41bd1421e10bda0217f9510e7bff5ae42accd41",
+      "feed_id": "transformers",
+      "entry_id": "tag:github.com,2008:Repository/155220641/v5.16.1",
+      "title": "Release v5.16.1",
+      "url": "https://github.com/huggingface/transformers/releases/tag/v5.16.1",
+      "updated": "2026-08-26T14:50:01Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "7dcfb6788ba03cde681b48cd2a9d53faf9e03b762b1adf71e6369f3bffb1e4cb",
+      "feed_id": "transformers",
+      "entry_id": "tag:github.com,2008:Repository/155220641/v5.16.0",
+      "title": "Release: v5.16.0",
+      "url": "https://github.com/huggingface/transformers/releases/tag/v5.16.0",
+      "updated": "2026-08-26T15:03:33Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "59551578475bd397bc20776118112feaf206ac410ddb8d45c386a1caea8a6bdb",
+      "feed_id": "transformers",
+      "entry_id": "tag:github.com,2008:Repository/155220641/v5.15.1",
+      "title": "Patch release: v5.15.1",
+      "url": "https://github.com/huggingface/transformers/releases/tag/v5.15.1",
+      "updated": "2026-08-19T10:50:47Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "d60dac61f8ff5ec50328d6e7dccc39caa8fdbdbb70c15b25c1c3839d7e5edad2",
+      "feed_id": "transformers",
+      "entry_id": "tag:github.com,2008:Repository/155220641/v5.15.0",
+      "title": "Release: v5.15.0",
+      "url": "https://github.com/huggingface/transformers/releases/tag/v5.15.0",
+      "updated": "2026-08-10T10:28:13Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "d58699b85fa39f3dbffaf8485fb7264f0f6717970153aa6476578f4301fa3687",
+      "feed_id": "trl",
+      "entry_id": "tag:github.com,2008:Repository/250510075/v1.16.0",
+      "title": "v1.16.0",
+      "url": "https://github.com/huggingface/trl/releases/tag/v1.16.0",
+      "updated": "2026-10-16T05:59:37Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "d71a00c575933b10f8bf6debc73c4f663bf1711a26ca82e05b383b542c693e9d",
+      "feed_id": "trl",
+      "entry_id": "tag:github.com,2008:Repository/250510075/v1.15.0",
+      "title": "v1.15.0",
+      "url": "https://github.com/huggingface/trl/releases/tag/v1.15.0",
+      "updated": "2026-10-09T05:55:31Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "52c07a1762dca7fdacd229d92556b66f4aa54c4663fc622b07d1276573848564",
+      "feed_id": "trl",
+      "entry_id": "tag:github.com,2008:Repository/250510075/v1.14.2",
+      "title": "v1.14.2",
+      "url": "https://github.com/huggingface/trl/releases/tag/v1.14.2",
+      "updated": "2026-10-06T20:30:35Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "f89c86d7d269aac33e229345487689c48a31a8b85038d7d21527f89e6ab83af3",
+      "feed_id": "trl",
+      "entry_id": "tag:github.com,2008:Repository/250510075/v1.14.1",
+      "title": "v1.14.1",
+      "url": "https://github.com/huggingface/trl/releases/tag/v1.14.1",
+      "updated": "2026-09-29T13:41:37Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "56a62146b554f5f6be6779c0c57f4460e5c2e195f60bf6ac6ea3f1bfb5dfb4e8",
+      "feed_id": "trl",
+      "entry_id": "tag:github.com,2008:Repository/250510075/v1.14.0",
+      "title": "v1.14.0",
+      "url": "https://github.com/huggingface/trl/releases/tag/v1.14.0",
+      "updated": "2026-09-25T06:40:07Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "c952ee55ebcccf6e9942ab680c5c9208103542bb5d2adb073ad3a1a9b2e78e0e",
+      "feed_id": "trl",
+      "entry_id": "tag:github.com,2008:Repository/250510075/v1.13.0",
+      "title": "v1.13.0",
+      "url": "https://github.com/huggingface/trl/releases/tag/v1.13.0",
+      "updated": "2026-09-10T00:50:26Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "01428118509fee0744618469e897144c8b78cdf45eed29396c56cde4a24137dd",
+      "feed_id": "trl",
+      "entry_id": "tag:github.com,2008:Repository/250510075/v1.12.0",
+      "title": "v1.12.0",
+      "url": "https://github.com/huggingface/trl/releases/tag/v1.12.0",
+      "updated": "2026-08-26T20:05:50Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "9b5e9ea6f8b3156f903fcc28f4ebbd78cd381f04da3e227c7c7e2439706077db",
+      "feed_id": "trl",
+      "entry_id": "tag:github.com,2008:Repository/250510075/v1.11.0",
+      "title": "v1.11.0",
+      "url": "https://github.com/huggingface/trl/releases/tag/v1.11.0",
+      "updated": "2026-08-26T20:02:08Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "b3e3de2cfe7eed5760383b7e13cb76579bb1c073d860d32cc4beb47f0847fcb8",
+      "feed_id": "trl",
+      "entry_id": "tag:github.com,2008:Repository/250510075/v1.10.0",
+      "title": "v1.10.0",
+      "url": "https://github.com/huggingface/trl/releases/tag/v1.10.0",
+      "updated": "2026-08-13T01:36:04Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "bd0ecf981b731ba077b9c445719268e6dea137c591865487c5b2dd8027a1e08d",
+      "feed_id": "trl",
+      "entry_id": "tag:github.com,2008:Repository/250510075/v1.9.2",
+      "title": "v1.9.2",
+      "url": "https://github.com/huggingface/trl/releases/tag/v1.9.2",
+      "updated": "2026-07-28T10:39:01Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "680ae2a317df2ffb0bb6529fb922c046447ef1a22f41517e2e61b43515563fbc",
+      "feed_id": "vllm",
+      "entry_id": "tag:github.com,2008:Repository/599547518/v0.32.1rc0",
+      "title": "v0.32.1rc0",
+      "url": "https://github.com/vllm-project/vllm/releases/tag/v0.32.1rc0",
+      "updated": "2026-10-18T09:26:56Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "cbc374de2ffe438411fc4f9c5c3655e3e40f0630b0eb130a3281cb84d7fac5f5",
+      "feed_id": "vllm",
+      "entry_id": "tag:github.com,2008:Repository/599547518/v0.32.0",
+      "title": "v0.32.0",
+      "url": "https://github.com/vllm-project/vllm/releases/tag/v0.32.0",
+      "updated": "2026-10-18T10:23:45Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "a96dfc7ca09d269efa5c649b3180b283e5a20ac7db24c195fd256681e985969e",
+      "feed_id": "vllm",
+      "entry_id": "tag:github.com,2008:Repository/599547518/v0.32.0rc3",
+      "title": "v0.32.0rc3: [Bugfix] Fix NaN output of the Mamba2 chunk scan kernel on sm90 (#61718)",
+      "url": "https://github.com/vllm-project/vllm/releases/tag/v0.32.0rc3",
+      "updated": "2026-10-17T00:25:45Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "6bada144d87bca27f80beea2c3d112d0f2d32d68af05d2c3f096ae9e800f2866",
+      "feed_id": "vllm",
+      "entry_id": "tag:github.com,2008:Repository/599547518/v0.32.0rc2",
+      "title": "v0.32.0rc2",
+      "url": "https://github.com/vllm-project/vllm/releases/tag/v0.32.0rc2",
+      "updated": "2026-10-15T09:50:46Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "3dbc181b76e50cd952cd108e5b779399fecd9b054f77a3d07019662ae7b5cbe7",
+      "feed_id": "vllm",
+      "entry_id": "tag:github.com,2008:Repository/599547518/v0.32.0rc1",
+      "title": "v0.32.0rc1: [Dependency] Update Humming and remove NVFP4 scale workaround (#61556)",
+      "url": "https://github.com/vllm-project/vllm/releases/tag/v0.32.0rc1",
+      "updated": "2026-10-14T23:29:34Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "aa9a61674eae1967f5e4eb82b4a3defe8edf21bfee83e50c2d19ce8f87079201",
+      "feed_id": "vllm",
+      "entry_id": "tag:github.com,2008:Repository/599547518/proto-v0.6.0",
+      "title": "proto-v0.6.0",
+      "url": "https://github.com/vllm-project/vllm/releases/tag/proto-v0.6.0",
+      "updated": "2026-10-14T23:57:02Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "97e2a3838837d70a2e2fb99f7ff6f015077cb0d2939703b8be39cbcabcd5017c",
+      "feed_id": "vllm",
+      "entry_id": "tag:github.com,2008:Repository/599547518/v0.32.0rc0",
+      "title": "v0.32.0rc0: [HiSparse] Report host pool in KV cache capacity logs (#60285)",
+      "url": "https://github.com/vllm-project/vllm/releases/tag/v0.32.0rc0",
+      "updated": "2026-10-12T20:49:49Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "912e280cb0ec763604669453dcb347c41672dccf1bfae64a502eac1b91ac1e5f",
+      "feed_id": "vllm",
+      "entry_id": "tag:github.com,2008:Repository/599547518/proto-v0.5.0",
+      "title": "proto-v0.5.0",
+      "url": "https://github.com/vllm-project/vllm/releases/tag/proto-v0.5.0",
+      "updated": "2026-10-09T03:11:40Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "329c0462e65fa176fe639b4951166033bab1710d633eacae2f1a9b8fbe20d19c",
+      "feed_id": "vllm",
+      "entry_id": "tag:github.com,2008:Repository/599547518/v0.31.1rc0",
+      "title": "v0.31.1rc0: [Metrics] Expose cached prompt tokens by cache tier (#56318)",
+      "url": "https://github.com/vllm-project/vllm/releases/tag/v0.31.1rc0",
+      "updated": "2026-10-06T18:52:05Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "5de9e41c5ef728980a693575e6e808eecfe5f771480d8f33a0f4c9aea9dba2ff",
+      "feed_id": "vllm",
+      "entry_id": "tag:github.com,2008:Repository/599547518/v0.31.0",
+      "title": "v0.31.0",
+      "url": "https://github.com/vllm-project/vllm/releases/tag/v0.31.0",
+      "updated": "2026-10-06T06:49:35Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "86c6e323964646dec4cb8b28081f857ce410ae09a69a84b63dc8ef33908758ed",
+      "feed_id": "sglang",
+      "entry_id": "tag:github.com,2008:Repository/740303686/v0.5.22",
+      "title": "v0.5.22",
+      "url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.22",
+      "updated": "2026-10-19T05:55:53Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "bf9176bb4dbb352ace19001b0175bb430ecca8e50fa40cdc103c31ce4503d5d2",
+      "feed_id": "sglang",
+      "entry_id": "tag:github.com,2008:Repository/740303686/v0.5.21",
+      "title": "v0.5.21",
+      "url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.21",
+      "updated": "2026-10-02T19:42:55Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "49b2ec83b9aec163d3c0be29d9151c23675b186d529fc3643c76259af5e42741",
+      "feed_id": "sglang",
+      "entry_id": "tag:github.com,2008:Repository/740303686/v0.5.20",
+      "title": "v0.5.20",
+      "url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.20",
+      "updated": "2026-09-18T22:41:33Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "16b2f5466ab7a221c79cb6deb7ab89abf446745f0354151f638252926b8e7c06",
+      "feed_id": "sglang",
+      "entry_id": "tag:github.com,2008:Repository/740303686/v0.5.19",
+      "title": "v0.5.19",
+      "url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.19",
+      "updated": "2026-09-05T02:27:42Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "bf3ec57b3a8842b9200c19079c99195f8334b0ce6a75f34d53fd2400efcbe8fa",
+      "feed_id": "sglang",
+      "entry_id": "tag:github.com,2008:Repository/740303686/v0.5.18",
+      "title": "v0.5.18",
+      "url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.18",
+      "updated": "2026-08-24T23:08:04Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "7d10c465b219675556b37c3ef5ed821aafc0b7c7b150bdb959555387da109057",
+      "feed_id": "sglang",
+      "entry_id": "tag:github.com,2008:Repository/740303686/v0.5.17",
+      "title": "v0.5.17",
+      "url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.17",
+      "updated": "2026-08-11T03:17:41Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "fa3f92707df9cc3e27bc635d5eb0596ba6f8a358734f34568ad48e68bd9bbf11",
+      "feed_id": "sglang",
+      "entry_id": "tag:github.com,2008:Repository/740303686/v0.5.16",
+      "title": "v0.5.16",
+      "url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.16",
+      "updated": "2026-07-25T00:13:18Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "44bbf3c6bc43611a41100c102b5480816ea35ff09f2fdcd5d3b4cd16376d4e45",
+      "feed_id": "sglang",
+      "entry_id": "tag:github.com,2008:Repository/740303686/v0.5.15.post1",
+      "title": "v0.5.15.post1",
+      "url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.15.post1",
+      "updated": "2026-07-14T08:43:33Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "1ea4528eaa91d4457db65cfa614dca3facc3ffd2d22647fb925ea22c8d041533",
+      "feed_id": "sglang",
+      "entry_id": "tag:github.com,2008:Repository/740303686/v0.5.15",
+      "title": "v0.5.15",
+      "url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.15",
+      "updated": "2026-07-10T22:58:33Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "949144bea5d549a55f30803fbf33ff0eb1d5f8625a9ad5539cc0d4e2b4ea4be6",
+      "feed_id": "sglang",
+      "entry_id": "tag:github.com,2008:Repository/740303686/v0.5.14",
+      "title": "v0.5.14",
+      "url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.14",
+      "updated": "2026-06-26T23:02:25Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "5001a66c445e73e4b9756bf51d6eabb5081f6899598d38dd8a09dcfbf2e9c377",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/dae694f61a31f7a3ec2af3aff709e11f70f61e48",
+      "title": "Merge pull request #3451 from modelcontextprotocol/pja/update-github-…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/dae694f61a31f7a3ec2af3aff709e11f70f61e48",
+      "updated": "2026-10-23T10:50:53Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "ef42599b7fcd3eb1b152234a4689c5beb99e93dd2e1219cb0154c0d7834b1776",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/94e8756ca667eac34c1fff37029584a168af69ec",
+      "title": "Update Peter Alexander's GitHub handle and affiliation",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/94e8756ca667eac34c1fff37029584a168af69ec",
+      "updated": "2026-10-23T10:30:50Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "51edddfd8a12c3dfcaaf64906f6c471cb8790af93f952f6c26ca17c1a0c1ec52",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/80041ab0a139a8f4fb3adbc99f7ae9113ea59671",
+      "title": "Merge pull request #3440 from modelcontextprotocol/claude/tasks-event…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/80041ab0a139a8f4fb3adbc99f7ae9113ea59671",
+      "updated": "2026-10-20T20:01:55Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "5302b12569668cf5795948e164dee7ead9a46e511c5bd6b7dd6076fd1848f5f8",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/761239a31f002deab572cd98d717006d2df6d60c",
+      "title": "Address review: Agents IG scope wording and roster, Tasks scope",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/761239a31f002deab572cd98d717006d2df6d60c",
+      "updated": "2026-10-20T00:57:41Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "a157e2575906470ac6b575a0a15083747be01191d13ae224515c718ccf52390a",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/1155ca460e5097019f32769b38dcba194432e2fb",
+      "title": "docs: fix broken SEP-2133 link in SEP-2640 (#3439)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/1155ca460e5097019f32769b38dcba194432e2fb",
+      "updated": "2026-10-18T02:02:09Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "084e23dccf6848935e2875855da149aaa047cf11a3285930f87c96766c201e56",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/9d896a8e2c19eabc636249304fd6ffff836b7c2e",
+      "title": "Form Tasks and Events WG, convert Agents WG to an Interest Group",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/9d896a8e2c19eabc636249304fd6ffff836b7c2e",
+      "updated": "2026-10-16T19:58:12Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "0da91d6d7f6dcb45b3553db904cbbd17ca2d18300e38b8b42639d2fdb2ad0f4d",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/86f6e0c675afea9a8f233e09b6faf566b126086c",
+      "title": "build(deps-dev): bump source-map-js (#3436)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/86f6e0c675afea9a8f233e09b6faf566b126086c",
+      "updated": "2026-10-15T00:54:40Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "a1fa065433d401a5093a029a97331c6c063244899dca23eb873a492f5a6063d5",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/ff465f00f097901a6d1b662d57646767057feed3",
+      "title": "build(deps-dev): bump typescript-eslint from 8.70.1 to 8.71.1 (#3428)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/ff465f00f097901a6d1b662d57646767057feed3",
+      "updated": "2026-10-14T17:15:05Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "2aebda741a47af7eeefcbd8c6bffb606a939bddd36dd8bd55d2ce672fdf87f8a",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/6d5598ad886409863eca96855cdbe843365a7baa",
+      "title": "build(deps-dev): bump eslint from 10.11.0 to 10.12.0 (#3429)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/6d5598ad886409863eca96855cdbe843365a7baa",
+      "updated": "2026-10-14T17:14:54Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "e68e48b41c72752660b77db66252d7f310612f2d3cb2030d23bc0740c8b8a5ad",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/5ea996028df322ce97d1c906731cf8c05a6e268e",
+      "title": "Merge pull request #3376 from chughtapan/docs/progressive-disclosure-…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/5ea996028df322ce97d1c906731cf8c05a6e268e",
+      "updated": "2026-10-13T19:11:00Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "2e818698d5ad4c5b20ba2faddd33171d76044acc6990172ef8378b1c02c1c011",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/b491e56832ce09207d6d7bb2aae186ce55fdf172",
+      "title": "Merge main into docs/progressive-disclosure-wg-charter",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/b491e56832ce09207d6d7bb2aae186ce55fdf172",
+      "updated": "2026-10-13T19:02:08Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "1f91b1ab375c0113ce974ea912a0a0724ecf4d58b9666d8d2d0e15c2e25b863a",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/3778656b2e0ba6725035e816fe3085374cbaa736",
+      "title": "docs: serve the TypeScript quickstart server with serveStdio (#3427)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/3778656b2e0ba6725035e816fe3085374cbaa736",
+      "updated": "2026-10-12T16:26:31Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "67426e39af8048c8025ca6f8a4450e4b9c8b259d304d269b389ab1bfb11dcd10",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/1f520964b295d58494d944f2aea8a5ab51c79f77",
+      "title": "docs: list Linux as a supported Claude Desktop platform (#3426)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/1f520964b295d58494d944f2aea8a5ab51c79f77",
+      "updated": "2026-10-11T04:39:32Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "714bed5f4f257834738644434230a1ec231fc0503da6858361750cbda7af9767",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/4a04acdb151b8d3c6963fa566d9435cdfdc7bd43",
+      "title": "Merge pull request #3423 from sarahnovotny/community/governance-wg-ch…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/4a04acdb151b8d3c6963fa566d9435cdfdc7bd43",
+      "updated": "2026-10-11T01:31:58Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "ddef9d3c8aea711fcd3e3d3d4b6e4c61440f7684d2065d2e38874ec7f095c9f9",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/ac653685e5e3082141167a1ca4b8c656bcfa5d83",
+      "title": "Merge pull request #3425 from kychooo/fsig-participant-king-yew-choo",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/ac653685e5e3082141167a1ca4b8c656bcfa5d83",
+      "updated": "2026-10-11T01:31:19Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "e6e31c816ed4bbb52bd99d07f50dc6272d2ba69c142a4087454a5267a3140b36",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/fea34581fc887898f99c9a661a5702cb4302d76a",
+      "title": "docs(fsig): add King Yew Choo (True Primary) as Participant",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/fea34581fc887898f99c9a661a5702cb4302d76a",
+      "updated": "2026-10-08T15:42:47Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "5cfd0a9945f7a673eb2201fbfc2811d8a5f3e1e70d31198e4d907fb64ff1c177",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/c518f7a927cff918bce35d3522fcdb046d264d7c",
+      "title": "Merge pull request #3418 from modelcontextprotocol/docs/inspector-245…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/c518f7a927cff918bce35d3522fcdb046d264d7c",
+      "updated": "2026-10-08T12:57:38Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "1292de94f3e97f179d36d7f53fb4fa3c7604e65bf64ef22187b344f9780ee989",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/1e837b3efc1ebba4b60881759ea6b2fb644bcaca",
+      "title": "docs(community): add Governance Working Group charter",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/1e837b3efc1ebba4b60881759ea6b2fb644bcaca",
+      "updated": "2026-10-08T07:16:41Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "463ddfd382f9b195352b22eed8b0406962d0a94c34305ed2463c425cea6ea682",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/9174102eb93895c3416228a6d2ecceb0c9dbfa2c",
+      "title": "docs(inspector): link the mcpdo tutorial video",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/9174102eb93895c3416228a6d2ecceb0c9dbfa2c",
+      "updated": "2026-10-07T15:32:03Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "b6330cdbcac34c6fc22554f7bc8cd14dd4dd86e0364e3c875c679930e07220e0",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/cabe6861d4c3cdfd1ef7efc7ad94957c70239617",
+      "title": "docs(inspector): show an MRTR conversation grouped in the monitoring …",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/cabe6861d4c3cdfd1ef7efc7ad94957c70239617",
+      "updated": "2026-10-06T16:14:35Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "8d9cedf498911c4e2eefb76839ee31fab4f2acb0ea4020c17b621d67d325c32a",
+      "feed_id": "skills",
+      "entry_id": "tag:github.com,2008:Grit::Commit/69ef37e9424c0a7ea9dd2293b559e43ec8176379",
+      "title": "docs: add OpenClaw to client showcase (#492)",
+      "url": "https://github.com/agentskills/agentskills/commit/69ef37e9424c0a7ea9dd2293b559e43ec8176379",
+      "updated": "2026-08-09T20:36:04Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "f808db0d44d2284e3b600ebc5cd409adba856252d88fa36215e519645b4be75d",
+      "feed_id": "skills",
+      "entry_id": "tag:github.com,2008:Grit::Commit/29a8a89f30760b95b9953a9317b63345f73646af",
+      "title": "Merge pull request #491 from teknium1/add-hermes-agent",
+      "url": "https://github.com/agentskills/agentskills/commit/29a8a89f30760b95b9953a9317b63345f73646af",
+      "updated": "2026-08-09T17:34:08Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "7518073fc21be6fe9c722b0921b400c3c2381b4454fd10077859713f2286fdb0",
+      "feed_id": "skills",
+      "entry_id": "tag:github.com,2008:Grit::Commit/be0555410981676f8e354efc41703a21fb2cc022",
+      "title": "Add Hermes Agent to client showcase",
+      "url": "https://github.com/agentskills/agentskills/commit/be0555410981676f8e354efc41703a21fb2cc022",
+      "updated": "2026-08-09T17:21:29Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "3d9b7d3f0b2ea6d1cc0ac70d63524d2e5de17150324427fdd023dd4115fbc1bb",
+      "feed_id": "skills",
+      "entry_id": "tag:github.com,2008:Grit::Commit/217be548739f21d6008915c29aefe320ea1a90af",
+      "title": "Merge pull request #479 from jonathanhefner/issue-474-clarify-metadata",
+      "url": "https://github.com/agentskills/agentskills/commit/217be548739f21d6008915c29aefe320ea1a90af",
+      "updated": "2026-08-04T22:52:17Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "f51656dd437c5104d76726e25aadeb93a62f96c985fbb0a7ab30c4909eead133",
+      "feed_id": "skills",
+      "entry_id": "tag:github.com,2008:Grit::Commit/6b865a202a6d96583c66add31e2318d0ecd01672",
+      "title": "Merge pull request #268 from jonathanhefner/clarify-open-directory-st…",
+      "url": "https://github.com/agentskills/agentskills/commit/6b865a202a6d96583c66add31e2318d0ecd01672",
+      "updated": "2026-08-04T22:52:06Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "1a38160c13ca68183e0a4577588299cdb203b68d5cabcce40d2d77e8b64d714a",
+      "feed_id": "skills",
+      "entry_id": "tag:github.com,2008:Grit::Commit/3f3bbec8133ce7fcde5aa9fc42556cd15cab8646",
+      "title": "Clarify `metadata` in the frontmatter overview",
+      "url": "https://github.com/agentskills/agentskills/commit/3f3bbec8133ce7fcde5aa9fc42556cd15cab8646",
+      "updated": "2026-08-03T23:28:04Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "02b2a64158658944b7d2b5a174c2ebdca64e3a60729fa77978b00a0d1456a4b2",
+      "feed_id": "skills",
+      "entry_id": "tag:github.com,2008:Grit::Commit/27a9f0c075e876ad632fc2e88b8866c5dc8ca15c",
+      "title": "Merge pull request #478 from jonathanhefner/update-chatgpt-codex-bran…",
+      "url": "https://github.com/agentskills/agentskills/commit/27a9f0c075e876ad632fc2e88b8866c5dc8ca15c",
+      "updated": "2026-08-03T22:51:51Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "5b91f9b96fca6d124da55c32f5e29ef2c26eb83611cc23644731cf958cf46c66",
+      "feed_id": "skills",
+      "entry_id": "tag:github.com,2008:Grit::Commit/346deaa7f35cd0d72e5c6f83ce2e93bdeccc3a30",
+      "title": "Update ChatGPT and Codex client branding",
+      "url": "https://github.com/agentskills/agentskills/commit/346deaa7f35cd0d72e5c6f83ce2e93bdeccc3a30",
+      "updated": "2026-08-03T22:48:57Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "cf576cf1678cf327bbb1086549ced17d962460c7c7e24fdac49d7317f782f39c",
+      "feed_id": "skills",
+      "entry_id": "tag:github.com,2008:Grit::Commit/0c4bcfaf146ecf88922e3998d474a1d87320479b",
+      "title": "Merge pull request #477 from jonathanhefner/guide-client-logo-scaling",
+      "url": "https://github.com/agentskills/agentskills/commit/0c4bcfaf146ecf88922e3998d474a1d87320479b",
+      "updated": "2026-08-03T22:24:25Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "7ca3648ea331017ff3713614294feedeca70baa44807690eb9cc915e979da23c",
+      "feed_id": "skills",
+      "entry_id": "tag:github.com,2008:Grit::Commit/85ccdadcc77724f1c02f0d44f9307cc5a641d80b",
+      "title": "Merge pull request #476 from jonathanhefner/balance-square-client-logos",
+      "url": "https://github.com/agentskills/agentskills/commit/85ccdadcc77724f1c02f0d44f9307cc5a641d80b",
+      "updated": "2026-08-03T22:23:59Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "9830175ef97bb44687975d708459d6aca1257abd50aeeb26c967cc5b6737c52a",
+      "feed_id": "skills",
+      "entry_id": "tag:github.com,2008:Grit::Commit/1ee9b097c8f5c3a2ab67f50b0786ce6b18528530",
+      "title": "Guide agents on client logo scaling",
+      "url": "https://github.com/agentskills/agentskills/commit/1ee9b097c8f5c3a2ab67f50b0786ce6b18528530",
+      "updated": "2026-08-03T22:14:02Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "1cc8b8c29fc36d729e71918cb09d6a8d5218e7a4a83c873d19f26aec10d8559b",
+      "feed_id": "skills",
+      "entry_id": "tag:github.com,2008:Grit::Commit/970809ceea7547ecfd8252fd9b38ddc8f75d8b77",
+      "title": "Balance square client logos",
+      "url": "https://github.com/agentskills/agentskills/commit/970809ceea7547ecfd8252fd9b38ddc8f75d8b77",
+      "updated": "2026-08-03T22:12:10Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "44bc8aa5c964620e18c116c3811c28255200cb00018b121619402b897716539b",
+      "feed_id": "skills",
+      "entry_id": "tag:github.com,2008:Grit::Commit/19b15a866f39e1f6ad85fdadd259986801630934",
+      "title": "Merge pull request #475 from jonathanhefner/consolidate-agent-guidance",
+      "url": "https://github.com/agentskills/agentskills/commit/19b15a866f39e1f6ad85fdadd259986801630934",
+      "updated": "2026-08-03T21:47:05Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "1f0e45e9c62b3b9830dbfc041f502729802d688a82e79e63f7a154119d820831",
+      "feed_id": "skills",
+      "entry_id": "tag:github.com,2008:Grit::Commit/f130f348f502d9804278a617f86929846896d2e9",
+      "title": "Consolidate agent guidance",
+      "url": "https://github.com/agentskills/agentskills/commit/f130f348f502d9804278a617f86929846896d2e9",
+      "updated": "2026-08-03T21:45:08Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "2702c1bc98944111208bfa3cdf33942bd4a4f460f93b5e3f953d52daa71c38cb",
+      "feed_id": "skills",
+      "entry_id": "tag:github.com,2008:Grit::Commit/38a2ff82958afee88dadf4831509e6f7e9d8ef4e",
+      "title": "Merge pull request #447 from dirien/add-pulumi-neo",
+      "url": "https://github.com/agentskills/agentskills/commit/38a2ff82958afee88dadf4831509e6f7e9d8ef4e",
+      "updated": "2026-07-10T00:11:48Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "6e8ef85c554239a9be9d81192be177f531ca4c6ff286df21635632fa56fb38c3",
+      "feed_id": "skills",
+      "entry_id": "tag:github.com,2008:Grit::Commit/9892963892219fb11ee4c8ffda042d33aea19912",
+      "title": "Add ZeroClaw to clients list (#402)",
+      "url": "https://github.com/agentskills/agentskills/commit/9892963892219fb11ee4c8ffda042d33aea19912",
+      "updated": "2026-07-09T23:30:12Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "fa0816492dbedb84077a211d49538cab7a44b8887b57289d53555626c29ea2ba",
+      "feed_id": "skills",
+      "entry_id": "tag:github.com,2008:Grit::Commit/c37a033046dc3f4e8d891c44b9f6006b0c725776",
+      "title": "Add Pulumi Neo to client showcase",
+      "url": "https://github.com/agentskills/agentskills/commit/c37a033046dc3f4e8d891c44b9f6006b0c725776",
+      "updated": "2026-07-02T08:22:04Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "a437bb161d311a1fb0f2dd3a6441ea3710b85fb021fc0fa7953a67f3a3eab54c",
+      "feed_id": "skills",
+      "entry_id": "tag:github.com,2008:Grit::Commit/0c0c5673846d0a1c983d910b189e329ef3ab8f2a",
+      "title": "Merge pull request #446 from jonathanhefner/scale-square-logos",
+      "url": "https://github.com/agentskills/agentskills/commit/0c0c5673846d0a1c983d910b189e329ef3ab8f2a",
+      "updated": "2026-07-01T21:37:32Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "fa00bdabcff8503a92cef8ec92ffe0679e3c578ea6f31ac4a4e6e1d58a1d8a31",
+      "feed_id": "skills",
+      "entry_id": "tag:github.com,2008:Grit::Commit/5511e4ac571b3cef187edb3f4eb2b88e421596e9",
+      "title": "Scale square client logos",
+      "url": "https://github.com/agentskills/agentskills/commit/5511e4ac571b3cef187edb3f4eb2b88e421596e9",
+      "updated": "2026-07-01T21:33:10Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "d7fc32698b3bce4a71096ea5508a6fbe233f7cec5c5f3da20d49240c61cf903d",
+      "feed_id": "skills",
+      "entry_id": "tag:github.com,2008:Grit::Commit/6c9ed64a4ba0b46502686c675f32b1c44f0ebc3e",
+      "title": "Merge pull request #421 from qorzj/main",
+      "url": "https://github.com/agentskills/agentskills/commit/6c9ed64a4ba0b46502686c675f32b1c44f0ebc3e",
+      "updated": "2026-06-30T18:22:45Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "08b50a3301a3ac60d03dc46e91d37d1e56faa72d5985075b43f6c3373194ef06",
+      "feed_id": "graphrag",
+      "entry_id": "tag:github.com,2008:Repository/778431525/v3.3.0",
+      "title": "v3.3.0",
+      "url": "https://github.com/microsoft/graphrag/releases/tag/v3.3.0",
+      "updated": "2026-10-08T18:28:43Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "124f28258ef8a855fbf1cb7c434e5367bc6fe712181593bc4228da2da1615b53",
+      "feed_id": "graphrag",
+      "entry_id": "tag:github.com,2008:Repository/778431525/v3.2.0",
+      "title": "v3.2.0",
+      "url": "https://github.com/microsoft/graphrag/releases/tag/v3.2.0",
+      "updated": "2026-09-24T02:25:49Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "05b2c5c7e8c38a1984598785b05392c7d87d1cfe0c134b141a46bb6de12db271",
+      "feed_id": "graphrag",
+      "entry_id": "tag:github.com,2008:Repository/778431525/v3.1.2",
+      "title": "v3.1.2",
+      "url": "https://github.com/microsoft/graphrag/releases/tag/v3.1.2",
+      "updated": "2026-08-21T15:24:30Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "35e815cde630c1c2cc3c9f1f7fcc68ea0e667795a087d8d923d67c9fd65498e1",
+      "feed_id": "graphrag",
+      "entry_id": "tag:github.com,2008:Repository/778431525/v3.1.1",
+      "title": "v3.1.1",
+      "url": "https://github.com/microsoft/graphrag/releases/tag/v3.1.1",
+      "updated": "2026-07-18T01:23:18Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "1f282ddf124e367f478a749f712fc0d32ee12b3353b923984d863e4c2c4fb20d",
+      "feed_id": "graphrag",
+      "entry_id": "tag:github.com,2008:Repository/778431525/v1.2.2",
+      "title": "v1.2.2",
+      "url": "https://github.com/microsoft/graphrag/releases/tag/v1.2.2",
+      "updated": "2026-06-18T13:56:11Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "023a8aa0016042750cf14759e62b1ad79fd09488735d6d686b5a5a51c8dd5fa1",
+      "feed_id": "graphrag",
+      "entry_id": "tag:github.com,2008:Repository/778431525/v3.1.0",
+      "title": "v3.1.0",
+      "url": "https://github.com/microsoft/graphrag/releases/tag/v3.1.0",
+      "updated": "2026-05-28T15:55:40Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "be47eb54a60c44b4f22d058524e0f12f3e750cb0aeab5d1aeed53d79172b0de3",
+      "feed_id": "graphrag",
+      "entry_id": "tag:github.com,2008:Repository/778431525/3.0.9",
+      "title": "v3.0.9",
+      "url": "https://github.com/microsoft/graphrag/releases/tag/3.0.9",
+      "updated": "2026-04-13T19:29:27Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "ef5674ab0cc43b06d7ce39ce63b3ca01356238bcc058d98528c1101c080db033",
+      "feed_id": "graphrag",
+      "entry_id": "tag:github.com,2008:Repository/778431525/v3.0.8",
+      "title": "v3.0.8",
+      "url": "https://github.com/microsoft/graphrag/releases/tag/v3.0.8",
+      "updated": "2026-03-27T20:52:00Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "c0ca5778d3147cb8f2719cebbe1e297422fa86c455b37b9fdbe9dab93d913079",
+      "feed_id": "graphrag",
+      "entry_id": "tag:github.com,2008:Repository/778431525/v2.7.2",
+      "title": "v2.7.2",
+      "url": "https://github.com/microsoft/graphrag/releases/tag/v2.7.2",
+      "updated": "2026-03-27T14:22:09Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "301c05abf0070a7fb6671c4b24ff4386431057ede224a431a5bcda358f5b07e8",
+      "feed_id": "graphrag",
+      "entry_id": "tag:github.com,2008:Repository/778431525/v1.2.1",
+      "title": "v1.2.1",
+      "url": "https://github.com/microsoft/graphrag/releases/tag/v1.2.1",
+      "updated": "2026-03-27T14:06:36Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "5133322805a9a857889ed684fd5dac5ce929fb8bba28d16aafdc4fa36d8e6e07",
+      "feed_id": "lightrag",
+      "entry_id": "tag:github.com,2008:Repository/866513204/temp",
+      "title": "temp",
+      "url": "https://github.com/HKUDS/LightRAG/releases/tag/temp",
+      "updated": "2026-10-15T08:48:18Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "06903fb0c49818462d604963b147a865d857c299cbbc59a114c1c39780a4e4f7",
+      "feed_id": "lightrag",
+      "entry_id": "tag:github.com,2008:Repository/866513204/v1.5.7",
+      "title": "v1.5.7",
+      "url": "https://github.com/HKUDS/LightRAG/releases/tag/v1.5.7",
+      "updated": "2026-09-02T07:23:55Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "6e9b7947b61e6824f53bec21cdb70419416cc32652b66c806585af31330dc1f0",
+      "feed_id": "lightrag",
+      "entry_id": "tag:github.com,2008:Repository/866513204/v1.5.7rc2",
+      "title": "v1.5.7rc2",
+      "url": "https://github.com/HKUDS/LightRAG/releases/tag/v1.5.7rc2",
+      "updated": "2026-08-19T07:01:48Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "e338713199b6d41751861d9a6baf400fe992bf6632fc08891e23277e3ead1a4b",
+      "feed_id": "lightrag",
+      "entry_id": "tag:github.com,2008:Repository/866513204/v1.5.7rc1",
+      "title": "v1.5.7rc1",
+      "url": "https://github.com/HKUDS/LightRAG/releases/tag/v1.5.7rc1",
+      "updated": "2026-08-19T07:03:35Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "c4750aa28ac6b068973594cfd293c84874deff48855ab87ae6ccbd54a08f2a03",
+      "feed_id": "lightrag",
+      "entry_id": "tag:github.com,2008:Repository/866513204/v1.5.6",
+      "title": "v1.5.6",
+      "url": "https://github.com/HKUDS/LightRAG/releases/tag/v1.5.6",
+      "updated": "2026-08-06T08:39:45Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "c69cb2619b344fd2e60130b7232f778196d84b07c993a17e25be3269ff3050bc",
+      "feed_id": "lightrag",
+      "entry_id": "tag:github.com,2008:Repository/866513204/v1.5.5",
+      "title": "v1.5.5",
+      "url": "https://github.com/HKUDS/LightRAG/releases/tag/v1.5.5",
+      "updated": "2026-07-31T12:07:29Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "b73c69970f228447261be87bd1234a29ca41f1dbcaad8773c407cc30d04af0e2",
+      "feed_id": "lightrag",
+      "entry_id": "tag:github.com,2008:Repository/866513204/v1.5.5rc1",
+      "title": "v1.5.5rc1",
+      "url": "https://github.com/HKUDS/LightRAG/releases/tag/v1.5.5rc1",
+      "updated": "2026-08-17T06:47:47Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "09813796965ff3434249177b1c8d3561b0557910978ac950c5dafe9c3be006c4",
+      "feed_id": "lightrag",
+      "entry_id": "tag:github.com,2008:Repository/866513204/v1.5.4",
+      "title": "v1.5.4",
+      "url": "https://github.com/HKUDS/LightRAG/releases/tag/v1.5.4",
+      "updated": "2026-06-24T10:24:01Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "351af249e26935ae4b1017224585b57f0b12086f17a0719b78e1d89e0fa8f0b3",
+      "feed_id": "lightrag",
+      "entry_id": "tag:github.com,2008:Repository/866513204/v1.5.3",
+      "title": "v1.5.3",
+      "url": "https://github.com/HKUDS/LightRAG/releases/tag/v1.5.3",
+      "updated": "2026-06-14T06:21:33Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "d5f57561abbbadcc66bf51df32a71442892dd2f073159b35255c93e5cea46d2b",
+      "feed_id": "lightrag",
+      "entry_id": "tag:github.com,2008:Repository/866513204/v1.5.2",
+      "title": "v1.5.2",
+      "url": "https://github.com/HKUDS/LightRAG/releases/tag/v1.5.2",
+      "updated": "2026-06-11T06:14:51Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "9f647f8b1a61acf1ad03ea99fa6e5c1c370140d1a735875160e49f67eafdf895",
+      "feed_id": "swebench",
+      "entry_id": "tag:github.com,2008:Repository/700117650/v5.0.1",
+      "title": "v5.0.1",
+      "url": "https://github.com/SWE-bench/SWE-bench/releases/tag/v5.0.1",
+      "updated": "2026-08-18T01:04:26Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "b2f2fc9ad7fbd5b72f26a6cc611aabcd6b0f2f21292caee22d1a3765759003e6",
+      "feed_id": "swebench",
+      "entry_id": "tag:github.com,2008:Repository/700117650/v5.0.0",
+      "title": "v5.0.0",
+      "url": "https://github.com/SWE-bench/SWE-bench/releases/tag/v5.0.0",
+      "updated": "2026-08-17T17:25:30Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "44d7881990b0d7f1e4eff7fb3587e7bb5212a37cdeaa093655b952cca3b21542",
+      "feed_id": "swebench",
+      "entry_id": "tag:github.com,2008:Repository/700117650/v4.1.0",
+      "title": "v4.1.0",
+      "url": "https://github.com/SWE-bench/SWE-bench/releases/tag/v4.1.0",
+      "updated": "2025-09-11T02:55:23Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "ae846cecbf404eb93d557e213867a76dfa6ce3e3bf385bf2f44ea3f45cdcffd8",
+      "feed_id": "swebench",
+      "entry_id": "tag:github.com,2008:Repository/700117650/v4.0.4",
+      "title": "v4.0.4",
+      "url": "https://github.com/SWE-bench/SWE-bench/releases/tag/v4.0.4",
+      "updated": "2025-07-17T05:14:55Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "8b5aa8a0beea9e814b39d918210976d8cd528c1ae2868f0fd8d776723c8c2113",
+      "feed_id": "swebench",
+      "entry_id": "tag:github.com,2008:Repository/700117650/v4.0.1",
+      "title": "v4.0.1",
+      "url": "https://github.com/SWE-bench/SWE-bench/releases/tag/v4.0.1",
+      "updated": "2025-05-07T00:24:58Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "2ebe8cd578f209862c8d9bd830b3f83eb15643652a0c387d22f42992f8967272",
+      "feed_id": "swebench",
+      "entry_id": "tag:github.com,2008:Repository/700117650/v3.0.17",
+      "title": "v3.0.17",
+      "url": "https://github.com/SWE-bench/SWE-bench/releases/tag/v3.0.17",
+      "updated": "2025-04-18T06:08:04Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "80f5443ed04bf654fabafd987720ac3de7107c61fb3f539e7425057d28a03167",
+      "feed_id": "swebench",
+      "entry_id": "tag:github.com,2008:Repository/700117650/v3.0.15",
+      "title": "v3.0.15",
+      "url": "https://github.com/SWE-bench/SWE-bench/releases/tag/v3.0.15",
+      "updated": "2025-03-02T23:50:33Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "4f7f13b2b8913aef2d103fd90a0798c2a96eb247e24fbf21b174df0b9a85106c",
+      "feed_id": "swebench",
+      "entry_id": "tag:github.com,2008:Repository/700117650/v3.0.14",
+      "title": "v3.0.14",
+      "url": "https://github.com/SWE-bench/SWE-bench/releases/tag/v3.0.14",
+      "updated": "2025-03-01T19:24:43Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "0cfa73aee3a9fe833ecc03884e62e62838fc4e8644c1dea47bcf84d2822c1db7",
+      "feed_id": "swebench",
+      "entry_id": "tag:github.com,2008:Repository/700117650/v3.0.13",
+      "title": "v3.0.13",
+      "url": "https://github.com/SWE-bench/SWE-bench/releases/tag/v3.0.13",
+      "updated": "2025-02-24T16:53:53Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "b9b7d22472b479e293e9ac9bc8e103c4a712e0da7126d20ee3aefc591a6c5f3b",
+      "feed_id": "swebench",
+      "entry_id": "tag:github.com,2008:Repository/700117650/v3.0.12",
+      "title": "v3.0.12",
+      "url": "https://github.com/SWE-bench/SWE-bench/releases/tag/v3.0.12",
+      "updated": "2025-02-19T21:34:36Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "7ea73f89b1063ad7e2f8a1db699202b1013266c902424564928023b157552744",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/04718eab9327856efe8192cc58161acc7a7627e2",
+      "title": "Merge pull request #664 from xlang-ai/fix/pr-663-super-bowl-score-record",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/04718eab9327856efe8192cc58161acc7a7627e2",
+      "updated": "2026-10-23T00:07:05Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "d19cdd4e17c7f0d1f8b6f83612a2b28f4fc6b3014d5294d9ef254f20260b2b82",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/8425b2e90042a24d8fd1f12f01b2867db43eb293",
+      "title": "Validate the Super Bowl LIV score record and add focused regressions",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/8425b2e90042a24d8fd1f12f01b2867db43eb293",
+      "updated": "2026-10-22T23:55:40Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "485c7cc4f52bc97c2ceb88e268587b5499defd77c845378a79b863d43b9740ea",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/e52b5cc63493ee711638e620f518b6d375ee0803",
+      "title": "fix(chrome): require Super Bowl teams in f0b971a1 checker (#599)",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/e52b5cc63493ee711638e620f518b6d375ee0803",
+      "updated": "2026-10-22T17:14:47Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "e3319f679c18b4715086d2275fd89e91ae1af8b6d50a49402809dfb35fbd0ce1",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/f9885c9e5d4b23486afd1568a3e3f7a8daf76a5d",
+      "title": "Merge pull request #660 from xlang-ai/fix/pr-505-review",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/f9885c9e5d4b23486afd1568a3e3f7a8daf76a5d",
+      "updated": "2026-10-22T10:46:47Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "958d9548b720c12b7bdb51ccb0cad94984692953ac95621d943c4c8c531750c1",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/7c0d2d3f97d93b2201ae918c990778245951b4ff",
+      "title": "docs(docker): record AWS capability fallback runtime validation",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/7c0d2d3f97d93b2201ae918c990778245951b4ff",
+      "updated": "2026-10-22T02:53:31Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "2ed8a2af49d943b01cee6dc64c9d894a9e97cd51d12a5cec989c9a46fd3670a2",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/9c7538f1b456ba24be0de7984248fc17e6788dc9",
+      "title": "fix(docker): preserve guest service ports during capability fallback",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/9c7538f1b456ba24be0de7984248fc17e6788dc9",
+      "updated": "2026-10-22T02:41:28Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "3af332526f039fdb8662c12f43a3c489fd56cb2d8103f7b195fc1d7eaf2178d0",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/633a8d5479f6cf61c268d33e780a77568f640f3c",
+      "title": "fix(docker): clean up failed starts without replaying creation",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/633a8d5479f6cf61c268d33e780a77568f640f3c",
+      "updated": "2026-10-22T01:33:19Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "b5b99f44021f19dc5df63782eb3f661e77f1e180c270b41348b2165e48fe3098",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/ac5f82202de2f09629e64841dfdc3be0ce439900",
+      "title": "fix(docker): restrict capability fallback to rejected create requests",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/ac5f82202de2f09629e64841dfdc3be0ce439900",
+      "updated": "2026-10-21T14:27:57Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "52cb551ce6e06931aff0549449f43540b97ad071bbdf82c9c017b4b2a2765525",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/90a245c0c29ffd417513ea421d84afc2b33df87b",
+      "title": "Merge pull request #655 from georgeatparallel/parallel-search-e3c27b2…",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/90a245c0c29ffd417513ea421d84afc2b33df87b",
+      "updated": "2026-10-21T14:26:59Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "8eb1aaaf72b118e9cc97d312b661240efc1c6ae883e40b581e7c5c5af4853d5f",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/019a75387eac3c89a44d2c4d95f174fdd10bceb9",
+      "title": "Merge pull request #640 from xlang-ai/fix/exact-slide-text-export",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/019a75387eac3c89a44d2c4d95f174fdd10bceb9",
+      "updated": "2026-10-21T14:12:27Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "965cc8d67d41a223220c816dce9fb5ee4db30787776347de6a404cccc5973c47",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/3229f981682f9c8c850183e44aa258ed0535fe18",
+      "title": "Merge pull request #633 from xlang-ai/fix/writer-color-integrity",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/3229f981682f9c8c850183e44aa258ed0535fe18",
+      "updated": "2026-10-21T14:12:12Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "0bbf79e6ef2afc301153bc13884afe31100f9db0ea1cd140cca95c8029c14ce5",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/ddde092069a2edd77376b48e18021f686e867979",
+      "title": "fix(docs): normalize strict content before paragraph ordering",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/ddde092069a2edd77376b48e18021f686e867979",
+      "updated": "2026-10-21T14:11:03Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "332b745417b82bc7d7eb882458a4e089baea61e597532e3932c2a88259b5be18",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/285876fa1558891acf286d292c0b51b6b7224606",
+      "title": "Merge pull request #651: remove host execution of submitted Python",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/285876fa1558891acf286d292c0b51b6b7224606",
+      "updated": "2026-10-21T12:58:44Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "65e6d92d1f1bc6145d4eb04ed3172a86ccbb3745e60ce3ebaea686eaef4b8706",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/902add2a99367488eba456d2c0f4e405cd4b1e68",
+      "title": "test(evaluator): validate Windows guest scoring on AWS",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/902add2a99367488eba456d2c0f4e405cd4b1e68",
+      "updated": "2026-10-21T12:57:31Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "abbf41d39bfbd0e31b97c8f71aa93a1a30e6c2c1c404787a9428a046a27dba42",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/00bb8ca172df1c504bdbd10bf6cb3cc4dc1b8485",
+      "title": "Merge pull request #652 from xlang-ai/fix/vlc-positive-window-geometr…",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/00bb8ca172df1c504bdbd10bf6cb3cc4dc1b8485",
+      "updated": "2026-10-21T12:25:32Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "6da10761f082abda4ee4bd4093e15f00ac3ca2b77a2314d589cafda50b4844a8",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/bb17f8af5822e94fd1b25509edb2602160ed0593",
+      "title": "Merge pull request #650 from xlang-ai/fix/calc-host-age-reference-638",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/bb17f8af5822e94fd1b25509edb2602160ed0593",
+      "updated": "2026-10-21T12:25:26Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "26e05bb5bbf1a48c5fc5102f4ec860edbc354b0a71a663607f50029f835649d3",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/5284441147ad533a688c805ca8d2f55493ee56d2",
+      "title": "Merge pull request #649 from xlang-ai/fix/clipboard-path-match-638",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/5284441147ad533a688c805ca8d2f55493ee56d2",
+      "updated": "2026-10-21T12:25:19Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "b5df5be802968561e1cd0b4d0d1c8b4c498a695e1bf6aced1c42e7ec524df2eb",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/354b239dee50f6d74ec443906f1d5c2b1c9afcb1",
+      "title": "Merge pull request #643 from xlang-ai/fix/audio-reference-integrity-638",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/354b239dee50f6d74ec443906f1d5c2b1c9afcb1",
+      "updated": "2026-10-21T12:25:12Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "63bf3d76a2bb4ddea5c329afde5ce8ab4362a85cdf27dbe145ebd15ff91bcd91",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/602db2e9b8738564ef5bbd4ff68b3a2e1f91dc27",
+      "title": "Merge pull request #648 from xlang-ai/fix/gnome-favorites-hardened-637",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/602db2e9b8738564ef5bbd4ff68b3a2e1f91dc27",
+      "updated": "2026-10-21T12:25:05Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "34322f9d80f00272b8013cf99a22221715716cebd050ac4ef862642d7182b084",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/32fbe6ae902fad1ddf6b7a685f98c3c8f0e5e19d",
+      "title": "Merge pull request #658: preserve evaluation failures while retrying …",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/32fbe6ae902fad1ddf6b7a685f98c3c8f0e5e19d",
+      "updated": "2026-10-21T12:23:44Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    }
+  ],
+  "feeds": [
+    {
+      "feed_id": "transformers",
+      "status": "ok",
+      "new_count": 10
+    },
+    {
+      "feed_id": "trl",
+      "status": "ok",
+      "new_count": 10
+    },
+    {
+      "feed_id": "vllm",
+      "status": "ok",
+      "new_count": 10
+    },
+    {
+      "feed_id": "sglang",
+      "status": "ok",
+      "new_count": 10
+    },
+    {
+      "feed_id": "mcp",
+      "status": "ok",
+      "new_count": 20
+    },
+    {
+      "feed_id": "skills",
+      "status": "ok",
+      "new_count": 20
+    },
+    {
+      "feed_id": "graphrag",
+      "status": "ok",
+      "new_count": 10
+    },
+    {
+      "feed_id": "lightrag",
+      "status": "ok",
+      "new_count": 10
+    },
+    {
+      "feed_id": "swebench",
+      "status": "ok",
+      "new_count": 10
+    },
+    {
+      "feed_id": "osworld",
+      "status": "ok",
+      "new_count": 20
+    }
+  ]
+}

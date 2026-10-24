@@ -1,0 +1,585 @@
+[
+  {
+    "id": "claim-transformer-v1",
+    "topic": "transformer",
+    "text": "因果自注意力用掩码阻止位置访问未来 token。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_or_synthesis",
+    "replicated": false,
+    "conditions": "常规稠密自注意力的得分矩阵随序列长度平方增长；实际执行的显存还取决于内核是否物化该矩阵。模型输出概率不构成外部世界事实的证明。",
+    "evidence": [
+      {
+        "source_id": "attention",
+        "source_version": "text-sha256:855af16c12cbc77c7401cb4197e9d243bb483065291c4e0a8daaa6044866f709",
+        "locator": "3.2 Attention；3.3 FFN"
+      },
+      {
+        "source_id": "llama",
+        "source_version": "text-sha256:a170fc10ca377b49288ea43b224aed18078ec0ab5ba917114dabb4061139c787",
+        "locator": "2.1 Data；2.2 Architecture"
+      }
+    ]
+  },
+  {
+    "id": "claim-attention-heads-v1",
+    "topic": "attention-heads",
+    "text": "GQA 让多个查询头组成的组共享 K/V 头。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_or_synthesis",
+    "replicated": false,
+    "conditions": "显存估算只覆盖 K/V 张量，不含权重、激活和分配碎片。已有模型若不支持对应头布局，强行修改配置会改变计算或使权重不兼容。",
+    "evidence": [
+      {
+        "source_id": "gqa",
+        "source_version": "text-sha256:ce4304148fdaed1c7fb0804a5b0c00dd57237e7e12b3e5b54bf4fd9c962bacf7",
+        "locator": "2.2 Grouped-query attention"
+      },
+      {
+        "source_id": "hf-cache",
+        "source_version": "text-sha256:ee1f15f6a309832fccd943368cce6851aba544a582e24c6e46a7dd547ed7123e",
+        "locator": "Cache class"
+      }
+    ]
+  },
+  {
+    "id": "claim-position-v1",
+    "topic": "position",
+    "text": "RoPE 对表示施加位置相关旋转，使自注意力体现相对位置依赖。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_or_synthesis",
+    "replicated": false,
+    "conditions": "位置表示可计算到更大下标，不代表模型在该长度上保持质量；训练分布、检索难度和缓存实现仍会限制效果。本文不提供未经校验的长上下文缩放参数。",
+    "evidence": [
+      {
+        "source_id": "rope",
+        "source_version": "text-sha256:b4c87d09b3cd896f89530f0f05f7177ff98380818d26aeae6eddddb125cb5657",
+        "locator": "3.2 Rotary position embedding"
+      },
+      {
+        "source_id": "attention",
+        "source_version": "text-sha256:855af16c12cbc77c7401cb4197e9d243bb483065291c4e0a8daaa6044866f709",
+        "locator": "3.2 Attention；3.3 FFN"
+      }
+    ]
+  },
+  {
+    "id": "claim-ffn-norm-v1",
+    "topic": "ffn-norm",
+    "text": "Transformer 的逐位置 FFN 在位置之间共享同一层权重。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_or_synthesis",
+    "replicated": false,
+    "conditions": "参数规模、激活函数、FFN 宽度和训练超参数互相影响。论文某一配置的稳定性结论不能无条件迁移到更深模型或不同精度。",
+    "evidence": [
+      {
+        "source_id": "attention",
+        "source_version": "text-sha256:855af16c12cbc77c7401cb4197e9d243bb483065291c4e0a8daaa6044866f709",
+        "locator": "3.2 Attention；3.3 FFN"
+      },
+      {
+        "source_id": "llama",
+        "source_version": "text-sha256:a170fc10ca377b49288ea43b224aed18078ec0ab5ba917114dabb4061139c787",
+        "locator": "2.1 Data；2.2 Architecture"
+      }
+    ]
+  },
+  {
+    "id": "claim-pretraining-v1",
+    "topic": "pretraining",
+    "text": "自回归语言模型通过预测给定历史下的下一 token 学习序列分布。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_or_synthesis",
+    "replicated": false,
+    "conditions": "低验证损失并不保证指令遵循、事实性或业务任务成功；若评测材料进入训练集，离线分数可能不再反映泛化。首版提供学习配方，未训练或发布新模型。",
+    "evidence": [
+      {
+        "source_id": "llama",
+        "source_version": "text-sha256:a170fc10ca377b49288ea43b224aed18078ec0ab5ba917114dabb4061139c787",
+        "locator": "2.1 Data；2.2 Architecture"
+      },
+      {
+        "source_id": "hf-train",
+        "source_version": "text-sha256:fcafe9d560c26c13f6909251b6fe8f64e484f85ac0ba44e19b2790ffc7aa463a",
+        "locator": "Training a causal language model"
+      },
+      {
+        "source_id": "hf-token",
+        "source_version": "text-sha256:6dc6ff98d0967c09862909c210ac6c6d7bed1a2603f1733534f5325657a4c9f4",
+        "locator": "Introduction"
+      }
+    ]
+  },
+  {
+    "id": "claim-sft-v1",
+    "topic": "sft",
+    "text": "LoRA 冻结预训练权重并学习低秩更新矩阵。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_or_synthesis",
+    "replicated": false,
+    "conditions": "低秩更新不自动消除数据偏差或遗忘；实际训练显存还包含激活、梯度与优化器状态。能合并 adapter 时可评估合并推理，不能推断所有多适配器服务都没有额外开销。",
+    "evidence": [
+      {
+        "source_id": "instructgpt",
+        "source_version": "text-sha256:67c4a350fdd70e374d887083045be465d3a6da270bc2d0883a8e980d8d279029",
+        "locator": "3.1 High-level methodology"
+      },
+      {
+        "source_id": "lora",
+        "source_version": "text-sha256:1211ca4c906dd0469e87d782fce084683ace15d0ce5fdc98cda6625ad57d6a9c",
+        "locator": "4.1 Low-Rank-Parametrized Update Matrices"
+      },
+      {
+        "source_id": "hf-trl",
+        "source_version": "text-sha256:696881224f521732574e87165874c98751b58d94fc6da227fe222dbb92c441e6",
+        "locator": "Trainers"
+      }
+    ]
+  },
+  {
+    "id": "claim-preference-v1",
+    "topic": "preference",
+    "text": "DPO 在其推导假设下用直接偏好目标优化策略，无需显式的独立奖励模型训练步骤。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_or_synthesis",
+    "replicated": false,
+    "conditions": "偏好标注表示标注协议下的选择，不保证事实正确；长度偏差、标注噪声和训练分布偏移都应检查。原论文的任务结果不是对所有领域优于 PPO 的证明。",
+    "evidence": [
+      {
+        "source_id": "dpo",
+        "source_version": "text-sha256:5dd82c6d51fadca9a9335a5febb80072af3ba37df81bb49ccfdbe80874af4273",
+        "locator": "4 Direct Preference Optimization"
+      },
+      {
+        "source_id": "instructgpt",
+        "source_version": "text-sha256:67c4a350fdd70e374d887083045be465d3a6da270bc2d0883a8e980d8d279029",
+        "locator": "3.1 High-level methodology"
+      }
+    ]
+  },
+  {
+    "id": "claim-policy-optimization-v1",
+    "topic": "policy-optimization",
+    "text": "GRPO 用组内得分估计基线，原方法不使用独立 critic 模型。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_or_synthesis",
+    "replicated": false,
+    "conditions": "组内相同奖励会弱化相对学习信号；奖励可被投机利用，验证器本身也可能有漏洞。没有固定模型、任务、样本预算与评估设置时，不能比较不同方法的分数。",
+    "evidence": [
+      {
+        "source_id": "grpo",
+        "source_version": "text-sha256:c2e69fb8af03002c6914f9cda68898ff42fd236d8931063d0b5d11e66e42d233",
+        "locator": "4.1 Group Relative Policy Optimization"
+      },
+      {
+        "source_id": "instructgpt",
+        "source_version": "text-sha256:67c4a350fdd70e374d887083045be465d3a6da270bc2d0883a8e980d8d279029",
+        "locator": "3.1 High-level methodology"
+      },
+      {
+        "source_id": "hf-trl",
+        "source_version": "text-sha256:696881224f521732574e87165874c98751b58d94fc6da227fe222dbb92c441e6",
+        "locator": "Trainers"
+      }
+    ]
+  },
+  {
+    "id": "claim-prefill-decode-v1",
+    "topic": "prefill-decode",
+    "text": "自回归服务把提示处理与后续逐步生成分成不同阶段。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_or_synthesis",
+    "replicated": false,
+    "conditions": "Prefill 常有更高并行度，Decode 常受存储带宽影响，但具体瓶颈依赖模型、batch、硬件和并行方式，不能视为普遍定律。",
+    "evidence": [
+      {
+        "source_id": "pagedattention",
+        "source_version": "text-sha256:17eab179187ed013b430fdb6fbd72dae81b40d15a4b781ac5e411505ee252959",
+        "locator": "2.2 LLM Service；4.1 PagedAttention"
+      },
+      {
+        "source_id": "hf-cache",
+        "source_version": "text-sha256:ee1f15f6a309832fccd943368cce6851aba544a582e24c6e46a7dd547ed7123e",
+        "locator": "Cache class"
+      }
+    ]
+  },
+  {
+    "id": "claim-kv-cache-v1",
+    "topic": "kv-cache",
+    "text": "KV Cache 复用历史 token 的 K/V；其体积受层数、长度、KV 头数及精度影响。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_or_synthesis",
+    "replicated": false,
+    "conditions": "该公式不含权重、临时激活、缓存块填充、元数据或分片复制；滑动窗口、压缩状态和其他架构需改写估算。不同 prompt、模型、adapter 或位置语义不兼容时不可随意复用。",
+    "evidence": [
+      {
+        "source_id": "hf-cache",
+        "source_version": "text-sha256:ee1f15f6a309832fccd943368cce6851aba544a582e24c6e46a7dd547ed7123e",
+        "locator": "Cache class"
+      },
+      {
+        "source_id": "pagedattention",
+        "source_version": "text-sha256:17eab179187ed013b430fdb6fbd72dae81b40d15a4b781ac5e411505ee252959",
+        "locator": "2.2 LLM Service；4.1 PagedAttention"
+      },
+      {
+        "source_id": "gqa",
+        "source_version": "text-sha256:ce4304148fdaed1c7fb0804a5b0c00dd57237e7e12b3e5b54bf4fd9c962bacf7",
+        "locator": "2.2 Grouped-query attention"
+      }
+    ]
+  },
+  {
+    "id": "claim-cache-scheduling-v1",
+    "topic": "cache-scheduling",
+    "text": "PagedAttention 将 KV Cache 划分为可非连续存放的固定大小块。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_or_synthesis",
+    "replicated": false,
+    "conditions": "块大小影响碎片与元数据成本；抢占或重计算可能增加延迟。前缀命中只减少可复用部分的计算，无法保证新生成部分同样加速。",
+    "evidence": [
+      {
+        "source_id": "pagedattention",
+        "source_version": "text-sha256:17eab179187ed013b430fdb6fbd72dae81b40d15a4b781ac5e411505ee252959",
+        "locator": "2.2 LLM Service；4.1 PagedAttention"
+      },
+      {
+        "source_id": "sglang",
+        "source_version": "text-sha256:d46806b6c924d15e959feb4f15c13938688a8be83e5764cc8d1d01dec20dd24e",
+        "locator": "3 RadixAttention；6 Evaluation"
+      },
+      {
+        "source_id": "vllm",
+        "source_version": "text-sha256:96c817606a0cd0f23ea82ff253bc3e6b28d3e71694048af7b6d6536e2619630b",
+        "locator": "Design；Block hashing"
+      }
+    ]
+  },
+  {
+    "id": "claim-inference-frameworks-v1",
+    "topic": "inference-frameworks",
+    "text": "推理框架的机制和实验结果必须绑定具体实现与负载条件。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_or_synthesis",
+    "replicated": false,
+    "conditions": "本文是实验设计，不包含实测性能数值。与不同硬件、量化或任务设置的排行榜不直接横比；单请求实验不能代表高并发容量。",
+    "evidence": [
+      {
+        "source_id": "pagedattention",
+        "source_version": "text-sha256:17eab179187ed013b430fdb6fbd72dae81b40d15a4b781ac5e411505ee252959",
+        "locator": "2.2 LLM Service；4.1 PagedAttention"
+      },
+      {
+        "source_id": "sglang",
+        "source_version": "text-sha256:d46806b6c924d15e959feb4f15c13938688a8be83e5764cc8d1d01dec20dd24e",
+        "locator": "3 RadixAttention；6 Evaluation"
+      },
+      {
+        "source_id": "vllm",
+        "source_version": "text-sha256:96c817606a0cd0f23ea82ff253bc3e6b28d3e71694048af7b6d6536e2619630b",
+        "locator": "Design；Block hashing"
+      }
+    ]
+  },
+  {
+    "id": "claim-agent-loop-v1",
+    "topic": "agent-loop",
+    "text": "Agent 执行需要模型决策与外部工具反馈构成循环。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_or_synthesis",
+    "replicated": false,
+    "conditions": "长任务必须设置步数、时间、成本和重复动作边界；失败重试前检查是否已产生副作用。本文只定义学习用循环，不代表某个宿主具有全部恢复能力。",
+    "evidence": [
+      {
+        "source_id": "agents",
+        "source_version": "text-sha256:07896b6c64f00f61289d45741395d106c90db9497b334f5699482ce77aeb20d0",
+        "locator": "When to use agents；Agents"
+      },
+      {
+        "source_id": "mcp",
+        "source_version": "text-sha256:1743c5b616eca7290c40127f88cf95e4163bb6f507b396d127bd85e4d9a6df72",
+        "locator": "Participants；Data layer"
+      }
+    ]
+  },
+  {
+    "id": "claim-context-v1",
+    "topic": "context",
+    "text": "上下文工程包含在推理期间选择和维护可用信息，压缩是其中一种方法。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_or_synthesis",
+    "replicated": false,
+    "conditions": "上下文更长不保证召回更准；更短也不保证信息完整。压缩前后需要用目标约束和未完成事项校验，不把摘要当成新增事实证据。",
+    "evidence": [
+      {
+        "source_id": "context",
+        "source_version": "text-sha256:7934543271b3c8e3e8ebe80fd02c3ae0dec60b896b1d8b8946933c3bf88d3d3a",
+        "locator": "Compaction；Structured note-taking"
+      },
+      {
+        "source_id": "agents",
+        "source_version": "text-sha256:07896b6c64f00f61289d45741395d106c90db9497b334f5699482ce77aeb20d0",
+        "locator": "When to use agents；Agents"
+      }
+    ]
+  },
+  {
+    "id": "claim-memory-v1",
+    "topic": "memory",
+    "text": "结构化笔记可为长任务保留信息，但使用时仍需选择和核对相关上下文。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_or_synthesis",
+    "replicated": false,
+    "conditions": "来源摘要与自我生成答案不是独立证据；重复写入可能让错误显得更可信。撤销和删除策略必须传播到召回层，不能只删可见正文。",
+    "evidence": [
+      {
+        "source_id": "context",
+        "source_version": "text-sha256:7934543271b3c8e3e8ebe80fd02c3ae0dec60b896b1d8b8946933c3bf88d3d3a",
+        "locator": "Compaction；Structured note-taking"
+      },
+      {
+        "source_id": "wiki-pattern",
+        "source_version": "text-sha256:dc3efe98ae62f23dd08acad13aba2e95287beb20b6bec2f4af0423557fe37401",
+        "locator": "Architecture；Operations"
+      }
+    ]
+  },
+  {
+    "id": "claim-tools-skills-v1",
+    "topic": "tools-skills",
+    "text": "MCP 使用 host-client-server 架构，Agent Skills 通过分层加载组织任务说明。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_or_synthesis",
+    "replicated": false,
+    "conditions": "是否执行有副作用的动作由宿主和用户授权边界决定；工具输出应作为不可信数据处理。具体协议与可选字段会演进，实践时固定规范版本。",
+    "evidence": [
+      {
+        "source_id": "mcp",
+        "source_version": "text-sha256:1743c5b616eca7290c40127f88cf95e4163bb6f507b396d127bd85e4d9a6df72",
+        "locator": "Participants；Data layer"
+      },
+      {
+        "source_id": "skills",
+        "source_version": "text-sha256:72624e7702ff7a5f0e7f2667c1989591f91f94170a8a1350e2d400f98303a43d",
+        "locator": "SKILL.md；Progressive disclosure"
+      },
+      {
+        "source_id": "agents",
+        "source_version": "text-sha256:07896b6c64f00f61289d45741395d106c90db9497b334f5699482ce77aeb20d0",
+        "locator": "When to use agents；Agents"
+      }
+    ]
+  },
+  {
+    "id": "claim-rag-v1",
+    "topic": "rag",
+    "text": "RAG 将生成模型与外部非参数检索材料结合。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_or_synthesis",
+    "replicated": false,
+    "conditions": "召回器无法挽救缺失或错误的来源；相关但不支持结论的引用不能算有效证据。权限过滤、时间版本和证据不足时的回答策略需要单独设计。",
+    "evidence": [
+      {
+        "source_id": "rag",
+        "source_version": "text-sha256:d7558dde8821c163af968f6e204d40d64f25c47acdd46746feb6f2bf37459f09",
+        "locator": "Abstract；2 Methods"
+      },
+      {
+        "source_id": "graphrag",
+        "source_version": "text-sha256:10867214603991dc2ff7f3edb33b9b57601f2eaeb818818854a14d3da6f2ec57",
+        "locator": "The GraphRAG Process；Query"
+      }
+    ]
+  },
+  {
+    "id": "claim-ingestion-v1",
+    "topic": "ingestion",
+    "text": "LLM Wiki 模式把原始来源与编纂后的知识页面分开维护。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_or_synthesis",
+    "replicated": false,
+    "conditions": "指纹可以发现字节或文本变化，但不自动判断语义变化。短摘无法替代完整原文归档；受许可限制不镜像全文时，要明确原站失效后的恢复缺口。",
+    "evidence": [
+      {
+        "source_id": "wiki-pattern",
+        "source_version": "text-sha256:dc3efe98ae62f23dd08acad13aba2e95287beb20b6bec2f4af0423557fe37401",
+        "locator": "Architecture；Operations"
+      },
+      {
+        "source_id": "nashsu-wiki",
+        "source_version": "text-sha256:1d5e91a86372a3497fd593d34f9343763b4474f4e369c4849cc14056bb424a0e",
+        "locator": "Purpose.md；Persistent Ingest Queue"
+      }
+    ]
+  },
+  {
+    "id": "claim-hybrid-search-v1",
+    "topic": "hybrid-search",
+    "text": "qmd 的项目说明组合全文搜索、向量搜索和重排能力。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_or_synthesis",
+    "replicated": false,
+    "conditions": "增加召回路径会增加索引、延迟与维护成本。先判断错误发生在候选召回还是排序；不要在证据根本不在库中时盲目调整重排器。",
+    "evidence": [
+      {
+        "source_id": "qmd",
+        "source_version": "text-sha256:af5f41ebeea04e0928fccd38ba5f47d90749b8f0417b84a99f89a677fefae76a",
+        "locator": "Overview；Search"
+      },
+      {
+        "source_id": "graphrag",
+        "source_version": "text-sha256:10867214603991dc2ff7f3edb33b9b57601f2eaeb818818854a14d3da6f2ec57",
+        "locator": "The GraphRAG Process；Query"
+      },
+      {
+        "source_id": "nashsu-wiki",
+        "source_version": "text-sha256:1d5e91a86372a3497fd593d34f9343763b4474f4e369c4849cc14056bb424a0e",
+        "locator": "Purpose.md；Persistent Ingest Queue"
+      }
+    ]
+  },
+  {
+    "id": "claim-graph-wiki-v1",
+    "topic": "graph-wiki",
+    "text": "GraphRAG 包含图与社区摘要构建；LLM Wiki 模式强调持久知识页面的持续编纂。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_or_synthesis",
+    "replicated": false,
+    "conditions": "共享来源、相似文字或图邻居只能产生候选关系；正式“前置于、扩展了、反驳了”需要逐项解释。图越密不等于知识越可靠，自动摘要也可能放大来源错误。",
+    "evidence": [
+      {
+        "source_id": "wiki-pattern",
+        "source_version": "text-sha256:dc3efe98ae62f23dd08acad13aba2e95287beb20b6bec2f4af0423557fe37401",
+        "locator": "Architecture；Operations"
+      },
+      {
+        "source_id": "microsoft-wiki",
+        "source_version": "text-sha256:8c5cc5b33bdcd36198153ba9a3fee63eb1ba6855ed2ce3327a860b77a2f7bc93",
+        "locator": "Architecture；Available Tools"
+      },
+      {
+        "source_id": "nashsu-wiki",
+        "source_version": "text-sha256:1d5e91a86372a3497fd593d34f9343763b4474f4e369c4849cc14056bb424a0e",
+        "locator": "Purpose.md；Persistent Ingest Queue"
+      },
+      {
+        "source_id": "graphrag",
+        "source_version": "text-sha256:10867214603991dc2ff7f3edb33b9b57601f2eaeb818818854a14d3da6f2ec57",
+        "locator": "The GraphRAG Process；Query"
+      }
+    ]
+  },
+  {
+    "id": "claim-task-loop-v1",
+    "topic": "task-loop",
+    "text": "真实环境中的 Agent 任务可通过初始状态配置与执行式评估检查终态。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_or_synthesis",
+    "replicated": false,
+    "conditions": "评估脚本只能覆盖它定义的条件，可能漏掉副作用或与真实用户意图不一致。人工偏好评价、规则判定和执行结果应互相补充。",
+    "evidence": [
+      {
+        "source_id": "osworld",
+        "source_version": "text-sha256:9e17559f482ca40d52733c7b2b0da5dc84089c7eeea135b11fc783c5b5d26172",
+        "locator": "Abstract；Benchmark"
+      },
+      {
+        "source_id": "agents",
+        "source_version": "text-sha256:07896b6c64f00f61289d45741395d106c90db9497b334f5699482ce77aeb20d0",
+        "locator": "When to use agents；Agents"
+      }
+    ]
+  },
+  {
+    "id": "claim-gui-agent-v1",
+    "topic": "gui-agent",
+    "text": "GUI grounding 衡量按指令定位界面元素的能力，不能等同完整任务成功。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_or_synthesis",
+    "replicated": false,
+    "conditions": "页面布局、遮挡、弹窗、异步加载与状态变化会使旧坐标失效。动作工具返回成功只说明事件被发送，业务成功要回读界面或文件状态。",
+    "evidence": [
+      {
+        "source_id": "seeclick",
+        "source_version": "text-sha256:f97f66cb7a12de09226cec26d76442971cfeee1b102f52785d3c4e0835f027d6",
+        "locator": "Abstract；GUI grounding"
+      },
+      {
+        "source_id": "osworld",
+        "source_version": "text-sha256:9e17559f482ca40d52733c7b2b0da5dc84089c7eeea135b11fc783c5b5d26172",
+        "locator": "Abstract；Benchmark"
+      }
+    ]
+  },
+  {
+    "id": "claim-coding-agent-v1",
+    "topic": "coding-agent",
+    "text": "SWE-bench 使用真实代码仓库与问题描述评估生成补丁解决问题的能力。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_or_synthesis",
+    "replicated": false,
+    "conditions": "通过已知测试不能证明没有所有缺陷；修改测试让它适应错误实现也不构成修复。依赖安装、构建失败和业务断言失败需要分开归因。",
+    "evidence": [
+      {
+        "source_id": "swebench",
+        "source_version": "text-sha256:06841624d7b5130dfe3cc6714642e9a8fd2a608c95c66ae0180e409f12b73aaa",
+        "locator": "Overview；Set Up"
+      },
+      {
+        "source_id": "agents",
+        "source_version": "text-sha256:07896b6c64f00f61289d45741395d106c90db9497b334f5699482ce77aeb20d0",
+        "locator": "When to use agents；Agents"
+      }
+    ]
+  },
+  {
+    "id": "claim-agent-evaluation-v1",
+    "topic": "agent-evaluation",
+    "text": "不同 Agent 基准覆盖不同任务层次，评估结论必须绑定任务与执行条件。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_or_synthesis",
+    "replicated": false,
+    "conditions": "单次成功可能含随机性；重复次数、失败分布、选择样本的方法和统计不确定性需要说明。评估器本身应检查假阳性与假阴性。",
+    "evidence": [
+      {
+        "source_id": "swebench",
+        "source_version": "text-sha256:06841624d7b5130dfe3cc6714642e9a8fd2a608c95c66ae0180e409f12b73aaa",
+        "locator": "Overview；Set Up"
+      },
+      {
+        "source_id": "osworld",
+        "source_version": "text-sha256:9e17559f482ca40d52733c7b2b0da5dc84089c7eeea135b11fc783c5b5d26172",
+        "locator": "Abstract；Benchmark"
+      },
+      {
+        "source_id": "seeclick",
+        "source_version": "text-sha256:f97f66cb7a12de09226cec26d76442971cfeee1b102f52785d3c4e0835f027d6",
+        "locator": "Abstract；GUI grounding"
+      }
+    ]
+  }
+]
