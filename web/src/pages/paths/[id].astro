@@ -1,0 +1,8 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Reader from '../../components/Reader.astro';
+import {paths} from '../../lib/content';
+export function getStaticPaths(){return paths.map(path=>({params:{id:path.id},props:{path}}));}
+const {path}=Astro.props;
+---
+<SiteLayout title={path.title+'学习路径'} description={path.description} active="paths" section={path.title}><Reader title={path.title+'学习路径'} file={path.page} description={path.description} kicker={'LEARNING PATH / '+path.english.toUpperCase()}/></SiteLayout>

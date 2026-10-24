@@ -276,7 +276,7 @@ def check(root, curriculum=False):
     for node in graph:
         visit(node)
     for path in root.rglob('*.md'):
-        if any(p in {'.git', '.venv', 'flux', 'site'} for p in path.relative_to(root).parts):
+        if any(p in {'.git', '.venv', 'flux', 'site', 'node_modules', 'dist', '.astro'} for p in path.relative_to(root).parts):
             continue
         body = markdown_prose(path.read_text(encoding='utf-8'))
         for target in markdown_link_targets(body):

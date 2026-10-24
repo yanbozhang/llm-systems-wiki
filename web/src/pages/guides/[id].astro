@@ -1,0 +1,8 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Reader from '../../components/Reader.astro';
+import {guides} from '../../lib/content';
+export function getStaticPaths(){return guides.map(guide=>({params:{id:guide.id},props:{guide}}));}
+const {guide}=Astro.props;
+---
+<SiteLayout title={guide.title} description={guide.description} active={guide.id} section={guide.title}><Reader title={guide.title} file={guide.page} description={guide.description} kicker={guide.english.toUpperCase()}/></SiteLayout>

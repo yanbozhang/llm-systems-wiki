@@ -1,0 +1,19 @@
+---
+import {ArrowUpRight,ArrowLeft,ArrowRight,Bookmark,Code,BookOpen,Link as LinkIcon} from 'lucide-astro';
+import {readDocument,routes,type Topic,topics,modules} from '../lib/content';
+import {renderMarkdown} from '../lib/markdown';
+import {REPOSITORY,sitePath} from '../lib/navigation';
+interface Props{title:string;file:string;kicker?:string;description?:string;topic?:Topic}
+const {title,file,kicker='FIELD NOTES',description,topic}=Astro.props;
+const rendered=await renderMarkdown(readDocument(file),file,routes);
+const mod=topic?modules.find(m=>m.id===topic.module):undefined;
+const siblings=topic?topics.filter(t=>t.module===topic.module):[];const index=siblings.findIndex(t=>t.id===topic?.id);
+const previous=siblings[index-1],next=siblings[index+1];
+const source=`${REPOSITORY}/blob/main/${file.split('/').map(encodeURIComponent).join('/')}`;
+---
+<div class="reader-wrap"><div class="article-column"><header class="article-header"><div class="article-kicker">{mod?<a class={`topic-tag ${mod.color}`} href={sitePath(`/modules/${mod.id}/`)}>{mod.title}</a>:<span class="section-kicker">{kicker}</span>}{topic&&<span class="article-unit-count">{topic.unit_ids.length} <span data-zh="个知识点" data-en="knowledge units">个知识点</span></span>}</div><h1>{title}</h1>{description&&<p class="article-deck">{description}</p>}<div class="article-actions"><a href={source} target="_blank" rel="noreferrer"><BookOpen size={14}/><span data-zh="阅读原文" data-en="Markdown source">阅读原文</span><ArrowUpRight size={12}/></a>{topic&&<a href={`${REPOSITORY}/blob/main/${topic.example}`} target="_blank" rel="noreferrer"><Code size={14}/><span data-zh="教学代码" data-en="Example code">教学代码</span><ArrowUpRight size={12}/></a>}{topic&&<button class="article-save" data-bookmark={topic.id} aria-label={`收藏${title}`} aria-pressed="false"><Bookmark size={14}/><span data-zh="收藏文章" data-en="Save for later">收藏文章</span></button>}</div></header><div class="language-note">This article is written in Chinese. The original equations, source links, and code remain unchanged.</div><details class="mobile-toc"><summary data-zh="本页目录" data-en="On this page">本页目录</summary><div>{rendered.headings.filter(h=>h.level===2).map(h=><a href={`#${h.id}`}>{h.text}</a>)}</div></details><article class="markdown" set:html={rendered.html}/>
+  {topic&&<div class="reading-note"><span class="status-dot"></span><p data-zh="教学示例帮助理解机制。真实模型、框架与设备实验，请结合文章中的条件和实践任务分别验证。" data-en="Teaching examples explain mechanisms. Real model, framework, and device experiments need separate evidence under the conditions described above.">教学示例帮助理解机制。真实模型、框架与设备实验，请结合文章中的条件和实践任务分别验证。</p></div>}
+  {(previous||next)&&<nav class="article-pagination" aria-label="相邻主题">{previous?<a href={sitePath(`/read/${previous.id}/`)}><span><ArrowLeft size={14}/><span data-zh="上一个主题" data-en="Previous topic">上一个主题</span></span><strong>{previous.title}</strong></a>:<span/>}{next&&<a href={sitePath(`/read/${next.id}/`)} class="next"><span><span data-zh="下一个主题" data-en="Next topic">下一个主题</span><ArrowRight size={14}/></span><strong>{next.title}</strong></a>}</nav>}
+  <div class="article-contribute"><span data-zh="发现新的理解，或需要修正的地方？" data-en="Found a new insight or something to improve?">发现新的理解，或需要修正的地方？</span><a href={`${REPOSITORY}/issues/new?template=knowledge.yml&title=${encodeURIComponent('知识更新：'+title)}`} target="_blank" rel="noreferrer" data-zh="一起完善这篇笔记 ↗" data-en="Improve this note ↗">一起完善这篇笔记 ↗</a></div>
+</div><aside class="article-toc" aria-label="文章目录"><div class="toc-title"><LinkIcon size={12}/><span data-zh="本页目录" data-en="ON THIS PAGE">本页目录</span></div><nav>{rendered.headings.map(h=><a href={`#${h.id}`} class:list={['toc-link',{'toc-sub':h.level===3}]}>{h.text}</a>)}</nav><a class="toc-source" href={source} target="_blank" rel="noreferrer"><span data-zh="在 GitHub 上查看" data-en="View on GitHub">在 GitHub 上查看</span><ArrowUpRight size={13}/></a></aside></div>
+<script>import '../client/reader';</script>

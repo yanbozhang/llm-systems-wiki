@@ -58,3 +58,7 @@ Python 测试放在 `tests/`，用独立手算值、状态不变量或已核验�
 通过 [知识点问题](https://github.com/yanbozhang/llm-systems-wiki/issues/new?template=knowledge.yml)提出技术更正，通过[维护工具缺陷](https://github.com/yanbozhang/llm-systems-wiki/issues/new?template=bug.yml)提交可复现错误。不要将凭证、私人数据或受限材料放进公开 Issue。
 
 贡献的原创内容适用仓库 [MIT License](LICENSE)。引述第三方资料应保留来源和其许可边界；不能将未公开产品实现包装成开源源码。讨论围绕证据、条件与可复查结果，尊重不同经验的贡献者。
+
+## 网站展示层
+
+网站位于web目录，使用Astro与TypeScript，直接读取受管Markdown与knowledge清单。Node.js 22及以上版本下运行npm ci、npm run check、npm test和npm run build。设计约定见[设计说明](web/DESIGN.md)，开发入口见[网站开发](web/README.md)。正文变更不应在前端另写副本；UI的英文导航不等于正文已经翻译。网站通过GitHub Pages发布，构建产物与node_modules不提交。

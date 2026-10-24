@@ -12,3 +12,6 @@
 
 - 每个主题至少三个知识点，每点都有带符号解释的公式、对应Python函数、Mermaid结构图与源码/文献引用。遵循[知识点契约](schema/知识点契约.md)。
 - 原创内容遵循根目录LICENSE，第三方内容保留原许可；改动流程见[贡献指南](CONTRIBUTING.md)。
+
+- 网站展示层在web/，Astro静态生成；样式使用CSS变量。修改前阅读web/DESIGN.md。保持Markdown与knowledge为唯一内容来源，网站代码使用Node.js 22+与npm锁文件。
+- README.md与README.en.md互相提供语言入口；网站界面可切换中英文，正文语言单独说明，不展示固定发布时间承诺。

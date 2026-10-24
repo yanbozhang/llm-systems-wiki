@@ -1,0 +1,8 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Reader from '../../components/Reader.astro';
+import {topics,topicDescription} from '../../lib/content';
+export function getStaticPaths(){return topics.map(topic=>({params:{id:topic.id},props:{topic}}));}
+const {topic}=Astro.props;
+---
+<SiteLayout title={topic.title} description={topicDescription(topic)} active={topic.module} section={topic.title}><Reader title={topic.title} file={topic.page} topic={topic}/></SiteLayout>

@@ -1,0 +1,5 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import {sitePath} from '../lib/navigation';
+---
+<SiteLayout title="页面未找到"><div class="content-wrap inner-page"><section class="empty-state"><span class="section-kicker">404 / A PATH YET TO BE DRAWN</span><h1 data-zh="这条路径，还没有被画出来。" data-en="This path hasn't been drawn yet.">这条路径，还没有被画出来。</h1><p data-zh="回到知识库，寻找下一个值得理解的问题。" data-en="Return to the library and find your next question.">回到知识库，寻找下一个值得理解的问题。</p><a class="button primary" href={sitePath('/')} data-zh="返回首页" data-en="Back to the library">返回首页</a></section></div></SiteLayout>

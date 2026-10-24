@@ -1,0 +1,8 @@
+---
+import { Network, GraduationCap, Gauge, Workflow, Database, Bot, ChartNoAxesCombined } from 'lucide-astro';
+interface Props { id:string; size?:number; }
+const {id,size=20}=Astro.props;
+const icons={network:Network,training:GraduationCap,inference:Gauge,harness:Workflow,knowledge:Database,agents:Bot,benchmark:ChartNoAxesCombined};
+const Icon=icons[id as keyof typeof icons]||Network;
+---
+<Icon size={size} strokeWidth={1.6}/>

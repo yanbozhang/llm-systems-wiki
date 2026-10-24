@@ -1,0 +1,14 @@
+---
+import {Search,LayoutGrid,List,Bookmark,SearchX} from 'lucide-astro';
+import {modules, type Topic} from '../lib/content';
+import TopicCard from './TopicCard.astro';
+interface Props{items:Topic[];selectedModule?:string;showModules?:boolean}
+const {items,selectedModule='all',showModules=true}=Astro.props;
+---
+<section data-catalog data-initial-module={selectedModule}>
+  <div class="catalog-toolbar"><label class="catalog-search"><Search size={17}/><span class="sr-only">筛选主题</span><input data-catalog-search type="search" placeholder="搜索主题、知识点或技术关键词…" data-placeholder-zh="搜索主题、知识点或技术关键词…" data-placeholder-en="Search topics, ideas, or technical keywords…"/></label><button class="saved-filter" data-saved-filter aria-pressed="false" title="只看收藏"><Bookmark size={16}/><span data-zh="我的收藏" data-en="Saved">我的收藏</span></button><div class="view-toggle" aria-label="显示方式"><button data-view="grid" aria-label="卡片视图" aria-pressed="true"><LayoutGrid size={17}/></button><button data-view="list" aria-label="列表视图" aria-pressed="false"><List size={17}/></button></div></div>
+  {showModules&&<div class="filter-tabs" role="group" aria-label="按模块筛选"><button class="filter-tab active" data-module-filter="all" aria-pressed="true" data-zh="全部主题" data-en="All topics">全部主题</button>{modules.map(m=><button class="filter-tab" data-module-filter={m.id} aria-pressed="false" data-zh={m.title} data-en={m.english}>{m.title}</button>)}</div>}
+  <div class="catalog-meta"><span><strong data-result-count>{items.length}</strong> <span data-zh="个主题" data-en="topics">个主题</span></span><span data-zh="每个主题，都是一条深入理解的路径" data-en="Every topic is a path to deeper understanding">每个主题，都是一条深入理解的路径</span></div>
+  <div class="topic-grid" data-topic-grid>{items.map(t=><TopicCard topic={t}/>)}</div>
+  <div class="empty-state" data-catalog-empty hidden><SearchX size={32}/><h3 data-zh="暂时没有匹配的主题" data-en="No matching topics yet">暂时没有匹配的主题</h3><p data-zh="换个关键词，或探索其他知识模块。" data-en="Try another keyword or explore a different area.">换个关键词，或探索其他知识模块。</p><button class="button secondary" data-reset-catalog data-zh="重置筛选" data-en="Reset filters">重置筛选</button></div>
+</section>

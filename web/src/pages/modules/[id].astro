@@ -1,0 +1,10 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Catalog from '../../components/Catalog.astro';
+import ModuleIcon from '../../components/ModuleIcon.astro';
+import {modules,topics,capabilities} from '../../lib/content';
+import {sitePath} from '../../lib/navigation';
+export function getStaticPaths(){return modules.map(m=>({params:{id:m.id},props:{module:m}}));}
+const {module}=Astro.props;const items=topics.filter(t=>t.module===module.id);const goals=capabilities.filter(c=>c.module===module.id);
+---
+<SiteLayout title={module.title} section={module.title} active={module.id}><div class="content-wrap inner-page"><header class="page-intro"><span class={`module-icon ${module.color}`}><ModuleIcon id={module.id} size={25}/></span><span class="section-kicker">{module.number} / {module.english.toUpperCase()}</span><h1 data-zh={module.title} data-en={module.english}>{module.title}</h1><p>{module.subtitle}。从核心机制走向具体实现，用推导、代码和反例检验理解。</p></header><div class="module-goals"><strong data-zh="在这个模块，你将能够" data-en="What you can learn here">在这个模块，你将能够</strong><div>{goals.map(g=><span>{g.outcome}</span>)}</div><a href={sitePath('/guides/map/')} data-zh="查看能力与实践成果 →" data-en="See capabilities and deliverables →">查看能力与实践成果 →</a></div><Catalog items={items} selectedModule={module.id} showModules={false}/></div></SiteLayout>

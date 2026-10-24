@@ -1,5 +1,9 @@
 # LLM Systems Wiki
 
+**简体中文** · [English](README.en.md)
+
+[**打开知识库网站 →**](https://yanbozhang.github.io/llm-systems-wiki/)
+
 **从公式到源码，系统学习大模型与 Agent。**
 
 一本持续更新的中文工程学习手册：把论文、官方文档和固定版本源码拆成可以推导、运行、画图解释的知识点。面向希望理解 Transformer、训练与推理、RAG、Agent Harness 和 Benchmark 的开发者。
@@ -11,6 +15,8 @@
 **v1.0：7 个模块 · 45 个主题 · 135 个知识点 · 45 份 Python 教学示例。** 每个知识点都有公式与符号说明、代码与步骤解释、Mermaid 实现图、原始来源与边界条件。
 
 [开始学习](docs/大模型持续学习知识库.md) · [全部知识点](docs/知识点索引.md) · [能力地图](docs/能力地图.md) · [Agent 方案导读](docs/Agent开源方案导读.md) · [版本变化](CHANGELOG.md)
+
+[![知识库网站预览](assets/site-preview.png)](https://yanbozhang.github.io/llm-systems-wiki/)
 
 ## 从一个具体问题开始
 
@@ -59,15 +65,19 @@ python examples/inference/kv-cache.py
 python examples/harness/langgraph.py
 ```
 
+网站提供全文搜索、模块筛选、学习路径、文章目录、代码高亮、公式与结构图，以及本地收藏、明暗主题和中英文导航。知识正文目前为中文。
+
 每个示例旁的文章解释输入、输出与生产实现差异。教学计算和单元测试验证的是小规模数学与状态性质；完整模型跑分、真机任务及框架端到端实验单独记录，当前未声称复现。Claude Code 专题只解释公开工作机制与扩展接口，Codex CLI 专题基于固定提交的公开源码。
 
-## 持续更新与参与
-
-[每日来源巡检](https://github.com/yanbozhang/llm-systems-wiki/actions/workflows/daily.yml)在上海时间 08:00 生成候选和学习计划，周日聚焦 Benchmark；人工阅读、来源核验与编纂通过后才更新文章。候选不自动变成已确认知识。具体流程见[持续更新指南](docs/持续更新指南.md)，下一步见[研究队列](docs/研究队列.md)。
+## 参与贡献
 
 欢迎贡献一个公式更正、一段源码导读、一个反例或可复查的实验。[贡献指南](CONTRIBUTING.md)说明本地开发、内容契约、检查命令和 PR 要求；[知识点问题模板](https://github.com/yanbozhang/llm-systems-wiki/issues/new?template=knowledge.yml)用于提交更正。
 
 如果某篇文章帮你理解了机制，欢迎 **Star 收藏**、分享该文章链接，或提交你的推导与反例。最有价值的传播是让下一个读者能直接找到问题、代码和证据。
+
+## 网站开发
+
+展示层位于 `web/`，直接读取现有 Markdown 与知识清单；[开发说明](web/README.md)包含本地启动、类型检查、构建与测试方式。网站通过 GitHub Pages 发布，打开上方链接即可阅读。
 
 ## 来源与许可
 

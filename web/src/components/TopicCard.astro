@@ -1,0 +1,14 @@
+---
+import {ArrowUpRight,Bookmark,Braces} from 'lucide-astro';
+import type {Topic} from '../lib/content';
+import {modules,topicDescription} from '../lib/content';
+import {sitePath} from '../lib/navigation';
+interface Props {topic:Topic;}
+const {topic}=Astro.props;const mod=modules.find(m=>m.id===topic.module)!;
+---
+<article class="topic-card" data-topic-card data-id={topic.id} data-module={topic.module}>
+  <div class="topic-card-top"><span class={`topic-tag ${mod.color}`} data-zh={mod.title} data-en={mod.english}>{mod.title}</span><button class="bookmark-button" data-bookmark={topic.id} aria-label={`收藏${topic.title}`} aria-pressed="false"><Bookmark size={17}/></button></div>
+  <a href={sitePath(`/read/${topic.id}/`)} class="topic-card-title"><h3>{topic.title}</h3><ArrowUpRight size={18}/></a>
+  <p>{topicDescription(topic)}</p>
+  <div class="topic-card-bottom"><span><Braces size={14}/><span data-zh={`${topic.unit_ids.length} 个知识点`} data-en={`${topic.unit_ids.length} knowledge units`}>{topic.unit_ids.length} 个知识点</span></span><span data-zh="公式 · 代码 · 图解" data-en="Math · Code · Diagrams">公式 · 代码 · 图解</span></div>
+</article>

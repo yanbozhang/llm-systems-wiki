@@ -1,0 +1,6 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Catalog from '../components/Catalog.astro';
+import {topics} from '../lib/content';
+---
+<SiteLayout title="探索知识" section="探索知识" active="library"><div class="content-wrap inner-page"><header class="page-intro"><div class="eyebrow"><span class="eyebrow-line"></span><span>THE LIBRARY</span></div><h1 data-zh="把好奇，变成理解。" data-en="Turn curiosity into understanding.">把好奇，变成理解。</h1><p data-zh="从你想弄懂的问题出发。45个深入主题，把公式推导、实现代码和结构图放在同一条阅读路径里。" data-en="Start with the question you want to understand. Explore 45 topics connecting mathematical ideas, implementation details, and system diagrams.">从你想弄懂的问题出发。45个深入主题，把公式推导、实现代码和结构图放在同一条阅读路径里。</p></header><Catalog items={topics}/></div></SiteLayout>

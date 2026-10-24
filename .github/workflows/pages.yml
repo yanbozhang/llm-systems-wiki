@@ -1,0 +1,65 @@
+name: 发布知识库网站
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: 检查知识内容
+        run: |
+          python scripts/wiki_tool.py check --curriculum
+          python scripts/learning_check.py
+      - name: 安装网站依赖
+        working-directory: web
+        run: npm ci --no-audit --no-fund
+      - name: 类型与功能检查
+        working-directory: web
+        env:
+          NODE_OPTIONS: --max-old-space-size=2048
+          GOMAXPROCS: '1'
+          OMP_NUM_THREADS: '1'
+        run: |
+          npm run check
+          npm test
+      - name: 构建静态网站
+        working-directory: web
+        env:
+          NODE_OPTIONS: --max-old-space-size=2048
+          GOMAXPROCS: '1'
+          OMP_NUM_THREADS: '1'
+        run: |
+          npm run build
+          npm run test:built
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 部署阅读站点
+        id: deployment
+        uses: actions/deploy-pages@v4

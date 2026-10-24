@@ -1,0 +1,7 @@
+---
+import {ArrowRight} from 'lucide-astro';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import {paths} from '../../lib/content';
+import {sitePath} from '../../lib/navigation';
+---
+<SiteLayout title="学习路径" section="学习路径" active="paths"><div class="content-wrap inner-page"><header class="page-intro"><div class="eyebrow"><span class="eyebrow-line"></span><span>LEARNING PATHS</span></div><h1 data-zh="为下一个突破，选一条路。" data-en="Find a path to your next breakthrough.">为下一个突破，选一条路。</h1><p data-zh="不需要一次掌握所有知识。选择与你当下目标匹配的路径，在概念、推导和实践之间，建立自己的连接。" data-en="You don't need to learn everything at once. Choose a path that fits your goals, and connect the concepts, derivations, and practical work.">不需要一次掌握所有知识。选择与你当下目标匹配的路径，在概念、推导和实践之间，建立自己的连接。</p></header><div class="path-grid">{paths.map((p,i)=><a class="path-card" href={sitePath(p.url)}><div class="path-card-top"><span>PATH / 0{i+1}</span><span class="level">{p.level}</span></div><h2 data-zh={p.title} data-en={p.english}>{p.title}</h2><h3>{p.english}</h3><p>{p.description}</p><div class="path-card-foot"><span>{p.steps}</span><ArrowRight size={18}/></div></a>)}</div></div></SiteLayout>
