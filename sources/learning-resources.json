@@ -257,5 +257,135 @@
     "reviewed_at": "2026-10-24",
     "source_id": "v02-mlperf",
     "adopted_practice": "明确负载场景、质量条件和测量边界，区分自测与正式结果"
+  },
+  {
+    "id": "v1-implementation-mobile-agent",
+    "title": "MobileAgent多智能体协作",
+    "url": "https://github.com/X-PLUG/MobileAgent/blob/11cea575561fb7800b5fb6b6cafa56f7a91de11f/Mobile-Agent-v2/README.md",
+    "module_ids": [
+      "agents"
+    ],
+    "kind": "source_code_reading",
+    "reading_scope": "Introduction、Getting Started、平台与ADB键盘、模型选择及reflection/memory开关",
+    "access": "公开资料与源码阅读，不代表完成真实框架实验",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v1-gui-mobile-v2-readme"
+  },
+  {
+    "id": "v1-implementation-app-agent",
+    "title": "AppAgent探索与技能学习",
+    "url": "https://github.com/TencentQQGYLab/AppAgent/blob/2c1900422caf6f9e94e96d5dd984b530e5a5fbf8/README.md",
+    "module_ids": [
+      "agents"
+    ],
+    "kind": "source_code_reading",
+    "reading_scope": "Introduction、Quick Start、学习/部署阶段和人工检查文档的Tips",
+    "access": "公开资料与源码阅读，不代表完成真实框架实验",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v1-gui-app-readme"
+  },
+  {
+    "id": "v1-implementation-ui-tars",
+    "title": "UITARS感知与动作执行",
+    "url": "https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/README.md",
+    "module_ids": [
+      "agents"
+    ],
+    "kind": "source_code_reading",
+    "reading_scope": "项目区分表、UI-TARS Desktop段落、模型论文链接及License",
+    "access": "公开资料与源码阅读，不代表完成真实框架实验",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v1-gui-ui-readme"
+  },
+  {
+    "id": "v1-implementation-openhands",
+    "title": "OpenHands事件流与运行时",
+    "url": "https://github.com/OpenHands/software-agent-sdk/blob/acd96e6fa424c02432304395b9208f99be24b54d/README.md",
+    "module_ids": [
+      "agents"
+    ],
+    "kind": "source_code_reading",
+    "reading_scope": "README 28–106：SDK用途、本地/远端workspace与Repository boundaries",
+    "access": "公开资料与源码阅读，不代表完成真实框架实验",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v1-coding-oh-sdk-readme"
+  },
+  {
+    "id": "v1-implementation-swe-agent",
+    "title": "SWEAgent与智能体计算机接口",
+    "url": "https://github.com/SWE-agent/SWE-agent/blob/3ea751c087f32b16e039a2233dd6eefecef325d5/docs/usage/trajectories.md",
+    "module_ids": [
+      "agents"
+    ],
+    "kind": "source_code_reading",
+    "reading_scope": "完整文档1–103：trajectory字段、query版本变化、输出与评测边界",
+    "access": "公开资料与源码阅读，不代表完成真实框架实验",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v1-coding-swe-trajectories"
+  },
+  {
+    "id": "v1-implementation-aider",
+    "title": "Aider仓库地图与编辑协议",
+    "url": "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/website/docs/repomap.md",
+    "module_ids": [
+      "agents"
+    ],
+    "kind": "source_code_reading",
+    "reading_scope": "完整文档1–112，Repository map与Optimizing the map",
+    "access": "公开资料与源码阅读，不代表完成真实框架实验",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v1-coding-aider-mapdoc"
+  },
+  {
+    "id": "v1-implementation-codex-cli",
+    "title": "CodexCLI架构与执行",
+    "url": "https://github.com/openai/codex/blob/970111f6cb62cc02fe36a82ea7d71b37a2889c97/codex-rs/core/README.md#L1",
+    "module_ids": [
+      "agents"
+    ],
+    "kind": "source_code_reading",
+    "reading_scope": "crate职责；平台执行依赖",
+    "access": "公开资料与源码阅读，不代表完成真实框架实验",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v1-harnesscase-cx-core-doc"
+  },
+  {
+    "id": "v1-implementation-claude-code",
+    "title": "ClaudeCode工作流与扩展边界",
+    "url": "https://github.com/anthropics/claude-agent-sdk-python/blob/0e89b298e771259378a6cd3734e00d323dff5703/README.md#L1",
+    "module_ids": [
+      "agents"
+    ],
+    "kind": "source_code_reading",
+    "reading_scope": "安装与内置CLI、query、工具许可、SDK MCP、Hooks章节",
+    "access": "公开资料与源码阅读，不代表完成真实框架实验",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v1-harnesscase-sdk-readme"
+  },
+  {
+    "id": "v1-implementation-langgraph",
+    "title": "LangGraph状态图与持久化",
+    "url": "https://github.com/langchain-ai/langgraph/blob/4c52e129eb1ab69a3da58b799f67929f77d81149/README.md#L1",
+    "module_ids": [
+      "harness"
+    ],
+    "kind": "source_code_reading",
+    "reading_scope": "低层有状态编排定位、durable execution、interrupt、memory",
+    "access": "公开资料与源码阅读，不代表完成真实框架实验",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v1-harnesscase-lg-readme"
+  },
+  {
+    "id": "v1-implementation-autogen",
+    "title": "AutoGen对话团队与终止",
+    "url": "https://github.com/microsoft/autogen/blob/004749e6b7102c8fd317b9b1499ce5807223c278/README.md#L1",
+    "module_ids": [
+      "harness"
+    ],
+    "kind": "source_code_reading",
+    "reading_scope": "顶部归档公告、后继Agent Framework建议；后文maintenance措辞；Legal Notices",
+    "access": "公开资料与源码阅读，不代表完成真实框架实验",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v1-harnesscase-ag-readme"
   }
 ]

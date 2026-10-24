@@ -21,7 +21,9 @@ jobs:
           python-version: '3.11'
       - name: 结构与证据绑定
         run: python scripts/wiki_tool.py check --curriculum
-      - name: 单进程维护工具测试
+      - name: 逐知识点公式代码图与来源绑定
+        run: python scripts/learning_check.py
+      - name: 单进程维护工具与教学示例测试
         env:
           PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
           OPENBLAS_NUM_THREADS: '1'

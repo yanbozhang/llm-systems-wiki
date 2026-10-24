@@ -888,5 +888,3905 @@
         "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
       }
     ]
+  },
+  {
+    "id": "claim-agent-loop-transition-v1",
+    "topic": "agent-loop",
+    "text": "写动作超时后必须区分结果未知与确认未发生；业务验收通过才进入完成态。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "串行任务；具备权威回读和明确验收事件。",
+    "evidence": [
+      {
+        "source_id": "v1-agents-pregel-loop",
+        "source_version": "text-sha256:cc51e52a6624aa064ac1688e4a55326012d11b615d9810d4b5c1f19bf5f579e0",
+        "locator": "PregelLoop.tick 650–735；after_tick 737–811；_put_checkpoint 1231–1273"
+      },
+      {
+        "source_id": "v1-agents-langgraph-persistence",
+        "source_version": "text-sha256:188da68bb70db61e0670973154c9d19bf30fff5dd4536b776cf3fa3c05028d1a",
+        "locator": "Checkpointer vs. store；MemorySaver does not persist between restarts"
+      },
+      {
+        "source_id": "v1-agents-react-paper",
+        "source_version": "text-sha256:7ff971fb0371f5663999ce58e70b0f3eee9e41e53164b18b399f2cd8b5b81e11",
+        "locator": "第2节 ReAct 状态、动作、上下文定义"
+      }
+    ]
+  },
+  {
+    "id": "claim-agent-loop-admit-budget-v1",
+    "topic": "agent-loop",
+    "text": "执行前按消耗上界预留预算才能阻止下一次调度越界；执行后累计只能发现已发生的消耗。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "成本预估是本次调用上界；每次重试与回读也消耗步数。",
+    "evidence": [
+      {
+        "source_id": "v1-agents-autogen-stop",
+        "source_version": "text-sha256:cd9c0da75906da1728432fc96ae0566591dfb180524d3fb585bfdb8ff0260f5d",
+        "locator": "TokenUsageTermination.__call__ 275–286；TimeoutTermination.__call__ 377–386"
+      },
+      {
+        "source_id": "v1-agents-mcp-lifecycle",
+        "source_version": "text-sha256:442da26cd6917ba003b1887959c2da354d7623e8b84497c751e6e602be6dcc69",
+        "locator": "Initialization；Version Negotiation；Timeouts"
+      },
+      {
+        "source_id": "v1-agents-react-paper",
+        "source_version": "text-sha256:7ff971fb0371f5663999ce58e70b0f3eee9e41e53164b18b399f2cd8b5b81e11",
+        "locator": "第2节 ReAct 状态、动作、上下文定义"
+      }
+    ]
+  },
+  {
+    "id": "claim-agent-loop-reconcile-outcome-v1",
+    "topic": "agent-loop",
+    "text": "图检查点和外部副作用账本属于不同状态域，恢复必须用动作身份核对已发生结果。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "幂等键绑定同一载荷；账本读取可信；服务端以原子方式维护键与副作用。",
+    "evidence": [
+      {
+        "source_id": "v1-agents-pregel-loop",
+        "source_version": "text-sha256:cc51e52a6624aa064ac1688e4a55326012d11b615d9810d4b5c1f19bf5f579e0",
+        "locator": "PregelLoop.tick 650–735；after_tick 737–811；_put_checkpoint 1231–1273"
+      },
+      {
+        "source_id": "v1-agents-langgraph-persistence",
+        "source_version": "text-sha256:188da68bb70db61e0670973154c9d19bf30fff5dd4536b776cf3fa3c05028d1a",
+        "locator": "Checkpointer vs. store；MemorySaver does not persist between restarts"
+      },
+      {
+        "source_id": "v1-agents-mcp-lifecycle",
+        "source_version": "text-sha256:442da26cd6917ba003b1887959c2da354d7623e8b84497c751e6e602be6dcc69",
+        "locator": "Initialization；Version Negotiation；Timeouts"
+      }
+    ]
+  },
+  {
+    "id": "claim-context-select-context-v1",
+    "topic": "context",
+    "text": "上下文预算应先保留必要约束，再选择可选证据；token价值密度贪心不保证最优。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "教学价值可加、成本为已知正整数；可选条目间没有交互效应。",
+    "evidence": [
+      {
+        "source_id": "v1-agents-autogen-token",
+        "source_version": "text-sha256:dc85bc0b4efb65203f2c8be9bf95b0a81275719474a8bdd847bda773f5d9b3de",
+        "locator": "get_messages 57–77；构造器 42–55"
+      },
+      {
+        "source_id": "v1-agents-context-guide",
+        "source_version": "text-sha256:6c6fad62eddc4f9b04b7c4c342046848c6185ffb6f8d3828456c47ce2a8510c8",
+        "locator": "Context engineering vs. prompt engineering；Compaction；Structured note-taking"
+      },
+      {
+        "source_id": "v1-agents-langgraph-memory",
+        "source_version": "text-sha256:9555b263a97d9986dc06ae1fb26e62ebe9ed109d509f5e97ba2e3536ceb40524",
+        "locator": "Short-term memory；Manage short-term memory；Long-term memory"
+      }
+    ]
+  },
+  {
+    "id": "claim-context-trim-complete-turns-v1",
+    "topic": "context",
+    "text": "按完整调用回合裁剪可以保留局部协议闭包；按消息数量截断不等于语义完整。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "回合边界由宿主提供；每个调用都在本回合内有且仅有一个结果。",
+    "evidence": [
+      {
+        "source_id": "v1-agents-autogen-buffer",
+        "source_version": "text-sha256:61166bbf4f9e350abd5a9fa511628ca9adf7e11125497fa7739622c431086120",
+        "locator": "get_messages 34–41"
+      },
+      {
+        "source_id": "v1-agents-autogen-token",
+        "source_version": "text-sha256:dc85bc0b4efb65203f2c8be9bf95b0a81275719474a8bdd847bda773f5d9b3de",
+        "locator": "get_messages 57–77；构造器 42–55"
+      },
+      {
+        "source_id": "v1-agents-sweagent-history",
+        "source_version": "text-sha256:8e3621a9b7d94761d184c57dc2ab1028f7eb04b01fdfcbe8ba122977d19e477a",
+        "locator": "LastNObservations._get_omit_indices 147–155；__call__ 157–175"
+      },
+      {
+        "source_id": "v1-agents-context-guide",
+        "source_version": "text-sha256:6c6fad62eddc4f9b04b7c4c342046848c6185ffb6f8d3828456c47ce2a8510c8",
+        "locator": "Context engineering vs. prompt engineering；Compaction；Structured note-taking"
+      }
+    ]
+  },
+  {
+    "id": "claim-context-audit-checkpoint-v1",
+    "topic": "context",
+    "text": "对不可改写字段做压缩前后比对，可检测约束和版本丢失，但不能证明摘要语义充分。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "关键字段在压缩前独立定义，值使用稳定规范化文本。",
+    "evidence": [
+      {
+        "source_id": "v1-agents-sweagent-history",
+        "source_version": "text-sha256:8e3621a9b7d94761d184c57dc2ab1028f7eb04b01fdfcbe8ba122977d19e477a",
+        "locator": "LastNObservations._get_omit_indices 147–155；__call__ 157–175"
+      },
+      {
+        "source_id": "v1-agents-context-guide",
+        "source_version": "text-sha256:6c6fad62eddc4f9b04b7c4c342046848c6185ffb6f8d3828456c47ce2a8510c8",
+        "locator": "Context engineering vs. prompt engineering；Compaction；Structured note-taking"
+      },
+      {
+        "source_id": "v1-agents-langgraph-persistence",
+        "source_version": "text-sha256:188da68bb70db61e0670973154c9d19bf30fff5dd4536b776cf3fa3c05028d1a",
+        "locator": "Checkpointer vs. store；MemorySaver does not persist between restarts"
+      }
+    ]
+  },
+  {
+    "id": "claim-memory-eligible-memories-v1",
+    "topic": "memory",
+    "text": "命名空间、版本和撤回状态应作为召回资格条件，相关度排序不能替代适用性判断。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "应用能提供可信命名空间、版本、有效期和来源字段。",
+    "evidence": [
+      {
+        "source_id": "v1-agents-store-memory",
+        "source_version": "text-sha256:3992c9bc44f1883fa9fb83482fb3a364d68f24e51fc7296aa11e165b79d8aa24",
+        "locator": "_filter_items 238–266；_batch_search 302–373；_apply_put_ops 404–416"
+      },
+      {
+        "source_id": "v1-agents-langgraph-memory",
+        "source_version": "text-sha256:9555b263a97d9986dc06ae1fb26e62ebe9ed109d509f5e97ba2e3536ceb40524",
+        "locator": "Short-term memory；Manage short-term memory；Long-term memory"
+      },
+      {
+        "source_id": "v1-agents-langgraph-persistence",
+        "source_version": "text-sha256:188da68bb70db61e0670973154c9d19bf30fff5dd4536b776cf3fa3c05028d1a",
+        "locator": "Checkpointer vs. store；MemorySaver does not persist between restarts"
+      }
+    ]
+  },
+  {
+    "id": "claim-memory-freshness-score-v1",
+    "topic": "memory",
+    "text": "年龄衰减可用于记忆排序，但必须与来源正确性和硬失效独立管理。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "相关度已归一化；年龄与半衰期使用相同单位；先完成资格过滤。",
+    "evidence": [
+      {
+        "source_id": "v1-agents-store-memory",
+        "source_version": "text-sha256:3992c9bc44f1883fa9fb83482fb3a364d68f24e51fc7296aa11e165b79d8aa24",
+        "locator": "_filter_items 238–266；_batch_search 302–373；_apply_put_ops 404–416"
+      },
+      {
+        "source_id": "v1-agents-context-guide",
+        "source_version": "text-sha256:6c6fad62eddc4f9b04b7c4c342046848c6185ffb6f8d3828456c47ce2a8510c8",
+        "locator": "Context engineering vs. prompt engineering；Compaction；Structured note-taking"
+      },
+      {
+        "source_id": "v1-agents-langgraph-memory",
+        "source_version": "text-sha256:9555b263a97d9986dc06ae1fb26e62ebe9ed109d509f5e97ba2e3536ceb40524",
+        "locator": "Short-term memory；Manage short-term memory；Long-term memory"
+      }
+    ]
+  },
+  {
+    "id": "claim-memory-invalidation-closure-v1",
+    "topic": "memory",
+    "text": "删除源记忆后还需沿派生关系撤回摘要、索引与答案，直接删除单条记录不等于全链路失效。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "依赖图完整记录派生关系；本文采用任何父来源撤回就暂时失效的保守策略。",
+    "evidence": [
+      {
+        "source_id": "v1-agents-store-memory",
+        "source_version": "text-sha256:3992c9bc44f1883fa9fb83482fb3a364d68f24e51fc7296aa11e165b79d8aa24",
+        "locator": "_filter_items 238–266；_batch_search 302–373；_apply_put_ops 404–416"
+      },
+      {
+        "source_id": "v1-agents-langgraph-persistence",
+        "source_version": "text-sha256:188da68bb70db61e0670973154c9d19bf30fff5dd4536b776cf3fa3c05028d1a",
+        "locator": "Checkpointer vs. store；MemorySaver does not persist between restarts"
+      },
+      {
+        "source_id": "v1-agents-context-guide",
+        "source_version": "text-sha256:6c6fad62eddc4f9b04b7c4c342046848c6185ffb6f8d3828456c47ce2a8510c8",
+        "locator": "Context engineering vs. prompt engineering；Compaction；Structured note-taking"
+      }
+    ]
+  },
+  {
+    "id": "claim-tools-skills-validate-query-v1",
+    "topic": "tools-skills",
+    "text": "Schema验证只检查所声明的结构约束；实体消歧和业务范围需要额外条件。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "教学查询固定city与days字段；真实实现应使用完整Schema验证和业务规则。",
+    "evidence": [
+      {
+        "source_id": "v1-agents-mcp-session",
+        "source_version": "text-sha256:031512d2cd20670f542534274e39c514d2a8e4dba678256d97ed57e60f4bc5ac",
+        "locator": "ClientSession.call_tool 1052–1109；validate_tool_result 1118–1154；_output_schema_validator 1156–1183"
+      },
+      {
+        "source_id": "v1-agents-mcp-tools",
+        "source_version": "text-sha256:deebf14f94e60dc1db48f7d4c215285bbb109f195ced301c8723b7d9b789f049",
+        "locator": "Listing Tools；Calling Tools；Output Schema；Error Handling"
+      },
+      {
+        "source_id": "v1-agents-mcp-lifecycle",
+        "source_version": "text-sha256:442da26cd6917ba003b1887959c2da354d7623e8b84497c751e6e602be6dcc69",
+        "locator": "Initialization；Version Negotiation；Timeouts"
+      }
+    ]
+  },
+  {
+    "id": "claim-tools-skills-classify-response-v1",
+    "topic": "tools-skills",
+    "text": "协议错误、工具错误、结构错误和结果未知需要区分；正常工具返回仍需业务验证。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "简化JSON-RPC响应模型；示例工具输出声明count为非负整数。",
+    "evidence": [
+      {
+        "source_id": "v1-agents-mcp-session",
+        "source_version": "text-sha256:031512d2cd20670f542534274e39c514d2a8e4dba678256d97ed57e60f4bc5ac",
+        "locator": "ClientSession.call_tool 1052–1109；validate_tool_result 1118–1154；_output_schema_validator 1156–1183"
+      },
+      {
+        "source_id": "v1-agents-mcp-tools",
+        "source_version": "text-sha256:deebf14f94e60dc1db48f7d4c215285bbb109f195ced301c8723b7d9b789f049",
+        "locator": "Listing Tools；Calling Tools；Output Schema；Error Handling"
+      },
+      {
+        "source_id": "v1-agents-mcp-lifecycle",
+        "source_version": "text-sha256:442da26cd6917ba003b1887959c2da354d7623e8b84497c751e6e602be6dcc69",
+        "locator": "Initialization；Version Negotiation；Timeouts"
+      }
+    ]
+  },
+  {
+    "id": "claim-tools-skills-skill-load-plan-v1",
+    "topic": "tools-skills",
+    "text": "Skill目录元数据、激活正文和按需资源具有不同加载时机；引用资源不应自动加载全部内容。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "教学成本已知；资源归属明确；正文和资源只作计划而不执行。",
+    "evidence": [
+      {
+        "source_id": "v1-agents-skills-prompt",
+        "source_version": "text-sha256:8ed90a61685b84050a8fde32e63d5f3f04c205b05bfc5f8ef4bb2f101cc9cf15",
+        "locator": "to_prompt 9–58；读取name、description、location"
+      },
+      {
+        "source_id": "v1-agents-skills-spec",
+        "source_version": "text-sha256:2dc378b0c5edb91159822c86cb1362b15c6fa6855cfb389c655e0dd5be3e39b4",
+        "locator": "Directory structure；Body content；Progressive disclosure；allowed-tools"
+      },
+      {
+        "source_id": "v1-agents-autogen-token",
+        "source_version": "text-sha256:dc85bc0b4efb65203f2c8be9bf95b0a81275719474a8bdd847bda773f5d9b3de",
+        "locator": "get_messages 57–77；构造器 42–55"
+      },
+      {
+        "source_id": "v1-agents-context-guide",
+        "source_version": "text-sha256:6c6fad62eddc4f9b04b7c4c342046848c6185ffb6f8d3828456c47ce2a8510c8",
+        "locator": "Context engineering vs. prompt engineering；Compaction；Structured note-taking"
+      }
+    ]
+  },
+  {
+    "id": "claim-task-loop-terminal-contract-v1",
+    "topic": "task-loop",
+    "text": "业务终态应聚合独立断言；缺少结果证据必须保留未知，而不能按工具正常返回判成功。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "断言集合在执行前冻结，True、False和None分别表示已证实满足、不满足和未观测。",
+    "evidence": [
+      {
+        "source_id": "v1-agents-osworld-env",
+        "source_version": "text-sha256:8533d099d628acf9dcc5d16f793f2a99f76e497bdbf0c24aa71898f05e650f44",
+        "locator": "_get_obs 354–362；step 433–473；evaluate 475–544"
+      },
+      {
+        "source_id": "v1-agents-osworld-paper",
+        "source_version": "text-sha256:a4a0c51ff1830185e1c7a803d9ef3e27bad9a081677af71411210f2c0c343711",
+        "locator": "第2.2.3节 Execution-Based Evaluation；第2.3节 Observation Space"
+      },
+      {
+        "source_id": "v1-agents-mcp-tools",
+        "source_version": "text-sha256:deebf14f94e60dc1db48f7d4c215285bbb109f195ced301c8723b7d9b789f049",
+        "locator": "Listing Tools；Calling Tools；Output Schema；Error Handling"
+      }
+    ]
+  },
+  {
+    "id": "claim-task-loop-task-frontier-v1",
+    "topic": "task-loop",
+    "text": "任务拆分后只能执行依赖已完成的节点，并将失败传播到依赖它的后续工作。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "教学依赖图为有限DAG；completed表示完成事实而非计划状态。",
+    "evidence": [
+      {
+        "source_id": "v1-agents-pregel-loop",
+        "source_version": "text-sha256:cc51e52a6624aa064ac1688e4a55326012d11b615d9810d4b5c1f19bf5f579e0",
+        "locator": "PregelLoop.tick 650–735；after_tick 737–811；_put_checkpoint 1231–1273"
+      },
+      {
+        "source_id": "v1-agents-langgraph-persistence",
+        "source_version": "text-sha256:188da68bb70db61e0670973154c9d19bf30fff5dd4536b776cf3fa3c05028d1a",
+        "locator": "Checkpointer vs. store；MemorySaver does not persist between restarts"
+      },
+      {
+        "source_id": "v1-agents-osworld-paper",
+        "source_version": "text-sha256:a4a0c51ff1830185e1c7a803d9ef3e27bad9a081677af71411210f2c0c343711",
+        "locator": "第2.2.3节 Execution-Based Evaluation；第2.3节 Observation Space"
+      }
+    ]
+  },
+  {
+    "id": "claim-task-loop-compensation-plan-v1",
+    "topic": "task-loop",
+    "text": "未知动作应先回查，确认已发生且可逆的串行动作才可规划逆序补偿。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "教学动作按执行顺序记录；可逆性是业务契约；补偿本身尚未执行。",
+    "evidence": [
+      {
+        "source_id": "v1-agents-pregel-loop",
+        "source_version": "text-sha256:cc51e52a6624aa064ac1688e4a55326012d11b615d9810d4b5c1f19bf5f579e0",
+        "locator": "PregelLoop.tick 650–735；after_tick 737–811；_put_checkpoint 1231–1273"
+      },
+      {
+        "source_id": "v1-agents-langgraph-persistence",
+        "source_version": "text-sha256:188da68bb70db61e0670973154c9d19bf30fff5dd4536b776cf3fa3c05028d1a",
+        "locator": "Checkpointer vs. store；MemorySaver does not persist between restarts"
+      },
+      {
+        "source_id": "v1-agents-mcp-lifecycle",
+        "source_version": "text-sha256:442da26cd6917ba003b1887959c2da354d7623e8b84497c751e6e602be6dcc69",
+        "locator": "Initialization；Version Negotiation；Timeouts"
+      },
+      {
+        "source_id": "v1-agents-osworld-env",
+        "source_version": "text-sha256:8533d099d628acf9dcc5d16f793f2a99f76e497bdbf0c24aa71898f05e650f44",
+        "locator": "_get_obs 354–362；step 433–473；evaluate 475–544"
+      }
+    ]
+  },
+  {
+    "id": "claim-gui-agent-map-point-v1",
+    "topic": "gui-agent",
+    "text": "GUI坐标转换必须显式处理缩放、展示留白和裁剪偏移，并限定像素边界。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "截图与设备裁剪区域只有轴对齐缩放和平移；无旋转、透视或内容重排。",
+    "evidence": [
+      {
+        "source_id": "v1-agents-osworld-control",
+        "source_version": "text-sha256:385263ab94271557deb904cdcf666dae324753d59896d1f011084ba7da8b2205",
+        "locator": "execute_action 413–499，MOVE_TO 与 CLICK 分支"
+      },
+      {
+        "source_id": "v1-agents-seeclick-paper",
+        "source_version": "text-sha256:b1bf72215e8087f186972e0579725464fb7d46a4a2da9e68c7786b06fea0013f",
+        "locator": "第4节 ScreenSpot；第5.1节 click accuracy 定义"
+      },
+      {
+        "source_id": "v1-agents-osworld-paper",
+        "source_version": "text-sha256:a4a0c51ff1830185e1c7a803d9ef3e27bad9a081677af71411210f2c0c343711",
+        "locator": "第2.2.3节 Execution-Based Evaluation；第2.3节 Observation Space"
+      }
+    ]
+  },
+  {
+    "id": "claim-gui-agent-observation-gate-v1",
+    "topic": "gui-agent",
+    "text": "布局、滚动或遮挡变化后，旧截图上的正确定位也不能直接用于当前动作。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "宿主能获得布局指纹、滚动和遮挡变化；时间使用同一单调尺度。",
+    "evidence": [
+      {
+        "source_id": "v1-agents-osworld-env",
+        "source_version": "text-sha256:8533d099d628acf9dcc5d16f793f2a99f76e497bdbf0c24aa71898f05e650f44",
+        "locator": "_get_obs 354–362；step 433–473；evaluate 475–544"
+      },
+      {
+        "source_id": "v1-agents-osworld-paper",
+        "source_version": "text-sha256:a4a0c51ff1830185e1c7a803d9ef3e27bad9a081677af71411210f2c0c343711",
+        "locator": "第2.2.3节 Execution-Based Evaluation；第2.3节 Observation Space"
+      },
+      {
+        "source_id": "v1-agents-react-paper",
+        "source_version": "text-sha256:7ff971fb0371f5663999ce58e70b0f3eee9e41e53164b18b399f2cd8b5b81e11",
+        "locator": "第2节 ReAct 状态、动作、上下文定义"
+      }
+    ]
+  },
+  {
+    "id": "claim-gui-agent-verify-gui-action-v1",
+    "topic": "gui-agent",
+    "text": "点击点命中、事件下发和业务终态满足是不同条件，必须保留各层证据。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "目标框可信；驱动回执与业务后置条件分别记录；函数只诊断给定动作。",
+    "evidence": [
+      {
+        "source_id": "v1-agents-osworld-control",
+        "source_version": "text-sha256:385263ab94271557deb904cdcf666dae324753d59896d1f011084ba7da8b2205",
+        "locator": "execute_action 413–499，MOVE_TO 与 CLICK 分支"
+      },
+      {
+        "source_id": "v1-agents-osworld-env",
+        "source_version": "text-sha256:8533d099d628acf9dcc5d16f793f2a99f76e497bdbf0c24aa71898f05e650f44",
+        "locator": "_get_obs 354–362；step 433–473；evaluate 475–544"
+      },
+      {
+        "source_id": "v1-agents-seeclick-paper",
+        "source_version": "text-sha256:b1bf72215e8087f186972e0579725464fb7d46a4a2da9e68c7786b06fea0013f",
+        "locator": "第4节 ScreenSpot；第5.1节 click accuracy 定义"
+      },
+      {
+        "source_id": "v1-agents-osworld-paper",
+        "source_version": "text-sha256:a4a0c51ff1830185e1c7a803d9ef3e27bad9a081677af71411210f2c0c343711",
+        "locator": "第2.2.3节 Execution-Based Evaluation；第2.3节 Observation Space"
+      }
+    ]
+  },
+  {
+    "id": "claim-coding-agent-repository-slice-v1",
+    "topic": "coding-agent",
+    "text": "以问题种子及其调用者、被调用者构造有限上下文，可以让修改范围与行为依赖对应。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "教学调用图已经给定且覆盖相关动态调用；半径是显式范围约束。",
+    "evidence": [
+      {
+        "source_id": "v1-agents-sweagent-edit",
+        "source_version": "text-sha256:f48b36722d0b952d4ad8b900db9fa63a0fbcf242205f23633bb5d3d314b07b89",
+        "locator": "get_window_text 150–175；replace_in_window 190–226；replace 240–259"
+      },
+      {
+        "source_id": "v1-agents-sweagent-history",
+        "source_version": "text-sha256:8e3621a9b7d94761d184c57dc2ab1028f7eb04b01fdfcbe8ba122977d19e477a",
+        "locator": "LastNObservations._get_omit_indices 147–155；__call__ 157–175"
+      },
+      {
+        "source_id": "v1-agents-sweagent-paper",
+        "source_version": "text-sha256:1632da782327fd484917d599e6707d0e9a9b4eb98d4a7e5f9a65f6dcd5c2120e",
+        "locator": "第2节 ACI；第3节 search/navigation、file viewer、editor、context management"
+      }
+    ]
+  },
+  {
+    "id": "claim-coding-agent-guarded-replace-v1",
+    "topic": "coding-agent",
+    "text": "检查基线、唯一锚点和语法可防止部分错误编辑，但语法通过不能证明业务正确。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "目标是内存中的Python源码；替换锚点唯一；SHA用于版本身份而非真实性认证。",
+    "evidence": [
+      {
+        "source_id": "v1-agents-sweagent-edit",
+        "source_version": "text-sha256:f48b36722d0b952d4ad8b900db9fa63a0fbcf242205f23633bb5d3d314b07b89",
+        "locator": "get_window_text 150–175；replace_in_window 190–226；replace 240–259"
+      },
+      {
+        "source_id": "v1-agents-sweagent-paper",
+        "source_version": "text-sha256:1632da782327fd484917d599e6707d0e9a9b4eb98d4a7e5f9a65f6dcd5c2120e",
+        "locator": "第2节 ACI；第3节 search/navigation、file viewer、editor、context management"
+      },
+      {
+        "source_id": "v1-agents-swebench-paper",
+        "source_version": "text-sha256:4b243a18f76986685b8a30a02618f7cb601bf21b6788180a47348bf20c255f0d",
+        "locator": "附录A.4 Evaluation Procedure；表9 FAIL_TO_PASS、PASS_TO_PASS"
+      }
+    ]
+  },
+  {
+    "id": "claim-coding-agent-grade-patch-v1",
+    "topic": "coding-agent",
+    "text": "补丁验收应同时检查修复目标和保留行为，并拒绝将旧补丁的结果用于新补丁。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "修复与回归身份集合预先冻结且非空；结果由独立执行方提供。",
+    "evidence": [
+      {
+        "source_id": "v1-agents-swebench-grade",
+        "source_version": "text-sha256:a095273010175001a6779e365b3b77abb8657c7ac2e4f80b4bc360faa6f09483",
+        "locator": "_resolve_case、test_passed、test_maintained、test_failed 59–110；get_eval_tests_report 179–285；compute_fail_to_pass 288–295；compute_pass_to_pass 298–306；get_resolution_status 309–326"
+      },
+      {
+        "source_id": "v1-agents-swebench-paper",
+        "source_version": "text-sha256:4b243a18f76986685b8a30a02618f7cb601bf21b6788180a47348bf20c255f0d",
+        "locator": "附录A.4 Evaluation Procedure；表9 FAIL_TO_PASS、PASS_TO_PASS"
+      },
+      {
+        "source_id": "v1-agents-sweagent-loop",
+        "source_version": "text-sha256:d6cdf7ac66a6509ceba08e3541b856f0734acf79f9a485ed8a6e2c72f0d211a8",
+        "locator": "handle_action 936–1004；step 1235–1263；run 1265–1294"
+      }
+    ]
+  },
+  {
+    "id": "claim-agent-evaluation-success-summary-v1",
+    "topic": "agent-evaluation",
+    "text": "首次成功、允许重试后的成功和未知任务比例必须以同一任务集为分母分别报告。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "每个任务至少记录一次尝试；比较版本时使用同一任务集和同一重试预算。",
+    "evidence": [
+      {
+        "source_id": "v1-agents-sweagent-loop",
+        "source_version": "text-sha256:d6cdf7ac66a6509ceba08e3541b856f0734acf79f9a485ed8a6e2c72f0d211a8",
+        "locator": "handle_action 936–1004；step 1235–1263；run 1265–1294"
+      },
+      {
+        "source_id": "v1-agents-swebench-grade",
+        "source_version": "text-sha256:a095273010175001a6779e365b3b77abb8657c7ac2e4f80b4bc360faa6f09483",
+        "locator": "_resolve_case、test_passed、test_maintained、test_failed 59–110；get_eval_tests_report 179–285；compute_fail_to_pass 288–295；compute_pass_to_pass 298–306；get_resolution_status 309–326"
+      },
+      {
+        "source_id": "v1-agents-swebench-paper",
+        "source_version": "text-sha256:4b243a18f76986685b8a30a02618f7cb601bf21b6788180a47348bf20c255f0d",
+        "locator": "附录A.4 Evaluation Procedure；表9 FAIL_TO_PASS、PASS_TO_PASS"
+      },
+      {
+        "source_id": "v1-agents-osworld-paper",
+        "source_version": "text-sha256:a4a0c51ff1830185e1c7a803d9ef3e27bad9a081677af71411210f2c0c343711",
+        "locator": "第2.2.3节 Execution-Based Evaluation；第2.3节 Observation Space"
+      }
+    ]
+  },
+  {
+    "id": "claim-agent-evaluation-first-divergence-v1",
+    "topic": "agent-evaluation",
+    "text": "轨迹中的最早可证实契约违反有助于缩小排查范围，但缺失观测和混杂因素阻止直接因果归因。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "事件已按因果相关顺序整理；每项检查有独立证据定位；候选需进一步干预验证。",
+    "evidence": [
+      {
+        "source_id": "v1-agents-sweagent-loop",
+        "source_version": "text-sha256:d6cdf7ac66a6509ceba08e3541b856f0734acf79f9a485ed8a6e2c72f0d211a8",
+        "locator": "handle_action 936–1004；step 1235–1263；run 1265–1294"
+      },
+      {
+        "source_id": "v1-agents-osworld-env",
+        "source_version": "text-sha256:8533d099d628acf9dcc5d16f793f2a99f76e497bdbf0c24aa71898f05e650f44",
+        "locator": "_get_obs 354–362；step 433–473；evaluate 475–544"
+      },
+      {
+        "source_id": "v1-agents-react-paper",
+        "source_version": "text-sha256:7ff971fb0371f5663999ce58e70b0f3eee9e41e53164b18b399f2cd8b5b81e11",
+        "locator": "第2节 ReAct 状态、动作、上下文定义"
+      },
+      {
+        "source_id": "v1-agents-sweagent-paper",
+        "source_version": "text-sha256:1632da782327fd484917d599e6707d0e9a9b4eb98d4a7e5f9a65f6dcd5c2120e",
+        "locator": "第2节 ACI；第3节 search/navigation、file viewer、editor、context management"
+      }
+    ]
+  },
+  {
+    "id": "claim-agent-evaluation-audit-evaluator-v1",
+    "topic": "agent-evaluation",
+    "text": "自动验收器应对独立复核标签统计误判，且把未复核样本单独保留。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "复核标签独立于待评估判据；样本选择与标签缺失机制需要记录。",
+    "evidence": [
+      {
+        "source_id": "v1-agents-swebench-grade",
+        "source_version": "text-sha256:a095273010175001a6779e365b3b77abb8657c7ac2e4f80b4bc360faa6f09483",
+        "locator": "_resolve_case、test_passed、test_maintained、test_failed 59–110；get_eval_tests_report 179–285；compute_fail_to_pass 288–295；compute_pass_to_pass 298–306；get_resolution_status 309–326"
+      },
+      {
+        "source_id": "v1-agents-swebench-paper",
+        "source_version": "text-sha256:4b243a18f76986685b8a30a02618f7cb601bf21b6788180a47348bf20c255f0d",
+        "locator": "附录A.4 Evaluation Procedure；表9 FAIL_TO_PASS、PASS_TO_PASS"
+      },
+      {
+        "source_id": "v1-agents-osworld-env",
+        "source_version": "text-sha256:8533d099d628acf9dcc5d16f793f2a99f76e497bdbf0c24aa71898f05e650f44",
+        "locator": "_get_obs 354–362；step 433–473；evaluate 475–544"
+      },
+      {
+        "source_id": "v1-agents-osworld-paper",
+        "source_version": "text-sha256:a4a0c51ff1830185e1c7a803d9ef3e27bad9a081677af71411210f2c0c343711",
+        "locator": "第2.2.3节 Execution-Based Evaluation；第2.3节 Observation Space"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-agents-task-acceptance-v1",
+    "topic": "benchmark-agents",
+    "text": "任务解决须有有效运行证据，并同时满足修复与回归条件；跳过状态在所读版本的两组语义不同。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "教学模拟PASS_AND_FAIL；至少一个F2P；规范化测试ID；不模拟FAIL_ONLY或真实执行。",
+    "evidence": [
+      {
+        "source_id": "v1-benchagents-swebench-grading",
+        "source_version": "text-sha256:a095273010175001a6779e365b3b77abb8657c7ac2e4f80b4bc360faa6f09483",
+        "locator": "swebench/harness/grading.py::get_eval_tests_report、get_resolution_status、get_logs_eval"
+      },
+      {
+        "source_id": "v1-benchagents-swebench-paper",
+        "source_version": "text-sha256:bc105c7e79f5041dc98ee0c2d146d3e928d1e83b2e20069bf44a1b0da7a93fd9",
+        "locator": "§2 SWE-bench；§2.1 Dataset Construction；§2.2 Evaluation"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-agents-final-state-v1",
+    "topic": "benchmark-agents",
+    "text": "字段内可替代条件用OR，全部验收条件用AND；条件满足比例只能诊断，不能替代整题判定。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "非空可信条件；宿主提供已规范类型的终态；未覆盖副作用仍可能漏检。",
+    "evidence": [
+      {
+        "source_id": "v1-benchagents-webarena-evaluators",
+        "source_version": "text-sha256:e23edb390c4e39b3fff97dfd456fb04f7a59a0fb1ea30a4f2fa42bcb77e00c22",
+        "locator": "evaluation_harness/evaluators.py::HTMLContentEvaluator.__call__、EvaluatorComb.__call__、evaluator_router"
+      },
+      {
+        "source_id": "v1-benchagents-webarena-paper",
+        "source_version": "text-sha256:0165a0afee8089f63d42adbf60864a6284faf896072dbe6ba71387d90dc6856e",
+        "locator": "§3.3 Evaluation with Functional Correctness"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-agents-budget-denominators-v1",
+    "topic": "benchmark-agents",
+    "text": "预算内最终成功按预先任务清单计分，按有效任务或尝试计分需要独立披露分母；反馈重试不是同口径pass@k。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "每任务序号从1连续；失败成本计入累计调用预算；输入已区分infra_error与任务失败。",
+    "evidence": [
+      {
+        "source_id": "v1-benchagents-humaneval-eval",
+        "source_version": "text-sha256:e926d5e9b8f1ec040096cd5952e8cf79f8dc0b7fb80ba6667ce604ffea0397bc",
+        "locator": "human_eval/evaluation.py::estimate_pass_at_k、evaluate_functional_correctness"
+      },
+      {
+        "source_id": "v1-benchagents-humaneval-paper",
+        "source_version": "text-sha256:0bb002b63fe09d2ba67feb409ef3bcd75804cdaada3971f398f3d85779fcd9fa",
+        "locator": "§2 Evaluation Framework；Functional Correctness；pass@k estimator"
+      },
+      {
+        "source_id": "v1-benchagents-swebench-grading",
+        "source_version": "text-sha256:a095273010175001a6779e365b3b77abb8657c7ac2e4f80b4bc360faa6f09483",
+        "locator": "swebench/harness/grading.py::get_eval_tests_report、get_resolution_status、get_logs_eval"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-judge-order-mapping-v1",
+    "topic": "benchmark-judge",
+    "text": "交换后的槽位标签必须映射回原候选身份，解析失败、不一致和平局应分别保存并披露覆盖率。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "同题答案冻结，A/B表示展示槽位；error为显式解析失败；不将交换一致性等同正确性。",
+    "evidence": [
+      {
+        "source_id": "v1-benchagents-fastchat-judge",
+        "source_version": "text-sha256:71c3b317322845cb05eb6d9b555b03e5084fa59085d24989ce521fcfa8bdc9a7",
+        "locator": "fastchat/llm_judge/common.py::run_judge_pair、play_a_match_pair、load_pairwise_model_judgments"
+      },
+      {
+        "source_id": "v1-benchagents-mtbench-paper",
+        "source_version": "text-sha256:2f9fcdbbc421ec86a3019543702497daa9bb6563107db4aa300e24a16c235330",
+        "locator": "§3.3 Limitations；§3.4 Addressing limitations；§4 Agreement evaluation、Table 5"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-judge-human-agreement-v1",
+    "topic": "benchmark-judge",
+    "text": "观察一致率受标签边际影响，未加权kappa扣除经验机会一致且在单一共同标签时未定义。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "同题独立配对的A/B/tie名义标签；缺失另报；不复制MT-Bench多人抽样或泛化固定阈值。",
+    "evidence": [
+      {
+        "source_id": "v1-benchagents-sklearn-classification",
+        "source_version": "text-sha256:bd6218b44c62124709e13c2041e114f1d231c5e524b8916b79226ae52c682026",
+        "locator": "sklearn/metrics/_classification.py::cohen_kappa_score"
+      },
+      {
+        "source_id": "v1-benchagents-kappa-doc",
+        "source_version": "text-sha256:9958c6c8b3e2b3437063b95043048837aaa2087aba608e71bb0b272464ed85a8",
+        "locator": "cohen_kappa_score：定义与参数说明"
+      },
+      {
+        "source_id": "v1-benchagents-mtbench-paper",
+        "source_version": "text-sha256:2f9fcdbbc421ec86a3019543702497daa9bb6563107db4aa300e24a16c235330",
+        "locator": "§3.3 Limitations；§3.4 Addressing limitations；§4 Agreement evaluation、Table 5"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-judge-probability-calibration-v1",
+    "topic": "benchmark-judge",
+    "text": "校准须定义概率事件并使用独立数据；Brier含区分度影响，二值与多类求和口径有二倍缩放差异。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "概率有限且在零到一内；事件为与独立仲裁一致；分箱和阈值预先冻结；无接受样本时错误率未定义。",
+    "evidence": [
+      {
+        "source_id": "v1-benchagents-lm-metrics",
+        "source_version": "text-sha256:f4794761c3f53fc036336e79c65dca355ea26a8d4cb00b27155ea2ab4846dbb2",
+        "locator": "lm_eval/api/metrics.py::brier_score"
+      },
+      {
+        "source_id": "v1-benchagents-calibration-doc",
+        "source_version": "text-sha256:93a78eed70666bf360e6e8705d226df17d030d327e4c2bbb3ba6d884979b0dbe",
+        "locator": "§1.16 Probability calibration；§1.16.1 Calibration curves；§1.16.2–3"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-robustness-utility-security-denominators-v1",
+    "topic": "benchmark-robustness",
+    "text": "正常效用以任务为分母，目标ASR及受扰动效用以安全案例为分母；无指定目标成功不代表无其他受检副作用。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "唯一任务/目标配对；明确u/a/h/exposed布尔标签；h覆盖指定目标；条件子集率不得替换主率。",
+    "evidence": [
+      {
+        "source_id": "v1-benchagents-agentdojo-suite",
+        "source_version": "text-sha256:2e69da06f7e150dd6d238c53a74845b56eebeb224e07f694e1051a6e0c6a2bc1",
+        "locator": "src/agentdojo/task_suite/task_suite.py::run_task_with_pipeline、_check_task_result、check、is_task_injectable"
+      },
+      {
+        "source_id": "v1-benchagents-agentdojo-paper",
+        "source_version": "text-sha256:e6c52897c6ce82a3c75fcb64ec79df365b97b1a73ef1390ea814cbf69a9ea279",
+        "locator": "§3.1 AgentDojo Components；§3.4 Reporting AgentDojo Results；Figure 9 defense trade-offs"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-robustness-host-authorization-v1",
+    "topic": "benchmark-robustness",
+    "text": "工具注册和参数验证不等同资源授权或系统隔离；AgentDojo该版本先执行嵌套调用再校验外层参数。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "教学纯判定；注册表和能力由可信宿主维护；仅虚构资源；不声称提供生产防注入或沙箱保证。",
+    "evidence": [
+      {
+        "source_id": "v1-benchagents-agentdojo-runtime",
+        "source_version": "text-sha256:3c67f71eb8a7f15d2a15fe9595d84218c5e6868d95fd71d1cef679cd2192d0f7",
+        "locator": "src/agentdojo/functions_runtime.py::FunctionsRuntime.run_function、_execute_nested_calls、_parse_args"
+      },
+      {
+        "source_id": "v1-benchagents-agentdojo-suite",
+        "source_version": "text-sha256:2e69da06f7e150dd6d238c53a74845b56eebeb224e07f694e1051a6e0c6a2bc1",
+        "locator": "src/agentdojo/task_suite/task_suite.py::run_task_with_pipeline、_check_task_result、check、is_task_injectable"
+      },
+      {
+        "source_id": "v1-benchagents-agentdojo-paper",
+        "source_version": "text-sha256:e6c52897c6ce82a3c75fcb64ec79df365b97b1a73ef1390ea814cbf69a9ea279",
+        "locator": "§3.1 AgentDojo Components；§3.4 Reporting AgentDojo Results；Figure 9 defense trade-offs"
+      },
+      {
+        "source_id": "v1-benchagents-mcp-architecture",
+        "source_version": "text-sha256:30f7d4645bb11f7d18e98ac44c2b9c9836e6c558474a08d7ee460158be7b986b",
+        "locator": "Core Components / Host；Design Principles；Capability Negotiation"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-robustness-paired-controls-v1",
+    "topic": "benchmark-robustness",
+    "text": "配对净变化等于获益减退化，零净变化可掩盖正常任务损失；canary命中仅证明位置可达。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "相同ID及初始状态、模型、预算和判据；正常任务与安全案例分开；单次比较不推断总体因果。",
+    "evidence": [
+      {
+        "source_id": "v1-benchagents-agentdojo-suite",
+        "source_version": "text-sha256:2e69da06f7e150dd6d238c53a74845b56eebeb224e07f694e1051a6e0c6a2bc1",
+        "locator": "src/agentdojo/task_suite/task_suite.py::run_task_with_pipeline、_check_task_result、check、is_task_injectable"
+      },
+      {
+        "source_id": "v1-benchagents-agentdojo-paper",
+        "source_version": "text-sha256:e6c52897c6ce82a3c75fcb64ec79df365b97b1a73ef1390ea814cbf69a9ea279",
+        "locator": "§3.1 AgentDojo Components；§3.4 Reporting AgentDojo Results；Figure 9 defense trade-offs"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-rag-context-ranking-v1",
+    "topic": "benchmark-rag",
+    "text": "Ragas式上下文精度按已召回且被判有用的项目数归一，高AP不能证明全库相关证据已召回。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "有序二值有用性标签；全库相关数仅在独立完整标注且候选无重复时可比较。",
+    "evidence": [
+      {
+        "source_id": "v1-benchsys-ragas-precision",
+        "source_version": "text-sha256:baaf3981986602754ccbaef2936b6ac8e6d6551cab86477e64170683d74a4716",
+        "locator": "LLMContextPrecisionWithReference._calculate_average_precision；IDBasedContextPrecision._single_turn_ascore"
+      },
+      {
+        "source_id": "v1-benchsys-ragas-precision-doc",
+        "source_version": "text-sha256:b55677bc7f0f4b5633d14780e381124e4d4b5e77ec914b89cec59f6a4ca6ed09",
+        "locator": "Context Precision；Context Utilization"
+      },
+      {
+        "source_id": "v1-benchsys-ragas-paper",
+        "source_version": "text-sha256:96392ffe66df4b69aba6978b4790ba752cc83172162462230cda5ab8b4b3da3b",
+        "locator": "§3 Evaluation；§4 The WikiEval Dataset；§5 Experiments"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-rag-claim-denominators-v1",
+    "topic": "benchmark-rag",
+    "text": "上下文召回以参考答案声明为分母，忠实度以系统回答声明为分母；高忠实度可伴随严重不完整。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "声明拆分与支持标签已经独立冻结；不把文档相关性或链接存在当作支持标签。",
+    "evidence": [
+      {
+        "source_id": "v1-benchsys-ragas-recall",
+        "source_version": "text-sha256:154a260678839c3f3d7dcf15f38820e36a3514b492245fdc899e93b946554ada",
+        "locator": "LLMContextRecall._compute_score；IDBasedContextRecall._single_turn_ascore"
+      },
+      {
+        "source_id": "v1-benchsys-ragas-faithfulness",
+        "source_version": "text-sha256:5370b57f3df537a1619f7c6ddeeb5fd67e392821a5dee30eb5e0830f3a75cdc9",
+        "locator": "Faithfulness._create_statements；_create_verdicts；_compute_score"
+      },
+      {
+        "source_id": "v1-benchsys-ragas-recall-doc",
+        "source_version": "text-sha256:8f8c830d95d0e462c176507b89b4dc944a32f012bb0604e60e70b68364bc5d79",
+        "locator": "Context Recall；LLM Based Context Recall"
+      },
+      {
+        "source_id": "v1-benchsys-ragas-faithfulness-doc",
+        "source_version": "text-sha256:f764e088128237bec5c117a11e0cc76f68f787831d3efaf640495bd1a62ba196",
+        "locator": "Faithfulness；How It Is Calculated"
+      },
+      {
+        "source_id": "v1-benchsys-ragas-paper",
+        "source_version": "text-sha256:96392ffe66df4b69aba6978b4790ba752cc83172162462230cda5ab8b4b3da3b",
+        "locator": "§3 Evaluation；§4 The WikiEval Dataset；§5 Experiments"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-rag-judge-estimation-v1",
+    "topic": "benchmark-rag",
+    "text": "自动忠实度同时依赖声明拆分与支持分类，裁判假阳性和假阴性会系统性偏移分数。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "人工与自动裁判判断同一组声明ID；人工标签需独立复核，不能由候选系统自标。",
+    "evidence": [
+      {
+        "source_id": "v1-benchsys-ragas-faithfulness",
+        "source_version": "text-sha256:5370b57f3df537a1619f7c6ddeeb5fd67e392821a5dee30eb5e0830f3a75cdc9",
+        "locator": "Faithfulness._create_statements；_create_verdicts；_compute_score"
+      },
+      {
+        "source_id": "v1-benchsys-ragas-faithfulness-doc",
+        "source_version": "text-sha256:f764e088128237bec5c117a11e0cc76f68f787831d3efaf640495bd1a62ba196",
+        "locator": "Faithfulness；How It Is Calculated"
+      },
+      {
+        "source_id": "v1-benchsys-ragas-paper",
+        "source_version": "text-sha256:96392ffe66df4b69aba6978b4790ba752cc83172162462230cda5ab8b4b3da3b",
+        "locator": "§3 Evaluation；§4 The WikiEval Dataset；§5 Experiments"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-systems-latency-statistics-v1",
+    "topic": "benchmark-systems",
+    "text": "同一组延迟在不同分位数算法下可得到不同数值，MLPerf样本和查询口径也不能混用。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "普通token延迟路径，整数纳秒、每请求输出token数大于1；不模拟LoadGen计时与early stopping。",
+    "evidence": [
+      {
+        "source_id": "v1-benchsys-mlperf-results",
+        "source_version": "text-sha256:a4f401b46e76c0af5c1db1b237b5fba81961390cf930173e7263cc40b1cf2f01",
+        "locator": "PerformanceSummary.ProcessLatencies；ProcessTokenLatencies；PerfConstraintsMet；LogSummary"
+      },
+      {
+        "source_id": "v1-benchsys-mlperf-logging",
+        "source_version": "text-sha256:aaa03469e39c9b407eb1326e093bc9f2dc81fe90a5a3fb6d6ef7a0dcbc2be284",
+        "locator": "AsyncLog::RecordSampleCompletion（360行开始，416–482为本批读取范围）"
+      },
+      {
+        "source_id": "v1-benchsys-mlperf-settings",
+        "source_version": "text-sha256:a2bd6aacb6894530a5d12dcb253c818e5416bd245b77227c3a3343d25362120f",
+        "locator": "TestScenario；TestMode；TestSettings"
+      },
+      {
+        "source_id": "v1-benchsys-mlperf-loadgen-doc",
+        "source_version": "text-sha256:074479dbeb369205ccc8800450c647893b4901c247e0e4ee7f321f05254e9305",
+        "locator": "Scope of the LoadGen Responsibilities；Submission Considerations"
+      },
+      {
+        "source_id": "v1-benchsys-distserve-paper",
+        "source_version": "text-sha256:8e9725f01e6852ce7c825c6dceafd3dca9d33b894717990907013519c0711cdd",
+        "locator": "§1 goodput定义；§3.3 variable length与communication"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-systems-joint-goodput-v1",
+    "topic": "benchmark-systems",
+    "text": "两个延迟条件各自达标的比例不能直接视作同一请求同时达标比例；正式规则和工程goodput各有口径。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "所有已发请求具有同一ID的两个布尔标签；教学goodput仅包含延迟条件，不包含答案质量。",
+    "evidence": [
+      {
+        "source_id": "v1-benchsys-mlperf-results",
+        "source_version": "text-sha256:a4f401b46e76c0af5c1db1b237b5fba81961390cf930173e7263cc40b1cf2f01",
+        "locator": "PerformanceSummary.ProcessLatencies；ProcessTokenLatencies；PerfConstraintsMet；LogSummary"
+      },
+      {
+        "source_id": "v1-benchsys-bench-serve",
+        "source_version": "text-sha256:ad1f21c13d5094cc115c005f312489032b7e001c872930de7f734fcf05806bf0",
+        "locator": "get_request；calculate_metrics"
+      },
+      {
+        "source_id": "v1-benchsys-distserve-paper",
+        "source_version": "text-sha256:8e9725f01e6852ce7c825c6dceafd3dca9d33b894717990907013519c0711cdd",
+        "locator": "§1 goodput定义；§3.3 variable length与communication"
+      },
+      {
+        "source_id": "v1-benchsys-mlperf-rules",
+        "source_version": "text-sha256:94c69f01f1e0be24dc057180af6db878d1f5339fd31d54cbe5c386f8e198ce08",
+        "locator": "Scenarios；KV-cache FAQ；Overview"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-systems-submission-validity-v1",
+    "topic": "benchmark-systems",
+    "text": "LoadGen的VALID只覆盖配置下的性能条件，不能替代准确率、合规、系统材料与正式审核。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "输入为外部已核验的教学检查结果；True/False/None分别表示通过/失败/未知，不执行官方checker。",
+    "evidence": [
+      {
+        "source_id": "v1-benchsys-mlperf-results",
+        "source_version": "text-sha256:a4f401b46e76c0af5c1db1b237b5fba81961390cf930173e7263cc40b1cf2f01",
+        "locator": "PerformanceSummary.ProcessLatencies；ProcessTokenLatencies；PerfConstraintsMet；LogSummary"
+      },
+      {
+        "source_id": "v1-benchsys-mlperf-performance-check",
+        "source_version": "text-sha256:6a5fe9a89504ba08e7500984c5abc92e4732936ff329d3b87317b12e84818167",
+        "locator": "PerformanceCheck.setup_checks；loadgen_errors_check；llm_check"
+      },
+      {
+        "source_id": "v1-benchsys-mlperf-accuracy-check",
+        "source_version": "text-sha256:c57da881394728bd1308109a0f61513c1dd0c139c0360bbb8dce7b06f6afc70d",
+        "locator": "AccuracyCheck.setup_checks；accuracy_result_check"
+      },
+      {
+        "source_id": "v1-benchsys-mlperf-submission-doc",
+        "source_version": "text-sha256:f8c77da5cfd0dcaaf49942e5a368a45d8a97083e315fabe37ec4e17d0d9b7bd8",
+        "locator": "Implemented checks"
+      },
+      {
+        "source_id": "v1-benchsys-mlperf-loadgen-doc",
+        "source_version": "text-sha256:074479dbeb369205ccc8800450c647893b4901c247e0e4ee7f321f05254e9305",
+        "locator": "Scope of the LoadGen Responsibilities；Submission Considerations"
+      },
+      {
+        "source_id": "v1-benchsys-mlperf-rules",
+        "source_version": "text-sha256:94c69f01f1e0be24dc057180af6db878d1f5339fd31d54cbe5c386f8e198ce08",
+        "locator": "Scenarios；KV-cache FAQ；Overview"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-multimodal-input-contract-v1",
+    "topic": "benchmark-multimodal",
+    "text": "填充、裁剪、图像选择与OCR会改变有效输入协议，必须先核对输入再归因感知错误。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "教学仅计算LLaVA的方形填充几何；不模拟像素插值、归一化或任何MMMU适配器的默认设置。",
+    "evidence": [
+      {
+        "source_id": "v1-benchsys-llava-preprocess",
+        "source_version": "text-sha256:5551c1a52ea5e7d6e4ae5ad5da430271b0cd648b044a9b812127a49f46895bcf",
+        "locator": "expand2square；process_images"
+      },
+      {
+        "source_id": "v1-benchsys-llava-doc",
+        "source_version": "text-sha256:bf7fbd57f27198308d9ed8fb2813267a9d18cf79198c5ac534fba1ad757a287b",
+        "locator": "image_aspect_ratio pad"
+      },
+      {
+        "source_id": "v1-benchsys-mmmu-run",
+        "source_version": "text-sha256:e23143247c1976ee500bb4815fbf1087b80de0a9702a98280100193a5f079692",
+        "locator": "run_model；main"
+      },
+      {
+        "source_id": "v1-benchsys-mmmu-model-utils",
+        "source_version": "text-sha256:af0dcfafb55af2d36c1006612841f508c7ad70259b95cfa9fd42c03c96257ebf",
+        "locator": "call_llava_engine_df；llava_image_processor"
+      },
+      {
+        "source_id": "v1-benchsys-mmmu-data",
+        "source_version": "text-sha256:b64ab451e5bdf4aff275e442d8cd195269cbe7b63678f0e95fed8eb59fa05cdd",
+        "locator": "process_single_sample；construct_prompt"
+      },
+      {
+        "source_id": "v1-benchsys-mmmu-paper",
+        "source_version": "text-sha256:84bb8b3df02039b5ce2be9d33391b89faf324d8bd89adca941f4887880644cf5",
+        "locator": "§4 Experiments；§5 Error Analysis and Future Work"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-multimodal-answer-scoring-v1",
+    "topic": "benchmark-multimodal",
+    "text": "选择题标签相等与开放题标准化匹配是不同判据；解析失败随机回退可能产生非零基线分数。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "开放题输入已经过候选抽取；示例不重现完整response解析器，不调用模型或随机回退。",
+    "evidence": [
+      {
+        "source_id": "v1-benchsys-mmmu-eval",
+        "source_version": "text-sha256:cc1a89b4a27f697702d340bc6a7578b5237135754ddaa9ef105239a3d9847367",
+        "locator": "parse_multi_choice_response；normalize_str；eval_multi_choice；eval_open；calculate_ins_level_acc"
+      },
+      {
+        "source_id": "v1-benchsys-mmmu-run",
+        "source_version": "text-sha256:e23143247c1976ee500bb4815fbf1087b80de0a9702a98280100193a5f079692",
+        "locator": "run_model；main"
+      },
+      {
+        "source_id": "v1-benchsys-mmmu-doc",
+        "source_version": "text-sha256:a4e89dd389f9b4c82b92e54b5d50a58e55a53c077a5009f7d4b4e53c09bdcc3a",
+        "locator": "Introduction；Evaluation"
+      },
+      {
+        "source_id": "v1-benchsys-mmmu-paper",
+        "source_version": "text-sha256:84bb8b3df02039b5ce2be9d33391b89faf324d8bd89adca941f4887880644cf5",
+        "locator": "§4 Experiments；§5 Error Analysis and Future Work"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-multimodal-stratified-error-v1",
+    "topic": "benchmark-multimodal",
+    "text": "总体准确率按样本加权，学科宏平均按学科等权；错误层需人工证据，不能从一个总分自动归因。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "固定样本ID与布尔判分，分组标签及错误归因由外部冻结；函数不自动诊断视觉或推理失败。",
+    "evidence": [
+      {
+        "source_id": "v1-benchsys-mmmu-eval",
+        "source_version": "text-sha256:cc1a89b4a27f697702d340bc6a7578b5237135754ddaa9ef105239a3d9847367",
+        "locator": "parse_multi_choice_response；normalize_str；eval_multi_choice；eval_open；calculate_ins_level_acc"
+      },
+      {
+        "source_id": "v1-benchsys-mmmu-data",
+        "source_version": "text-sha256:b64ab451e5bdf4aff275e442d8cd195269cbe7b63678f0e95fed8eb59fa05cdd",
+        "locator": "process_single_sample；construct_prompt"
+      },
+      {
+        "source_id": "v1-benchsys-mmmu-doc",
+        "source_version": "text-sha256:a4e89dd389f9b4c82b92e54b5d50a58e55a53c077a5009f7d4b4e53c09bdcc3a",
+        "locator": "Introduction；Evaluation"
+      },
+      {
+        "source_id": "v1-benchsys-mmmu-paper",
+        "source_version": "text-sha256:84bb8b3df02039b5ce2be9d33391b89faf324d8bd89adca941f4887880644cf5",
+        "locator": "§4 Experiments；§5 Error Analysis and Future Work"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-protocol-identity-v1",
+    "topic": "benchmark-protocol",
+    "text": "评测追踪应保留可解释配置与输入指纹，指纹相同不单独保证运行确定性。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "本库协议对象为教学设计；所述追踪字段对应固定版本LM Evaluation Harness源码。",
+    "evidence": [
+      {
+        "source_id": "v1-benchmark-lm-tracker",
+        "source_version": "text-sha256:642d5a9b02a72a68d4ec614aab796635b0eb5684c0c6a433eb31b9ac056c80a2",
+        "locator": "lm_eval/loggers/evaluation_tracker.py"
+      },
+      {
+        "source_id": "v1-benchmark-lm-task",
+        "source_version": "text-sha256:4c25a4f1949488483b833ce4fcf91cfd3e066084a9ea00079c6879ae3ba95657",
+        "locator": "lm_eval/api/task.py"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-protocol-splits-v1",
+    "topic": "benchmark-protocol",
+    "text": "数据访问接口与显式ID隔离检查不能自动证明评测数据无污染。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "集合检查仅覆盖稳定ID层面的跨切分重叠；语义重复与预训练污染需另外检查。",
+    "evidence": [
+      {
+        "source_id": "v1-benchmark-lm-task",
+        "source_version": "text-sha256:4c25a4f1949488483b833ce4fcf91cfd3e066084a9ea00079c6879ae3ba95657",
+        "locator": "lm_eval/api/task.py"
+      },
+      {
+        "source_id": "v1-benchmark-lm-decontam-doc",
+        "source_version": "text-sha256:b30a50c2acc87826cdc46ad2b7de678e91dcab24a39cb94e1a3cee094ccbccec",
+        "locator": "docs/decontamination.md"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-protocol-ledger-v1",
+    "topic": "benchmark-protocol",
+    "text": "端到端成功率与已评分准确率具有不同分母，逐样本记录应保留运行错误及尝试归并规则。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "本页采用一题一条最终记录的教学契约，不是任意评测框架的默认聚合规则。",
+    "evidence": [
+      {
+        "source_id": "v1-benchmark-lm-tracker",
+        "source_version": "text-sha256:642d5a9b02a72a68d4ec614aab796635b0eb5684c0c6a433eb31b9ac056c80a2",
+        "locator": "lm_eval/loggers/evaluation_tracker.py"
+      },
+      {
+        "source_id": "v1-benchmark-lm-task",
+        "source_version": "text-sha256:4c25a4f1949488483b833ce4fcf91cfd3e066084a9ea00079c6879ae3ba95657",
+        "locator": "lm_eval/api/task.py"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-metrics-aggregation-v1",
+    "topic": "benchmark-metrics",
+    "text": "按样本量加权和按类别等权的聚合对应不同目标分布，结果应保留分组计数。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "适用于每题二元正确性与非空分组，不将不同量纲的指标直接平均。",
+    "evidence": [
+      {
+        "source_id": "v1-benchmark-lm-metrics",
+        "source_version": "text-sha256:f4794761c3f53fc036336e79c65dca355ea26a8d4cb00b27155ea2ab4846dbb2",
+        "locator": "lm_eval/api/metrics.py"
+      },
+      {
+        "source_id": "v1-benchmark-helm-paper",
+        "source_version": "text-sha256:d94371e353f630af4f14cfa41e306221571c2f60e4120c977fce05eb7f4fb3bd",
+        "locator": "正文相关章节"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-metrics-wilson-v1",
+    "topic": "benchmark-metrics",
+    "text": "Wilson区间通过反演比例检验处理有限样本不确定性，方法名称与观测独立性假设必须明确。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "本例为无连续性校正的双侧Wilson区间，适用于预先定义的二元观测。",
+    "evidence": [
+      {
+        "source_id": "v1-benchmark-wilson-doc",
+        "source_version": "text-sha256:a31061395b22937605e05a75daa70a6394e3bb6effbc0c1ca5e2804b036e832e",
+        "locator": "正文相关章节"
+      },
+      {
+        "source_id": "v1-benchmark-scipy-binom",
+        "source_version": "text-sha256:296ae07e882ce2c821ba37c57840753e43d4b88ace2130e6f392d413051c8023",
+        "locator": "scipy/stats/_binomtest.py"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-metrics-paired-v1",
+    "topic": "benchmark-metrics",
+    "text": "同题目系统比较应保留配对关系，重采样次数增加不等于原始样本信息增加。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "教学函数按题目抽样且仅返回差值分布；聚类观测和最终区间方法需另行指定。",
+    "evidence": [
+      {
+        "source_id": "v1-benchmark-bootstrap-doc",
+        "source_version": "text-sha256:dafd869e884f7c42bd2569ce836f55f374a4f8e2414c92d109e75da7de304c06",
+        "locator": "正文相关章节"
+      },
+      {
+        "source_id": "v1-benchmark-lm-metrics",
+        "source_version": "text-sha256:f4794761c3f53fc036336e79c65dca355ea26a8d4cb00b27155ea2ab4846dbb2",
+        "locator": "lm_eval/api/metrics.py"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-contamination-hash-v1",
+    "topic": "benchmark-contamination",
+    "text": "内容哈希的等价性依赖规范化规则，规则版本和原文证据应一并保存。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "教学规范化用于自然语言候选，不保证适用于代码、数学文本或所有语言。",
+    "evidence": [
+      {
+        "source_id": "v1-benchmark-lm-janitor",
+        "source_version": "text-sha256:2e9f13026e749a38052eac953fc07995d4a35be1b9f320a07b149b55de576307",
+        "locator": "lm_eval/decontamination/janitor.py"
+      },
+      {
+        "source_id": "v1-benchmark-lm-decontaminate",
+        "source_version": "text-sha256:e84d299aebbe47b69fd5a383e260f6d6e6b7a865cc792f941fa51562e43131b0",
+        "locator": "lm_eval/decontamination/decontaminate.py"
+      },
+      {
+        "source_id": "v1-benchmark-lm-tracker",
+        "source_version": "text-sha256:642d5a9b02a72a68d4ec614aab796635b0eb5684c0c6a433eb31b9ac056c80a2",
+        "locator": "lm_eval/loggers/evaluation_tracker.py"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-contamination-ngrams-v1",
+    "topic": "benchmark-contamination",
+    "text": "局部n-gram重叠提供可复查候选，候选判据、语料可见性和最终污染结论必须区分。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "示例采用空白分词和集合Jaccard，不等于lm-eval的任意13-gram重叠规则。",
+    "evidence": [
+      {
+        "source_id": "v1-benchmark-lm-decontaminate",
+        "source_version": "text-sha256:e84d299aebbe47b69fd5a383e260f6d6e6b7a865cc792f941fa51562e43131b0",
+        "locator": "lm_eval/decontamination/decontaminate.py"
+      },
+      {
+        "source_id": "v1-benchmark-lm-janitor",
+        "source_version": "text-sha256:2e9f13026e749a38052eac953fc07995d4a35be1b9f320a07b149b55de576307",
+        "locator": "lm_eval/decontamination/janitor.py"
+      },
+      {
+        "source_id": "v1-benchmark-lm-decontam-doc",
+        "source_version": "text-sha256:b30a50c2acc87826cdc46ad2b7de678e91dcab24a39cb94e1a3cee094ccbccec",
+        "locator": "docs/decontamination.md"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-contamination-release-v1",
+    "topic": "benchmark-contamination",
+    "text": "动态基准的成绩必须绑定样本成员及内容/评分版本，发布和撤回规则影响可比性。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "教学代码使用左闭右开的日期区间；LiveBench实际源码采用release集合与移除条件。",
+    "evidence": [
+      {
+        "source_id": "v1-benchmark-livebench-common",
+        "source_version": "text-sha256:1943b30760d15cfc92b3a9ecb48c6fce2368d96132029ca783505f8c46ee7aa2",
+        "locator": "livebench/common.py"
+      },
+      {
+        "source_id": "v1-benchmark-lm-tracker",
+        "source_version": "text-sha256:642d5a9b02a72a68d4ec614aab796635b0eb5684c0c6a433eb31b9ac056c80a2",
+        "locator": "lm_eval/loggers/evaluation_tracker.py"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-general-likelihood-v1",
+    "topic": "benchmark-general",
+    "text": "候选长度归一化改变选择题评分目标，长度单位与输入构造应作为协议的一部分。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "具体源码分析针对MultipleChoiceTask；教学函数接收已计算的有限分数和显式长度。",
+    "evidence": [
+      {
+        "source_id": "v1-benchmark-lm-task",
+        "source_version": "text-sha256:4c25a4f1949488483b833ce4fcf91cfd3e066084a9ea00079c6879ae3ba95657",
+        "locator": "lm_eval/api/task.py"
+      },
+      {
+        "source_id": "v1-benchmark-lm-metrics",
+        "source_version": "text-sha256:f4794761c3f53fc036336e79c65dca355ea26a8d4cb00b27155ea2ab4846dbb2",
+        "locator": "lm_eval/api/metrics.py"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-general-chance-v1",
+    "topic": "benchmark-general",
+    "text": "选项数量定义均匀随机基线，基线调整不能抵消领域与难度差异。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "每题恰好一个正确选项且均匀猜测；开放回答或多选题不直接适用。",
+    "evidence": [
+      {
+        "source_id": "v1-benchmark-mmlu-pro-accuracy",
+        "source_version": "text-sha256:c0052d10d0d8ada49f796a4a73fcf36c3a9348a0017f8fe46f41cede5457a599",
+        "locator": "compute_accuracy.py"
+      },
+      {
+        "source_id": "v1-benchmark-lm-metrics",
+        "source_version": "text-sha256:f4794761c3f53fc036336e79c65dca355ea26a8d4cb00b27155ea2ab4846dbb2",
+        "locator": "lm_eval/api/metrics.py"
+      },
+      {
+        "source_id": "v1-benchmark-helm-paper",
+        "source_version": "text-sha256:d94371e353f630af4f14cfa41e306221571c2f60e4120c977fce05eb7f4fb3bd",
+        "locator": "正文相关章节"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-general-parser-v1",
+    "topic": "benchmark-general",
+    "text": "答案解析和未解析回退策略会在模型输出不变时改变成绩，因此必须版本化并保留解析状态。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "公式假设单一正确选项且未解析回答均匀随机回退；教学解析器采用保留None的另一种明确策略。",
+    "evidence": [
+      {
+        "source_id": "v1-benchmark-mmlu-pro-accuracy",
+        "source_version": "text-sha256:c0052d10d0d8ada49f796a4a73fcf36c3a9348a0017f8fe46f41cede5457a599",
+        "locator": "compute_accuracy.py"
+      },
+      {
+        "source_id": "v1-benchmark-lm-task",
+        "source_version": "text-sha256:4c25a4f1949488483b833ce4fcf91cfd3e066084a9ea00079c6879ae3ba95657",
+        "locator": "lm_eval/api/task.py"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-reasoning-code-equivalence-v1",
+    "topic": "benchmark-reasoning-code",
+    "text": "答案判定必须限定表达空间，并将参考数据错误、预测无法解析和数值不等价分开。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "教学函数只比较有理数文本，不处理单位、符号代数、自然语言或过程正确性。",
+    "evidence": [
+      {
+        "source_id": "v1-benchmark-gsm-parser",
+        "source_version": "text-sha256:c22b81bccaaebfd1123be296e8b3c3dca3ddc704c46b70bf4a50603bb627e197",
+        "locator": "grade_school_math/dataset.py"
+      },
+      {
+        "source_id": "v1-benchmark-gsm-paper",
+        "source_version": "text-sha256:a12b97e4e5fcc69dbc75a5b009eead0b8bd3526d162f8f9f5a56d4156307847f",
+        "locator": "正文相关章节"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-reasoning-code-passk-v1",
+    "topic": "benchmark-reasoning-code",
+    "text": "HumanEval常用pass@k估计来自固定采样池的组合计数，必须保留逐题预算和测试判据。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "n个样本在同一生成与执行协议下获得；代码为小规模精确组合数教学实现。",
+    "evidence": [
+      {
+        "source_id": "v1-benchmark-humaneval-eval",
+        "source_version": "text-sha256:e926d5e9b8f1ec040096cd5952e8cf79f8dc0b7fb80ba6667ce604ffea0397bc",
+        "locator": "human_eval/evaluation.py"
+      },
+      {
+        "source_id": "v1-benchmark-humaneval-paper",
+        "source_version": "text-sha256:0bb002b63fe09d2ba67feb409ef3bcd75804cdaada3971f398f3d85779fcd9fa",
+        "locator": "正文相关章节"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-reasoning-code-execution-v1",
+    "topic": "benchmark-reasoning-code",
+    "text": "代码评测应保留计划覆盖和执行失败类别，进程监督与统计汇总不等同于完整安全隔离。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "教学函数只处理给定终态记录，未执行生成程序；真实执行条件必须另行固定。",
+    "evidence": [
+      {
+        "source_id": "v1-benchmark-humaneval-execution",
+        "source_version": "text-sha256:79901c6f5b59701c465b164aed290fa53abc35abc80a5378fc10f4dac1f9a84c",
+        "locator": "human_eval/execution.py"
+      },
+      {
+        "source_id": "v1-benchmark-humaneval-eval",
+        "source_version": "text-sha256:e926d5e9b8f1ec040096cd5952e8cf79f8dc0b7fb80ba6667ce604ffea0397bc",
+        "locator": "human_eval/evaluation.py"
+      }
+    ]
+  },
+  {
+    "id": "claim-openhands-branch-v1",
+    "topic": "openhands",
+    "text": "活动模型历史由parent链决定，不能把全部追加日志按时间戳直接送入模型。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "显式事件父链、唯一ID；示例不实现持久化锁和旧版无parent回退。",
+    "evidence": [
+      {
+        "source_id": "v1-coding-oh-eventstore",
+        "source_version": "text-sha256:af721391c46a1979c45e0e414c45a82dfc42d8a92d62ac2ccea0242f725450b0",
+        "locator": "EventLog.path_to_root；EventLog.append"
+      },
+      {
+        "source_id": "v1-coding-oh-base",
+        "source_version": "text-sha256:0d90758757329bbd0d1301586b87612e7746e14e6d2bb3e272e2d58f16fbb60d",
+        "locator": "Event；LLMConvertibleEvent.events_to_messages；_combine_action_events"
+      },
+      {
+        "source_id": "v1-coding-oh-sdk-readme",
+        "source_version": "text-sha256:95094c9745c7cc58136d4eaa1688fb6038aafefec2be05344293f6df7e55dbf8",
+        "locator": "Repository boundaries"
+      },
+      {
+        "source_id": "v1-coding-openhands-paper",
+        "source_version": "text-sha256:56f976ce3ec7409bfa3bd6ef305aacbda29f7e9eb1744986cd04f1120b24e5c1",
+        "locator": "§2.1–2.3"
+      }
+    ]
+  },
+  {
+    "id": "claim-openhands-projection-v1",
+    "topic": "openhands",
+    "text": "同响应的连续ActionEvent在模型消息投影时合并工具调用，工具结果仍按调用ID返回。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "连续同response_id动作，只有首动作携带共享文本；简化投影不实现多模态与推理载荷。",
+    "evidence": [
+      {
+        "source_id": "v1-coding-oh-base",
+        "source_version": "text-sha256:0d90758757329bbd0d1301586b87612e7746e14e6d2bb3e272e2d58f16fbb60d",
+        "locator": "Event；LLMConvertibleEvent.events_to_messages；_combine_action_events"
+      },
+      {
+        "source_id": "v1-coding-oh-action",
+        "source_version": "text-sha256:7bd55c8eee4e7ed6f042c10f837c06570c3cc1a903aa30d9ece486f199081f22",
+        "locator": "ActionEvent"
+      },
+      {
+        "source_id": "v1-coding-oh-observation",
+        "source_version": "text-sha256:14eb6d888914a8d6a5ea205b7b4edd95b98c454d20d218256df3f0f26ac7e159",
+        "locator": "ObservationEvent.to_llm_message"
+      },
+      {
+        "source_id": "v1-coding-oh-sdk-readme",
+        "source_version": "text-sha256:95094c9745c7cc58136d4eaa1688fb6038aafefec2be05344293f6df7e55dbf8",
+        "locator": "Repository boundaries"
+      },
+      {
+        "source_id": "v1-coding-openhands-paper",
+        "source_version": "text-sha256:56f976ce3ec7409bfa3bd6ef305aacbda29f7e9eb1744986cd04f1120b24e5c1",
+        "locator": "§2.1–2.3"
+      }
+    ]
+  },
+  {
+    "id": "claim-openhands-observation-v1",
+    "topic": "openhands",
+    "text": "普通观察用action_id、tool_call_id和tool_name回接动作；结果存在只表示收到反馈，不表示任务成功。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "给定已发动作与最终普通观察；错误/拒绝专用事件需按各自schema处理。",
+    "evidence": [
+      {
+        "source_id": "v1-coding-oh-action",
+        "source_version": "text-sha256:7bd55c8eee4e7ed6f042c10f837c06570c3cc1a903aa30d9ece486f199081f22",
+        "locator": "ActionEvent"
+      },
+      {
+        "source_id": "v1-coding-oh-observation",
+        "source_version": "text-sha256:14eb6d888914a8d6a5ea205b7b4edd95b98c454d20d218256df3f0f26ac7e159",
+        "locator": "ObservationEvent.to_llm_message"
+      },
+      {
+        "source_id": "v1-coding-oh-agent",
+        "source_version": "text-sha256:8773d6e759bced7ca8791b665ae7b457487629b41f812c428f7f7da9713ae1a5",
+        "locator": "Agent._execute_action_event"
+      },
+      {
+        "source_id": "v1-coding-oh-local",
+        "source_version": "text-sha256:bd3ba6aaa53b9583fc1f2f19da5034aa122190ebaa970ee8a3e41ae93b5ac1b6",
+        "locator": "LocalConversation.run；LocalConversation._run"
+      },
+      {
+        "source_id": "v1-coding-oh-sdk-readme",
+        "source_version": "text-sha256:95094c9745c7cc58136d4eaa1688fb6038aafefec2be05344293f6df7e55dbf8",
+        "locator": "Repository boundaries"
+      },
+      {
+        "source_id": "v1-coding-openhands-paper",
+        "source_version": "text-sha256:56f976ce3ec7409bfa3bd6ef305aacbda29f7e9eb1744986cd04f1120b24e5c1",
+        "locator": "§2.1–2.3"
+      }
+    ]
+  },
+  {
+    "id": "claim-swe-agent-observation-v1",
+    "topic": "swe-agent",
+    "text": "ACI既规定工具命令，也规定反馈格式；行号与窗口边界使模型知道所见范围而不误以为看到了全文。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "教学使用内存字符串，窗口起点一基；不模拟真实文件读取或当前默认工具的所有视图模式。",
+    "evidence": [
+      {
+        "source_id": "v1-coding-swe-window",
+        "source_version": "text-sha256:f48b36722d0b952d4ad8b900db9fa63a0fbcf242205f23633bb5d3d314b07b89",
+        "locator": "WindowedFile.get_window_text；line_range"
+      },
+      {
+        "source_id": "v1-coding-swe-default",
+        "source_version": "text-sha256:96aeb863cbfaa768044527155f8555c9b401c6644e937b5b6b0bba5538b6eee4",
+        "locator": "agent.tools.bundles；parse_function；history_processors"
+      },
+      {
+        "source_id": "v1-coding-swe-paper",
+        "source_version": "text-sha256:27fee138ac43175802038247739c3e87ba24cd2d1fd1cab22504602919adc78a",
+        "locator": "§2 Agent-Computer Interfaces；§3 SWE-agent"
+      },
+      {
+        "source_id": "v1-coding-swe-trajectories",
+        "source_version": "text-sha256:27dc81e69b346515038b1c726159f229216078c7b0e64e835f040a4712646ba9",
+        "locator": "Trajectories；Other output files"
+      }
+    ]
+  },
+  {
+    "id": "claim-swe-agent-edit-contract-v1",
+    "topic": "swe-agent",
+    "text": "编辑契约应区分未命中、多处命中、无变化和已应用，已应用不等于语义正确。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "非空精确字符串匹配，纯字符串结果；不执行linter、不写真实文件。",
+    "evidence": [
+      {
+        "source_id": "v1-coding-swe-editor",
+        "source_version": "text-sha256:bb36c0d244c820b31d92ed46ced6ba2588a52b482058a71321175dfaba1b0ff3",
+        "locator": "EditTool.str_replace"
+      },
+      {
+        "source_id": "v1-coding-swe-toolconf",
+        "source_version": "text-sha256:f01b59da4df1c25ab2ee3b1284efe4025c0a999e2f6a3a9ab2930a499e04ea09",
+        "locator": "tools.str_replace_editor"
+      },
+      {
+        "source_id": "v1-coding-swe-paper",
+        "source_version": "text-sha256:27fee138ac43175802038247739c3e87ba24cd2d1fd1cab22504602919adc78a",
+        "locator": "§2 Agent-Computer Interfaces；§3 SWE-agent"
+      },
+      {
+        "source_id": "v1-coding-swe-default",
+        "source_version": "text-sha256:96aeb863cbfaa768044527155f8555c9b401c6644e937b5b6b0bba5538b6eee4",
+        "locator": "agent.tools.bundles；parse_function；history_processors"
+      }
+    ]
+  },
+  {
+    "id": "claim-swe-agent-trajectory-v1",
+    "topic": "swe-agent",
+    "text": "格式错误重试属于同一步中的多次模型尝试，轨迹需要保留失败及当次query，而done不代表SWE-bench通过。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "仅模拟格式、shell语法、blocked和预算错误；ok是外部已记录执行反馈，不在函数内执行。",
+    "evidence": [
+      {
+        "source_id": "v1-coding-swe-agent",
+        "source_version": "text-sha256:d6cdf7ac66a6509ceba08e3541b856f0734acf79f9a485ed8a6e2c72f0d211a8",
+        "locator": "DefaultAgent.forward；forward_with_handling；add_step_to_trajectory；run"
+      },
+      {
+        "source_id": "v1-coding-swe-trajectories",
+        "source_version": "text-sha256:27dc81e69b346515038b1c726159f229216078c7b0e64e835f040a4712646ba9",
+        "locator": "Trajectories；Other output files"
+      },
+      {
+        "source_id": "v1-coding-swe-default",
+        "source_version": "text-sha256:96aeb863cbfaa768044527155f8555c9b401c6644e937b5b6b0bba5538b6eee4",
+        "locator": "agent.tools.bundles；parse_function；history_processors"
+      },
+      {
+        "source_id": "v1-coding-swe-paper",
+        "source_version": "text-sha256:27fee138ac43175802038247739c3e87ba24cd2d1fd1cab22504602919adc78a",
+        "locator": "§2 Agent-Computer Interfaces；§3 SWE-agent"
+      }
+    ]
+  },
+  {
+    "id": "claim-aider-repomap-v1",
+    "topic": "aider",
+    "text": "RepoMap按文件引用图进行个性化PageRank，再沿边分配符号重要性并选择可渲染的地图片段。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "图与符号已预提取，示例输入已计算边权；教学采用加性成本和严格前缀预算。",
+    "evidence": [
+      {
+        "source_id": "v1-coding-aider-repomap",
+        "source_version": "text-sha256:a5d4befe70445114b9f62da47b0eeb2a5384f9e84a0c083c77a4b339caf61ecd",
+        "locator": "RepoMap.get_tags_raw；get_ranked_tags；get_ranked_tags_map_uncached"
+      },
+      {
+        "source_id": "v1-coding-aider-mapdoc",
+        "source_version": "text-sha256:ac41c8843d66c04bb5951155015118ef702f107417be62f280cb8955baf1eec8",
+        "locator": "Repository map；Optimizing the map"
+      }
+    ]
+  },
+  {
+    "id": "claim-aider-edit-format-v1",
+    "topic": "aider",
+    "text": "Aider的精确路径选择首个匹配行块，存在有限空白等回退；不能把未执行的模糊匹配函数当作有效路径。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "非空SEARCH行块；示例只实现精确匹配与统一缺失缩进，不含跨文件、省略号或文件创建。",
+    "evidence": [
+      {
+        "source_id": "v1-coding-aider-edit",
+        "source_version": "text-sha256:244df08f5ccd19928bcdac1901ae591a7a786d12a6f70d31400baaefb5a136a3",
+        "locator": "EditBlockCoder.apply_edits；perfect_replace；replace_most_similar_chunk"
+      },
+      {
+        "source_id": "v1-coding-aider-editdoc",
+        "source_version": "text-sha256:0d3c5081def0547879813439f47e71dc99b45bb526411bf23e9cf615670657fa",
+        "locator": "Edit formats；diff"
+      }
+    ]
+  },
+  {
+    "id": "claim-aider-git-boundary-v1",
+    "topic": "aider",
+    "text": "预提交计划针对即将编辑且已有改动的文件，自动提交与预提交可关闭；提交记录不等同测试证明。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "已批准的文件集合、教学文件级快照；不模拟部分hunk、Git索引与真实提交失败。",
+    "evidence": [
+      {
+        "source_id": "v1-coding-aider-base",
+        "source_version": "text-sha256:04a7b38c4f1d2b1684ac958f40bcd81a28b00139eae88afed59d2c970bef1ee1",
+        "locator": "Coder.check_for_dirty_commit；prepare_to_edit；auto_commit；dirty_commit"
+      },
+      {
+        "source_id": "v1-coding-aider-git",
+        "source_version": "text-sha256:a49343d63d3faa684003f9e59306215e6f3d77b7b944a71b88b132e0c78c5df0",
+        "locator": "GitRepo.commit"
+      },
+      {
+        "source_id": "v1-coding-aider-gitdoc",
+        "source_version": "text-sha256:1469e351b879780852b550b3b1d702d26cba36e2a7738b3613e2577441bbcf8c",
+        "locator": "Git integration；Disabling git integration"
+      }
+    ]
+  },
+  {
+    "id": "claim-mobile-agent-perception-v1",
+    "topic": "mobile-agent",
+    "text": "v2将OCR与图标描述合并为绝对中心坐标记录，并与原截图一起输入决策",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "本文只重写文本框几何合并和坐标映射，不执行视觉模型",
+    "evidence": [
+      {
+        "source_id": "v1-gui-paper-mobile-v2",
+        "source_version": "text-sha256:4bff7c9a6baf6d1d3761425caaa19db321b587d6e40cbbdfd41a2c69f041fe4e",
+        "locator": "§3.1–3.5; Eq.(1)–(5)"
+      },
+      {
+        "source_id": "v1-gui-mobile-run",
+        "source_version": "text-sha256:80f2d5fe878995aafe5504621a303627caad2e243c609f7dfa1cb3563b6e7b3f",
+        "locator": "merge_text_blocks; get_perception_infos; module-level loop"
+      },
+      {
+        "source_id": "v1-gui-mobile-prompt",
+        "source_version": "text-sha256:b9b8a3f871eb67444bd17fdc02776cf1c2eb83461a435b421622bac3e20f824f",
+        "locator": "get_action_prompt; get_reflect_prompt; get_process_prompt"
+      }
+    ]
+  },
+  {
+    "id": "claim-mobile-agent-planning-memory-v1",
+    "topic": "mobile-agent",
+    "text": "完成进度、事实记忆和历史操作承担不同决策信息，当前规划函数没有直接memory实参",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "教学完成集合依赖人工标注，源码进度由LLM生成",
+    "evidence": [
+      {
+        "source_id": "v1-gui-paper-mobile-v2",
+        "source_version": "text-sha256:4bff7c9a6baf6d1d3761425caaa19db321b587d6e40cbbdfd41a2c69f041fe4e",
+        "locator": "§3.1–3.5; Eq.(1)–(5)"
+      },
+      {
+        "source_id": "v1-gui-mobile-run",
+        "source_version": "text-sha256:80f2d5fe878995aafe5504621a303627caad2e243c609f7dfa1cb3563b6e7b3f",
+        "locator": "merge_text_blocks; get_perception_infos; module-level loop"
+      },
+      {
+        "source_id": "v1-gui-mobile-prompt",
+        "source_version": "text-sha256:b9b8a3f871eb67444bd17fdc02776cf1c2eb83461a435b421622bac3e20f824f",
+        "locator": "get_action_prompt; get_reflect_prompt; get_process_prompt"
+      },
+      {
+        "source_id": "v1-gui-mobile-api",
+        "source_version": "text-sha256:dbd9b27e2d26d967e846113ba583097af41cc042436c3c517f17c0125a5c6022",
+        "locator": "inference_chat"
+      }
+    ]
+  },
+  {
+    "id": "claim-mobile-agent-reflection-v1",
+    "topic": "mobile-agent",
+    "text": "A反思提交成功历史，B/C不提交；回退命令不保证观测刷新或事务撤销",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "严格A/B/C是教学协议，BACK_THEN_OBSERVE暴露恢复观测义务",
+    "evidence": [
+      {
+        "source_id": "v1-gui-paper-mobile-v2",
+        "source_version": "text-sha256:4bff7c9a6baf6d1d3761425caaa19db321b587d6e40cbbdfd41a2c69f041fe4e",
+        "locator": "§3.1–3.5; Eq.(1)–(5)"
+      },
+      {
+        "source_id": "v1-gui-mobile-run",
+        "source_version": "text-sha256:80f2d5fe878995aafe5504621a303627caad2e243c609f7dfa1cb3563b6e7b3f",
+        "locator": "merge_text_blocks; get_perception_infos; module-level loop"
+      },
+      {
+        "source_id": "v1-gui-mobile-prompt",
+        "source_version": "text-sha256:b9b8a3f871eb67444bd17fdc02776cf1c2eb83461a435b421622bac3e20f824f",
+        "locator": "get_action_prompt; get_reflect_prompt; get_process_prompt"
+      },
+      {
+        "source_id": "v1-gui-mobile-controller",
+        "source_version": "text-sha256:fbcc7fd135a289c9e81d8ba05dd9ce126be79b43f3e5c32252209ff4eb2d393f",
+        "locator": "get_screenshot; tap; type; slide; back; home"
+      },
+      {
+        "source_id": "v1-gui-mobile-v2-readme",
+        "source_version": "text-sha256:31d766a855215cab92585d4eafd527421f6790ae49ead3606838fb32f0153235",
+        "locator": "Introduction; Preparation; Choose the Appropriate Execution Method"
+      },
+      {
+        "source_id": "v1-gui-mobile-license",
+        "source_version": "text-sha256:961819a89dacd1f4f161e1d2ebf616b538bf095a2eecfa3ef40b7ccec633fac4",
+        "locator": "LICENSE"
+      },
+      {
+        "source_id": "v1-gui-mobile-requirements",
+        "source_version": "text-sha256:fe37a918fe4424843c81af2aa6746dfad0e953e7b059fabfaff56ea0d405e4df",
+        "locator": "requirements.txt"
+      }
+    ]
+  },
+  {
+    "id": "claim-app-agent-element-identity-v1",
+    "topic": "app-agent",
+    "text": "AppAgent用XML属性构造UID持久关联文档，用当前列表数字标签作为动作定位入口",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "UID是结构启发式而非跨版本语义保证",
+    "evidence": [
+      {
+        "source_id": "v1-gui-paper-app-agent",
+        "source_version": "text-sha256:f49749b9d7abd2aad25b1db3034c5a95383f218b438477c014206776f04b905b",
+        "locator": "§3.1–3.3"
+      },
+      {
+        "source_id": "v1-gui-app-controller",
+        "source_version": "text-sha256:835f50dd0be9915116f22a52219ef8c4efdff3f2adbd4e02cf92cd4803307bc6",
+        "locator": "get_id_from_element; traverse_tree; AndroidController.get_xml; AndroidController.tap"
+      },
+      {
+        "source_id": "v1-gui-app-explorer",
+        "source_version": "text-sha256:074479017ed4770b1c72ed119ee74cf91be1890f27f96a3170413a22f1519954",
+        "locator": "module-level exploration loop; INEFFECTIVE/BACK/CONTINUE/SUCCESS branches"
+      },
+      {
+        "source_id": "v1-gui-app-prompts",
+        "source_version": "text-sha256:a07e5a275c72e55ebd0a72206622849a8710043288bf34c9c6857a6db42fb3f5",
+        "locator": "self_explore_reflect_template"
+      }
+    ]
+  },
+  {
+    "id": "claim-app-agent-document-learning-v1",
+    "topic": "app-agent",
+    "text": "自主探索对非无效结果可记录动作知识，但已有槽位保留；演示路径另有DOC_REFINE",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "示例只模拟自主写入规则，不判断自然语言文档正确性",
+    "evidence": [
+      {
+        "source_id": "v1-gui-paper-app-agent",
+        "source_version": "text-sha256:f49749b9d7abd2aad25b1db3034c5a95383f218b438477c014206776f04b905b",
+        "locator": "§3.1–3.3"
+      },
+      {
+        "source_id": "v1-gui-app-explorer",
+        "source_version": "text-sha256:074479017ed4770b1c72ed119ee74cf91be1890f27f96a3170413a22f1519954",
+        "locator": "module-level exploration loop; INEFFECTIVE/BACK/CONTINUE/SUCCESS branches"
+      },
+      {
+        "source_id": "v1-gui-app-document",
+        "source_version": "text-sha256:b94c2c25733262fcc0d9c8dd4e2b8817694e9eb4d3b03c1b4b4e07276e8e1382",
+        "locator": "record loop; DOC_REFINE; mllm.get_model_response"
+      },
+      {
+        "source_id": "v1-gui-app-model",
+        "source_version": "text-sha256:76d328170cc81be60fe810e7105c6392943b1056ba93da352ea5b55e333f7e6d",
+        "locator": "parse_explore_rsp; parse_grid_rsp; parse_reflect_rsp"
+      },
+      {
+        "source_id": "v1-gui-app-prompts",
+        "source_version": "text-sha256:a07e5a275c72e55ebd0a72206622849a8710043288bf34c9c6857a6db42fb3f5",
+        "locator": "self_explore_reflect_template"
+      }
+    ]
+  },
+  {
+    "id": "claim-app-agent-deployment-v1",
+    "topic": "app-agent",
+    "text": "部署按当前UID检索可见文档，grid分支使用独立定位协议且不拼接同一元素文档",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "示例显式给定选择与整除尺寸，不执行设备动作",
+    "evidence": [
+      {
+        "source_id": "v1-gui-paper-app-agent",
+        "source_version": "text-sha256:f49749b9d7abd2aad25b1db3034c5a95383f218b438477c014206776f04b905b",
+        "locator": "§3.1–3.3"
+      },
+      {
+        "source_id": "v1-gui-app-executor",
+        "source_version": "text-sha256:0e2e5bbc613b5b605bfec8d70dd63425f8139a30537695a0b9ba10ab47ee593e",
+        "locator": "area_to_xy; deployment loop; documentation retrieval"
+      },
+      {
+        "source_id": "v1-gui-app-utils",
+        "source_version": "text-sha256:8142b4c2b75aa164e4737ab7572859f7722999554092ea9d336052f9153e66ee",
+        "locator": "draw_grid"
+      },
+      {
+        "source_id": "v1-gui-app-model",
+        "source_version": "text-sha256:76d328170cc81be60fe810e7105c6392943b1056ba93da352ea5b55e333f7e6d",
+        "locator": "parse_explore_rsp; parse_grid_rsp; parse_reflect_rsp"
+      },
+      {
+        "source_id": "v1-gui-app-readme",
+        "source_version": "text-sha256:ac94cca1f69807d2d31d30bd5521fbf1bda6155996881054df87a85522cd8f5b",
+        "locator": "Exploration Phase; Deployment Phase; Tips"
+      },
+      {
+        "source_id": "v1-gui-app-license",
+        "source_version": "text-sha256:d9e2b107cbaa3599336510dbb6703cb30210f1b4345221e76cf75cba85c2d113",
+        "locator": "LICENSE; assets/license.txt"
+      },
+      {
+        "source_id": "v1-gui-app-requirements",
+        "source_version": "text-sha256:dcafa0cc48f058c2caeae8dcaa129c019889bbabb127d70cd71443e156e980b2",
+        "locator": "requirements.txt"
+      }
+    ]
+  },
+  {
+    "id": "claim-ui-tars-action-protocol-v1",
+    "topic": "ui-tars",
+    "text": "模型输出动作文本，SDK模型适配器解析为结构化字段，再由具体Operator执行",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "教学只覆盖单个严格公共动作子集，不执行字符串",
+    "evidence": [
+      {
+        "source_id": "v1-gui-paper-ui-tars",
+        "source_version": "text-sha256:8477595eb1c3a44435a8f806a450086d771ba82ce3c2a64ce2e47fe154c5f060",
+        "locator": "§4.1; §4.3; §4.5; Eq.(1)–(3)"
+      },
+      {
+        "source_id": "v1-gui-ui-host",
+        "source_version": "text-sha256:b9a87adcea41f5c250253fac55c791d2280b228a471a0128782672c887e84fc8",
+        "locator": "runAgent"
+      },
+      {
+        "source_id": "v1-gui-ui-sdk",
+        "source_version": "text-sha256:036e14d2cf5db9c3bca830c8e43a8667bf25bfb866832eb3c505356d0a52017d",
+        "locator": "GUIAgent.constructor; GUIAgent.run"
+      },
+      {
+        "source_id": "v1-gui-ui-model",
+        "source_version": "text-sha256:9d3232978acedc656a8ff5781b9e8234bee1cb0655f59dac296b1d6e49f4faef",
+        "locator": "UITarsModel.invokeModelProvider; UITarsModel.invoke"
+      },
+      {
+        "source_id": "v1-gui-ui-parser",
+        "source_version": "text-sha256:9bd0aa22c39239dd18ded59d84d764a99599fa44d0ae8a249da4d98adefd8187",
+        "locator": "actionParser; parseActionVlm; parseAction; smartResizeForV15"
+      },
+      {
+        "source_id": "v1-gui-ui-utils",
+        "source_version": "text-sha256:e212b03cf649544c5e4969d7cd49bd89eb0eb135f09a63abc28c6ef8f41e8f57",
+        "locator": "parseBoxToScreenCoords; processVlmParams; preprocessResizeImage"
+      },
+      {
+        "source_id": "v1-gui-ui-nutjs",
+        "source_version": "text-sha256:c4a41b34fac082016171a460e9907371116ea67572d30f139e6d8f4a829e569c",
+        "locator": "NutJSOperator.screenshot; NutJSOperator.execute"
+      },
+      {
+        "source_id": "v1-gui-ui-readme",
+        "source_version": "text-sha256:0f05aa4f447d43439f6b3f4ab179cbe1e59d170eaf6c0684fa9c2eb0872e5985",
+        "locator": "UI-TARS Desktop; License"
+      },
+      {
+        "source_id": "v1-gui-ui-sdk-readme",
+        "source_version": "text-sha256:b2cd7c3fcc5036860d4cc453f535402d1fd0a38139f05a8fc1bfb067e4e9fdaf",
+        "locator": "Overview; Agent Execution Process"
+      }
+    ]
+  },
+  {
+    "id": "claim-ui-tars-coordinate-path-v1",
+    "topic": "ui-tars",
+    "text": "所读NutJS从归一化start_box重算屏幕点，不消费解析器另带scaleFactor的start_coords",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "以V1_0和本地单屏路径为主，V1_5分母显式区分",
+    "evidence": [
+      {
+        "source_id": "v1-gui-paper-ui-tars",
+        "source_version": "text-sha256:8477595eb1c3a44435a8f806a450086d771ba82ce3c2a64ce2e47fe154c5f060",
+        "locator": "§4.1; §4.3; §4.5; Eq.(1)–(3)"
+      },
+      {
+        "source_id": "v1-gui-ui-parser",
+        "source_version": "text-sha256:9bd0aa22c39239dd18ded59d84d764a99599fa44d0ae8a249da4d98adefd8187",
+        "locator": "actionParser; parseActionVlm; parseAction; smartResizeForV15"
+      },
+      {
+        "source_id": "v1-gui-ui-utils",
+        "source_version": "text-sha256:e212b03cf649544c5e4969d7cd49bd89eb0eb135f09a63abc28c6ef8f41e8f57",
+        "locator": "parseBoxToScreenCoords; processVlmParams; preprocessResizeImage"
+      },
+      {
+        "source_id": "v1-gui-ui-sdk-constants",
+        "source_version": "text-sha256:efdcbf2ea742a90dbc89ca254730adf95001cdc619b0666f992bd8b17cddae63",
+        "locator": "DEFAULT_FACTORS"
+      },
+      {
+        "source_id": "v1-gui-ui-nutjs",
+        "source_version": "text-sha256:c4a41b34fac082016171a460e9907371116ea67572d30f139e6d8f4a829e569c",
+        "locator": "NutJSOperator.screenshot; NutJSOperator.execute"
+      },
+      {
+        "source_id": "v1-gui-ui-operator-factory",
+        "source_version": "text-sha256:c9b68bf166e568bad234b5c8a7d2cf7e62f110b5c978cefc1154016a263b41a2",
+        "locator": "NutJSElectronOperator.screenshot; NutJSElectronOperator.execute"
+      }
+    ]
+  },
+  {
+    "id": "claim-ui-tars-loop-state-v1",
+    "topic": "ui-tars",
+    "text": "轮数预算限制观测决策循环，终端动作阻止后续派发但不独立证明业务成功",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "教学假设截图有效且执行器无异常，不模拟异步取消与重试",
+    "evidence": [
+      {
+        "source_id": "v1-gui-paper-ui-tars",
+        "source_version": "text-sha256:8477595eb1c3a44435a8f806a450086d771ba82ce3c2a64ce2e47fe154c5f060",
+        "locator": "§4.1; §4.3; §4.5; Eq.(1)–(3)"
+      },
+      {
+        "source_id": "v1-gui-ui-sdk",
+        "source_version": "text-sha256:036e14d2cf5db9c3bca830c8e43a8667bf25bfb866832eb3c505356d0a52017d",
+        "locator": "GUIAgent.constructor; GUIAgent.run"
+      },
+      {
+        "source_id": "v1-gui-ui-host",
+        "source_version": "text-sha256:b9a87adcea41f5c250253fac55c791d2280b228a471a0128782672c887e84fc8",
+        "locator": "runAgent"
+      },
+      {
+        "source_id": "v1-gui-ui-nutjs",
+        "source_version": "text-sha256:c4a41b34fac082016171a460e9907371116ea67572d30f139e6d8f4a829e569c",
+        "locator": "NutJSOperator.screenshot; NutJSOperator.execute"
+      },
+      {
+        "source_id": "v1-gui-ui-sdk-package",
+        "source_version": "text-sha256:9e82d8d73396fa91317b0dbaa7f639c6d818a0fd6bdbcbc6f16ea75de709091a",
+        "locator": "package.json"
+      },
+      {
+        "source_id": "v1-gui-ui-host-package",
+        "source_version": "text-sha256:3910259c16df19163da13a98deba79ba9fd9c18befc5b2559aa8ed87bc3e9c25",
+        "locator": "package.json"
+      },
+      {
+        "source_id": "v1-gui-ui-nutjs-package",
+        "source_version": "text-sha256:7987bd726ecabb27a0dc0d0b1272c149c079738a5bf98e320c42828bd98aae51",
+        "locator": "package.json"
+      },
+      {
+        "source_id": "v1-gui-ui-license",
+        "source_version": "text-sha256:c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "locator": "LICENSE §4"
+      }
+    ]
+  },
+  {
+    "id": "claim-codex-cli-launch-plan-v1",
+    "topic": "codex-cli",
+    "text": "该提交CLI将exec分派到run_main，exec通过进程内App Server客户端开始回合；配置覆盖项随入口传递而不是独立执行组件。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "固定提交；教学模型只覆盖交互与exec两种入口，不推断完整配置优先级。",
+    "evidence": [
+      {
+        "source_id": "v1-harnesscase-cx-cli",
+        "source_version": "text-sha256:ac51c153916132c0be2c37ea1136562685b832957bc2e43e53d71608d0b28a4a",
+        "locator": "main、cli_main 1043–1180；prepend_config_flags 2255–2259；reject_remote_mode_for_subcommand 2262–2275"
+      },
+      {
+        "source_id": "v1-harnesscase-cx-exec-front",
+        "source_version": "text-sha256:4229c67ec7a4d9aa21f26c500f1206660f7ccb3a6c047843a3fa7295938a0848",
+        "locator": "run_main 267–315、731–774；run_exec_session 854–898、1021–1047、1198–1255"
+      },
+      {
+        "source_id": "v1-harnesscase-cx-core-doc",
+        "source_version": "text-sha256:90419618b596e4965d9326ff57d81a0a3a406dab586b52d114e6829cafc6da31",
+        "locator": "crate职责；平台执行依赖"
+      }
+    ]
+  },
+  {
+    "id": "claim-codex-cli-route-call-v1",
+    "topic": "codex-cli",
+    "text": "工具模型输出、注册表可调度性和执行前批准是不同判断；该提交对未知工具与不兼容载荷使用不同错误类别。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "教学省略namespace、ToolSearch、hook与环境细节；策略结果作为已解析输入。",
+    "evidence": [
+      {
+        "source_id": "v1-harnesscase-cx-router",
+        "source_version": "text-sha256:004482b5398df9b02c503a9115f4899802f6793661f84212e00af76a167ff2d4",
+        "locator": "build_tool_call 257–308；dispatch_tool_call_with_code_mode_result_inner 359–393；注册与可见性注释397–417"
+      },
+      {
+        "source_id": "v1-harnesscase-cx-registry",
+        "source_version": "text-sha256:fa928f78a1c2b06778d97138c195f46c574072e4538a9cb99bdec33ecd171a15",
+        "locator": "dispatch_any_with_state 691–790：工具查找和载荷类型检查"
+      },
+      {
+        "source_id": "v1-harnesscase-cx-orchestrator",
+        "source_version": "text-sha256:8996f718b818804473c151a8a643747c2b5ab69b05f4630eee143fac7daa0bb5",
+        "locator": "ToolOrchestrator.run 125–243：审批要求与首次执行环境选择"
+      },
+      {
+        "source_id": "v1-harnesscase-cx-tools-doc",
+        "source_version": "text-sha256:7b4c4c4c7d461eaff1cda149deb7a61ca37b050761308fed950de4a3c43de879",
+        "locator": "共享工具契约、迁移边界与不迁出核心的编排职责"
+      }
+    ]
+  },
+  {
+    "id": "claim-codex-cli-capture-output-v1",
+    "topic": "codex-cli",
+    "text": "该提交exec分别控制保留字节、流事件与进程到期；读输出达到保留上限后仍继续消费以避免背压。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "教学只模拟一个输出流和已判定终态；不承诺复刻所有capture policy及缓冲布局。",
+    "evidence": [
+      {
+        "source_id": "v1-harnesscase-cx-exec-process",
+        "source_version": "text-sha256:83f72b788b041e2865ebd5b10ce6878b4a471ea4082116c821d87ef39b710888",
+        "locator": "ExecExpiration 150–200；ExecCapturePolicy 274–291；process_exec_tool_call 302–336；consume_output 982–1191；read_output 1194–1247"
+      },
+      {
+        "source_id": "v1-harnesscase-cx-core-doc",
+        "source_version": "text-sha256:90419618b596e4965d9326ff57d81a0a3a406dab586b52d114e6829cafc6da31",
+        "locator": "crate职责；平台执行依赖"
+      },
+      {
+        "source_id": "v1-harnesscase-cx-tools-doc",
+        "source_version": "text-sha256:7b4c4c4c7d461eaff1cda149deb7a61ca37b050761308fed950de4a3c43de879",
+        "locator": "共享工具契约、迁移边界与不迁出核心的编排职责"
+      }
+    ]
+  },
+  {
+    "id": "claim-claude-code-response-window-v1",
+    "topic": "claude-code",
+    "text": "SDK通过CLI传输发送查询并在ResultMessage处结束一次响应读取；这不暴露内部循环，也不证明业务成功。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "固定Python SDK提交；教学以有限模拟消息列表代替异步传输。",
+    "evidence": [
+      {
+        "source_id": "v1-harnesscase-sdk-client",
+        "source_version": "text-sha256:980f956d963338b39f4fd5224e69594eb513bfda37e5b215cf94bb0499ea047c",
+        "locator": "connect 93–139；query 272–306；interrupt 308–312；receive_response 566–605"
+      },
+      {
+        "source_id": "v1-harnesscase-sdk-transport",
+        "source_version": "text-sha256:23c0b35acfcff5426255f1f17433e66fc7f8f6d5b8f339e93e085233c569e11c",
+        "locator": "_build_command 570–621；connect 797–825"
+      },
+      {
+        "source_id": "v1-harnesscase-sdk-readme",
+        "source_version": "text-sha256:c38a933bf8fef26316ea38635989b254e69a26d21d80b96bf5731cba4e88bcc6",
+        "locator": "安装与内置CLI、query、工具许可、SDK MCP、Hooks章节"
+      },
+      {
+        "source_id": "v1-harnesscase-cc-workflow",
+        "source_version": "observed:2026-10-24",
+        "locator": "循环、工具分工与上下文压缩的阅读摘要；未保留网页段落级定位"
+      }
+    ]
+  },
+  {
+    "id": "claim-claude-code-hook-reply-v1",
+    "topic": "claude-code",
+    "text": "SDK为hook注册回调身份，接收CLI控制请求后执行回调并按request_id回传；控制协议成功可携带拒绝决策。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "仅演示PreToolUse的允许、拒绝和不表态；真实hook事件及支持字段以版本为准。",
+    "evidence": [
+      {
+        "source_id": "v1-harnesscase-sdk-control",
+        "source_version": "text-sha256:0562517de949f4431177f204fe84cda3265f495d0eb0a949b9ced96cc5bd8276",
+        "locator": "Query.initialize 309–363；_handle_control_request 577–704"
+      },
+      {
+        "source_id": "v1-harnesscase-sdk-readme",
+        "source_version": "text-sha256:c38a933bf8fef26316ea38635989b254e69a26d21d80b96bf5731cba4e88bcc6",
+        "locator": "安装与内置CLI、query、工具许可、SDK MCP、Hooks章节"
+      },
+      {
+        "source_id": "v1-harnesscase-cc-hooks",
+        "source_version": "text-sha256:7454be33e741d700eb87bf56f045247c4a8210dd471e2b90732c5eb9f6878c3f",
+        "locator": "生命周期表；PreToolUse决策示例与permissionDecision"
+      }
+    ]
+  },
+  {
+    "id": "claim-claude-code-sdk-tool-route-v1",
+    "topic": "claude-code",
+    "text": "公开SDK能在应用进程内提供MCP工具并统一返回错误结果；这不意味着整个Claude Code客户端都运行在Python进程内。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "教学工具只接受一个整数并回显；不实现完整JSON Schema或MCP传输。",
+    "evidence": [
+      {
+        "source_id": "v1-harnesscase-sdk-mcp",
+        "source_version": "text-sha256:1582188cfc10ce1eb3892a6e7c6d5639cdb0cca5e9e6ef1a1f5ebf68b75a072b",
+        "locator": "create_sdk_mcp_server 517–645，内部run_tool 620–641"
+      },
+      {
+        "source_id": "v1-harnesscase-sdk-transport",
+        "source_version": "text-sha256:23c0b35acfcff5426255f1f17433e66fc7f8f6d5b8f339e93e085233c569e11c",
+        "locator": "_build_command 570–621；connect 797–825"
+      },
+      {
+        "source_id": "v1-harnesscase-sdk-readme",
+        "source_version": "text-sha256:c38a933bf8fef26316ea38635989b254e69a26d21d80b96bf5731cba4e88bcc6",
+        "locator": "安装与内置CLI、query、工具许可、SDK MCP、Hooks章节"
+      }
+    ]
+  },
+  {
+    "id": "claim-langgraph-merge-superstep-v1",
+    "topic": "langgraph",
+    "text": "该提交先按稳定任务路径组织写入再按通道归并；LastValue同一步多写拒绝，聚合通道按配置运算符更新。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "教学仅支持整数sum和普通last通道，不包含Overwrite或动态通道。",
+    "evidence": [
+      {
+        "source_id": "v1-harnesscase-lg-algo",
+        "source_version": "text-sha256:39a8eab7c318ca866b8b394447063444403ea668df6fd173af21bfcb5270e976",
+        "locator": "apply_writes 233–344：按任务路径排序、按通道归组及更新版本"
+      },
+      {
+        "source_id": "v1-harnesscase-lg-last",
+        "source_version": "text-sha256:36cbc586aeaac0f8c9b5a8d8b903039023a7d24294408391eb8c7f10aab3a308",
+        "locator": "LastValue.update 56–67，单超步多写拒绝"
+      },
+      {
+        "source_id": "v1-harnesscase-lg-binop",
+        "source_version": "text-sha256:775399a9680071cf662b4a131ab80aa36fe8b8302270361d1e8e9e0d709df80f",
+        "locator": "update 127–148；普通归并与Overwrite分支"
+      },
+      {
+        "source_id": "v1-harnesscase-lg-readme",
+        "source_version": "text-sha256:3a13e257af1216962d53d72414a7f44ac1fc5cea34d994bdff60ea2a3b045933",
+        "locator": "低层有状态编排定位、durable execution、interrupt、memory"
+      }
+    ]
+  },
+  {
+    "id": "claim-langgraph-checkpoint-writes-v1",
+    "topic": "langgraph",
+    "text": "InMemorySaver按线程、命名空间和检查点组织快照，pending writes额外绑定任务与序号；它们不是同一份状态，也不自动保证外部副作用恰好一次。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "教学仅模拟普通通道写去重；存储为调用方提供的内存字典，不提供跨进程持久性。",
+    "evidence": [
+      {
+        "source_id": "v1-harnesscase-lg-saver",
+        "source_version": "text-sha256:9e81ce01b41fc1bf591e930e350629282fb4ac86d667e211899bae9b5b573a84",
+        "locator": "get_tuple 239–319；put 430–474；put_writes 476–512"
+      },
+      {
+        "source_id": "v1-harnesscase-lg-loop",
+        "source_version": "text-sha256:cc51e52a6624aa064ac1688e4a55326012d11b615d9810d4b5c1f19bf5f579e0",
+        "locator": "tick 650–735；after_tick 737–811；检查点保存"
+      },
+      {
+        "source_id": "v1-harnesscase-lg-persist-doc",
+        "source_version": "text-sha256:188da68bb70db61e0670973154c9d19bf30fff5dd4536b776cf3fa3c05028d1a",
+        "locator": "Checkpointer vs. store；MemorySaver不跨进程持久"
+      }
+    ]
+  },
+  {
+    "id": "claim-langgraph-replay-interrupt-node-v1",
+    "topic": "langgraph",
+    "text": "interrupt通过GraphInterrupt暂停；恢复从节点头执行，答案按该任务内interrupt顺序匹配，因此前置副作用需可重放。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "问题顺序稳定；示例只使用单任务的线性interrupt序列与外部模拟幂等账本。",
+    "evidence": [
+      {
+        "source_id": "v1-harnesscase-lg-interrupt",
+        "source_version": "text-sha256:062583a1c0af9833477935a9a78d336408cc9a33c425722a1191e000d032107a",
+        "locator": "interrupt 903–1046：节点重启、按序resume及GraphInterrupt"
+      },
+      {
+        "source_id": "v1-harnesscase-lg-saver",
+        "source_version": "text-sha256:9e81ce01b41fc1bf591e930e350629282fb4ac86d667e211899bae9b5b573a84",
+        "locator": "get_tuple 239–319；put 430–474；put_writes 476–512"
+      },
+      {
+        "source_id": "v1-harnesscase-lg-interrupt-doc",
+        "source_version": "text-sha256:55888e48110707346579c21bfcec6ef24ddfb5be472321198c83baa52ca59b88",
+        "locator": "节点从头重跑；interrupt顺序；前置副作用幂等；response_schema"
+      }
+    ]
+  },
+  {
+    "id": "claim-autogen-select-round-robin-v1",
+    "topic": "autogen",
+    "text": "RoundRobinGroupChatManager每次选择一个参与者并按模运算推进游标；团队管理器承担消息流转和终止检查。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "参与者集合和顺序固定；教学只模拟单发言者轮询，不运行任何agent。",
+    "evidence": [
+      {
+        "source_id": "v1-harnesscase-ag-round",
+        "source_version": "text-sha256:d154eff992eb7235cf97d1266ad5a2404305ecaa59f5c0593513d48b20e0b1e5",
+        "locator": "reset 51–56；save_state 58–64；load_state 66–70；select_speaker 72–82"
+      },
+      {
+        "source_id": "v1-harnesscase-ag-manager",
+        "source_version": "text-sha256:73667dc739ab4b32660fba6e09c0d7f65e83ef6aae7f79fb45163709b519b266",
+        "locator": "handle_start 86–132；handle_agent_response 135–170；_transition_to_next_speakers 172–193；_apply_termination_condition 195–228"
+      },
+      {
+        "source_id": "v1-harnesscase-ag-readme",
+        "source_version": "text-sha256:60fa90168565070a61b0f28296ff590bd6853da2477141f5ed0775007c20d7f2",
+        "locator": "顶部归档公告、后继Agent Framework建议；后文maintenance措辞；Legal Notices"
+      }
+    ]
+  },
+  {
+    "id": "claim-autogen-termination-step-v1",
+    "topic": "autogen",
+    "text": "终止条件是状态化对象；AND可以累积不同批次满足的子条件，OR任一满足即结束，输入全历史会重复累计。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "教学组合消息数与指定来源文本；消息批次已经去重且按调用顺序交付。",
+    "evidence": [
+      {
+        "source_id": "v1-harnesscase-ag-term",
+        "source_version": "text-sha256:cd9c0da75906da1728432fc96ae0566591dfb180524d3fb585bfdb8ff0260f5d",
+        "locator": "MaxMessageTermination.__call__ 83–95；TextMentionTermination.__call__ 132–148"
+      },
+      {
+        "source_id": "v1-harnesscase-ag-compose",
+        "source_version": "text-sha256:26caa7f2b2791a90c2cbe425ad98d6799897907ba7509a91ba8e3e2d4d96d5e1",
+        "locator": "TerminationCondition协议；AndTerminationCondition与OrTerminationCondition的__call__、reset"
+      },
+      {
+        "source_id": "v1-harnesscase-ag-manager",
+        "source_version": "text-sha256:73667dc739ab4b32660fba6e09c0d7f65e83ef6aae7f79fb45163709b519b266",
+        "locator": "handle_start 86–132；handle_agent_response 135–170；_transition_to_next_speakers 172–193；_apply_termination_condition 195–228"
+      },
+      {
+        "source_id": "v1-harnesscase-ag-doc",
+        "source_version": "text-sha256:8a27f07c014a476f0c45a4e1520c641a87297389ff3c05f7c3517c9736f1435f",
+        "locator": "内置终止条件、增量消息、自动reset、AND与OR组合"
+      }
+    ]
+  },
+  {
+    "id": "claim-autogen-snapshot-team-v1",
+    "topic": "autogen",
+    "text": "BaseGroupChat保存每个参与者及管理器状态；RoundRobin管理器保存消息线程、回合计数和下一个发言游标，运行中存档不保证一致。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "教学只允许团队停止后存档；所有状态由调用方提供，未实现实际持久化或恢复事务。",
+    "evidence": [
+      {
+        "source_id": "v1-harnesscase-ag-team",
+        "source_version": "text-sha256:3a50976a393dbe0aaa27b3fa72517a4b89c70437c237865463a2b87c38ce8134",
+        "locator": "run_stream 500–578；save_state 748–796；load_state 798–834"
+      },
+      {
+        "source_id": "v1-harnesscase-ag-round",
+        "source_version": "text-sha256:d154eff992eb7235cf97d1266ad5a2404305ecaa59f5c0593513d48b20e0b1e5",
+        "locator": "reset 51–56；save_state 58–64；load_state 66–70；select_speaker 72–82"
+      },
+      {
+        "source_id": "v1-harnesscase-ag-manager",
+        "source_version": "text-sha256:73667dc739ab4b32660fba6e09c0d7f65e83ef6aae7f79fb45163709b519b266",
+        "locator": "handle_start 86–132；handle_agent_response 135–170；_transition_to_next_speakers 172–193；_apply_termination_condition 195–228"
+      },
+      {
+        "source_id": "v1-harnesscase-ag-doc",
+        "source_version": "text-sha256:8a27f07c014a476f0c45a4e1520c641a87297389ff3c05f7c3517c9736f1435f",
+        "locator": "内置终止条件、增量消息、自动reset、AND与OR组合"
+      }
+    ]
+  },
+  {
+    "id": "claim-transformer-causal-attention-v1",
+    "topic": "transformer",
+    "text": "因果掩码须在softmax归一化前限制可见位置，缩放点积控制初始化方差",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "有限输入、方形因果自注意力、无dropout",
+    "evidence": [
+      {
+        "source_id": "v1-math-paper-transformer",
+        "source_version": "text-sha256:9a72cf7c0d75de42d220ed06e1518b31df962b3baed4704435339b80eac34b65",
+        "locator": "§3.1–3.5; Eq.(1)–(2)"
+      },
+      {
+        "source_id": "v1-math-nano-model",
+        "source_version": "text-sha256:7c01703240dbec5d554527dc666e35b3df8391d0b117fddc07afcf325a21d11c",
+        "locator": "CausalSelfAttention.forward; Block.forward; GPT.forward; GPT.generate"
+      },
+      {
+        "source_id": "v1-math-doc-sdpa",
+        "source_version": "text-sha256:51ae520cb41f401a25865a64b0efc462434e9d7b1dae72dce0533599e69c23c1",
+        "locator": "scaled_dot_product_attention; Warning; Parameters"
+      }
+    ]
+  },
+  {
+    "id": "claim-transformer-head-layout-v1",
+    "topic": "transformer",
+    "text": "拆头是通道与头索引重排，连接后输出投影混合各头",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "隐藏宽度可被头数整除",
+    "evidence": [
+      {
+        "source_id": "v1-math-paper-transformer",
+        "source_version": "text-sha256:9a72cf7c0d75de42d220ed06e1518b31df962b3baed4704435339b80eac34b65",
+        "locator": "§3.1–3.5; Eq.(1)–(2)"
+      },
+      {
+        "source_id": "v1-math-nano-model",
+        "source_version": "text-sha256:7c01703240dbec5d554527dc666e35b3df8391d0b117fddc07afcf325a21d11c",
+        "locator": "CausalSelfAttention.forward; Block.forward; GPT.forward; GPT.generate"
+      },
+      {
+        "source_id": "v1-math-doc-sdpa",
+        "source_version": "text-sha256:51ae520cb41f401a25865a64b0efc462434e9d7b1dae72dce0533599e69c23c1",
+        "locator": "scaled_dot_product_attention; Warning; Parameters"
+      }
+    ]
+  },
+  {
+    "id": "claim-transformer-autoregressive-loop-v1",
+    "topic": "transformer",
+    "text": "teacher forcing可并行得到条件项，普通自回归生成需将本步输出追加到下步历史",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "示例用转移表近似条件分布，正温度，无KV缓存",
+    "evidence": [
+      {
+        "source_id": "v1-math-paper-transformer",
+        "source_version": "text-sha256:9a72cf7c0d75de42d220ed06e1518b31df962b3baed4704435339b80eac34b65",
+        "locator": "§3.1–3.5; Eq.(1)–(2)"
+      },
+      {
+        "source_id": "v1-math-nano-model",
+        "source_version": "text-sha256:7c01703240dbec5d554527dc666e35b3df8391d0b117fddc07afcf325a21d11c",
+        "locator": "CausalSelfAttention.forward; Block.forward; GPT.forward; GPT.generate"
+      }
+    ]
+  },
+  {
+    "id": "claim-attention-heads-mapping-v1",
+    "topic": "attention-heads",
+    "text": "同组查询共享KV，但不同Q仍形成独立注意力分布",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "等大小分组，Q头数可被KV头数整除",
+    "evidence": [
+      {
+        "source_id": "v1-math-paper-gqa",
+        "source_version": "text-sha256:d89625675fe43338758e0a6ebd2e5d6b6b34a5388f38075c4dd34845b17c0122",
+        "locator": "§2.1 Uptraining; §2.2 Grouped-query attention; §3.1"
+      },
+      {
+        "source_id": "v1-math-llama",
+        "source_version": "text-sha256:46d35513266b2a232549531b9cefce1b87dc1632479e2497c36bf4c5ecef12f0",
+        "locator": "LlamaRMSNorm.forward; apply_rotary_pos_emb; repeat_kv; LlamaAttention.forward; LlamaModel.forward"
+      },
+      {
+        "source_id": "v1-math-doc-sdpa",
+        "source_version": "text-sha256:51ae520cb41f401a25865a64b0efc462434e9d7b1dae72dce0533599e69c23c1",
+        "locator": "scaled_dot_product_attention; Warning; Parameters"
+      }
+    ]
+  },
+  {
+    "id": "claim-attention-heads-budget-v1",
+    "topic": "attention-heads",
+    "text": "未分片理想KV字节数与KV头数线性相关，得分查询头维度不缩小",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "层配置一致，不计临时展开、碎片和分片复制",
+    "evidence": [
+      {
+        "source_id": "v1-math-paper-gqa",
+        "source_version": "text-sha256:d89625675fe43338758e0a6ebd2e5d6b6b34a5388f38075c4dd34845b17c0122",
+        "locator": "§2.1 Uptraining; §2.2 Grouped-query attention; §3.1"
+      },
+      {
+        "source_id": "v1-math-llama",
+        "source_version": "text-sha256:46d35513266b2a232549531b9cefce1b87dc1632479e2497c36bf4c5ecef12f0",
+        "locator": "LlamaRMSNorm.forward; apply_rotary_pos_emb; repeat_kv; LlamaAttention.forward; LlamaModel.forward"
+      },
+      {
+        "source_id": "v1-math-doc-sdpa",
+        "source_version": "text-sha256:51ae520cb41f401a25865a64b0efc462434e9d7b1dae72dce0533599e69c23c1",
+        "locator": "scaled_dot_product_attention; Warning; Parameters"
+      }
+    ]
+  },
+  {
+    "id": "claim-attention-heads-conversion-v1",
+    "topic": "attention-heads",
+    "text": "组内均值最小化投影权重的欧氏误差，但不保持非线性注意力输出",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "同形浮点投影，须单独继续训练与评测",
+    "evidence": [
+      {
+        "source_id": "v1-math-paper-gqa",
+        "source_version": "text-sha256:d89625675fe43338758e0a6ebd2e5d6b6b34a5388f38075c4dd34845b17c0122",
+        "locator": "§2.1 Uptraining; §2.2 Grouped-query attention; §3.1"
+      },
+      {
+        "source_id": "v1-math-llama",
+        "source_version": "text-sha256:46d35513266b2a232549531b9cefce1b87dc1632479e2497c36bf4c5ecef12f0",
+        "locator": "LlamaRMSNorm.forward; apply_rotary_pos_emb; repeat_kv; LlamaAttention.forward; LlamaModel.forward"
+      }
+    ]
+  },
+  {
+    "id": "claim-position-relative-rotation-v1",
+    "topic": "position",
+    "text": "同频二维旋转使点积依赖位置差且保持各向量范数",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "列向量约定，Q/K频率相同，幅度为1",
+    "evidence": [
+      {
+        "source_id": "v1-math-paper-rope",
+        "source_version": "text-sha256:ee8e4a4c2276fa7041df4d1181f297daa5faa6532bbcb31ab6346785cd9c15f6",
+        "locator": "§3.2.1–3.2.2; Eq.(12)–(16)"
+      },
+      {
+        "source_id": "v1-math-llama",
+        "source_version": "text-sha256:46d35513266b2a232549531b9cefce1b87dc1632479e2497c36bf4c5ecef12f0",
+        "locator": "LlamaRMSNorm.forward; apply_rotary_pos_emb; repeat_kv; LlamaAttention.forward; LlamaModel.forward"
+      }
+    ]
+  },
+  {
+    "id": "claim-position-layout-v1",
+    "topic": "position",
+    "text": "相邻配对与前后半配对只有在投影通道同步置换时才等价",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "偶数全头宽，默认固定频率",
+    "evidence": [
+      {
+        "source_id": "v1-math-paper-rope",
+        "source_version": "text-sha256:ee8e4a4c2276fa7041df4d1181f297daa5faa6532bbcb31ab6346785cd9c15f6",
+        "locator": "§3.2.1–3.2.2; Eq.(12)–(16)"
+      },
+      {
+        "source_id": "v1-math-paper-transformer",
+        "source_version": "text-sha256:9a72cf7c0d75de42d220ed06e1518b31df962b3baed4704435339b80eac34b65",
+        "locator": "§3.1–3.5; Eq.(1)–(2)"
+      },
+      {
+        "source_id": "v1-math-llama",
+        "source_version": "text-sha256:46d35513266b2a232549531b9cefce1b87dc1632479e2497c36bf4c5ecef12f0",
+        "locator": "LlamaRMSNorm.forward; apply_rotary_pos_emb; repeat_kv; LlamaAttention.forward; LlamaModel.forward"
+      }
+    ]
+  },
+  {
+    "id": "claim-position-cache-phase-v1",
+    "topic": "position",
+    "text": "缩放位置与反频率等价要求新Q和缓存K使用同一缩放及位置约定",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "从原始键重建的教学检查，无动态频率切换",
+    "evidence": [
+      {
+        "source_id": "v1-math-paper-rope",
+        "source_version": "text-sha256:ee8e4a4c2276fa7041df4d1181f297daa5faa6532bbcb31ab6346785cd9c15f6",
+        "locator": "§3.2.1–3.2.2; Eq.(12)–(16)"
+      },
+      {
+        "source_id": "v1-math-rope-utils",
+        "source_version": "text-sha256:8b08f3f372207816eae420e7d33b982e44858dc9e4be7728d95f606b07c23fd0",
+        "locator": "_compute_linear_scaling_rope_parameters"
+      },
+      {
+        "source_id": "v1-math-llama",
+        "source_version": "text-sha256:46d35513266b2a232549531b9cefce1b87dc1632479e2497c36bf4c5ecef12f0",
+        "locator": "LlamaRMSNorm.forward; apply_rotary_pos_emb; repeat_kv; LlamaAttention.forward; LlamaModel.forward"
+      }
+    ]
+  },
+  {
+    "id": "claim-ffn-norm-swiglu-v1",
+    "topic": "ffn-norm",
+    "text": "SwiGLU三矩阵预算为3dm，等两矩阵参数量需将中间宽度缩至2/3",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "无偏置、不计对齐与其他层",
+    "evidence": [
+      {
+        "source_id": "v1-math-paper-swiglu",
+        "source_version": "text-sha256:0b3ab3f4a3c5924458896759750673af1e5cd611dcd0f59f838423b56772ce81",
+        "locator": "§2; Eq.(4)–(6)"
+      },
+      {
+        "source_id": "v1-math-paper-llama",
+        "source_version": "text-sha256:55842d07729c5bdc5517dc7ac501d71fb34112e64e8eb0c4a60a0a43855b5ff6",
+        "locator": "§2.1 Pre-training Data; §2.2 Architecture; §2.3–2.4"
+      },
+      {
+        "source_id": "v1-math-llama",
+        "source_version": "text-sha256:46d35513266b2a232549531b9cefce1b87dc1632479e2497c36bf4c5ecef12f0",
+        "locator": "LlamaRMSNorm.forward; apply_rotary_pos_emb; repeat_kv; LlamaAttention.forward; LlamaModel.forward"
+      },
+      {
+        "source_id": "v1-math-nano-model",
+        "source_version": "text-sha256:7c01703240dbec5d554527dc666e35b3df8391d0b117fddc07afcf325a21d11c",
+        "locator": "CausalSelfAttention.forward; Block.forward; GPT.forward; GPT.generate"
+      }
+    ]
+  },
+  {
+    "id": "claim-ffn-norm-rms-jacobian-v1",
+    "topic": "ffn-norm",
+    "text": "RMSNorm使用平方均值，雅可比含输入外积项，正epsilon使尺度不变性近似成立",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "单token、单位增益、非负epsilon且分母非零",
+    "evidence": [
+      {
+        "source_id": "v1-math-paper-rmsnorm",
+        "source_version": "text-sha256:19844ec3eb8a05541422884c59330b4fb7a230edbdefcbb66a04cc426c696d17",
+        "locator": "§4 RMSNorm; §4.1; §4.2; Eq.(4)–(10)"
+      },
+      {
+        "source_id": "v1-math-llama",
+        "source_version": "text-sha256:46d35513266b2a232549531b9cefce1b87dc1632479e2497c36bf4c5ecef12f0",
+        "locator": "LlamaRMSNorm.forward; apply_rotary_pos_emb; repeat_kv; LlamaAttention.forward; LlamaModel.forward"
+      }
+    ]
+  },
+  {
+    "id": "claim-ffn-norm-residual-paths-v1",
+    "topic": "ffn-norm",
+    "text": "Pre-Norm局部雅可比包含裸单位项，Post-Norm整条局部通路经过归一化",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "教学对照两侧统一RMSNorm，线性子层，无完整训练结论",
+    "evidence": [
+      {
+        "source_id": "v1-math-paper-transformer",
+        "source_version": "text-sha256:9a72cf7c0d75de42d220ed06e1518b31df962b3baed4704435339b80eac34b65",
+        "locator": "§3.1–3.5; Eq.(1)–(2)"
+      },
+      {
+        "source_id": "v1-math-paper-llama",
+        "source_version": "text-sha256:55842d07729c5bdc5517dc7ac501d71fb34112e64e8eb0c4a60a0a43855b5ff6",
+        "locator": "§2.1 Pre-training Data; §2.2 Architecture; §2.3–2.4"
+      },
+      {
+        "source_id": "v1-math-llama",
+        "source_version": "text-sha256:46d35513266b2a232549531b9cefce1b87dc1632479e2497c36bf4c5ecef12f0",
+        "locator": "LlamaRMSNorm.forward; apply_rotary_pos_emb; repeat_kv; LlamaAttention.forward; LlamaModel.forward"
+      },
+      {
+        "source_id": "v1-math-nano-model",
+        "source_version": "text-sha256:7c01703240dbec5d554527dc666e35b3df8391d0b117fddc07afcf325a21d11c",
+        "locator": "CausalSelfAttention.forward; Block.forward; GPT.forward; GPT.generate"
+      }
+    ]
+  },
+  {
+    "id": "claim-pretraining-target-shift-v1",
+    "topic": "pretraining",
+    "text": "外部或内部标签移位必须且只能发生一次，监督mask按目标位置对齐",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "下一token目标，明确ignore_index约定",
+    "evidence": [
+      {
+        "source_id": "v1-math-paper-transformer",
+        "source_version": "text-sha256:9a72cf7c0d75de42d220ed06e1518b31df962b3baed4704435339b80eac34b65",
+        "locator": "§3.1–3.5; Eq.(1)–(2)"
+      },
+      {
+        "source_id": "v1-math-nano-train",
+        "source_version": "text-sha256:413bd97b40bb400a2a0d01230e2946f056c263ebac1b7281c2367d964a123085",
+        "locator": "get_batch; gradient_accumulation_steps"
+      },
+      {
+        "source_id": "v1-math-nano-model",
+        "source_version": "text-sha256:7c01703240dbec5d554527dc666e35b3df8391d0b117fddc07afcf325a21d11c",
+        "locator": "CausalSelfAttention.forward; Block.forward; GPT.forward; GPT.generate"
+      },
+      {
+        "source_id": "v1-math-loss-utils",
+        "source_version": "text-sha256:bbc1be115ce17493dcf2a94d0e9349ddc7fcc30760692c3b49f1c7dfb37cc0f0",
+        "locator": "fixed_cross_entropy; ForCausalLMLoss"
+      }
+    ]
+  },
+  {
+    "id": "claim-pretraining-loss-denominator-v1",
+    "topic": "pretraining",
+    "text": "变长批次的token平均应按有效数加权，平均各批均值会改变梯度权重",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "类索引目标、无类别权重和label smoothing",
+    "evidence": [
+      {
+        "source_id": "v1-math-doc-ce",
+        "source_version": "text-sha256:70fa22819952b4a366188ecf7a577c15a7ac4c00a4a7675508a80b24b1ad8ca3",
+        "locator": "CrossEntropyLoss; class-index target; ignore_index"
+      },
+      {
+        "source_id": "v1-math-loss-utils",
+        "source_version": "text-sha256:bbc1be115ce17493dcf2a94d0e9349ddc7fcc30760692c3b49f1c7dfb37cc0f0",
+        "locator": "fixed_cross_entropy; ForCausalLMLoss"
+      },
+      {
+        "source_id": "v1-math-nano-train",
+        "source_version": "text-sha256:413bd97b40bb400a2a0d01230e2946f056c263ebac1b7281c2367d964a123085",
+        "locator": "get_batch; gradient_accumulation_steps"
+      },
+      {
+        "source_id": "v1-math-paper-llama",
+        "source_version": "text-sha256:55842d07729c5bdc5517dc7ac501d71fb34112e64e8eb0c4a60a0a43855b5ff6",
+        "locator": "§2.1 Pre-training Data; §2.2 Architecture; §2.3–2.4"
+      }
+    ]
+  },
+  {
+    "id": "claim-pretraining-data-isolation-v1",
+    "topic": "pretraining",
+    "text": "文档划分和EOT打包不自动保证跨集合内容去重或跨文档注意力隔离",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "Jaccard审计仅为小规模空白分词教学候选",
+    "evidence": [
+      {
+        "source_id": "v1-math-paper-llama",
+        "source_version": "text-sha256:55842d07729c5bdc5517dc7ac501d71fb34112e64e8eb0c4a60a0a43855b5ff6",
+        "locator": "§2.1 Pre-training Data; §2.2 Architecture; §2.3–2.4"
+      },
+      {
+        "source_id": "v1-math-nano-data",
+        "source_version": "text-sha256:77f3ef0cc8132d77f90c2bd5f9c3be86d1b3da7428e100559c58aee2bcb6eb12",
+        "locator": "train_test_split; process; binary concatenation"
+      }
+    ]
+  },
+  {
+    "id": "claim-sft-label-mask-v1",
+    "topic": "sft",
+    "text": "监督位置是适用mask的交集，并须与下一token损失移位一致",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "输入已正确分词，示例不生成模板mask",
+    "evidence": [
+      {
+        "source_id": "v1-math-paper-instructgpt",
+        "source_version": "text-sha256:2a06d93ff9f996e633196c043424dd8f5163d047ef41bbd6ef72bfce535c7964",
+        "locator": "§3.1 Step 1; Data; Supervised fine-tuning"
+      },
+      {
+        "source_id": "v1-math-trl-sft",
+        "source_version": "text-sha256:ab992191b84cdc47e14c0b6baf4e6be724240da4b4d98f26341cdaba072e8e92",
+        "locator": "SFTTrainer._prepare_dataset.build_labels; DataCollatorForLanguageModeling.torch_call"
+      },
+      {
+        "source_id": "v1-math-loss-utils",
+        "source_version": "text-sha256:bbc1be115ce17493dcf2a94d0e9349ddc7fcc30760692c3b49f1c7dfb37cc0f0",
+        "locator": "fixed_cross_entropy; ForCausalLMLoss"
+      }
+    ]
+  },
+  {
+    "id": "claim-sft-lora-gradient-v1",
+    "topic": "sft",
+    "text": "B为零且A非零时A梯度初始为零但B可学习，双零会阻断该支路",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "普通alpha/r LoRA，无dropout、bias或变体",
+    "evidence": [
+      {
+        "source_id": "v1-math-paper-lora",
+        "source_version": "text-sha256:da3e9183b24911177b9e62fafd797723ace356f1d37e81df97845accab22524c",
+        "locator": "§4.1; Eq.(3)"
+      },
+      {
+        "source_id": "v1-math-peft-lora",
+        "source_version": "text-sha256:7f0952efd6df729e060055566cef17a3fff6876a3b4dc4a4502b8d9e31349ffa",
+        "locator": "LoraLayer.update_layer; reset_lora_parameters; Linear.merge; Linear.get_delta_weight; Linear.forward"
+      }
+    ]
+  },
+  {
+    "id": "claim-sft-lora-merge-v1",
+    "topic": "sft",
+    "text": "固定单适配器且无dropout时W0x+sBAx与合并权重前向代数等价",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "普通浮点线性层，允许浮点规约误差",
+    "evidence": [
+      {
+        "source_id": "v1-math-paper-lora",
+        "source_version": "text-sha256:da3e9183b24911177b9e62fafd797723ace356f1d37e81df97845accab22524c",
+        "locator": "§4.1; Eq.(3)"
+      },
+      {
+        "source_id": "v1-math-peft-lora",
+        "source_version": "text-sha256:7f0952efd6df729e060055566cef17a3fff6876a3b4dc4a4502b8d9e31349ffa",
+        "locator": "LoraLayer.update_layer; reset_lora_parameters; Linear.merge; Linear.get_delta_weight; Linear.forward"
+      }
+    ]
+  },
+  {
+    "id": "claim-preference-kl-mapping-v1",
+    "topic": "preference",
+    "text": "同提示下KL正则最优策略的配分项在奖励差中抵消，得到策略比值偏好模型",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "beta正、参考支持为正，有限回答空间用于教学",
+    "evidence": [
+      {
+        "source_id": "v1-math-paper-dpo",
+        "source_version": "text-sha256:b77f433b75b32fe177f7cb91efc76dc1c001fbfa2f75b14bd7d4fb7a08732115",
+        "locator": "§3–4; Eq.(1)–(7); Limitations & Future Work"
+      },
+      {
+        "source_id": "v1-math-trl-dpo",
+        "source_version": "text-sha256:148ae182814e8983409209bf3898397923cbdb67d4a195f2af3af36f895f9f4f",
+        "locator": "DPOTrainer.compute_ref_log_probs; DPOTrainer._compute_loss"
+      }
+    ]
+  },
+  {
+    "id": "claim-preference-dpo-gradient-v1",
+    "topic": "preference",
+    "text": "标准DPO减少相对偏好margin的softplus损失，不要求chosen绝对概率单独上升",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "标准reverse_kl加sigmoid，无平滑或附加损失",
+    "evidence": [
+      {
+        "source_id": "v1-math-paper-dpo",
+        "source_version": "text-sha256:b77f433b75b32fe177f7cb91efc76dc1c001fbfa2f75b14bd7d4fb7a08732115",
+        "locator": "§3–4; Eq.(1)–(7); Limitations & Future Work"
+      },
+      {
+        "source_id": "v1-math-trl-dpo",
+        "source_version": "text-sha256:148ae182814e8983409209bf3898397923cbdb67d4a195f2af3af36f895f9f4f",
+        "locator": "DPOTrainer.compute_ref_log_probs; DPOTrainer._compute_loss"
+      },
+      {
+        "source_id": "v1-math-trl-dpo-doc",
+        "source_version": "text-sha256:30ada5876faf1a2bf52b9fe4f0928036c1807d32e1b42887842f3df47dd5ec4c",
+        "locator": "Loss types; Expected dataset type"
+      }
+    ]
+  },
+  {
+    "id": "claim-preference-sequence-ratio-v1",
+    "topic": "preference",
+    "text": "标准DPO使用回复序列logp之和，改为长度平均会改变优化目标",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "当前参考token、mask、模板和EOS一致",
+    "evidence": [
+      {
+        "source_id": "v1-math-paper-dpo",
+        "source_version": "text-sha256:b77f433b75b32fe177f7cb91efc76dc1c001fbfa2f75b14bd7d4fb7a08732115",
+        "locator": "§3–4; Eq.(1)–(7); Limitations & Future Work"
+      },
+      {
+        "source_id": "v1-math-trl-dpo",
+        "source_version": "text-sha256:148ae182814e8983409209bf3898397923cbdb67d4a195f2af3af36f895f9f4f",
+        "locator": "DPOTrainer.compute_ref_log_probs; DPOTrainer._compute_loss"
+      },
+      {
+        "source_id": "v1-math-trl-dpo-doc",
+        "source_version": "text-sha256:30ada5876faf1a2bf52b9fe4f0928036c1807d32e1b42887842f3df47dd5ec4c",
+        "locator": "Loss types; Expected dataset type"
+      }
+    ]
+  },
+  {
+    "id": "claim-policy-optimization-advantages-v1",
+    "topic": "policy-optimization",
+    "text": "组内优势受标准差自由度和缺失评分处理影响，等分组无相对区分信号",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "同提示outcome奖励，示例ddof可选且缺失用None",
+    "evidence": [
+      {
+        "source_id": "v1-math-paper-grpo",
+        "source_version": "text-sha256:f3bf523736c2fcc2ffab50e338e195a08b7a2e0bcf2c044b7ee7e4b5c29faf64",
+        "locator": "§4.1.1–4.1.3; Eq.(3)–(4); Algorithm 1"
+      },
+      {
+        "source_id": "v1-math-trl-grpo",
+        "source_version": "text-sha256:5706d33cbdaf2f984d608f228af28d4afdbf88060be59f4a9fca7829e613da1f",
+        "locator": "_generate_and_score_completions; _compute_loss"
+      },
+      {
+        "source_id": "v1-math-trl-utils",
+        "source_version": "text-sha256:8eda2187676dcac8d7517532f63c8922bd789be28ff50cc3c1ad33fa66bc1668",
+        "locator": "nanstd"
+      }
+    ]
+  },
+  {
+    "id": "claim-policy-optimization-clipping-v1",
+    "topic": "policy-optimization",
+    "text": "正优势只在概率比过高侧收益饱和，负优势只在过低侧饱和，old必须冻结",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "token级对称裁剪、固定优势、非边界梯度",
+    "evidence": [
+      {
+        "source_id": "v1-math-paper-grpo",
+        "source_version": "text-sha256:f3bf523736c2fcc2ffab50e338e195a08b7a2e0bcf2c044b7ee7e4b5c29faf64",
+        "locator": "§4.1.1–4.1.3; Eq.(3)–(4); Algorithm 1"
+      },
+      {
+        "source_id": "v1-math-trl-grpo",
+        "source_version": "text-sha256:5706d33cbdaf2f984d608f228af28d4afdbf88060be59f4a9fca7829e613da1f",
+        "locator": "_generate_and_score_completions; _compute_loss"
+      }
+    ]
+  },
+  {
+    "id": "claim-policy-optimization-kl-reduction-v1",
+    "topic": "policy-optimization",
+    "text": "样本KL的无偏性依赖当前策略采样，序列/token/固定长度归约给予不同权重",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "共同支持、有限logp、教学只算已采样值和本地归约",
+    "evidence": [
+      {
+        "source_id": "v1-math-paper-grpo",
+        "source_version": "text-sha256:f3bf523736c2fcc2ffab50e338e195a08b7a2e0bcf2c044b7ee7e4b5c29faf64",
+        "locator": "§4.1.1–4.1.3; Eq.(3)–(4); Algorithm 1"
+      },
+      {
+        "source_id": "v1-math-trl-grpo",
+        "source_version": "text-sha256:5706d33cbdaf2f984d608f228af28d4afdbf88060be59f4a9fca7829e613da1f",
+        "locator": "_generate_and_score_completions; _compute_loss"
+      },
+      {
+        "source_id": "v1-math-trl-grpo-doc",
+        "source_version": "text-sha256:a3a495392fe0c7ba165856b15e7dc617d2e4a65edd3d6acd4e098933c8e63d02",
+        "locator": "Computing the advantage; Estimating the KL divergence; Loss Types"
+      }
+    ]
+  },
+  {
+    "id": "claim-prefill-decode-timing-v1",
+    "topic": "prefill-decode",
+    "text": "TPOT用首末输出间隔除以后续token数，单token不能观测TPOT。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "逐token事件、统一时钟，输出至少一个token。",
+    "evidence": [
+      {
+        "source_id": "v1-systems-bench-serve",
+        "source_version": "text-sha256:ad1f21c13d5094cc115c005f312489032b7e001c872930de7f734fcf05806bf0",
+        "locator": "get_request；calculate_metrics"
+      },
+      {
+        "source_id": "v1-systems-paged-paper",
+        "source_version": "text-sha256:c1ae88f9865444fbbb4497ac0710b095018a83ed43558f5234a829cc3861478e",
+        "locator": "§2；§4.2–4.6；§5.1–5.2"
+      },
+      {
+        "source_id": "v1-systems-optim-doc",
+        "source_version": "text-sha256:6464b660e86cf0724dc2042530ac588a23f50aeb6c6ec876c03622d88df35807",
+        "locator": "Preemption；Chunked Prefill"
+      }
+    ]
+  },
+  {
+    "id": "claim-prefill-decode-attention-work-v1",
+    "topic": "prefill-decode",
+    "text": "Prefill的因果位置对为n(n+1)/2，有缓存时后续k步为kn+k(k+1)/2。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "单个标准全因果注意力层，忽略MLP、投影和内核填充。",
+    "evidence": [
+      {
+        "source_id": "v1-systems-llama-code",
+        "source_version": "text-sha256:46d35513266b2a232549531b9cefce1b87dc1632479e2497c36bf4c5ecef12f0",
+        "locator": "eager_attention_forward；LlamaAttention.forward"
+      },
+      {
+        "source_id": "v1-systems-cache-doc",
+        "source_version": "text-sha256:94ea4eba3d6f02415a6921a772fa762e01a4bfb20f6050c879f34f1fa7cc0620",
+        "locator": "Attention matrices；Cache storage implementation"
+      },
+      {
+        "source_id": "v1-systems-paged-paper",
+        "source_version": "text-sha256:c1ae88f9865444fbbb4497ac0710b095018a83ed43558f5234a829cc3861478e",
+        "locator": "§2；§4.2–4.6；§5.1–5.2"
+      }
+    ]
+  },
+  {
+    "id": "claim-prefill-decode-chunk-budget-v1",
+    "topic": "prefill-decode",
+    "text": "请求的目标与已计算token之差受单轮预算和分块上限截断。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "同步教学模型，无推测token、编码器、流水线及KV不足。",
+    "evidence": [
+      {
+        "source_id": "v1-systems-scheduler",
+        "source_version": "text-sha256:2aab08cb511d5905c280697fcc47fffa60804759d6fba22496779892c290b41b",
+        "locator": "Scheduler.schedule；Scheduler._preempt_request"
+      },
+      {
+        "source_id": "v1-systems-optim-doc",
+        "source_version": "text-sha256:6464b660e86cf0724dc2042530ac588a23f50aeb6c6ec876c03622d88df35807",
+        "locator": "Preemption；Chunked Prefill"
+      },
+      {
+        "source_id": "v1-systems-paged-paper",
+        "source_version": "text-sha256:c1ae88f9865444fbbb4497ac0710b095018a83ed43558f5234a829cc3861478e",
+        "locator": "§2；§4.2–4.6；§5.1–5.2"
+      }
+    ]
+  },
+  {
+    "id": "claim-kv-cache-bytes-v1",
+    "topic": "kv-cache",
+    "text": "全注意力KV每token字节数为2LHkv d s，变长有效容量由长度之和决定。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "标准全注意力、各层相同KV头与精度，不含共享、量化附加数据和分布式复制。",
+    "evidence": [
+      {
+        "source_id": "v1-systems-cache-code",
+        "source_version": "text-sha256:36c4cd52d66f39fdb51fa2fc92cfc43e2e8b152e07f7c2a17186eac1e81237e7",
+        "locator": "DynamicLayer.update；DynamicLayer.get_seq_length"
+      },
+      {
+        "source_id": "v1-systems-cache-doc",
+        "source_version": "text-sha256:94ea4eba3d6f02415a6921a772fa762e01a4bfb20f6050c879f34f1fa7cc0620",
+        "locator": "Attention matrices；Cache storage implementation"
+      },
+      {
+        "source_id": "v1-systems-paged-paper",
+        "source_version": "text-sha256:c1ae88f9865444fbbb4497ac0710b095018a83ed43558f5234a829cc3861478e",
+        "locator": "§2；§4.2–4.6；§5.1–5.2"
+      },
+      {
+        "source_id": "v1-systems-kv-manager",
+        "source_version": "text-sha256:d061965aefb5b8d73a520ab5ebc4c819bb0109932f5d7f4afdd37a9c610c7893",
+        "locator": "KVCacheManager.get_computed_blocks；KVCacheManager.allocate_slots"
+      }
+    ]
+  },
+  {
+    "id": "claim-kv-cache-append-attend-v1",
+    "topic": "kv-cache",
+    "text": "缓存省去历史状态重算，单步attention仍对历史K/V做线性访问。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "单头全因果注意力，输入已经完成投影和位置编码，不包含后续输出投影。",
+    "evidence": [
+      {
+        "source_id": "v1-systems-llama-code",
+        "source_version": "text-sha256:46d35513266b2a232549531b9cefce1b87dc1632479e2497c36bf4c5ecef12f0",
+        "locator": "eager_attention_forward；LlamaAttention.forward"
+      },
+      {
+        "source_id": "v1-systems-cache-code",
+        "source_version": "text-sha256:36c4cd52d66f39fdb51fa2fc92cfc43e2e8b152e07f7c2a17186eac1e81237e7",
+        "locator": "DynamicLayer.update；DynamicLayer.get_seq_length"
+      },
+      {
+        "source_id": "v1-systems-cache-doc",
+        "source_version": "text-sha256:94ea4eba3d6f02415a6921a772fa762e01a4bfb20f6050c879f34f1fa7cc0620",
+        "locator": "Attention matrices；Cache storage implementation"
+      },
+      {
+        "source_id": "v1-systems-paged-paper",
+        "source_version": "text-sha256:c1ae88f9865444fbbb4497ac0710b095018a83ed43558f5234a829cc3861478e",
+        "locator": "§2；§4.2–4.6；§5.1–5.2"
+      }
+    ]
+  },
+  {
+    "id": "claim-kv-cache-prefix-identity-v1",
+    "topic": "kv-cache",
+    "text": "相同块内token不保证相同KV，链式哈希必须绑定先前前缀与额外计算身份。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "仅演示完整块；相同模型、适配器、tokenizer、位置语义、精度与隔离域。",
+    "evidence": [
+      {
+        "source_id": "v1-systems-kv-utils",
+        "source_version": "text-sha256:774fa7691b5b496b8fe7c74d0e0488bec475048ef9d085872c3bf2fe1ccc63f2",
+        "locator": "KVCacheBlock；FreeKVCacheBlockQueue；hash_block_tokens"
+      },
+      {
+        "source_id": "v1-systems-kv-manager",
+        "source_version": "text-sha256:d061965aefb5b8d73a520ab5ebc4c819bb0109932f5d7f4afdd37a9c610c7893",
+        "locator": "KVCacheManager.get_computed_blocks；KVCacheManager.allocate_slots"
+      },
+      {
+        "source_id": "v1-systems-prefix-doc",
+        "source_version": "text-sha256:67ee4e2b7bc23d40e9b366e4a9053ae4ecd0925ddef51f412ac5c16b9dc83a61",
+        "locator": "Data Structure；Block Allocation"
+      },
+      {
+        "source_id": "v1-systems-paged-paper",
+        "source_version": "text-sha256:c1ae88f9865444fbbb4497ac0710b095018a83ed43558f5234a829cc3861478e",
+        "locator": "§2；§4.2–4.6；§5.1–5.2"
+      }
+    ]
+  },
+  {
+    "id": "claim-cache-scheduling-page-map-v1",
+    "topic": "cache-scheduling",
+    "text": "位置p经除法映射到逻辑块，再经块表定位物理块，物理地址无需连续。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "已分配且已有效的token位置，固定块大小；示例不含设备张量步幅。",
+    "evidence": [
+      {
+        "source_id": "v1-systems-kv-utils",
+        "source_version": "text-sha256:774fa7691b5b496b8fe7c74d0e0488bec475048ef9d085872c3bf2fe1ccc63f2",
+        "locator": "KVCacheBlock；FreeKVCacheBlockQueue；hash_block_tokens"
+      },
+      {
+        "source_id": "v1-systems-block-pool",
+        "source_version": "text-sha256:c87af7ef1e2fbc1e4d092c36f52d9f7f0aed5ce98fd54ed4b2e90e7537235b02",
+        "locator": "BlockPool.get_new_blocks；touch；free_blocks"
+      },
+      {
+        "source_id": "v1-systems-prefix-doc",
+        "source_version": "text-sha256:67ee4e2b7bc23d40e9b366e4a9053ae4ecd0925ddef51f412ac5c16b9dc83a61",
+        "locator": "Data Structure；Block Allocation"
+      },
+      {
+        "source_id": "v1-systems-paged-paper",
+        "source_version": "text-sha256:c1ae88f9865444fbbb4497ac0710b095018a83ed43558f5234a829cc3861478e",
+        "locator": "§2；§4.2–4.6；§5.1–5.2"
+      }
+    ]
+  },
+  {
+    "id": "claim-cache-scheduling-continuous-v1",
+    "topic": "cache-scheduling",
+    "text": "结束请求在迭代边界释放资源，新请求能否运行取决于token预算和KV块预算两者。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "独立块、同步执行、显式finished状态，教学策略资源不足跳过而不抢占。",
+    "evidence": [
+      {
+        "source_id": "v1-systems-scheduler",
+        "source_version": "text-sha256:2aab08cb511d5905c280697fcc47fffa60804759d6fba22496779892c290b41b",
+        "locator": "Scheduler.schedule；Scheduler._preempt_request"
+      },
+      {
+        "source_id": "v1-systems-kv-manager",
+        "source_version": "text-sha256:d061965aefb5b8d73a520ab5ebc4c819bb0109932f5d7f4afdd37a9c610c7893",
+        "locator": "KVCacheManager.get_computed_blocks；KVCacheManager.allocate_slots"
+      },
+      {
+        "source_id": "v1-systems-optim-doc",
+        "source_version": "text-sha256:6464b660e86cf0724dc2042530ac588a23f50aeb6c6ec876c03622d88df35807",
+        "locator": "Preemption；Chunked Prefill"
+      },
+      {
+        "source_id": "v1-systems-paged-paper",
+        "source_version": "text-sha256:c1ae88f9865444fbbb4497ac0710b095018a83ed43558f5234a829cc3861478e",
+        "locator": "§2；§4.2–4.6；§5.1–5.2"
+      }
+    ]
+  },
+  {
+    "id": "claim-cache-scheduling-radix-v1",
+    "topic": "cache-scheduling",
+    "text": "压缩边在最长公共前缀处分裂，共享路径继承锁，淘汰只能从未被活跃请求保护的叶子开始。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "token精确相等、页对齐且缓存计算身份兼容；函数只展示分叉局部转换。",
+    "evidence": [
+      {
+        "source_id": "v1-systems-radix",
+        "source_version": "text-sha256:eea7015fcf678167ac7296b08c8dc568ccbe42a4bb106da23b33a7c59debec01",
+        "locator": "RadixKey.match_at；RadixCache._split_node；RadixCache.evict"
+      },
+      {
+        "source_id": "v1-systems-sglang-paper",
+        "source_version": "text-sha256:029bb3fdae8a167721dceef6f0451c7fa5935287ef51e1b56e525513de1bfea8",
+        "locator": "§3；§6.1"
+      },
+      {
+        "source_id": "v1-systems-prefix-doc",
+        "source_version": "text-sha256:67ee4e2b7bc23d40e9b366e4a9053ae4ecd0925ddef51f412ac5c16b9dc83a61",
+        "locator": "Data Structure；Block Allocation"
+      }
+    ]
+  },
+  {
+    "id": "claim-inference-frameworks-traffic-v1",
+    "topic": "inference-frameworks",
+    "text": "Gamma到达间隔的均值由rate决定，方差还受burstiness影响，相同均值并不产生相同排队。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "独立Gamma间隔的合成开环流量，不代表真实用户分布。",
+    "evidence": [
+      {
+        "source_id": "v1-systems-bench-serve",
+        "source_version": "text-sha256:ad1f21c13d5094cc115c005f312489032b7e001c872930de7f734fcf05806bf0",
+        "locator": "get_request；calculate_metrics"
+      },
+      {
+        "source_id": "v1-systems-distserve-paper",
+        "source_version": "text-sha256:8e9725f01e6852ce7c825c6dceafd3dca9d33b894717990907013519c0711cdd",
+        "locator": "§1 goodput定义；§3.3 variable length与communication"
+      },
+      {
+        "source_id": "v1-systems-sglang-paper",
+        "source_version": "text-sha256:029bb3fdae8a167721dceef6f0451c7fa5935287ef51e1b56e525513de1bfea8",
+        "locator": "§3；§6.1"
+      }
+    ]
+  },
+  {
+    "id": "claim-inference-frameworks-goodput-v1",
+    "topic": "inference-frameworks",
+    "text": "窗口合格请求吞吐必须联合检查约束并保留失败分母，不能由独立分位数推出联合达标率。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "固定观察窗口、逐请求质量标签、TTFT与TPOT阈值；单token显式约定TPOT不适用。",
+    "evidence": [
+      {
+        "source_id": "v1-systems-bench-serve",
+        "source_version": "text-sha256:ad1f21c13d5094cc115c005f312489032b7e001c872930de7f734fcf05806bf0",
+        "locator": "get_request；calculate_metrics"
+      },
+      {
+        "source_id": "v1-systems-distserve-paper",
+        "source_version": "text-sha256:8e9725f01e6852ce7c825c6dceafd3dca9d33b894717990907013519c0711cdd",
+        "locator": "§1 goodput定义；§3.3 variable length与communication"
+      },
+      {
+        "source_id": "v1-systems-optim-doc",
+        "source_version": "text-sha256:6464b660e86cf0724dc2042530ac588a23f50aeb6c6ec876c03622d88df35807",
+        "locator": "Preemption；Chunked Prefill"
+      }
+    ]
+  },
+  {
+    "id": "claim-inference-frameworks-tail-v1",
+    "topic": "inference-frameworks",
+    "text": "分位数须固定算法与样本集合；仅完成请求的尾延迟会在超时后产生选择偏差。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "最近秩分位数的有限非负样本，空集未定义，不把超时等同完成时长。",
+    "evidence": [
+      {
+        "source_id": "v1-systems-bench-serve",
+        "source_version": "text-sha256:ad1f21c13d5094cc115c005f312489032b7e001c872930de7f734fcf05806bf0",
+        "locator": "get_request；calculate_metrics"
+      },
+      {
+        "source_id": "v1-systems-distserve-paper",
+        "source_version": "text-sha256:8e9725f01e6852ce7c825c6dceafd3dca9d33b894717990907013519c0711cdd",
+        "locator": "§1 goodput定义；§3.3 variable length与communication"
+      },
+      {
+        "source_id": "v1-systems-sglang-paper",
+        "source_version": "text-sha256:029bb3fdae8a167721dceef6f0451c7fa5935287ef51e1b56e525513de1bfea8",
+        "locator": "§3；§6.1"
+      }
+    ]
+  },
+  {
+    "id": "claim-rag-marginal-v1",
+    "topic": "rag",
+    "text": "RAG-Sequence先对同一文档的token概率连乘再对文档求和，RAG-Token每位置先混合文档概率。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "已固定候选文档及归一化先验，教学输入为给定目标token的条件概率。",
+    "evidence": [
+      {
+        "source_id": "v1-systems-rag-code",
+        "source_version": "text-sha256:fb424ac9ca252e1226ac05595c8e35fde6029628730ac48acd425a0514069f39",
+        "locator": "get_nll；marginalize"
+      },
+      {
+        "source_id": "v1-systems-rag-paper",
+        "source_version": "text-sha256:1427827155600c37a9376d8602605c3e8a1ae3cac70b750695925643d27e6c2e",
+        "locator": "§2 Methods；§3.4 Fact Verification"
+      },
+      {
+        "source_id": "v1-systems-gr-local-doc",
+        "source_version": "text-sha256:260b15b16a7f9207e3bddbdeb3efc47a1820666d6ca8b87770c21e5c55976261",
+        "locator": "Entity-based Reasoning；Methodology"
+      }
+    ]
+  },
+  {
+    "id": "claim-rag-context-v1",
+    "topic": "rag",
+    "text": "实际上下文还受模板、查询、输出预留及片段包装预算限制，召回完整不保证证据完整。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "片段已按相关性排序，tokens包含其实际包装开销；教学贪心不保证最优证据组合。",
+    "evidence": [
+      {
+        "source_id": "v1-systems-light-operate",
+        "source_version": "text-sha256:176585e3f686574ab98657b666982302ce47d58229baacb529ef601bd6799326",
+        "locator": "rebuild_knowledge_from_chunks；_build_context_str；_get_node_data；_get_edge_data"
+      },
+      {
+        "source_id": "v1-systems-light-utils",
+        "source_version": "text-sha256:8c49d4b0150fdfc3343d85770a46c0c49da5b6c6a81c09eb5ca10a997c8dcdbe",
+        "locator": "apply_rerank_if_enabled；generate_reference_list_from_chunks"
+      },
+      {
+        "source_id": "v1-systems-gr-local-doc",
+        "source_version": "text-sha256:260b15b16a7f9207e3bddbdeb3efc47a1820666d6ca8b87770c21e5c55976261",
+        "locator": "Entity-based Reasoning；Methodology"
+      },
+      {
+        "source_id": "v1-systems-rag-paper",
+        "source_version": "text-sha256:1427827155600c37a9376d8602605c3e8a1ae3cac70b750695925643d27e6c2e",
+        "locator": "§2 Methods；§3.4 Fact Verification"
+      }
+    ]
+  },
+  {
+    "id": "claim-rag-citation-v1",
+    "topic": "rag",
+    "text": "引用必须回到来源版本与具体片段，链接可解析和语义支持是两个独立检查。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "支持标签由人工或独立评审预先冻结，示例不自动判断自然语言蕴含。",
+    "evidence": [
+      {
+        "source_id": "v1-systems-light-utils",
+        "source_version": "text-sha256:8c49d4b0150fdfc3343d85770a46c0c49da5b6c6a81c09eb5ca10a997c8dcdbe",
+        "locator": "apply_rerank_if_enabled；generate_reference_list_from_chunks"
+      },
+      {
+        "source_id": "v1-systems-light-operate",
+        "source_version": "text-sha256:176585e3f686574ab98657b666982302ce47d58229baacb529ef601bd6799326",
+        "locator": "rebuild_knowledge_from_chunks；_build_context_str；_get_node_data；_get_edge_data"
+      },
+      {
+        "source_id": "v1-systems-rag-paper",
+        "source_version": "text-sha256:1427827155600c37a9376d8602605c3e8a1ae3cac70b750695925643d27e6c2e",
+        "locator": "§2 Methods；§3.4 Fact Verification"
+      },
+      {
+        "source_id": "v1-systems-gr-local-doc",
+        "source_version": "text-sha256:260b15b16a7f9207e3bddbdeb3efc47a1820666d6ca8b87770c21e5c55976261",
+        "locator": "Entity-based Reasoning；Methodology"
+      }
+    ]
+  },
+  {
+    "id": "claim-ingestion-identity-v1",
+    "topic": "ingestion",
+    "text": "来源稳定ID、正文指纹和解析版本决定不同层次身份，换解析器也可能需要更新索引。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "输入为已获得的Unicode正文；规范化仅统一换行，不判断语义等价。",
+    "evidence": [
+      {
+        "source_id": "v1-systems-light-core",
+        "source_version": "text-sha256:f92e25bf1bf8082dba64f604fe22badaeaa69ef2eaa34d23c5058059be8031d3",
+        "locator": "ainsert_custom_chunks；_purge_kg_contributions；_purge_derived_kg_contributions"
+      },
+      {
+        "source_id": "v1-systems-light-purge-doc",
+        "source_version": "text-sha256:2c821ba65df705a73a08e02ea21c15c6f6b74533e3576bd2c1b8b31acf5d9453",
+        "locator": "Purge Recovery Contract；Chunk tracking authority"
+      },
+      {
+        "source_id": "v1-systems-light-paper",
+        "source_version": "text-sha256:5b4eb849cae5f608bb9c26338ee857c331b3abb17b2587e7be5e808e65307fde",
+        "locator": "§3.1–3.4"
+      },
+      {
+        "source_id": "v1-systems-rag-paper",
+        "source_version": "text-sha256:1427827155600c37a9376d8602605c3e8a1ae3cac70b750695925643d27e6c2e",
+        "locator": "§2 Methods；§3.4 Fact Verification"
+      }
+    ]
+  },
+  {
+    "id": "claim-ingestion-delta-v1",
+    "topic": "ingestion",
+    "text": "按标题判新无法检测同标题正文更正，来源暂不可读也不构成删除证据。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "稳定ID对应可靠指纹；仅当输入为完整权威快照时才允许将缺失判为删除。",
+    "evidence": [
+      {
+        "source_id": "v1-systems-gr-delta",
+        "source_version": "text-sha256:f9c47d8959345ede23e6f23415c642a6d54f7f77b7e19c6c921b15ce81d42a99",
+        "locator": "get_delta_docs；concat_dataframes"
+      },
+      {
+        "source_id": "v1-systems-gr-update",
+        "source_version": "text-sha256:00990f71f661472a685fce7318424c949b962695aa3f5c3ffd68c0b61fd0ca7e",
+        "locator": "run_workflow；load_update_documents"
+      },
+      {
+        "source_id": "v1-systems-light-paper",
+        "source_version": "text-sha256:5b4eb849cae5f608bb9c26338ee857c331b3abb17b2587e7be5e808e65307fde",
+        "locator": "§3.1–3.4"
+      },
+      {
+        "source_id": "v1-systems-light-purge-doc",
+        "source_version": "text-sha256:2c821ba65df705a73a08e02ea21c15c6f6b74533e3576bd2c1b8b31acf5d9453",
+        "locator": "Purge Recovery Contract；Chunk tracking authority"
+      }
+    ]
+  },
+  {
+    "id": "claim-ingestion-retraction-v1",
+    "topic": "ingestion",
+    "text": "共享实体或关系在删除一个来源后应按剩余来源重建；归属载体必须保留到派生清理完成。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "supports为完整且已验证的直接chunk归属，不含未知来源占位符；示例只生成更新计划。",
+    "evidence": [
+      {
+        "source_id": "v1-systems-light-core",
+        "source_version": "text-sha256:f92e25bf1bf8082dba64f604fe22badaeaa69ef2eaa34d23c5058059be8031d3",
+        "locator": "ainsert_custom_chunks；_purge_kg_contributions；_purge_derived_kg_contributions"
+      },
+      {
+        "source_id": "v1-systems-light-operate",
+        "source_version": "text-sha256:176585e3f686574ab98657b666982302ce47d58229baacb529ef601bd6799326",
+        "locator": "rebuild_knowledge_from_chunks；_build_context_str；_get_node_data；_get_edge_data"
+      },
+      {
+        "source_id": "v1-systems-light-purge-doc",
+        "source_version": "text-sha256:2c821ba65df705a73a08e02ea21c15c6f6b74533e3576bd2c1b8b31acf5d9453",
+        "locator": "Purge Recovery Contract；Chunk tracking authority"
+      },
+      {
+        "source_id": "v1-systems-light-paper",
+        "source_version": "text-sha256:5b4eb849cae5f608bb9c26338ee857c331b3abb17b2587e7be5e808e65307fde",
+        "locator": "§3.1–3.4"
+      }
+    ]
+  },
+  {
+    "id": "claim-hybrid-search-bm25-v1",
+    "topic": "hybrid-search",
+    "text": "BM25用文档频率权重和饱和词频避免原始词频线性放大，并按文档相对长度归一化。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "已分词、二值查询项、正IDF变体；教学无字段boost与长度norm量化。",
+    "evidence": [
+      {
+        "source_id": "v1-systems-bm25-code",
+        "source_version": "text-sha256:f091ec839fc57e14b38f8cd91fa2f6c216bbddb7691cae85834ea981601c0e82",
+        "locator": "BM25Similarity.idf；avgFieldLength；scorer；BM25Scorer.doScore"
+      },
+      {
+        "source_id": "v1-systems-bm25-doc",
+        "source_version": "text-sha256:226f32484d8bbe91df6a0d2ccaff7bcdc8a2b6eb5f1b183986e38eb814c80d00",
+        "locator": "BM25Similarity；idf；avgFieldLength"
+      },
+      {
+        "source_id": "v1-systems-rrf-paper",
+        "source_version": "text-sha256:e549b60a8c7351e2fd939370162b0d493f197ea20f8c9f1d936700f11de7f4c5",
+        "locator": "§1 Reciprocal Rank Fusion"
+      }
+    ]
+  },
+  {
+    "id": "claim-hybrid-search-rrf-v1",
+    "topic": "hybrid-search",
+    "text": "基础RRF按各路名次倒数求和，qmd该版本还施加名次奖金，不能把其总分当作原论文公式。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "各排名列表内部无重复，文档身份一致；缺席贡献0，权重非负。",
+    "evidence": [
+      {
+        "source_id": "v1-systems-qmd-store",
+        "source_version": "text-sha256:8260c1b639b874dc3aba247e862c954e76d31c7f0363f8b84f285e40ec14cf41",
+        "locator": "reciprocalRankFusion；buildRrfTrace；hybridQuery"
+      },
+      {
+        "source_id": "v1-systems-qmd-doc",
+        "source_version": "text-sha256:af5f41ebeea04e0928fccd38ba5f47d90749b8f0417b84a99f89a677fefae76a",
+        "locator": "Score Normalization & Fusion"
+      },
+      {
+        "source_id": "v1-systems-rrf-paper",
+        "source_version": "text-sha256:e549b60a8c7351e2fd939370162b0d493f197ea20f8c9f1d936700f11de7f4c5",
+        "locator": "§1 Reciprocal Rank Fusion"
+      }
+    ]
+  },
+  {
+    "id": "claim-hybrid-search-rerank-v1",
+    "topic": "hybrid-search",
+    "text": "重排无法恢复未召回的证据，需分别记录候选召回率、选中召回率和回退状态。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "模型分数为外部输入而非示例预测；相关集合独立标注，候选ID唯一。",
+    "evidence": [
+      {
+        "source_id": "v1-systems-light-utils",
+        "source_version": "text-sha256:8c49d4b0150fdfc3343d85770a46c0c49da5b6c6a81c09eb5ca10a997c8dcdbe",
+        "locator": "apply_rerank_if_enabled；generate_reference_list_from_chunks"
+      },
+      {
+        "source_id": "v1-systems-qmd-store",
+        "source_version": "text-sha256:8260c1b639b874dc3aba247e862c954e76d31c7f0363f8b84f285e40ec14cf41",
+        "locator": "reciprocalRankFusion；buildRrfTrace；hybridQuery"
+      },
+      {
+        "source_id": "v1-systems-qmd-doc",
+        "source_version": "text-sha256:af5f41ebeea04e0928fccd38ba5f47d90749b8f0417b84a99f89a677fefae76a",
+        "locator": "Score Normalization & Fusion"
+      },
+      {
+        "source_id": "v1-systems-rrf-paper",
+        "source_version": "text-sha256:e549b60a8c7351e2fd939370162b0d493f197ea20f8c9f1d936700f11de7f4c5",
+        "locator": "§1 Reciprocal Rank Fusion"
+      },
+      {
+        "source_id": "v1-systems-rag-paper",
+        "source_version": "text-sha256:1427827155600c37a9376d8602605c3e8a1ae3cac70b750695925643d27e6c2e",
+        "locator": "§2 Methods；§3.4 Fact Verification"
+      }
+    ]
+  },
+  {
+    "id": "claim-graph-wiki-local-query-v1",
+    "topic": "graph-wiki",
+    "text": "局部图查询先匹配实体，再沿实体到关系及片段映射构造上下文，图邻接本身不构成答案证明。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "入口实体已经按相似度排序，关系有明确原始chunk归属；示例无向地检查端点关联。",
+    "evidence": [
+      {
+        "source_id": "v1-systems-local-query",
+        "source_version": "text-sha256:93c019de4fbce62e7c4031eeb161d06f58818ed1660c6b4122770fba26c08287",
+        "locator": "LocalSearchMixedContext.build_context；_build_text_unit_context"
+      },
+      {
+        "source_id": "v1-systems-gr-local-doc",
+        "source_version": "text-sha256:260b15b16a7f9207e3bddbdeb3efc47a1820666d6ca8b87770c21e5c55976261",
+        "locator": "Entity-based Reasoning；Methodology"
+      },
+      {
+        "source_id": "v1-systems-light-operate",
+        "source_version": "text-sha256:176585e3f686574ab98657b666982302ce47d58229baacb529ef601bd6799326",
+        "locator": "rebuild_knowledge_from_chunks；_build_context_str；_get_node_data；_get_edge_data"
+      },
+      {
+        "source_id": "v1-systems-light-paper",
+        "source_version": "text-sha256:5b4eb849cae5f608bb9c26338ee857c331b3abb17b2587e7be5e808e65307fde",
+        "locator": "§3.1–3.4"
+      },
+      {
+        "source_id": "v1-systems-graph-paper",
+        "source_version": "text-sha256:7c4bb4d83507e0cfcc337bcca23db2de1a63679e46753a04eae50aa21fd121b2",
+        "locator": "§3.1 GraphRAG Workflow"
+      }
+    ]
+  },
+  {
+    "id": "claim-graph-wiki-global-query-v1",
+    "topic": "graph-wiki",
+    "text": "GraphRAG全局查询先逐社区批次生成带分数的要点，再过滤排序并在预算内汇总。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "社区层级与map结果已给定，教学只模拟reduce输入选择，不生成或验证摘要。",
+    "evidence": [
+      {
+        "source_id": "v1-systems-global-query",
+        "source_version": "text-sha256:c201e86aa401452ab4b5eee25f439283b572e7148ab3d823bf555f68c495cd30",
+        "locator": "GlobalSearch.search；_reduce_response"
+      },
+      {
+        "source_id": "v1-systems-gr-global-doc",
+        "source_version": "text-sha256:21d90708c0d9a1c2b68258e5482bb7c1b94e269a3252a29bbcc0a069aecb8060",
+        "locator": "Methodology；Configuration"
+      },
+      {
+        "source_id": "v1-systems-graph-paper",
+        "source_version": "text-sha256:7c4bb4d83507e0cfcc337bcca23db2de1a63679e46753a04eae50aa21fd121b2",
+        "locator": "§3.1 GraphRAG Workflow"
+      }
+    ]
+  },
+  {
+    "id": "claim-graph-wiki-wiki-impact-v1",
+    "topic": "graph-wiki",
+    "text": "普通反向链接只说明页面引用关系，传递影响分析需先明确支持与依赖的语义类型。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_reading_and_teaching_model",
+    "replicated": false,
+    "conditions": "依赖边由人工核验，方向为页面指向所依赖对象；普通related边不参与传播。",
+    "evidence": [
+      {
+        "source_id": "v1-systems-wiki-backlinks",
+        "source_version": "text-sha256:701b01c7d17df07b1acbc0503a8c12b0f19eeb0acaa75c79f425c71ebb1f15cb",
+        "locator": "getBacklinks"
+      },
+      {
+        "source_id": "v1-systems-wiki-doc",
+        "source_version": "text-sha256:8c5cc5b33bdcd36198153ba9a3fee63eb1ba6855ed2ce3327a860b77a2f7bc93",
+        "locator": "What is this?；Architecture"
+      },
+      {
+        "source_id": "v1-systems-wiki-architecture",
+        "source_version": "text-sha256:0b0f6d59bed782983b595de16299757966ec3b15f01b39a5bfe4ed33b07c3b28",
+        "locator": "Three-Layer Architecture"
+      },
+      {
+        "source_id": "v1-systems-graph-paper",
+        "source_version": "text-sha256:7c4bb4d83507e0cfcc337bcca23db2de1a63679e46753a04eae50aa21fd121b2",
+        "locator": "§3.1 GraphRAG Workflow"
+      }
+    ]
   }
 ]

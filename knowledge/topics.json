@@ -5,17 +5,23 @@
     "module": "network",
     "page": "wiki/topics/Transformer与自回归生成.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 2,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
-      "追踪注意力计算的形状",
-      "解释训练并行与生成依赖",
-      "区分结构和执行优化"
+      "推导缩放方差与因果mask",
+      "证明拆头还原的索引关系",
+      "重放采样历史并区分模型概率与采样概率"
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "在纸面或独立练习中实现一个三token注意力计算：先不拆头，再加入双头和因果掩码。记录每一步shape及每行权重之和；用一个未来token扰动检查较早位置是否不变。先验证正确性，再参考PyTorch SDPA教程理解融合执行。"
+    "deliverable": "三token双头计算表与两步采样重放记录",
+    "example": "examples/network/transformer.py",
+    "unit_ids": [
+      "transformer-causal-attention",
+      "transformer-head-layout",
+      "transformer-autoregressive-loop"
+    ]
   },
   {
     "id": "attention-heads",
@@ -23,17 +29,23 @@
     "module": "network",
     "page": "wiki/topics/MHA与MQA及GQA.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 2,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
-      "区分查询头与KV头",
-      "计算共享比例",
-      "识别结构转换的验证条件"
+      "计算Q到KV组映射",
+      "核算缓存与得分矩阵的不同缩放",
+      "说明均值转换的损失与验证要求"
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "绘制16个Q头到4组K/V的映射，计算两种头布局在同长度下的理论缓存。再为结构转换列出验证清单：权重shape、输出有效性、任务质量与服务性能；此任务只设计实验，不直接改造生产checkpoint。"
+    "deliverable": "头映射、缓存预算和合并反例三张表",
+    "example": "examples/network/attention-heads.py",
+    "unit_ids": [
+      "attention-heads-mapping",
+      "attention-heads-budget",
+      "attention-heads-conversion"
+    ]
   },
   {
     "id": "position",
@@ -41,17 +53,23 @@
     "module": "network",
     "page": "wiki/topics/位置编码与RoPE.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 2,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
-      "解释绝对位置与相对关系",
-      "推导二维旋转",
-      "设计长上下文验证"
+      "证明相对旋转与范数保持",
+      "检查配对布局和投影置换",
+      "定位缓存位置与缩放失配"
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "完成二维旋转计算，并设计一张长度×证据位置矩阵。每个格子使用同类问题并保留原始输入；检查缓存续写时的位置递增。实验设计阶段不得把任何格子写成已经通过。"
+    "deliverable": "旋转恒等式、布局置换和缓存位置三份数值表",
+    "example": "examples/network/position.py",
+    "unit_ids": [
+      "position-relative-rotation",
+      "position-layout",
+      "position-cache-phase"
+    ]
   },
   {
     "id": "ffn-norm",
@@ -59,17 +77,23 @@
     "module": "network",
     "page": "wiki/topics/前馈网络与归一化.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 2,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
-      "估算FFN参数与激活",
-      "区分残差和归一化",
-      "设计受控结构比较"
+      "推导门控参数预算",
+      "区分归一化统计并计算雅可比",
+      "解释残差通路与归一化次序"
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "制作一张参数/激活预算表，分别改变T、d、m；再为Pre-Norm与Post-Norm写一个小规模对照设计，记录梯度范数、损失曲线与失败条件。学习原理不要求立即训练大型模型。"
+    "deliverable": "参数激活预算、归一化对照与残差雅可比表",
+    "example": "examples/network/ffn-norm.py",
+    "unit_ids": [
+      "ffn-norm-swiglu",
+      "ffn-norm-rms-jacobian",
+      "ffn-norm-residual-paths"
+    ]
   },
   {
     "id": "pretraining",
@@ -77,17 +101,23 @@
     "module": "training",
     "page": "wiki/topics/预训练目标与数据.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 2,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
-      "推导下一token损失",
-      "设计去重与切分",
-      "区分学习损失和下游能力"
+      "定位目标错位和mask",
+      "计算CE梯度与有效token加权",
+      "审计文档级重复和打包边界"
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "用小型自建文本集画出原文→分词→输入标签错位→mask→loss的完整流程。记录每一步样本数和有效token数，再设计文档级重复与跨集合近重复的检查方式。"
+    "deliverable": "标签位置表、有效token损失表和重复候选清单",
+    "example": "examples/training/pretraining.py",
+    "unit_ids": [
+      "pretraining-target-shift",
+      "pretraining-loss-denominator",
+      "pretraining-data-isolation"
+    ]
   },
   {
     "id": "sft",
@@ -98,17 +128,23 @@
       "SFT",
       "LoRA"
     ],
-    "coverage": "expanded",
-    "page_version": 2,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
-      "验证标签mask与对话模板",
-      "计算LoRA参数",
-      "设计数据和适配器消融"
+      "核验模板mask和监督目标",
+      "推导LoRA参数梯度",
+      "验证合并与未合并前向等价"
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "手工标注两条对话样本的训练位置，一条含多轮对话，一条有padding。随后设计“正确模板/错误模板”和“不同秩但相同数据”的两组独立比较，避免一次改变全部变量。"
+    "deliverable": "监督位置、初始化梯度、合并输出三份对照表",
+    "example": "examples/training/sft.py",
+    "unit_ids": [
+      "sft-label-mask",
+      "sft-lora-gradient",
+      "sft-lora-merge"
+    ]
   },
   {
     "id": "preference",
@@ -116,17 +152,23 @@
     "module": "training",
     "page": "wiki/topics/偏好学习与DPO.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 2,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
-      "解释偏好对与参考策略",
-      "理解DPO相对目标",
-      "检查标注偏差"
+      "推导KL重参数化",
+      "核算DPO稳定损失和梯度",
+      "识别序列mask及长度权重变化"
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "设计四种偏好对：正确性优先、格式优先、长短不同、两者都错误。分别说明标签想教会什么，再建立独立事实测试和长度分层结果表。"
+    "deliverable": "最优策略表、DPO梯度表和长度分层log比值表",
+    "example": "examples/training/preference.py",
+    "unit_ids": [
+      "preference-kl-mapping",
+      "preference-dpo-gradient",
+      "preference-sequence-ratio"
+    ]
   },
   {
     "id": "policy-optimization",
@@ -134,17 +176,23 @@
     "module": "training",
     "page": "wiki/topics/策略优化与GRPO.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 2,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
-      "区分策略、参考与奖励",
-      "推导组内优势",
-      "检查奖励投机"
+      "计算组优势及缺失奖励边界",
+      "推导裁剪梯度与old冻结作用",
+      "区分KL期望条件和损失归约"
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "为一个可校验的小任务分别设计正确性奖励和格式奖励，并列出可能的投机行为。记录组大小、采样温度、归一化与验证器版本；先用人工小样本检查奖励逻辑。"
+    "deliverable": "组优势、裁剪区域、KL期望和变长归约对照表",
+    "example": "examples/training/policy-optimization.py",
+    "unit_ids": [
+      "policy-optimization-advantages",
+      "policy-optimization-clipping",
+      "policy-optimization-kl-reduction"
+    ]
   },
   {
     "id": "prefill-decode",
@@ -152,8 +200,8 @@
     "module": "inference",
     "page": "wiki/topics/Prefill与Decode.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 2,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
       "分解请求时间线",
@@ -162,7 +210,13 @@
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "画出两个请求的到达、首token和完成时间线，分别计算延迟与观测区间吞吐。设计长提示/短输出与短提示/长输出两类负载，不把它们平均成一个无法解释的数字。"
+    "deliverable": "画出两个请求的到达、首token和完成时间线，分别计算延迟与观测区间吞吐。设计长提示/短输出与短提示/长输出两类负载，不把它们平均成一个无法解释的数字。",
+    "example": "examples/inference/prefill-decode.py",
+    "unit_ids": [
+      "prefill-decode-timing",
+      "prefill-decode-attention-work",
+      "prefill-decode-chunk-budget"
+    ]
   },
   {
     "id": "kv-cache",
@@ -173,8 +227,8 @@
       "KV Cache",
       "键值缓存"
     ],
-    "coverage": "expanded",
-    "page_version": 2,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
       "估算不同请求的缓存",
@@ -183,7 +237,13 @@
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "做一张请求长度表，计算有效KV、padding布局与分页布局的估计值。再列出跨请求复用所需身份：模型版本、adapter、token序列、位置与缓存精度等，并设计一个不兼容前缀的反例。"
+    "deliverable": "做一张请求长度表，计算有效KV、padding布局与分页布局的估计值。再列出跨请求复用所需身份：模型版本、adapter、token序列、位置与缓存精度等，并设计一个不兼容前缀的反例。",
+    "example": "examples/inference/kv-cache.py",
+    "unit_ids": [
+      "kv-cache-bytes",
+      "kv-cache-append-attend",
+      "kv-cache-prefix-identity"
+    ]
   },
   {
     "id": "cache-scheduling",
@@ -191,8 +251,8 @@
     "module": "inference",
     "page": "wiki/topics/缓存分页与连续批处理.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 2,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
       "区分分页、共享和调度",
@@ -201,7 +261,13 @@
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "用三类长度的请求画出五个调度迭代，记录每轮活跃请求与剩余KV预算。分别加入前缀共享和抢占，说明新增状态与可能成本。"
+    "deliverable": "用三类长度的请求画出五个调度迭代，记录每轮活跃请求与剩余KV预算。分别加入前缀共享和抢占，说明新增状态与可能成本。",
+    "example": "examples/inference/cache-scheduling.py",
+    "unit_ids": [
+      "cache-scheduling-page-map",
+      "cache-scheduling-continuous",
+      "cache-scheduling-radix"
+    ]
   },
   {
     "id": "inference-frameworks",
@@ -209,8 +275,8 @@
     "module": "inference",
     "page": "wiki/topics/推理框架与性能实验.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 2,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
       "写出可重复性能协议",
@@ -219,7 +285,13 @@
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "填写一份性能评测协议，先做输出正确性和停止条件检查，再安排warm-up及稳态采样。保存逐请求结果，区分请求失败、生成截断和超时；不把失败请求从分母悄悄删除。"
+    "deliverable": "填写一份性能评测协议，先做输出正确性和停止条件检查，再安排warm-up及稳态采样。保存逐请求结果，区分请求失败、生成截断和超时；不把失败请求从分母悄悄删除。",
+    "example": "examples/inference/inference-frameworks.py",
+    "unit_ids": [
+      "inference-frameworks-traffic",
+      "inference-frameworks-goodput",
+      "inference-frameworks-tail"
+    ]
   },
   {
     "id": "agent-loop",
@@ -227,8 +299,8 @@
     "module": "harness",
     "page": "wiki/topics/Harness任务循环.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 2,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
       "画出可恢复状态机",
@@ -237,7 +309,13 @@
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "为一个无真实副作用的文件整理任务画状态图，枚举工具失败、重复返回、结果未知与用户更改目标四种情况。把恢复检查点写成结构化表格，并说明哪些动作幂等。"
+    "deliverable": "为一个无真实副作用的文件整理任务画状态图，枚举工具失败、重复返回、结果未知与用户更改目标四种情况。把恢复检查点写成结构化表格，并说明哪些动作幂等。",
+    "example": "examples/harness/agent-loop.py",
+    "unit_ids": [
+      "agent-loop-transition",
+      "agent-loop-admit-budget",
+      "agent-loop-reconcile-outcome"
+    ]
   },
   {
     "id": "context",
@@ -245,8 +323,8 @@
     "module": "harness",
     "page": "wiki/topics/上下文选择与压缩.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 2,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
       "按任务选择上下文",
@@ -255,7 +333,13 @@
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "为自己的研究任务写一份检查点，标出必须逐字保留、可概括、可按需回读三类信息。让另一位读者仅根据检查点复述任务，记录遗漏；此处提供检查方法，不宣称已完成用户实验。"
+    "deliverable": "为自己的研究任务写一份检查点，标出必须逐字保留、可概括、可按需回读三类信息。让另一位读者仅根据检查点复述任务，记录遗漏；此处提供检查方法，不宣称已完成用户实验。",
+    "example": "examples/harness/context.py",
+    "unit_ids": [
+      "context-select-context",
+      "context-trim-complete-turns",
+      "context-audit-checkpoint"
+    ]
   },
   {
     "id": "memory",
@@ -263,8 +347,8 @@
     "module": "harness",
     "page": "wiki/topics/Agent记忆与保鲜.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 2,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
       "定义记忆写入与失效条件",
@@ -273,7 +357,13 @@
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "创建三条模拟记忆：项目版本事实、个人阅读偏好、一次失败过程。给它们分别制定召回条件、更新时间和删除传播清单，再设计一条不应被当前任务采用的旧记忆。"
+    "deliverable": "创建三条模拟记忆：项目版本事实、个人阅读偏好、一次失败过程。给它们分别制定召回条件、更新时间和删除传播清单，再设计一条不应被当前任务采用的旧记忆。",
+    "example": "examples/harness/memory.py",
+    "unit_ids": [
+      "memory-eligible-memories",
+      "memory-freshness-score",
+      "memory-invalidation-closure"
+    ]
   },
   {
     "id": "tools-skills",
@@ -281,8 +371,8 @@
     "module": "harness",
     "page": "wiki/topics/工具协议与MCP及Skill.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 2,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
       "区分工具Schema与任务方法",
@@ -291,7 +381,13 @@
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "为一个只读查询工具写输入、输出和错误表，再为一个模拟写工具加幂等键与回读接口。对缺字段、错误类型、语义歧义、超时和重复请求分别指定宿主动作。"
+    "deliverable": "为一个只读查询工具写输入、输出和错误表，再为一个模拟写工具加幂等键与回读接口。对缺字段、错误类型、语义歧义、超时和重复请求分别指定宿主动作。",
+    "example": "examples/harness/tools-skills.py",
+    "unit_ids": [
+      "tools-skills-validate-query",
+      "tools-skills-classify-response",
+      "tools-skills-skill-load-plan"
+    ]
   },
   {
     "id": "rag",
@@ -299,8 +395,8 @@
     "module": "knowledge",
     "page": "wiki/topics/RAG与引用回答.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 2,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
       "拆分检索和回答误差",
@@ -309,7 +405,13 @@
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "从自建小资料集设计12个问题：单源、多源、无答案、版本冲突各3个。先人工冻结相关证据和判据，再比较检索与回答，不让候选系统同时制定自己的标准答案。"
+    "deliverable": "从自建小资料集设计12个问题：单源、多源、无答案、版本冲突各3个。先人工冻结相关证据和判据，再比较检索与回答，不让候选系统同时制定自己的标准答案。",
+    "example": "examples/knowledge/rag.py",
+    "unit_ids": [
+      "rag-marginal",
+      "rag-context",
+      "rag-citation"
+    ]
   },
   {
     "id": "ingestion",
@@ -317,8 +419,8 @@
     "module": "knowledge",
     "page": "wiki/topics/来源接入与版本管理.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 2,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
       "保存来源身份和读取范围",
@@ -327,7 +429,13 @@
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "制作一份来源卡和一份变更卡，模拟新增、仅排版变化、关键更正与暂时不可读四类事件。为每类事件列出应更新和不应更新的对象。"
+    "deliverable": "制作一份来源卡和一份变更卡，模拟新增、仅排版变化、关键更正与暂时不可读四类事件。为每类事件列出应更新和不应更新的对象。",
+    "example": "examples/knowledge/ingestion.py",
+    "unit_ids": [
+      "ingestion-identity",
+      "ingestion-delta",
+      "ingestion-retraction"
+    ]
   },
   {
     "id": "hybrid-search",
@@ -335,8 +443,8 @@
     "module": "knowledge",
     "page": "wiki/topics/混合检索与重排.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 2,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
       "识别不同召回器的优劣",
@@ -345,7 +453,13 @@
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "设计精确术语、同义表达、长问题、无答案四类查询，保存关键词、向量、融合与重排后的候选列表。固定语料与问题，按查询类别比较，先分析漏召回再调整参数。"
+    "deliverable": "设计精确术语、同义表达、长问题、无答案四类查询，保存关键词、向量、融合与重排后的候选列表。固定语料与问题，按查询类别比较，先分析漏召回再调整参数。",
+    "example": "examples/knowledge/hybrid-search.py",
+    "unit_ids": [
+      "hybrid-search-bm25",
+      "hybrid-search-rrf",
+      "hybrid-search-rerank"
+    ]
   },
   {
     "id": "graph-wiki",
@@ -356,8 +470,8 @@
       "LLM Wiki",
       "GraphRAG"
     ],
-    "coverage": "expanded",
-    "page_version": 2,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
       "区分编纂与检索",
@@ -366,7 +480,13 @@
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "选一条来源变更，画出“来源→声明→主题→能力目标→练习”的影响链。分别标记正式先修和普通关联，检查是否出现不合理的先修循环。"
+    "deliverable": "选一条来源变更，画出“来源→声明→主题→能力目标→练习”的影响链。分别标记正式先修和普通关联，检查是否出现不合理的先修循环。",
+    "example": "examples/knowledge/graph-wiki.py",
+    "unit_ids": [
+      "graph-wiki-local-query",
+      "graph-wiki-global-query",
+      "graph-wiki-wiki-impact"
+    ]
   },
   {
     "id": "task-loop",
@@ -374,8 +494,8 @@
     "module": "agents",
     "page": "wiki/topics/业务Agent任务闭环.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 2,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
       "把用户目标转换成终态契约",
@@ -384,7 +504,13 @@
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "为模拟资料整理任务设计正常、缺资料、重复触发和中途失败四个场景。每个场景明确终态断言与恢复动作，并区分可自动回查和需要人工判断的部分。"
+    "deliverable": "为模拟资料整理任务设计正常、缺资料、重复触发和中途失败四个场景。每个场景明确终态断言与恢复动作，并区分可自动回查和需要人工判断的部分。",
+    "example": "examples/agents/task-loop.py",
+    "unit_ids": [
+      "task-loop-terminal-contract",
+      "task-loop-task-frontier",
+      "task-loop-compensation-plan"
+    ]
   },
   {
     "id": "gui-agent",
@@ -392,8 +518,8 @@
     "module": "agents",
     "page": "wiki/topics/GUI定位与执行.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 2,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
       "统一截图与坐标空间",
@@ -402,7 +528,13 @@
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "用自建示意图设计坐标变换练习，分别加入缩放、滚动和遮挡。为每种情况选择重新截图、重定位、等待或回读状态；不要在真实账号上反复尝试有副作用的操作。"
+    "deliverable": "用自建示意图设计坐标变换练习，分别加入缩放、滚动和遮挡。为每种情况选择重新截图、重定位、等待或回读状态；不要在真实账号上反复尝试有副作用的操作。",
+    "example": "examples/agents/gui-agent.py",
+    "unit_ids": [
+      "gui-agent-map-point",
+      "gui-agent-observation-gate",
+      "gui-agent-verify-gui-action"
+    ]
   },
   {
     "id": "coding-agent",
@@ -410,8 +542,8 @@
     "module": "agents",
     "page": "wiki/topics/AI代码开发与反馈.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 2,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
       "按契约形成补丁",
@@ -420,7 +552,13 @@
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "选择一个自建小函数定义契约和反例，在修改前写下期望结果，再比较最小补丁与替代方案。冻结隐藏验证点的设计，不让实现本身决定全部断言。"
+    "deliverable": "选择一个自建小函数定义契约和反例，在修改前写下期望结果，再比较最小补丁与替代方案。冻结隐藏验证点的设计，不让实现本身决定全部断言。",
+    "example": "examples/agents/coding-agent.py",
+    "unit_ids": [
+      "coding-agent-repository-slice",
+      "coding-agent-guarded-replace",
+      "coding-agent-grade-patch"
+    ]
   },
   {
     "id": "agent-evaluation",
@@ -428,8 +566,8 @@
     "module": "agents",
     "page": "wiki/topics/Agent评测与失败归因.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 2,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
       "建立分层评测",
@@ -438,7 +576,13 @@
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "为五个模拟任务填写结果表，至少包含一次结果未知和一次评估器误判。然后设计怎样复核假阳性、怎样保留重试历史及怎样比较两版Harness。"
+    "deliverable": "为五个模拟任务填写结果表，至少包含一次结果未知和一次评估器误判。然后设计怎样复核假阳性、怎样保留重试历史及怎样比较两版Harness。",
+    "example": "examples/agents/agent-evaluation.py",
+    "unit_ids": [
+      "agent-evaluation-success-summary",
+      "agent-evaluation-first-divergence",
+      "agent-evaluation-audit-evaluator"
+    ]
   },
   {
     "id": "benchmark-protocol",
@@ -446,17 +590,23 @@
     "module": "benchmark",
     "page": "wiki/topics/评测协议与可复现性.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 1,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
-      "定义评测对象与成功标准",
-      "冻结可复现协议",
-      "区分开发集与报告集"
+      "能把模型、数据、提示、评分与预算写成明确的协议对象，并解释指纹能证明什么。",
+      "能识别开发集和报告集之间的显式重叠，区分ID检查与污染检测。",
+      "能用包含运行错误的逐题记录计算不同分母的指标，拒绝把重试或失败悄悄隐藏。"
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "用自建的十个小问题填写评测协议模板。将其中两题用作调试，其余冻结为报告集；先人工模拟完整输入输出链，再考虑接入实际模型。给协议和结果分别保存版本。"
+    "deliverable": "构造两个只在键顺序上不同的协议，核对指纹相同；再逐项改变提示、评分器或预算并记录身份变化。为train/dev/test各建三个ID，制造一个跨切分重叠与一个仅正文重复的反例。最后为四题分别记录两次通过、一次失败、一次错误，手算完整成功率和已评分准确率，并解释为何不能只发布较高的那个数字。",
+    "example": "examples/benchmark/benchmark-protocol.py",
+    "unit_ids": [
+      "benchmark-protocol-identity",
+      "benchmark-protocol-splits",
+      "benchmark-protocol-ledger"
+    ]
   },
   {
     "id": "benchmark-metrics",
@@ -464,17 +614,23 @@
     "module": "benchmark",
     "page": "wiki/topics/评测指标与统计推断.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 1,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
-      "选择与任务匹配的指标",
-      "计算样例与不确定性",
-      "正确做配对比较"
+      "能根据目标分布选择micro或macro，并从逐题记录还原分母。",
+      "能推导并计算Wilson比例区间，解释适用假设与边界情形。",
+      "能按相同题目的配对关系重采样，区分均值差分布、置信区间与胜负结论。"
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "用一张逐题结果表计算micro、macro和每类失败数；再写出配对bootstrap的抽样单位与随机性记录。若同一文档生成多题，讨论是否应按文档分组抽样。"
+    "deliverable": "先复算两类别的micro/macro反例，再比较0/10、5/10、10/10和90/100的Wilson区间。对一份同题A/B表按ID对齐，手工列出两次共同索引重采样；用相同seed验证分布可重复，用A=B和固定差值构造不变量检查。最后说明一次区间计算尚未解决的数据偏差与多次选型问题。",
+    "example": "examples/benchmark/benchmark-metrics.py",
+    "unit_ids": [
+      "benchmark-metrics-aggregation",
+      "benchmark-metrics-wilson",
+      "benchmark-metrics-paired"
+    ]
   },
   {
     "id": "benchmark-contamination",
@@ -482,17 +638,23 @@
     "module": "benchmark",
     "page": "wiki/topics/数据污染与评测集治理.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 1,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
-      "识别数据泄漏路径",
-      "区分污染风险与证据",
-      "建立评测集更新规则"
+      "能定义并解释文本规范化规则，区分字节相同、规范化相同与语义相同。",
+      "能手算n-gram Jaccard并说明阈值的误报和漏报来源。",
+      "能按发布时间和移除时间冻结评测快照，解释版本变化如何影响成绩可比性。"
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "为自己的小评测集画数据血缘图，标出训练、开发、报告、检索和few-shot示例的边界。设计一次近重复检查和一次时间切分，并为每种检查写明无法发现的污染类型。"
+    "deliverable": "准备两份大小写与空白不同的自然语言文本，再准备一对大小写敏感的代码标识符，解释同一规范化规则为何可能不适用于两者。手算二元词组Jaccard，改变n观察可比较性与命中变化。最后为三条题目制作发布/撤回时间线，冻结两个日期的成员列表，并记录哪些变化需要重新评测。",
+    "example": "examples/benchmark/benchmark-contamination.py",
+    "unit_ids": [
+      "benchmark-contamination-hash",
+      "benchmark-contamination-ngrams",
+      "benchmark-contamination-release"
+    ]
   },
   {
     "id": "benchmark-general",
@@ -500,17 +662,23 @@
     "module": "benchmark",
     "page": "wiki/topics/通用能力基准与选型.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 1,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
-      "选择通用能力评测组合",
-      "区分题型与随机基线",
-      "解读领域分层结果"
+      "能从对数似然构造选择题预测，解释长度归一化可能改变排序。",
+      "能计算不同选项数量下的均匀随机基线，并说清基线调整的局限。",
+      "能将答案解析视为版本化评分协议，保留无法解析与相互矛盾的输出。"
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "设计一张基准选择表：目标能力、题型、答案判据、数据版本、提示方式、是否允许工具、成本。选两种不同题型作为互补，不抄录当前排行榜名次。"
+    "deliverable": "为两个长度不同的候选手算原始与归一化排序，并分别记录字符和token口径。对混合四选一/十选一题集计算随机基线。准备正常答案、无标记答案、越界字母和矛盾答案四类输出，检查解析状态；最后比较严格计错与随机回退的理论期望，解释为什么不能只报告较高分。",
+    "example": "examples/benchmark/benchmark-general.py",
+    "unit_ids": [
+      "benchmark-general-likelihood",
+      "benchmark-general-chance",
+      "benchmark-general-parser"
+    ]
   },
   {
     "id": "benchmark-reasoning-code",
@@ -518,17 +686,23 @@
     "module": "benchmark",
     "page": "wiki/topics/推理与代码生成评测.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 1,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
-      "区分答案判定与过程解释",
-      "计算pass@k",
-      "设计代码执行边界"
+      "能为数值答案定义明确的等价与未解析状态，避免用任意文本清洗代替判定。",
+      "能推导HumanEval常用pass@k估计，并区分样本池组合概率与单次成功率。",
+      "能从代码执行器追到逐样本结果，保留超时、运行失败与未运行状态。"
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "对自建小函数准备正常、边界和无效输入测试，记录每个候选的通过、失败、超时状态；先用人工写的示例计算pass@1与pass@3。运行模型生成代码时应使用独立受限环境，本次不执行基准代码。"
+    "deliverable": "对0.5、1/2、0.5001和带单位文本比较解析与等价结果；为五个补全列出两个成功样本，手工枚举十个二元子集验证pass@2。再构造通过、断言失败、运行错误、超时和未运行五类日志，核对完整分母与覆盖率，并写出一次真实代码评测还需要固定哪些隔离和依赖条件。",
+    "example": "examples/benchmark/benchmark-reasoning-code.py",
+    "unit_ids": [
+      "benchmark-reasoning-code-equivalence",
+      "benchmark-reasoning-code-passk",
+      "benchmark-reasoning-code-execution"
+    ]
   },
   {
     "id": "benchmark-multimodal",
@@ -536,8 +710,8 @@
     "module": "benchmark",
     "page": "wiki/topics/多模态与界面感知评测.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 1,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
       "区分感知、推理和交互",
@@ -546,7 +720,13 @@
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "为自建图像问题创建“原图、裁剪图、低分辨率图、含OCR转录”四种输入配置，冻结问题与答案。将错误标为信息缺失、感知、领域知识或推理，并保留复核证据。"
+    "deliverable": "为自建图像问题创建“原图、裁剪图、低分辨率图、含OCR转录”四种输入配置，冻结问题与答案。将错误标为信息缺失、感知、领域知识或推理，并保留复核证据。",
+    "example": "examples/benchmark/benchmark-multimodal.py",
+    "unit_ids": [
+      "benchmark-multimodal-input-contract",
+      "benchmark-multimodal-answer-scoring",
+      "benchmark-multimodal-stratified-error"
+    ]
   },
   {
     "id": "benchmark-agents",
@@ -554,17 +734,23 @@
     "module": "benchmark",
     "page": "wiki/topics/Agent任务基准与执行评估.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 1,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
-      "选择Agent任务基准",
-      "冻结环境与预算",
-      "解释执行式评分"
+      "构造包含有效运行、目标和回归的验收判据",
+      "区分终态整题分与条件满足分",
+      "重建任务、尝试、环境故障和预算的统计分母"
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "为一个代码任务和一个界面任务分别填协议，列出模型、工具、环境和评估器版本；设计重复操作、环境故障及评估器误判的检查用例，并固定重试预算。"
+    "deliverable": "两类任务冻结协议、逐任务判据与预算账本，包含六类成功/失败边界记录。",
+    "example": "examples/benchmark/benchmark-agents.py",
+    "unit_ids": [
+      "benchmark-agents-task-acceptance",
+      "benchmark-agents-final-state",
+      "benchmark-agents-budget-denominators"
+    ]
   },
   {
     "id": "benchmark-rag",
@@ -572,8 +758,8 @@
     "module": "benchmark",
     "page": "wiki/topics/RAG检索与回答评测.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 1,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
       "分开评估检索与回答",
@@ -582,7 +768,13 @@
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "建立单源、多源、无答案、冲突和过期版本五类问题，每类至少设计两个。先冻结证据与判据，再对比检索候选、实际上下文和最终回答，逐层记录误差。"
+    "deliverable": "建立单源、多源、无答案、冲突和过期版本五类问题，每类至少设计两个。先冻结证据与判据，再对比检索候选、实际上下文和最终回答，逐层记录误差。",
+    "example": "examples/benchmark/benchmark-rag.py",
+    "unit_ids": [
+      "benchmark-rag-context-ranking",
+      "benchmark-rag-claim-denominators",
+      "benchmark-rag-judge-estimation"
+    ]
   },
   {
     "id": "benchmark-judge",
@@ -590,17 +782,23 @@
     "module": "benchmark",
     "page": "wiki/topics/模型裁判与人工校准.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 1,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
-      "定义模型裁判任务",
-      "设计盲化与交换顺序",
-      "校准人工一致性"
+      "还原成对顺序交换中的身份并报告解析覆盖率",
+      "从混淆矩阵计算人工一致率与kappa",
+      "核算概率校准及接受阈值的覆盖与条件错误"
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "自建若干不同质量回答，覆盖正确但简短、流畅但错误、信息不足和格式不合规。设计匿名成对交换、维度评分及人工复核表，冻结准则后再使用裁判模型。"
+    "deliverable": "冻结答案的双顺序判断记录、独立人工标签矩阵与概率分箱审计表。",
+    "example": "examples/benchmark/benchmark-judge.py",
+    "unit_ids": [
+      "benchmark-judge-order-mapping",
+      "benchmark-judge-human-agreement",
+      "benchmark-judge-probability-calibration"
+    ]
   },
   {
     "id": "benchmark-systems",
@@ -608,8 +806,8 @@
     "module": "benchmark",
     "page": "wiki/topics/推理系统性能基准.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 1,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
       "定义系统负载与计时边界",
@@ -618,7 +816,13 @@
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "设计冷启动、热缓存、共享前缀和长输出四种场景；冻结质量及停止条件，先规划低并发正确性检查，再做负载扫描。记录生成器自身是否成为瓶颈。"
+    "deliverable": "设计冷启动、热缓存、共享前缀和长输出四种场景；冻结质量及停止条件，先规划低并发正确性检查，再做负载扫描。记录生成器自身是否成为瓶颈。",
+    "example": "examples/benchmark/benchmark-systems.py",
+    "unit_ids": [
+      "benchmark-systems-latency-statistics",
+      "benchmark-systems-joint-goodput",
+      "benchmark-systems-submission-validity"
+    ]
   },
   {
     "id": "benchmark-robustness",
@@ -626,16 +830,262 @@
     "module": "benchmark",
     "page": "wiki/topics/稳健性与工具安全评测.md",
     "aliases": [],
-    "coverage": "expanded",
-    "page_version": 1,
+    "coverage": "source_guided",
+    "page_version": 3,
     "last_checked": "2026-10-24",
     "learning_objectives": [
-      "定义稳健性威胁模型",
-      "区分正常效用与安全失效",
-      "设计隔离评测"
+      "审计正常效用、安全效用与ASR的不同分母",
+      "区分模型行为、运行时校验和宿主权限隔离",
+      "以同题正常对照解释防御收益与退化"
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "只在自建隔离环境中设计异常返回样例，不使用真实凭据或真实外部写操作。冻结工具权限与任务判据，记录拒绝、继续、回查、失败四种行为及其合理性。"
+    "deliverable": "正常任务表、安全案例四标签表、权限纯判定记录与同题四格转移表。",
+    "example": "examples/benchmark/benchmark-robustness.py",
+    "unit_ids": [
+      "benchmark-robustness-utility-security-denominators",
+      "benchmark-robustness-host-authorization",
+      "benchmark-robustness-paired-controls"
+    ]
+  },
+  {
+    "id": "openhands",
+    "aliases": [],
+    "title": "OpenHands事件流与运行时",
+    "module": "agents",
+    "page": "wiki/topics/OpenHands事件流与运行时.md",
+    "page_version": 1,
+    "learning_objectives": [
+      "区分Canvas、SDK与托管服务的职责",
+      "推演事件分支和模型消息投影",
+      "核对动作与观察的关联契约"
+    ],
+    "deliverable": "给出一个分支事件轨迹与多工具调用的消息投影，检查观察身份、挂起动作与运行时边界。",
+    "coverage": "source_guided",
+    "last_checked": "2026-10-24",
+    "depth": "worked",
+    "practice_status": "designed",
+    "example": "examples/agents/openhands.py",
+    "unit_ids": [
+      "openhands-branch",
+      "openhands-projection",
+      "openhands-observation"
+    ]
+  },
+  {
+    "id": "swe-agent",
+    "aliases": [],
+    "title": "SWEAgent与智能体计算机接口",
+    "module": "agents",
+    "page": "wiki/topics/SWEAgent与智能体计算机接口.md",
+    "page_version": 1,
+    "learning_objectives": [
+      "解释ACI怎样改变观察与编辑反馈",
+      "推演编辑失败后的纠错与轨迹状态",
+      "区分任务停止、补丁生成和代码任务评测"
+    ],
+    "deliverable": "用小文件演示窗口化观察、唯一编辑匹配和重试轨迹，记录接口失败与任务结果的区别。",
+    "coverage": "source_guided",
+    "last_checked": "2026-10-24",
+    "depth": "worked",
+    "practice_status": "designed",
+    "example": "examples/agents/swe-agent.py",
+    "unit_ids": [
+      "swe-agent-observation",
+      "swe-agent-edit-contract",
+      "swe-agent-trajectory"
+    ]
+  },
+  {
+    "id": "aider",
+    "aliases": [],
+    "title": "Aider仓库地图与编辑协议",
+    "module": "agents",
+    "page": "wiki/topics/Aider仓库地图与编辑协议.md",
+    "page_version": 1,
+    "learning_objectives": [
+      "推导RepoMap图排序与token预算选择",
+      "解释SEARCH/REPLACE匹配和失败反馈",
+      "区分用户未提交改动、工具编辑与版本控制边界"
+    ],
+    "deliverable": "手算个性化图排序，制作预算内仓库地图，演示编辑匹配失败和独立的版本控制计划。",
+    "coverage": "source_guided",
+    "last_checked": "2026-10-24",
+    "depth": "worked",
+    "practice_status": "designed",
+    "example": "examples/agents/aider.py",
+    "unit_ids": [
+      "aider-repomap",
+      "aider-edit-format",
+      "aider-git-boundary"
+    ]
+  },
+  {
+    "id": "mobile-agent",
+    "aliases": [],
+    "title": "MobileAgent多智能体协作",
+    "module": "agents",
+    "page": "wiki/topics/MobileAgent多智能体协作.md",
+    "page_version": 1,
+    "learning_objectives": [
+      "追踪视觉感知与像素坐标",
+      "区分进度事实历史的信息流",
+      "核验反思状态更新与恢复观测"
+    ],
+    "deliverable": "感知几何表、规划记忆表和反思转移表",
+    "coverage": "source_guided",
+    "last_checked": "2026-10-24",
+    "depth": "worked",
+    "practice_status": "designed",
+    "example": "examples/agents/mobile-agent.py",
+    "unit_ids": [
+      "mobile-agent-perception",
+      "mobile-agent-planning-memory",
+      "mobile-agent-reflection"
+    ]
+  },
+  {
+    "id": "app-agent",
+    "aliases": [],
+    "title": "AppAgent探索与技能学习",
+    "module": "agents",
+    "page": "wiki/topics/AppAgent探索与技能学习.md",
+    "page_version": 1,
+    "learning_objectives": [
+      "追踪元素UID与临时标签",
+      "解释探索文档的产生与更新",
+      "核算部署检索和网格坐标"
+    ],
+    "deliverable": "UID变化表、文档槽位状态表与部署坐标表",
+    "coverage": "source_guided",
+    "last_checked": "2026-10-24",
+    "depth": "worked",
+    "practice_status": "designed",
+    "example": "examples/agents/app-agent.py",
+    "unit_ids": [
+      "app-agent-element-identity",
+      "app-agent-document-learning",
+      "app-agent-deployment"
+    ]
+  },
+  {
+    "id": "ui-tars",
+    "aliases": [],
+    "title": "UITARS感知与动作执行",
+    "module": "agents",
+    "page": "wiki/topics/UITARS感知与动作执行.md",
+    "page_version": 1,
+    "learning_objectives": [
+      "区分模型SDK与桌面宿主职责",
+      "追踪动作解析及坐标字段",
+      "核验轮数预算和终端动作"
+    ],
+    "deliverable": "动作协议、坐标字段和循环终态三份对照表",
+    "coverage": "source_guided",
+    "last_checked": "2026-10-24",
+    "depth": "worked",
+    "practice_status": "designed",
+    "example": "examples/agents/ui-tars.py",
+    "unit_ids": [
+      "ui-tars-action-protocol",
+      "ui-tars-coordinate-path",
+      "ui-tars-loop-state"
+    ]
+  },
+  {
+    "id": "codex-cli",
+    "aliases": [],
+    "title": "CodexCLI架构与执行",
+    "module": "agents",
+    "page": "wiki/topics/CodexCLI架构与执行.md",
+    "page_version": 1,
+    "learning_objectives": [
+      "区分CLI入口、执行前端与核心运行层",
+      "追踪模型工具调用到执行策略",
+      "区分输出截断、命令停止与业务验收"
+    ],
+    "deliverable": "用一份模拟请求画出CLI、exec前端、App Server客户端和核心工具运行层的职责。为未知工具、载荷不匹配、等待批准和输出截断各设计一个输入；手算返回结果。最后说明同一命令为何可能“进程已退出但输出不完整”，列出业务验收还需要的证据。",
+    "coverage": "source_guided",
+    "last_checked": "2026-10-24",
+    "depth": "worked",
+    "practice_status": "designed",
+    "example": "examples/agents/codex-cli.py",
+    "unit_ids": [
+      "codex-cli-launch-plan",
+      "codex-cli-route-call",
+      "codex-cli-capture-output"
+    ]
+  },
+  {
+    "id": "claude-code",
+    "aliases": [],
+    "title": "ClaudeCode工作流与扩展边界",
+    "module": "agents",
+    "page": "wiki/topics/ClaudeCode工作流与扩展边界.md",
+    "page_version": 1,
+    "learning_objectives": [
+      "区分产品说明、公开SDK与未公开实现",
+      "解释回调控制协议与进程边界",
+      "设计工具扩展及其错误处理"
+    ],
+    "deliverable": "为“读取文件、生成补丁、等待验收”画出应用、Python SDK、CLI和进程内工具四个边界。构造result已到但业务未验收、hook返回deny却控制响应success、MCP输入非法三个案例。分别说明反馈应到哪一层，以及哪些判断需要真实产品或独立业务证据。",
+    "coverage": "source_guided",
+    "last_checked": "2026-10-24",
+    "depth": "worked",
+    "practice_status": "designed",
+    "example": "examples/agents/claude-code.py",
+    "unit_ids": [
+      "claude-code-response-window",
+      "claude-code-hook-reply",
+      "claude-code-sdk-tool-route"
+    ]
+  },
+  {
+    "id": "langgraph",
+    "aliases": [],
+    "title": "LangGraph状态图与持久化",
+    "module": "harness",
+    "page": "wiki/topics/LangGraph状态图与持久化.md",
+    "page_version": 1,
+    "learning_objectives": [
+      "解释超步写入与状态归并",
+      "按线程和检查点恢复任务写入",
+      "识别interrupt节点重跑和顺序绑定"
+    ],
+    "deliverable": "构造两个节点同时写total的超步，比较sum与last；为两个thread_id各写同序号pending记录并手算隔离结果。再设计含两个interrupt的节点，演示无答案、一个答案、两个答案的三次重跑，解释前置动作怎样避免重复影响。",
+    "coverage": "source_guided",
+    "last_checked": "2026-10-24",
+    "depth": "worked",
+    "practice_status": "designed",
+    "example": "examples/harness/langgraph.py",
+    "unit_ids": [
+      "langgraph-merge-superstep",
+      "langgraph-checkpoint-writes",
+      "langgraph-replay-interrupt-node"
+    ]
+  },
+  {
+    "id": "autogen",
+    "aliases": [],
+    "title": "AutoGen对话团队与终止",
+    "module": "harness",
+    "page": "wiki/topics/AutoGen对话团队与终止.md",
+    "page_version": 1,
+    "learning_objectives": [
+      "追踪轮询团队的调度与消息流",
+      "区分状态化终止条件及其组合",
+      "恢复参与者与管理器的一致状态"
+    ],
+    "deliverable": "构造writer与critic两角色的六次轮询序列，手算游标。用不同delta批次分别满足计数与文本条件，比较AND和OR停止时机；加入用户文本含APPROVE的反例。最后构造完整团队快照，并说明为什么更改参与者顺序或运行中保存会破坏恢复语义。",
+    "coverage": "source_guided",
+    "last_checked": "2026-10-24",
+    "depth": "worked",
+    "practice_status": "designed",
+    "example": "examples/harness/autogen.py",
+    "unit_ids": [
+      "autogen-select-round-robin",
+      "autogen-termination-step",
+      "autogen-snapshot-team"
+    ]
   }
 ]

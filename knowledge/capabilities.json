@@ -4,67 +4,269 @@
     "module": "network",
     "level": "understand",
     "outcome": "解释token到logits的计算路径",
-    "deliverable": "概念关系说明与反例",
+    "deliverable": "三token因果权重表、单token门控分支图和两步采样记录。",
     "topic_ids": [
       "transformer",
-      "attention-heads",
-      "position",
       "ffn-norm"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "transformer-causal-attention",
+      "transformer-autoregressive-loop",
+      "ffn-norm-swiglu"
+    ],
+    "learning_actions": [
+      "画出单层注意力、门控前馈和逐步生成的输入输出。",
+      "把训练时可并行的位置与生成时依赖历史的位置分开标记。"
+    ],
+    "acceptance": [
+      "权重每行归一，未来位置权重为零；说明缩放因子的作用。",
+      "采样记录包含历史、温度和抽样位置，不把采样概率等同模型原概率。",
+      "门控两分支与输出投影维度吻合，不能把单层算例称为完整模型推理。"
+    ],
+    "example_paths": [
+      "examples/network/transformer.py",
+      "examples/network/ffn-norm.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "transformer-causal-attention",
+        "path": "examples/network/transformer.py",
+        "function": "causal_attention"
+      },
+      {
+        "unit_id": "transformer-autoregressive-loop",
+        "path": "examples/network/transformer.py",
+        "function": "generate_tokens"
+      },
+      {
+        "unit_id": "ffn-norm-swiglu",
+        "path": "examples/network/ffn-norm.py",
+        "function": "swiglu"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/基础入门路径.md",
+      "wiki/paths/系统工程路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "transformer-causal-attention",
+        "scope": "有限输入、方形因果自注意力、无dropout"
+      },
+      {
+        "unit_id": "transformer-autoregressive-loop",
+        "scope": "示例用转移表近似条件分布，正温度，无KV缓存"
+      },
+      {
+        "unit_id": "ffn-norm-swiglu",
+        "scope": "无偏置、不计对齐与其他层"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "network-derive",
     "module": "network",
     "level": "derive",
     "outcome": "推导注意力、位置与参数预算",
-    "deliverable": "可复核的手算或状态推演",
+    "deliverable": "带单位的KV预算表、旋转恒等式推导和归一化导数表。",
     "topic_ids": [
-      "transformer",
       "attention-heads",
       "position",
       "ffn-norm"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "attention-heads-budget",
+      "position-relative-rotation",
+      "ffn-norm-rms-jacobian"
+    ],
+    "learning_actions": [
+      "给同一组层数、长度和精度手算MHA/GQA的KV字节预算。",
+      "推导二维相对旋转与RMSNorm雅可比，并列出各自成立条件。"
+    ],
+    "acceptance": [
+      "明确KV头数与Q头数的不同作用，并列出权重、临时区和碎片等遗漏项。",
+      "同频率旋转的点积只依赖相对位置；不能据此保证长上下文质量。",
+      "区分RMS统计与去均值统计，标明epsilon和零分母边界。"
+    ],
+    "example_paths": [
+      "examples/network/attention-heads.py",
+      "examples/network/position.py",
+      "examples/network/ffn-norm.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "attention-heads-budget",
+        "path": "examples/network/attention-heads.py",
+        "function": "kv_budget"
+      },
+      {
+        "unit_id": "position-relative-rotation",
+        "path": "examples/network/position.py",
+        "function": "relative_rotation"
+      },
+      {
+        "unit_id": "ffn-norm-rms-jacobian",
+        "path": "examples/network/ffn-norm.py",
+        "function": "norm_statistics"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/基础入门路径.md",
+      "wiki/paths/系统工程路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "attention-heads-budget",
+        "scope": "层配置一致，不计临时展开、碎片和分片复制"
+      },
+      {
+        "unit_id": "position-relative-rotation",
+        "scope": "列向量约定，Q/K频率相同，幅度为1"
+      },
+      {
+        "unit_id": "ffn-norm-rms-jacobian",
+        "scope": "单token、单位增益、非负epsilon且分母非零"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "network-build",
     "module": "network",
     "level": "build",
     "outcome": "设计小规模结构正确性实验",
-    "deliverable": "带输入、步骤和预期的实践设计",
+    "deliverable": "拆合头索引表、缓存位置对照输入和预期结果清单。",
     "topic_ids": [
       "transformer",
-      "attention-heads",
-      "position",
-      "ffn-norm"
+      "position"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "transformer-head-layout",
+      "position-cache-phase"
+    ],
+    "learning_actions": [
+      "用可追踪的整数编号构造拆头与合头输入。",
+      "为缓存位置正确、错位和缩放改变各准备一份纯数值输入及预期。"
+    ],
+    "acceptance": [
+      "拆合头后还原原顺序，宽度不能整除头数时应拒绝。",
+      "同一原始键采用一致位置和频率时对齐；失配样例必须展示分数变化。",
+      "记录函数与输入版本；未运行时保留预期栏，不填实测结果。"
+    ],
+    "example_paths": [
+      "examples/network/transformer.py",
+      "examples/network/position.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "transformer-head-layout",
+        "path": "examples/network/transformer.py",
+        "function": "split_merge_heads"
+      },
+      {
+        "unit_id": "position-cache-phase",
+        "path": "examples/network/position.py",
+        "function": "cached_rope_scores"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/基础入门路径.md",
+      "wiki/paths/系统工程路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "transformer-head-layout",
+        "scope": "隐藏宽度可被头数整除"
+      },
+      {
+        "unit_id": "position-cache-phase",
+        "scope": "从原始键重建的教学检查，无动态频率切换"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "network-evaluate",
     "module": "network",
     "level": "evaluate",
     "outcome": "区分结构、数值与内核性能变化",
-    "deliverable": "协议、失败分析与结论限制",
+    "deliverable": "头合并反例、残差路径对照与结构/性能证据分层表。",
     "topic_ids": [
-      "transformer",
       "attention-heads",
-      "position",
-      "ffn-norm"
+      "ffn-norm",
+      "benchmark-systems"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "attention-heads-conversion",
+      "ffn-norm-residual-paths",
+      "benchmark-systems-joint-goodput"
+    ],
+    "learning_actions": [
+      "构造均值合并前后不同的头向量及前后归一化对照。",
+      "把结构差异、数值差异和待测服务指标分别列在结论表中。"
+    ],
+    "acceptance": [
+      "均值池化只能证明初始化如何形成，不能证明转换后质量等价。",
+      "归一化位置不同的输出或雅可比差异不能直接推出训练稳定性优劣。",
+      "联合时延达标使用同一请求的两项标签；没有硬件记录不报告速度收益。"
+    ],
+    "example_paths": [
+      "examples/network/attention-heads.py",
+      "examples/network/ffn-norm.py",
+      "examples/benchmark/benchmark-systems.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "attention-heads-conversion",
+        "path": "examples/network/attention-heads.py",
+        "function": "mean_pool_heads"
+      },
+      {
+        "unit_id": "ffn-norm-residual-paths",
+        "path": "examples/network/ffn-norm.py",
+        "function": "residual_paths"
+      },
+      {
+        "unit_id": "benchmark-systems-joint-goodput",
+        "path": "examples/benchmark/benchmark-systems.py",
+        "function": "slo_overlap"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/基础入门路径.md",
+      "wiki/paths/系统工程路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "attention-heads-conversion",
+        "scope": "同形浮点投影，须单独继续训练与评测"
+      },
+      {
+        "unit_id": "ffn-norm-residual-paths",
+        "scope": "教学对照两侧统一RMSNorm，线性子层，无完整训练结论"
+      },
+      {
+        "unit_id": "benchmark-systems-joint-goodput",
+        "scope": "所有已发请求具有同一ID的两个布尔标签；教学goodput仅包含延迟条件，不包含答案质量。"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "training-understand",
     "module": "training",
     "level": "understand",
     "outcome": "区分预训练、SFT、偏好与策略优化",
-    "deliverable": "概念关系说明与反例",
+    "deliverable": "四类训练目标对照表与同一短序列的监督位置图。",
     "topic_ids": [
       "pretraining",
       "sft",
@@ -72,14 +274,80 @@
       "policy-optimization"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "pretraining-target-shift",
+      "sft-label-mask",
+      "preference-kl-mapping",
+      "policy-optimization-advantages"
+    ],
+    "learning_actions": [
+      "为预训练、SFT、DPO和GRPO各画一条数据到学习信号的路径。",
+      "说明每条路径使用的标签、参考策略、奖励及忽略位置。"
+    ],
+    "acceptance": [
+      "下一token目标只错位一次，SFT监督由适用mask交集确定。",
+      "DPO的参考分布须覆盖候选；GRPO组内基线不是外部标准答案。",
+      "奖励缺失与零奖励分别记录，不把外部文档积累叫权重训练。"
+    ],
+    "example_paths": [
+      "examples/training/pretraining.py",
+      "examples/training/sft.py",
+      "examples/training/preference.py",
+      "examples/training/policy-optimization.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "pretraining-target-shift",
+        "path": "examples/training/pretraining.py",
+        "function": "shift_targets"
+      },
+      {
+        "unit_id": "sft-label-mask",
+        "path": "examples/training/sft.py",
+        "function": "build_sft_labels"
+      },
+      {
+        "unit_id": "preference-kl-mapping",
+        "path": "examples/training/preference.py",
+        "function": "optimal_policy"
+      },
+      {
+        "unit_id": "policy-optimization-advantages",
+        "path": "examples/training/policy-optimization.py",
+        "function": "group_advantages"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/基础入门路径.md",
+      "wiki/paths/Benchmark学习路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "pretraining-target-shift",
+        "scope": "下一token目标，明确ignore_index约定"
+      },
+      {
+        "unit_id": "sft-label-mask",
+        "scope": "输入已正确分词，示例不生成模板mask"
+      },
+      {
+        "unit_id": "preference-kl-mapping",
+        "scope": "beta正、参考支持为正，有限回答空间用于教学"
+      },
+      {
+        "unit_id": "policy-optimization-advantages",
+        "scope": "同提示outcome奖励，示例ddof可选且缺失用None"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "training-derive",
     "module": "training",
     "level": "derive",
     "outcome": "计算损失、低秩参数与相对优势",
-    "deliverable": "可复核的手算或状态推演",
+    "deliverable": "损失分母、低秩参数梯度、偏好margin与变长归约计算表。",
     "topic_ids": [
       "pretraining",
       "sft",
@@ -87,332 +355,1630 @@
       "policy-optimization"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "pretraining-loss-denominator",
+      "sft-lora-gradient",
+      "preference-dpo-gradient",
+      "policy-optimization-kl-reduction"
+    ],
+    "learning_actions": [
+      "对长短两个序列计算有效token平均损失与序列平均的区别。",
+      "手算LoRA、DPO梯度方向，并比较GRPO三种归约的权重。"
+    ],
+    "acceptance": [
+      "分母只含有效目标；不能平均两个批均值冒充所有token均值。",
+      "普通alpha/r缩放下检查A/B梯度和零初始化条件。",
+      "标准DPO的chosen/rejected梯度方向与margin一致；KL估计保留支持和采样假设。"
+    ],
+    "example_paths": [
+      "examples/training/pretraining.py",
+      "examples/training/sft.py",
+      "examples/training/preference.py",
+      "examples/training/policy-optimization.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "pretraining-loss-denominator",
+        "path": "examples/training/pretraining.py",
+        "function": "token_loss"
+      },
+      {
+        "unit_id": "sft-lora-gradient",
+        "path": "examples/training/sft.py",
+        "function": "lora_gradients"
+      },
+      {
+        "unit_id": "preference-dpo-gradient",
+        "path": "examples/training/preference.py",
+        "function": "dpo_loss"
+      },
+      {
+        "unit_id": "policy-optimization-kl-reduction",
+        "path": "examples/training/policy-optimization.py",
+        "function": "grpo_loss_terms"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/基础入门路径.md",
+      "wiki/paths/Benchmark学习路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "pretraining-loss-denominator",
+        "scope": "类索引目标、无类别权重和label smoothing"
+      },
+      {
+        "unit_id": "sft-lora-gradient",
+        "scope": "普通alpha/r LoRA，无dropout、bias或变体"
+      },
+      {
+        "unit_id": "preference-dpo-gradient",
+        "scope": "标准reverse_kl加sigmoid，无平滑或附加损失"
+      },
+      {
+        "unit_id": "policy-optimization-kl-reduction",
+        "scope": "共同支持、有限logp、教学只算已采样值和本地归约"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "training-build",
     "module": "training",
     "level": "build",
     "outcome": "设计数据切分、模板与奖励检查",
-    "deliverable": "带输入、步骤和预期的实践设计",
+    "deliverable": "切分审计候选表、LoRA合并对照与奖励有效性样例。",
     "topic_ids": [
       "pretraining",
       "sft",
-      "preference",
       "policy-optimization"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "pretraining-data-isolation",
+      "sft-lora-merge",
+      "policy-optimization-advantages"
+    ],
+    "learning_actions": [
+      "在虚构文档中放入跨切分重复候选，并设计独立人工复核列。",
+      "给LoRA合并前后相同浮点输入，另设计同分奖励与缺失奖励两组样例。"
+    ],
+    "acceptance": [
+      "重复检测只生成候选，不以Jaccard阈值自动认定污染或删除数据。",
+      "普通浮点、相同缩放且无dropout时才要求合并前后等价，保留数值容差。",
+      "有效奖励全相同时不应出现虚构的偏好信号；缺失奖励不能当零。"
+    ],
+    "example_paths": [
+      "examples/training/pretraining.py",
+      "examples/training/sft.py",
+      "examples/training/policy-optimization.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "pretraining-data-isolation",
+        "path": "examples/training/pretraining.py",
+        "function": "audit_split"
+      },
+      {
+        "unit_id": "sft-lora-merge",
+        "path": "examples/training/sft.py",
+        "function": "lora_merge_equivalence"
+      },
+      {
+        "unit_id": "policy-optimization-advantages",
+        "path": "examples/training/policy-optimization.py",
+        "function": "group_advantages"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/基础入门路径.md",
+      "wiki/paths/Benchmark学习路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "pretraining-data-isolation",
+        "scope": "Jaccard审计仅为小规模空白分词教学候选"
+      },
+      {
+        "unit_id": "sft-lora-merge",
+        "scope": "普通浮点线性层，允许浮点规约误差"
+      },
+      {
+        "unit_id": "policy-optimization-advantages",
+        "scope": "同提示outcome奖励，示例ddof可选且缺失用None"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "training-evaluate",
     "module": "training",
     "level": "evaluate",
     "outcome": "以独立任务和污染分析判断训练效果",
-    "deliverable": "协议、失败分析与结论限制",
+    "deliverable": "长度分层log比值表、污染候选复核表和同题比较协议。",
     "topic_ids": [
-      "pretraining",
-      "sft",
       "preference",
-      "policy-optimization"
+      "benchmark-contamination",
+      "benchmark-metrics"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "preference-sequence-ratio",
+      "benchmark-contamination-ngrams",
+      "benchmark-metrics-paired"
+    ],
+    "learning_actions": [
+      "冻结回复mask、EOS、模板和长度口径，再分层比较训练前后记录。",
+      "把近重复复核与同题配对比较写入独立评估计划。"
+    ],
+    "acceptance": [
+      "当前与参考模型使用相同token和mask；序列总和与均值分别命名。",
+      "开发反馈与最终报告集分开，近重复命中不是训练数据泄漏的定论。",
+      "按共同题目索引配对；无训练和独立模型运行记录不声称效果提升。"
+    ],
+    "example_paths": [
+      "examples/training/preference.py",
+      "examples/benchmark/benchmark-contamination.py",
+      "examples/benchmark/benchmark-metrics.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "preference-sequence-ratio",
+        "path": "examples/training/preference.py",
+        "function": "completion_logratio"
+      },
+      {
+        "unit_id": "benchmark-contamination-ngrams",
+        "path": "examples/benchmark/benchmark-contamination.py",
+        "function": "ngram_jaccard"
+      },
+      {
+        "unit_id": "benchmark-metrics-paired",
+        "path": "examples/benchmark/benchmark-metrics.py",
+        "function": "paired_bootstrap"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/基础入门路径.md",
+      "wiki/paths/Benchmark学习路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "preference-sequence-ratio",
+        "scope": "当前参考token、mask、模板和EOS一致"
+      },
+      {
+        "unit_id": "benchmark-contamination-ngrams",
+        "scope": "示例采用空白分词和集合Jaccard，不等于lm-eval的任意13-gram重叠规则。"
+      },
+      {
+        "unit_id": "benchmark-metrics-paired",
+        "scope": "教学函数按题目抽样且仅返回差值分布；聚类观测和最终区间方法需另行指定。"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "inference-understand",
     "module": "inference",
     "level": "understand",
     "outcome": "解释Prefill、Decode与缓存调度",
-    "deliverable": "概念关系说明与反例",
+    "deliverable": "注意力工作量示意、单步缓存追加表和复用身份卡。",
     "topic_ids": [
       "prefill-decode",
-      "kv-cache",
-      "cache-scheduling",
-      "inference-frameworks"
+      "kv-cache"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "prefill-decode-attention-work",
+      "kv-cache-append-attend",
+      "kv-cache-prefix-identity"
+    ],
+    "learning_actions": [
+      "逐步列出Prefill与Decode读取和新增的键值状态。",
+      "为相同文本但不同adapter或位置身份制作缓存复用反例。"
+    ],
+    "acceptance": [
+      "追加当前KV后仍需访问历史，不把缓存理解为历史计算全部消失。",
+      "理想FLOP不是硬件耗时；模型、adapter和位置等身份不同不能假定复用。",
+      "说明完整块哈希和文本表面相同的区别。"
+    ],
+    "example_paths": [
+      "examples/inference/prefill-decode.py",
+      "examples/inference/kv-cache.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "prefill-decode-attention-work",
+        "path": "examples/inference/prefill-decode.py",
+        "function": "attention_work"
+      },
+      {
+        "unit_id": "kv-cache-append-attend",
+        "path": "examples/inference/kv-cache.py",
+        "function": "cached_attention"
+      },
+      {
+        "unit_id": "kv-cache-prefix-identity",
+        "path": "examples/inference/kv-cache.py",
+        "function": "prefix_block_hashes"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/系统工程路径.md",
+      "wiki/paths/Benchmark学习路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "prefill-decode-attention-work",
+        "scope": "单个标准全因果注意力层，忽略MLP、投影和内核填充。"
+      },
+      {
+        "unit_id": "kv-cache-append-attend",
+        "scope": "单头全因果注意力，输入已经完成投影和位置编码，不包含后续输出投影。"
+      },
+      {
+        "unit_id": "kv-cache-prefix-identity",
+        "scope": "仅演示完整块；相同模型、适配器、tokenizer、位置语义、精度与隔离域。"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "inference-derive",
     "module": "inference",
     "level": "derive",
     "outcome": "计算KV体积、块分配与时延",
-    "deliverable": "可复核的手算或状态推演",
+    "deliverable": "含字节/秒单位的缓存布局、块地址与请求时间线表。",
     "topic_ids": [
-      "prefill-decode",
       "kv-cache",
       "cache-scheduling",
-      "inference-frameworks"
+      "prefill-decode"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "kv-cache-bytes",
+      "cache-scheduling-page-map",
+      "prefill-decode-timing"
+    ],
+    "learning_actions": [
+      "用长短请求手算有效、padding与分页三种KV账本。",
+      "在一条统一时钟时间线上计算TTFT、TPOT和块内地址。"
+    ],
+    "acceptance": [
+      "分页尾块浪费与padding浪费分开；明确未计共享和分布式复制。",
+      "位置映射同时给出物理块与块内偏移，禁止使用尚未有效的位置。",
+      "单token输出的TPOT按函数返回未定义，不用零伪造时延。"
+    ],
+    "example_paths": [
+      "examples/inference/kv-cache.py",
+      "examples/inference/cache-scheduling.py",
+      "examples/inference/prefill-decode.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "kv-cache-bytes",
+        "path": "examples/inference/kv-cache.py",
+        "function": "kv_layout"
+      },
+      {
+        "unit_id": "cache-scheduling-page-map",
+        "path": "examples/inference/cache-scheduling.py",
+        "function": "page_address"
+      },
+      {
+        "unit_id": "prefill-decode-timing",
+        "path": "examples/inference/prefill-decode.py",
+        "function": "request_metrics"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/系统工程路径.md",
+      "wiki/paths/Benchmark学习路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "kv-cache-bytes",
+        "scope": "标准全注意力、各层相同KV头与精度，不含共享、量化附加数据和分布式复制。"
+      },
+      {
+        "unit_id": "cache-scheduling-page-map",
+        "scope": "已分配且已有效的token位置，固定块大小；示例不含设备张量步幅。"
+      },
+      {
+        "unit_id": "prefill-decode-timing",
+        "scope": "逐token事件、统一时钟，输出至少一个token。"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "inference-build",
     "module": "inference",
     "level": "build",
     "outcome": "设计固定版本服务对照实验",
-    "deliverable": "带输入、步骤和预期的实践设计",
+    "deliverable": "五轮调度账本、合成到达序列和未来服务实验矩阵。",
     "topic_ids": [
-      "prefill-decode",
-      "kv-cache",
       "cache-scheduling",
+      "prefill-decode",
       "inference-frameworks"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "cache-scheduling-continuous",
+      "prefill-decode-chunk-budget",
+      "inference-frameworks-traffic"
+    ],
+    "learning_actions": [
+      "给三个请求设计到达、完成、token需求与块需求，推演五轮调度。",
+      "固定随机种子和到达率，比较两种突发度的合成负载计划。"
+    ],
+    "acceptance": [
+      "每轮token与空闲块预算都守恒；资源不足按教学策略跳过而非宣称实现抢占。",
+      "分块Prefill推进已计算位置，不重复计算已完成的目标。",
+      "合成到达序列不等于真实服务压测；质量和停止条件先于吞吐比较冻结。"
+    ],
+    "example_paths": [
+      "examples/inference/cache-scheduling.py",
+      "examples/inference/prefill-decode.py",
+      "examples/inference/inference-frameworks.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "cache-scheduling-continuous",
+        "path": "examples/inference/cache-scheduling.py",
+        "function": "continuous_step"
+      },
+      {
+        "unit_id": "prefill-decode-chunk-budget",
+        "path": "examples/inference/prefill-decode.py",
+        "function": "schedule_tokens"
+      },
+      {
+        "unit_id": "inference-frameworks-traffic",
+        "path": "examples/inference/inference-frameworks.py",
+        "function": "arrival_schedule"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/系统工程路径.md",
+      "wiki/paths/Benchmark学习路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "cache-scheduling-continuous",
+        "scope": "独立块、同步执行、显式finished状态，教学策略资源不足跳过而不抢占。"
+      },
+      {
+        "unit_id": "prefill-decode-chunk-budget",
+        "scope": "同步教学模型，无推测token、编码器、流水线及KV不足。"
+      },
+      {
+        "unit_id": "inference-frameworks-traffic",
+        "scope": "独立Gamma间隔的合成开环流量，不代表真实用户分布。"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "inference-evaluate",
     "module": "inference",
     "level": "evaluate",
     "outcome": "综合质量、吞吐、长尾与失败率选运行点",
-    "deliverable": "协议、失败分析与结论限制",
+    "deliverable": "逐请求达标表、长尾统计口径和性能结论边界卡。",
     "topic_ids": [
-      "prefill-decode",
-      "kv-cache",
-      "cache-scheduling",
-      "inference-frameworks"
+      "inference-frameworks",
+      "benchmark-systems"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "inference-frameworks-goodput",
+      "inference-frameworks-tail",
+      "benchmark-systems-submission-validity"
+    ],
+    "learning_actions": [
+      "对含失败、单token和长尾请求的记录分别汇总质量与时延。",
+      "把性能条件、提交检查和正式认证拆为三层证据。"
+    ],
+    "acceptance": [
+      "失败请求保留在达标率分母；空延迟集不记零，超时不伪装完成时长。",
+      "质量与TTFT/TPOT的联合条件明确，分位数算法和观察窗口固定。",
+      "教学汇总不能生成MLPerf认证，也不能替代真实GPU测量。"
+    ],
+    "example_paths": [
+      "examples/inference/inference-frameworks.py",
+      "examples/benchmark/benchmark-systems.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "inference-frameworks-goodput",
+        "path": "examples/inference/inference-frameworks.py",
+        "function": "qualified_metrics"
+      },
+      {
+        "unit_id": "inference-frameworks-tail",
+        "path": "examples/inference/inference-frameworks.py",
+        "function": "latency_summary"
+      },
+      {
+        "unit_id": "benchmark-systems-submission-validity",
+        "path": "examples/benchmark/benchmark-systems.py",
+        "function": "submission_layers"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/系统工程路径.md",
+      "wiki/paths/Benchmark学习路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "inference-frameworks-goodput",
+        "scope": "固定观察窗口、逐请求质量标签、TTFT与TPOT阈值；单token显式约定TPOT不适用。"
+      },
+      {
+        "unit_id": "inference-frameworks-tail",
+        "scope": "最近秩分位数的有限非负样本，空集未定义，不把超时等同完成时长。"
+      },
+      {
+        "unit_id": "benchmark-systems-submission-validity",
+        "scope": "输入为外部已核验的教学检查结果；True/False/None分别表示通过/失败/未知，不执行官方checker。"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "harness-understand",
     "module": "harness",
     "level": "understand",
     "outcome": "解释模型、工具、上下文和宿主责任",
-    "deliverable": "概念关系说明与反例",
+    "deliverable": "责任边界图、未知结果状态卡和Skill上下文预算表。",
     "topic_ids": [
       "agent-loop",
-      "context",
-      "memory",
       "tools-skills"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "agent-loop-transition",
+      "tools-skills-validate-query",
+      "tools-skills-skill-load-plan"
+    ],
+    "learning_actions": [
+      "给任务循环标明模型建议、协议校验和宿主执行三个责任点。",
+      "比较工具Schema与Skill加载计划，保留结果未知状态。"
+    ],
+    "acceptance": [
+      "结果未知必须进入回查流程，不能直接当失败重发。",
+      "结构校验通过后仍需业务语义和权限判断。",
+      "加载Skill资源只改变上下文，不扩大工具授权。"
+    ],
+    "example_paths": [
+      "examples/harness/agent-loop.py",
+      "examples/harness/tools-skills.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "agent-loop-transition",
+        "path": "examples/harness/agent-loop.py",
+        "function": "transition"
+      },
+      {
+        "unit_id": "tools-skills-validate-query",
+        "path": "examples/harness/tools-skills.py",
+        "function": "validate_query"
+      },
+      {
+        "unit_id": "tools-skills-skill-load-plan",
+        "path": "examples/harness/tools-skills.py",
+        "function": "skill_load_plan"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/Agent开发路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "agent-loop-transition",
+        "scope": "串行任务；具备权威回读和明确验收事件。"
+      },
+      {
+        "unit_id": "tools-skills-validate-query",
+        "scope": "教学查询固定city与days字段；真实实现应使用完整Schema验证和业务规则。"
+      },
+      {
+        "unit_id": "tools-skills-skill-load-plan",
+        "scope": "教学成本已知；资源归属明确；正文和资源只作计划而不执行。"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "harness-derive",
     "module": "harness",
     "level": "derive",
     "outcome": "推演状态转移、预算与恢复条件",
-    "deliverable": "可复核的手算或状态推演",
+    "deliverable": "预算扣减、通道归并和终止条件锁存三份推演表。",
     "topic_ids": [
       "agent-loop",
-      "context",
-      "memory",
-      "tools-skills"
+      "langgraph",
+      "autogen"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "agent-loop-admit-budget",
+      "langgraph-merge-superstep",
+      "autogen-termination-step"
+    ],
+    "learning_actions": [
+      "手算步数、token和时间三项执行前预留预算。",
+      "比较LangGraph同一超步sum/last写入和AutoGen跨消息批次AND/OR终止。"
+    ],
+    "acceptance": [
+      "拒绝预留时预算不变；重试和回读仍需计入预算。",
+      "last通道同一超步多写应拒绝，sum归并结果不能由猜测执行顺序决定。",
+      "AutoGen仅消费增量消息，指定来源外的终止文本不能触发授权；消息计数不等于调用前硬预算。"
+    ],
+    "example_paths": [
+      "examples/harness/agent-loop.py",
+      "examples/harness/langgraph.py",
+      "examples/harness/autogen.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "agent-loop-admit-budget",
+        "path": "examples/harness/agent-loop.py",
+        "function": "admit_budget"
+      },
+      {
+        "unit_id": "langgraph-merge-superstep",
+        "path": "examples/harness/langgraph.py",
+        "function": "merge_superstep"
+      },
+      {
+        "unit_id": "autogen-termination-step",
+        "path": "examples/harness/autogen.py",
+        "function": "termination_step"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/Agent开发路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "agent-loop-admit-budget",
+        "scope": "成本预估是本次调用上界；每次重试与回读也消耗步数。"
+      },
+      {
+        "unit_id": "langgraph-merge-superstep",
+        "scope": "教学仅支持整数sum和普通last通道，不包含Overwrite或动态通道。"
+      },
+      {
+        "unit_id": "autogen-termination-step",
+        "scope": "教学组合消息数与指定来源文本；消息批次已经去重且按调用顺序交付。"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "harness-build",
     "module": "harness",
     "level": "build",
     "outcome": "设计有回读能力的任务执行循环",
-    "deliverable": "带输入、步骤和预期的实践设计",
+    "deliverable": "线程隔离写入表、节点重跑记录和团队恢复快照设计。",
     "topic_ids": [
-      "agent-loop",
-      "context",
-      "memory",
-      "tools-skills"
+      "langgraph",
+      "autogen"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "langgraph-checkpoint-writes",
+      "langgraph-replay-interrupt-node",
+      "autogen-snapshot-team"
+    ],
+    "learning_actions": [
+      "为两个线程建立不同检查点作用域，加入同任务重复写记录。",
+      "用两个interrupt和完整团队快照设计恢复步骤及外部幂等账本。"
+    ],
+    "acceptance": [
+      "普通pending write去重包含线程、命名空间、检查点、任务和序号。",
+      "interrupt按原顺序消费恢复答案且节点从头重跑，前置副作用另行幂等。",
+      "团队快照含参与者与管理器；内存演示不冒充跨进程持久化事务。"
+    ],
+    "example_paths": [
+      "examples/harness/langgraph.py",
+      "examples/harness/autogen.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "langgraph-checkpoint-writes",
+        "path": "examples/harness/langgraph.py",
+        "function": "checkpoint_writes"
+      },
+      {
+        "unit_id": "langgraph-replay-interrupt-node",
+        "path": "examples/harness/langgraph.py",
+        "function": "replay_interrupt_node"
+      },
+      {
+        "unit_id": "autogen-snapshot-team",
+        "path": "examples/harness/autogen.py",
+        "function": "snapshot_team"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/Agent开发路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "langgraph-checkpoint-writes",
+        "scope": "教学仅模拟普通通道写去重；存储为调用方提供的内存字典，不提供跨进程持久性。"
+      },
+      {
+        "unit_id": "langgraph-replay-interrupt-node",
+        "scope": "问题顺序稳定；示例只使用单任务的线性interrupt序列与外部模拟幂等账本。"
+      },
+      {
+        "unit_id": "autogen-snapshot-team",
+        "scope": "教学只允许团队停止后存档；所有状态由调用方提供，未实现实际持久化或恢复事务。"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "harness-evaluate",
     "module": "harness",
     "level": "evaluate",
     "outcome": "评估恢复、记忆有效性与边界失效",
-    "deliverable": "协议、失败分析与结论限制",
+    "deliverable": "检查点遗漏表、记忆资格表与撤回影响闭包。",
     "topic_ids": [
-      "agent-loop",
       "context",
-      "memory",
-      "tools-skills"
+      "memory"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "context-audit-checkpoint",
+      "memory-eligible-memories",
+      "memory-invalidation-closure"
+    ],
+    "learning_actions": [
+      "冻结检查点必需字段，再审计缺失约束和来源版本。",
+      "对跨命名空间、过期记忆和撤回依赖做同一套回放评审。"
+    ],
+    "acceptance": [
+      "关键字段在压缩前定义，遗漏不能靠摘要自评掩盖。",
+      "语义相似度不越过命名空间、版本和有效期资格。",
+      "撤回传播在有环依赖中仍终止；结果只说明已登记依赖的覆盖范围。"
+    ],
+    "example_paths": [
+      "examples/harness/context.py",
+      "examples/harness/memory.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "context-audit-checkpoint",
+        "path": "examples/harness/context.py",
+        "function": "audit_checkpoint"
+      },
+      {
+        "unit_id": "memory-eligible-memories",
+        "path": "examples/harness/memory.py",
+        "function": "eligible_memories"
+      },
+      {
+        "unit_id": "memory-invalidation-closure",
+        "path": "examples/harness/memory.py",
+        "function": "invalidation_closure"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/Agent开发路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "context-audit-checkpoint",
+        "scope": "关键字段在压缩前独立定义，值使用稳定规范化文本。"
+      },
+      {
+        "unit_id": "memory-eligible-memories",
+        "scope": "应用能提供可信命名空间、版本、有效期和来源字段。"
+      },
+      {
+        "unit_id": "memory-invalidation-closure",
+        "scope": "依赖图完整记录派生关系；本文采用任何父来源撤回就暂时失效的保守策略。"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "knowledge-understand",
     "module": "knowledge",
     "level": "understand",
     "outcome": "解释来源、索引、声明和Wiki职责",
-    "deliverable": "概念关系说明与反例",
+    "deliverable": "来源身份卡、RAG边缘概率表和全局摘要预算路径图。",
     "topic_ids": [
-      "rag",
       "ingestion",
-      "hybrid-search",
+      "rag",
       "graph-wiki"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "ingestion-identity",
+      "rag-marginal",
+      "graph-wiki-global-query"
+    ],
+    "learning_actions": [
+      "画出来源、解析版本、检索文档、社区摘要与Wiki声明的不同对象。",
+      "用同一组给定概率解释RAG先乘后和与先和后乘。"
+    ],
+    "acceptance": [
+      "原始正文指纹、规范化指纹和解析身份分别保存。",
+      "文档潜变量的求和与token求积通常不可交换。",
+      "社区摘要筛选不等于生成摘要或验证事实，Wiki编纂与检索分别命名。"
+    ],
+    "example_paths": [
+      "examples/knowledge/ingestion.py",
+      "examples/knowledge/rag.py",
+      "examples/knowledge/graph-wiki.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "ingestion-identity",
+        "path": "examples/knowledge/ingestion.py",
+        "function": "source_fingerprint"
+      },
+      {
+        "unit_id": "rag-marginal",
+        "path": "examples/knowledge/rag.py",
+        "function": "rag_marginals"
+      },
+      {
+        "unit_id": "graph-wiki-global-query",
+        "path": "examples/knowledge/graph-wiki.py",
+        "function": "reduce_points"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/基础入门路径.md",
+      "wiki/paths/Agent开发路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "ingestion-identity",
+        "scope": "输入为已获得的Unicode正文；规范化仅统一换行，不判断语义等价。"
+      },
+      {
+        "unit_id": "rag-marginal",
+        "scope": "已固定候选文档及归一化先验，教学输入为给定目标token的条件概率。"
+      },
+      {
+        "unit_id": "graph-wiki-global-query",
+        "scope": "社区层级与map结果已给定，教学只模拟reduce输入选择，不生成或验证摘要。"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "knowledge-derive",
     "module": "knowledge",
     "level": "derive",
     "outcome": "计算检索指标并推演更新影响链",
-    "deliverable": "可复核的手算或状态推演",
+    "deliverable": "召回融合计算表和来源到练习的影响闭包。",
     "topic_ids": [
-      "rag",
-      "ingestion",
       "hybrid-search",
       "graph-wiki"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "hybrid-search-bm25",
+      "hybrid-search-rrf",
+      "graph-wiki-wiki-impact"
+    ],
+    "learning_actions": [
+      "手算小语料BM25和两个候选排名的RRF分值。",
+      "从一条来源变更沿类型化依赖求受影响主题及能力。"
+    ],
+    "acceptance": [
+      "BM25的词频、长度和IDF条件明确，不混用不同实现变体。",
+      "RRF按名次而非原始相似度相加，列表内文档ID唯一。",
+      "related边不触发更新传播，依赖方向与反向查询关系写清楚。"
+    ],
+    "example_paths": [
+      "examples/knowledge/hybrid-search.py",
+      "examples/knowledge/graph-wiki.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "hybrid-search-bm25",
+        "path": "examples/knowledge/hybrid-search.py",
+        "function": "bm25_scores"
+      },
+      {
+        "unit_id": "hybrid-search-rrf",
+        "path": "examples/knowledge/hybrid-search.py",
+        "function": "reciprocal_rank_fusion"
+      },
+      {
+        "unit_id": "graph-wiki-wiki-impact",
+        "path": "examples/knowledge/graph-wiki.py",
+        "function": "wiki_impact"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/基础入门路径.md",
+      "wiki/paths/Agent开发路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "hybrid-search-bm25",
+        "scope": "已分词、二值查询项、正IDF变体；教学无字段boost与长度norm量化。"
+      },
+      {
+        "unit_id": "hybrid-search-rrf",
+        "scope": "各排名列表内部无重复，文档身份一致；缺席贡献0，权重非负。"
+      },
+      {
+        "unit_id": "graph-wiki-wiki-impact",
+        "scope": "依赖边由人工核验，方向为页面指向所依赖对象；普通related边不参与传播。"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "knowledge-build",
     "module": "knowledge",
     "level": "build",
     "outcome": "设计可追溯的小型RAG或Wiki实验",
-    "deliverable": "带输入、步骤和预期的实践设计",
+    "deliverable": "上下文选择表、四类接入事件卡和实体到证据的定位表。",
     "topic_ids": [
       "rag",
       "ingestion",
-      "hybrid-search",
       "graph-wiki"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "rag-context",
+      "ingestion-delta",
+      "graph-wiki-local-query"
+    ],
+    "learning_actions": [
+      "给固定片段设置完整包装成本与输出预留，设计上下文选择。",
+      "模拟新增、更正、删除和不可读事件，再按实体关系定位原始片段。"
+    ],
+    "acceptance": [
+      "固定开销加片段成本加输出预留不超过窗口，召回结果与入模证据分开。",
+      "只有完整权威快照才可由缺失推断删除，不可读不等于撤回。",
+      "图关系必须追到原始片段，选择结果不是模型回答。"
+    ],
+    "example_paths": [
+      "examples/knowledge/rag.py",
+      "examples/knowledge/ingestion.py",
+      "examples/knowledge/graph-wiki.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "rag-context",
+        "path": "examples/knowledge/rag.py",
+        "function": "select_context"
+      },
+      {
+        "unit_id": "ingestion-delta",
+        "path": "examples/knowledge/ingestion.py",
+        "function": "classify_versions"
+      },
+      {
+        "unit_id": "graph-wiki-local-query",
+        "path": "examples/knowledge/graph-wiki.py",
+        "function": "local_graph_context"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/基础入门路径.md",
+      "wiki/paths/Agent开发路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "rag-context",
+        "scope": "片段已按相关性排序，tokens包含其实际包装开销；教学贪心不保证最优证据组合。"
+      },
+      {
+        "unit_id": "ingestion-delta",
+        "scope": "稳定ID对应可靠指纹；仅当输入为完整权威快照时才允许将缺失判为删除。"
+      },
+      {
+        "unit_id": "graph-wiki-local-query",
+        "scope": "入口实体已经按相似度排序，关系有明确原始chunk归属；示例无向地检查端点关联。"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "knowledge-evaluate",
     "module": "knowledge",
     "level": "evaluate",
     "outcome": "评估引用支持、更新一致性与维护成本",
-    "deliverable": "协议、失败分析与结论限制",
+    "deliverable": "声明引用审计、共享支持修复计划与两种声明分母对照。",
     "topic_ids": [
       "rag",
       "ingestion",
-      "hybrid-search",
-      "graph-wiki"
+      "benchmark-rag"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "rag-citation",
+      "ingestion-retraction",
+      "benchmark-rag-claim-denominators"
+    ],
+    "learning_actions": [
+      "用独立支持标签审计有链接但无支持、缺引用和版本冲突。",
+      "撤回一个共享片段后，分别处理仍有来源、需重建和无来源声明。"
+    ],
+    "acceptance": [
+      "引用存在不等于蕴含成立；支持标签不能由被评回答自行提供。",
+      "剩余支持决定保留或重建，不把删除文档等同删除所有共享知识。",
+      "召回以参考声明为分母，忠实度以生成声明为分母；空集合不记满分。"
+    ],
+    "example_paths": [
+      "examples/knowledge/rag.py",
+      "examples/knowledge/ingestion.py",
+      "examples/benchmark/benchmark-rag.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "rag-citation",
+        "path": "examples/knowledge/rag.py",
+        "function": "audit_citations"
+      },
+      {
+        "unit_id": "ingestion-retraction",
+        "path": "examples/knowledge/ingestion.py",
+        "function": "reconcile_support"
+      },
+      {
+        "unit_id": "benchmark-rag-claim-denominators",
+        "path": "examples/benchmark/benchmark-rag.py",
+        "function": "claim_coverage"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/基础入门路径.md",
+      "wiki/paths/Agent开发路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "rag-citation",
+        "scope": "支持标签由人工或独立评审预先冻结，示例不自动判断自然语言蕴含。"
+      },
+      {
+        "unit_id": "ingestion-retraction",
+        "scope": "supports为完整且已验证的直接chunk归属，不含未知来源占位符；示例只生成更新计划。"
+      },
+      {
+        "unit_id": "benchmark-rag-claim-denominators",
+        "scope": "声明拆分与支持标签已经独立冻结；不把文档相关性或链接存在当作支持标签。"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "agents-understand",
     "module": "agents",
     "level": "understand",
     "outcome": "区分感知、动作和业务终态",
-    "deliverable": "概念关系说明与反例",
+    "deliverable": "四套接口责任图与动作/响应/业务验收区别表。",
     "topic_ids": [
-      "task-loop",
-      "gui-agent",
-      "coding-agent",
-      "agent-evaluation"
+      "codex-cli",
+      "claude-code",
+      "openhands",
+      "ui-tars"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "codex-cli-launch-plan",
+      "claude-code-response-window",
+      "openhands-observation",
+      "ui-tars-action-protocol"
+    ],
+    "learning_actions": [
+      "分别画Codex入口、Claude Code SDK响应、OpenHands观察关联与UI-TARS动作解析边界。",
+      "将客户端、模型、SDK、宿主和执行器拆开，不拼接成一个实际产品。"
+    ],
+    "acceptance": [
+      "Codex CLI不等于历史同名模型；Claude Code公开SDK不证明闭源核心实现。",
+      "OpenHands动作与观察身份匹配后仍需业务验收。",
+      "UI-TARS解析成功不是设备动作成功，模型和桌面宿主版本分别记录。"
+    ],
+    "example_paths": [
+      "examples/agents/codex-cli.py",
+      "examples/agents/claude-code.py",
+      "examples/agents/openhands.py",
+      "examples/agents/ui-tars.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "codex-cli-launch-plan",
+        "path": "examples/agents/codex-cli.py",
+        "function": "launch_plan"
+      },
+      {
+        "unit_id": "claude-code-response-window",
+        "path": "examples/agents/claude-code.py",
+        "function": "response_window"
+      },
+      {
+        "unit_id": "openhands-observation",
+        "path": "examples/agents/openhands.py",
+        "function": "observation_links"
+      },
+      {
+        "unit_id": "ui-tars-action-protocol",
+        "path": "examples/agents/ui-tars.py",
+        "function": "parse_action"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/Agent开发路径.md",
+      "wiki/paths/GUI智能体实践路径.md",
+      "wiki/paths/AI编程智能体实践路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "codex-cli-launch-plan",
+        "scope": "固定提交；教学模型只覆盖交互与exec两种入口，不推断完整配置优先级。"
+      },
+      {
+        "unit_id": "claude-code-response-window",
+        "scope": "固定Python SDK提交；教学以有限模拟消息列表代替异步传输。"
+      },
+      {
+        "unit_id": "openhands-observation",
+        "scope": "给定已发动作与最终普通观察；错误/拒绝专用事件需按各自schema处理。"
+      },
+      {
+        "unit_id": "ui-tars-action-protocol",
+        "scope": "教学只覆盖单个严格公共动作子集，不执行字符串"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "agents-derive",
     "module": "agents",
     "level": "derive",
     "outcome": "推演坐标、任务状态与重试结果",
-    "deliverable": "可复核的手算或状态推演",
+    "deliverable": "坐标变换表、进度事实对照、元素文档表和仓库地图预算表。",
     "topic_ids": [
-      "task-loop",
       "gui-agent",
-      "coding-agent",
-      "agent-evaluation"
+      "mobile-agent",
+      "app-agent",
+      "aider"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "gui-agent-map-point",
+      "mobile-agent-planning-memory",
+      "app-agent-deployment",
+      "aider-repomap"
+    ],
+    "learning_actions": [
+      "从裁剪与缩放元数据推演坐标，再区分Mobile-Agent-v2进度与页面事实。",
+      "手算AppAgent当前元素文档选择以及Aider预算内仓库地图。"
+    ],
+    "acceptance": [
+      "排除留白区域，坐标依赖当前截图与裁剪身份。",
+      "Mobile-Agent-v2的完成标记在教学中由人工给定，不冒充模型规划质量。",
+      "AppAgent按当前UID取外部文档；Aider图与边权已预提取，未执行真实应用或仓库扫描。"
+    ],
+    "example_paths": [
+      "examples/agents/gui-agent.py",
+      "examples/agents/mobile-agent.py",
+      "examples/agents/app-agent.py",
+      "examples/agents/aider.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "gui-agent-map-point",
+        "path": "examples/agents/gui-agent.py",
+        "function": "map_point"
+      },
+      {
+        "unit_id": "mobile-agent-planning-memory",
+        "path": "examples/agents/mobile-agent.py",
+        "function": "planning_projection"
+      },
+      {
+        "unit_id": "app-agent-deployment",
+        "path": "examples/agents/app-agent.py",
+        "function": "deployment_context"
+      },
+      {
+        "unit_id": "aider-repomap",
+        "path": "examples/agents/aider.py",
+        "function": "repo_map"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/Agent开发路径.md",
+      "wiki/paths/GUI智能体实践路径.md",
+      "wiki/paths/AI编程智能体实践路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "gui-agent-map-point",
+        "scope": "截图与设备裁剪区域只有轴对齐缩放和平移；无旋转、透视或内容重排。"
+      },
+      {
+        "unit_id": "mobile-agent-planning-memory",
+        "scope": "教学完成集合依赖人工标注，源码进度由LLM生成"
+      },
+      {
+        "unit_id": "app-agent-deployment",
+        "scope": "示例显式给定选择与整除尺寸，不执行设备动作"
+      },
+      {
+        "unit_id": "aider-repomap",
+        "scope": "图与符号已预提取，示例输入已计算边权；教学采用加性成本和严格前缀预算。"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "agents-build",
     "module": "agents",
     "level": "build",
     "outcome": "设计可回查的GUI或代码任务",
-    "deliverable": "带输入、步骤和预期的实践设计",
+    "deliverable": "两类任务契约、内存补丁候选与失败反馈表。",
     "topic_ids": [
       "task-loop",
-      "gui-agent",
       "coding-agent",
-      "agent-evaluation"
+      "swe-agent"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "task-loop-terminal-contract",
+      "coding-agent-guarded-replace",
+      "swe-agent-edit-contract"
+    ],
+    "learning_actions": [
+      "为资料整理与小代码修复各冻结三值终态契约。",
+      "分别构造基线不一致、锚点重复、无变化和合法内存编辑输入。"
+    ],
+    "acceptance": [
+      "未知后置条件不能变成成功，失败断言优先于未观测。",
+      "基线哈希和唯一锚点先验证，错误输入不得产生成功补丁。",
+      "SWE-agent失败编辑返回原文本；本层不运行生成代码、不改真实仓库。"
+    ],
+    "example_paths": [
+      "examples/agents/task-loop.py",
+      "examples/agents/coding-agent.py",
+      "examples/agents/swe-agent.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "task-loop-terminal-contract",
+        "path": "examples/agents/task-loop.py",
+        "function": "terminal_contract"
+      },
+      {
+        "unit_id": "coding-agent-guarded-replace",
+        "path": "examples/agents/coding-agent.py",
+        "function": "guarded_replace"
+      },
+      {
+        "unit_id": "swe-agent-edit-contract",
+        "path": "examples/agents/swe-agent.py",
+        "function": "unique_edit"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/Agent开发路径.md",
+      "wiki/paths/GUI智能体实践路径.md",
+      "wiki/paths/AI编程智能体实践路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "task-loop-terminal-contract",
+        "scope": "断言集合在执行前冻结，True、False和None分别表示已证实满足、不满足和未观测。"
+      },
+      {
+        "unit_id": "coding-agent-guarded-replace",
+        "scope": "目标是内存中的Python源码；替换锚点唯一；SHA用于版本身份而非真实性认证。"
+      },
+      {
+        "unit_id": "swe-agent-edit-contract",
+        "scope": "非空精确字符串匹配，纯字符串结果；不执行linter、不写真实文件。"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "agents-evaluate",
     "module": "agents",
     "level": "evaluate",
     "outcome": "按执行证据和协议比较系统可靠性",
-    "deliverable": "协议、失败分析与结论限制",
+    "deliverable": "任务成功分母表、停止/输出完整性/权限决定的证据矩阵。",
     "topic_ids": [
-      "task-loop",
-      "gui-agent",
-      "coding-agent",
-      "agent-evaluation"
+      "agent-evaluation",
+      "ui-tars",
+      "codex-cli",
+      "claude-code"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "agent-evaluation-success-summary",
+      "ui-tars-loop-state",
+      "codex-cli-capture-output",
+      "claude-code-hook-reply"
+    ],
+    "learning_actions": [
+      "按同一任务清单区分首轮、重试和未知结果。",
+      "加入SDK停止、命令输出截断及hook拒绝三种易误判记录。"
+    ],
+    "acceptance": [
+      "重试预算固定，未知结果单列，不只报告允许重试后的较高成功率。",
+      "UI-TARS终端动作和Codex进程结束都不能替代业务后置条件。",
+      "Claude Code控制响应success可携带工具deny，拒绝决定不能误读为工具成功。"
+    ],
+    "example_paths": [
+      "examples/agents/agent-evaluation.py",
+      "examples/agents/ui-tars.py",
+      "examples/agents/codex-cli.py",
+      "examples/agents/claude-code.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "agent-evaluation-success-summary",
+        "path": "examples/agents/agent-evaluation.py",
+        "function": "success_summary"
+      },
+      {
+        "unit_id": "ui-tars-loop-state",
+        "path": "examples/agents/ui-tars.py",
+        "function": "agent_loop_transition"
+      },
+      {
+        "unit_id": "codex-cli-capture-output",
+        "path": "examples/agents/codex-cli.py",
+        "function": "capture_output"
+      },
+      {
+        "unit_id": "claude-code-hook-reply",
+        "path": "examples/agents/claude-code.py",
+        "function": "hook_reply"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/Agent开发路径.md",
+      "wiki/paths/GUI智能体实践路径.md",
+      "wiki/paths/AI编程智能体实践路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "agent-evaluation-success-summary",
+        "scope": "每个任务至少记录一次尝试；比较版本时使用同一任务集和同一重试预算。"
+      },
+      {
+        "unit_id": "ui-tars-loop-state",
+        "scope": "教学假设截图有效且执行器无异常，不模拟异步取消与重试"
+      },
+      {
+        "unit_id": "codex-cli-capture-output",
+        "scope": "教学只模拟一个输出流和已判定终态；不承诺复刻所有capture policy及缓冲布局。"
+      },
+      {
+        "unit_id": "claude-code-hook-reply",
+        "scope": "仅演示PreToolUse的允许、拒绝和不表态；真实hook事件及支持字段以版本为准。"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "benchmark-understand",
     "module": "benchmark",
     "level": "understand",
     "outcome": "识别基准任务、协议与测量范围",
-    "deliverable": "概念关系说明与反例",
+    "deliverable": "版本化协议卡、候选排序反例和图像填充几何表。",
     "topic_ids": [
       "benchmark-protocol",
       "benchmark-general",
       "benchmark-multimodal"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "benchmark-protocol-identity",
+      "benchmark-general-likelihood",
+      "benchmark-multimodal-input-contract"
+    ],
+    "learning_actions": [
+      "给同一任务建立协议身份，分别比较选择题长度口径和图像预处理。",
+      "列出模型真正看到的输入与评分器实际消费的输出。"
+    ],
+    "acceptance": [
+      "协议字段值变化可改指纹，键顺序变化不改身份；指纹不证明实验可重现。",
+      "长度归一化可改变排名，字符与token口径不可混称。",
+      "图像填充几何演示不等于完整预处理或感知模型验证。"
+    ],
+    "example_paths": [
+      "examples/benchmark/benchmark-protocol.py",
+      "examples/benchmark/benchmark-general.py",
+      "examples/benchmark/benchmark-multimodal.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "benchmark-protocol-identity",
+        "path": "examples/benchmark/benchmark-protocol.py",
+        "function": "protocol_fingerprint"
+      },
+      {
+        "unit_id": "benchmark-general-likelihood",
+        "path": "examples/benchmark/benchmark-general.py",
+        "function": "choice_prediction"
+      },
+      {
+        "unit_id": "benchmark-multimodal-input-contract",
+        "path": "examples/benchmark/benchmark-multimodal.py",
+        "function": "square_pad_geometry"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/Benchmark学习路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "benchmark-protocol-identity",
+        "scope": "本库协议对象为教学设计；所述追踪字段对应固定版本LM Evaluation Harness源码。"
+      },
+      {
+        "unit_id": "benchmark-general-likelihood",
+        "scope": "具体源码分析针对MultipleChoiceTask；教学函数接收已计算的有限分数和显式长度。"
+      },
+      {
+        "unit_id": "benchmark-multimodal-input-contract",
+        "scope": "教学仅计算LLaVA的方形填充几何；不模拟像素插值、归一化或任何MMMU适配器的默认设置。"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "benchmark-derive",
     "module": "benchmark",
     "level": "derive",
     "outcome": "计算统计、排名和采样指标",
-    "deliverable": "可复核的手算或状态推演",
+    "deliverable": "比例区间、组合枚举和检索三种分母计算表。",
     "topic_ids": [
       "benchmark-metrics",
       "benchmark-reasoning-code",
       "benchmark-rag"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "benchmark-metrics-wilson",
+      "benchmark-reasoning-code-passk",
+      "benchmark-rag-context-ranking"
+    ],
+    "learning_actions": [
+      "手算边界比例的Wilson区间和五个候选中两个正确时的pass@2。",
+      "比较上下文AP、P@K与全库相关数分母。"
+    ],
+    "acceptance": [
+      "0/n和n/n的区间不能按分数加固定常数处理，二元抽样假设明确。",
+      "n=5、正确2、k=2的组合估计为0.7；不能解释成反馈重试成绩。",
+      "上下文AP高不证明召回完整，独立全库相关数缺失时不伪造召回率。"
+    ],
+    "example_paths": [
+      "examples/benchmark/benchmark-metrics.py",
+      "examples/benchmark/benchmark-reasoning-code.py",
+      "examples/benchmark/benchmark-rag.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "benchmark-metrics-wilson",
+        "path": "examples/benchmark/benchmark-metrics.py",
+        "function": "wilson_interval"
+      },
+      {
+        "unit_id": "benchmark-reasoning-code-passk",
+        "path": "examples/benchmark/benchmark-reasoning-code.py",
+        "function": "pass_at_k"
+      },
+      {
+        "unit_id": "benchmark-rag-context-ranking",
+        "path": "examples/benchmark/benchmark-rag.py",
+        "function": "context_precision_profile"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/Benchmark学习路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "benchmark-metrics-wilson",
+        "scope": "本例为无连续性校正的双侧Wilson区间，适用于预先定义的二元观测。"
+      },
+      {
+        "unit_id": "benchmark-reasoning-code-passk",
+        "scope": "n个样本在同一生成与执行协议下获得；代码为小规模精确组合数教学实现。"
+      },
+      {
+        "unit_id": "benchmark-rag-context-ranking",
+        "scope": "有序二值有用性标签；全库相关数仅在独立完整标注且候选无重复时可比较。"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "benchmark-build",
     "module": "benchmark",
     "level": "build",
     "outcome": "设计可复现的多类评测协议",
-    "deliverable": "带输入、步骤和预期的实践设计",
+    "deliverable": "任务级验收协议、全部样本账本与系统计时计算表。",
     "topic_ids": [
       "benchmark-protocol",
       "benchmark-agents",
       "benchmark-systems"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "benchmark-protocol-ledger",
+      "benchmark-agents-task-acceptance",
+      "benchmark-systems-latency-statistics"
+    ],
+    "learning_actions": [
+      "给预定任务和请求构造包含失败、未运行与超时的结果账本。",
+      "冻结修复/回归测试ID、计时边界、token分母和分位数算法。"
+    ],
+    "acceptance": [
+      "失败和错误保留主分母，未执行的测试不能因没有失败行判成功。",
+      "修复测试和回归保持同时满足且运行有效才解决任务，跳过语义按所读版本区分。",
+      "纳秒取整与分位数规则写明，教学统计不等于执行官方LoadGen。"
+    ],
+    "example_paths": [
+      "examples/benchmark/benchmark-protocol.py",
+      "examples/benchmark/benchmark-agents.py",
+      "examples/benchmark/benchmark-systems.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "benchmark-protocol-ledger",
+        "path": "examples/benchmark/benchmark-protocol.py",
+        "function": "score_run"
+      },
+      {
+        "unit_id": "benchmark-agents-task-acceptance",
+        "path": "examples/benchmark/benchmark-agents.py",
+        "function": "grade_patch"
+      },
+      {
+        "unit_id": "benchmark-systems-latency-statistics",
+        "path": "examples/benchmark/benchmark-systems.py",
+        "function": "loadgen_latency_profile"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/Benchmark学习路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "benchmark-protocol-ledger",
+        "scope": "本页采用一题一条最终记录的教学契约，不是任意评测框架的默认聚合规则。"
+      },
+      {
+        "unit_id": "benchmark-agents-task-acceptance",
+        "scope": "教学模拟PASS_AND_FAIL；至少一个F2P；规范化测试ID；不模拟FAIL_ONLY或真实执行。"
+      },
+      {
+        "unit_id": "benchmark-systems-latency-statistics",
+        "scope": "普通token延迟路径，整数纳秒、每请求输出token数大于1；不模拟LoadGen计时与early stopping。"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   },
   {
     "id": "benchmark-evaluate",
     "module": "benchmark",
     "level": "evaluate",
     "outcome": "校准裁判、检查污染并解释结论边界",
-    "deliverable": "协议、失败分析与结论限制",
+    "deliverable": "快照成员表、裁判校准卡和稳健性联合结果表。",
     "topic_ids": [
       "benchmark-contamination",
       "benchmark-judge",
       "benchmark-robustness"
     ],
     "status": "learning_target",
-    "evidence_required": true
+    "evidence_required": true,
+    "unit_ids": [
+      "benchmark-contamination-release",
+      "benchmark-judge-order-mapping",
+      "benchmark-judge-human-agreement",
+      "benchmark-judge-probability-calibration",
+      "benchmark-robustness-utility-security-denominators"
+    ],
+    "learning_actions": [
+      "冻结评测成员和撤回边界，审计双顺序裁判及独立人工标签。",
+      "同时核算概率覆盖/错误与正常效用/安全案例分母，说明未覆盖风险。"
+    ],
+    "acceptance": [
+      "交换后先还原候选身份，错误和平局分开；kappa退化分母记未定义。",
+      "校准事件明确，拟合、选阈值和最终测试隔离，无接受样本不记零错误。",
+      "正常任务与安全案例用不同分母；目标ASR的补数不等于安全效用，指定目标失败仍可能有其他受检副作用。"
+    ],
+    "example_paths": [
+      "examples/benchmark/benchmark-contamination.py",
+      "examples/benchmark/benchmark-judge.py",
+      "examples/benchmark/benchmark-robustness.py"
+    ],
+    "example_functions": [
+      {
+        "unit_id": "benchmark-contamination-release",
+        "path": "examples/benchmark/benchmark-contamination.py",
+        "function": "release_membership"
+      },
+      {
+        "unit_id": "benchmark-judge-order-mapping",
+        "path": "examples/benchmark/benchmark-judge.py",
+        "function": "swapped_pair_summary"
+      },
+      {
+        "unit_id": "benchmark-judge-human-agreement",
+        "path": "examples/benchmark/benchmark-judge.py",
+        "function": "agreement_audit"
+      },
+      {
+        "unit_id": "benchmark-judge-probability-calibration",
+        "path": "examples/benchmark/benchmark-judge.py",
+        "function": "calibration_audit"
+      },
+      {
+        "unit_id": "benchmark-robustness-utility-security-denominators",
+        "path": "examples/benchmark/benchmark-robustness.py",
+        "function": "security_metrics"
+      }
+    ],
+    "learning_paths": [
+      "wiki/paths/Benchmark学习路径.md"
+    ],
+    "conditions": [
+      {
+        "unit_id": "benchmark-contamination-release",
+        "scope": "教学代码使用左闭右开的日期区间；LiveBench实际源码采用release集合与移除条件。"
+      },
+      {
+        "unit_id": "benchmark-judge-order-mapping",
+        "scope": "同题答案冻结，A/B表示展示槽位；error为显式解析失败；不将交换一致性等同正确性。"
+      },
+      {
+        "unit_id": "benchmark-judge-human-agreement",
+        "scope": "同题独立配对的A/B/tie名义标签；缺失另报；不复制MT-Bench多人抽样或泛化固定阈值。"
+      },
+      {
+        "unit_id": "benchmark-judge-probability-calibration",
+        "scope": "概率有限且在零到一内；事件为与独立仲裁一致；分箱和阈值预先冻结；无接受样本时错误率未定义。"
+      },
+      {
+        "unit_id": "benchmark-robustness-utility-security-denominators",
+        "scope": "唯一任务/目标配对；明确u/a/h/exposed布尔标签；h覆盖指定目标；条件子集率不得替换主率。"
+      }
+    ],
+    "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
   }
 ]

@@ -678,5 +678,145 @@
     "type": "related",
     "basis": "本次增加的跨模块评测入口，不声明技术因果关系",
     "version": 1
+  },
+  {
+    "id": "v1-prerequisite-gui-agent-mobile-agent",
+    "from": "gui-agent",
+    "to": "mobile-agent",
+    "type": "prerequisite",
+    "reason": "先理解通用机制，再阅读具体工程实现"
+  },
+  {
+    "id": "v1-prerequisite-task-loop-mobile-agent",
+    "from": "task-loop",
+    "to": "mobile-agent",
+    "type": "prerequisite",
+    "reason": "先理解通用机制，再阅读具体工程实现"
+  },
+  {
+    "id": "v1-prerequisite-gui-agent-app-agent",
+    "from": "gui-agent",
+    "to": "app-agent",
+    "type": "prerequisite",
+    "reason": "先理解通用机制，再阅读具体工程实现"
+  },
+  {
+    "id": "v1-prerequisite-memory-app-agent",
+    "from": "memory",
+    "to": "app-agent",
+    "type": "prerequisite",
+    "reason": "先理解通用机制，再阅读具体工程实现"
+  },
+  {
+    "id": "v1-prerequisite-gui-agent-ui-tars",
+    "from": "gui-agent",
+    "to": "ui-tars",
+    "type": "prerequisite",
+    "reason": "先理解通用机制，再阅读具体工程实现"
+  },
+  {
+    "id": "v1-prerequisite-tools-skills-ui-tars",
+    "from": "tools-skills",
+    "to": "ui-tars",
+    "type": "prerequisite",
+    "reason": "先理解通用机制，再阅读具体工程实现"
+  },
+  {
+    "id": "v1-prerequisite-coding-agent-openhands",
+    "from": "coding-agent",
+    "to": "openhands",
+    "type": "prerequisite",
+    "reason": "先理解通用机制，再阅读具体工程实现"
+  },
+  {
+    "id": "v1-prerequisite-agent-loop-openhands",
+    "from": "agent-loop",
+    "to": "openhands",
+    "type": "prerequisite",
+    "reason": "先理解通用机制，再阅读具体工程实现"
+  },
+  {
+    "id": "v1-prerequisite-coding-agent-swe-agent",
+    "from": "coding-agent",
+    "to": "swe-agent",
+    "type": "prerequisite",
+    "reason": "先理解通用机制，再阅读具体工程实现"
+  },
+  {
+    "id": "v1-prerequisite-context-swe-agent",
+    "from": "context",
+    "to": "swe-agent",
+    "type": "prerequisite",
+    "reason": "先理解通用机制，再阅读具体工程实现"
+  },
+  {
+    "id": "v1-prerequisite-coding-agent-aider",
+    "from": "coding-agent",
+    "to": "aider",
+    "type": "prerequisite",
+    "reason": "先理解通用机制，再阅读具体工程实现"
+  },
+  {
+    "id": "v1-prerequisite-context-aider",
+    "from": "context",
+    "to": "aider",
+    "type": "prerequisite",
+    "reason": "先理解通用机制，再阅读具体工程实现"
+  },
+  {
+    "id": "v1-prerequisite-coding-agent-codex-cli",
+    "from": "coding-agent",
+    "to": "codex-cli",
+    "type": "prerequisite",
+    "reason": "先理解通用机制，再阅读具体工程实现"
+  },
+  {
+    "id": "v1-prerequisite-tools-skills-codex-cli",
+    "from": "tools-skills",
+    "to": "codex-cli",
+    "type": "prerequisite",
+    "reason": "先理解通用机制，再阅读具体工程实现"
+  },
+  {
+    "id": "v1-prerequisite-coding-agent-claude-code",
+    "from": "coding-agent",
+    "to": "claude-code",
+    "type": "prerequisite",
+    "reason": "先理解通用机制，再阅读具体工程实现"
+  },
+  {
+    "id": "v1-prerequisite-context-claude-code",
+    "from": "context",
+    "to": "claude-code",
+    "type": "prerequisite",
+    "reason": "先理解通用机制，再阅读具体工程实现"
+  },
+  {
+    "id": "v1-prerequisite-agent-loop-langgraph",
+    "from": "agent-loop",
+    "to": "langgraph",
+    "type": "prerequisite",
+    "reason": "先理解通用机制，再阅读具体工程实现"
+  },
+  {
+    "id": "v1-prerequisite-memory-langgraph",
+    "from": "memory",
+    "to": "langgraph",
+    "type": "prerequisite",
+    "reason": "先理解通用机制，再阅读具体工程实现"
+  },
+  {
+    "id": "v1-prerequisite-agent-loop-autogen",
+    "from": "agent-loop",
+    "to": "autogen",
+    "type": "prerequisite",
+    "reason": "先理解通用机制，再阅读具体工程实现"
+  },
+  {
+    "id": "v1-prerequisite-task-loop-autogen",
+    "from": "task-loop",
+    "to": "autogen",
+    "type": "prerequisite",
+    "reason": "先理解通用机制，再阅读具体工程实现"
   }
 ]

@@ -1,0 +1,774 @@
+{
+  "release": "v1.0",
+  "base_release": "v0.2",
+  "repository": "https://github.com/yanbozhang/llm-systems-wiki",
+  "content_checked_at": "2026-10-24",
+  "status": "ready",
+  "modules": 7,
+  "topics": 45,
+  "knowledge_units": 135,
+  "teaching_examples": 45,
+  "learning_paths": 6,
+  "capabilities": 28,
+  "source_records": 294,
+  "distinct_source_urls": 269,
+  "learning_resources": 27,
+  "claims": 170,
+  "relations": 105,
+  "replicated_experiments": 0,
+  "validation": {
+    "curriculum_check": "passed",
+    "knowledge_unit_check": "passed",
+    "python_unittest_cases": 826,
+    "python_unittest_result": "passed",
+    "mermaid_rendered": 135,
+    "mermaid_cli_version": "11.4.2",
+    "formula_expressions_parsed": 1073,
+    "display_formula_blocks": 154,
+    "katex_version": "0.16.22",
+    "example_cli_and_import_files": 45,
+    "scope": "标准库教学函数的小输入数学性质、状态不变量、CLI与维护逻辑；不代表真实模型、框架或设备实验"
+  },
+  "files": [
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug.yml",
+      "sha256": "dd6265a5c5c837ce1d7da5b2bd6639c4d3b7e6b9e4e5ee38f48dd1da70076cfb"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/knowledge.yml",
+      "sha256": "24cb3d1c5b4e718bba4ec58ea2599787e6a4e01c792aa56343a80cab1fc1cf6b"
+    },
+    {
+      "path": ".github/pull_request_template.md",
+      "sha256": "43e9dd8fb2869fae9d74e49acb92633773da74bb58428a1ad7eab86f088e0892"
+    },
+    {
+      "path": ".github/workflows/check.yml",
+      "sha256": "0268a3a3be51bd37736df73c2a43f86c65548eecf7036d4fbba13e3d505f32ee"
+    },
+    {
+      "path": ".github/workflows/daily.yml",
+      "sha256": "3af064e62f10c2d346c14b97ee7e5cbf45ccc9856ad2ba83fa2bcb3b34c8c602"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "ce25551c55cda461a271bed33045e9896078a6b5e94a37cd4f6f0cb27dc6254a"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "f4a90d2625cdfd05d87f48e60026630f6f196b1b45cae6590c68f03cedc3ccc6"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "221f94d73ae0dd01e1a6a75fc71d532cd1023f7bc8133729c68521653b979f22"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "fbd17c54776c4a56c38640a63a342f51f1a8200d5da3527693fe6e5bb0828756"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "1f6e15a613a469728a60e534d070beb4bf32883a18e7dee25d5daa39220501b9"
+    },
+    {
+      "path": "README.md",
+      "sha256": "3dffd35dbba43f9fa4f60beeeff8da89aee7ce71d3c9d89050c3c454965507ab"
+    },
+    {
+      "path": "assets/知识地图.svg",
+      "sha256": "cdc9af13efa151c954719e4db92ff9bf14e752d9656249d1129e329ccb7e3017"
+    },
+    {
+      "path": "assets/知识地图预览.svg",
+      "sha256": "cdc9af13efa151c954719e4db92ff9bf14e752d9656249d1129e329ccb7e3017"
+    },
+    {
+      "path": "assets/能力地图.svg",
+      "sha256": "f8ac55390e11a36f3db503b47c4f2f5d41e02474c91c6cb0f3bccd93f74b09ca"
+    },
+    {
+      "path": "assets/能力地图预览.svg",
+      "sha256": "f8ac55390e11a36f3db503b47c4f2f5d41e02474c91c6cb0f3bccd93f74b09ca"
+    },
+    {
+      "path": "candidates/latest.json",
+      "sha256": "eb6ef3668fa66a6b59452591d2892f3286f6125e22bdbd656659eb4011379996"
+    },
+    {
+      "path": "candidates/runs/df2b8b96ea8a98590e7096c18c71d52ff22badeb94c1ecb150fb8862ac40cf7c.json",
+      "sha256": "eb6ef3668fa66a6b59452591d2892f3286f6125e22bdbd656659eb4011379996"
+    },
+    {
+      "path": "candidates/state.json",
+      "sha256": "92eaebacf195aec27c42e4512067c1b7c7d4aa7d7de479ebda485af2e8ce6a75"
+    },
+    {
+      "path": "candidates/study-plan.json",
+      "sha256": "f3ae1c0c9872c2a9897fc47c79cd967cad4b17068673620627911d40b3717c25"
+    },
+    {
+      "path": "candidates/候选处理说明.md",
+      "sha256": "ffaffc83d3344279d46c17a218a06fdd0e9c6cda93bff52c5387689737313df2"
+    },
+    {
+      "path": "docs/Agent开源方案导读.md",
+      "sha256": "c9df54a05c370e204bbfa0c17823124a0032e5abd10b98154ba89ef01445b662"
+    },
+    {
+      "path": "docs/LLMWiki模式与实现调研.md",
+      "sha256": "a41c0ac2731d0bd69a025a64c53c307fa310998cff3bd61d2e9a7331d7a3dfd8"
+    },
+    {
+      "path": "docs/共同基础.md",
+      "sha256": "6fae8040cc6a2bd85b87b8c9473e0f05f2e3a6b36d0d4e34b9eee1e25c30c170"
+    },
+    {
+      "path": "docs/初版范围与验收.md",
+      "sha256": "455bd93626b4419f517d735d1b6d95af93f76a348256a43d964d827931a65206"
+    },
+    {
+      "path": "docs/大模型持续学习知识库.md",
+      "sha256": "84787b40d96ac71637cb7dde2722eca4e15d6acbb853190ce78b9fed37371cdd"
+    },
+    {
+      "path": "docs/持续更新指南.md",
+      "sha256": "cfa5cc2e70c1d930c73aeb95df2c630365f4642fcc348f33198825a677811064"
+    },
+    {
+      "path": "docs/知识点索引.md",
+      "sha256": "003cc1718433fb84e0a1dbee09c9382e78643f8cbcab30ddfb520d1895ea55d0"
+    },
+    {
+      "path": "docs/研究队列.md",
+      "sha256": "1753a9d8fbf2e2f0cb5859cf2987de596408f99cb6e7bc564912689ba20979dd"
+    },
+    {
+      "path": "docs/系统学习资源指南.md",
+      "sha256": "687cf5e0eec6889c2ae639a7a3554126cedfaf65273a6fa689669f1e890388f9"
+    },
+    {
+      "path": "docs/能力地图.md",
+      "sha256": "972d594726e994d46edb44537d3bbea5158f335859993c05c9e9f83277274223"
+    },
+    {
+      "path": "docs/跨模块实践项目.md",
+      "sha256": "1fcfa3b683ca79ec2b94a3148b0b84421a42f3ded28cef120a02f2fcf8cef7ae"
+    },
+    {
+      "path": "examples/README.md",
+      "sha256": "8ed63b310b1193ca5f91d1c92fae21037cdfb8a1f20b0b3177667d7ae95861ee"
+    },
+    {
+      "path": "examples/agents/agent-evaluation.py",
+      "sha256": "88a098913a346c7030c14cab6118a91055e0a4d807ed661331eb68b3a67ab651"
+    },
+    {
+      "path": "examples/agents/aider.py",
+      "sha256": "5ee76560da74b687e4cc365dbe43a286931068e8a2a9c2decfa8a1dcaaecb37f"
+    },
+    {
+      "path": "examples/agents/app-agent.py",
+      "sha256": "3043d65a8039adccd3e3581810dbe4b6733877ec6e60334db2d69590d4bf74dc"
+    },
+    {
+      "path": "examples/agents/claude-code.py",
+      "sha256": "2bc39156999109814bb5de25da2b3f69a366e1b8aded74e32c802d442f726ccb"
+    },
+    {
+      "path": "examples/agents/codex-cli.py",
+      "sha256": "85ed331a6e4ab1f66757c206498e5815b1792b0eaac145fd450fcf888334e933"
+    },
+    {
+      "path": "examples/agents/coding-agent.py",
+      "sha256": "f201b1187777fea9b58323820f03e81e5be58d334bf9a71cf471e9fe4a01acde"
+    },
+    {
+      "path": "examples/agents/gui-agent.py",
+      "sha256": "c02aa0b5e40fdc7f64f22b0049f03ddce427030ef2ba434297ed2889d9c1aac0"
+    },
+    {
+      "path": "examples/agents/mobile-agent.py",
+      "sha256": "4661be17cf3bd3071e3846a0e69bd60dcfc788148df59842f0f0e9687d622aad"
+    },
+    {
+      "path": "examples/agents/openhands.py",
+      "sha256": "9bc6fc75ee74a165e73c02434d60b7468d0a23014ad52d49019160b8cbc67b4b"
+    },
+    {
+      "path": "examples/agents/swe-agent.py",
+      "sha256": "0b3382e5494cbc896bcbb54dc9384d27dc7f9b37dc2a4c582f9153446fb53a07"
+    },
+    {
+      "path": "examples/agents/task-loop.py",
+      "sha256": "34c17eb9d64997afae8d0dc9223a9315bd54700dd70ec634055b6fbd2830787c"
+    },
+    {
+      "path": "examples/agents/ui-tars.py",
+      "sha256": "bf40241546c9fe66a79875c1f8d025fb8da0339ed4c961819c5c33791f374c97"
+    },
+    {
+      "path": "examples/benchmark/benchmark-agents.py",
+      "sha256": "31555e50ec320f79cebc1bf69b5301f4f7504683eec847176fa58273cd8c770e"
+    },
+    {
+      "path": "examples/benchmark/benchmark-contamination.py",
+      "sha256": "37d12cc9e75123e613eac5a0156172aa37b5b0034157a396aee9721e71b293b5"
+    },
+    {
+      "path": "examples/benchmark/benchmark-general.py",
+      "sha256": "4fd98efd1ad12c89ac0feea79844a3afc85f03efca5c54fbe5cd10d00e2ebcec"
+    },
+    {
+      "path": "examples/benchmark/benchmark-judge.py",
+      "sha256": "9548c49ffa2220bbd128404f8b9842c3c18a6fd413471f39040f482dbbb1afac"
+    },
+    {
+      "path": "examples/benchmark/benchmark-metrics.py",
+      "sha256": "0b267ac47864cb4ed722380331006888bde18d47152b9a2f42847d04f5669890"
+    },
+    {
+      "path": "examples/benchmark/benchmark-multimodal.py",
+      "sha256": "5181cc82146a374f6fa32de37786799ce0cd79a43618fb6fd9db3d6b387249dc"
+    },
+    {
+      "path": "examples/benchmark/benchmark-protocol.py",
+      "sha256": "a4ca8b69e28bed82a3ef832c5700066dd2b604b111195fc9fcadde0b419639a5"
+    },
+    {
+      "path": "examples/benchmark/benchmark-rag.py",
+      "sha256": "6ce00597bd6c088a5e6d65312d765096107f7d7de0aefb6bb0c3dde3587d180a"
+    },
+    {
+      "path": "examples/benchmark/benchmark-reasoning-code.py",
+      "sha256": "89cd7330400741ce568e1f3fda8f1075c3c93ff4843dfd5a3207b6075701dbfb"
+    },
+    {
+      "path": "examples/benchmark/benchmark-robustness.py",
+      "sha256": "6cb5a90e3513634576b22e0a6c59a7dc41f26398132ab76c93400980eb5f4f75"
+    },
+    {
+      "path": "examples/benchmark/benchmark-systems.py",
+      "sha256": "aa9b6bb6861f518659c506f29745c9cfb1ee49d85bc298c129025a06b38167fa"
+    },
+    {
+      "path": "examples/harness/agent-loop.py",
+      "sha256": "50ec4fc697013a590140cde7d8d5bfc26ef02393e64e63ff6f43b1d82ba5338b"
+    },
+    {
+      "path": "examples/harness/autogen.py",
+      "sha256": "94fe5b1a8253ab7c948557f2f5e0ca8211bb2ce928b659500912f8ba585fe49f"
+    },
+    {
+      "path": "examples/harness/context.py",
+      "sha256": "60a4aba3c141144022a2043af8c581c1bcdf2de834fcbcabf12d8eb2cd840c86"
+    },
+    {
+      "path": "examples/harness/langgraph.py",
+      "sha256": "480ed4fe6268d46e64f4e7e21e8d8e6f4544ba2ee224d39b14d7da909d2f9dd7"
+    },
+    {
+      "path": "examples/harness/memory.py",
+      "sha256": "64dedbc7ee524db99385e8268d94b0c25bed666bfcb27d0859546b515ae9eec0"
+    },
+    {
+      "path": "examples/harness/tools-skills.py",
+      "sha256": "1a58abfe0620d23e030cbc69cdbe362cbc3a08b1d39042a64dfaf90b3be68ead"
+    },
+    {
+      "path": "examples/inference/cache-scheduling.py",
+      "sha256": "32e4d5b717460796e29b08d83c8a990ef9d90adffa763a470eb0c739b6bb1711"
+    },
+    {
+      "path": "examples/inference/inference-frameworks.py",
+      "sha256": "44a3076163cb5726ba78123eda00bd277087610a405b13cffe97395b8a52821c"
+    },
+    {
+      "path": "examples/inference/kv-cache.py",
+      "sha256": "7cdc52273fb30413ed8b041196e431030ec6bc8b256ecb315e325f739aff11ce"
+    },
+    {
+      "path": "examples/inference/prefill-decode.py",
+      "sha256": "49d7649c44b1c4b58deab4755b655021067a9a026db45d70a9abfc95fde9c54e"
+    },
+    {
+      "path": "examples/knowledge/graph-wiki.py",
+      "sha256": "cd53ca94f9b14b70afc386f130ecf03577146c6580f4b3ea0989dae23240fc7c"
+    },
+    {
+      "path": "examples/knowledge/hybrid-search.py",
+      "sha256": "96266856df3d0a76d800ed7f90330a495a23296a0e9be7545f121a0fa9a5ca16"
+    },
+    {
+      "path": "examples/knowledge/ingestion.py",
+      "sha256": "3ccb0d7dd1da76ba2a40f196e9a8f34173c4a4f0529b2fd62322f5c135392f13"
+    },
+    {
+      "path": "examples/knowledge/rag.py",
+      "sha256": "ce3ef052554569c156aeba15c538d6ea4f70a8727b789149217d3c9ae8b712e4"
+    },
+    {
+      "path": "examples/network/attention-heads.py",
+      "sha256": "e557f8c8aacb653fd9a647e1e2f640662267c9db74dd7d22c0786f328975533b"
+    },
+    {
+      "path": "examples/network/ffn-norm.py",
+      "sha256": "476a457c90f3573a66af50cc39ac571b318fce06f4c1bed7884ea91199abc617"
+    },
+    {
+      "path": "examples/network/position.py",
+      "sha256": "a59f82c333152e2ebd9be9d1317f9be462b10f04fca36b93e418e1666fb924e5"
+    },
+    {
+      "path": "examples/network/transformer.py",
+      "sha256": "443ebedb05092e1776bf8e08d29015e445f48b533c7f211bb74cae8e0068e53d"
+    },
+    {
+      "path": "examples/training/policy-optimization.py",
+      "sha256": "030e8de12f9594d1df9bba2c0cf465448fbd4b6e56191dfa23285545ffc99405"
+    },
+    {
+      "path": "examples/training/preference.py",
+      "sha256": "55e59daab258525cfa1d71ac31f1a7bbebc4952fbfb3aca98d0b789d496a52f7"
+    },
+    {
+      "path": "examples/training/pretraining.py",
+      "sha256": "6f63c7bbb4acaaf60fc89c7c0c16a2424f537e4df4f77f9e160dbe4e85902b9c"
+    },
+    {
+      "path": "examples/training/sft.py",
+      "sha256": "d4eb41dccb909cf9410fe5f53ecd6e8d7f7c1457e34f8fe76f36347b6e3476a0"
+    },
+    {
+      "path": "knowledge/capabilities.json",
+      "sha256": "1887d7716a2b424354799be8d926aaaf2e6cac51f7654b9df994c16eb133ac5c"
+    },
+    {
+      "path": "knowledge/claims.json",
+      "sha256": "ffe694a69ec2e54207a394aff7f10e3fb54193468390463241a1e9f92677fd23"
+    },
+    {
+      "path": "knowledge/modules.json",
+      "sha256": "eae94032f4ffbb3899f1e763bf6aa7ab4ca5758580e4a865abf733b000cd2ccd"
+    },
+    {
+      "path": "knowledge/relations.json",
+      "sha256": "c90cf26338aec688e819f9b1d340a3f51947cf377b32b2e5fb4acba8e1976748"
+    },
+    {
+      "path": "knowledge/topics.json",
+      "sha256": "a58874ccfd5407198993815edaa5d6fabb9956cfa4af785832f540f67588a008"
+    },
+    {
+      "path": "knowledge/units.json",
+      "sha256": "87cd3819d2acb5a2e4e41a3f03e60aebb61e5a0e1bc40fc67380f40dcf4b98d6"
+    },
+    {
+      "path": "releases/v0.1.json",
+      "sha256": "7a9db8bd12d9afc02f62d36b81f4c3f52b0761f5068c5c694ee025a4a0d7928f"
+    },
+    {
+      "path": "releases/v0.2.json",
+      "sha256": "82efc6b63db2782333817f3956680eb274d99e0dca0686563ab995d7da912103"
+    },
+    {
+      "path": "schema/学习体系契约.md",
+      "sha256": "d687d9038c4923d5f47a789de18f04a27f6db6c1ac38cebf49ff2327486f658c"
+    },
+    {
+      "path": "schema/知识点契约.md",
+      "sha256": "0e1d6a7ed26b81c93cfa65926cca9eff597a33ef28a791fc73c359472f47ff15"
+    },
+    {
+      "path": "schema/维护工具契约.md",
+      "sha256": "456f96a006d531b503be66f31a6b0f5481bf598675f01e14183411769afd582a"
+    },
+    {
+      "path": "schema/编纂规范.md",
+      "sha256": "8c40d5c482ef34a0a92e300d752902e796cbc789b5e1905ed7d4bb83827eb9f3"
+    },
+    {
+      "path": "scripts/learning_check.py",
+      "sha256": "b3d0baf24b52f43aa56e39a4d0c524df69fa8ffae8e19cb2d72d025c274aed2b"
+    },
+    {
+      "path": "scripts/wiki_tool.py",
+      "sha256": "eb656be2e4fc732d0e2126a64a49d9930b6caec0270386b30812ce5f691b39c6"
+    },
+    {
+      "path": "sources/learning-resources.json",
+      "sha256": "fd2d73033596ac3fd00fac5dc3b448547982a492a129eddc09c11c171774fe92"
+    },
+    {
+      "path": "sources/manifest/feeds.json",
+      "sha256": "b996e011d27048b91925f1a518cccc79fb9d68367d37e1b83d83826e975b3338"
+    },
+    {
+      "path": "sources/manifest/sources.json",
+      "sha256": "0331890d94262728533f821cbb36ed574c4d235676e0a7250ac617b5f045ba32"
+    },
+    {
+      "path": "sources/来源索引.md",
+      "sha256": "c9c4923cd041d0e8c5259df6976c24af666fb52e582533a7429d31644bd439e5"
+    },
+    {
+      "path": "templates/主题模板.md",
+      "sha256": "76ba020c9e6c6cabd6cb60f3ad21f35cfc7d13765bc188d553be751c30100e58"
+    },
+    {
+      "path": "templates/学习记录模板.md",
+      "sha256": "f560fe436352c53c424d13cf48b998665e55759393a2ec9666955e9784bf002d"
+    },
+    {
+      "path": "templates/实验记录模板.md",
+      "sha256": "5cbb6931ec0c3e8872b7c3dc0a195054419091028a20f7560253759019e26ef3"
+    },
+    {
+      "path": "templates/更新模板.md",
+      "sha256": "1a8210cd6551513d5b015e070051f01ef9d7bbde86e364df109c4da904420a0a"
+    },
+    {
+      "path": "templates/评测协议模板.md",
+      "sha256": "16fbe450debe2d4d6da3fd2d21f11fa62469d5ebb9c25de35730d085fc7301f9"
+    },
+    {
+      "path": "tests/__init__.py",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "tests/run_unit_tests.py",
+      "sha256": "f1adc7c0e89c5aa011bad1dd3498d04625b3498c84d24f57c5b0494393c80ed1"
+    },
+    {
+      "path": "tests/test_review_fixes.py",
+      "sha256": "ff22d47cec65c04d1079846248959f58a441b1e475a942033cd98e9400550536"
+    },
+    {
+      "path": "tests/test_v1_agents_examples.py",
+      "sha256": "8f752cc025e693b331713860c42d424c808d1a955f9450b0f8329a2b4ffce1b2"
+    },
+    {
+      "path": "tests/test_v1_benchmark_contamination.py",
+      "sha256": "24a848bf2ca58d4177d8d26a2428dda8d780cd2a91d6268376154f81fba0215d"
+    },
+    {
+      "path": "tests/test_v1_benchmark_extended_examples.py",
+      "sha256": "19525e1b0482d5e9b07ef7a04ccf7c050e969c393ca9d45d61601854668843b0"
+    },
+    {
+      "path": "tests/test_v1_benchmark_general.py",
+      "sha256": "388103f1e9faeae7d1e674ca849cabb7d231d230f4d198331079d329267b841a"
+    },
+    {
+      "path": "tests/test_v1_benchmark_metrics.py",
+      "sha256": "61d9a3a0600c9e75a4761d6675449654dc552f71f5d7880cb066488de30c51cf"
+    },
+    {
+      "path": "tests/test_v1_benchmark_protocol.py",
+      "sha256": "273ccfe6b5f16a12ed70b8e87dd8ec08a90d8e5df6902fad09b32506b09615fe"
+    },
+    {
+      "path": "tests/test_v1_benchmark_reasoning_code.py",
+      "sha256": "8a7d36e8ea4161df6ca7ca558c8f0cdf08254aaf244597c1c555ab94f625dbfa"
+    },
+    {
+      "path": "tests/test_v1_coding_framework_examples.py",
+      "sha256": "0bb7f1cabab30e6bd2c09b589313c0855b00543cdde1b4bc5aea43c1bcaa5a07"
+    },
+    {
+      "path": "tests/test_v1_gui_framework_examples.py",
+      "sha256": "1abec51e1dcc0c77294d6adbe867a4a18d7ae898d8a40289a0a936b7913b586b"
+    },
+    {
+      "path": "tests/test_v1_harness_cases_examples.py",
+      "sha256": "06d5d927f8d37ee0c93cad575df643457977f774e714380692ea518bfaf53bf3"
+    },
+    {
+      "path": "tests/test_v1_harness_examples.py",
+      "sha256": "b6a3a47a38ed1f6d39e8190554171ec6dbb413cdd4fa3892b582d222804a6543"
+    },
+    {
+      "path": "tests/test_v1_inference_examples.py",
+      "sha256": "83fd3fdf06ef336c811299c633a907d3ea0113afc388e2d96a72ad5bff71a03f"
+    },
+    {
+      "path": "tests/test_v1_knowledge_examples.py",
+      "sha256": "a7e60366b180761b58a788cf0659d2dcf80fb5eb5c471e8c9f03bd7d0cc1a8ec"
+    },
+    {
+      "path": "tests/test_v1_learning_check.py",
+      "sha256": "f85942c605daccb33c74bde6fb592e78aa62f039b4359d20e627c31c0cb1f4c2"
+    },
+    {
+      "path": "tests/test_v1_network_examples.py",
+      "sha256": "354ca26c78d64751803e2f0efe0065a0ea91bdc4de3772261171bd83b7d5c45f"
+    },
+    {
+      "path": "tests/test_v1_training_examples.py",
+      "sha256": "45c955b3f97f67dcf19bd6d4b8654ba7fb3e9406a379e7938a690797e1007d80"
+    },
+    {
+      "path": "tests/test_wiki_tool.py",
+      "sha256": "fff8ced16481590f3947bafd016aabbb99d0084a7f55952726f96343aa2e81ac"
+    },
+    {
+      "path": "tests/v1_entrypoint_support.py",
+      "sha256": "bbcd36a2dc4218999f9cade440097014f21a97d56a23db94cffce5d8ca1e2d50"
+    },
+    {
+      "path": "user-notes/个人学习说明.md",
+      "sha256": "da804a2de5ee04e89eabf2564a359fa64d2f13645bec49fd7a783e747e3f43a5"
+    },
+    {
+      "path": "wiki/changes/公式源码贯通知识库.md",
+      "sha256": "e6e1bd5e31d22ad384bd158bc4862c08c02b13e5d3ba38e1411f27d46ce5a3f7"
+    },
+    {
+      "path": "wiki/changes/初始版本.md",
+      "sha256": "2759ade3a2d522ff45a4a3bcb1d0e877c497ea1857e1b65debbafa7e8f514e2e"
+    },
+    {
+      "path": "wiki/changes/学习体系升级.md",
+      "sha256": "114c0453ecb92fbdace3b60692645a74b9e0a644c1986b619473cdd908cfb464"
+    },
+    {
+      "path": "wiki/changes/首次来源巡检.md",
+      "sha256": "84eca76368f7fb3c52619202cb06bfeac35186c45e85cab7eed2563e1dbf67c2"
+    },
+    {
+      "path": "wiki/comparisons/缓存与记忆及检索的区别.md",
+      "sha256": "949b169963ac57e3a20d06317a3b8db1ffbf2afaf3bd43816ecbe46f972fcdee"
+    },
+    {
+      "path": "wiki/modules/Benchmark.md",
+      "sha256": "02cfd89df8073104bff280e2be11996fed74e93cd7fb4a602380bf3766ddc9e5"
+    },
+    {
+      "path": "wiki/modules/Harness.md",
+      "sha256": "d71d908fae5b52e108b42215deff6d3522b66df3347c46f0ef583d880e841d3e"
+    },
+    {
+      "path": "wiki/modules/业务Agent.md",
+      "sha256": "ad0a13364463bdc0b60a91e2c3a335a1d2ae1b1334fe703c1de69c1995e31760"
+    },
+    {
+      "path": "wiki/modules/推理.md",
+      "sha256": "ca30b4022ecca798fc219d1b3a0f513166af23cccef2a93820505b8679671254"
+    },
+    {
+      "path": "wiki/modules/模型网络.md",
+      "sha256": "fbf886a6cd1f7dffad2d90d775489db6f43da7f3a52111cfe3ca77f04ff8339b"
+    },
+    {
+      "path": "wiki/modules/知识库.md",
+      "sha256": "04ce081f0c4a8c7715067ecc990d786d0d77a9f021c20248f08708240e86a1c9"
+    },
+    {
+      "path": "wiki/modules/训练.md",
+      "sha256": "1a1289aa212eb6c1ffe1475301a99a36733615cd73f255d421a073505494aa75"
+    },
+    {
+      "path": "wiki/paths/AI编程智能体实践路径.md",
+      "sha256": "da34bb236fc5149b138051ef9ea55fd246f3de493d77b6dc72b2b53834d55696"
+    },
+    {
+      "path": "wiki/paths/Agent开发路径.md",
+      "sha256": "17d4e458b0b8a3c58c597a830e70611dac97eddcfd6a99e4ba33c13e3b44f1ab"
+    },
+    {
+      "path": "wiki/paths/Benchmark学习路径.md",
+      "sha256": "88d1f205b72f235a7f259844ddf34e1837313755b3ae8f9d35a879ff63403fc5"
+    },
+    {
+      "path": "wiki/paths/GUI智能体实践路径.md",
+      "sha256": "06ae6d1a8387cf94e8cdb05ddd162263c8d652bb80a217eff92af5b6b114535a"
+    },
+    {
+      "path": "wiki/paths/基础入门路径.md",
+      "sha256": "6bf2e32eb7d95b4445c96368dc701415a75cefdfe39ad913937c707dcd0be2ea"
+    },
+    {
+      "path": "wiki/paths/系统工程路径.md",
+      "sha256": "430a43c03e9299fbc9d98a040297d4917379c44737e6a6c90eb7389bf8fa7fbe"
+    },
+    {
+      "path": "wiki/topics/AI代码开发与反馈.md",
+      "sha256": "7535b693b75a84f548b1876ae3e07141bb246569544e021f069c67b0f9161f72"
+    },
+    {
+      "path": "wiki/topics/Agent任务基准与执行评估.md",
+      "sha256": "c93c100e4b005489e934480ccf6fed9d7fbdbff7bce057aca0e744e11826ed68"
+    },
+    {
+      "path": "wiki/topics/Agent记忆与保鲜.md",
+      "sha256": "deb869a4203d9a6749900b7f19ea238c3159acb490b489a015063bd2bf91e85f"
+    },
+    {
+      "path": "wiki/topics/Agent评测与失败归因.md",
+      "sha256": "b700ad8cb8a35d51b07e3c25cae20066bb85ecef3302c7d9466a6fc320b9877e"
+    },
+    {
+      "path": "wiki/topics/Aider仓库地图与编辑协议.md",
+      "sha256": "6dfdb0a86e9cf56b1d5e78852433916ced40a70d3af277fa8d0a76e71b528b3f"
+    },
+    {
+      "path": "wiki/topics/AppAgent探索与技能学习.md",
+      "sha256": "13ca2605feddbb7017d6a639f28f3fb5ff4dd4bf4cc0ef596b0017632639f21c"
+    },
+    {
+      "path": "wiki/topics/AutoGen对话团队与终止.md",
+      "sha256": "3699062a6a2d29d463fecd5e7fcb8b9242bae12b81789b6338eed937aed44faf"
+    },
+    {
+      "path": "wiki/topics/ClaudeCode工作流与扩展边界.md",
+      "sha256": "071e7cd29e19548261be18584d05c89cde281fd4b2bfe27798e9144945c2dc23"
+    },
+    {
+      "path": "wiki/topics/CodexCLI架构与执行.md",
+      "sha256": "3308771aea08fa6b67d263beee8790f3782457840283f204abe79dfe104c5063"
+    },
+    {
+      "path": "wiki/topics/GUI定位与执行.md",
+      "sha256": "8ee0eec690547ce3bc3113aa77b8246f49958627a9edaeda260cf98b87d047e3"
+    },
+    {
+      "path": "wiki/topics/GraphRAG与LLMWiki.md",
+      "sha256": "c741c0c0b2088b9cbdb50d40854f343799aab6402b682bcf7ae23bd7ca305eb3"
+    },
+    {
+      "path": "wiki/topics/Harness任务循环.md",
+      "sha256": "5842da6c2076b4e666440966e7bec6445f97f25f286a862cd7f2008238155e92"
+    },
+    {
+      "path": "wiki/topics/KV缓存原理与显存估算.md",
+      "sha256": "4fa008b145227ff352746088095463543fc3e29dd1e5615063607a15a9a3ecb5"
+    },
+    {
+      "path": "wiki/topics/LangGraph状态图与持久化.md",
+      "sha256": "63bf64c2660b20cc46138123befc74b4b0f27ca66e5ffccb36798c7f7eeee422"
+    },
+    {
+      "path": "wiki/topics/MHA与MQA及GQA.md",
+      "sha256": "9d11ac6b13716d77f3969a8b9f62b62218b094d9c1f1cf6cac4b342b2b8cf58e"
+    },
+    {
+      "path": "wiki/topics/MobileAgent多智能体协作.md",
+      "sha256": "9c94addf2300753c269e30b2a6acdd3489557025859e1b86d76de49da00e3d58"
+    },
+    {
+      "path": "wiki/topics/OpenHands事件流与运行时.md",
+      "sha256": "cb2f7e00d8afea05e393c89c93f95a51af87af755fa368bb1adf66fe19c25ca4"
+    },
+    {
+      "path": "wiki/topics/Prefill与Decode.md",
+      "sha256": "02866b0e6ce92bc2ccdf76e5cbd8aad24584fd34fc8db4e650355e522911cd4c"
+    },
+    {
+      "path": "wiki/topics/RAG与引用回答.md",
+      "sha256": "1df239d72027582356c352d0500fb2072dc9dd0d568a7e68ef79b0b30074cca6"
+    },
+    {
+      "path": "wiki/topics/RAG检索与回答评测.md",
+      "sha256": "63d4089d692c58eaa6ac979aec2589166f77ec25f12082b097d7488d1d9f45be"
+    },
+    {
+      "path": "wiki/topics/SWEAgent与智能体计算机接口.md",
+      "sha256": "85613d380499f8eaa71c7843af621d1541d725e791b815fc0a795ac7b6eac61d"
+    },
+    {
+      "path": "wiki/topics/Transformer与自回归生成.md",
+      "sha256": "aa36d5f6cc585dce72c4878ebab2f893634ae40d83ca27214e6e124389f8c96f"
+    },
+    {
+      "path": "wiki/topics/UITARS感知与动作执行.md",
+      "sha256": "1bf5165aaf62d2e741a9da7fc40af051f5d17c961b863e61e11e151f11277c1a"
+    },
+    {
+      "path": "wiki/topics/上下文选择与压缩.md",
+      "sha256": "7e7ff56ea65fb52be28bb573e7ad5573ef9d1e0c64851c1a433c96fc8152c6d6"
+    },
+    {
+      "path": "wiki/topics/业务Agent任务闭环.md",
+      "sha256": "47ff62b9f29d146ce523c2070500a78498faeb48db39d350b17be4225ea223fc"
+    },
+    {
+      "path": "wiki/topics/位置编码与RoPE.md",
+      "sha256": "58423426fbb311b5ba67b6e763e396c44d1db57e4d1dff646e3315acf6aff51e"
+    },
+    {
+      "path": "wiki/topics/偏好学习与DPO.md",
+      "sha256": "a0bac637742e2f313540487d88636fd64dae91ee0797b0f957ebc11373450bf6"
+    },
+    {
+      "path": "wiki/topics/前馈网络与归一化.md",
+      "sha256": "03009a44d92d6c5c89e0d60ce8a3a243219dd556a96fb8c8703f640a8e7d24a3"
+    },
+    {
+      "path": "wiki/topics/多模态与界面感知评测.md",
+      "sha256": "6ef36dcd3e7a950a7c9c5e069ceaa6e0bc2dee7fadd88f28d3084461dccb1461"
+    },
+    {
+      "path": "wiki/topics/工具协议与MCP及Skill.md",
+      "sha256": "f78184017b8e749f4816a1dec3538924fa64ee04f03a8fea7d90a9d3f314b16d"
+    },
+    {
+      "path": "wiki/topics/推理与代码生成评测.md",
+      "sha256": "08660e775a1b3b698ddf28ddd7d230972efce93955ffc411532ecf2a79b012ee"
+    },
+    {
+      "path": "wiki/topics/推理框架与性能实验.md",
+      "sha256": "6f571705cc580abfa6e99c695848e44146bccde8c3ac918ebf76fdf745e82925"
+    },
+    {
+      "path": "wiki/topics/推理系统性能基准.md",
+      "sha256": "15d6e9329bf577cc538ca22c190b982c5480cf1fbbc62ce023489992dae450d2"
+    },
+    {
+      "path": "wiki/topics/数据污染与评测集治理.md",
+      "sha256": "35e20baedc17422ff11dc1b07a4585cb18c588ad3a68cc11fc19d2cff543f8c2"
+    },
+    {
+      "path": "wiki/topics/来源接入与版本管理.md",
+      "sha256": "451c9f8b4fa7e763fab130e442dff5010438b18fe5cc036c90dec09a90ecc5ce"
+    },
+    {
+      "path": "wiki/topics/模型裁判与人工校准.md",
+      "sha256": "c0aecfbda8dbeea673ddef3eb9c804afeae7f44b573ffd827461f676d4745299"
+    },
+    {
+      "path": "wiki/topics/混合检索与重排.md",
+      "sha256": "9196df5ae87a9c5bc5d53cf5714f2ea7f72e5c716281bcf38138f0026ecfb158"
+    },
+    {
+      "path": "wiki/topics/监督微调与LoRA.md",
+      "sha256": "41282e9093835e172f2392fb3803f1ea1cf09585da2de7cad5dc9e746a8d09ad"
+    },
+    {
+      "path": "wiki/topics/稳健性与工具安全评测.md",
+      "sha256": "a95205da825b3e6cc4821d87bbc2f4e1d6144347186e89875b48cf396788b6a5"
+    },
+    {
+      "path": "wiki/topics/策略优化与GRPO.md",
+      "sha256": "5cfbb72c70846621fcc4927ab30fd54ca6ed215c3b2425b4b56a9cfad60f867a"
+    },
+    {
+      "path": "wiki/topics/缓存分页与连续批处理.md",
+      "sha256": "b863ae38f84193e54e626471239e329bbc24f92405558f7d5b1d9f59066a9d7f"
+    },
+    {
+      "path": "wiki/topics/评测协议与可复现性.md",
+      "sha256": "6954475077cf5f9c5a92e8cf8350eec3a66e6be7847b493beb6b98626affe866"
+    },
+    {
+      "path": "wiki/topics/评测指标与统计推断.md",
+      "sha256": "3e71fede7768c23b345d4e0ff143cf7244aa0e096e04f61ce022b1173ffa0cd9"
+    },
+    {
+      "path": "wiki/topics/通用能力基准与选型.md",
+      "sha256": "f3f6b789b0ceef8668531ee2a176c79495e3d71a356af817832a31de17081a94"
+    },
+    {
+      "path": "wiki/topics/预训练目标与数据.md",
+      "sha256": "ca433c54bbf85ce763b881f37a7575e0a3032b458d9073bacc08c970b0e4e935"
+    }
+  ]
+}

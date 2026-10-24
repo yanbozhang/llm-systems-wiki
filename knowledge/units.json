@@ -1,0 +1,2078 @@
+[
+  {
+    "id": "agent-loop-transition",
+    "topic": "agent-loop",
+    "title": "知识点一：把结果未知作为可恢复状态",
+    "example": "examples/harness/agent-loop.py",
+    "function": "transition",
+    "source_ids": [
+      "v1-agents-pregel-loop",
+      "v1-agents-langgraph-persistence",
+      "v1-agents-react-paper"
+    ],
+    "claim_id": "claim-agent-loop-transition-v1",
+    "conditions": "串行任务；具备权威回读和明确验收事件。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "agent-loop-admit-budget",
+    "topic": "agent-loop",
+    "title": "知识点二：把停止条件变成执行前的预算预留",
+    "example": "examples/harness/agent-loop.py",
+    "function": "admit_budget",
+    "source_ids": [
+      "v1-agents-autogen-stop",
+      "v1-agents-mcp-lifecycle",
+      "v1-agents-react-paper"
+    ],
+    "claim_id": "claim-agent-loop-admit-budget-v1",
+    "conditions": "成本预估是本次调用上界；每次重试与回读也消耗步数。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "agent-loop-reconcile-outcome",
+    "topic": "agent-loop",
+    "title": "知识点三：检查点恢复与外部幂等不能互相替代",
+    "example": "examples/harness/agent-loop.py",
+    "function": "reconcile_outcome",
+    "source_ids": [
+      "v1-agents-pregel-loop",
+      "v1-agents-langgraph-persistence",
+      "v1-agents-mcp-lifecycle"
+    ],
+    "claim_id": "claim-agent-loop-reconcile-outcome-v1",
+    "conditions": "幂等键绑定同一载荷；账本读取可信；服务端以原子方式维护键与副作用。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "context-select-context",
+    "topic": "context",
+    "title": "知识点一：预算选择是带必要项的离散优化",
+    "example": "examples/harness/context.py",
+    "function": "select_context",
+    "source_ids": [
+      "v1-agents-autogen-token",
+      "v1-agents-context-guide",
+      "v1-agents-langgraph-memory"
+    ],
+    "claim_id": "claim-context-select-context-v1",
+    "conditions": "教学价值可加、成本为已知正整数；可选条目间没有交互效应。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "context-trim-complete-turns",
+    "topic": "context",
+    "title": "知识点二：压缩单位必须维护调用与结果闭包",
+    "example": "examples/harness/context.py",
+    "function": "trim_complete_turns",
+    "source_ids": [
+      "v1-agents-autogen-buffer",
+      "v1-agents-autogen-token",
+      "v1-agents-sweagent-history",
+      "v1-agents-context-guide"
+    ],
+    "claim_id": "claim-context-trim-complete-turns-v1",
+    "conditions": "回合边界由宿主提供；每个调用都在本回合内有且仅有一个结果。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "context-audit-checkpoint",
+    "topic": "context",
+    "title": "知识点三：用关键字段保持率审计压缩损失",
+    "example": "examples/harness/context.py",
+    "function": "audit_checkpoint",
+    "source_ids": [
+      "v1-agents-sweagent-history",
+      "v1-agents-context-guide",
+      "v1-agents-langgraph-persistence"
+    ],
+    "claim_id": "claim-context-audit-checkpoint-v1",
+    "conditions": "关键字段在压缩前独立定义，值使用稳定规范化文本。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "memory-eligible-memories",
+    "topic": "memory",
+    "title": "知识点一：召回适用性先于语义相似度",
+    "example": "examples/harness/memory.py",
+    "function": "eligible_memories",
+    "source_ids": [
+      "v1-agents-store-memory",
+      "v1-agents-langgraph-memory",
+      "v1-agents-langgraph-persistence"
+    ],
+    "claim_id": "claim-memory-eligible-memories-v1",
+    "conditions": "应用能提供可信命名空间、版本、有效期和来源字段。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "memory-freshness-score",
+    "topic": "memory",
+    "title": "知识点二：时间衰减是排序策略而非真假概率",
+    "example": "examples/harness/memory.py",
+    "function": "freshness_score",
+    "source_ids": [
+      "v1-agents-store-memory",
+      "v1-agents-context-guide",
+      "v1-agents-langgraph-memory"
+    ],
+    "claim_id": "claim-memory-freshness-score-v1",
+    "conditions": "相关度已归一化；年龄与半衰期使用相同单位；先完成资格过滤。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "memory-invalidation-closure",
+    "topic": "memory",
+    "title": "知识点三：撤回要传播到派生索引与答案",
+    "example": "examples/harness/memory.py",
+    "function": "invalidation_closure",
+    "source_ids": [
+      "v1-agents-store-memory",
+      "v1-agents-langgraph-persistence",
+      "v1-agents-context-guide"
+    ],
+    "claim_id": "claim-memory-invalidation-closure-v1",
+    "conditions": "依赖图完整记录派生关系；本文采用任何父来源撤回就暂时失效的保守策略。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "tools-skills-validate-query",
+    "topic": "tools-skills",
+    "title": "知识点一：结构合法与业务参数正确是两道门",
+    "example": "examples/harness/tools-skills.py",
+    "function": "validate_query",
+    "source_ids": [
+      "v1-agents-mcp-session",
+      "v1-agents-mcp-tools",
+      "v1-agents-mcp-lifecycle"
+    ],
+    "claim_id": "claim-tools-skills-validate-query-v1",
+    "conditions": "教学查询固定city与days字段；真实实现应使用完整Schema验证和业务规则。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "tools-skills-classify-response",
+    "topic": "tools-skills",
+    "title": "知识点二：错误分层决定下一步而不是统一重试",
+    "example": "examples/harness/tools-skills.py",
+    "function": "classify_response",
+    "source_ids": [
+      "v1-agents-mcp-session",
+      "v1-agents-mcp-tools",
+      "v1-agents-mcp-lifecycle"
+    ],
+    "claim_id": "claim-tools-skills-classify-response-v1",
+    "conditions": "简化JSON-RPC响应模型；示例工具输出声明count为非负整数。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "tools-skills-skill-load-plan",
+    "topic": "tools-skills",
+    "title": "知识点三：Skill分层加载控制上下文而非扩大权限",
+    "example": "examples/harness/tools-skills.py",
+    "function": "skill_load_plan",
+    "source_ids": [
+      "v1-agents-skills-prompt",
+      "v1-agents-skills-spec",
+      "v1-agents-autogen-token",
+      "v1-agents-context-guide"
+    ],
+    "claim_id": "claim-tools-skills-skill-load-plan-v1",
+    "conditions": "教学成本已知；资源归属明确；正文和资源只作计划而不执行。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "task-loop-terminal-contract",
+    "topic": "task-loop",
+    "title": "知识点一：把业务成功写成三值终态契约",
+    "example": "examples/agents/task-loop.py",
+    "function": "terminal_contract",
+    "source_ids": [
+      "v1-agents-osworld-env",
+      "v1-agents-osworld-paper",
+      "v1-agents-mcp-tools"
+    ],
+    "claim_id": "claim-task-loop-terminal-contract-v1",
+    "conditions": "断言集合在执行前冻结，True、False和None分别表示已证实满足、不满足和未观测。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "task-loop-task-frontier",
+    "topic": "task-loop",
+    "title": "知识点二：按证据依赖选择可执行前沿",
+    "example": "examples/agents/task-loop.py",
+    "function": "task_frontier",
+    "source_ids": [
+      "v1-agents-pregel-loop",
+      "v1-agents-langgraph-persistence",
+      "v1-agents-osworld-paper"
+    ],
+    "claim_id": "claim-task-loop-task-frontier-v1",
+    "conditions": "教学依赖图为有限DAG；completed表示完成事实而非计划状态。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "task-loop-compensation-plan",
+    "topic": "task-loop",
+    "title": "知识点三：恢复与补偿分别面对未知和已发生",
+    "example": "examples/agents/task-loop.py",
+    "function": "compensation_plan",
+    "source_ids": [
+      "v1-agents-pregel-loop",
+      "v1-agents-langgraph-persistence",
+      "v1-agents-mcp-lifecycle",
+      "v1-agents-osworld-env"
+    ],
+    "claim_id": "claim-task-loop-compensation-plan-v1",
+    "conditions": "教学动作按执行顺序记录；可逆性是业务契约；补偿本身尚未执行。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "gui-agent-map-point",
+    "topic": "gui-agent",
+    "title": "知识点一：展示坐标到设备坐标需要完整变换",
+    "example": "examples/agents/gui-agent.py",
+    "function": "map_point",
+    "source_ids": [
+      "v1-agents-osworld-control",
+      "v1-agents-seeclick-paper",
+      "v1-agents-osworld-paper"
+    ],
+    "claim_id": "claim-gui-agent-map-point-v1",
+    "conditions": "截图与设备裁剪区域只有轴对齐缩放和平移；无旋转、透视或内容重排。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "gui-agent-observation-gate",
+    "topic": "gui-agent",
+    "title": "知识点二：观测有效性是动作执行前的条件",
+    "example": "examples/agents/gui-agent.py",
+    "function": "observation_gate",
+    "source_ids": [
+      "v1-agents-osworld-env",
+      "v1-agents-osworld-paper",
+      "v1-agents-react-paper"
+    ],
+    "claim_id": "claim-gui-agent-observation-gate-v1",
+    "conditions": "宿主能获得布局指纹、滚动和遮挡变化；时间使用同一单调尺度。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "gui-agent-verify-gui-action",
+    "topic": "gui-agent",
+    "title": "知识点三：定位、驱动与业务结果必须分层验证",
+    "example": "examples/agents/gui-agent.py",
+    "function": "verify_gui_action",
+    "source_ids": [
+      "v1-agents-osworld-control",
+      "v1-agents-osworld-env",
+      "v1-agents-seeclick-paper",
+      "v1-agents-osworld-paper"
+    ],
+    "claim_id": "claim-gui-agent-verify-gui-action-v1",
+    "conditions": "目标框可信；驱动回执与业务后置条件分别记录；函数只诊断给定动作。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "coding-agent-repository-slice",
+    "topic": "coding-agent",
+    "title": "知识点一：仓库理解应沿调用关系扩展问题上下文",
+    "example": "examples/agents/coding-agent.py",
+    "function": "repository_slice",
+    "source_ids": [
+      "v1-agents-sweagent-edit",
+      "v1-agents-sweagent-history",
+      "v1-agents-sweagent-paper"
+    ],
+    "claim_id": "claim-coding-agent-repository-slice-v1",
+    "conditions": "教学调用图已经给定且覆盖相关动态调用；半径是显式范围约束。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "coding-agent-guarded-replace",
+    "topic": "coding-agent",
+    "title": "知识点二：文本补丁必须绑定基线并维护编辑不变量",
+    "example": "examples/agents/coding-agent.py",
+    "function": "guarded_replace",
+    "source_ids": [
+      "v1-agents-sweagent-edit",
+      "v1-agents-sweagent-paper",
+      "v1-agents-swebench-paper"
+    ],
+    "claim_id": "claim-coding-agent-guarded-replace-v1",
+    "conditions": "目标是内存中的Python源码；替换锚点唯一；SHA用于版本身份而非真实性认证。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "coding-agent-grade-patch",
+    "topic": "coding-agent",
+    "title": "知识点三：修复与回归证据要绑定同一补丁版本",
+    "example": "examples/agents/coding-agent.py",
+    "function": "grade_patch",
+    "source_ids": [
+      "v1-agents-swebench-grade",
+      "v1-agents-swebench-paper",
+      "v1-agents-sweagent-loop"
+    ],
+    "claim_id": "claim-coding-agent-grade-patch-v1",
+    "conditions": "修复与回归身份集合预先冻结且非空；结果由独立执行方提供。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "agent-evaluation-success-summary",
+    "topic": "agent-evaluation",
+    "title": "知识点一：固定分母并分开首次成功与重试成功",
+    "example": "examples/agents/agent-evaluation.py",
+    "function": "success_summary",
+    "source_ids": [
+      "v1-agents-sweagent-loop",
+      "v1-agents-swebench-grade",
+      "v1-agents-swebench-paper",
+      "v1-agents-osworld-paper"
+    ],
+    "claim_id": "claim-agent-evaluation-success-summary-v1",
+    "conditions": "每个任务至少记录一次尝试；比较版本时使用同一任务集和同一重试预算。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "agent-evaluation-first-divergence",
+    "topic": "agent-evaluation",
+    "title": "知识点二：最早证据偏差只产生归因候选",
+    "example": "examples/agents/agent-evaluation.py",
+    "function": "first_divergence",
+    "source_ids": [
+      "v1-agents-sweagent-loop",
+      "v1-agents-osworld-env",
+      "v1-agents-react-paper",
+      "v1-agents-sweagent-paper"
+    ],
+    "claim_id": "claim-agent-evaluation-first-divergence-v1",
+    "conditions": "事件已按因果相关顺序整理；每项检查有独立证据定位；候选需进一步干预验证。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "agent-evaluation-audit-evaluator",
+    "topic": "agent-evaluation",
+    "title": "知识点三：评估器也需要假阳性与假阴性审计",
+    "example": "examples/agents/agent-evaluation.py",
+    "function": "audit_evaluator",
+    "source_ids": [
+      "v1-agents-swebench-grade",
+      "v1-agents-swebench-paper",
+      "v1-agents-osworld-env",
+      "v1-agents-osworld-paper"
+    ],
+    "claim_id": "claim-agent-evaluation-audit-evaluator-v1",
+    "conditions": "复核标签独立于待评估判据；样本选择与标签缺失机制需要记录。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-agents-task-acceptance",
+    "topic": "benchmark-agents",
+    "title": "知识点一：修复成功是有效运行、修复测试与回归保持的交集",
+    "example": "examples/benchmark/benchmark-agents.py",
+    "function": "grade_patch",
+    "source_ids": [
+      "v1-benchagents-swebench-grading",
+      "v1-benchagents-swebench-paper"
+    ],
+    "claim_id": "claim-benchmark-agents-task-acceptance-v1",
+    "conditions": "教学模拟PASS_AND_FAIL；至少一个F2P；规范化测试ID；不模拟FAIL_ONLY或真实执行。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-agents-final-state",
+    "topic": "benchmark-agents",
+    "title": "知识点二：终态谓词允许多种路径，部分满足不等于任务成功",
+    "example": "examples/benchmark/benchmark-agents.py",
+    "function": "state_acceptance",
+    "source_ids": [
+      "v1-benchagents-webarena-evaluators",
+      "v1-benchagents-webarena-paper"
+    ],
+    "claim_id": "claim-benchmark-agents-final-state-v1",
+    "conditions": "非空可信条件；宿主提供已规范类型的终态；未覆盖副作用仍可能漏检。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-agents-budget-denominators",
+    "topic": "benchmark-agents",
+    "title": "知识点三：任务分母、尝试分母与预算内成功回答不同问题",
+    "example": "examples/benchmark/benchmark-agents.py",
+    "function": "budget_report",
+    "source_ids": [
+      "v1-benchagents-humaneval-eval",
+      "v1-benchagents-humaneval-paper",
+      "v1-benchagents-swebench-grading"
+    ],
+    "claim_id": "claim-benchmark-agents-budget-denominators-v1",
+    "conditions": "每任务序号从1连续；失败成本计入累计调用预算；输入已区分infra_error与任务失败。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-judge-order-mapping",
+    "topic": "benchmark-judge",
+    "title": "知识点一：交换顺序必须先还原身份，再计算一致性",
+    "example": "examples/benchmark/benchmark-judge.py",
+    "function": "swapped_pair_summary",
+    "source_ids": [
+      "v1-benchagents-fastchat-judge",
+      "v1-benchagents-mtbench-paper"
+    ],
+    "claim_id": "claim-benchmark-judge-order-mapping-v1",
+    "conditions": "同题答案冻结，A/B表示展示槽位；error为显式解析失败；不将交换一致性等同正确性。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-judge-human-agreement",
+    "topic": "benchmark-judge",
+    "title": "知识点二：人工一致率必须连同标签边际与退化情形解释",
+    "example": "examples/benchmark/benchmark-judge.py",
+    "function": "agreement_audit",
+    "source_ids": [
+      "v1-benchagents-sklearn-classification",
+      "v1-benchagents-kappa-doc",
+      "v1-benchagents-mtbench-paper"
+    ],
+    "claim_id": "claim-benchmark-judge-human-agreement-v1",
+    "conditions": "同题独立配对的A/B/tie名义标签；缺失另报；不复制MT-Bench多人抽样或泛化固定阈值。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-judge-probability-calibration",
+    "topic": "benchmark-judge",
+    "title": "知识点三：校准的是明确事件的概率，覆盖率与条件错误必须同时报告",
+    "example": "examples/benchmark/benchmark-judge.py",
+    "function": "calibration_audit",
+    "source_ids": [
+      "v1-benchagents-lm-metrics",
+      "v1-benchagents-calibration-doc"
+    ],
+    "claim_id": "claim-benchmark-judge-probability-calibration-v1",
+    "conditions": "概率有限且在零到一内；事件为与独立仲裁一致；分箱和阈值预先冻结；无接受样本时错误率未定义。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-robustness-utility-security-denominators",
+    "topic": "benchmark-robustness",
+    "title": "知识点一：效用、目标攻击成功与受检副作用必须保留不同分母",
+    "example": "examples/benchmark/benchmark-robustness.py",
+    "function": "security_metrics",
+    "source_ids": [
+      "v1-benchagents-agentdojo-suite",
+      "v1-benchagents-agentdojo-paper"
+    ],
+    "claim_id": "claim-benchmark-robustness-utility-security-denominators-v1",
+    "conditions": "唯一任务/目标配对；明确u/a/h/exposed布尔标签；h覆盖指定目标；条件子集率不得替换主率。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-robustness-host-authorization",
+    "topic": "benchmark-robustness",
+    "title": "知识点二：注册、类型与资源权限是分层门控，状态复制不是隔离",
+    "example": "examples/benchmark/benchmark-robustness.py",
+    "function": "authorize_fixture_call",
+    "source_ids": [
+      "v1-benchagents-agentdojo-runtime",
+      "v1-benchagents-agentdojo-suite",
+      "v1-benchagents-agentdojo-paper",
+      "v1-benchagents-mcp-architecture"
+    ],
+    "claim_id": "claim-benchmark-robustness-host-authorization-v1",
+    "conditions": "教学纯判定；注册表和能力由可信宿主维护；仅虚构资源；不声称提供生产防注入或沙箱保证。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-robustness-paired-controls",
+    "topic": "benchmark-robustness",
+    "title": "知识点三：正常对照与配对差值揭示防御的代价",
+    "example": "examples/benchmark/benchmark-robustness.py",
+    "function": "paired_control_effects",
+    "source_ids": [
+      "v1-benchagents-agentdojo-suite",
+      "v1-benchagents-agentdojo-paper"
+    ],
+    "claim_id": "claim-benchmark-robustness-paired-controls-v1",
+    "conditions": "相同ID及初始状态、模型、预算和判据；正常任务与安全案例分开；单次比较不推断总体因果。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-rag-context-ranking",
+    "topic": "benchmark-rag",
+    "title": "知识点一：上下文AP的分母决定它无法单独衡量漏召回",
+    "example": "examples/benchmark/benchmark-rag.py",
+    "function": "context_precision_profile",
+    "source_ids": [
+      "v1-benchsys-ragas-precision",
+      "v1-benchsys-ragas-precision-doc",
+      "v1-benchsys-ragas-paper"
+    ],
+    "claim_id": "claim-benchmark-rag-context-ranking-v1",
+    "conditions": "有序二值有用性标签；全库相关数仅在独立完整标注且候选无重复时可比较。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-rag-claim-denominators",
+    "topic": "benchmark-rag",
+    "title": "知识点二：上下文召回与回答忠实度检查不同声明集合",
+    "example": "examples/benchmark/benchmark-rag.py",
+    "function": "claim_coverage",
+    "source_ids": [
+      "v1-benchsys-ragas-recall",
+      "v1-benchsys-ragas-faithfulness",
+      "v1-benchsys-ragas-recall-doc",
+      "v1-benchsys-ragas-faithfulness-doc",
+      "v1-benchsys-ragas-paper"
+    ],
+    "claim_id": "claim-benchmark-rag-claim-denominators-v1",
+    "conditions": "声明拆分与支持标签已经独立冻结；不把文档相关性或链接存在当作支持标签。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-rag-judge-estimation",
+    "topic": "benchmark-rag",
+    "title": "知识点三：自动支持判断是有误差的估计器",
+    "example": "examples/benchmark/benchmark-rag.py",
+    "function": "judge_error_audit",
+    "source_ids": [
+      "v1-benchsys-ragas-faithfulness",
+      "v1-benchsys-ragas-faithfulness-doc",
+      "v1-benchsys-ragas-paper"
+    ],
+    "claim_id": "claim-benchmark-rag-judge-estimation-v1",
+    "conditions": "人工与自动裁判判断同一组声明ID；人工标签需独立复核，不能由候选系统自标。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-systems-latency-statistics",
+    "topic": "benchmark-systems",
+    "title": "知识点一：计时边界、token分母与分位数定义必须一起冻结",
+    "example": "examples/benchmark/benchmark-systems.py",
+    "function": "loadgen_latency_profile",
+    "source_ids": [
+      "v1-benchsys-mlperf-results",
+      "v1-benchsys-mlperf-logging",
+      "v1-benchsys-mlperf-settings",
+      "v1-benchsys-mlperf-loadgen-doc",
+      "v1-benchsys-distserve-paper"
+    ],
+    "claim_id": "claim-benchmark-systems-latency-statistics-v1",
+    "conditions": "普通token延迟路径，整数纳秒、每请求输出token数大于1；不模拟LoadGen计时与early stopping。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-systems-joint-goodput",
+    "topic": "benchmark-systems",
+    "title": "知识点二：边缘分位数达标不能推出联合请求goodput",
+    "example": "examples/benchmark/benchmark-systems.py",
+    "function": "slo_overlap",
+    "source_ids": [
+      "v1-benchsys-mlperf-results",
+      "v1-benchsys-bench-serve",
+      "v1-benchsys-distserve-paper",
+      "v1-benchsys-mlperf-rules"
+    ],
+    "claim_id": "claim-benchmark-systems-joint-goodput-v1",
+    "conditions": "所有已发请求具有同一ID的两个布尔标签；教学goodput仅包含延迟条件，不包含答案质量。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-systems-submission-validity",
+    "topic": "benchmark-systems",
+    "title": "知识点三：性能VALID、提交检查与正式发布是不同证据层",
+    "example": "examples/benchmark/benchmark-systems.py",
+    "function": "submission_layers",
+    "source_ids": [
+      "v1-benchsys-mlperf-results",
+      "v1-benchsys-mlperf-performance-check",
+      "v1-benchsys-mlperf-accuracy-check",
+      "v1-benchsys-mlperf-submission-doc",
+      "v1-benchsys-mlperf-loadgen-doc",
+      "v1-benchsys-mlperf-rules"
+    ],
+    "claim_id": "claim-benchmark-systems-submission-validity-v1",
+    "conditions": "输入为外部已核验的教学检查结果；True/False/None分别表示通过/失败/未知，不执行官方checker。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-multimodal-input-contract",
+    "topic": "benchmark-multimodal",
+    "title": "知识点一：输入预处理先决定模型到底看到了什么",
+    "example": "examples/benchmark/benchmark-multimodal.py",
+    "function": "square_pad_geometry",
+    "source_ids": [
+      "v1-benchsys-llava-preprocess",
+      "v1-benchsys-llava-doc",
+      "v1-benchsys-mmmu-run",
+      "v1-benchsys-mmmu-model-utils",
+      "v1-benchsys-mmmu-data",
+      "v1-benchsys-mmmu-paper"
+    ],
+    "claim_id": "claim-benchmark-multimodal-input-contract-v1",
+    "conditions": "教学仅计算LLaVA的方形填充几何；不模拟像素插值、归一化或任何MMMU适配器的默认设置。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-multimodal-answer-scoring",
+    "topic": "benchmark-multimodal",
+    "title": "知识点二：答案解析和判分规则也是被测协议的一部分",
+    "example": "examples/benchmark/benchmark-multimodal.py",
+    "function": "mmmu_answer_score",
+    "source_ids": [
+      "v1-benchsys-mmmu-eval",
+      "v1-benchsys-mmmu-run",
+      "v1-benchsys-mmmu-doc",
+      "v1-benchsys-mmmu-paper"
+    ],
+    "claim_id": "claim-benchmark-multimodal-answer-scoring-v1",
+    "conditions": "开放题输入已经过候选抽取；示例不重现完整response解析器，不调用模型或随机回退。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-multimodal-stratified-error",
+    "topic": "benchmark-multimodal",
+    "title": "知识点三：样本加权总分、学科宏平均与错误层必须分开",
+    "example": "examples/benchmark/benchmark-multimodal.py",
+    "function": "stratified_accuracy",
+    "source_ids": [
+      "v1-benchsys-mmmu-eval",
+      "v1-benchsys-mmmu-data",
+      "v1-benchsys-mmmu-doc",
+      "v1-benchsys-mmmu-paper"
+    ],
+    "claim_id": "claim-benchmark-multimodal-stratified-error-v1",
+    "conditions": "固定样本ID与布尔判分，分组标签及错误归因由外部冻结；函数不自动诊断视觉或推理失败。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-protocol-identity",
+    "topic": "benchmark-protocol",
+    "title": "知识点一：协议身份与可复现性不是同一件事",
+    "example": "examples/benchmark/benchmark-protocol.py",
+    "function": "protocol_fingerprint",
+    "source_ids": [
+      "v1-benchmark-lm-tracker",
+      "v1-benchmark-lm-task"
+    ],
+    "claim_id": "claim-benchmark-protocol-identity-v1",
+    "conditions": "本库协议对象为教学设计；所述追踪字段对应固定版本LM Evaluation Harness源码。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-protocol-splits",
+    "topic": "benchmark-protocol",
+    "title": "知识点二：开发反馈和最终报告必须分开",
+    "example": "examples/benchmark/benchmark-protocol.py",
+    "function": "split_overlap",
+    "source_ids": [
+      "v1-benchmark-lm-task",
+      "v1-benchmark-lm-decontam-doc"
+    ],
+    "claim_id": "claim-benchmark-protocol-splits-v1",
+    "conditions": "集合检查仅覆盖稳定ID层面的跨切分重叠；语义重复与预训练污染需另外检查。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-protocol-ledger",
+    "topic": "benchmark-protocol",
+    "title": "知识点三：失败、重试和分母决定结果含义",
+    "example": "examples/benchmark/benchmark-protocol.py",
+    "function": "score_run",
+    "source_ids": [
+      "v1-benchmark-lm-tracker",
+      "v1-benchmark-lm-task"
+    ],
+    "claim_id": "claim-benchmark-protocol-ledger-v1",
+    "conditions": "本页采用一题一条最终记录的教学契约，不是任意评测框架的默认聚合规则。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-metrics-aggregation",
+    "topic": "benchmark-metrics",
+    "title": "知识点一：micro与macro改变了谁拥有更大权重",
+    "example": "examples/benchmark/benchmark-metrics.py",
+    "function": "grouped_accuracy",
+    "source_ids": [
+      "v1-benchmark-lm-metrics",
+      "v1-benchmark-helm-paper"
+    ],
+    "claim_id": "claim-benchmark-metrics-aggregation-v1",
+    "conditions": "适用于每题二元正确性与非空分组，不将不同量纲的指标直接平均。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-metrics-wilson",
+    "topic": "benchmark-metrics",
+    "title": "知识点二：比例区间来自检验反演而非给分数加常数",
+    "example": "examples/benchmark/benchmark-metrics.py",
+    "function": "wilson_interval",
+    "source_ids": [
+      "v1-benchmark-wilson-doc",
+      "v1-benchmark-scipy-binom"
+    ],
+    "claim_id": "claim-benchmark-metrics-wilson-v1",
+    "conditions": "本例为无连续性校正的双侧Wilson区间，适用于预先定义的二元观测。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-metrics-paired",
+    "topic": "benchmark-metrics",
+    "title": "知识点三：比较同一批题时要保留配对关系",
+    "example": "examples/benchmark/benchmark-metrics.py",
+    "function": "paired_bootstrap",
+    "source_ids": [
+      "v1-benchmark-bootstrap-doc",
+      "v1-benchmark-lm-metrics"
+    ],
+    "claim_id": "claim-benchmark-metrics-paired-v1",
+    "conditions": "教学函数按题目抽样且仅返回差值分布；聚类观测和最终区间方法需另行指定。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-contamination-hash",
+    "topic": "benchmark-contamination",
+    "title": "知识点一：规范化指纹检测的是一个明确的等价关系",
+    "example": "examples/benchmark/benchmark-contamination.py",
+    "function": "normalized_fingerprint",
+    "source_ids": [
+      "v1-benchmark-lm-janitor",
+      "v1-benchmark-lm-decontaminate",
+      "v1-benchmark-lm-tracker"
+    ],
+    "claim_id": "claim-benchmark-contamination-hash-v1",
+    "conditions": "教学规范化用于自然语言候选，不保证适用于代码、数学文本或所有语言。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-contamination-ngrams",
+    "topic": "benchmark-contamination",
+    "title": "知识点二：局部重叠用于生成候选，不是污染判决",
+    "example": "examples/benchmark/benchmark-contamination.py",
+    "function": "ngram_jaccard",
+    "source_ids": [
+      "v1-benchmark-lm-decontaminate",
+      "v1-benchmark-lm-janitor",
+      "v1-benchmark-lm-decontam-doc"
+    ],
+    "claim_id": "claim-benchmark-contamination-ngrams-v1",
+    "conditions": "示例采用空白分词和集合Jaccard，不等于lm-eval的任意13-gram重叠规则。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-contamination-release",
+    "topic": "benchmark-contamination",
+    "title": "知识点三：动态评测集需要冻结成员与撤回边界",
+    "example": "examples/benchmark/benchmark-contamination.py",
+    "function": "release_membership",
+    "source_ids": [
+      "v1-benchmark-livebench-common",
+      "v1-benchmark-lm-tracker"
+    ],
+    "claim_id": "claim-benchmark-contamination-release-v1",
+    "conditions": "教学代码使用左闭右开的日期区间；LiveBench实际源码采用release集合与移除条件。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-general-likelihood",
+    "topic": "benchmark-general",
+    "title": "知识点一：候选似然与长度归一化可能给出不同答案",
+    "example": "examples/benchmark/benchmark-general.py",
+    "function": "choice_prediction",
+    "source_ids": [
+      "v1-benchmark-lm-task",
+      "v1-benchmark-lm-metrics"
+    ],
+    "claim_id": "claim-benchmark-general-likelihood-v1",
+    "conditions": "具体源码分析针对MultipleChoiceTask；教学函数接收已计算的有限分数和显式长度。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-general-chance",
+    "topic": "benchmark-general",
+    "title": "知识点二：随机基线解释题型，但不能消除任务难度差异",
+    "example": "examples/benchmark/benchmark-general.py",
+    "function": "chance_adjusted_accuracy",
+    "source_ids": [
+      "v1-benchmark-mmlu-pro-accuracy",
+      "v1-benchmark-lm-metrics",
+      "v1-benchmark-helm-paper"
+    ],
+    "claim_id": "claim-benchmark-general-chance-v1",
+    "conditions": "每题恰好一个正确选项且均匀猜测；开放回答或多选题不直接适用。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-general-parser",
+    "topic": "benchmark-general",
+    "title": "知识点三：答案解析器是评分器的一部分",
+    "example": "examples/benchmark/benchmark-general.py",
+    "function": "parse_choice",
+    "source_ids": [
+      "v1-benchmark-mmlu-pro-accuracy",
+      "v1-benchmark-lm-task"
+    ],
+    "claim_id": "claim-benchmark-general-parser-v1",
+    "conditions": "公式假设单一正确选项且未解析回答均匀随机回退；教学解析器采用保留None的另一种明确策略。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-reasoning-code-equivalence",
+    "topic": "benchmark-reasoning-code",
+    "title": "知识点一：最终答案等价需要先限定表达空间",
+    "example": "examples/benchmark/benchmark-reasoning-code.py",
+    "function": "numeric_equivalence",
+    "source_ids": [
+      "v1-benchmark-gsm-parser",
+      "v1-benchmark-gsm-paper"
+    ],
+    "claim_id": "claim-benchmark-reasoning-code-equivalence-v1",
+    "conditions": "教学函数只比较有理数文本，不处理单位、符号代数、自然语言或过程正确性。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-reasoning-code-passk",
+    "topic": "benchmark-reasoning-code",
+    "title": "知识点二：pass@k衡量固定采样预算下的覆盖",
+    "example": "examples/benchmark/benchmark-reasoning-code.py",
+    "function": "pass_at_k",
+    "source_ids": [
+      "v1-benchmark-humaneval-eval",
+      "v1-benchmark-humaneval-paper"
+    ],
+    "claim_id": "claim-benchmark-reasoning-code-passk-v1",
+    "conditions": "n个样本在同一生成与执行协议下获得；代码为小规模精确组合数教学实现。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "benchmark-reasoning-code-execution",
+    "topic": "benchmark-reasoning-code",
+    "title": "知识点三：执行器结果不是只有通过与未通过",
+    "example": "examples/benchmark/benchmark-reasoning-code.py",
+    "function": "execution_summary",
+    "source_ids": [
+      "v1-benchmark-humaneval-execution",
+      "v1-benchmark-humaneval-eval"
+    ],
+    "claim_id": "claim-benchmark-reasoning-code-execution-v1",
+    "conditions": "教学函数只处理给定终态记录，未执行生成程序；真实执行条件必须另行固定。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "openhands-branch",
+    "topic": "openhands",
+    "title": "知识点一：追加日志与活动会话分支是两种顺序",
+    "example": "examples/agents/openhands.py",
+    "function": "conversation_path",
+    "source_ids": [
+      "v1-coding-oh-eventstore",
+      "v1-coding-oh-base",
+      "v1-coding-oh-sdk-readme",
+      "v1-coding-openhands-paper"
+    ],
+    "claim_id": "claim-openhands-branch-v1",
+    "conditions": "显式事件父链、唯一ID；示例不实现持久化锁和旧版无parent回退。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "openhands-projection",
+    "topic": "openhands",
+    "title": "知识点二：同一模型响应的多动作要还原成同一消息",
+    "example": "examples/agents/openhands.py",
+    "function": "project_action_batches",
+    "source_ids": [
+      "v1-coding-oh-base",
+      "v1-coding-oh-action",
+      "v1-coding-oh-observation",
+      "v1-coding-oh-sdk-readme",
+      "v1-coding-openhands-paper"
+    ],
+    "claim_id": "claim-openhands-projection-v1",
+    "conditions": "连续同response_id动作，只有首动作携带共享文本；简化投影不实现多模态与推理载荷。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "openhands-observation",
+    "topic": "openhands",
+    "title": "知识点三：动作、执行与观察靠三项身份连接",
+    "example": "examples/agents/openhands.py",
+    "function": "observation_links",
+    "source_ids": [
+      "v1-coding-oh-action",
+      "v1-coding-oh-observation",
+      "v1-coding-oh-agent",
+      "v1-coding-oh-local",
+      "v1-coding-oh-sdk-readme",
+      "v1-coding-openhands-paper"
+    ],
+    "claim_id": "claim-openhands-observation-v1",
+    "conditions": "给定已发动作与最终普通观察；错误/拒绝专用事件需按各自schema处理。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "swe-agent-observation",
+    "topic": "swe-agent",
+    "title": "知识点一：窗口化观察把仓库状态变成可定位的反馈",
+    "example": "examples/agents/swe-agent.py",
+    "function": "file_window",
+    "source_ids": [
+      "v1-coding-swe-window",
+      "v1-coding-swe-default",
+      "v1-coding-swe-paper",
+      "v1-coding-swe-trajectories"
+    ],
+    "claim_id": "claim-swe-agent-observation-v1",
+    "conditions": "教学使用内存字符串，窗口起点一基；不模拟真实文件读取或当前默认工具的所有视图模式。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "swe-agent-edit-contract",
+    "topic": "swe-agent",
+    "title": "知识点二：唯一匹配与具体失败反馈限制错误传播",
+    "example": "examples/agents/swe-agent.py",
+    "function": "unique_edit",
+    "source_ids": [
+      "v1-coding-swe-editor",
+      "v1-coding-swe-toolconf",
+      "v1-coding-swe-paper",
+      "v1-coding-swe-default"
+    ],
+    "claim_id": "claim-swe-agent-edit-contract-v1",
+    "conditions": "非空精确字符串匹配，纯字符串结果；不执行linter、不写真实文件。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "swe-agent-trajectory",
+    "topic": "swe-agent",
+    "title": "知识点三：一个step可能含多次失败尝试，轨迹与模型历史不同",
+    "example": "examples/agents/swe-agent.py",
+    "function": "retry_trace",
+    "source_ids": [
+      "v1-coding-swe-agent",
+      "v1-coding-swe-trajectories",
+      "v1-coding-swe-default",
+      "v1-coding-swe-paper"
+    ],
+    "claim_id": "claim-swe-agent-trajectory-v1",
+    "conditions": "仅模拟格式、shell语法、blocked和预算错误；ok是外部已记录执行反馈，不在函数内执行。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "aider-repomap",
+    "topic": "aider",
+    "title": "知识点一：引用图的个性化排名如何变成预算内仓库地图",
+    "example": "examples/agents/aider.py",
+    "function": "repo_map",
+    "source_ids": [
+      "v1-coding-aider-repomap",
+      "v1-coding-aider-mapdoc"
+    ],
+    "claim_id": "claim-aider-repomap-v1",
+    "conditions": "图与符号已预提取，示例输入已计算边权；教学采用加性成本和严格前缀预算。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "aider-edit-format",
+    "topic": "aider",
+    "title": "知识点二：SEARCH/REPLACE是有匹配策略的编辑协议",
+    "example": "examples/agents/aider.py",
+    "function": "search_replace",
+    "source_ids": [
+      "v1-coding-aider-edit",
+      "v1-coding-aider-editdoc"
+    ],
+    "claim_id": "claim-aider-edit-format-v1",
+    "conditions": "非空SEARCH行块；示例只实现精确匹配与统一缺失缩进，不含跨文件、省略号或文件创建。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "aider-git-boundary",
+    "topic": "aider",
+    "title": "知识点三：文件级检查点将用户改动与智能体改动分开",
+    "example": "examples/agents/aider.py",
+    "function": "commit_plan",
+    "source_ids": [
+      "v1-coding-aider-base",
+      "v1-coding-aider-git",
+      "v1-coding-aider-gitdoc"
+    ],
+    "claim_id": "claim-aider-git-boundary-v1",
+    "conditions": "已批准的文件集合、教学文件级快照；不模拟部分hunk、Git索引与真实提交失败。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "mobile-agent-perception",
+    "topic": "mobile-agent",
+    "title": "知识点一：感知框如何变成动作可用的坐标索引",
+    "example": "examples/agents/mobile-agent.py",
+    "function": "perception_index",
+    "source_ids": [
+      "v1-gui-paper-mobile-v2",
+      "v1-gui-mobile-run",
+      "v1-gui-mobile-prompt"
+    ],
+    "claim_id": "claim-mobile-agent-perception-v1",
+    "conditions": "本文只重写文本框几何合并和坐标映射，不执行视觉模型",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "mobile-agent-planning-memory",
+    "topic": "mobile-agent",
+    "title": "知识点二：进度摘要、页面事实和操作历史各管什么",
+    "example": "examples/agents/mobile-agent.py",
+    "function": "planning_projection",
+    "source_ids": [
+      "v1-gui-paper-mobile-v2",
+      "v1-gui-mobile-run",
+      "v1-gui-mobile-prompt",
+      "v1-gui-mobile-api"
+    ],
+    "claim_id": "claim-mobile-agent-planning-memory-v1",
+    "conditions": "教学完成集合依赖人工标注，源码进度由LLM生成",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "mobile-agent-reflection",
+    "topic": "mobile-agent",
+    "title": "知识点三：反思结果如何控制历史提交与恢复",
+    "example": "examples/agents/mobile-agent.py",
+    "function": "reflection_transition",
+    "source_ids": [
+      "v1-gui-paper-mobile-v2",
+      "v1-gui-mobile-run",
+      "v1-gui-mobile-prompt",
+      "v1-gui-mobile-controller",
+      "v1-gui-mobile-v2-readme",
+      "v1-gui-mobile-license",
+      "v1-gui-mobile-requirements"
+    ],
+    "claim_id": "claim-mobile-agent-reflection-v1",
+    "conditions": "严格A/B/C是教学协议，BACK_THEN_OBSERVE暴露恢复观测义务",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "app-agent-element-identity",
+    "topic": "app-agent",
+    "title": "知识点一：元素身份把视觉标签连接到探索知识",
+    "example": "examples/agents/app-agent.py",
+    "function": "element_identity",
+    "source_ids": [
+      "v1-gui-paper-app-agent",
+      "v1-gui-app-controller",
+      "v1-gui-app-explorer",
+      "v1-gui-app-prompts"
+    ],
+    "claim_id": "claim-app-agent-element-identity-v1",
+    "conditions": "UID是结构启发式而非跨版本语义保证",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "app-agent-document-learning",
+    "topic": "app-agent",
+    "title": "知识点二：探索反思怎样进入动作文档槽位",
+    "example": "examples/agents/app-agent.py",
+    "function": "learn_action_document",
+    "source_ids": [
+      "v1-gui-paper-app-agent",
+      "v1-gui-app-explorer",
+      "v1-gui-app-document",
+      "v1-gui-app-model",
+      "v1-gui-app-prompts"
+    ],
+    "claim_id": "claim-app-agent-document-learning-v1",
+    "conditions": "示例只模拟自主写入规则，不判断自然语言文档正确性",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "app-agent-deployment",
+    "topic": "app-agent",
+    "title": "知识点三：部署按当前界面检索，并在网格模式重新定位",
+    "example": "examples/agents/app-agent.py",
+    "function": "deployment_context",
+    "source_ids": [
+      "v1-gui-paper-app-agent",
+      "v1-gui-app-executor",
+      "v1-gui-app-utils",
+      "v1-gui-app-model",
+      "v1-gui-app-readme",
+      "v1-gui-app-license",
+      "v1-gui-app-requirements"
+    ],
+    "claim_id": "claim-app-agent-deployment-v1",
+    "conditions": "示例显式给定选择与整除尺寸，不执行设备动作",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "ui-tars-action-protocol",
+    "topic": "ui-tars",
+    "title": "知识点一：截图观测如何经过明确的动作协议",
+    "example": "examples/agents/ui-tars.py",
+    "function": "parse_action",
+    "source_ids": [
+      "v1-gui-paper-ui-tars",
+      "v1-gui-ui-host",
+      "v1-gui-ui-sdk",
+      "v1-gui-ui-model",
+      "v1-gui-ui-parser",
+      "v1-gui-ui-utils",
+      "v1-gui-ui-nutjs",
+      "v1-gui-ui-readme",
+      "v1-gui-ui-sdk-readme"
+    ],
+    "claim_id": "claim-ui-tars-action-protocol-v1",
+    "conditions": "教学只覆盖单个严格公共动作子集，不执行字符串",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "ui-tars-coordinate-path",
+    "topic": "ui-tars",
+    "title": "知识点二：模型框、屏幕点与显示缩放不能混为一谈",
+    "example": "examples/agents/ui-tars.py",
+    "function": "grounding_coordinates",
+    "source_ids": [
+      "v1-gui-paper-ui-tars",
+      "v1-gui-ui-parser",
+      "v1-gui-ui-utils",
+      "v1-gui-ui-sdk-constants",
+      "v1-gui-ui-nutjs",
+      "v1-gui-ui-operator-factory"
+    ],
+    "claim_id": "claim-ui-tars-coordinate-path-v1",
+    "conditions": "以V1_0和本地单屏路径为主，V1_5分母显式区分",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "ui-tars-loop-state",
+    "topic": "ui-tars",
+    "title": "知识点三：SDK循环、动作派发与终态的预算",
+    "example": "examples/agents/ui-tars.py",
+    "function": "agent_loop_transition",
+    "source_ids": [
+      "v1-gui-paper-ui-tars",
+      "v1-gui-ui-sdk",
+      "v1-gui-ui-host",
+      "v1-gui-ui-nutjs",
+      "v1-gui-ui-sdk-package",
+      "v1-gui-ui-host-package",
+      "v1-gui-ui-nutjs-package",
+      "v1-gui-ui-license"
+    ],
+    "claim_id": "claim-ui-tars-loop-state-v1",
+    "conditions": "教学假设截图有效且执行器无异常，不模拟异步取消与重试",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "codex-cli-launch-plan",
+    "topic": "codex-cli",
+    "title": "知识点一：入口分派、运行组件和配置项是三种对象",
+    "example": "examples/agents/codex-cli.py",
+    "function": "launch_plan",
+    "source_ids": [
+      "v1-harnesscase-cx-cli",
+      "v1-harnesscase-cx-exec-front",
+      "v1-harnesscase-cx-core-doc"
+    ],
+    "claim_id": "claim-codex-cli-launch-plan-v1",
+    "conditions": "固定提交；教学模型只覆盖交互与exec两种入口，不推断完整配置优先级。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "codex-cli-route-call",
+    "topic": "codex-cli",
+    "title": "知识点二：模型工具项先规范化，再经过注册表和执行策略",
+    "example": "examples/agents/codex-cli.py",
+    "function": "route_call",
+    "source_ids": [
+      "v1-harnesscase-cx-router",
+      "v1-harnesscase-cx-registry",
+      "v1-harnesscase-cx-orchestrator",
+      "v1-harnesscase-cx-tools-doc"
+    ],
+    "claim_id": "claim-codex-cli-route-call-v1",
+    "conditions": "教学省略namespace、ToolSearch、hook与环境细节；策略结果作为已解析输入。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "codex-cli-capture-output",
+    "topic": "codex-cli",
+    "title": "知识点三：输出保留上限、流事件上限和进程终止互不等价",
+    "example": "examples/agents/codex-cli.py",
+    "function": "capture_output",
+    "source_ids": [
+      "v1-harnesscase-cx-exec-process",
+      "v1-harnesscase-cx-core-doc",
+      "v1-harnesscase-cx-tools-doc"
+    ],
+    "claim_id": "claim-codex-cli-capture-output-v1",
+    "conditions": "教学只模拟一个输出流和已判定终态；不承诺复刻所有capture policy及缓冲布局。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "claude-code-response-window",
+    "topic": "claude-code",
+    "title": "知识点一：SDK响应边界不等于客户端内部工作循环",
+    "example": "examples/agents/claude-code.py",
+    "function": "response_window",
+    "source_ids": [
+      "v1-harnesscase-sdk-client",
+      "v1-harnesscase-sdk-transport",
+      "v1-harnesscase-sdk-readme",
+      "v1-harnesscase-cc-workflow"
+    ],
+    "claim_id": "claim-claude-code-response-window-v1",
+    "conditions": "固定Python SDK提交；教学以有限模拟消息列表代替异步传输。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "claude-code-hook-reply",
+    "topic": "claude-code",
+    "title": "知识点二：Hook通过控制协议回调，不是模型自行执行的提示词",
+    "example": "examples/agents/claude-code.py",
+    "function": "hook_reply",
+    "source_ids": [
+      "v1-harnesscase-sdk-control",
+      "v1-harnesscase-sdk-readme",
+      "v1-harnesscase-cc-hooks"
+    ],
+    "claim_id": "claim-claude-code-hook-reply-v1",
+    "conditions": "仅演示PreToolUse的允许、拒绝和不表态；真实hook事件及支持字段以版本为准。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "claude-code-sdk-tool-route",
+    "topic": "claude-code",
+    "title": "知识点三：进程内MCP工具公开了实现，但不消除CLI边界",
+    "example": "examples/agents/claude-code.py",
+    "function": "sdk_tool_route",
+    "source_ids": [
+      "v1-harnesscase-sdk-mcp",
+      "v1-harnesscase-sdk-transport",
+      "v1-harnesscase-sdk-readme"
+    ],
+    "claim_id": "claim-claude-code-sdk-tool-route-v1",
+    "conditions": "教学工具只接受一个整数并回显；不实现完整JSON Schema或MCP传输。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "langgraph-merge-superstep",
+    "topic": "langgraph",
+    "title": "知识点一：超步边界让并行写入进入显式归并器",
+    "example": "examples/harness/langgraph.py",
+    "function": "merge_superstep",
+    "source_ids": [
+      "v1-harnesscase-lg-algo",
+      "v1-harnesscase-lg-last",
+      "v1-harnesscase-lg-binop",
+      "v1-harnesscase-lg-readme"
+    ],
+    "claim_id": "claim-langgraph-merge-superstep-v1",
+    "conditions": "教学仅支持整数sum和普通last通道，不包含Overwrite或动态通道。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "langgraph-checkpoint-writes",
+    "topic": "langgraph",
+    "title": "知识点二：检查点身份与pending writes记录不同恢复事实",
+    "example": "examples/harness/langgraph.py",
+    "function": "checkpoint_writes",
+    "source_ids": [
+      "v1-harnesscase-lg-saver",
+      "v1-harnesscase-lg-loop",
+      "v1-harnesscase-lg-persist-doc"
+    ],
+    "claim_id": "claim-langgraph-checkpoint-writes-v1",
+    "conditions": "教学仅模拟普通通道写去重；存储为调用方提供的内存字典，不提供跨进程持久性。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "langgraph-replay-interrupt-node",
+    "topic": "langgraph",
+    "title": "知识点三：interrupt恢复重跑节点，并按调用顺序绑定答案",
+    "example": "examples/harness/langgraph.py",
+    "function": "replay_interrupt_node",
+    "source_ids": [
+      "v1-harnesscase-lg-interrupt",
+      "v1-harnesscase-lg-saver",
+      "v1-harnesscase-lg-interrupt-doc"
+    ],
+    "claim_id": "claim-langgraph-replay-interrupt-node-v1",
+    "conditions": "问题顺序稳定；示例只使用单任务的线性interrupt序列与外部模拟幂等账本。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "autogen-select-round-robin",
+    "topic": "autogen",
+    "title": "知识点一：轮询团队推进的是发言游标，不是隐式集体推理",
+    "example": "examples/harness/autogen.py",
+    "function": "select_round_robin",
+    "source_ids": [
+      "v1-harnesscase-ag-round",
+      "v1-harnesscase-ag-manager",
+      "v1-harnesscase-ag-readme"
+    ],
+    "claim_id": "claim-autogen-select-round-robin-v1",
+    "conditions": "参与者集合和顺序固定；教学只模拟单发言者轮询，不运行任何agent。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "autogen-termination-step",
+    "topic": "autogen",
+    "title": "知识点二：终止条件消费增量消息，并可跨批次锁存组合",
+    "example": "examples/harness/autogen.py",
+    "function": "termination_step",
+    "source_ids": [
+      "v1-harnesscase-ag-term",
+      "v1-harnesscase-ag-compose",
+      "v1-harnesscase-ag-manager",
+      "v1-harnesscase-ag-doc"
+    ],
+    "claim_id": "claim-autogen-termination-step-v1",
+    "conditions": "教学组合消息数与指定来源文本；消息批次已经去重且按调用顺序交付。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "autogen-snapshot-team",
+    "topic": "autogen",
+    "title": "知识点三：团队存档必须同时覆盖参与者与管理器",
+    "example": "examples/harness/autogen.py",
+    "function": "snapshot_team",
+    "source_ids": [
+      "v1-harnesscase-ag-team",
+      "v1-harnesscase-ag-round",
+      "v1-harnesscase-ag-manager",
+      "v1-harnesscase-ag-doc"
+    ],
+    "claim_id": "claim-autogen-snapshot-team-v1",
+    "conditions": "教学只允许团队停止后存档；所有状态由调用方提供，未实现实际持久化或恢复事务。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "transformer-causal-attention",
+    "topic": "transformer",
+    "title": "知识点一：缩放、可见范围与稳定的因果注意力",
+    "example": "examples/network/transformer.py",
+    "function": "causal_attention",
+    "source_ids": [
+      "v1-math-paper-transformer",
+      "v1-math-nano-model",
+      "v1-math-doc-sdpa"
+    ],
+    "claim_id": "claim-transformer-causal-attention-v1",
+    "conditions": "有限输入、方形因果自注意力、无dropout",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "transformer-head-layout",
+    "topic": "transformer",
+    "title": "知识点二：多头的索引变换与输出投影",
+    "example": "examples/network/transformer.py",
+    "function": "split_merge_heads",
+    "source_ids": [
+      "v1-math-paper-transformer",
+      "v1-math-nano-model",
+      "v1-math-doc-sdpa"
+    ],
+    "claim_id": "claim-transformer-head-layout-v1",
+    "conditions": "隐藏宽度可被头数整除",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "transformer-autoregressive-loop",
+    "topic": "transformer",
+    "title": "知识点三：训练并行、生成依赖与采样分布",
+    "example": "examples/network/transformer.py",
+    "function": "generate_tokens",
+    "source_ids": [
+      "v1-math-paper-transformer",
+      "v1-math-nano-model"
+    ],
+    "claim_id": "claim-transformer-autoregressive-loop-v1",
+    "conditions": "示例用转移表近似条件分布，正温度，无KV缓存",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "attention-heads-mapping",
+    "topic": "attention-heads",
+    "title": "知识点一：共享键值并不共享查询分布",
+    "example": "examples/network/attention-heads.py",
+    "function": "grouped_attention",
+    "source_ids": [
+      "v1-math-paper-gqa",
+      "v1-math-llama",
+      "v1-math-doc-sdpa"
+    ],
+    "claim_id": "claim-attention-heads-mapping-v1",
+    "conditions": "等大小分组，Q头数可被KV头数整除",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "attention-heads-budget",
+    "topic": "attention-heads",
+    "title": "知识点二：从持久缓存推导字节数与计算边界",
+    "example": "examples/network/attention-heads.py",
+    "function": "kv_budget",
+    "source_ids": [
+      "v1-math-paper-gqa",
+      "v1-math-llama",
+      "v1-math-doc-sdpa"
+    ],
+    "claim_id": "claim-attention-heads-budget-v1",
+    "conditions": "层配置一致，不计临时展开、碎片和分片复制",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "attention-heads-conversion",
+    "topic": "attention-heads",
+    "title": "知识点三：均值合并只是转换初始化",
+    "example": "examples/network/attention-heads.py",
+    "function": "mean_pool_heads",
+    "source_ids": [
+      "v1-math-paper-gqa",
+      "v1-math-llama"
+    ],
+    "claim_id": "claim-attention-heads-conversion-v1",
+    "conditions": "同形浮点投影，须单独继续训练与评测",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "position-relative-rotation",
+    "topic": "position",
+    "title": "知识点一：从二维旋转推导相对位置",
+    "example": "examples/network/position.py",
+    "function": "relative_rotation",
+    "source_ids": [
+      "v1-math-paper-rope",
+      "v1-math-llama"
+    ],
+    "claim_id": "claim-position-relative-rotation-v1",
+    "conditions": "列向量约定，Q/K频率相同，幅度为1",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "position-layout",
+    "topic": "position",
+    "title": "知识点二：多频率与两种维度配对布局",
+    "example": "examples/network/position.py",
+    "function": "rope_layout",
+    "source_ids": [
+      "v1-math-paper-rope",
+      "v1-math-paper-transformer",
+      "v1-math-llama"
+    ],
+    "claim_id": "claim-position-layout-v1",
+    "conditions": "偶数全头宽，默认固定频率",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "position-cache-phase",
+    "topic": "position",
+    "title": "知识点三：线性缩放与缓存位置的一致性",
+    "example": "examples/network/position.py",
+    "function": "cached_rope_scores",
+    "source_ids": [
+      "v1-math-paper-rope",
+      "v1-math-rope-utils",
+      "v1-math-llama"
+    ],
+    "claim_id": "claim-position-cache-phase-v1",
+    "conditions": "从原始键重建的教学检查，无动态频率切换",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "ffn-norm-swiglu",
+    "topic": "ffn-norm",
+    "title": "知识点一：SwiGLU 的门控计算与等参数宽度",
+    "example": "examples/network/ffn-norm.py",
+    "function": "swiglu",
+    "source_ids": [
+      "v1-math-paper-swiglu",
+      "v1-math-paper-llama",
+      "v1-math-llama",
+      "v1-math-nano-model"
+    ],
+    "claim_id": "claim-ffn-norm-swiglu-v1",
+    "conditions": "无偏置、不计对齐与其他层",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "ffn-norm-rms-jacobian",
+    "topic": "ffn-norm",
+    "title": "知识点二：RMSNorm 保持尺度而不去均值",
+    "example": "examples/network/ffn-norm.py",
+    "function": "norm_statistics",
+    "source_ids": [
+      "v1-math-paper-rmsnorm",
+      "v1-math-llama"
+    ],
+    "claim_id": "claim-ffn-norm-rms-jacobian-v1",
+    "conditions": "单token、单位增益、非负epsilon且分母非零",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "ffn-norm-residual-paths",
+    "topic": "ffn-norm",
+    "title": "知识点三：归一化位置改变残差雅可比",
+    "example": "examples/network/ffn-norm.py",
+    "function": "residual_paths",
+    "source_ids": [
+      "v1-math-paper-transformer",
+      "v1-math-paper-llama",
+      "v1-math-llama",
+      "v1-math-nano-model"
+    ],
+    "claim_id": "claim-ffn-norm-residual-paths-v1",
+    "conditions": "教学对照两侧统一RMSNorm，线性子层，无完整训练结论",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "pretraining-target-shift",
+    "topic": "pretraining",
+    "title": "知识点一：标签只能错位一次，mask属于目标位置",
+    "example": "examples/training/pretraining.py",
+    "function": "shift_targets",
+    "source_ids": [
+      "v1-math-paper-transformer",
+      "v1-math-nano-train",
+      "v1-math-nano-model",
+      "v1-math-loss-utils"
+    ],
+    "claim_id": "claim-pretraining-target-shift-v1",
+    "conditions": "下一token目标，明确ignore_index约定",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "pretraining-loss-denominator",
+    "topic": "pretraining",
+    "title": "知识点二：有效token分母决定梯度权重",
+    "example": "examples/training/pretraining.py",
+    "function": "token_loss",
+    "source_ids": [
+      "v1-math-doc-ce",
+      "v1-math-loss-utils",
+      "v1-math-nano-train",
+      "v1-math-paper-llama"
+    ],
+    "claim_id": "claim-pretraining-loss-denominator-v1",
+    "conditions": "类索引目标、无类别权重和label smoothing",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "pretraining-data-isolation",
+    "topic": "pretraining",
+    "title": "知识点三：文档切分、重复候选与token打包",
+    "example": "examples/training/pretraining.py",
+    "function": "audit_split",
+    "source_ids": [
+      "v1-math-paper-llama",
+      "v1-math-nano-data"
+    ],
+    "claim_id": "claim-pretraining-data-isolation-v1",
+    "conditions": "Jaccard审计仅为小规模空白分词教学候选",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "sft-label-mask",
+    "topic": "sft",
+    "title": "知识点一：对话模板、mask交集与目标错位",
+    "example": "examples/training/sft.py",
+    "function": "build_sft_labels",
+    "source_ids": [
+      "v1-math-paper-instructgpt",
+      "v1-math-trl-sft",
+      "v1-math-loss-utils"
+    ],
+    "claim_id": "claim-sft-label-mask-v1",
+    "conditions": "输入已正确分词，示例不生成模板mask",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "sft-lora-gradient",
+    "topic": "sft",
+    "title": "知识点二：低秩参数、缩放与零初始化梯度",
+    "example": "examples/training/sft.py",
+    "function": "lora_gradients",
+    "source_ids": [
+      "v1-math-paper-lora",
+      "v1-math-peft-lora"
+    ],
+    "claim_id": "claim-sft-lora-gradient-v1",
+    "conditions": "普通alpha/r LoRA，无dropout、bias或变体",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "sft-lora-merge",
+    "topic": "sft",
+    "title": "知识点三：合并等价成立的精确条件",
+    "example": "examples/training/sft.py",
+    "function": "lora_merge_equivalence",
+    "source_ids": [
+      "v1-math-paper-lora",
+      "v1-math-peft-lora"
+    ],
+    "claim_id": "claim-sft-lora-merge-v1",
+    "conditions": "普通浮点线性层，允许浮点规约误差",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "preference-kl-mapping",
+    "topic": "preference",
+    "title": "知识点一：KL最优策略与配分函数抵消",
+    "example": "examples/training/preference.py",
+    "function": "optimal_policy",
+    "source_ids": [
+      "v1-math-paper-dpo",
+      "v1-math-trl-dpo"
+    ],
+    "claim_id": "claim-preference-kl-mapping-v1",
+    "conditions": "beta正、参考支持为正，有限回答空间用于教学",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "preference-dpo-gradient",
+    "topic": "preference",
+    "title": "知识点二：相对margin、稳定损失与梯度符号",
+    "example": "examples/training/preference.py",
+    "function": "dpo_loss",
+    "source_ids": [
+      "v1-math-paper-dpo",
+      "v1-math-trl-dpo",
+      "v1-math-trl-dpo-doc"
+    ],
+    "claim_id": "claim-preference-dpo-gradient-v1",
+    "conditions": "标准reverse_kl加sigmoid，无平滑或附加损失",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "preference-sequence-ratio",
+    "topic": "preference",
+    "title": "知识点三：序列log概率、回复mask与长度偏差",
+    "example": "examples/training/preference.py",
+    "function": "completion_logratio",
+    "source_ids": [
+      "v1-math-paper-dpo",
+      "v1-math-trl-dpo",
+      "v1-math-trl-dpo-doc"
+    ],
+    "claim_id": "claim-preference-sequence-ratio-v1",
+    "conditions": "当前参考token、mask、模板和EOS一致",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "policy-optimization-advantages",
+    "topic": "policy-optimization",
+    "title": "知识点一：组内基线、标准差约定与无区分信号",
+    "example": "examples/training/policy-optimization.py",
+    "function": "group_advantages",
+    "source_ids": [
+      "v1-math-paper-grpo",
+      "v1-math-trl-grpo",
+      "v1-math-trl-utils"
+    ],
+    "claim_id": "claim-policy-optimization-advantages-v1",
+    "conditions": "同提示outcome奖励，示例ddof可选且缺失用None",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "policy-optimization-clipping",
+    "topic": "policy-optimization",
+    "title": "知识点二：概率比裁剪的方向与冻结旧策略",
+    "example": "examples/training/policy-optimization.py",
+    "function": "clipped_surrogate",
+    "source_ids": [
+      "v1-math-paper-grpo",
+      "v1-math-trl-grpo"
+    ],
+    "claim_id": "claim-policy-optimization-clipping-v1",
+    "conditions": "token级对称裁剪、固定优势、非边界梯度",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "policy-optimization-kl-reduction",
+    "topic": "policy-optimization",
+    "title": "知识点三：KL估计的期望条件与不等长归约",
+    "example": "examples/training/policy-optimization.py",
+    "function": "grpo_loss_terms",
+    "source_ids": [
+      "v1-math-paper-grpo",
+      "v1-math-trl-grpo",
+      "v1-math-trl-grpo-doc"
+    ],
+    "claim_id": "claim-policy-optimization-kl-reduction-v1",
+    "conditions": "共同支持、有限logp、教学只算已采样值和本地归约",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "prefill-decode-timing",
+    "topic": "prefill-decode",
+    "title": "知识点一：首 token、逐 token 与请求计时边界",
+    "example": "examples/inference/prefill-decode.py",
+    "function": "request_metrics",
+    "source_ids": [
+      "v1-systems-bench-serve",
+      "v1-systems-paged-paper",
+      "v1-systems-optim-doc"
+    ],
+    "claim_id": "claim-prefill-decode-timing-v1",
+    "conditions": "逐token事件、统一时钟，输出至少一个token。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "prefill-decode-attention-work",
+    "topic": "prefill-decode",
+    "title": "知识点二：缓存改变了每步要计算哪些位置",
+    "example": "examples/inference/prefill-decode.py",
+    "function": "attention_work",
+    "source_ids": [
+      "v1-systems-llama-code",
+      "v1-systems-cache-doc",
+      "v1-systems-paged-paper"
+    ],
+    "claim_id": "claim-prefill-decode-attention-work-v1",
+    "conditions": "单个标准全因果注意力层，忽略MLP、投影和内核填充。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "prefill-decode-chunk-budget",
+    "topic": "prefill-decode",
+    "title": "知识点三：分块 Prefill 是受预算约束的状态推进",
+    "example": "examples/inference/prefill-decode.py",
+    "function": "schedule_tokens",
+    "source_ids": [
+      "v1-systems-scheduler",
+      "v1-systems-optim-doc",
+      "v1-systems-paged-paper"
+    ],
+    "claim_id": "claim-prefill-decode-chunk-budget-v1",
+    "conditions": "同步教学模型，无推测token、编码器、流水线及KV不足。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "kv-cache-bytes",
+    "topic": "kv-cache",
+    "title": "知识点一：有效状态、padding与物理分页的三本账",
+    "example": "examples/inference/kv-cache.py",
+    "function": "kv_layout",
+    "source_ids": [
+      "v1-systems-cache-code",
+      "v1-systems-cache-doc",
+      "v1-systems-paged-paper",
+      "v1-systems-kv-manager"
+    ],
+    "claim_id": "claim-kv-cache-bytes-v1",
+    "conditions": "标准全注意力、各层相同KV头与精度，不含共享、量化附加数据和分布式复制。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "kv-cache-append-attend",
+    "topic": "kv-cache",
+    "title": "知识点二：追加KV之后仍然要读取历史",
+    "example": "examples/inference/kv-cache.py",
+    "function": "cached_attention",
+    "source_ids": [
+      "v1-systems-llama-code",
+      "v1-systems-cache-code",
+      "v1-systems-cache-doc",
+      "v1-systems-paged-paper"
+    ],
+    "claim_id": "claim-kv-cache-append-attend-v1",
+    "conditions": "单头全因果注意力，输入已经完成投影和位置编码，不包含后续输出投影。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "kv-cache-prefix-identity",
+    "topic": "kv-cache",
+    "title": "知识点三：块哈希必须包含历史和计算身份",
+    "example": "examples/inference/kv-cache.py",
+    "function": "prefix_block_hashes",
+    "source_ids": [
+      "v1-systems-kv-utils",
+      "v1-systems-kv-manager",
+      "v1-systems-prefix-doc",
+      "v1-systems-paged-paper"
+    ],
+    "claim_id": "claim-kv-cache-prefix-identity-v1",
+    "conditions": "仅演示完整块；相同模型、适配器、tokenizer、位置语义、精度与隔离域。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "cache-scheduling-page-map",
+    "topic": "cache-scheduling",
+    "title": "知识点一：块表将逻辑连续性与物理连续性解耦",
+    "example": "examples/inference/cache-scheduling.py",
+    "function": "page_address",
+    "source_ids": [
+      "v1-systems-kv-utils",
+      "v1-systems-block-pool",
+      "v1-systems-prefix-doc",
+      "v1-systems-paged-paper"
+    ],
+    "claim_id": "claim-cache-scheduling-page-map-v1",
+    "conditions": "已分配且已有效的token位置，固定块大小；示例不含设备张量步幅。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "cache-scheduling-continuous",
+    "topic": "cache-scheduling",
+    "title": "知识点二：连续批处理同时守住token和块预算",
+    "example": "examples/inference/cache-scheduling.py",
+    "function": "continuous_step",
+    "source_ids": [
+      "v1-systems-scheduler",
+      "v1-systems-kv-manager",
+      "v1-systems-optim-doc",
+      "v1-systems-paged-paper"
+    ],
+    "claim_id": "claim-cache-scheduling-continuous-v1",
+    "conditions": "独立块、同步执行、显式finished状态，教学策略资源不足跳过而不抢占。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "cache-scheduling-radix",
+    "topic": "cache-scheduling",
+    "title": "知识点三：基数树分叉与锁定叶子的淘汰条件",
+    "example": "examples/inference/cache-scheduling.py",
+    "function": "radix_split",
+    "source_ids": [
+      "v1-systems-radix",
+      "v1-systems-sglang-paper",
+      "v1-systems-prefix-doc"
+    ],
+    "claim_id": "claim-cache-scheduling-radix-v1",
+    "conditions": "token精确相等、页对齐且缓存计算身份兼容；函数只展示分叉局部转换。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "inference-frameworks-traffic",
+    "topic": "inference-frameworks",
+    "title": "知识点一：到达率与突发度是两个独立负载参数",
+    "example": "examples/inference/inference-frameworks.py",
+    "function": "arrival_schedule",
+    "source_ids": [
+      "v1-systems-bench-serve",
+      "v1-systems-distserve-paper",
+      "v1-systems-sglang-paper"
+    ],
+    "claim_id": "claim-inference-frameworks-traffic-v1",
+    "conditions": "独立Gamma间隔的合成开环流量，不代表真实用户分布。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "inference-frameworks-goodput",
+    "topic": "inference-frameworks",
+    "title": "知识点二：联合达标吞吐与SLO容量不是同一个量",
+    "example": "examples/inference/inference-frameworks.py",
+    "function": "qualified_metrics",
+    "source_ids": [
+      "v1-systems-bench-serve",
+      "v1-systems-distserve-paper",
+      "v1-systems-optim-doc"
+    ],
+    "claim_id": "claim-inference-frameworks-goodput-v1",
+    "conditions": "固定观察窗口、逐请求质量标签、TTFT与TPOT阈值；单token显式约定TPOT不适用。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "inference-frameworks-tail",
+    "topic": "inference-frameworks",
+    "title": "知识点三：分位数、缺失值和受截断样本",
+    "example": "examples/inference/inference-frameworks.py",
+    "function": "latency_summary",
+    "source_ids": [
+      "v1-systems-bench-serve",
+      "v1-systems-distserve-paper",
+      "v1-systems-sglang-paper"
+    ],
+    "claim_id": "claim-inference-frameworks-tail-v1",
+    "conditions": "最近秩分位数的有限非负样本，空集未定义，不把超时等同完成时长。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "rag-marginal",
+    "topic": "rag",
+    "title": "知识点一：检索文档是潜变量，求和与求积不能交换",
+    "example": "examples/knowledge/rag.py",
+    "function": "rag_marginals",
+    "source_ids": [
+      "v1-systems-rag-code",
+      "v1-systems-rag-paper",
+      "v1-systems-gr-local-doc"
+    ],
+    "claim_id": "claim-rag-marginal-v1",
+    "conditions": "已固定候选文档及归一化先验，教学输入为给定目标token的条件概率。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "rag-context",
+    "topic": "rag",
+    "title": "知识点二：召回集合不等于实际进入上下文的证据",
+    "example": "examples/knowledge/rag.py",
+    "function": "select_context",
+    "source_ids": [
+      "v1-systems-light-operate",
+      "v1-systems-light-utils",
+      "v1-systems-gr-local-doc",
+      "v1-systems-rag-paper"
+    ],
+    "claim_id": "claim-rag-context-v1",
+    "conditions": "片段已按相关性排序，tokens包含其实际包装开销；教学贪心不保证最优证据组合。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "rag-citation",
+    "topic": "rag",
+    "title": "知识点三：引用格式有效不等于声明得到支持",
+    "example": "examples/knowledge/rag.py",
+    "function": "audit_citations",
+    "source_ids": [
+      "v1-systems-light-utils",
+      "v1-systems-light-operate",
+      "v1-systems-rag-paper",
+      "v1-systems-gr-local-doc"
+    ],
+    "claim_id": "claim-rag-citation-v1",
+    "conditions": "支持标签由人工或独立评审预先冻结，示例不自动判断自然语言蕴含。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "ingestion-identity",
+    "topic": "ingestion",
+    "title": "知识点一：来源身份、正文指纹和解析身份分开保存",
+    "example": "examples/knowledge/ingestion.py",
+    "function": "source_fingerprint",
+    "source_ids": [
+      "v1-systems-light-core",
+      "v1-systems-light-purge-doc",
+      "v1-systems-light-paper",
+      "v1-systems-rag-paper"
+    ],
+    "claim_id": "claim-ingestion-identity-v1",
+    "conditions": "输入为已获得的Unicode正文；规范化仅统一换行，不判断语义等价。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "ingestion-delta",
+    "topic": "ingestion",
+    "title": "知识点二：增量接入必须区分新增、更正、删除与不可读",
+    "example": "examples/knowledge/ingestion.py",
+    "function": "classify_versions",
+    "source_ids": [
+      "v1-systems-gr-delta",
+      "v1-systems-gr-update",
+      "v1-systems-light-paper",
+      "v1-systems-light-purge-doc"
+    ],
+    "claim_id": "claim-ingestion-delta-v1",
+    "conditions": "稳定ID对应可靠指纹；仅当输入为完整权威快照时才允许将缺失判为删除。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "ingestion-retraction",
+    "topic": "ingestion",
+    "title": "知识点三：删除原文前先修复共享派生知识",
+    "example": "examples/knowledge/ingestion.py",
+    "function": "reconcile_support",
+    "source_ids": [
+      "v1-systems-light-core",
+      "v1-systems-light-operate",
+      "v1-systems-light-purge-doc",
+      "v1-systems-light-paper"
+    ],
+    "claim_id": "claim-ingestion-retraction-v1",
+    "conditions": "supports为完整且已验证的直接chunk归属，不含未知来源占位符；示例只生成更新计划。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "hybrid-search-bm25",
+    "topic": "hybrid-search",
+    "title": "知识点一：BM25如何同时控制稀有词、词频饱和与长度",
+    "example": "examples/knowledge/hybrid-search.py",
+    "function": "bm25_scores",
+    "source_ids": [
+      "v1-systems-bm25-code",
+      "v1-systems-bm25-doc",
+      "v1-systems-rrf-paper"
+    ],
+    "claim_id": "claim-hybrid-search-bm25-v1",
+    "conditions": "已分词、二值查询项、正IDF变体；教学无字段boost与长度norm量化。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "hybrid-search-rrf",
+    "topic": "hybrid-search",
+    "title": "知识点二：RRF融合的是名次，工程加分会改变结论",
+    "example": "examples/knowledge/hybrid-search.py",
+    "function": "reciprocal_rank_fusion",
+    "source_ids": [
+      "v1-systems-qmd-store",
+      "v1-systems-qmd-doc",
+      "v1-systems-rrf-paper"
+    ],
+    "claim_id": "claim-hybrid-search-rrf-v1",
+    "conditions": "各排名列表内部无重复，文档身份一致；缺席贡献0，权重非负。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "hybrid-search-rerank",
+    "topic": "hybrid-search",
+    "title": "知识点三：重排只在候选内工作，必须记录漏斗与回退",
+    "example": "examples/knowledge/hybrid-search.py",
+    "function": "rerank_audit",
+    "source_ids": [
+      "v1-systems-light-utils",
+      "v1-systems-qmd-store",
+      "v1-systems-qmd-doc",
+      "v1-systems-rrf-paper",
+      "v1-systems-rag-paper"
+    ],
+    "claim_id": "claim-hybrid-search-rerank-v1",
+    "conditions": "模型分数为外部输入而非示例预测；相关集合独立标注，候选ID唯一。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "graph-wiki-local-query",
+    "topic": "graph-wiki",
+    "title": "知识点一：实体入口、邻接关系与原始片段排序",
+    "example": "examples/knowledge/graph-wiki.py",
+    "function": "local_graph_context",
+    "source_ids": [
+      "v1-systems-local-query",
+      "v1-systems-gr-local-doc",
+      "v1-systems-light-operate",
+      "v1-systems-light-paper",
+      "v1-systems-graph-paper"
+    ],
+    "claim_id": "claim-graph-wiki-local-query-v1",
+    "conditions": "入口实体已经按相似度排序，关系有明确原始chunk归属；示例无向地检查端点关联。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "graph-wiki-global-query",
+    "topic": "graph-wiki",
+    "title": "知识点二：社区摘要与全局map-reduce的预算路径",
+    "example": "examples/knowledge/graph-wiki.py",
+    "function": "reduce_points",
+    "source_ids": [
+      "v1-systems-global-query",
+      "v1-systems-gr-global-doc",
+      "v1-systems-graph-paper"
+    ],
+    "claim_id": "claim-graph-wiki-global-query-v1",
+    "conditions": "社区层级与map结果已给定，教学只模拟reduce输入选择，不生成或验证摘要。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "graph-wiki-wiki-impact",
+    "topic": "graph-wiki",
+    "title": "知识点三：Wiki反向链接与类型化知识影响闭包",
+    "example": "examples/knowledge/graph-wiki.py",
+    "function": "wiki_impact",
+    "source_ids": [
+      "v1-systems-wiki-backlinks",
+      "v1-systems-wiki-doc",
+      "v1-systems-wiki-architecture",
+      "v1-systems-graph-paper"
+    ],
+    "claim_id": "claim-graph-wiki-wiki-impact-v1",
+    "conditions": "依赖边由人工核验，方向为页面指向所依赖对象；普通related边不参与传播。",
+    "implementation_scope": "teaching_model_with_source_reading"
+  }
+]
