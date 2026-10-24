@@ -1,0 +1,418 @@
+[
+  {
+    "id": "network-understand",
+    "module": "network",
+    "level": "understand",
+    "outcome": "解释token到logits的计算路径",
+    "deliverable": "概念关系说明与反例",
+    "topic_ids": [
+      "transformer",
+      "attention-heads",
+      "position",
+      "ffn-norm"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "network-derive",
+    "module": "network",
+    "level": "derive",
+    "outcome": "推导注意力、位置与参数预算",
+    "deliverable": "可复核的手算或状态推演",
+    "topic_ids": [
+      "transformer",
+      "attention-heads",
+      "position",
+      "ffn-norm"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "network-build",
+    "module": "network",
+    "level": "build",
+    "outcome": "设计小规模结构正确性实验",
+    "deliverable": "带输入、步骤和预期的实践设计",
+    "topic_ids": [
+      "transformer",
+      "attention-heads",
+      "position",
+      "ffn-norm"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "network-evaluate",
+    "module": "network",
+    "level": "evaluate",
+    "outcome": "区分结构、数值与内核性能变化",
+    "deliverable": "协议、失败分析与结论限制",
+    "topic_ids": [
+      "transformer",
+      "attention-heads",
+      "position",
+      "ffn-norm"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "training-understand",
+    "module": "training",
+    "level": "understand",
+    "outcome": "区分预训练、SFT、偏好与策略优化",
+    "deliverable": "概念关系说明与反例",
+    "topic_ids": [
+      "pretraining",
+      "sft",
+      "preference",
+      "policy-optimization"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "training-derive",
+    "module": "training",
+    "level": "derive",
+    "outcome": "计算损失、低秩参数与相对优势",
+    "deliverable": "可复核的手算或状态推演",
+    "topic_ids": [
+      "pretraining",
+      "sft",
+      "preference",
+      "policy-optimization"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "training-build",
+    "module": "training",
+    "level": "build",
+    "outcome": "设计数据切分、模板与奖励检查",
+    "deliverable": "带输入、步骤和预期的实践设计",
+    "topic_ids": [
+      "pretraining",
+      "sft",
+      "preference",
+      "policy-optimization"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "training-evaluate",
+    "module": "training",
+    "level": "evaluate",
+    "outcome": "以独立任务和污染分析判断训练效果",
+    "deliverable": "协议、失败分析与结论限制",
+    "topic_ids": [
+      "pretraining",
+      "sft",
+      "preference",
+      "policy-optimization"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "inference-understand",
+    "module": "inference",
+    "level": "understand",
+    "outcome": "解释Prefill、Decode与缓存调度",
+    "deliverable": "概念关系说明与反例",
+    "topic_ids": [
+      "prefill-decode",
+      "kv-cache",
+      "cache-scheduling",
+      "inference-frameworks"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "inference-derive",
+    "module": "inference",
+    "level": "derive",
+    "outcome": "计算KV体积、块分配与时延",
+    "deliverable": "可复核的手算或状态推演",
+    "topic_ids": [
+      "prefill-decode",
+      "kv-cache",
+      "cache-scheduling",
+      "inference-frameworks"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "inference-build",
+    "module": "inference",
+    "level": "build",
+    "outcome": "设计固定版本服务对照实验",
+    "deliverable": "带输入、步骤和预期的实践设计",
+    "topic_ids": [
+      "prefill-decode",
+      "kv-cache",
+      "cache-scheduling",
+      "inference-frameworks"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "inference-evaluate",
+    "module": "inference",
+    "level": "evaluate",
+    "outcome": "综合质量、吞吐、长尾与失败率选运行点",
+    "deliverable": "协议、失败分析与结论限制",
+    "topic_ids": [
+      "prefill-decode",
+      "kv-cache",
+      "cache-scheduling",
+      "inference-frameworks"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "harness-understand",
+    "module": "harness",
+    "level": "understand",
+    "outcome": "解释模型、工具、上下文和宿主责任",
+    "deliverable": "概念关系说明与反例",
+    "topic_ids": [
+      "agent-loop",
+      "context",
+      "memory",
+      "tools-skills"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "harness-derive",
+    "module": "harness",
+    "level": "derive",
+    "outcome": "推演状态转移、预算与恢复条件",
+    "deliverable": "可复核的手算或状态推演",
+    "topic_ids": [
+      "agent-loop",
+      "context",
+      "memory",
+      "tools-skills"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "harness-build",
+    "module": "harness",
+    "level": "build",
+    "outcome": "设计有回读能力的任务执行循环",
+    "deliverable": "带输入、步骤和预期的实践设计",
+    "topic_ids": [
+      "agent-loop",
+      "context",
+      "memory",
+      "tools-skills"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "harness-evaluate",
+    "module": "harness",
+    "level": "evaluate",
+    "outcome": "评估恢复、记忆有效性与边界失效",
+    "deliverable": "协议、失败分析与结论限制",
+    "topic_ids": [
+      "agent-loop",
+      "context",
+      "memory",
+      "tools-skills"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "knowledge-understand",
+    "module": "knowledge",
+    "level": "understand",
+    "outcome": "解释来源、索引、声明和Wiki职责",
+    "deliverable": "概念关系说明与反例",
+    "topic_ids": [
+      "rag",
+      "ingestion",
+      "hybrid-search",
+      "graph-wiki"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "knowledge-derive",
+    "module": "knowledge",
+    "level": "derive",
+    "outcome": "计算检索指标并推演更新影响链",
+    "deliverable": "可复核的手算或状态推演",
+    "topic_ids": [
+      "rag",
+      "ingestion",
+      "hybrid-search",
+      "graph-wiki"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "knowledge-build",
+    "module": "knowledge",
+    "level": "build",
+    "outcome": "设计可追溯的小型RAG或Wiki实验",
+    "deliverable": "带输入、步骤和预期的实践设计",
+    "topic_ids": [
+      "rag",
+      "ingestion",
+      "hybrid-search",
+      "graph-wiki"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "knowledge-evaluate",
+    "module": "knowledge",
+    "level": "evaluate",
+    "outcome": "评估引用支持、更新一致性与维护成本",
+    "deliverable": "协议、失败分析与结论限制",
+    "topic_ids": [
+      "rag",
+      "ingestion",
+      "hybrid-search",
+      "graph-wiki"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "agents-understand",
+    "module": "agents",
+    "level": "understand",
+    "outcome": "区分感知、动作和业务终态",
+    "deliverable": "概念关系说明与反例",
+    "topic_ids": [
+      "task-loop",
+      "gui-agent",
+      "coding-agent",
+      "agent-evaluation"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "agents-derive",
+    "module": "agents",
+    "level": "derive",
+    "outcome": "推演坐标、任务状态与重试结果",
+    "deliverable": "可复核的手算或状态推演",
+    "topic_ids": [
+      "task-loop",
+      "gui-agent",
+      "coding-agent",
+      "agent-evaluation"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "agents-build",
+    "module": "agents",
+    "level": "build",
+    "outcome": "设计可回查的GUI或代码任务",
+    "deliverable": "带输入、步骤和预期的实践设计",
+    "topic_ids": [
+      "task-loop",
+      "gui-agent",
+      "coding-agent",
+      "agent-evaluation"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "agents-evaluate",
+    "module": "agents",
+    "level": "evaluate",
+    "outcome": "按执行证据和协议比较系统可靠性",
+    "deliverable": "协议、失败分析与结论限制",
+    "topic_ids": [
+      "task-loop",
+      "gui-agent",
+      "coding-agent",
+      "agent-evaluation"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "benchmark-understand",
+    "module": "benchmark",
+    "level": "understand",
+    "outcome": "识别基准任务、协议与测量范围",
+    "deliverable": "概念关系说明与反例",
+    "topic_ids": [
+      "benchmark-protocol",
+      "benchmark-general",
+      "benchmark-multimodal"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "benchmark-derive",
+    "module": "benchmark",
+    "level": "derive",
+    "outcome": "计算统计、排名和采样指标",
+    "deliverable": "可复核的手算或状态推演",
+    "topic_ids": [
+      "benchmark-metrics",
+      "benchmark-reasoning-code",
+      "benchmark-rag"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "benchmark-build",
+    "module": "benchmark",
+    "level": "build",
+    "outcome": "设计可复现的多类评测协议",
+    "deliverable": "带输入、步骤和预期的实践设计",
+    "topic_ids": [
+      "benchmark-protocol",
+      "benchmark-agents",
+      "benchmark-systems"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  },
+  {
+    "id": "benchmark-evaluate",
+    "module": "benchmark",
+    "level": "evaluate",
+    "outcome": "校准裁判、检查污染并解释结论边界",
+    "deliverable": "协议、失败分析与结论限制",
+    "topic_ids": [
+      "benchmark-contamination",
+      "benchmark-judge",
+      "benchmark-robustness"
+    ],
+    "status": "learning_target",
+    "evidence_required": true
+  }
+]

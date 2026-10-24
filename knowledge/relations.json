@@ -510,5 +510,173 @@
     "type": "related",
     "basis": "编辑性关联阅读，不声明因果或方法改进",
     "version": 1
+  },
+  {
+    "id": "pre-benchmark-protocol-benchmark-metrics",
+    "from": "benchmark-protocol",
+    "to": "benchmark-metrics",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先理解评测协议与可复现性再学习评测指标与统计推断",
+    "version": 1
+  },
+  {
+    "id": "pre-benchmark-protocol-benchmark-contamination",
+    "from": "benchmark-protocol",
+    "to": "benchmark-contamination",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先理解评测协议与可复现性再学习数据污染与评测集治理",
+    "version": 1
+  },
+  {
+    "id": "pre-benchmark-protocol-benchmark-general",
+    "from": "benchmark-protocol",
+    "to": "benchmark-general",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先理解评测协议与可复现性再学习通用能力基准与选型",
+    "version": 1
+  },
+  {
+    "id": "pre-benchmark-metrics-benchmark-reasoning-code",
+    "from": "benchmark-metrics",
+    "to": "benchmark-reasoning-code",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先理解评测指标与统计推断再学习推理与代码生成评测",
+    "version": 1
+  },
+  {
+    "id": "pre-benchmark-protocol-benchmark-multimodal",
+    "from": "benchmark-protocol",
+    "to": "benchmark-multimodal",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先理解评测协议与可复现性再学习多模态与界面感知评测",
+    "version": 1
+  },
+  {
+    "id": "pre-benchmark-protocol-benchmark-agents",
+    "from": "benchmark-protocol",
+    "to": "benchmark-agents",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先理解评测协议与可复现性再学习Agent任务基准与执行评估",
+    "version": 1
+  },
+  {
+    "id": "pre-task-loop-benchmark-agents",
+    "from": "task-loop",
+    "to": "benchmark-agents",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先理解业务Agent任务闭环再学习Agent任务基准与执行评估",
+    "version": 1
+  },
+  {
+    "id": "pre-benchmark-protocol-benchmark-rag",
+    "from": "benchmark-protocol",
+    "to": "benchmark-rag",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先理解评测协议与可复现性再学习RAG检索与回答评测",
+    "version": 1
+  },
+  {
+    "id": "pre-rag-benchmark-rag",
+    "from": "rag",
+    "to": "benchmark-rag",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先理解RAG与引用回答再学习RAG检索与回答评测",
+    "version": 1
+  },
+  {
+    "id": "pre-benchmark-protocol-benchmark-judge",
+    "from": "benchmark-protocol",
+    "to": "benchmark-judge",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先理解评测协议与可复现性再学习模型裁判与人工校准",
+    "version": 1
+  },
+  {
+    "id": "pre-benchmark-protocol-benchmark-systems",
+    "from": "benchmark-protocol",
+    "to": "benchmark-systems",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先理解评测协议与可复现性再学习推理系统性能基准",
+    "version": 1
+  },
+  {
+    "id": "pre-prefill-decode-benchmark-systems",
+    "from": "prefill-decode",
+    "to": "benchmark-systems",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先理解Prefill与Decode再学习推理系统性能基准",
+    "version": 1
+  },
+  {
+    "id": "pre-benchmark-protocol-benchmark-robustness",
+    "from": "benchmark-protocol",
+    "to": "benchmark-robustness",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先理解评测协议与可复现性再学习稳健性与工具安全评测",
+    "version": 1
+  },
+  {
+    "id": "pre-tools-skills-benchmark-robustness",
+    "from": "tools-skills",
+    "to": "benchmark-robustness",
+    "type": "prerequisite",
+    "basis": "本库学习设计：先理解工具协议与MCP及Skill再学习稳健性与工具安全评测",
+    "version": 1
+  },
+  {
+    "id": "rel-agent-evaluation-benchmark-agents",
+    "from": "agent-evaluation",
+    "to": "benchmark-agents",
+    "type": "related",
+    "basis": "本次增加的跨模块评测入口，不声明技术因果关系",
+    "version": 1
+  },
+  {
+    "id": "rel-pretraining-benchmark-contamination",
+    "from": "pretraining",
+    "to": "benchmark-contamination",
+    "type": "related",
+    "basis": "本次增加的跨模块评测入口，不声明技术因果关系",
+    "version": 1
+  },
+  {
+    "id": "rel-inference-frameworks-benchmark-systems",
+    "from": "inference-frameworks",
+    "to": "benchmark-systems",
+    "type": "related",
+    "basis": "本次增加的跨模块评测入口，不声明技术因果关系",
+    "version": 1
+  },
+  {
+    "id": "rel-rag-benchmark-rag",
+    "from": "rag",
+    "to": "benchmark-rag",
+    "type": "related",
+    "basis": "本次增加的跨模块评测入口，不声明技术因果关系",
+    "version": 1
+  },
+  {
+    "id": "rel-preference-benchmark-judge",
+    "from": "preference",
+    "to": "benchmark-judge",
+    "type": "related",
+    "basis": "本次增加的跨模块评测入口，不声明技术因果关系",
+    "version": 1
+  },
+  {
+    "id": "rel-gui-agent-benchmark-multimodal",
+    "from": "gui-agent",
+    "to": "benchmark-multimodal",
+    "type": "related",
+    "basis": "本次增加的跨模块评测入口，不声明技术因果关系",
+    "version": 1
+  },
+  {
+    "id": "rel-tools-skills-benchmark-robustness",
+    "from": "tools-skills",
+    "to": "benchmark-robustness",
+    "type": "related",
+    "basis": "本次增加的跨模块评测入口，不声明技术因果关系",
+    "version": 1
   }
 ]

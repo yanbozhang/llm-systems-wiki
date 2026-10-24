@@ -2,8 +2,10 @@
 id: position
 module: network
 status: published
-page_version: 1
+page_version: 2
 last_checked: 2026-10-24
+depth: worked
+practice_status: designed
 claim_ids: [claim-position-v1]
 ---
 # 位置编码与RoPE
@@ -12,11 +14,29 @@ claim_ids: [claim-position-v1]
 
 前置学习：[Transformer与自回归生成](Transformer与自回归生成.md)。所属模块：[模型网络](../modules/模型网络.md)。
 
+## 学习目标
+
+- 解释绝对位置与相对关系。
+- 推导二维旋转。
+- 设计长上下文验证。
+
+## 前置知识
+
+需要内积、二维旋转及KV Cache基础。位置下标与padding长度、缓存有效长度必须区分，否则公式看似正确，实际位置关系仍可能错误。
+
 ## 基本机制
 
 绝对位置嵌入把位置信息加入 token 表示；RoPE 对 Q/K 的成对维度做随位置变化的旋转。二维旋转矩阵可写为 R(θ)=[[cosθ,-sinθ],[sinθ,cosθ]]。对位置 m、n，旋转后点积包含 R(m)ᵀR(n) 的相对位置信息。这是“用绝对位置构造旋转、使点积呈现相对位置关系”的关键。
 
 依据：[RoFormer 与 RoPE 原论文](https://arxiv.org/html/2104.09864v5)；[Transformer 原论文](https://arxiv.org/html/1706.03762v7)。完整来源与章节定位见[来源索引](../../sources/来源索引.md)。
+
+## 推导或示例
+
+对二维列向量，R(mθ)ᵀR(nθ)=R((n-m)θ)。因此(R(mθ)q)ᵀ(R(nθ)k)=qᵀR((n-m)θ)k，点积包含相对位置差。若q=k=(1,0)，m=0、n=1、θ=π/2，旋转后内积为0；没有旋转时为1。
+
+真实RoPE把不同频率用于多个成对维度；这个例子只说明旋转关系。长上下文验证应固定模型与扩展方案，分别检查位置实现、不同长度下的任务表现、关键证据在开头/中间/末尾的差异。扩大可接受输入长度与保持有效质量是两个目标。
+
+本节为教学推导或设计示例，未报告模型实验结果。相关原理与课程入口：[RoFormer 与 RoPE 原论文](https://arxiv.org/html/2104.09864v5)；[Stanford CS336](https://cs336.stanford.edu/spring2025/)。
 
 ## 方法演进
 
@@ -30,6 +50,18 @@ claim_ids: [claim-position-v1]
 
 把 RoPE 描述为“直接把相对距离相加到 embedding”会丢失其对 Q/K 旋转的机制；也不能把最大配置长度当成有效理解长度。
 
+## 实践任务
+
+完成二维旋转计算，并设计一张长度×证据位置矩阵。每个格子使用同类问题并保留原始输入；检查缓存续写时的位置递增。实验设计阶段不得把任何格子写成已经通过。
+
+完成后用[实验记录模板](../../templates/实验记录模板.md)记录假设、条件、输出与未解决问题。本页实践状态为“已设计”，尚未执行该实验。
+
+## 掌握标准
+
+理解：能解释RoPE施加到哪里；推导：能写出相对旋转等式；实践：能定位续写位置错误；评估：能区分配置上限、位置正确性和任务质量。
+
+每一项都需附自己的解释、推导或产物；阅读过页面不自动表示掌握。能力目标见[能力地图](../../docs/能力地图.md)。
+
 ## 学习练习
 
 手算二维向量在 θ=0 和 θ=π/2 时的旋转。若缓存沿用了过去位置，而新 token 的 position 被错误重置，会破坏什么？
@@ -40,6 +72,19 @@ claim_ids: [claim-position-v1]
 零角度不变，π/2 旋转为 (-y,x)。错误重置会使新旧 Q/K 的相对位置语义不一致；应结合模型缓存与位置接口查验，而非只看张量 shape。
 
 </details>
+
+进阶追问：一个长文本测试通过，能否证明所有同长度任务都能可靠完成？
+
+<details>
+<summary>展开进阶答案要点</summary>
+
+不能。任务类型、干扰信息和证据位置都影响表现，应使用多类任务和长度分层评测。
+
+</details>
+
+## 课程与下一步
+
+[RoFormer 与 RoPE 原论文](https://arxiv.org/html/2104.09864v5)；[Stanford CS336](https://cs336.stanford.edu/spring2025/)；[OpenCompass 文档](https://opencompass.readthedocs.io/en/latest/)。阅读具体章节前先对照[系统学习资源指南](../../docs/系统学习资源指南.md)确认基础要求与材料类型。课程入口已读取，不代表本库已完成该课程全部作业。
 
 ## 证据与后续阅读
 

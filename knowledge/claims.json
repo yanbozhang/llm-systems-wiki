@@ -581,5 +581,312 @@
         "locator": "Abstract；GUI grounding"
       }
     ]
+  },
+  {
+    "id": "claim-benchmark-protocol-v1",
+    "topic": "benchmark-protocol",
+    "text": "将协议拆成五层：评测问题、样本与切分、模型及系统配置、执行预算、评分与聚合。模型标识、权重或API版本、prompt、few-shot样例、模板、答案提取器、随机种子、超时和重试策略都应记录。HELM、lm-eval和OpenCompass分别展示了标准化场景、任务配置及执行组件的组织方式。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_and_teaching_synthesis",
+    "replicated": false,
+    "conditions": "公开基准可能与真实业务分布不同；协议完整不代表标准答案绝对正确。HELM当前维护状态应按项目说明理解，不能据历史工具名字推断最新模型支持。",
+    "evidence": [
+      {
+        "source_id": "v02-helm",
+        "source_version": "text-sha256:465390a907127138096869b49fd79c817392f5404d23d98161d881f2e408a303",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      },
+      {
+        "source_id": "v02-lm-eval",
+        "source_version": "text-sha256:57c5cf1db6edb20393ca70851de820898bd8d10424a5a7574f9f566a6f8d70bd",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      },
+      {
+        "source_id": "v02-opencompass",
+        "source_version": "text-sha256:4a045654eefbe5b30cc5089afd66e367d19d561cc16989e6fd666be53e7885a6",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-metrics-v1",
+    "topic": "benchmark-metrics",
+    "text": "分类或有唯一判定的任务可用准确率；检索需明确相关集合与排名口径；代码生成常使用执行式正确性；开放回答需定义判据。聚合时区分按样本加权的micro与按类别等权的macro。重复抽样、置信区间和配对差异用于描述有限样本的不确定性，不解决分布偏差。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_and_teaching_synthesis",
+    "replicated": false,
+    "conditions": "置信区间依赖抽样与独立性假设；大量尝试后挑最佳设置会产生选择偏差。不同置信水平或不同抽样单位的区间不可不加说明地比较。",
+    "evidence": [
+      {
+        "source_id": "v02-bootstrap",
+        "source_version": "text-sha256:1a21a39308c692c5de9aa88fbd1a5ec3b2450d32f5b49d8d15926593be248db2",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      },
+      {
+        "source_id": "v02-helm",
+        "source_version": "text-sha256:465390a907127138096869b49fd79c817392f5404d23d98161d881f2e408a303",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      },
+      {
+        "source_id": "v02-opencompass",
+        "source_version": "text-sha256:4a045654eefbe5b30cc5089afd66e367d19d561cc16989e6fd666be53e7885a6",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-contamination-v1",
+    "topic": "benchmark-contamination",
+    "text": "分别管理训练、开发、报告数据及其来源时间。使用重复检测、近重复检查、文档族分组、时间切分和使用记录降低混用风险；这些措施不能证明绝对无污染。LiveBench以持续更新问题和可验证答案作为设计重点，动态更新仍需要固定所报告的具体版本。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_and_teaching_synthesis",
+    "replicated": false,
+    "conditions": "分数异常高不是污染的充分证据；canary、重复匹配或记忆探针也各有范围。公开数据是否能用于训练还需遵循数据许可和评测发布约定。",
+    "evidence": [
+      {
+        "source_id": "v02-livebench",
+        "source_version": "text-sha256:daedd942e98b2d4cc7f83e574368ba99823f4e9df9edf73619c3099a939e9944",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      },
+      {
+        "source_id": "v02-opencompass",
+        "source_version": "text-sha256:4a045654eefbe5b30cc5089afd66e367d19d561cc16989e6fd666be53e7885a6",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      },
+      {
+        "source_id": "v02-cs336",
+        "source_version": "text-sha256:b9f7a9bf751e43a3cc9a4f48bd778a4608801b200689d2ca83cee0bc70af1bcf",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-general-v1",
+    "topic": "benchmark-general",
+    "text": "MMLU可用于理解多领域选择题评估；MMLU-Pro作者说明其提高了推理需求并把选项数从四个增加到十个；GPQA聚焦高难度问答。它们的内容、难度、提示和评分方式不同，不能把同一百分比当成同一水平，也不能凭总分替代业务任务。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_and_teaching_synthesis",
+    "replicated": false,
+    "conditions": "标准答案可能有歧义，公开题可能被多次使用；不同模型的输出格式与解析方式会影响成绩。本页介绍测量设计，不提供模型排名。",
+    "evidence": [
+      {
+        "source_id": "v02-mmlu",
+        "source_version": "text-sha256:59e7d8e808141d3eb8ba02bf38a53db6237d73cbe91d4d823693ead1f8f75182",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      },
+      {
+        "source_id": "v02-mmlu-pro",
+        "source_version": "text-sha256:dfbab62320e644f3682d4697e206160bbb59baafa324c59a17e4424328e3e5a5",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      },
+      {
+        "source_id": "v02-gpqa",
+        "source_version": "text-sha256:0be2cf410fecf82fb811f02e2314ecc5a19decc1515014498e59bae4680d4d81",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      },
+      {
+        "source_id": "v02-lm-eval",
+        "source_version": "text-sha256:57c5cf1db6edb20393ca70851de820898bd8d10424a5a7574f9f566a6f8d70bd",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-reasoning-code-v1",
+    "topic": "benchmark-reasoning-code",
+    "text": "数学任务需要固定答案抽取、数值容差或符号等价规则。代码任务需固定接口、运行环境、测试集、超时和资源限制。HumanEval原仓库展示了采样与功能正确性评估，但目前标为不再维护，应作为历史方法入口而不是默认生产执行器。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_and_teaching_synthesis",
+    "replicated": false,
+    "conditions": "样本依赖、重复输出、隐藏测试不足和验证器漏洞都影响结果。不同k、采样温度或执行预算不能不加说明地比较。",
+    "evidence": [
+      {
+        "source_id": "v02-humaneval",
+        "source_version": "text-sha256:a6a3741a64527ae20026b7880e37af5de88e8ae4dcfed81eb19620c674b6e272",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      },
+      {
+        "source_id": "v02-livebench",
+        "source_version": "text-sha256:daedd942e98b2d4cc7f83e574368ba99823f4e9df9edf73619c3099a939e9944",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      },
+      {
+        "source_id": "v02-opencompass",
+        "source_version": "text-sha256:4a045654eefbe5b30cc5089afd66e367d19d561cc16989e6fd666be53e7885a6",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-multimodal-v1",
+    "topic": "benchmark-multimodal",
+    "text": "MMMU官方说明覆盖多学科、异构图像与专业知识问题；SeeClick相关的GUI grounding聚焦按指令定位元素；OSWorld则进入真实环境任务。应分别记录图像分辨率、裁剪、顺序、文字转录、观察方式和输出判据。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_and_teaching_synthesis",
+    "replicated": false,
+    "conditions": "图像压缩和标注歧义可能改变有效输入；公开答案与数据更新需固定版本。本文不把早期论文中的模型成绩当成当前水平。",
+    "evidence": [
+      {
+        "source_id": "v02-mmmu",
+        "source_version": "text-sha256:0e318563d4444f15fa8b9a8bb0657b996249716630cb1653303a074c7f5c5be4",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      },
+      {
+        "source_id": "seeclick",
+        "source_version": "text-sha256:f97f66cb7a12de09226cec26d76442971cfeee1b102f52785d3c4e0835f027d6",
+        "locator": "Abstract；GUI grounding"
+      },
+      {
+        "source_id": "osworld",
+        "source_version": "text-sha256:9e17559f482ca40d52733c7b2b0da5dc84089c7eeea135b11fc783c5b5d26172",
+        "locator": "Abstract；Benchmark"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-agents-v1",
+    "topic": "benchmark-agents",
+    "text": "SWE-bench以仓库问题与补丁为任务入口；OSWorld面向真实计算机环境；WebArena系列面向Web任务；BFCL从函数调用扩展到多轮及Agent相关能力。每个基准都需明确动作空间、初始化、可见信息、终态判据和允许重试。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_and_teaching_synthesis",
+    "replicated": false,
+    "conditions": "离线基准不覆盖所有业务约束；执行式评分也可能漏掉副作用。BFCL不同版本覆盖范围有变化，必须注明所用版本。",
+    "evidence": [
+      {
+        "source_id": "swebench",
+        "source_version": "text-sha256:06841624d7b5130dfe3cc6714642e9a8fd2a608c95c66ae0180e409f12b73aaa",
+        "locator": "Overview；Set Up"
+      },
+      {
+        "source_id": "osworld",
+        "source_version": "text-sha256:9e17559f482ca40d52733c7b2b0da5dc84089c7eeea135b11fc783c5b5d26172",
+        "locator": "Abstract；Benchmark"
+      },
+      {
+        "source_id": "v02-bfcl",
+        "source_version": "text-sha256:13e060167097aee57c28222513ed5a415df27063465ddfeb0ceaf7bbc29cc780",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      },
+      {
+        "source_id": "v02-webarena",
+        "source_version": "text-sha256:da64af591d78fdefb77bfdd93c3e8d5c1e64aa421cc903ba91e49f007da8cb41",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-rag-v1",
+    "topic": "benchmark-rag",
+    "text": "先建立查询及需要的证据集合，再评价Recall@k、排名指标和上下文选择；回答层检查正确性、忠实于证据的程度、引用支持和信息不足时的行为。Ragas文档明确区分端到端、组件及业务指标；自动评分还需要核对所需参考答案与模型裁判依赖。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_and_teaching_synthesis",
+    "replicated": false,
+    "conditions": "检索相关集合不完整会影响指标；自动裁判存在偏差与成本。来自生产流量的业务指标还有用户和流程因素，不能直接当成模型质量。",
+    "evidence": [
+      {
+        "source_id": "v02-ragas-metrics",
+        "source_version": "text-sha256:1e74cc05cca8ab3c1fa50856dcc0393747aac45dd9ae966bbef714473467c1aa",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      },
+      {
+        "source_id": "v02-hf-rag-cookbook",
+        "source_version": "text-sha256:44d0ffbc349106971dcb3f64c0298d71c3af19394ba75c5702493343941ab1cc",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      },
+      {
+        "source_id": "graphrag",
+        "source_version": "text-sha256:10867214603991dc2ff7f3edb33b9b57601f2eaeb818818854a14d3da6f2ec57",
+        "locator": "The GraphRAG Process；Query"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-judge-v1",
+    "topic": "benchmark-judge",
+    "text": "MT-Bench工具说明展示了单回答评分、成对比较与人工一致性分析的流程。实际使用应先明确评分维度和锚点，匿名化候选身份，检查顺序、长度和风格敏感性；针对事实题优先保留独立参考或可执行验证。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_and_teaching_synthesis",
+    "replicated": false,
+    "conditions": "人工评审也可能不一致，需要记录准则和分歧处理。模型裁判输出的理由不自动成为事实证据；相关性高不等于在所有任务可靠。",
+    "evidence": [
+      {
+        "source_id": "v02-mtbench",
+        "source_version": "text-sha256:4104f9e877fe04a4a87a5b6618114adc8604f09ceca09be198f96189c4c2238e",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      },
+      {
+        "source_id": "v02-opencompass",
+        "source_version": "text-sha256:4a045654eefbe5b30cc5089afd66e367d19d561cc16989e6fd666be53e7885a6",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      },
+      {
+        "source_id": "v02-ragas-metrics",
+        "source_version": "text-sha256:1e74cc05cca8ab3c1fa50856dcc0393747aac45dd9ae966bbef714473467c1aa",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-systems-v1",
+    "topic": "benchmark-systems",
+    "text": "记录模型与数据、质量约束、精度、硬件、驱动、并行策略、到达过程、输入输出长度、缓存冷热和测量窗口。分别观察TTFT、逐token延迟、完成率、吞吐与资源消耗；正式基准还必须遵循对应版本的规则和审计要求。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_and_teaching_synthesis",
+    "replicated": false,
+    "conditions": "不同硬件、模型精度或任务预算不可直接横比；功耗测量与正式提交有额外要求。框架文档随版本变化，运行前须固定版本。",
+    "evidence": [
+      {
+        "source_id": "v02-mlperf",
+        "source_version": "text-sha256:fe5fd8056e216f90d4e3606013dcc73ce82c202812a40f61e9a7ab06d7a952b7",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      },
+      {
+        "source_id": "v02-vllm-learning",
+        "source_version": "text-sha256:60a86da6b6d9da66260a3bbf3b72c77acdb4f21ae8041ee0b5aaf2727019e6f5",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      },
+      {
+        "source_id": "v02-llm-systems",
+        "source_version": "text-sha256:97307d26307247168d306c5e411b5e8310428acf5c24e07f4a246bb10b4f49cf",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      }
+    ]
+  },
+  {
+    "id": "claim-benchmark-robustness-v1",
+    "topic": "benchmark-robustness",
+    "text": "先声明攻击者或异常源能控制什么、不能控制什么，以及成功和失败判据。AgentDojo提供评估Agent提示注入攻击与防御的环境入口。学习时重点理解任务、工具数据、宿主规则和评估器之间的信任边界，不把资料中的指令自动当成运行规则。",
+    "version": 1,
+    "status": "active",
+    "evidence_mode": "source_statement_and_teaching_synthesis",
+    "replicated": false,
+    "conditions": "未发现失效不证明对所有攻击安全；案例覆盖和评估器本身有限。防御可能影响可用性和成本，应一起报告。",
+    "evidence": [
+      {
+        "source_id": "v02-agentdojo",
+        "source_version": "text-sha256:d8c6460ecce9bbf59ed300fbc74b4440188f74cd147a7611836270be49e7660e",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      },
+      {
+        "source_id": "mcp",
+        "source_version": "text-sha256:1743c5b616eca7290c40127f88cf95e4163bb6f507b396d127bd85e4d9a6df72",
+        "locator": "Participants；Data layer"
+      },
+      {
+        "source_id": "v02-hf-agents-course",
+        "source_version": "text-sha256:9fe66cc0aa127dc41e8ab36b8ced37020e1089b5f9d824128872bf21a412c1be",
+        "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页"
+      }
+    ]
   }
 ]

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "network",
+    "title": "模型网络",
+    "weekday": 0,
+    "page": "wiki/modules/模型网络.md"
+  },
+  {
+    "id": "training",
+    "title": "训练",
+    "weekday": 1,
+    "page": "wiki/modules/训练.md"
+  },
+  {
+    "id": "inference",
+    "title": "推理",
+    "weekday": 2,
+    "page": "wiki/modules/推理.md"
+  },
+  {
+    "id": "harness",
+    "title": "Harness",
+    "weekday": 3,
+    "page": "wiki/modules/Harness.md"
+  },
+  {
+    "id": "knowledge",
+    "title": "知识库",
+    "weekday": 4,
+    "page": "wiki/modules/知识库.md"
+  },
+  {
+    "id": "agents",
+    "title": "业务Agent",
+    "weekday": 5,
+    "page": "wiki/modules/业务Agent.md"
+  },
+  {
+    "id": "benchmark",
+    "title": "Benchmark",
+    "weekday": 6,
+    "page": "wiki/modules/Benchmark.md"
+  }
+]

@@ -1,0 +1,261 @@
+[
+  {
+    "id": "d2l",
+    "title": "动手学深度学习",
+    "url": "https://zh.d2l.ai/",
+    "module_ids": [
+      "network",
+      "training"
+    ],
+    "kind": "textbook",
+    "reading_scope": "中文教材，从数学、图示到代码与练习；按前置关系逐章学习",
+    "access": "已读取公开入口与相关正文；未完成整门课程或运行全部示例",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v02-d2l",
+    "adopted_practice": "公式、图示、代码与讨论结合；为每主题加入手算示例与进阶追问"
+  },
+  {
+    "id": "cs336",
+    "title": "Stanford CS336",
+    "url": "https://cs336.stanford.edu/spring2025/",
+    "module_ids": [
+      "network",
+      "training",
+      "inference",
+      "benchmark"
+    ],
+    "kind": "course",
+    "reading_scope": "2025年公开归档，适合已有Python、深度学习与系统基础者",
+    "access": "已读取公开入口与相关正文；未完成整门课程或运行全部示例",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v02-cs336",
+    "adopted_practice": "按构建、系统分析、数据与对齐形成递进作业；知识单元要求可提交产物"
+  },
+  {
+    "id": "hf-llm-course",
+    "title": "Hugging Face LLM Course",
+    "url": "https://huggingface.co/learn/llm-course/chapter1/1",
+    "module_ids": [
+      "network",
+      "training"
+    ],
+    "kind": "course",
+    "reading_scope": "公开课程入口；先掌握Python，结合深度学习基础",
+    "access": "已读取公开入口与相关正文；未完成整门课程或运行全部示例",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v02-hf-llm-course",
+    "adopted_practice": "按基础、数据与进阶模块分层；将课程片段关联到主题目标"
+  },
+  {
+    "id": "pytorch-basics",
+    "title": "PyTorch 基础教程",
+    "url": "https://docs.pytorch.org/tutorials/beginner/basics/intro.html",
+    "module_ids": [
+      "network",
+      "training"
+    ],
+    "kind": "tutorial",
+    "reading_scope": "官方基础教程，包含完整机器学习工作流",
+    "access": "已读取公开入口与相关正文；未完成整门课程或运行全部示例",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v02-pytorch-basics",
+    "adopted_practice": "先完成最小流程，再拆张量、数据、模型与优化概念"
+  },
+  {
+    "id": "pytorch-sdpa",
+    "title": "PyTorch SDPA 教程",
+    "url": "https://docs.pytorch.org/tutorials/intermediate/scaled_dot_product_attention_tutorial.html",
+    "module_ids": [
+      "network",
+      "inference"
+    ],
+    "kind": "tutorial",
+    "reading_scope": "官方算子教程；性能实验需要匹配硬件与版本",
+    "access": "已读取公开入口与相关正文；未完成整门课程或运行全部示例",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v02-pytorch-sdpa",
+    "adopted_practice": "区分数学正确性和执行优化，先比较输出再比较性能"
+  },
+  {
+    "id": "llm-systems",
+    "title": "LLM Systems",
+    "url": "https://llmsystem.github.io/llmsystem2025spring/",
+    "module_ids": [
+      "training",
+      "inference",
+      "knowledge"
+    ],
+    "kind": "course",
+    "reading_scope": "CMU 11868 Spring 2025公开课程说明",
+    "access": "已读取公开入口与相关正文；未完成整门课程或运行全部示例",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v02-llm-systems",
+    "adopted_practice": "把计算、内存、通信、检索与维护纳入系统能力图"
+  },
+  {
+    "id": "vllm-learning",
+    "title": "vLLM 文档入口",
+    "url": "https://docs.vllm.ai/en/stable/",
+    "module_ids": [
+      "inference",
+      "benchmark"
+    ],
+    "kind": "documentation",
+    "reading_scope": "官方文档入口，API和支持条件需固定版本",
+    "access": "已读取公开入口与相关正文；未完成整门课程或运行全部示例",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v02-vllm-learning",
+    "adopted_practice": "框架实践页要求版本、负载和质量约束，不只记录安装命令"
+  },
+  {
+    "id": "sglang-learning",
+    "title": "SGLang 文档入口",
+    "url": "https://docs.sglang.io/",
+    "module_ids": [
+      "inference"
+    ],
+    "kind": "documentation",
+    "reading_scope": "官方文档入口，运行条件按当前版本核对",
+    "access": "已读取公开入口与相关正文；未完成整门课程或运行全部示例",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v02-sglang-learning",
+    "adopted_practice": "将缓存机制与具体实现、基准场景分开组织"
+  },
+  {
+    "id": "hf-agents-course",
+    "title": "Hugging Face Agents Course",
+    "url": "https://huggingface.co/learn/agents-course/unit0/introduction",
+    "module_ids": [
+      "harness",
+      "agents",
+      "benchmark"
+    ],
+    "kind": "course",
+    "reading_scope": "公开课程入口，包含理论、框架学习、作业与自测",
+    "access": "已读取公开入口与相关正文；未完成整门课程或运行全部示例",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v02-hf-agents-course",
+    "adopted_practice": "以理论、实践和自测形成路径，明确不同学习起点"
+  },
+  {
+    "id": "langgraph",
+    "title": "LangGraph 官方文档",
+    "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+    "module_ids": [
+      "harness",
+      "agents"
+    ],
+    "kind": "documentation",
+    "reading_scope": "状态化Agent运行时官方概览；不是完整大学课程",
+    "access": "已读取公开入口与相关正文；未完成整门课程或运行全部示例",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v02-langgraph",
+    "adopted_practice": "围绕状态、恢复与确定步骤组织Harness实践"
+  },
+  {
+    "id": "fsdl",
+    "title": "Full Stack LLM Bootcamp",
+    "url": "https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/",
+    "module_ids": [
+      "harness",
+      "knowledge",
+      "agents",
+      "benchmark"
+    ],
+    "kind": "course",
+    "reading_scope": "Spring 2023公开Bootcamp；保留历史背景，工具细节需复核",
+    "access": "已读取公开入口与相关正文；未完成整门课程或运行全部示例",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v02-fsdl",
+    "adopted_practice": "把数据、产品、评估和部署组成完整项目闭环"
+  },
+  {
+    "id": "hf-rag-cookbook",
+    "title": "Hugging Face RAG 实践",
+    "url": "https://huggingface.co/learn/cookbook/en/advanced_rag",
+    "module_ids": [
+      "knowledge",
+      "benchmark"
+    ],
+    "kind": "tutorial",
+    "reading_scope": "公开RAG实验配方；不是全面理论课程",
+    "access": "已读取公开入口与相关正文；未完成整门课程或运行全部示例",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v02-hf-rag-cookbook",
+    "adopted_practice": "按检索、切分、上下文和回答分阶段做对照与错误归因"
+  },
+  {
+    "id": "lm-eval",
+    "title": "LM Evaluation Harness",
+    "url": "https://raw.githubusercontent.com/EleutherAI/lm-evaluation-harness/main/README.md",
+    "module_ids": [
+      "benchmark",
+      "training"
+    ],
+    "kind": "tool_docs",
+    "reading_scope": "活跃评测工具文档；当前CLI与旧教程可能不同",
+    "access": "已读取公开入口与相关正文；未完成整门课程或运行全部示例",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v02-lm-eval",
+    "adopted_practice": "任务配置、输入构造、过滤与指标分别版本化"
+  },
+  {
+    "id": "opencompass",
+    "title": "OpenCompass 文档",
+    "url": "https://opencompass.readthedocs.io/en/latest/",
+    "module_ids": [
+      "benchmark",
+      "agents"
+    ],
+    "kind": "tool_docs",
+    "reading_scope": "公开评测文档，含中文入口",
+    "access": "已读取公开入口与相关正文；未完成整门课程或运行全部示例",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v02-opencompass",
+    "adopted_practice": "先跑通完整评测概念流程，再深入组件和失败分析"
+  },
+  {
+    "id": "ragas-metrics",
+    "title": "Ragas 评测指标",
+    "url": "https://docs.ragas.io/en/stable/concepts/metrics/overview/",
+    "module_ids": [
+      "knowledge",
+      "benchmark"
+    ],
+    "kind": "tool_docs",
+    "reading_scope": "公开指标概览；不同指标的参考答案与模型依赖需逐项确认",
+    "access": "已读取公开入口与相关正文；未完成整门课程或运行全部示例",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v02-ragas-metrics",
+    "adopted_practice": "区分端到端、组件和业务指标，避免只优化局部分数"
+  },
+  {
+    "id": "helm",
+    "title": "HELM 评测框架",
+    "url": "https://raw.githubusercontent.com/stanford-crfm/helm/main/README.md",
+    "module_ids": [
+      "benchmark"
+    ],
+    "kind": "tool_docs",
+    "reading_scope": "README注明2026年6月进入维护模式；方法和历史框架仍可学习",
+    "access": "已读取公开入口与相关正文；未完成整门课程或运行全部示例",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v02-helm",
+    "adopted_practice": "采用多指标、透明输入与可复现协议；运行支持需单独确认"
+  },
+  {
+    "id": "mlperf",
+    "title": "MLPerf Inference",
+    "url": "https://raw.githubusercontent.com/mlcommons/inference/master/README.md",
+    "module_ids": [
+      "inference",
+      "benchmark"
+    ],
+    "kind": "tool_docs",
+    "reading_scope": "正式性能基准文档入口，提交规则按版本核对",
+    "access": "已读取公开入口与相关正文；未完成整门课程或运行全部示例",
+    "reviewed_at": "2026-10-24",
+    "source_id": "v02-mlperf",
+    "adopted_practice": "明确负载场景、质量条件和测量边界，区分自测与正式结果"
+  }
+]

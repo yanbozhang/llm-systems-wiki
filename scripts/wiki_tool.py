@@ -15,15 +15,8 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 from zoneinfo import ZoneInfo
 
-MODULES = ('network', 'training', 'inference', 'harness', 'knowledge', 'agents')
-TOPICS = (
- ('transformer', 'attention-heads', 'position', 'ffn-norm'),
- ('pretraining', 'sft', 'preference', 'policy-optimization'),
- ('prefill-decode', 'kv-cache', 'cache-scheduling', 'inference-frameworks'),
- ('agent-loop', 'context', 'memory', 'tools-skills'),
- ('rag', 'ingestion', 'hybrid-search', 'graph-wiki'),
- ('task-loop', 'gui-agent', 'coding-agent', 'agent-evaluation'),
-)
+# 仅用于旧版最小知识包的结构校验；正式轮换只使用版本化模块清单。
+MODULES = ('network', 'training', 'inference', 'harness', 'knowledge', 'agents', 'benchmark')
 
 
 def read_json(path):
@@ -47,9 +40,164 @@ def write_json(path, data):
             temp.unlink(missing_ok=True)
 
 
-def check(root):
+def load_modules(root):
+    rows = read_json(Path(root) / 'knowledge/modules.json')
+    if not isinstance(rows, list) or len(rows) != 7:
+        raise ValueError('模块清单必须包含七个模块')
+    ids, days = set(), set()
+    for row in rows:
+        if not isinstance(row, dict):
+            raise ValueError('模块必须是对象')
+        key, day = row.get('id'), row.get('weekday')
+        if not isinstance(key, str) or not key.strip() or key in ids:
+            raise ValueError('模块 ID 缺失或重复')
+        if type(day) is not int or day not in range(7) or day in days:
+            raise ValueError('模块 weekday 必须唯一且位于 0 至 6')
+        if not all(isinstance(row.get(field), str) and row[field].strip() for field in ('title', 'page')):
+            raise ValueError('模块名称与页面不能为空')
+        ids.add(key)
+        days.add(day)
+    if 'benchmark' not in ids:
+        raise ValueError('模块清单缺少 benchmark')
+    return sorted(rows, key=lambda row: row['weekday'])
+
+
+def markdown_prose(body):
+    """提取用于结构和链接检查的正文，忽略代码块与HTML注释。"""
+    lines, fence, comment = [], None, False
+    for line in body.splitlines():
+        marker = re.match(r'^ {0,3}(`{3,}|~{3,})', line)
+        if fence:
+            if (marker and marker[1][0] == fence[0] and len(marker[1]) >= len(fence)
+                    and not line[marker.end():].strip()):
+                fence = None
+            continue
+        if not comment and marker:
+            fence = marker[1]
+            continue
+        if not comment and line.startswith(('    ', '\t')):
+            continue
+        # 代码内的注释符不改变正文状态；注释内的围栏也不打开代码块。
+        visible, offset = [], 0
+        while offset < len(line):
+            if comment:
+                end = line.find('-->', offset)
+                if end < 0:
+                    break
+                comment, offset = False, end + 3
+            else:
+                start = line.find('<!--', offset)
+                if start < 0:
+                    visible.append(line[offset:])
+                    break
+                visible.append(line[offset:start])
+                comment, offset = True, start + 4
+        lines.append(''.join(visible))
+    return '\n'.join(lines)
+
+
+def curriculum_errors(root, topics, sources, modules):
+    errors = []
+    module_ids = {row['id'] for row in modules}
+    levels = {'understand', 'derive', 'build', 'evaluate'}
+    def inside_file(value):
+        if not isinstance(value, str) or not value.strip():
+            return False
+        path = (root / value).resolve()
+        return path.is_relative_to(root) and path.is_file()
+    for module in modules:
+        if not inside_file(module['page']):
+            errors.append(f'{module["id"]}: 模块页面不存在或越界')
+    for key, topic in topics.items():
+        goals = topic.get('learning_objectives')
+        if not isinstance(goals, list) or not goals or not all(isinstance(x, str) and x.strip() for x in goals):
+            errors.append(f'{key}: 缺少学习目标')
+        if topic.get('depth') not in {'overview', 'explained', 'worked', 'reproduced'}:
+            errors.append(f'{key}: 非法内容成熟度')
+        if topic.get('practice_status') not in {'designed', 'executed'}:
+            errors.append(f'{key}: 非法实践状态')
+        if topic.get('depth') == 'reproduced' or topic.get('practice_status') == 'executed':
+            if not inside_file(topic.get('experiment_record')):
+                errors.append(f'{key}: 缺少复现实验记录')
+        if not inside_file(topic.get('page')):
+            continue
+        body = markdown_prose((root / topic['page']).read_text(encoding='utf-8'))
+        parts = re.split(r'^##\s+(.+)$', body, flags=re.M)
+        sections = list(zip(parts[1::2], parts[2::2]))
+        for heading in ('学习目标', '前置知识', '基本机制', '推导或示例', '适用条件', '实践任务', '掌握标准'):
+            content = next((content for title, content in sections if title.strip().startswith(heading)), '')
+            content = re.sub(r'<[^>]*>', '', content)
+            content = re.sub(r'\b(?:TODO|TBD|FIXME|PLACEHOLDER)\b|待补充|待完善|待填写|占位符', '', content, flags=re.I)
+            if len(re.sub(r'[\W_]+', '', content)) < 20:
+                errors.append(f'{key}: {heading}章节缺失或为空')
+    registered = {(root / t['page']).resolve() for t in topics.values() if inside_file(t.get('page'))}
+    for path in (root / 'wiki/topics').rglob('*.md'):
+        if path.resolve() not in registered:
+            errors.append(f'{path.name}: 主题文件未登记')
+    for filename, kind in [('knowledge/capabilities.json', 'capability'), ('sources/learning-resources.json', 'resource')]:
+        try:
+            rows = read_json(root / filename)
+            if not isinstance(rows, list):
+                raise ValueError('必须是数组')
+        except (OSError, ValueError) as exc:
+            errors.append(f'{filename}: {exc}')
+            continue
+        ids, coverage = set(), set()
+        for row in rows:
+            if not isinstance(row, dict) or not isinstance(row.get('id'), str) or not row['id'].strip():
+                errors.append(f'{filename}: ID 无效')
+                continue
+            if row['id'] in ids:
+                errors.append(f'{filename}: ID 重复 {row["id"]}')
+            ids.add(row['id'])
+            if kind == 'capability':
+                mod, level = row.get('module'), row.get('level')
+                if mod not in module_ids or level not in levels:
+                    errors.append(f'{row["id"]}: 能力模块或级别无效')
+                    continue
+                coverage.add((mod, level))
+                linked = row.get('topic_ids')
+                if (not isinstance(linked, list) or not linked
+                        or not all(isinstance(x, str) and x in topics for x in linked)
+                        or not any(topics[x]['module'] == mod for x in linked)):
+                    errors.append(f'{row["id"]}: 能力主题引用无效')
+                for field in ('outcome', 'deliverable'):
+                    if not isinstance(row.get(field), str) or not row[field].strip():
+                        errors.append(f'{row["id"]}: {field} 不能为空')
+            else:
+                linked = row.get('module_ids')
+                if not isinstance(linked, list) or not linked or not all(isinstance(x, str) and x in module_ids for x in linked):
+                    errors.append(f'{row["id"]}: 学习资源模块无效')
+                url = row.get('url', '')
+                if not isinstance(url, str) or urlsplit(url).scheme != 'https' or not urlsplit(url).hostname:
+                    errors.append(f'{row["id"]}: 学习资源 URL 无效')
+                if row.get('source_id') not in sources:
+                    errors.append(f'{row["id"]}: 学习资源来源未知')
+                for field in ('title', 'kind', 'reading_scope', 'access', 'reviewed_at'):
+                    if not isinstance(row.get(field), str) or not row[field].strip():
+                        errors.append(f'{row["id"]}: {field} 不能为空')
+        if kind == 'capability':
+            for mod in sorted(module_ids):
+                for level in sorted(levels):
+                    if (mod, level) not in coverage:
+                        errors.append(f'{mod}: 缺少 {level} 能力目标')
+    return errors
+
+
+def check(root, curriculum=False):
     root = Path(root).resolve()
     errors = []
+    modules = None
+    if (root / 'knowledge/modules.json').exists():
+        try:
+            modules = load_modules(root)
+        except (OSError, ValueError, TypeError) as exc:
+            errors.append(f'模块配置无效：{exc}')
+    module_ids = {row['id'] for row in modules} if modules else set(MODULES)
+    for module in modules or []:
+        page = (root / module['page']).resolve()
+        if not page.is_relative_to(root) or not page.is_file():
+            errors.append(f'{module["id"]}: 模块页面不存在或越界')
     collections = {}
     for name, path in [('topics', 'knowledge/topics.json'), ('claims', 'knowledge/claims.json'),
                        ('relations', 'knowledge/relations.json'), ('sources', 'sources/manifest/sources.json')]:
@@ -74,7 +222,7 @@ def check(root):
             errors.append(f'{topic["id"]}: 页面路径必须是非空字符串')
             continue
         path = (root / page).resolve()
-        if topic.get('module') not in MODULES:
+        if topic.get('module') not in module_ids:
             errors.append(f'{topic["id"]}: 非法模块')
         if not path.is_relative_to(root) or not path.is_file():
             errors.append(f'{topic["id"]}: 页面不存在或越界')
@@ -120,20 +268,7 @@ def check(root):
     for path in root.rglob('*.md'):
         if any(p in {'.git', '.venv', 'flux', 'site'} for p in path.relative_to(root).parts):
             continue
-        lines, fence = [], None
-        for line in path.read_text(encoding='utf-8').splitlines():
-            marker = re.match(r'^ {0,3}(`{3,}|~{3,})', line)
-            if fence:
-                if marker and marker[1][0] == fence[0] and len(marker[1]) >= len(fence):
-                    fence = None
-                continue
-            if marker:
-                fence = marker[1]
-                continue
-            if line.startswith(('    ', '\t')):
-                continue
-            lines.append(line)
-        body = '\n'.join(lines)
+        body = markdown_prose(path.read_text(encoding='utf-8'))
         for target in re.findall(r'(?<!!)\[[^\]\n]+\]\(([^)]+)\)', body):
             target = target.strip('<>')
             parsed = urlsplit(target)
@@ -142,19 +277,34 @@ def check(root):
             dest = (path.parent / unquote(parsed.path)).resolve()
             if not dest.is_relative_to(root) or not dest.exists():
                 errors.append(f'{path.relative_to(root)}: 断链或越界 {target}')
+    if curriculum:
+        if not modules:
+            errors.append('课程检查需要完整模块清单')
+        else:
+            errors.extend(curriculum_errors(root, topics, sources, modules))
     return errors
 
 
-def plan(day):
+def plan(day, root=None):
     if isinstance(day, str) and not re.fullmatch(r'\d{4}-\d{2}-\d{2}', day):
         raise ValueError('日期必须使用 YYYY-MM-DD')
     day = date.fromisoformat(day) if isinstance(day, str) else day
-    weekday = day.weekday()
-    if weekday == 6:
-        return {'date': day.isoformat(), 'module': 'review', 'topic': None, 'reason': '每周跨模块复盘与证据检查'}
+    root = Path(root) if root is not None else Path(__file__).resolve().parents[1]
+    modules = load_modules(root)
+    module = modules[day.weekday()]
+    topics = read_json(root / 'knowledge/topics.json')
+    if not isinstance(topics, list):
+        raise ValueError('主题清单必须是数组')
+    options = [t for t in topics if isinstance(t, dict) and t.get('module') == module['id']]
+    if not options or not all(isinstance(t.get('id'), str) and t['id'].strip() for t in options):
+        raise ValueError(f'{module["id"]}: 缺少可轮换主题')
     week = (day - date(2026, 10, 19)).days // 7
-    return {'date': day.isoformat(), 'module': MODULES[weekday],
-            'topic': TOPICS[weekday][week % 4], 'reason': '六模块轮换与四周主题覆盖'}
+    topic = options[week % len(options)]
+    goals = topic.get('learning_objectives') or [topic.get('title', topic['id'])]
+    return {'date': day.isoformat(), 'module': module['id'], 'topic': topic['id'],
+            'reason': '七模块轮换；模块内按登记顺序持续推进', 'review_due': day.weekday() == 6,
+            'learning_objective': goals[0],
+            'deliverable': topic.get('deliverable') or '完成本主题的实践任务与自测，记录证据和未解决问题'}
 
 
 def parse_feed(xml, feed_id):
@@ -250,14 +400,15 @@ def main(argv=None):
     parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument('--date', default=None)
     parser.add_argument('--output', type=Path, default=None)
+    parser.add_argument('--curriculum', action='store_true', help='检查七模块能力地图与知识单元完整性')
     args = parser.parse_args(argv)
     try:
         if args.command == 'check':
-            errors = check(args.root)
+            errors = check(args.root, curriculum=args.curriculum)
             print('\n'.join(errors) if errors else '知识库结构检查通过')
             return int(bool(errors))
         if args.command == 'plan':
-            print(json.dumps(plan(args.date or datetime.now(ZoneInfo('Asia/Shanghai')).date()), ensure_ascii=False, indent=2))
+            print(json.dumps(plan(args.date or datetime.now(ZoneInfo('Asia/Shanghai')).date(), args.root), ensure_ascii=False, indent=2))
             return 0
         out = args.output or args.root / 'candidates'
         state_path = out / 'state.json'

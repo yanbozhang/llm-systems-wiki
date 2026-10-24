@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: 结构与证据绑定
-        run: python scripts/wiki_tool.py check
+        run: python scripts/wiki_tool.py check --curriculum
       - name: 单进程维护工具测试
         env:
           PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'

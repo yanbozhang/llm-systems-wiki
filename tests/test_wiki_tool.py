@@ -1,7 +1,7 @@
 """维护工具行为测试。
 
 规则来自 schema/维护工具契约.md 和已读取的技术方案。
-本地契约中的格式、限额、退出码和四周周期作为首版设计假设验证。
+格式、限额、退出码按首版契约；学习调度按学习体系契约验证。
 磁盘写入均在 TemporaryDirectory；只读主题清单核对轮换契约。
 网络只在 urllib 边界替换。
 """
@@ -308,23 +308,78 @@ class CheckTests(TempCase):
         self.assertEqual(len(errors), 1, errors)
         self.assertIn('outside-missing.md', errors[0])
 
+    def test_html_comments_ignore_links_but_preserve_following_prose(self):
+        (self.root / 'wiki/a.md').write_text(
+            '<!-- 隐藏说明\n[注释链接](comment-missing.md)\n-->\n'
+            '[正文链接](prose-missing.md)\n', encoding='utf-8')
+        errors = wiki.check(self.root)
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn('prose-missing.md', errors[0])
+
+    def test_fence_with_trailing_text_does_not_close_code(self):
+        (self.root / 'wiki/a.md').write_text(
+            '```markdown\n```仍在代码块\n[示例](example-missing.md)\n```\n'
+            '[正文](prose-missing.md)\n', encoding='utf-8')
+        errors = wiki.check(self.root)
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn('prose-missing.md', errors[0])
+
+    def test_comment_marker_in_code_does_not_hide_following_link(self):
+        # 围栏中展示注释起始符，不能把围栏外的真实正文一起删掉。
+        (self.root / 'wiki/a.md').write_text(
+            '```html\n<!--\n```\n[正文](prose-missing.md)\n'
+            '<!-- 后续独立注释 -->\n', encoding='utf-8')
+        errors = wiki.check(self.root)
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn('prose-missing.md', errors[0])
+
+    def test_fence_inside_html_comment_does_not_hide_following_link(self):
+        (self.root / 'wiki/a.md').write_text(
+            '<!-- 注释中的围栏示例\n```markdown\n[隐藏](comment-missing.md)\n-->\n'
+            '[正文](prose-missing.md)\n', encoding='utf-8')
+        errors = wiki.check(self.root)
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn('prose-missing.md', errors[0])
+
+    def test_multiple_inline_comments_preserve_surrounding_links(self):
+        (self.root / 'wiki/a.md').write_text(
+            '<!-- 前注释 -->[前正文](first-missing.md)<!-- 中间注释 -->'
+            '[后正文](second-missing.md)<!-- 尾注释 -->\n', encoding='utf-8')
+        errors = wiki.check(self.root)
+        self.assertEqual(len(errors), 2, errors)
+        self.assertTrue(any('first-missing.md' in error for error in errors), errors)
+        self.assertTrue(any('second-missing.md' in error for error in errors), errors)
+
+    def test_indented_comment_marker_does_not_hide_following_link(self):
+        (self.root / 'wiki/a.md').write_text(
+            '# 缩进代码示例\n\n    <!--\n\n[正文](prose-missing.md)\n'
+            '<!-- 独立正文注释 -->\n', encoding='utf-8')
+        errors = wiki.check(self.root)
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn('prose-missing.md', errors[0])
+
 
 class PlanTests(unittest.TestCase):
-    def test_weekly_six_modules_and_sunday_review(self):
+    def test_weekly_seven_modules_and_sunday_review(self):
         monday = date(2026, 10, 19)
-        expected = ['network', 'training', 'inference', 'harness', 'knowledge', 'agents', 'review']
+        expected = ['network', 'training', 'inference', 'harness', 'knowledge', 'agents', 'benchmark']
         rows = [wiki.plan((monday + timedelta(days=i)).isoformat()) for i in range(7)]
         self.assertEqual([r['module'] for r in rows], expected)
         self.assertTrue(all(r['reason'] for r in rows))
-        self.assertTrue(all(r['topic'] for r in rows[:6]))
-        self.assertIsNone(rows[6]['topic'])
+        self.assertTrue(all(r['topic'] for r in rows))
+        self.assertEqual([r['review_due'] for r in rows], [False] * 6 + [True])
 
-    def test_four_week_topics_rotate_and_repeat(self):
+    def test_registered_topic_counts_define_rotation_and_repeat(self):
         start = date(2026, 10, 19)
-        for offset in range(6):
-            rows = [wiki.plan(start + timedelta(days=offset + 7 * week)) for week in range(5)]
-            self.assertEqual(len({row['topic'] for row in rows[:4]}), 4)
-            self.assertEqual(rows[0]['topic'], rows[4]['topic'])
+        root = Path(__file__).resolve().parents[1]
+        topics = json.loads((root / 'knowledge/topics.json').read_text(encoding='utf-8'))
+        modules = json.loads((root / 'knowledge/modules.json').read_text(encoding='utf-8'))
+        for module in modules:
+            expected = [t['id'] for t in topics if t['module'] == module['id']]
+            rows = [wiki.plan(start + timedelta(days=module['weekday'] + 7 * week))
+                    for week in range(len(expected) + 1)]
+            self.assertEqual([row['topic'] for row in rows[:-1]], expected)
+            self.assertEqual(rows[0]['topic'], rows[-1]['topic'])
             self.assertEqual(len({row['module'] for row in rows}), 1)
 
     def test_rotation_uses_registered_topics_in_their_modules(self):
@@ -336,9 +391,7 @@ class PlanTests(unittest.TestCase):
             expected.setdefault(topic['module'], set()).add(topic['id'])
         scheduled = {}
         monday = date(2026, 10, 19)
-        for offset in range(28):
-            if offset % 7 == 6:
-                continue
+        for offset in range(7 * max(map(len, expected.values()))):
             row = wiki.plan(monday + timedelta(days=offset))
             scheduled.setdefault(row['module'], set()).add(row['topic'])
         self.assertEqual(scheduled, expected)
@@ -360,6 +413,506 @@ class PlanTests(unittest.TestCase):
     def test_week_date_rejected(self):
         with self.assertRaises(ValueError, msg='契约要求 YYYY-MM-DD'):
             wiki.plan('2026-W43-6')
+
+
+class CurriculumCase(TempCase):
+    """契约：schema/学习体系契约.md；所有知识包都在临时目录内。"""
+    HEADINGS = ('学习目标', '前置知识', '基本机制', '推导或示例', '适用条件', '实践任务', '掌握标准')
+    CONTENT = '学习者需要明确输入输出以及成立条件通过具体例子验证推导并记录误差与实践结果'
+
+    def setUp(self):
+        super().setUp()
+        self.modules, self.topics, self.capabilities = [], [], []
+        for day, mod in enumerate(('network', 'training', 'inference', 'harness',
+                                   'knowledge', 'agents', 'benchmark')):
+            page = f'wiki/modules/{mod}.md'
+            self.write_page(page, '# 模块\n')
+            self.modules.append({'id': mod, 'title': mod, 'weekday': day, 'page': page})
+            for number in (1, 2):
+                self.add_topic(mod, f'{mod}-{number}')
+            for level in ('understand', 'derive', 'build', 'evaluate'):
+                self.capabilities.append({'id': f'{mod}-{level}', 'module': mod, 'level': level,
+                                          'outcome': '解释条件并核验结果', 'deliverable': '提交推导和误差分析',
+                                          'topic_ids': [f'{mod}-1']})
+        self.sources = [{'id': 'source-a', 'version': 'snapshot-a', 'status': 'active'}]
+        self.claims = [{'id': 'claim-a', 'topic': 'network-1', 'status': 'source_statement',
+                        'evidence': [{'source_id': 'source-a', 'source_version': 'snapshot-a'}]}]
+        self.relations = []
+        self.resources = [{'id': 'resource-a', 'title': '公开课程入口', 'url': 'https://example.org/course',
+                           'module_ids': ['network', 'benchmark'], 'kind': 'course',
+                           'reading_scope': '只读课程介绍与教学大纲', 'access': 'public',
+                           'reviewed_at': '2026-10-24', 'source_id': 'source-a'}]
+        self.persist_curriculum()
+
+    def write_page(self, relative, text):
+        path = self.root / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(text, encoding='utf-8')
+        return path
+
+    def topic_body(self, changed_heading=None, replacement=None, omit=False):
+        return '# 临时知识单元\n\n' + ''.join(
+            f'## {heading}\n{replacement if heading == changed_heading else self.CONTENT}\n\n'
+            for heading in self.HEADINGS if not (omit and heading == changed_heading))
+
+    def add_topic(self, module, identity):
+        topic = {'id': identity, 'module': module, 'title': identity,
+                 'page': f'wiki/topics/{identity}.md', 'learning_objectives': [f'能够解释{identity}的边界'],
+                 'depth': 'worked', 'practice_status': 'designed', 'deliverable': f'{identity}的验证记录'}
+        self.topics.append(topic)
+        self.write_page(topic['page'], self.topic_body())
+        return topic
+
+    def persist_curriculum(self):
+        self.persist_fixture()
+        self.save('knowledge/modules.json', self.modules)
+        self.save('knowledge/capabilities.json', self.capabilities)
+        self.save('sources/learning-resources.json', self.resources)
+
+    def assert_curriculum_rejected(self):
+        self.persist_curriculum()
+        errors = wiki.check(self.root, curriculum=True)
+        self.assertIsInstance(errors, list)
+        self.assertTrue(errors, '非法课程知识包应返回结构错误')
+        self.assertTrue(all(isinstance(error, str) and error for error in errors))
+
+    def assert_plan_rejected(self):
+        self.persist_curriculum()
+        with self.assertRaises(ValueError):
+            wiki.plan('2026-10-19', self.root)
+
+    def snapshot(self):
+        return {str(p.relative_to(self.root)): p.read_bytes()
+                for p in self.root.rglob('*') if p.is_file()}
+
+
+class CurriculumPlanTests(CurriculumCase):
+    def test_config_weekday_order_is_authoritative(self):
+        self.modules[0]['id'] = 'architecture'
+        for topic in self.topics:
+            if topic['module'] == 'network':
+                topic['module'] = 'architecture'
+        self.modules[0]['weekday'], self.modules[1]['weekday'] = 1, 0
+        self.modules.reverse()
+        self.persist_curriculum()
+        start = date(2026, 10, 19)
+        rows = [wiki.plan(start + timedelta(days=offset), self.root) for offset in range(7)]
+        self.assertEqual([row['module'] for row in rows],
+                         ['training', 'architecture', 'inference', 'harness', 'knowledge', 'agents', 'benchmark'])
+        self.assertEqual([row['review_due'] for row in rows], [False] * 6 + [True])
+
+    def test_topics_rotate_in_registration_order_beyond_four(self):
+        # 五主题且刻意非字母排序，识别写死四周或额外排序。
+        self.topics = [t for t in self.topics if t['module'] != 'network']
+        expected = ['z-last', 'a-first', 'middle', 'fourth', 'fifth']
+        for identity in expected:
+            self.add_topic('network', identity)
+        self.persist_curriculum()
+        start = date(2026, 10, 19)
+        rows = [wiki.plan(start + timedelta(weeks=week), self.root) for week in range(-1, 6)]
+        self.assertEqual([row['topic'] for row in rows], [expected[-1]] + expected + [expected[0]])
+
+    def test_added_topic_is_in_next_rotation(self):
+        self.assertEqual(wiki.plan('2026-11-02', self.root)['topic'], 'network-1')
+        self.add_topic('network', 'new-topic')
+        self.persist_curriculum()
+        self.assertEqual(wiki.plan('2026-11-02', self.root)['topic'], 'new-topic')
+        self.assertEqual(wiki.plan('2026-11-09', self.root)['topic'], 'network-1')
+
+    def test_plan_returns_learning_fields_from_selected_topic(self):
+        row = wiki.plan('2026-10-26', self.root)
+        self.assertEqual(set(row), {'date', 'module', 'topic', 'reason', 'review_due',
+                                    'learning_objective', 'deliverable'})
+        self.assertEqual({key: row[key] for key in ('date', 'module', 'topic', 'review_due')},
+                         {'date': '2026-10-26', 'module': 'network', 'topic': 'network-2', 'review_due': False})
+        # 字段来自所选主题；首目标和 deliverable 的具体映射为实施假设。
+        self.assertEqual(row['learning_objective'], '能够解释network-2的边界')
+        self.assertEqual(row['deliverable'], 'network-2的验证记录')
+        self.assertTrue(row['reason'])
+
+    def test_empty_selected_module_rejected(self):
+        self.topics = [t for t in self.topics if t['module'] != 'network']
+        self.assert_plan_rejected()
+
+    def test_duplicate_module_rejected(self):
+        self.modules[1]['id'] = 'network'
+        self.assert_plan_rejected()
+
+    def test_six_modules_rejected(self):
+        self.modules.pop()
+        self.assert_plan_rejected()
+
+    def test_missing_benchmark_rejected(self):
+        self.modules[-1]['id'] = 'review'
+        self.assert_plan_rejected()
+
+    def test_duplicate_weekday_rejected(self):
+        self.modules[1]['weekday'] = 0
+        self.assert_plan_rejected()
+
+    def test_string_weekday_rejected(self):
+        self.modules[0]['weekday'] = '0'
+        self.assert_plan_rejected()
+
+    def test_float_weekday_rejected(self):
+        self.modules[0]['weekday'] = 0.0
+        self.assert_plan_rejected()
+
+    def test_boolean_weekday_rejected(self):
+        self.modules[0]['weekday'] = False
+        self.assert_plan_rejected()
+
+    def test_out_of_range_weekday_rejected(self):
+        self.modules[0]['weekday'] = 7
+        self.assert_plan_rejected()
+
+    def test_missing_module_title_rejected(self):
+        del self.modules[0]['title']
+        self.assert_plan_rejected()
+
+    def test_missing_module_page_rejected(self):
+        del self.modules[0]['page']
+        self.assert_plan_rejected()
+
+    def test_module_collection_must_be_array(self):
+        self.modules = {'network': self.modules[0]}
+        self.assert_plan_rejected()
+
+    def test_non_object_module_rejected(self):
+        self.modules[0] = None
+        self.assert_plan_rejected()
+
+    def test_blank_module_id_rejected(self):
+        self.modules[0]['id'] = ' \t '
+        self.assert_plan_rejected()
+
+    def test_topic_collection_must_be_array(self):
+        self.topics = {'network-1': self.topics[0]}
+        self.assert_plan_rejected()
+
+    def test_blank_topic_id_rejected(self):
+        self.topics[0]['id'] = ' '
+        self.assert_plan_rejected()
+
+    def test_plan_missing_modules_does_not_use_legacy_schedule(self):
+        (self.root / 'knowledge/modules.json').unlink()
+        code, _, _ = self.cli('plan', '--date', '2026-10-19')
+        self.assertNotEqual(code, 0)
+
+    def test_plan_cli_uses_custom_root_and_does_not_write(self):
+        before = self.snapshot()
+        code, stdout, stderr = self.cli('plan', '--date', '2026-10-25')
+        self.assertEqual(code, 0, stderr)
+        row = json.loads(stdout)
+        self.assertEqual((row['module'], row['topic'], row['review_due']), ('benchmark', 'benchmark-1', True))
+        self.assertEqual(self.snapshot(), before)
+
+
+class CurriculumCheckTests(CurriculumCase):
+    def test_complete_curriculum_is_valid_offline_and_read_only(self):
+        before = self.snapshot()
+        with patch.object(wiki.urllib.request, 'build_opener', autospec=True) as network:
+            self.assertEqual(wiki.check(self.root, curriculum=True), [])
+            code, stdout, stderr = self.cli('check', '--curriculum')
+        self.assertEqual(code, 0, stderr)
+        self.assertIn('通过', stdout)
+        network.assert_not_called()
+        self.assertEqual(self.snapshot(), before)
+
+    def test_default_check_uses_configured_module_ids(self):
+        self.modules[0]['id'] = 'architecture'
+        for topic in self.topics:
+            if topic['module'] == 'network':
+                topic['module'] = 'architecture'
+        self.persist_curriculum()
+        self.assertEqual(wiki.check(self.root), [])
+
+    def test_default_check_rejects_module_not_in_manifest(self):
+        self.modules[0]['id'] = 'architecture'
+        self.persist_curriculum()
+        self.assertTrue(wiki.check(self.root))
+
+    def test_legacy_check_accepts_benchmark_and_keeps_graph_checks(self):
+        (self.root / 'knowledge/modules.json').unlink()
+        self.assertEqual(wiki.check(self.root), [])
+        self.relations = [{'id': 'broken', 'from': 'network-1', 'to': 'absent', 'type': 'prerequisite'}]
+        self.persist_fixture()
+        self.assertTrue(wiki.check(self.root), '兼容模式仍须拒绝坏引用')
+
+    def test_strict_check_requires_module_manifest(self):
+        (self.root / 'knowledge/modules.json').unlink()
+        self.assertTrue(wiki.check(self.root, curriculum=True))
+
+    def test_invalid_manifest_is_returned_as_check_error(self):
+        self.modules[0]['weekday'] = False
+        self.persist_curriculum()
+        self.assertIsInstance(errors := wiki.check(self.root), list)
+        self.assertTrue(errors)
+
+    def test_default_check_rejects_missing_module_page(self):
+        # 契约“模块与轮换”：模块页面必须位于仓库内且存在。
+        (self.root / self.modules[0]['page']).unlink()
+        self.assertTrue(wiki.check(self.root), '缺失模块页面应在默认结构检查中被识别')
+
+    def test_default_check_rejects_module_page_escape(self):
+        (self.base / 'outside.md').write_text('# 库外模块\n', encoding='utf-8')
+        self.modules[0]['page'] = '../outside.md'
+        self.persist_curriculum()
+        self.assertTrue(wiki.check(self.root), '默认结构检查也必须拒绝库外模块页面')
+
+    def test_default_check_rejects_module_page_symlink_escape(self):
+        outside = self.base / 'outside.md'
+        outside.write_text('# 库外模块\n', encoding='utf-8')
+        page = self.root / self.modules[0]['page']
+        page.unlink()
+        page.symlink_to(outside)
+        self.assertTrue(wiki.check(self.root), '符号链接不能绕过默认模块路径边界')
+
+    def test_strict_check_rejects_module_page_escape(self):
+        (self.base / 'outside.md').write_text('# 库外模块\n', encoding='utf-8')
+        self.modules[0]['page'] = '../outside.md'
+        self.assert_curriculum_rejected()
+
+    def test_strict_check_rejects_module_page_symlink_escape(self):
+        outside = self.base / 'outside.md'
+        outside.write_text('# 库外模块\n', encoding='utf-8')
+        page = self.root / self.modules[0]['page']
+        page.unlink()
+        page.symlink_to(outside)
+        self.assert_curriculum_rejected()
+
+    def test_missing_learning_objectives_rejected(self):
+        del self.topics[0]['learning_objectives']
+        self.assert_curriculum_rejected()
+
+    def test_empty_learning_objectives_rejected(self):
+        self.topics[0]['learning_objectives'] = []
+        self.assert_curriculum_rejected()
+
+    def test_blank_learning_objective_rejected(self):
+        self.topics[0]['learning_objectives'] = [' \t ']
+        self.assert_curriculum_rejected()
+
+    def test_invalid_depth_rejected(self):
+        self.topics[0]['depth'] = 'mastered'
+        self.assert_curriculum_rejected()
+
+    def test_invalid_practice_status_rejected(self):
+        self.topics[0]['practice_status'] = 'unknown'
+        self.assert_curriculum_rejected()
+
+    def test_reproduced_requires_record(self):
+        self.topics[0]['depth'] = 'reproduced'
+        self.assert_curriculum_rejected()
+
+    def test_executed_requires_record(self):
+        self.topics[0]['practice_status'] = 'executed'
+        self.assert_curriculum_rejected()
+
+    def test_real_record_allows_executed_and_reproduced(self):
+        self.write_page('experiments/record.md', '# 实验记录\n输入、执行过程和实际输出均已记录。\n')
+        self.topics[0].update(depth='reproduced', practice_status='executed', experiment_record='experiments/record.md')
+        self.persist_curriculum()
+        self.assertEqual(wiki.check(self.root, curriculum=True), [])
+
+    def test_experiment_record_escape_rejected(self):
+        (self.base / 'outside.md').write_text('# 库外记录\n', encoding='utf-8')
+        self.topics[0].update(depth='reproduced', experiment_record='../outside.md')
+        self.assert_curriculum_rejected()
+
+    def test_missing_required_section_rejected(self):
+        self.write_page(self.topics[0]['page'], self.topic_body('实践任务', omit=True))
+        self.assert_curriculum_rejected()
+
+    def test_every_required_section_is_enforced(self):
+        for heading in self.HEADINGS:
+            self.write_page(self.topics[0]['page'], self.topic_body(heading, omit=True))
+            self.assertTrue(wiki.check(self.root, curriculum=True), f'缺少{heading}必须拒绝')
+
+    def test_placeholder_only_section_rejected(self):
+        # 契约明确“不是只有标题或占位符”，不能靠重复占位符凑满长度。
+        self.write_page(self.topics[0]['page'], self.topic_body('基本机制', 'TODO 待补充 ' * 12))
+        self.assert_curriculum_rejected()
+
+    def test_code_fence_headings_do_not_replace_real_sections(self):
+        example = '# 示例文本\n\n```markdown\n' + self.topic_body() + '\n```\n'
+        self.write_page(self.topics[0]['page'], example)
+        self.assert_curriculum_rejected()
+
+    def test_tilde_fence_cannot_supply_sections(self):
+        self.write_page(self.topics[0]['page'], '# 示例\n\n~~~markdown\n' + self.topic_body() + '\n~~~\n')
+        self.assert_curriculum_rejected()
+
+    def test_indented_code_cannot_fill_section(self):
+        self.write_page(self.topics[0]['page'], self.topic_body('基本机制', '    ' + self.CONTENT))
+        self.assert_curriculum_rejected()
+
+    def test_comments_cannot_fill_section(self):
+        self.write_page(self.topics[0]['page'], self.topic_body('基本机制', '<!--\n' + self.CONTENT + '\n-->'))
+        self.assert_curriculum_rejected()
+
+    def test_html_tags_cannot_fill_section(self):
+        self.write_page(self.topics[0]['page'], self.topic_body('基本机制', '<span class="long-placeholder-tag"></span>' * 3))
+        self.assert_curriculum_rejected()
+
+    def test_placeholder_variants_cannot_fill_section(self):
+        for placeholder in ('TODO', 'tbd', 'FIXME', 'placeholder', '待补充', '待完善', '待填写', '占位符'):
+            self.write_page(self.topics[0]['page'], self.topic_body('基本机制', (placeholder + ' ') * 24))
+            self.assertTrue(wiki.check(self.root, curriculum=True), f'不能靠重复{placeholder}凑字数')
+
+    def test_substantive_section_allows_code_and_placeholder_mentions(self):
+        content = self.CONTENT + '\n\n使用TODO跟踪尚未核验的问题。\n\n```python\nprint(1)\n```\n'
+        self.write_page(self.topics[0]['page'], self.topic_body('基本机制', content))
+        self.assertEqual(wiki.check(self.root, curriculum=True), [])
+
+    def test_comment_with_fence_does_not_hide_real_sections(self):
+        comment = '<!--\n```markdown\n## 只是注释中的标题\n-->\n'
+        self.write_page(self.topics[0]['page'], comment + self.topic_body())
+        self.assertEqual(wiki.check(self.root, curriculum=True), [])
+
+    def test_blank_section_rejected(self):
+        self.write_page(self.topics[0]['page'], self.topic_body('基本机制', ' \t\n '))
+        self.assert_curriculum_rejected()
+
+    def test_section_with_nineteen_characters_rejected(self):
+        self.write_page(self.topics[0]['page'], self.topic_body('推导或示例', '推' * 19))
+        self.assert_curriculum_rejected()
+
+    def test_section_with_twenty_characters_allowed(self):
+        self.write_page(self.topics[0]['page'], self.topic_body('推导或示例', '推' * 20))
+        self.assertEqual(wiki.check(self.root, curriculum=True), [])
+
+    def test_markup_only_section_rejected(self):
+        self.write_page(self.topics[0]['page'], self.topic_body('适用条件', '* ` # > - \n' * 20))
+        self.assert_curriculum_rejected()
+
+    def test_unregistered_topic_file_rejected(self):
+        self.write_page('wiki/topics/orphan.md', self.topic_body())
+        self.assert_curriculum_rejected()
+
+    def test_nested_unregistered_topic_file_rejected(self):
+        self.write_page('wiki/topics/extra/orphan.md', self.topic_body())
+        self.assert_curriculum_rejected()
+
+    def test_nested_registered_topic_allowed(self):
+        nested = 'wiki/topics/extra/network-1.md'
+        destination = self.root / nested
+        destination.parent.mkdir()
+        (self.root / self.topics[0]['page']).rename(destination)
+        self.topics[0]['page'] = nested
+        self.persist_curriculum()
+        self.assertEqual(wiki.check(self.root, curriculum=True), [], '嵌套主题已经登记，应正常通过')
+
+    def test_capability_file_required(self):
+        (self.root / 'knowledge/capabilities.json').unlink()
+        self.assertTrue(wiki.check(self.root, curriculum=True))
+
+    def test_capability_collection_must_be_array(self):
+        self.capabilities = {'id': 'not-an-array'}
+        self.assert_curriculum_rejected()
+
+    def test_capability_id_unique(self):
+        self.capabilities.append(copy.deepcopy(self.capabilities[0]))
+        self.assert_curriculum_rejected()
+
+    def test_capability_id_required(self):
+        del self.capabilities[0]['id']
+        self.assert_curriculum_rejected()
+
+    def test_each_module_requires_all_four_levels(self):
+        self.capabilities = [c for c in self.capabilities if c['id'] != 'benchmark-evaluate']
+        self.assert_curriculum_rejected()
+
+    def test_capability_level_must_be_known(self):
+        self.capabilities[0]['level'] = 'mastered'
+        self.assert_curriculum_rejected()
+
+    def test_capability_module_must_be_registered(self):
+        self.capabilities[0]['module'] = 'missing'
+        self.assert_curriculum_rejected()
+
+    def test_capability_topics_must_exist(self):
+        self.capabilities[0]['topic_ids'] = ['network-1', 'missing']
+        self.assert_curriculum_rejected()
+
+    def test_capability_requires_own_module_topic(self):
+        self.capabilities[0]['topic_ids'] = ['training-1']
+        self.assert_curriculum_rejected()
+
+    def test_capability_allows_cross_module_prerequisite(self):
+        self.capabilities[0]['topic_ids'] = ['training-1', 'network-1']
+        self.persist_curriculum()
+        self.assertEqual(wiki.check(self.root, curriculum=True), [])
+
+    def test_capability_outcome_required(self):
+        self.capabilities[0]['outcome'] = ' '
+        self.assert_curriculum_rejected()
+
+    def test_capability_deliverable_required(self):
+        del self.capabilities[0]['deliverable']
+        self.assert_curriculum_rejected()
+
+    def test_resource_file_required(self):
+        (self.root / 'sources/learning-resources.json').unlink()
+        self.assertTrue(wiki.check(self.root, curriculum=True))
+
+    def test_resource_collection_must_be_array(self):
+        self.resources = {'id': 'not-an-array'}
+        self.assert_curriculum_rejected()
+
+    def test_resource_id_unique(self):
+        self.resources.append(copy.deepcopy(self.resources[0]))
+        self.assert_curriculum_rejected()
+
+    def test_resource_id_required(self):
+        self.resources[0]['id'] = ' '
+        self.assert_curriculum_rejected()
+
+    def test_resource_requires_https(self):
+        self.resources[0]['url'] = 'http://example.org/course'
+        self.assert_curriculum_rejected()
+
+    def test_resource_requires_hostname(self):
+        self.resources[0]['url'] = 'https:///course'
+        self.assert_curriculum_rejected()
+
+    def test_resource_modules_must_exist(self):
+        self.resources[0]['module_ids'] = ['network', 'missing']
+        self.assert_curriculum_rejected()
+
+    def test_resource_requires_source(self):
+        self.resources[0]['source_id'] = 'missing'
+        self.assert_curriculum_rejected()
+
+    def test_resource_reading_scope_required(self):
+        self.resources[0]['reading_scope'] = ' \t '
+        self.assert_curriculum_rejected()
+
+    def test_resource_title_required(self):
+        del self.resources[0]['title']
+        self.assert_curriculum_rejected()
+
+    def test_resource_kind_required(self):
+        del self.resources[0]['kind']
+        self.assert_curriculum_rejected()
+
+    def test_resource_access_required(self):
+        del self.resources[0]['access']
+        self.assert_curriculum_rejected()
+
+    def test_resource_reviewed_at_required(self):
+        del self.resources[0]['reviewed_at']
+        self.assert_curriculum_rejected()
+
+    def test_cli_strict_failure_differs_from_legacy_check(self):
+        self.topics[0]['learning_objectives'] = []
+        self.persist_curriculum()
+        before = self.snapshot()
+        self.assertEqual(self.cli('check')[0], 0)
+        code, stdout, _ = self.cli('check', '--curriculum')
+        self.assertEqual(code, 1)
+        self.assertTrue(stdout)
+        self.assertEqual(self.snapshot(), before)
 
 
 class FeedTests(unittest.TestCase):
@@ -668,6 +1221,20 @@ class CliTests(TempCase, NetworkCase):
     def setUp(self):
         super().setUp()
         self.fixture()
+        # 新版 plan 必须读取传入 root 的七模块配置，旧 check fixture 保持独立。
+        modules = []
+        for day, module in enumerate(('network', 'training', 'inference', 'harness',
+                                      'knowledge', 'agents', 'benchmark')):
+            page = f'wiki/modules/{module}.md'
+            path = self.root / page
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text('# 模块页面\n', encoding='utf-8')
+            modules.append({'id': module, 'title': module, 'weekday': day, 'page': page})
+            if not any(topic['module'] == module for topic in self.topics):
+                self.topics.append({'id': module + '-topic', 'module': module, 'page': f'wiki/{module}.md'})
+                (self.root / f'wiki/{module}.md').write_text('# 测试主题\n', encoding='utf-8')
+        self.save('knowledge/modules.json', modules)
+        self.persist_fixture()
         self.out = self.base / 'output'
         self.save('sources/manifest/feeds.json', [{'id': 'feed-a', 'url': 'https://example.org/a'}])
         note = self.root / 'user-notes/private.md'
@@ -720,7 +1287,8 @@ class CliTests(TempCase, NetworkCase):
             code, stdout, _ = self.cli('plan')
         self.assertEqual(code, 0)
         self.assertEqual(json.loads(stdout)['date'], '2026-10-25')
-        self.assertEqual(json.loads(stdout)['module'], 'review')
+        self.assertEqual(json.loads(stdout)['module'], 'benchmark')
+        self.assertIs(json.loads(stdout)['review_due'], True)
 
     def test_discover_writes_candidate_before_state_and_is_idempotent(self):
         self.network({'https://example.org/a': atom()})

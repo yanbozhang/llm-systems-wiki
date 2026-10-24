@@ -68,5 +68,33 @@
     "url": "https://github.com/xlang-ai/OSWorld/commits/main.atom",
     "kind": "release_or_commit_feed",
     "review_required": true
+  },
+  {
+    "id": "bench-lm-eval",
+    "module": "benchmark",
+    "url": "https://github.com/EleutherAI/lm-evaluation-harness/releases.atom",
+    "kind": "release_or_commit_feed",
+    "review_required": true
+  },
+  {
+    "id": "bench-opencompass",
+    "module": "benchmark",
+    "url": "https://github.com/open-compass/opencompass/releases.atom",
+    "kind": "release_or_commit_feed",
+    "review_required": true
+  },
+  {
+    "id": "bench-mlperf",
+    "module": "benchmark",
+    "url": "https://github.com/mlcommons/inference/releases.atom",
+    "kind": "release_or_commit_feed",
+    "review_required": true
+  },
+  {
+    "id": "bench-agentdojo",
+    "module": "benchmark",
+    "url": "https://github.com/ethz-spylab/agentdojo/commits/main.atom",
+    "kind": "release_or_commit_feed",
+    "review_required": true
   }
 ]
