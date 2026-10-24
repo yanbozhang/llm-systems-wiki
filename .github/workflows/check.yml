@@ -1,0 +1,31 @@
+name: 知识库检查
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: wiki-check-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: 结构与证据绑定
+        run: python scripts/wiki_tool.py check
+      - name: 单进程维护工具测试
+        env:
+          PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+        run: |
+          ulimit -v 2097152
+          python -m unittest discover -s tests -p 'test_*.py'
