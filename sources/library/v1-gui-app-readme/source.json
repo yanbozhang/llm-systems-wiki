@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-app-readme",
+  "title": "TencentQQGYLab AppAgent 官方说明",
+  "url": "https://github.com/TencentQQGYLab/AppAgent/blob/2c1900422caf6f9e94e96d5dd984b530e5a5fbf8/README.md",
+  "version": "text-sha256:ac94cca1f69807d2d31d30bd5521fbf1bda6155996881054df87a85522cd8f5b",
+  "native_version": "2c1900422caf6f9e94e96d5dd984b530e5a5fbf8",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "Introduction、Quick Start、学习/部署阶段和人工检查文档的Tips",
+  "locator": "Exploration Phase; Deployment Phase; Tips",
+  "text_sha256": "ac94cca1f69807d2d31d30bd5521fbf1bda6155996881054df87a85522cd8f5b",
+  "excerpt": "select the appropriate documentation base you want the agent to use",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

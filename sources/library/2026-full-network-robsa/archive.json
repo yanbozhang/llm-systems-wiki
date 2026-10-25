@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-full-network-robsa",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "9cb21cb51683b0f5a41b4e55d4389f9b956aaf65e0872da82b6c22c59b6ac635",
+      "bytes": 8527662,
+      "cache_file": "sources/.local/objects/9cb21cb51683b0f5a41b4e55d4389f9b956aaf65e0872da82b6c22c59b6ac635.bin",
+      "requested_url": "https://aclanthology.org/2026.acl-long.46.pdf",
+      "resolved_url": "https://aclanthology.org/2026.acl-long.46.pdf",
+      "content_type": "application/pdf",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:00:20.739103+00:00",
+      "declared_source_version": "text-sha256:843daddc540b7ce66e3b97510a610a6174f54b960e969eaa95a8444130959cb9",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "HTTP response"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:00:20.739103+00:00",
+    "status": "saved"
+  }
+}

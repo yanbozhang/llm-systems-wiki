@@ -1,0 +1,22 @@
+{
+  "source_id": "v02-langgraph",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "40627028b5f51d6f410ddb7163f9685611b27623dc579da884ebd54241169269",
+      "bytes": 711340,
+      "cache_file": "sources/.local/objects/40627028b5f51d6f410ddb7163f9685611b27623dc579da884ebd54241169269.bin",
+      "requested_url": "https://docs.langchain.com/oss/python/langgraph/overview",
+      "resolved_url": "https://docs.langchain.com/oss/python/langgraph/overview",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:03:08.665864+00:00",
+      "declared_source_version": "text-sha256:162ea598e97780313e656bc9dbd6174adf5daa3b46ee0e1e693472cff9531235",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:08.665864+00:00",
+    "status": "saved"
+  }
+}

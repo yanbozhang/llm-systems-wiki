@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-cx-core-doc",
+  "title": "codex-core 开发说明",
+  "url": "https://github.com/openai/codex/blob/970111f6cb62cc02fe36a82ea7d71b37a2889c97/codex-rs/core/README.md#L1",
+  "version": "text-sha256:90419618b596e4965d9326ff57d81a0a3a406dab586b52d114e6829cafc6da31",
+  "native_version": "970111f6cb62cc02fe36a82ea7d71b37a2889c97",
+  "kind": "official_document",
+  "reading_scope": "crate职责；平台执行依赖",
+  "locator": "crate职责；平台执行依赖",
+  "text_sha256": "90419618b596e4965d9326ff57d81a0a3a406dab586b52d114e6829cafc6da31",
+  "excerpt": "# codex-core",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}

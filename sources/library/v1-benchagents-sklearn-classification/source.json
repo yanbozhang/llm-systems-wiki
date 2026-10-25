@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchagents-sklearn-classification",
+  "title": "scikit-learn Cohen kappa 实现",
+  "url": "https://github.com/scikit-learn/scikit-learn/blob/59106029d483678e79825f753bde67f8ade4332b/sklearn/metrics/_classification.py",
+  "version": "text-sha256:bd6218b44c62124709e13c2041e114f1d231c5e524b8916b79226ae52c682026",
+  "native_version": "59106029d483678e79825f753bde67f8ade4332b",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "cohen_kappa_score 884–1033：混淆矩阵、经验边际、权重与退化分母",
+  "locator": "sklearn/metrics/_classification.py::cohen_kappa_score",
+  "text_sha256": "bd6218b44c62124709e13c2041e114f1d231c5e524b8916b79226ae52c682026",
+  "excerpt": "expected = numerator / denominator",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

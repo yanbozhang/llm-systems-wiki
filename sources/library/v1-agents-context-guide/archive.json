@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-agents-context-guide",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "5bb3f4230a7eff642476b9e7a6f9ce53ea262b081f4267fa64c0b886d120f5bf",
+      "bytes": 241544,
+      "cache_file": "sources/.local/objects/5bb3f4230a7eff642476b9e7a6f9ce53ea262b081f4267fa64c0b886d120f5bf.bin",
+      "requested_url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "resolved_url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:01:55.574214+00:00",
+      "declared_source_version": "text-sha256:6c6fad62eddc4f9b04b7c4c342046848c6185ffb6f8d3828456c47ce2a8510c8",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:01:55.574214+00:00",
+    "status": "saved"
+  }
+}

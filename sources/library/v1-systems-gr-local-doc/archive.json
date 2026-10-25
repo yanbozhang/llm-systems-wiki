@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-systems-gr-local-doc",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "260b15b16a7f9207e3bddbdeb3efc47a1820666d6ca8b87770c21e5c55976261",
+      "bytes": 4525,
+      "cache_file": "sources/.local/objects/260b15b16a7f9207e3bddbdeb3efc47a1820666d6ca8b87770c21e5c55976261.bin",
+      "requested_url": "https://raw.githubusercontent.com/microsoft/graphrag/c600ff80b77b9b62c47d539a3ac9569e95d8949b/docs/query/local_search.md",
+      "resolved_url": "https://raw.githubusercontent.com/microsoft/graphrag/c600ff80b77b9b62c47d539a3ac9569e95d8949b/docs/query/local_search.md",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:14:04.101656+00:00",
+      "declared_source_version": "text-sha256:260b15b16a7f9207e3bddbdeb3efc47a1820666d6ca8b87770c21e5c55976261",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:14:04.101656+00:00",
+    "status": "saved"
+  }
+}

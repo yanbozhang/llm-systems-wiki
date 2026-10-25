@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchsys-mmmu-model-utils",
+  "title": "mmmu/utils/model_utils.py",
+  "url": "https://github.com/MMMU-Benchmark/MMMU/blob/268471d0d488258990025331c7528359c324aa25/mmmu/utils/model_utils.py",
+  "version": "text-sha256:af0dcfafb55af2d36c1006612841f508c7ad70259b95cfa9fd42c03c96257ebf",
+  "native_version": "268471d0d488258990025331c7528359c324aa25",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "完整文件1–73，call_llava_engine_df和llava_image_processor",
+  "locator": "call_llava_engine_df；llava_image_processor",
+  "text_sha256": "af0dcfafb55af2d36c1006612841f508c7ad70259b95cfa9fd42c03c96257ebf",
+  "excerpt": "image_tensor = vis_processors.preprocess(raw_image, return_tensors=pt)[pixel_values][0]",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

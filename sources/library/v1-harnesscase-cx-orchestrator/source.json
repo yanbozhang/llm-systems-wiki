@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-cx-orchestrator",
+  "title": "Codex ToolOrchestrator 执行前策略",
+  "url": "https://github.com/openai/codex/blob/970111f6cb62cc02fe36a82ea7d71b37a2889c97/codex-rs/core/src/tools/orchestrator.rs#L125",
+  "version": "text-sha256:8996f718b818804473c151a8a643747c2b5ab69b05f4630eee143fac7daa0bb5",
+  "native_version": "970111f6cb62cc02fe36a82ea7d71b37a2889c97",
+  "kind": "source_code",
+  "reading_scope": "ToolOrchestrator.run 125–243：审批要求与首次执行环境选择",
+  "locator": "ToolOrchestrator.run 125–243：审批要求与首次执行环境选择",
+  "text_sha256": "8996f718b818804473c151a8a643747c2b5ab69b05f4630eee143fac7daa0bb5",
+  "excerpt": "pub async fn run<Rq, Out, T>(",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}

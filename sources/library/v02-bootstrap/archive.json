@@ -1,0 +1,22 @@
+{
+  "source_id": "v02-bootstrap",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "681a10622e6fa1520fea015ed884e53272ca26d8be1029ab536059d926a52477",
+      "bytes": 76486,
+      "cache_file": "sources/.local/objects/681a10622e6fa1520fea015ed884e53272ca26d8be1029ab536059d926a52477.bin",
+      "requested_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html",
+      "resolved_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html",
+      "content_type": "text/html",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:03:31.147341+00:00",
+      "declared_source_version": "text-sha256:1a21a39308c692c5de9aa88fbd1a5ec3b2450d32f5b49d8d15926593be248db2",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:31.147341+00:00",
+    "status": "saved"
+  }
+}

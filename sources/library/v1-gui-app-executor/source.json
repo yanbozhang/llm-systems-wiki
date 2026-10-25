@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-app-executor",
+  "title": "AppAgent 部署执行脚本",
+  "url": "https://github.com/TencentQQGYLab/AppAgent/blob/2c1900422caf6f9e94e96d5dd984b530e5a5fbf8/scripts/task_executor.py",
+  "version": "text-sha256:0e2e5bbc613b5b605bfec8d70dd63425f8139a30537695a0b9ba10ab47ee593e",
+  "native_version": "2c1900422caf6f9e94e96d5dd984b530e5a5fbf8",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "第49–87、117–139、142–291行；文档库选择、可见元素检索、grid切换与动作落地",
+  "locator": "area_to_xy; deployment loop; documentation retrieval",
+  "text_sha256": "0e2e5bbc613b5b605bfec8d70dd63425f8139a30537695a0b9ba10ab47ee593e",
+  "excerpt": "doc_path = os.path.join(docs_dir, f\"{elem.uid}.txt\")",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

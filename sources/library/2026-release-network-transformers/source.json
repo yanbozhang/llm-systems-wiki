@@ -1,0 +1,18 @@
+{
+  "id": "2026-release-network-transformers",
+  "title": "huggingface/transformers：v5.20.2发布说明",
+  "url": "https://github.com/huggingface/transformers/releases/tag/v5.20.2",
+  "version": "text-sha256:7d70b332ab4cd48adf70a018318da4b64e510e23329f1d3743529de65d99d799",
+  "native_version": "v5.20.2",
+  "published_at": "2026-10-19",
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "完整发布说明；不将最新分支提交等同于该发布的代码",
+  "locator": "Release notes",
+  "text_sha256": "7d70b332ab4cd48adf70a018318da4b64e510e23329f1d3743529de65d99d799",
+  "excerpt": "# Patch release: v5.20.2 This patch notably solves an issue where some inputs could loose their original type inside `prepare_inputs_for_generation` in `generat",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "release_date": "2026-10-19T17:45:37Z",
+  "prerelease": false
+}

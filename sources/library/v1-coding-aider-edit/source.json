@@ -1,0 +1,16 @@
+{
+  "id": "v1-coding-aider-edit",
+  "title": "aider/coders/editblock_coder.py",
+  "url": "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/coders/editblock_coder.py",
+  "version": "text-sha256:244df08f5ccd19928bcdac1901ae591a7a786d12a6f70d31400baaefb5a136a3",
+  "native_version": "5dc9490bb35f9729ef2c95d00a19ccd30c26339c",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "EditBlockCoder.apply_edits41–124；perfect_replace/replace_most_similar_chunk127–189；空白匹配243–294",
+  "locator": "EditBlockCoder.apply_edits；perfect_replace；replace_most_similar_chunk",
+  "text_sha256": "244df08f5ccd19928bcdac1901ae591a7a786d12a6f70d31400baaefb5a136a3",
+  "excerpt": "The other SEARCH/REPLACE blocks were applied successfully. Do not re-send them.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

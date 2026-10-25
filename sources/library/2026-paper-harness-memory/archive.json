@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-paper-harness-memory",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "127e396624e3ceddab9e921a5f6667b9a06eeabddb9f704b4cbdc80476d8e622",
+      "bytes": 47803,
+      "cache_file": "sources/.local/objects/127e396624e3ceddab9e921a5f6667b9a06eeabddb9f704b4cbdc80476d8e622.bin",
+      "requested_url": "https://aclanthology.org/2026.acl-long.27/",
+      "resolved_url": "https://aclanthology.org/2026.acl-long.27/",
+      "content_type": "text/html",
+      "representation": "conference_record_html",
+      "retrieved_at": "2026-10-25T03:56:45.858083+00:00",
+      "declared_source_version": "text-sha256:3b93df5001aed7f176de7e0abbd44dc33fc2d3115919ee84d81d7451f31af1f7",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "HTTP response"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:56:45.858083+00:00",
+    "status": "saved"
+  }
+}

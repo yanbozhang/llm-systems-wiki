@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-qmd-doc",
+  "title": "README.md",
+  "url": "https://github.com/tobi/qmd/blob/86d2365d17fc682e491c2c53d1e4a884aee8682a/README.md",
+  "version": "text-sha256:af5f41ebeea04e0928fccd38ba5f47d90749b8f0417b84a99f89a677fefae76a",
+  "native_version": "86d2365d17fc682e491c2c53d1e4a884aee8682a",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "Score Normalization & Fusion 533–566行，含position-aware blending",
+  "locator": "Score Normalization & Fusion",
+  "text_sha256": "af5f41ebeea04e0928fccd38ba5f47d90749b8f0417b84a99f89a677fefae76a",
+  "excerpt": "Documents ranking #1 in any list get +0.05, #2-3 get +0.02",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

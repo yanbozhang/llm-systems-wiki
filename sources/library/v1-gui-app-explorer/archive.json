@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-gui-app-explorer",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "074479017ed4770b1c72ed119ee74cf91be1890f27f96a3170413a22f1519954",
+      "bytes": 11055,
+      "cache_file": "sources/.local/objects/074479017ed4770b1c72ed119ee74cf91be1890f27f96a3170413a22f1519954.bin",
+      "requested_url": "https://raw.githubusercontent.com/TencentQQGYLab/AppAgent/2c1900422caf6f9e94e96d5dd984b530e5a5fbf8/scripts/self_explorer.py",
+      "resolved_url": "https://raw.githubusercontent.com/TencentQQGYLab/AppAgent/2c1900422caf6f9e94e96d5dd984b530e5a5fbf8/scripts/self_explorer.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:12:54.717985+00:00",
+      "declared_source_version": "text-sha256:074479017ed4770b1c72ed119ee74cf91be1890f27f96a3170413a22f1519954",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:12:54.717985+00:00",
+    "status": "saved"
+  }
+}

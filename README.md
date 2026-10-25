@@ -18,6 +18,16 @@
 
 [![知识库网站预览](assets/site-preview.png)](https://yanbozhang.github.io/llm-systems-wiki/)
 
+## 第一次来，从三个入口选择
+
+| 你想做什么 | 入口 |
+|---|---|
+| 系统学习基础、运行小例子 | [仓库导览](docs/仓库导览.md) · [基础入门](wiki/paths/基础入门路径.md) |
+| 看2026年论文和开源工程的变化 | [七模块研究进展](wiki/frontiers/README.md) · [在线阅读](https://yanbozhang.github.io/llm-systems-wiki/research/) |
+| 找原文、版本和本地保存记录 | [来源资料库](sources/README.md) · [完整索引](sources/来源索引.md) |
+
+本轮研究选读覆盖14篇ICML/ACL 2026论文和14个开源项目，明确区分会议论文、已读取全文、官方摘要、发布版本和当前提交。每条来源都有独立资料目录；本地全文缓存不随GitHub仓库公开分发。
+
 ## 从一个具体问题开始
 
 | 你想弄懂什么 | 阅读入口 | 可运行的教学示例 |

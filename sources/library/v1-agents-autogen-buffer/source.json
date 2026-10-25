@@ -1,0 +1,16 @@
+{
+  "id": "v1-agents-autogen-buffer",
+  "title": "AutoGen BufferedChatCompletionContext.get_messages",
+  "url": "https://github.com/microsoft/autogen/blob/004749e6b7102c8fd317b9b1499ce5807223c278/python/packages/autogen-core/src/autogen_core/model_context/_buffered_chat_completion_context.py#L34",
+  "native_version": "004749e6b7102c8fd317b9b1499ce5807223c278",
+  "kind": "source_code",
+  "reading_scope": "get_messages 34–41",
+  "locator": "get_messages 34–41",
+  "text_sha256": "61166bbf4f9e350abd5a9fa511628ca9adf7e11125497fa7739622c431086120",
+  "excerpt": "async def get_messages(self) -> List[LLMMessage]:",
+  "version": "text-sha256:61166bbf4f9e350abd5a9fa511628ca9adf7e11125497fa7739622c431086120",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

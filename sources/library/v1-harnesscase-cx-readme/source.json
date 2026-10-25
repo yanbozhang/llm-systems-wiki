@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-cx-readme",
+  "title": "Codex CLI 仓库说明",
+  "url": "https://github.com/openai/codex/blob/970111f6cb62cc02fe36a82ea7d71b37a2889c97/README.md#L1",
+  "version": "text-sha256:ba4e1f69ff48386e72a9c5e1edaf76aad64a475c2d51af79ccba6d1128261ba7",
+  "native_version": "970111f6cb62cc02fe36a82ea7d71b37a2889c97",
+  "kind": "official_document",
+  "reading_scope": "README：CLI定位与Apache-2.0声明",
+  "locator": "README：CLI定位与Apache-2.0声明",
+  "text_sha256": "ba4e1f69ff48386e72a9c5e1edaf76aad64a475c2d51af79ccba6d1128261ba7",
+  "excerpt": "<p align=\"center\"><strong>Codex CLI</strong> is a coding agent from OpenAI that runs locally on your computer.",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}

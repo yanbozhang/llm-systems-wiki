@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-agents-swebench-paper",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "7b93264b74b5753a708be62b9313d203c568f26821ef9586c6d1203f2be53382",
+      "bytes": 1275988,
+      "cache_file": "sources/.local/objects/7b93264b74b5753a708be62b9313d203c568f26821ef9586c6d1203f2be53382.bin",
+      "requested_url": "https://arxiv.org/html/2310.06770v3",
+      "resolved_url": "https://arxiv.org/html/2310.06770v3",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:04:28.402346+00:00",
+      "declared_source_version": "text-sha256:4b243a18f76986685b8a30a02618f7cb601bf21b6788180a47348bf20c255f0d",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:04:28.402346+00:00",
+    "status": "saved"
+  }
+}

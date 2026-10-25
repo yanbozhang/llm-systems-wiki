@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-paper-harness-retrac",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "1ac3cb58ad71546902e859f8da5e14480375544ac7ce632aca7a0ea399148157",
+      "bytes": 89753,
+      "cache_file": "sources/.local/objects/1ac3cb58ad71546902e859f8da5e14480375544ac7ce632aca7a0ea399148157.bin",
+      "requested_url": "https://icml.cc/virtual/2026/poster/60790",
+      "resolved_url": "https://icml.cc/virtual/2026/poster/60790",
+      "content_type": "text/html",
+      "representation": "conference_record_html",
+      "retrieved_at": "2026-10-25T03:56:45.318086+00:00",
+      "declared_source_version": "text-sha256:cab346a8e17c878634eb1299b7c45838777e78ce98db28c7af98c9e36c8eda05",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "HTTP response"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:56:45.318086+00:00",
+    "status": "saved"
+  }
+}

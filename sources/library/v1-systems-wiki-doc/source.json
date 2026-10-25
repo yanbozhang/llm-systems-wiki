@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-wiki-doc",
+  "title": "README.md",
+  "url": "https://github.com/microsoft/llmwiki/blob/e09126f257c1fcf8e63234382748a51cf6a5df7f/README.md",
+  "version": "text-sha256:8c5cc5b33bdcd36198153ba9a3fee63eb1ba6855ed2ce3327a860b77a2f7bc93",
+  "native_version": "e09126f257c1fcf8e63234382748a51cf6a5df7f",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "What is this、Architecture、Packages，1–81行",
+  "locator": "What is this?；Architecture",
+  "text_sha256": "8c5cc5b33bdcd36198153ba9a3fee63eb1ba6855ed2ce3327a860b77a2f7bc93",
+  "excerpt": "a structured, interlinked collection of markdown files that sits between you and your raw sources",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

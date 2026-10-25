@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-harnesscase-sdk-readme",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "c38a933bf8fef26316ea38635989b254e69a26d21d80b96bf5731cba4e88bcc6",
+      "bytes": 13250,
+      "cache_file": "sources/.local/objects/c38a933bf8fef26316ea38635989b254e69a26d21d80b96bf5731cba4e88bcc6.bin",
+      "requested_url": "https://raw.githubusercontent.com/anthropics/claude-agent-sdk-python/0e89b298e771259378a6cd3734e00d323dff5703/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/anthropics/claude-agent-sdk-python/0e89b298e771259378a6cd3734e00d323dff5703/README.md",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:20.219523+00:00",
+      "declared_source_version": "text-sha256:c38a933bf8fef26316ea38635989b254e69a26d21d80b96bf5731cba4e88bcc6",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:20.219523+00:00",
+    "status": "saved"
+  }
+}

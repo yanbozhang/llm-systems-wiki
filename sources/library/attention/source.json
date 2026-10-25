@@ -1,0 +1,16 @@
+{
+  "id": "attention",
+  "title": "Transformer 原论文",
+  "url": "https://arxiv.org/html/1706.03762v7",
+  "version": "text-sha256:855af16c12cbc77c7401cb4197e9d243bb483065291c4e0a8daaa6044866f709",
+  "native_version": "1706.03762v7",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "正文的相关章节；公式和图表未逐项独立复核",
+  "locator": "3.2 Attention；3.3 FFN",
+  "text_sha256": "855af16c12cbc77c7401cb4197e9d243bb483065291c4e0a8daaa6044866f709",
+  "excerpt": "An attention function can be described as mapping a query and a set of key-value pairs to an output, where the query, keys, values, and output are all vectors. The output is comput",
+  "archive_policy": "保留短摘与指纹，全文在原站；不承诺原站失效后可完整恢复"
+}

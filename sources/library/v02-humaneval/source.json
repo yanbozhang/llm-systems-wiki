@@ -1,0 +1,16 @@
+{
+  "id": "v02-humaneval",
+  "title": "HumanEval 评测",
+  "url": "https://raw.githubusercontent.com/openai/human-eval/master/README.md",
+  "version": "text-sha256:a6a3741a64527ae20026b7880e37af5de88e8ae4dcfed81eb19620c674b6e272",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "public_learning_or_evaluation_document",
+  "reading_scope": "读取入口、课程大纲或项目说明的相关正文；不代表完成全部课程、作业或基准运行",
+  "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页",
+  "text_sha256": "a6a3741a64527ae20026b7880e37af5de88e8ae4dcfed81eb19620c674b6e272",
+  "excerpt": "Deprecated and unmaintained",
+  "archive_policy": "只保存定位短摘与指纹，不镜像第三方全文"
+}

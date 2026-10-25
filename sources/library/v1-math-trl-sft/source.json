@@ -1,0 +1,16 @@
+{
+  "id": "v1-math-trl-sft",
+  "title": "TRL SFTTrainer 与文本collator",
+  "url": "https://github.com/huggingface/trl/blob/1117c3b9c1632ee9814c30f6c9fc884b792a54e5/trl/trainer/sft_trainer.py",
+  "version": "text-sha256:ab992191b84cdc47e14c0b6baf4e6be724240da4b4d98f26341cdaba072e8e92",
+  "native_version": "1117c3b9c1632ee9814c30f6c9fc884b792a54e5",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "第170–229、1362–1482、1546–1565行；模板分词、mask交集生成labels、padding与跳过准备保护",
+  "locator": "SFTTrainer._prepare_dataset.build_labels; DataCollatorForLanguageModeling.torch_call",
+  "text_sha256": "ab992191b84cdc47e14c0b6baf4e6be724240da4b4d98f26341cdaba072e8e92",
+  "excerpt": "token_id if all(bits) else -100",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

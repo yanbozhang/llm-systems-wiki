@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-harnesscase-cc-hooks",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "a9c940965d6eb1a793574fa788f85684b93716b7778ec4eb3ac03cbbbef51ede",
+      "bytes": 2882966,
+      "cache_file": "sources/.local/objects/a9c940965d6eb1a793574fa788f85684b93716b7778ec4eb3ac03cbbbef51ede.bin",
+      "requested_url": "https://code.claude.com/docs/en/hooks",
+      "resolved_url": "https://code.claude.com/docs/en/hooks",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:13:25.038776+00:00",
+      "declared_source_version": "text-sha256:7454be33e741d700eb87bf56f045247c4a8210dd471e2b90732c5eb9f6878c3f",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:25.038776+00:00",
+    "status": "saved"
+  }
+}

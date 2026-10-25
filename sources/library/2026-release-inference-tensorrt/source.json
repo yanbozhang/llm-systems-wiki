@@ -1,0 +1,18 @@
+{
+  "id": "2026-release-inference-tensorrt",
+  "title": "NVIDIA/TensorRT-LLM：v1.2.1发布说明",
+  "url": "https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.2.1",
+  "version": "text-sha256:a47a3c9ad649c791c5ebb6e9567c1acf0b14e17acf632bf7d64d517e86c5f7ef",
+  "native_version": "v1.2.1",
+  "published_at": "2026-04-20",
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "完整发布说明；不将最新分支提交等同于该发布的代码",
+  "locator": "Release notes",
+  "text_sha256": "a47a3c9ad649c791c5ebb6e9567c1acf0b14e17acf632bf7d64d517e86c5f7ef",
+  "excerpt": "## Highlights - **Fixed Issue** - Fixed an issue that caused KV cache corruption (#12770) - **Infrastructure Changes** - Upgraded xgrammar and flashinfer (#1281",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "release_date": "2026-04-20T11:51:33Z",
+  "prerelease": false
+}

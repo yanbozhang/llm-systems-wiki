@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-full-agents-webstar",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "e8933babc14b09d03ec3c7becb797f7d2b36fe56f79cc1a5e75a1471939c293a",
+      "bytes": 1620497,
+      "cache_file": "sources/.local/objects/e8933babc14b09d03ec3c7becb797f7d2b36fe56f79cc1a5e75a1471939c293a.bin",
+      "requested_url": "https://aclanthology.org/2026.acl-long.21.pdf",
+      "resolved_url": "https://aclanthology.org/2026.acl-long.21.pdf",
+      "content_type": "application/pdf",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:05:15.096750+00:00",
+      "declared_source_version": "text-sha256:1727ecff3ee3626bc2420fd9fceb2996cc2693e875f17ed4eb708efe1024d494",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "HTTP response"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:05:15.096750+00:00",
+    "status": "saved"
+  }
+}

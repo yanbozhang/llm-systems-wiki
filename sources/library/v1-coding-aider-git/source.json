@@ -1,0 +1,16 @@
+{
+  "id": "v1-coding-aider-git",
+  "title": "aider/repo.py",
+  "url": "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/repo.py",
+  "version": "text-sha256:a49343d63d3faa684003f9e59306215e6f3d77b7b944a71b88b132e0c78c5df0",
+  "native_version": "5dc9490bb35f9729ef2c95d00a19ccd30c26339c",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "GitRepo.commit131–155、197–230、270–318",
+  "locator": "GitRepo.commit",
+  "text_sha256": "a49343d63d3faa684003f9e59306215e6f3d77b7b944a71b88b132e0c78c5df0",
+  "excerpt": "Commit the specified files or all dirty files if none are specified.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

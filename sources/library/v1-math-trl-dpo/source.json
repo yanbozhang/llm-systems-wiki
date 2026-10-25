@@ -1,0 +1,16 @@
+{
+  "id": "v1-math-trl-dpo",
+  "title": "TRL DPOTrainer 实现",
+  "url": "https://github.com/huggingface/trl/blob/1117c3b9c1632ee9814c30f6c9fc884b792a54e5/trl/trainer/dpo_trainer.py",
+  "version": "text-sha256:148ae182814e8983409209bf3898397923cbdb67d4a195f2af3af36f895f9f4f",
+  "native_version": "1117c3b9c1632ee9814c30f6c9fc884b792a54e5",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "第1295–1447、1556–1575行；参考策略、completion mask、logp求和、reverse_kl、sigmoid及sigmoid_norm",
+  "locator": "DPOTrainer.compute_ref_log_probs; DPOTrainer._compute_loss",
+  "text_sha256": "148ae182814e8983409209bf3898397923cbdb67d4a195f2af3af36f895f9f4f",
+  "excerpt": "per_sequence_loss = -F.logsigmoid(self.beta * delta_score)",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

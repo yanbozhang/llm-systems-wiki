@@ -1,0 +1,16 @@
+{
+  "id": "v1-agents-sweagent-history",
+  "title": "SWE-agent LastNObservations 历史处理",
+  "url": "https://github.com/SWE-agent/SWE-agent/blob/3ea751c087f32b16e039a2233dd6eefecef325d5/sweagent/agent/history_processors.py#L147",
+  "native_version": "3ea751c087f32b16e039a2233dd6eefecef325d5",
+  "kind": "source_code",
+  "reading_scope": "LastNObservations._get_omit_indices 147–155；__call__ 157–175",
+  "locator": "LastNObservations._get_omit_indices 147–155；__call__ 157–175",
+  "text_sha256": "8e3621a9b7d94761d184c57dc2ab1028f7eb04b01fdfcbe8ba122977d19e477a",
+  "excerpt": "def _get_omit_indices(self, history: History) -> list[int]:",
+  "version": "text-sha256:8e3621a9b7d94761d184c57dc2ab1028f7eb04b01fdfcbe8ba122977d19e477a",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

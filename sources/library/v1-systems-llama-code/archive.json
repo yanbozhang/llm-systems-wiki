@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-systems-llama-code",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "46d35513266b2a232549531b9cefce1b87dc1632479e2497c36bf4c5ecef12f0",
+      "bytes": 20118,
+      "cache_file": "sources/.local/objects/46d35513266b2a232549531b9cefce1b87dc1632479e2497c36bf4c5ecef12f0.bin",
+      "requested_url": "https://raw.githubusercontent.com/huggingface/transformers/50e35cc0ca18ec19b80653690de553e6decf74f5/src/transformers/models/llama/modeling_llama.py",
+      "resolved_url": "https://raw.githubusercontent.com/huggingface/transformers/50e35cc0ca18ec19b80653690de553e6decf74f5/src/transformers/models/llama/modeling_llama.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:43.881250+00:00",
+      "declared_source_version": "text-sha256:46d35513266b2a232549531b9cefce1b87dc1632479e2497c36bf4c5ecef12f0",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:43.881250+00:00",
+    "status": "saved"
+  }
+}

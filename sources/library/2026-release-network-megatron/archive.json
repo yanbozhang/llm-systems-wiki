@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-release-network-megatron",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "21e041257b343f8d43be54c186c09e032236119f216abe79b7307f1383e2988b",
+      "bytes": 4482,
+      "cache_file": "sources/.local/objects/21e041257b343f8d43be54c186c09e032236119f216abe79b7307f1383e2988b.bin",
+      "requested_url": "https://api.github.com/repos/NVIDIA/Megatron-LM/releases/latest",
+      "resolved_url": "https://api.github.com/repos/NVIDIA/Megatron-LM/releases/latest",
+      "content_type": "application/json",
+      "representation": "release_api_snapshot",
+      "retrieved_at": "2026-10-25T04:17:03.728442+00:00",
+      "declared_source_version": "text-sha256:b111f4357f2869dd69edfecddff0773e06db9b0363548df74e5a3e58fb3e390b",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "GitHub Releases API object serialized as JSON"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:17:03.728442+00:00",
+    "status": "saved"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-systems-distserve-paper",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "6a026577132d18b5ce60554fee75d773026a4cb4dd2586015b4fbb3614d4c556",
+      "bytes": 293239,
+      "cache_file": "sources/.local/objects/6a026577132d18b5ce60554fee75d773026a4cb4dd2586015b4fbb3614d4c556.bin",
+      "requested_url": "https://arxiv.org/html/2401.09670v3",
+      "resolved_url": "https://arxiv.org/html/2401.09670v3",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:05:36.472165+00:00",
+      "declared_source_version": "text-sha256:8e9725f01e6852ce7c825c6dceafd3dca9d33b894717990907013519c0711cdd",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:05:36.472165+00:00",
+    "status": "saved"
+  }
+}

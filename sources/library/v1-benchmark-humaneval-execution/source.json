@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchmark-humaneval-execution",
+  "title": "HumanEval 执行检查与隔离说明",
+  "url": "https://github.com/openai/human-eval/blob/b9453e8f1865df0a0057a1383767caa400acfbcf/human_eval/execution.py",
+  "version": "text-sha256:79901c6f5b59701c465b164aed290fa53abc35abc80a5378fc10f4dac1f9a84c",
+  "native_version": "b9453e8f1865df0a0057a1383767caa400acfbcf",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "实际读取相关函数与上下文；函数定位在知识点正文中列明",
+  "locator": "human_eval/execution.py",
+  "text_sha256": "79901c6f5b59701c465b164aed290fa53abc35abc80a5378fc10f4dac1f9a84c",
+  "excerpt": "",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

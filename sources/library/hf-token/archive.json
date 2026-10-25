@@ -1,0 +1,22 @@
+{
+  "source_id": "hf-token",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "5609e99bb67710f8f53575135ff8b874e5334462282f646e1725bb5bf352a0b8",
+      "bytes": 105622,
+      "cache_file": "sources/.local/objects/5609e99bb67710f8f53575135ff8b874e5334462282f646e1725bb5bf352a0b8.bin",
+      "requested_url": "https://huggingface.co/learn/llm-course/chapter6/1",
+      "resolved_url": "https://huggingface.co/learn/llm-course/chapter6/1",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:02:52.706562+00:00",
+      "declared_source_version": "text-sha256:6dc6ff98d0967c09862909c210ac6c6d7bed1a2603f1733534f5325657a4c9f4",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:02:52.706562+00:00",
+    "status": "saved"
+  }
+}

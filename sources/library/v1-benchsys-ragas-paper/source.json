@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchsys-ragas-paper",
+  "title": "Ragas: Automated Evaluation of Retrieval Augmented Generation",
+  "url": "https://arxiv.org/html/2309.15217v2",
+  "version": "text-sha256:96392ffe66df4b69aba6978b4790ba752cc83172162462230cda5ab8b4b3da3b",
+  "native_version": "arXiv:2309.15217v2",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "§3三类指标、§4 WikiEval标注、§5人类偏好一致性；正文62–158",
+  "locator": "§3 Evaluation；§4 The WikiEval Dataset；§5 Experiments",
+  "text_sha256": "96392ffe66df4b69aba6978b4790ba752cc83172162462230cda5ab8b4b3da3b",
+  "excerpt": "We count how often the answer/context preferred by the model coincides with the answer/context preferred by the human annotators.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

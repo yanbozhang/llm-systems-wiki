@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-app-model",
+  "title": "AppAgent 响应解析函数",
+  "url": "https://github.com/TencentQQGYLab/AppAgent/blob/2c1900422caf6f9e94e96d5dd984b530e5a5fbf8/scripts/model.py",
+  "version": "text-sha256:76d328170cc81be60fe810e7105c6392943b1056ba93da352ea5b55e333f7e6d",
+  "native_version": "2c1900422caf6f9e94e96d5dd984b530e5a5fbf8",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "第101–211行；探索动作、网格动作与反思字段解析",
+  "locator": "parse_explore_rsp; parse_grid_rsp; parse_reflect_rsp",
+  "text_sha256": "76d328170cc81be60fe810e7105c6392943b1056ba93da352ea5b55e333f7e6d",
+  "excerpt": "return [act_name + \"_grid\", area, subarea, last_act]",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

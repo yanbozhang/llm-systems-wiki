@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-coding-oh-sdk-readme",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "95094c9745c7cc58136d4eaa1688fb6038aafefec2be05344293f6df7e55dbf8",
+      "bytes": 10835,
+      "cache_file": "sources/.local/objects/95094c9745c7cc58136d4eaa1688fb6038aafefec2be05344293f6df7e55dbf8.bin",
+      "requested_url": "https://raw.githubusercontent.com/OpenHands/software-agent-sdk/acd96e6fa424c02432304395b9208f99be24b54d/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/OpenHands/software-agent-sdk/acd96e6fa424c02432304395b9208f99be24b54d/README.md",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:11:57.265785+00:00",
+      "declared_source_version": "text-sha256:95094c9745c7cc58136d4eaa1688fb6038aafefec2be05344293f6df7e55dbf8",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:11:57.265785+00:00",
+    "status": "saved"
+  }
+}

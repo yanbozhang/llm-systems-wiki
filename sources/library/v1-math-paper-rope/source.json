@@ -1,0 +1,16 @@
+{
+  "id": "v1-math-paper-rope",
+  "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding",
+  "url": "https://arxiv.org/html/2104.09864v5",
+  "version": "text-sha256:ee8e4a4c2276fa7041df4d1181f297daa5faa6532bbcb31ab6346785cd9c15f6",
+  "native_version": "2104.09864v5",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "第3.1–3.3节、3.4.1–3.4.2相关二维推导；式12–16和范数不变性",
+  "locator": "§3.2.1–3.2.2; Eq.(12)–(16)",
+  "text_sha256": "ee8e4a4c2276fa7041df4d1181f297daa5faa6532bbcb31ab6346785cd9c15f6",
+  "excerpt": "we divide the d-dimension space into d/2 sub-spaces",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

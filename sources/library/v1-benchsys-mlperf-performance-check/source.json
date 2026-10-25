@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchsys-mlperf-performance-check",
+  "title": "tools/submission/submission_checker/checks/performance_check.py",
+  "url": "https://github.com/mlcommons/inference/blob/3fbc329939999c13d0a7b5e67fb2092287e06047/tools/submission/submission_checker/checks/performance_check.py",
+  "version": "text-sha256:6a5fe9a89504ba08e7500984c5abc92e4732936ff329d3b87317b12e84818167",
+  "native_version": "3fbc329939999c13d0a7b5e67fb2092287e06047",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "setup_checks76–101；loadgen_errors_check136–171；llm_check441–508",
+  "locator": "PerformanceCheck.setup_checks；loadgen_errors_check；llm_check",
+  "text_sha256": "6a5fe9a89504ba08e7500984c5abc92e4732936ff329d3b87317b12e84818167",
+  "excerpt": "use_token_latencies flag needs to be enabled for LLM benchmark",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

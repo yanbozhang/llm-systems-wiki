@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-repo-inference-tensorrt",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "bc634a82156c3108618c3d7d9a065af3c8e756c3371e9a0d35c34c76be6b23cb",
+      "bytes": 29767,
+      "cache_file": "sources/.local/objects/bc634a82156c3108618c3d7d9a065af3c8e756c3371e9a0d35c34c76be6b23cb.bin",
+      "requested_url": "https://api.github.com/repos/NVIDIA/TensorRT-LLM/readme?ref=fe180a952d576d576e70b4f129c39883b49ff0aa",
+      "resolved_url": "https://api.github.com/repos/NVIDIA/TensorRT-LLM/readme?ref=fe180a952d576d576e70b4f129c39883b49ff0aa",
+      "content_type": "text/markdown",
+      "representation": "decoded_repository_document",
+      "retrieved_at": "2026-10-25T03:59:16.488396+00:00",
+      "declared_source_version": "text-sha256:019fd3a6ead551d10450cd6c3845c7471955c681fd0d58adb10ce0a9a205e6c2",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "Base64-decoded GitHub Contents API file"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:59:16.488396+00:00",
+    "status": "saved"
+  }
+}

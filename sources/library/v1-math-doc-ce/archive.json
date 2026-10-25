@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-math-doc-ce",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "3689ba519219aa00bb34b44ab5c48b29c5a61824b79e74b85f42c6355733c411",
+      "bytes": 283809,
+      "cache_file": "sources/.local/objects/3689ba519219aa00bb34b44ab5c48b29c5a61824b79e74b85f42c6355733c411.bin",
+      "requested_url": "https://docs.pytorch.org/docs/2.14/generated/torch.nn.CrossEntropyLoss.html",
+      "resolved_url": "https://docs.pytorch.org/docs/2.14/generated/torch.nn.CrossEntropyLoss.html",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:13:49.810920+00:00",
+      "declared_source_version": "text-sha256:70fa22819952b4a366188ecf7a577c15a7ac4c00a4a7675508a80b24b1ad8ca3",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:49.810920+00:00",
+    "status": "saved"
+  }
+}

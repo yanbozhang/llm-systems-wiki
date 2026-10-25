@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-gui-ui-readme",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "0f05aa4f447d43439f6b3f4ab179cbe1e59d170eaf6c0684fa9c2eb0872e5985",
+      "bytes": 16262,
+      "cache_file": "sources/.local/objects/0f05aa4f447d43439f6b3f4ab179cbe1e59d170eaf6c0684fa9c2eb0872e5985.bin",
+      "requested_url": "https://raw.githubusercontent.com/bytedance/UI-TARS-desktop/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/bytedance/UI-TARS-desktop/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/README.md",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:01.073631+00:00",
+      "declared_source_version": "text-sha256:0f05aa4f447d43439f6b3f4ab179cbe1e59d170eaf6c0684fa9c2eb0872e5985",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:01.073631+00:00",
+    "status": "saved"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchagents-agentdojo-paper",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "7b6e97faaedcf0e1b5f3635b92a0da33afbe8529699d54a5c44ad58ce2fa8b02",
+      "bytes": 309875,
+      "cache_file": "sources/.local/objects/7b6e97faaedcf0e1b5f3635b92a0da33afbe8529699d54a5c44ad58ce2fa8b02.bin",
+      "requested_url": "https://arxiv.org/html/2406.13352",
+      "resolved_url": "https://arxiv.org/html/2406.13352",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:05:09.550130+00:00",
+      "declared_source_version": "text-sha256:e6c52897c6ce82a3c75fcb64ec79df365b97b1a73ef1390ea814cbf69a9ea279",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:05:09.550130+00:00",
+    "status": "saved"
+  }
+}

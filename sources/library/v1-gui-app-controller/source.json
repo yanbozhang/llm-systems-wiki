@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-app-controller",
+  "title": "AppAgent Android控制与元素身份",
+  "url": "https://github.com/TencentQQGYLab/AppAgent/blob/2c1900422caf6f9e94e96d5dd984b530e5a5fbf8/scripts/and_controller.py",
+  "version": "text-sha256:835f50dd0be9915116f22a52219ef8c4efdff3f2adbd4e02cf92cd4803307bc6",
+  "native_version": "2c1900422caf6f9e94e96d5dd984b530e5a5fbf8",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "第19–173行；get_id_from_element、traverse_tree、截图/XML、tap及swipe",
+  "locator": "get_id_from_element; traverse_tree; AndroidController.get_xml; AndroidController.tap",
+  "text_sha256": "835f50dd0be9915116f22a52219ef8c4efdff3f2adbd4e02cf92cd4803307bc6",
+  "excerpt": "elem_id = parent_prefix + \"_\" + elem_id",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

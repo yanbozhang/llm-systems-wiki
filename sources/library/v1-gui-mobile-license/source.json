@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-mobile-license",
+  "title": "MobileAgent MIT License",
+  "url": "https://github.com/X-PLUG/MobileAgent/blob/11cea575561fb7800b5fb6b6cafa56f7a91de11f/LICENSE",
+  "version": "text-sha256:961819a89dacd1f4f161e1d2ebf616b538bf095a2eecfa3ef40b7ccec633fac4",
+  "native_version": "11cea575561fb7800b5fb6b6cafa56f7a91de11f",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "MIT全文；仅用于代码许可边界",
+  "locator": "LICENSE",
+  "text_sha256": "961819a89dacd1f4f161e1d2ebf616b538bf095a2eecfa3ef40b7ccec633fac4",
+  "excerpt": "MIT License",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

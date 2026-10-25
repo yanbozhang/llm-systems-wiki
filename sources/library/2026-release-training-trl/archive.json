@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-release-training-trl",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "1bec57605f25739df7d064bafbebfadeae58fb595a067bb233593a0aa8453592",
+      "bytes": 13699,
+      "cache_file": "sources/.local/objects/1bec57605f25739df7d064bafbebfadeae58fb595a067bb233593a0aa8453592.bin",
+      "requested_url": "https://api.github.com/repos/huggingface/trl/releases/latest",
+      "resolved_url": "https://api.github.com/repos/huggingface/trl/releases/latest",
+      "content_type": "application/json",
+      "representation": "release_api_snapshot",
+      "retrieved_at": "2026-10-25T04:17:03.734442+00:00",
+      "declared_source_version": "text-sha256:8ce8ed9293c13bf83c06f04c1dc2d775ae4ceabe0a3f8f5eaaf8ab78fb9be701",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "GitHub Releases API object serialized as JSON"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:17:03.734442+00:00",
+    "status": "saved"
+  }
+}

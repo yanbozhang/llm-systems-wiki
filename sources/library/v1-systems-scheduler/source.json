@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-scheduler",
+  "title": "vllm/v1/core/sched/scheduler.py",
+  "url": "https://github.com/vllm-project/vllm/blob/7a64fb8fc9239cb65e0df9313fa759594dfb206a/vllm/v1/core/sched/scheduler.py",
+  "version": "text-sha256:2aab08cb511d5905c280697fcc47fffa60804759d6fba22496779892c290b41b",
+  "native_version": "7a64fb8fc9239cb65e0df9313fa759594dfb206a",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "schedule 677–705、785–834、875–955；_preempt_request 1744–1780",
+  "locator": "Scheduler.schedule；Scheduler._preempt_request",
+  "text_sha256": "2aab08cb511d5905c280697fcc47fffa60804759d6fba22496779892c290b41b",
+  "excerpt": "Each request just has the num_computed_tokens and num_tokens_with_spec.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

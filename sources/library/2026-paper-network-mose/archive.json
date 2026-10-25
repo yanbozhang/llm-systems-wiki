@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-paper-network-mose",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "97f7ad7b98cd0782c8a8e3ae077f1975feed37155504230006c885252367c248",
+      "bytes": 87622,
+      "cache_file": "sources/.local/objects/97f7ad7b98cd0782c8a8e3ae077f1975feed37155504230006c885252367c248.bin",
+      "requested_url": "https://icml.cc/virtual/2026/poster/66711",
+      "resolved_url": "https://icml.cc/virtual/2026/poster/66711",
+      "content_type": "text/html",
+      "representation": "conference_record_html",
+      "retrieved_at": "2026-10-25T03:56:41.009105+00:00",
+      "declared_source_version": "text-sha256:8fe2193d73714678258ba274c3eb71831417f1c1a2f1bb809fafd24cf2bc9fac",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "HTTP response"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:56:41.009105+00:00",
+    "status": "saved"
+  }
+}

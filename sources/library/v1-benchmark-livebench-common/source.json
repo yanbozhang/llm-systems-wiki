@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchmark-livebench-common",
+  "title": "LiveBench 数据版本与公共评测逻辑",
+  "url": "https://github.com/LiveBench/LiveBench/blob/1d1006a0d10ece52c2e706f8a208a659b5bbb96f/livebench/common.py",
+  "version": "text-sha256:1943b30760d15cfc92b3a9ecb48c6fce2368d96132029ca783505f8c46ee7aa2",
+  "native_version": "1d1006a0d10ece52c2e706f8a208a659b5bbb96f",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "实际读取相关函数与上下文；函数定位在知识点正文中列明",
+  "locator": "livebench/common.py",
+  "text_sha256": "1943b30760d15cfc92b3a9ecb48c6fce2368d96132029ca783505f8c46ee7aa2",
+  "excerpt": "",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

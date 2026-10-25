@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-systems-light-operate",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "176585e3f686574ab98657b666982302ce47d58229baacb529ef601bd6799326",
+      "bytes": 299930,
+      "cache_file": "sources/.local/objects/176585e3f686574ab98657b666982302ce47d58229baacb529ef601bd6799326.bin",
+      "requested_url": "https://raw.githubusercontent.com/HKUDS/LightRAG/aaebfe1bb8d55deb6a4304d357a3bf4c92fcd40a/lightrag/operate.py",
+      "resolved_url": "https://raw.githubusercontent.com/HKUDS/LightRAG/aaebfe1bb8d55deb6a4304d357a3bf4c92fcd40a/lightrag/operate.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:14:04.770061+00:00",
+      "declared_source_version": "text-sha256:176585e3f686574ab98657b666982302ce47d58229baacb529ef601bd6799326",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:14:04.770061+00:00",
+    "status": "saved"
+  }
+}

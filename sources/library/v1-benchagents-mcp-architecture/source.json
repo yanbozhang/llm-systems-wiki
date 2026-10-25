@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchagents-mcp-architecture",
+  "title": "MCP 2025-06-18 架构与宿主责任",
+  "url": "https://modelcontextprotocol.io/specification/2025-06-18/architecture",
+  "version": "text-sha256:30f7d4645bb11f7d18e98ac44c2b9c9836e6c558474a08d7ee460158be7b986b",
+  "native_version": "MCP specification 2025-06-18",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "正文53–133：Host、Clients、Servers、Design Principles、Capability Negotiation",
+  "locator": "Core Components / Host；Design Principles；Capability Negotiation",
+  "text_sha256": "30f7d4645bb11f7d18e98ac44c2b9c9836e6c558474a08d7ee460158be7b986b",
+  "excerpt": "Host process enforces security boundaries",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

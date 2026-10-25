@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-agents-autogen-token",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "dc85bc0b4efb65203f2c8be9bf95b0a81275719474a8bdd847bda773f5d9b3de",
+      "bytes": 4481,
+      "cache_file": "sources/.local/objects/dc85bc0b4efb65203f2c8be9bf95b0a81275719474a8bdd847bda773f5d9b3de.bin",
+      "requested_url": "https://raw.githubusercontent.com/microsoft/autogen/004749e6b7102c8fd317b9b1499ce5807223c278/python/packages/autogen-core/src/autogen_core/model_context/_token_limited_chat_completion_context.py",
+      "resolved_url": "https://raw.githubusercontent.com/microsoft/autogen/004749e6b7102c8fd317b9b1499ce5807223c278/python/packages/autogen-core/src/autogen_core/model_context/_token_limited_chat_completion_context.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:03:35.741807+00:00",
+      "declared_source_version": "text-sha256:dc85bc0b4efb65203f2c8be9bf95b0a81275719474a8bdd847bda773f5d9b3de",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:35.741807+00:00",
+    "status": "saved"
+  }
+}

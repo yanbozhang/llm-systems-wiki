@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchmark-gsm-paper",
+  "title": "数学文字题验证器与GSM8K",
+  "url": "https://arxiv.org/html/2110.14168",
+  "version": "text-sha256:a12b97e4e5fcc69dbc75a5b009eead0b8bd3526d162f8f9f5a56d4156307847f",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "读取相关正文；具体章节在文章中定位",
+  "locator": "正文相关章节",
+  "text_sha256": "a12b97e4e5fcc69dbc75a5b009eead0b8bd3526d162f8f9f5a56d4156307847f",
+  "excerpt": "",
+  "archive_policy": "仅保留链接与指纹，全文在原站"
+}

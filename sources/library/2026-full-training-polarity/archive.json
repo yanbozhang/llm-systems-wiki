@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-full-training-polarity",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "37e1644f67992562e8ad5abafc54e4a0cef43c7f55b41b2741b3e5441d54f06b",
+      "bytes": 5242104,
+      "cache_file": "sources/.local/objects/37e1644f67992562e8ad5abafc54e4a0cef43c7f55b41b2741b3e5441d54f06b.bin",
+      "requested_url": "https://aclanthology.org/2026.acl-long.134.pdf",
+      "resolved_url": "https://aclanthology.org/2026.acl-long.134.pdf",
+      "content_type": "application/pdf",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:00:28.336069+00:00",
+      "declared_source_version": "text-sha256:6c50b00ed544ef50773ea0572168e8e6d209a7a99dfd4911577c5fa91dbcf488",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "HTTP response"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:00:28.336069+00:00",
+    "status": "saved"
+  }
+}

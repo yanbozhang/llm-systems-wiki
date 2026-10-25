@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-systems-wiki-backlinks",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "701b01c7d17df07b1acbc0503a8c12b0f19eeb0acaa75c79f425c71ebb1f15cb",
+      "bytes": 1755,
+      "cache_file": "sources/.local/objects/701b01c7d17df07b1acbc0503a8c12b0f19eeb0acaa75c79f425c71ebb1f15cb.bin",
+      "requested_url": "https://raw.githubusercontent.com/microsoft/llmwiki/e09126f257c1fcf8e63234382748a51cf6a5df7f/packages/core/src/backlinks.ts",
+      "resolved_url": "https://raw.githubusercontent.com/microsoft/llmwiki/e09126f257c1fcf8e63234382748a51cf6a5df7f/packages/core/src/backlinks.ts",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:14:20.448071+00:00",
+      "declared_source_version": "text-sha256:701b01c7d17df07b1acbc0503a8c12b0f19eeb0acaa75c79f425c71ebb1f15cb",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:14:20.448071+00:00",
+    "status": "saved"
+  }
+}

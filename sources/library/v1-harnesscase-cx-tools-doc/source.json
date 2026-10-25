@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-cx-tools-doc",
+  "title": "codex-tools 开发说明",
+  "url": "https://github.com/openai/codex/blob/970111f6cb62cc02fe36a82ea7d71b37a2889c97/codex-rs/tools/README.md#L1",
+  "version": "text-sha256:7b4c4c4c7d461eaff1cda149deb7a61ca37b050761308fed950de4a3c43de879",
+  "native_version": "970111f6cb62cc02fe36a82ea7d71b37a2889c97",
+  "kind": "official_document",
+  "reading_scope": "共享工具契约、迁移边界与不迁出核心的编排职责",
+  "locator": "共享工具契约、迁移边界与不迁出核心的编排职责",
+  "text_sha256": "7b4c4c4c7d461eaff1cda149deb7a61ca37b050761308fed950de4a3c43de879",
+  "excerpt": "# codex-tools",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}

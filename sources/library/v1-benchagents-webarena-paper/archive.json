@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchagents-webarena-paper",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "6b8b43cbf1f67102694865a763b78dec8afb66a8312cd606e662cd6a03db134b",
+      "bytes": 212251,
+      "cache_file": "sources/.local/objects/6b8b43cbf1f67102694865a763b78dec8afb66a8312cd606e662cd6a03db134b.bin",
+      "requested_url": "https://arxiv.org/html/2307.13854v1",
+      "resolved_url": "https://arxiv.org/html/2307.13854v1",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:04:43.898631+00:00",
+      "declared_source_version": "text-sha256:0165a0afee8089f63d42adbf60864a6284faf896072dbe6ba71387d90dc6856e",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:04:43.898631+00:00",
+    "status": "saved"
+  }
+}

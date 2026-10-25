@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-harnesscase-cc-workflow",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "621e45cbc2caf2dd3ad4ad8edf26cf63b8a9b387f60b516259a84195d82de722",
+      "bytes": 528683,
+      "cache_file": "sources/.local/objects/621e45cbc2caf2dd3ad4ad8edf26cf63b8a9b387f60b516259a84195d82de722.bin",
+      "requested_url": "https://code.claude.com/docs/en/how-claude-code-works",
+      "resolved_url": "https://code.claude.com/docs/en/how-claude-code-works",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:13:28.244118+00:00",
+      "declared_source_version": "observed:2026-10-24",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:28.244118+00:00",
+    "status": "saved"
+  }
+}

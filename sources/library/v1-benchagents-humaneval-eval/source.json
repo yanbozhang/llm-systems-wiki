@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchagents-humaneval-eval",
+  "title": "HumanEval pass@k 估计与按任务聚合",
+  "url": "https://github.com/openai/human-eval/blob/b9453e8f1865df0a0057a1383767caa400acfbcf/human_eval/evaluation.py",
+  "version": "text-sha256:e926d5e9b8f1ec040096cd5952e8cf79f8dc0b7fb80ba6667ce604ffea0397bc",
+  "native_version": "b9453e8f1865df0a0057a1383767caa400acfbcf",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "estimate_pass_at_k 13–36；evaluate_functional_correctness 39–105，重点70–90",
+  "locator": "human_eval/evaluation.py::estimate_pass_at_k、evaluate_functional_correctness",
+  "text_sha256": "e926d5e9b8f1ec040096cd5952e8cf79f8dc0b7fb80ba6667ce604ffea0397bc",
+  "excerpt": "Calculates 1 - comb(n - c, k) / comb(n, k).",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

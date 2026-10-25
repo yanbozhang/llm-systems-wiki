@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-agents-mcp-lifecycle",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "7f058ebedd8c4eda3c7ad22daede6b6319b73d09ef4d7ab16f2448332ee9bf48",
+      "bytes": 399053,
+      "cache_file": "sources/.local/objects/7f058ebedd8c4eda3c7ad22daede6b6319b73d09ef4d7ab16f2448332ee9bf48.bin",
+      "requested_url": "https://modelcontextprotocol.io/specification/2025-06-18/basic/lifecycle",
+      "resolved_url": "https://modelcontextprotocol.io/specification/2025-06-18/basic/lifecycle",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:04:06.407618+00:00",
+      "declared_source_version": "text-sha256:442da26cd6917ba003b1887959c2da354d7623e8b84497c751e6e602be6dcc69",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:04:06.407618+00:00",
+    "status": "saved"
+  }
+}

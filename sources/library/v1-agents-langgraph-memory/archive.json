@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-agents-langgraph-memory",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "9075de6b9c611e1cabb25060554bf19c24656e597b75f9cfc35294ecc3c8a9a0",
+      "bytes": 798649,
+      "cache_file": "sources/.local/objects/9075de6b9c611e1cabb25060554bf19c24656e597b75f9cfc35294ecc3c8a9a0.bin",
+      "requested_url": "https://docs.langchain.com/oss/python/langgraph/memory",
+      "resolved_url": "https://docs.langchain.com/oss/python/concepts/memory",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:03:48.427405+00:00",
+      "declared_source_version": "text-sha256:9555b263a97d9986dc06ae1fb26e62ebe9ed109d509f5e97ba2e3536ceb40524",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:48.427405+00:00",
+    "status": "saved"
+  }
+}

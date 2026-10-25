@@ -1,0 +1,22 @@
+{
+  "source_id": "v02-d2l",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "788191c52aa15d0c79391b2c7a5b59cf30e8b4ed0e6c890eb1dd5bc165557a0c",
+      "bytes": 138425,
+      "cache_file": "sources/.local/objects/788191c52aa15d0c79391b2c7a5b59cf30e8b4ed0e6c890eb1dd5bc165557a0c.bin",
+      "requested_url": "https://zh.d2l.ai/",
+      "resolved_url": "https://zh.d2l.ai/",
+      "content_type": "text/html",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:02:53.781234+00:00",
+      "declared_source_version": "text-sha256:9520ea534dceb8f158143ff02158ef202cb9706c42136fbaafda66ce2d127d83",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:02:53.781234+00:00",
+    "status": "saved"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchsys-ragas-paper",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "596ddeae032091a7fd458bfe65f2d8586288e960a4dbe117bb92a8ac0ea502b2",
+      "bytes": 104458,
+      "cache_file": "sources/.local/objects/596ddeae032091a7fd458bfe65f2d8586288e960a4dbe117bb92a8ac0ea502b2.bin",
+      "requested_url": "https://arxiv.org/html/2309.15217v2",
+      "resolved_url": "https://arxiv.org/html/2309.15217v2",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:05:28.317101+00:00",
+      "declared_source_version": "text-sha256:96392ffe66df4b69aba6978b4790ba752cc83172162462230cda5ab8b4b3da3b",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:05:28.317101+00:00",
+    "status": "saved"
+  }
+}

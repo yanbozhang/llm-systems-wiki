@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-harnesscase-cx-exec-process",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "83f72b788b041e2865ebd5b10ce6878b4a471ea4082116c821d87ef39b710888",
+      "bytes": 45483,
+      "cache_file": "sources/.local/objects/83f72b788b041e2865ebd5b10ce6878b4a471ea4082116c821d87ef39b710888.bin",
+      "requested_url": "https://raw.githubusercontent.com/openai/codex/970111f6cb62cc02fe36a82ea7d71b37a2889c97/codex-rs/core/src/exec.rs",
+      "resolved_url": "https://raw.githubusercontent.com/openai/codex/970111f6cb62cc02fe36a82ea7d71b37a2889c97/codex-rs/core/src/exec.rs",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:17.943962+00:00",
+      "declared_source_version": "text-sha256:83f72b788b041e2865ebd5b10ce6878b4a471ea4082116c821d87ef39b710888",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:17.943962+00:00",
+    "status": "saved"
+  }
+}

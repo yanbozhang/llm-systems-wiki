@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchsys-mmmu-doc",
+  "title": "README.md",
+  "url": "https://github.com/MMMU-Benchmark/MMMU/blob/268471d0d488258990025331c7528359c324aa25/README.md",
+  "version": "text-sha256:a4e89dd389f9b4c82b92e54b5d50a58e55a53c077a5009f7d4b4e53c09bdcc3a",
+  "native_version": "268471d0d488258990025331c7528359c324aa25",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "README Introduction、Dataset Creation、Evaluation与现行test答案说明，约12–90行",
+  "locator": "Introduction；Evaluation",
+  "text_sha256": "a4e89dd389f9b4c82b92e54b5d50a58e55a53c077a5009f7d4b4e53c09bdcc3a",
+  "excerpt": "Use the validation set for debugging models, selecting hyperparameters, and quick evaluations.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

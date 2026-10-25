@@ -1,0 +1,16 @@
+{
+  "id": "2026-full-harness-retrac",
+  "title": "RE-TRAC: REcursive TRAjectory Compression for Deep Search Agents：作者论文全文",
+  "url": "https://arxiv.org/html/2602.02486v1",
+  "version": "text-sha256:01e6440280c29e1399710396e6dcf890678033163680f5ffa7e625309e990832",
+  "native_version": "arXiv:2602.02486v1",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "摘要、§4.1结构状态压缩与§4.2递归执行；未复现实验",
+  "locator": "摘要、§4.1结构状态压缩与§4.2递归执行",
+  "text_sha256": "01e6440280c29e1399710396e6dcf890678033163680f5ffa7e625309e990832",
+  "excerpt": "RE-TRAC: REcursive TRAjectory Compression for Deep Search Agents Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Su",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验"
+}

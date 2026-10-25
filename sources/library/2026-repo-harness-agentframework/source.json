@@ -1,0 +1,19 @@
+{
+  "id": "2026-repo-harness-agentframework",
+  "title": "microsoft/agent-framework：固定提交项目说明",
+  "url": "https://github.com/microsoft/agent-framework/blob/67ba500ec1fd312606a5d585a42335cd8631e851/README.md",
+  "version": "text-sha256:695b2f70e023e4570c7ba18afafa0fe613ae7b9dcd24457a11b4978c65ce10ff",
+  "native_version": "67ba500ec1fd312606a5d585a42335cd8631e851",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "README的项目定位、组成、入口与许可提示；未运行完整项目",
+  "locator": "README.md",
+  "text_sha256": "695b2f70e023e4570c7ba18afafa0fe613ae7b9dcd24457a11b4978c65ce10ff",
+  "excerpt": "![Microsoft Agent Framework](docs/assets/readme-banner.png) # Welcome to Microsoft Agent Framework! [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "maintainer": "microsoft",
+  "commit_date": "2026-10-24T10:12:55Z",
+  "license_spdx": "MIT"
+}

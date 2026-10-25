@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-systems-qmd-store",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "8260c1b639b874dc3aba247e862c954e76d31c7f0363f8b84f285e40ec14cf41",
+      "bytes": 263828,
+      "cache_file": "sources/.local/objects/8260c1b639b874dc3aba247e862c954e76d31c7f0363f8b84f285e40ec14cf41.bin",
+      "requested_url": "https://raw.githubusercontent.com/tobi/qmd/86d2365d17fc682e491c2c53d1e4a884aee8682a/src/store.ts",
+      "resolved_url": "https://raw.githubusercontent.com/tobi/qmd/86d2365d17fc682e491c2c53d1e4a884aee8682a/src/store.ts",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:14:14.109491+00:00",
+      "declared_source_version": "text-sha256:8260c1b639b874dc3aba247e862c954e76d31c7f0363f8b84f285e40ec14cf41",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:14:14.109491+00:00",
+    "status": "saved"
+  }
+}

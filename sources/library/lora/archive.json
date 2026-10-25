@@ -1,0 +1,22 @@
+{
+  "source_id": "lora",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "8e12fd6d07c6317e79989775644aa1d5fdc58091ef12b5918d47a9298cea319c",
+      "bytes": 505908,
+      "cache_file": "sources/.local/objects/8e12fd6d07c6317e79989775644aa1d5fdc58091ef12b5918d47a9298cea319c.bin",
+      "requested_url": "https://arxiv.org/html/2106.09685v2",
+      "resolved_url": "https://arxiv.org/html/2106.09685v2",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:01:43.326932+00:00",
+      "declared_source_version": "text-sha256:1211ca4c906dd0469e87d782fce084683ace15d0ce5fdc98cda6625ad57d6a9c",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:01:43.326932+00:00",
+    "status": "saved"
+  }
+}

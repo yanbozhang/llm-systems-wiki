@@ -1,0 +1,22 @@
+{
+  "source_id": "v02-pytorch-sdpa",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "ea70a26a8302229c7530cb38fe8ea8f2217a25fda4e643a69567786310998277",
+      "bytes": 250392,
+      "cache_file": "sources/.local/objects/ea70a26a8302229c7530cb38fe8ea8f2217a25fda4e643a69567786310998277.bin",
+      "requested_url": "https://docs.pytorch.org/tutorials/intermediate/scaled_dot_product_attention_tutorial.html",
+      "resolved_url": "https://docs.pytorch.org/tutorials/intermediate/scaled_dot_product_attention_tutorial.html",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:03:01.170682+00:00",
+      "declared_source_version": "text-sha256:72a01dadabf84007d17b304d45d8befa17d685f491424dd5666795ce203a3321",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:01.170682+00:00",
+    "status": "saved"
+  }
+}

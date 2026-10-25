@@ -1,0 +1,16 @@
+{
+  "id": "v02-langgraph",
+  "title": "LangGraph 官方文档",
+  "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+  "version": "text-sha256:162ea598e97780313e656bc9dbd6174adf5daa3b46ee0e1e693472cff9531235",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "public_learning_or_evaluation_document",
+  "reading_scope": "读取入口、课程大纲或项目说明的相关正文；不代表完成全部课程、作业或基准运行",
+  "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页",
+  "text_sha256": "162ea598e97780313e656bc9dbd6174adf5daa3b46ee0e1e693472cff9531235",
+  "excerpt": "LangGraph overview - Docs by LangChain Documentation Index Fetch the complete documentation index at: /llms.txt Use this file to discover all availabl",
+  "archive_policy": "只保存定位短摘与指纹，不镜像第三方全文"
+}

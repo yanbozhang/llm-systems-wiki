@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-app-explorer",
+  "title": "AppAgent 自主探索脚本",
+  "url": "https://github.com/TencentQQGYLab/AppAgent/blob/2c1900422caf6f9e94e96d5dd984b530e5a5fbf8/scripts/self_explorer.py",
+  "version": "text-sha256:074479017ed4770b1c72ed119ee74cf91be1890f27f96a3170413a22f1519954",
+  "native_version": "2c1900422caf6f9e94e96d5dd984b530e5a5fbf8",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "第85–265行；候选筛选、模型动作、前后截图反思、useless_list及auto_docs写入",
+  "locator": "module-level exploration loop; INEFFECTIVE/BACK/CONTINUE/SUCCESS branches",
+  "text_sha256": "074479017ed4770b1c72ed119ee74cf91be1890f27f96a3170413a22f1519954",
+  "excerpt": "if doc_content[act_name]:",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-math-paper-transformer",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "fe1288e9c6f8322156429ab44bf5ced203155f8ecc7ea9fe6cfd125872c72a3b",
+      "bytes": 188707,
+      "cache_file": "sources/.local/objects/fe1288e9c6f8322156429ab44bf5ced203155f8ecc7ea9fe6cfd125872c72a3b.bin",
+      "requested_url": "https://arxiv.org/html/1706.03762v7",
+      "resolved_url": "https://arxiv.org/html/1706.03762v7",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T03:59:16.013305+00:00",
+      "declared_source_version": "text-sha256:9a72cf7c0d75de42d220ed06e1518b31df962b3baed4704435339b80eac34b65",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:59:16.013305+00:00",
+    "status": "saved"
+  }
+}

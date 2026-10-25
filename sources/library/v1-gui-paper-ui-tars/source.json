@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-paper-ui-tars",
+  "title": "UI-TARS: Pioneering Automated GUI Interaction with Native Agents",
+  "url": "https://arxiv.org/html/2501.12326v1",
+  "version": "text-sha256:8477595eb1c3a44435a8f806a450086d771ba82ce3c2a64ce2e47fe154c5f060",
+  "native_version": "2501.12326v1",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "第4.1、4.3、4.5节；观测动作序列、统一动作与定位、轨迹过滤及反思训练",
+  "locator": "§4.1; §4.3; §4.5; Eq.(1)–(3)",
+  "text_sha256": "8477595eb1c3a44435a8f806a450086d771ba82ce3c2a64ce2e47fe154c5f060",
+  "excerpt": "the model outputs an action from the predefined action space",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

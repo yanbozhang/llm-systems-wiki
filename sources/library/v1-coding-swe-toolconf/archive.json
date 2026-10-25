@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-coding-swe-toolconf",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "f01b59da4df1c25ab2ee3b1284efe4025c0a999e2f6a3a9ab2930a499e04ea09",
+      "bytes": 3399,
+      "cache_file": "sources/.local/objects/f01b59da4df1c25ab2ee3b1284efe4025c0a999e2f6a3a9ab2930a499e04ea09.bin",
+      "requested_url": "https://raw.githubusercontent.com/SWE-agent/SWE-agent/3ea751c087f32b16e039a2233dd6eefecef325d5/tools/edit_anthropic/config.yaml",
+      "resolved_url": "https://raw.githubusercontent.com/SWE-agent/SWE-agent/3ea751c087f32b16e039a2233dd6eefecef325d5/tools/edit_anthropic/config.yaml",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:12:01.686892+00:00",
+      "declared_source_version": "text-sha256:f01b59da4df1c25ab2ee3b1284efe4025c0a999e2f6a3a9ab2930a499e04ea09",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:12:01.686892+00:00",
+    "status": "saved"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "v1-agents-store-memory",
+  "title": "LangGraph InMemoryStore 过滤与删除",
+  "url": "https://github.com/langchain-ai/langgraph/blob/4c52e129eb1ab69a3da58b799f67929f77d81149/libs/checkpoint/langgraph/store/memory/__init__.py#L238",
+  "native_version": "4c52e129eb1ab69a3da58b799f67929f77d81149",
+  "kind": "source_code",
+  "reading_scope": "_filter_items 238–266；_batch_search 302–373；_apply_put_ops 404–416",
+  "locator": "_filter_items 238–266；_batch_search 302–373；_apply_put_ops 404–416",
+  "text_sha256": "3992c9bc44f1883fa9fb83482fb3a364d68f24e51fc7296aa11e165b79d8aa24",
+  "excerpt": "def _filter_items(self, op: SearchOp) -> list[tuple[Item, list[list[float]]]]:",
+  "version": "text-sha256:3992c9bc44f1883fa9fb83482fb3a364d68f24e51fc7296aa11e165b79d8aa24",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

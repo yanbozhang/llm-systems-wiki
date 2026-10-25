@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchsys-ragas-recall-doc",
+  "title": "docs/concepts/metrics/available_metrics/context_recall.md",
+  "url": "https://github.com/explodinggradients/ragas/blob/298b68274234c060deacab3cf5fb52aa3a20e885/docs/concepts/metrics/available_metrics/context_recall.md",
+  "version": "text-sha256:8f8c830d95d0e462c176507b89b4dc944a32f012bb0604e60e70b68364bc5d79",
+  "native_version": "298b68274234c060deacab3cf5fb52aa3a20e885",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "定义、参考答案声明分母与Legacy API说明1–94",
+  "locator": "Context Recall；LLM Based Context Recall",
+  "text_sha256": "8f8c830d95d0e462c176507b89b4dc944a32f012bb0604e60e70b68364bc5d79",
+  "excerpt": "The reference is broken down into claims, and each claim is analyzed.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

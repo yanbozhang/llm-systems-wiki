@@ -1,0 +1,16 @@
+{
+  "id": "v1-coding-swe-editor",
+  "title": "tools/edit_anthropic/bin/str_replace_editor",
+  "url": "https://github.com/SWE-agent/SWE-agent/blob/3ea751c087f32b16e039a2233dd6eefecef325d5/tools/edit_anthropic/bin/str_replace_editor",
+  "version": "text-sha256:bb36c0d244c820b31d92ed46ced6ba2588a52b482058a71321175dfaba1b0ff3",
+  "native_version": "3ea751c087f32b16e039a2233dd6eefecef325d5",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "str_replace 516–593：expandtabs、匹配次数、写入、lint反馈及历史",
+  "locator": "EditTool.str_replace",
+  "text_sha256": "bb36c0d244c820b31d92ed46ced6ba2588a52b482058a71321175dfaba1b0ff3",
+  "excerpt": "No replacement was performed. Multiple occurrences of old_str.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

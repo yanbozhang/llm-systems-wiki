@@ -1,0 +1,16 @@
+{
+  "id": "v1-agents-autogen-token",
+  "title": "AutoGen TokenLimitedChatCompletionContext.get_messages",
+  "url": "https://github.com/microsoft/autogen/blob/004749e6b7102c8fd317b9b1499ce5807223c278/python/packages/autogen-core/src/autogen_core/model_context/_token_limited_chat_completion_context.py#L57",
+  "native_version": "004749e6b7102c8fd317b9b1499ce5807223c278",
+  "kind": "source_code",
+  "reading_scope": "get_messages 57–77；构造器 42–55",
+  "locator": "get_messages 57–77；构造器 42–55",
+  "text_sha256": "dc85bc0b4efb65203f2c8be9bf95b0a81275719474a8bdd847bda773f5d9b3de",
+  "excerpt": "async def get_messages(self) -> List[LLMMessage]:",
+  "version": "text-sha256:dc85bc0b4efb65203f2c8be9bf95b0a81275719474a8bdd847bda773f5d9b3de",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

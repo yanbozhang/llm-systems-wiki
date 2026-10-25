@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-gui-ui-host",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "b9a87adcea41f5c250253fac55c791d2280b228a471a0128782672c887e84fc8",
+      "bytes": 7327,
+      "cache_file": "sources/.local/objects/b9a87adcea41f5c250253fac55c791d2280b228a471a0128782672c887e84fc8.bin",
+      "requested_url": "https://raw.githubusercontent.com/bytedance/UI-TARS-desktop/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/apps/ui-tars/src/main/services/runAgent.ts",
+      "resolved_url": "https://raw.githubusercontent.com/bytedance/UI-TARS-desktop/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/apps/ui-tars/src/main/services/runAgent.ts",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:01.799704+00:00",
+      "declared_source_version": "text-sha256:b9a87adcea41f5c250253fac55c791d2280b228a471a0128782672c887e84fc8",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:01.799704+00:00",
+    "status": "saved"
+  }
+}

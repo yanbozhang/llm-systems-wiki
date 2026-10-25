@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-ui-sdk",
+  "title": "UI-TARS SDK GUIAgent",
+  "url": "https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/packages/ui-tars/sdk/src/GUIAgent.ts",
+  "version": "text-sha256:036e14d2cf5db9c3bca830c8e43a8667bf25bfb866832eb3c505356d0a52017d",
+  "native_version": "3ac2cb8d946d78d5ff92ad17b318eaafa18c178c",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "第39–123、154–300、350–433行；装配、截图/模型重试、动作列表、终态与轮数",
+  "locator": "GUIAgent.constructor; GUIAgent.run",
+  "text_sha256": "036e14d2cf5db9c3bca830c8e43a8667bf25bfb866832eb3c505356d0a52017d",
+  "excerpt": "for (const parsedPrediction of parsedPredictions)",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

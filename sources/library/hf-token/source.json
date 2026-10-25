@@ -1,0 +1,16 @@
+{
+  "id": "hf-token",
+  "title": "分词器课程",
+  "url": "https://huggingface.co/learn/llm-course/chapter6/1",
+  "version": "text-sha256:6dc6ff98d0967c09862909c210ac6c6d7bed1a2603f1733534f5325657a4c9f4",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "正文的相关章节；公式和图表未逐项独立复核",
+  "locator": "Introduction",
+  "text_sha256": "6dc6ff98d0967c09862909c210ac6c6d7bed1a2603f1733534f5325657a4c9f4",
+  "excerpt": "tokenizers 5. The 🤗 Datasets library 6. The 🤗 Tokenizers library Introduction Training a new tokenizer from an old one Fast tokenizers' special powers Fast tokenizers in the QA pip",
+  "archive_policy": "保留短摘与指纹，全文在原站；不承诺原站失效后可完整恢复"
+}

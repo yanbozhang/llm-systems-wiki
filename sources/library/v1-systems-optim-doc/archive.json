@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-systems-optim-doc",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "6464b660e86cf0724dc2042530ac588a23f50aeb6c6ec876c03622d88df35807",
+      "bytes": 24144,
+      "cache_file": "sources/.local/objects/6464b660e86cf0724dc2042530ac588a23f50aeb6c6ec876c03622d88df35807.bin",
+      "requested_url": "https://raw.githubusercontent.com/vllm-project/vllm/7a64fb8fc9239cb65e0df9313fa759594dfb206a/docs/configuration/optimization.md",
+      "resolved_url": "https://raw.githubusercontent.com/vllm-project/vllm/7a64fb8fc9239cb65e0df9313fa759594dfb206a/docs/configuration/optimization.md",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:57.748159+00:00",
+      "declared_source_version": "text-sha256:6464b660e86cf0724dc2042530ac588a23f50aeb6c6ec876c03622d88df35807",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:57.748159+00:00",
+    "status": "saved"
+  }
+}

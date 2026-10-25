@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-ag-manager",
+  "title": "AutoGen BaseGroupChatManager",
+  "url": "https://github.com/microsoft/autogen/blob/004749e6b7102c8fd317b9b1499ce5807223c278/python/packages/autogen-agentchat/src/autogen_agentchat/teams/_group_chat/_base_group_chat_manager.py#L135",
+  "version": "text-sha256:73667dc739ab4b32660fba6e09c0d7f65e83ef6aae7f79fb45163709b519b266",
+  "native_version": "004749e6b7102c8fd317b9b1499ce5807223c278",
+  "kind": "source_code",
+  "reading_scope": "handle_start 86–132；handle_agent_response 135–170；_transition_to_next_speakers 172–193；_apply_termination_condition 195–228",
+  "locator": "handle_start 86–132；handle_agent_response 135–170；_transition_to_next_speakers 172–193；_apply_termination_condition 195–228",
+  "text_sha256": "73667dc739ab4b32660fba6e09c0d7f65e83ef6aae7f79fb45163709b519b266",
+  "excerpt": "async def handle_agent_response(",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}

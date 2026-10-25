@@ -1,0 +1,16 @@
+{
+  "id": "v1-agents-pregel-loop",
+  "title": "LangGraph PregelLoop 状态推进",
+  "url": "https://github.com/langchain-ai/langgraph/blob/4c52e129eb1ab69a3da58b799f67929f77d81149/libs/langgraph/langgraph/pregel/_loop.py#L650",
+  "native_version": "4c52e129eb1ab69a3da58b799f67929f77d81149",
+  "kind": "source_code",
+  "reading_scope": "PregelLoop.tick 650–735；after_tick 737–811；_put_checkpoint 1231–1273",
+  "locator": "PregelLoop.tick 650–735；after_tick 737–811；_put_checkpoint 1231–1273",
+  "text_sha256": "cc51e52a6624aa064ac1688e4a55326012d11b615d9810d4b5c1f19bf5f579e0",
+  "excerpt": "def tick(self) -> bool:",
+  "version": "text-sha256:cc51e52a6624aa064ac1688e4a55326012d11b615d9810d4b5c1f19bf5f579e0",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

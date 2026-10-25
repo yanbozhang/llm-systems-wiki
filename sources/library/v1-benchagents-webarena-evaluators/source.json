@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchagents-webarena-evaluators",
+  "title": "WebArena 功能正确性评估器",
+  "url": "https://github.com/web-arena-x/webarena/blob/dce04686a56253aefba7b18a4fa0937cf1dc987b/evaluation_harness/evaluators.py",
+  "version": "text-sha256:e23edb390c4e39b3fff97dfd456fb04f7a59a0fb1ea30a4f2fa42bcb77e00c22",
+  "native_version": "dce04686a56253aefba7b18a4fa0937cf1dc987b",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "StringEvaluator 71–168；URLEvaluator 173–241；HTMLContentEvaluator 244–333；EvaluatorComb 336–352；router 356–374",
+  "locator": "evaluation_harness/evaluators.py::HTMLContentEvaluator.__call__、EvaluatorComb.__call__、evaluator_router",
+  "text_sha256": "e23edb390c4e39b3fff97dfd456fb04f7a59a0fb1ea30a4f2fa42bcb77e00c22",
+  "excerpt": "score *= cur_score",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

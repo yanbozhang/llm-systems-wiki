@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-ui-sdk-constants",
+  "title": "UI-TARS SDK默认因子",
+  "url": "https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/packages/ui-tars/sdk/src/constants.ts",
+  "version": "text-sha256:efdcbf2ea742a90dbc89ca254730adf95001cdc619b0666f992bd8b17cddae63",
+  "native_version": "3ac2cb8d946d78d5ff92ad17b318eaafa18c178c",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "DEFAULT_FACTORS定义；只用于核对坐标分母",
+  "locator": "DEFAULT_FACTORS",
+  "text_sha256": "efdcbf2ea742a90dbc89ca254730adf95001cdc619b0666f992bd8b17cddae63",
+  "excerpt": "export const DEFAULT_FACTORS: Factors = [1000, 1000];",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

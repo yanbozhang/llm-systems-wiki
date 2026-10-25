@@ -1,0 +1,22 @@
+{
+  "source_id": "v02-hf-rag-cookbook",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "42c71e8b0eb54dd65d523698f1f9e236558f771d07c9a563947f4adc6e6af655",
+      "bytes": 239669,
+      "cache_file": "sources/.local/objects/42c71e8b0eb54dd65d523698f1f9e236558f771d07c9a563947f4adc6e6af655.bin",
+      "requested_url": "https://huggingface.co/learn/cookbook/en/advanced_rag",
+      "resolved_url": "https://huggingface.co/learn/cookbook/en/advanced_rag",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:03:10.195922+00:00",
+      "declared_source_version": "text-sha256:44d0ffbc349106971dcb3f64c0298d71c3af19394ba75c5702493343941ab1cc",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:10.195922+00:00",
+    "status": "saved"
+  }
+}

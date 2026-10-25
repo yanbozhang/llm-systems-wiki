@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-release-inference-tensorrt",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "cb2bfcf7bae8ddf62a74c56d2fda19a8faba62b9674b667ed31986f9fb6f3a2f",
+      "bytes": 2448,
+      "cache_file": "sources/.local/objects/cb2bfcf7bae8ddf62a74c56d2fda19a8faba62b9674b667ed31986f9fb6f3a2f.bin",
+      "requested_url": "https://api.github.com/repos/NVIDIA/TensorRT-LLM/releases/latest",
+      "resolved_url": "https://api.github.com/repos/NVIDIA/TensorRT-LLM/releases/latest",
+      "content_type": "application/json",
+      "representation": "release_api_snapshot",
+      "retrieved_at": "2026-10-25T04:17:03.725442+00:00",
+      "declared_source_version": "text-sha256:a47a3c9ad649c791c5ebb6e9567c1acf0b14e17acf632bf7d64d517e86c5f7ef",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "GitHub Releases API object serialized as JSON"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:17:03.725442+00:00",
+    "status": "saved"
+  }
+}

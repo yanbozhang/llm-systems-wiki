@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-systems-light-paper",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "1d52828dbfb3c068c7274ceb7b5343e85f61545d875316749afafd581a259c2b",
+      "bytes": 212508,
+      "cache_file": "sources/.local/objects/1d52828dbfb3c068c7274ceb7b5343e85f61545d875316749afafd581a259c2b.bin",
+      "requested_url": "https://arxiv.org/html/2410.05779v3",
+      "resolved_url": "https://arxiv.org/html/2410.05779v3",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:14:10.409101+00:00",
+      "declared_source_version": "text-sha256:5b4eb849cae5f608bb9c26338ee857c331b3abb17b2587e7be5e808e65307fde",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:14:10.409101+00:00",
+    "status": "saved"
+  }
+}

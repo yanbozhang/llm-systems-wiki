@@ -1,0 +1,16 @@
+{
+  "id": "gqa",
+  "title": "GQA 原论文",
+  "url": "https://arxiv.org/html/2305.13245v3",
+  "version": "text-sha256:ce4304148fdaed1c7fb0804a5b0c00dd57237e7e12b3e5b54bf4fd9c962bacf7",
+  "native_version": "2305.13245v3",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "正文的相关章节；公式和图表未逐项独立复核",
+  "locator": "2.2 Grouped-query attention",
+  "text_sha256": "ce4304148fdaed1c7fb0804a5b0c00dd57237e7e12b3e5b54bf4fd9c962bacf7",
+  "excerpt": "Grouped-query attention 3 Experiments 3.1 Experimental setup Configurations Uptraining Data Fine-tuning Timing 3.2 Main results 3.3 Ablations Checkpoint conversion Uptraining steps",
+  "archive_policy": "保留短摘与指纹，全文在原站；不承诺原站失效后可完整恢复"
+}

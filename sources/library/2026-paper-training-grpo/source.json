@@ -1,0 +1,18 @@
+{
+  "id": "2026-paper-training-grpo",
+  "title": "Reinforcement Learning with Verifiable Rewards: GRPO’s Loss, Dynamics, and Success Amplification",
+  "url": "https://icml.cc/virtual/2026/poster/60548",
+  "version": "text-sha256:60baf7d955268be9f6eb9404bc1118d0cc9d66c8b8035344d9561c809d87ca6c",
+  "native_version": "ICML 2026 · 官方Poster目录",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "会议官方详情的标题、会议归属、摘要与公开说明；全文若取得，另列全文来源记录",
+  "locator": "Official paper record; Abstract",
+  "text_sha256": "60baf7d955268be9f6eb9404bc1118d0cc9d66c8b8035344d9561c809d87ca6c",
+  "excerpt": "ICML Poster Reinforcement Learning with Verifiable Rewards: GRPO's Loss, Dynamics, and Success Amplification ICML 2026 Skip to yearly menu bar Skip to main cont",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "conference": "ICML 2026 · 官方Poster目录",
+  "conference_year": 2026
+}

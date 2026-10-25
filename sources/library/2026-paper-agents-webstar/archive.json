@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-paper-agents-webstar",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "d34f44b3a01d1668b943699dcc0f1a8ed2214c475e9f1dd6ebaa93144da3e1a0",
+      "bytes": 46849,
+      "cache_file": "sources/.local/objects/d34f44b3a01d1668b943699dcc0f1a8ed2214c475e9f1dd6ebaa93144da3e1a0.bin",
+      "requested_url": "https://aclanthology.org/2026.acl-long.21/",
+      "resolved_url": "https://aclanthology.org/2026.acl-long.21/",
+      "content_type": "text/html",
+      "representation": "conference_record_html",
+      "retrieved_at": "2026-10-25T03:56:51.049059+00:00",
+      "declared_source_version": "text-sha256:c47759eb3348f44489b0d426b9ddc4ba2bf7943bcdbd6303ec075e6d10df9e4c",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "HTTP response"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:56:51.049059+00:00",
+    "status": "saved"
+  }
+}

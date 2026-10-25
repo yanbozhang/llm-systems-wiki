@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchmark-lm-tracker",
+  "title": "LM Evaluation Harness 结果追踪",
+  "url": "https://github.com/EleutherAI/lm-evaluation-harness/blob/d6de81643928d653435c431bae19945d41d32520/lm_eval/loggers/evaluation_tracker.py",
+  "version": "text-sha256:642d5a9b02a72a68d4ec614aab796635b0eb5684c0c6a433eb31b9ac056c80a2",
+  "native_version": "d6de81643928d653435c431bae19945d41d32520",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "实际读取相关函数与上下文；函数定位在知识点正文中列明",
+  "locator": "lm_eval/loggers/evaluation_tracker.py",
+  "text_sha256": "642d5a9b02a72a68d4ec614aab796635b0eb5684c0c6a433eb31b9ac056c80a2",
+  "excerpt": "",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

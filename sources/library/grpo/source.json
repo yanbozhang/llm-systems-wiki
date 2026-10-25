@@ -1,0 +1,16 @@
+{
+  "id": "grpo",
+  "title": "DeepSeekMath 与 GRPO 原论文",
+  "url": "https://arxiv.org/html/2402.03300v3",
+  "version": "text-sha256:c2e69fb8af03002c6914f9cda68898ff42fd236d8931063d0b5d11e66e42d233",
+  "native_version": "2402.03300v3",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "正文的相关章节；公式和图表未逐项独立复核",
+  "locator": "4.1 Group Relative Policy Optimization",
+  "text_sha256": "c2e69fb8af03002c6914f9cda68898ff42fd236d8931063d0b5d11e66e42d233",
+  "excerpt": "GRPO foregoes the critic model, instead estimating the baseline from group scores, significantly reducing training resources. By solely using a subset of English instruction tuning",
+  "archive_policy": "保留短摘与指纹，全文在原站；不承诺原站失效后可完整恢复"
+}

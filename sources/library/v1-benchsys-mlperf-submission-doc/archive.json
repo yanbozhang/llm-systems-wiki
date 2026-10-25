@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchsys-mlperf-submission-doc",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "f8c77da5cfd0dcaaf49942e5a368a45d8a97083e315fabe37ec4e17d0d9b7bd8",
+      "bytes": 7294,
+      "cache_file": "sources/.local/objects/f8c77da5cfd0dcaaf49942e5a368a45d8a97083e315fabe37ec4e17d0d9b7bd8.bin",
+      "requested_url": "https://raw.githubusercontent.com/mlcommons/inference/3fbc329939999c13d0a7b5e67fb2092287e06047/tools/submission/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/mlcommons/inference/3fbc329939999c13d0a7b5e67fb2092287e06047/tools/submission/README.md",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:05:42.068076+00:00",
+      "declared_source_version": "text-sha256:f8c77da5cfd0dcaaf49942e5a368a45d8a97083e315fabe37ec4e17d0d9b7bd8",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:05:42.068076+00:00",
+    "status": "saved"
+  }
+}

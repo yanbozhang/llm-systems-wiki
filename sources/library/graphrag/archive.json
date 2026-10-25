@@ -1,0 +1,22 @@
+{
+  "source_id": "graphrag",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "7fd18106a9d1327d01f08e2c3fe62445b7d5e2d7bbd8d83d08db49ea2ca851e3",
+      "bytes": 43328,
+      "cache_file": "sources/.local/objects/7fd18106a9d1327d01f08e2c3fe62445b7d5e2d7bbd8d83d08db49ea2ca851e3.bin",
+      "requested_url": "https://microsoft.github.io/graphrag/",
+      "resolved_url": "https://microsoft.github.io/graphrag/",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:02:43.402299+00:00",
+      "declared_source_version": "text-sha256:10867214603991dc2ff7f3edb33b9b57601f2eaeb818818854a14d3da6f2ec57",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:02:43.402299+00:00",
+    "status": "saved"
+  }
+}

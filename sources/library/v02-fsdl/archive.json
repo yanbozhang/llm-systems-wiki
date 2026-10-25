@@ -1,0 +1,22 @@
+{
+  "source_id": "v02-fsdl",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "e89ab3da1e1f18751e3003de40173d8347bcb2eb844227090a2f6688ebb50784",
+      "bytes": 63103,
+      "cache_file": "sources/.local/objects/e89ab3da1e1f18751e3003de40173d8347bcb2eb844227090a2f6688ebb50784.bin",
+      "requested_url": "https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/",
+      "resolved_url": "https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:03:03.649186+00:00",
+      "declared_source_version": "text-sha256:30ecd28f0a432ddcddde78439e8135b28278c647faf69298c43aa7b2400f7eee",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:03.649186+00:00",
+    "status": "saved"
+  }
+}

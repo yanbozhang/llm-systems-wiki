@@ -1,0 +1,22 @@
+{
+  "source_id": "skills",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "1fb0439a55bb8d2a50dc049c2e508b3b01e7d29b6253fc45f4243cde9dab28d3",
+      "bytes": 402936,
+      "cache_file": "sources/.local/objects/1fb0439a55bb8d2a50dc049c2e508b3b01e7d29b6253fc45f4243cde9dab28d3.bin",
+      "requested_url": "https://agentskills.io/specification",
+      "resolved_url": "https://agentskills.io/specification",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:02:02.226673+00:00",
+      "declared_source_version": "text-sha256:72624e7702ff7a5f0e7f2667c1989591f91f94170a8a1350e2d400f98303a43d",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:02:02.226673+00:00",
+    "status": "saved"
+  }
+}

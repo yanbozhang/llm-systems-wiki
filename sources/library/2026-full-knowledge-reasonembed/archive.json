@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-full-knowledge-reasonembed",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "4b52bd674e6ed6f47b6ed210eba06ae50722a57dc49cb8f6d66213be6395b615",
+      "bytes": 507207,
+      "cache_file": "sources/.local/objects/4b52bd674e6ed6f47b6ed210eba06ae50722a57dc49cb8f6d66213be6395b615.bin",
+      "requested_url": "https://aclanthology.org/2026.acl-long.54.pdf",
+      "resolved_url": "https://aclanthology.org/2026.acl-long.54.pdf",
+      "content_type": "application/pdf",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:00:09.034157+00:00",
+      "declared_source_version": "text-sha256:aac1c209ee2e3c31d165b3d08cca9286caa62562830b2ca840542fb7ce305811",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "HTTP response"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:00:09.034157+00:00",
+    "status": "saved"
+  }
+}

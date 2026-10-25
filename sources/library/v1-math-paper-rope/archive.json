@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-math-paper-rope",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "db7f300b9abd24e0d225bcfcd53d3fd64c0255acb60e8dac28014361005c1f07",
+      "bytes": 310054,
+      "cache_file": "sources/.local/objects/db7f300b9abd24e0d225bcfcd53d3fd64c0255acb60e8dac28014361005c1f07.bin",
+      "requested_url": "https://arxiv.org/html/2104.09864v5",
+      "resolved_url": "https://arxiv.org/html/2104.09864v5",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:00:03.025415+00:00",
+      "declared_source_version": "text-sha256:ee8e4a4c2276fa7041df4d1181f297daa5faa6532bbcb31ab6346785cd9c15f6",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:00:03.025415+00:00",
+    "status": "saved"
+  }
+}

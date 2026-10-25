@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-paper-knowledge-crag",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "0c67de37eaee86fc8673541a10ad483fad90469ff2555ffb6864f779ccd5ee6d",
+      "bytes": 88347,
+      "cache_file": "sources/.local/objects/0c67de37eaee86fc8673541a10ad483fad90469ff2555ffb6864f779ccd5ee6d.bin",
+      "requested_url": "https://icml.cc/virtual/2026/poster/66383",
+      "resolved_url": "https://icml.cc/virtual/2026/poster/66383",
+      "content_type": "text/html",
+      "representation": "conference_record_html",
+      "retrieved_at": "2026-10-25T03:56:45.638084+00:00",
+      "declared_source_version": "text-sha256:01e632ad40953be3318a74459fe4efc158094fc38808410617d12abef1325960",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "HTTP response"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:56:45.638084+00:00",
+    "status": "saved"
+  }
+}

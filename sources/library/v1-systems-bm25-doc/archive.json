@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-systems-bm25-doc",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "e7fc88c00599333c675cc47579367d398260271d6f0c1ddd13cc0bb005990e97",
+      "bytes": 29048,
+      "cache_file": "sources/.local/objects/e7fc88c00599333c675cc47579367d398260271d6f0c1ddd13cc0bb005990e97.bin",
+      "requested_url": "https://lucene.apache.org/core/10_3_1/core/org/apache/lucene/search/similarities/BM25Similarity.html",
+      "resolved_url": "https://lucene.apache.org/core/10_3_1/core/org/apache/lucene/search/similarities/BM25Similarity.html",
+      "content_type": "text/html",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:14:12.440123+00:00",
+      "declared_source_version": "text-sha256:226f32484d8bbe91df6a0d2ccaff7bcdc8a2b6eb5f1b183986e38eb814c80d00",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:14:12.440123+00:00",
+    "status": "saved"
+  }
+}

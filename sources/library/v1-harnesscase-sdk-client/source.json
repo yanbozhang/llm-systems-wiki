@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-sdk-client",
+  "title": "ClaudeSDKClient 查询与响应流",
+  "url": "https://github.com/anthropics/claude-agent-sdk-python/blob/0e89b298e771259378a6cd3734e00d323dff5703/src/claude_agent_sdk/client.py#L272",
+  "version": "text-sha256:980f956d963338b39f4fd5224e69594eb513bfda37e5b215cf94bb0499ea047c",
+  "native_version": "0e89b298e771259378a6cd3734e00d323dff5703",
+  "kind": "source_code",
+  "reading_scope": "connect 93–139；query 272–306；interrupt 308–312；receive_response 566–605",
+  "locator": "connect 93–139；query 272–306；interrupt 308–312；receive_response 566–605",
+  "text_sha256": "980f956d963338b39f4fd5224e69594eb513bfda37e5b215cf94bb0499ea047c",
+  "excerpt": "async def query(",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}

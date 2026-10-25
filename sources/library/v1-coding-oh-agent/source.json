@@ -1,0 +1,16 @@
+{
+  "id": "v1-coding-oh-agent",
+  "title": "openhands-sdk/openhands/sdk/agent/agent.py",
+  "url": "https://github.com/OpenHands/software-agent-sdk/blob/acd96e6fa424c02432304395b9208f99be24b54d/openhands-sdk/openhands/sdk/agent/agent.py",
+  "version": "text-sha256:8773d6e759bced7ca8791b665ae7b457487629b41f812c428f7f7da9713ae1a5",
+  "native_version": "acd96e6fa424c02432304395b9208f99be24b54d",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "_execute_action_event1495–1558",
+  "locator": "Agent._execute_action_event",
+  "text_sha256": "8773d6e759bced7ca8791b665ae7b457487629b41f812c428f7f7da9713ae1a5",
+  "excerpt": "Events are NOT emitted here — the caller is responsible for emitting them in order.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "v1-agents-osworld-control",
+  "title": "OSWorld PythonController.execute_action",
+  "url": "https://github.com/xlang-ai/OSWorld/blob/04718eab9327856efe8192cc58161acc7a7627e2/desktop_env/controllers/python.py#L413",
+  "native_version": "04718eab9327856efe8192cc58161acc7a7627e2",
+  "kind": "source_code",
+  "reading_scope": "execute_action 413–499，MOVE_TO 与 CLICK 分支",
+  "locator": "execute_action 413–499，MOVE_TO 与 CLICK 分支",
+  "text_sha256": "385263ab94271557deb904cdcf666dae324753d59896d1f011084ba7da8b2205",
+  "excerpt": "def execute_action(self, action):",
+  "version": "text-sha256:385263ab94271557deb904cdcf666dae324753d59896d1f011084ba7da8b2205",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

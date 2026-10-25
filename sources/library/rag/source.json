@@ -1,0 +1,16 @@
+{
+  "id": "rag",
+  "title": "RAG 原论文",
+  "url": "https://arxiv.org/html/2005.11401v4",
+  "version": "text-sha256:d7558dde8821c163af968f6e204d40d64f25c47acdd46746feb6f2bf37459f09",
+  "native_version": "2005.11401v4",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "正文的相关章节；公式和图表未逐项独立复核",
+  "locator": "Abstract；2 Methods",
+  "text_sha256": "d7558dde8821c163af968f6e204d40d64f25c47acdd46746feb6f2bf37459f09",
+  "excerpt": "We introduce RAG models where the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained n",
+  "archive_policy": "保留短摘与指纹，全文在原站；不承诺原站失效后可完整恢复"
+}

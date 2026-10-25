@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-gr-delta",
+  "title": "packages/graphrag/graphrag/index/update/incremental_index.py",
+  "url": "https://github.com/microsoft/graphrag/blob/c600ff80b77b9b62c47d539a3ac9569e95d8949b/packages/graphrag/graphrag/index/update/incremental_index.py",
+  "version": "text-sha256:f9c47d8959345ede23e6f23415c642a6d54f7f77b7e19c6c921b15ce81d42a99",
+  "native_version": "c600ff80b77b9b62c47d539a3ac9569e95d8949b",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "全文1–78行，get_delta_docs与concat_dataframes",
+  "locator": "get_delta_docs；concat_dataframes",
+  "text_sha256": "f9c47d8959345ede23e6f23415c642a6d54f7f77b7e19c6c921b15ce81d42a99",
+  "excerpt": "new_docs = input_dataset.loc[~input_dataset[\"title\"].isin(previous_docs)]",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "lightrag",
+  "title": "LightRAG 项目说明",
+  "url": "https://raw.githubusercontent.com/HKUDS/LightRAG/main/README.md",
+  "version": "text-sha256:b495a0fb015976fca63152962ebd4a4daf82f32fdd8c3bb146fab90a0b09e8e4",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "正文的相关章节；公式和图表未逐项独立复核",
+  "locator": "Architecture；Query",
+  "text_sha256": "b495a0fb015976fca63152962ebd4a4daf82f32fdd8c3bb146fab90a0b09e8e4",
+  "excerpt": "LightRAG Logo\" style=\"border-radius: 20px; box-shadow: 0 8px 32px rgba(0, 217, 255, 0.3);\"> </div> # 🚀 LightRAG: Simple and Fast Retrieval-Augmented Generation <div align=\"center",
+  "archive_policy": "保留短摘与指纹，全文在原站；不承诺原站失效后可完整恢复"
+}

@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-gui-mobile-v2-readme",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "31d766a855215cab92585d4eafd527421f6790ae49ead3606838fb32f0153235",
+      "bytes": 6488,
+      "cache_file": "sources/.local/objects/31d766a855215cab92585d4eafd527421f6790ae49ead3606838fb32f0153235.bin",
+      "requested_url": "https://raw.githubusercontent.com/X-PLUG/MobileAgent/11cea575561fb7800b5fb6b6cafa56f7a91de11f/Mobile-Agent-v2/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/X-PLUG/MobileAgent/11cea575561fb7800b5fb6b6cafa56f7a91de11f/Mobile-Agent-v2/README.md",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:12:48.059089+00:00",
+      "declared_source_version": "text-sha256:31d766a855215cab92585d4eafd527421f6790ae49ead3606838fb32f0153235",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:12:48.059089+00:00",
+    "status": "saved"
+  }
+}

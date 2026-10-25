@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-systems-scheduler",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "2aab08cb511d5905c280697fcc47fffa60804759d6fba22496779892c290b41b",
+      "bytes": 172311,
+      "cache_file": "sources/.local/objects/2aab08cb511d5905c280697fcc47fffa60804759d6fba22496779892c290b41b.bin",
+      "requested_url": "https://raw.githubusercontent.com/vllm-project/vllm/7a64fb8fc9239cb65e0df9313fa759594dfb206a/vllm/v1/core/sched/scheduler.py",
+      "resolved_url": "https://raw.githubusercontent.com/vllm-project/vllm/7a64fb8fc9239cb65e0df9313fa759594dfb206a/vllm/v1/core/sched/scheduler.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:58.443564+00:00",
+      "declared_source_version": "text-sha256:2aab08cb511d5905c280697fcc47fffa60804759d6fba22496779892c290b41b",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:58.443564+00:00",
+    "status": "saved"
+  }
+}

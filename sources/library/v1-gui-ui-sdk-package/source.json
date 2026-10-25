@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-ui-sdk-package",
+  "title": "UI-TARS SDK包清单",
+  "url": "https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/packages/ui-tars/sdk/package.json",
+  "version": "text-sha256:9e82d8d73396fa91317b0dbaa7f639c6d818a0fd6bdbcbc6f16ea75de709091a",
+  "native_version": "3ac2cb8d946d78d5ff92ad17b318eaafa18c178c",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "name、version、exports、dependencies和license；未执行任何scripts",
+  "locator": "package.json",
+  "text_sha256": "9e82d8d73396fa91317b0dbaa7f639c6d818a0fd6bdbcbc6f16ea75de709091a",
+  "excerpt": "\"version\": \"1.2.3\"",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

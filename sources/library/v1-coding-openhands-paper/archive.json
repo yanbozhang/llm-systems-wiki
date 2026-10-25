@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-coding-openhands-paper",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "24717f5882b6ebdcb9677225c367cb523613f6fd6cf69007383518fbf9b0a18a",
+      "bytes": 749671,
+      "cache_file": "sources/.local/objects/24717f5882b6ebdcb9677225c367cb523613f6fd6cf69007383518fbf9b0a18a.bin",
+      "requested_url": "https://arxiv.org/html/2407.16741v2",
+      "resolved_url": "https://arxiv.org/html/2407.16741v2",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:11:57.969764+00:00",
+      "declared_source_version": "text-sha256:56f976ce3ec7409bfa3bd6ef305aacbda29f7e9eb1744986cd04f1120b24e5c1",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:11:57.969764+00:00",
+    "status": "saved"
+  }
+}

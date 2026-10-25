@@ -2,8 +2,8 @@
 id: coding-agent
 module: agents
 status: published
-page_version: 3
-last_checked: 2026-10-24
+page_version: 4
+last_checked: 2026-10-25
 depth: worked
 practice_status: designed
 claim_ids: [claim-coding-agent-v1, claim-coding-agent-repository-slice-v1, claim-coding-agent-guarded-replace-v1, claim-coding-agent-grade-patch-v1]
@@ -217,6 +217,12 @@ flowchart TD
 如果测试集本身有问题，需要独立说明更正理由和行为契约，不能为了让当前实现通过而删除失败断言。把实现输出复制成期望值会丢失反例能力；有效测试必须能区分当前错误实现与至少一种满足契约的实现。
 
 本文源码链接均锁定实际读取的提交；论文锁定 arXiv 版本，在线官方文档记录读取日和正文指纹。公式中标为“教学模型”的预算、阈值和状态集合是本页设计，不是论文测得的效果。第三方文件只作为阅读依据，教学实现为独立简化。
+
+## 2026研究进展
+
+按功能阶段组织软件工程记忆，是ICML 2026子任务记忆工作的主要方向。分析、复现、修改、验证可以需要不同经验；同一问题描述下的高相似记忆不必然适用于当前阶段。本文新增对照不改变原有工具执行与终态验证要求。 [会议来源与读取范围](../../sources/library/2026-paper-agents-subtask/README.md)
+
+更多公式、代码示例、结构图及当前开源版本见[业务Agent研究进展](../frontiers/业务Agent研究进展.md)。新内容未执行真实模型实验。
 
 ---
 

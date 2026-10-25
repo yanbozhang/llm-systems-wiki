@@ -1,0 +1,31 @@
+{
+  "source_id": "2026-repo-harness-agentframework",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "0cf473bae41c25e4011e7de64ecfc66be83b395f206aeca7a22f31f19ad9fd31",
+      "bytes": 14051,
+      "cache_file": "sources/.local/objects/0cf473bae41c25e4011e7de64ecfc66be83b395f206aeca7a22f31f19ad9fd31.bin",
+      "requested_url": "https://api.github.com/repos/microsoft/agent-framework/readme?ref=67ba500ec1fd312606a5d585a42335cd8631e851",
+      "resolved_url": "https://api.github.com/repos/microsoft/agent-framework/readme?ref=67ba500ec1fd312606a5d585a42335cd8631e851",
+      "content_type": "text/markdown",
+      "representation": "decoded_repository_document",
+      "retrieved_at": "2026-10-25T03:59:20.185380+00:00",
+      "declared_source_version": "text-sha256:695b2f70e023e4570c7ba18afafa0fe613ae7b9dcd24457a11b4978c65ce10ff",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "Base64-decoded GitHub Contents API file"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:59:20.185380+00:00",
+    "status": "saved"
+  },
+  "public_snapshot": {
+    "spdx_id": "MIT",
+    "content_file": "sources/library/2026-repo-harness-agentframework/snapshot/source.txt",
+    "license_file": "sources/library/2026-repo-harness-agentframework/snapshot/LICENSE",
+    "upstream_license_url": "https://github.com/microsoft/agent-framework/blob/67ba500ec1fd312606a5d585a42335cd8631e851/LICENSE",
+    "source_commit": "67ba500ec1fd312606a5d585a42335cd8631e851",
+    "content_sha256": "0cf473bae41c25e4011e7de64ecfc66be83b395f206aeca7a22f31f19ad9fd31"
+  }
+}

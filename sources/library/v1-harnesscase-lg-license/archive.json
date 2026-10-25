@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-harnesscase-lg-license",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "d9bb52f2e3540d60ff50d8f0f5b6ba649b7fd346948c4c3d086c8afb120763c7",
+      "bytes": 1072,
+      "cache_file": "sources/.local/objects/d9bb52f2e3540d60ff50d8f0f5b6ba649b7fd346948c4c3d086c8afb120763c7.bin",
+      "requested_url": "https://raw.githubusercontent.com/langchain-ai/langgraph/4c52e129eb1ab69a3da58b799f67929f77d81149/LICENSE",
+      "resolved_url": "https://raw.githubusercontent.com/langchain-ai/langgraph/4c52e129eb1ab69a3da58b799f67929f77d81149/LICENSE",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:30.310703+00:00",
+      "declared_source_version": "text-sha256:d9bb52f2e3540d60ff50d8f0f5b6ba649b7fd346948c4c3d086c8afb120763c7",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:30.310703+00:00",
+    "status": "saved"
+  }
+}

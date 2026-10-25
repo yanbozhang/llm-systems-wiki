@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-harnesscase-ag-license",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141,
+      "cache_file": "sources/.local/objects/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.bin",
+      "requested_url": "https://raw.githubusercontent.com/microsoft/autogen/004749e6b7102c8fd317b9b1499ce5807223c278/LICENSE-CODE",
+      "resolved_url": "https://raw.githubusercontent.com/microsoft/autogen/004749e6b7102c8fd317b9b1499ce5807223c278/LICENSE-CODE",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:37.684275+00:00",
+      "declared_source_version": "text-sha256:c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:37.684275+00:00",
+    "status": "saved"
+  }
+}

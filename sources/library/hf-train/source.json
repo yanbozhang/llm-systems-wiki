@@ -1,0 +1,16 @@
+{
+  "id": "hf-train",
+  "title": "语言模型预训练课程",
+  "url": "https://huggingface.co/learn/llm-course/chapter7/6",
+  "version": "text-sha256:fcafe9d560c26c13f6909251b6fe8f64e484f85ac0ba44e19b2790ffc7aa463a",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "正文的相关章节；公式和图表未逐项独立复核",
+  "locator": "Training a causal language model",
+  "text_sha256": "fcafe9d560c26c13f6909251b6fe8f64e484f85ac0ba44e19b2790ffc7aa463a",
+  "excerpt": "causal language model from scratch · Hugging Face Hugging Face Models Datasets Spaces Buckets new Docs Enterprise Pricing Website Tasks HuggingChat Collections Languages Organizati",
+  "archive_policy": "保留短摘与指纹，全文在原站；不承诺原站失效后可完整恢复"
+}

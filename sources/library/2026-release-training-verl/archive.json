@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-release-training-verl",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "adffca9e15745b402fa9d16e65c2aa2cf41ac5ffa058f128a7bb539f3b19f56b",
+      "bytes": 35880,
+      "cache_file": "sources/.local/objects/adffca9e15745b402fa9d16e65c2aa2cf41ac5ffa058f128a7bb539f3b19f56b.bin",
+      "requested_url": "https://api.github.com/repos/volcengine/verl/releases/latest",
+      "resolved_url": "https://api.github.com/repos/volcengine/verl/releases/latest",
+      "content_type": "application/json",
+      "representation": "release_api_snapshot",
+      "retrieved_at": "2026-10-25T04:17:03.735442+00:00",
+      "declared_source_version": "text-sha256:45f4b942fff97691ed641e2e8adf10c3da7d8aa2431f33b6db9d5764e88d2d0f",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "GitHub Releases API object serialized as JSON"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:17:03.735442+00:00",
+    "status": "saved"
+  }
+}

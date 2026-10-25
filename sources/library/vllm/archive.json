@@ -1,0 +1,22 @@
+{
+  "source_id": "vllm",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "e5599cac999e06012ee2e364c564a0ff244e62d07d2e40e6b92bde9b1869112a",
+      "bytes": 215712,
+      "cache_file": "sources/.local/objects/e5599cac999e06012ee2e364c564a0ff244e62d07d2e40e6b92bde9b1869112a.bin",
+      "requested_url": "https://docs.vllm.ai/en/stable/design/prefix_caching/",
+      "resolved_url": "https://docs.vllm.ai/en/stable/design/prefix_caching/",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:02:47.150718+00:00",
+      "declared_source_version": "text-sha256:96c817606a0cd0f23ea82ff253bc3e6b28d3e71694048af7b6d6536e2619630b",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:02:47.150718+00:00",
+    "status": "saved"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "source_id": "v02-llm-systems",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "75c30b7a5f00993661726f0956587b36089910fc73a2fd16129f41538f009138",
+      "bytes": 10214,
+      "cache_file": "sources/.local/objects/75c30b7a5f00993661726f0956587b36089910fc73a2fd16129f41538f009138.bin",
+      "requested_url": "https://llmsystem.github.io/llmsystem2025spring/",
+      "resolved_url": "https://llmsystem.github.io/llmsystem2025spring/",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:03:05.613003+00:00",
+      "declared_source_version": "text-sha256:97307d26307247168d306c5e411b5e8310428acf5c24e07f4a246bb10b4f49cf",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:05.613003+00:00",
+    "status": "saved"
+  }
+}

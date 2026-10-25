@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-harnesscase-lg-binop",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "775399a9680071cf662b4a131ab80aa36fe8b8302270361d1e8e9e0d709df80f",
+      "bytes": 5547,
+      "cache_file": "sources/.local/objects/775399a9680071cf662b4a131ab80aa36fe8b8302270361d1e8e9e0d709df80f.bin",
+      "requested_url": "https://raw.githubusercontent.com/langchain-ai/langgraph/4c52e129eb1ab69a3da58b799f67929f77d81149/libs/langgraph/langgraph/channels/binop.py",
+      "resolved_url": "https://raw.githubusercontent.com/langchain-ai/langgraph/4c52e129eb1ab69a3da58b799f67929f77d81149/libs/langgraph/langgraph/channels/binop.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:32.623713+00:00",
+      "declared_source_version": "text-sha256:775399a9680071cf662b4a131ab80aa36fe8b8302270361d1e8e9e0d709df80f",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:32.623713+00:00",
+    "status": "saved"
+  }
+}

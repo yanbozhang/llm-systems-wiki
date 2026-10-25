@@ -1,0 +1,19 @@
+{
+  "id": "2026-repo-knowledge-graphrag",
+  "title": "microsoft/graphrag：固定提交项目说明",
+  "url": "https://github.com/microsoft/graphrag/blob/c600ff80b77b9b62c47d539a3ac9569e95d8949b/README.md",
+  "version": "text-sha256:2aaa5d66cc4616600bdfd423e47cf608b3bc8c5e840dfe3af4b07fbe558e8138",
+  "native_version": "c600ff80b77b9b62c47d539a3ac9569e95d8949b",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "README的项目定位、组成、入口与许可提示；未运行完整项目",
+  "locator": "README.md",
+  "text_sha256": "2aaa5d66cc4616600bdfd423e47cf608b3bc8c5e840dfe3af4b07fbe558e8138",
+  "excerpt": "# GraphRAG > [!WARNING] > GraphRAG is a research project that explores the functional use of graphs to form a targeted context for question answering. Since our",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "maintainer": "microsoft",
+  "commit_date": "2026-10-20T15:21:20Z",
+  "license_spdx": "MIT"
+}

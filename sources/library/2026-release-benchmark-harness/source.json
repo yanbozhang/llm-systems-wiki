@@ -1,0 +1,18 @@
+{
+  "id": "2026-release-benchmark-harness",
+  "title": "EleutherAI/lm-evaluation-harness：v0.4.13发布说明",
+  "url": "https://github.com/EleutherAI/lm-evaluation-harness/releases/tag/v0.4.13",
+  "version": "text-sha256:01433f3d4687b0ccb391a21a82f44d981be82489c8fb16c5b0ecf52c0538a9dc",
+  "native_version": "v0.4.13",
+  "published_at": "2026-08-31",
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "完整发布说明；不将最新分支提交等同于该发布的代码",
+  "locator": "Release notes",
+  "text_sha256": "01433f3d4687b0ccb391a21a82f44d981be82489c8fb16c5b0ecf52c0538a9dc",
+  "excerpt": "## v0.4.13 Release Notes A fix-focused release. The main fixes are for few-shot leakage, a multiple-choice filter bug, and group stderr, alongside two new ONNX ",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "release_date": "2026-08-31T20:42:30Z",
+  "prerelease": false
+}

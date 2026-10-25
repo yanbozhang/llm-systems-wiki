@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-paper-benchmark-saturation",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "e06a1f89b372a56cc1978a00240e36195e50d5b164f7bf330e972b35cd2dd603",
+      "bytes": 90657,
+      "cache_file": "sources/.local/objects/e06a1f89b372a56cc1978a00240e36195e50d5b164f7bf330e972b35cd2dd603.bin",
+      "requested_url": "https://icml.cc/virtual/2026/poster/63311",
+      "resolved_url": "https://icml.cc/virtual/2026/poster/63311",
+      "content_type": "text/html",
+      "representation": "conference_record_html",
+      "retrieved_at": "2026-10-25T03:56:48.181072+00:00",
+      "declared_source_version": "text-sha256:94cae0ffb0715ba2c079a18aac3d20a88f5b5ae96a518fa973886d4f02bc415f",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "HTTP response"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:56:48.181072+00:00",
+    "status": "saved"
+  }
+}

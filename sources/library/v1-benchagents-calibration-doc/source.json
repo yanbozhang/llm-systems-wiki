@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchagents-calibration-doc",
+  "title": "scikit-learn 概率校准官方指南",
+  "url": "https://scikit-learn.org/stable/modules/calibration.html",
+  "version": "text-sha256:93a78eed70666bf360e6e8705d226df17d030d327e4c2bbb3ba6d884979b0dbe",
+  "native_version": "scikit-learn 1.9.1 官方文档快照",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "缓存120–173校准、可靠性图与Brier边界；205–280独立校准数据、交叉验证与sigmoid",
+  "locator": "§1.16 Probability calibration；§1.16.1 Calibration curves；§1.16.2–3",
+  "text_sha256": "93a78eed70666bf360e6e8705d226df17d030d327e4c2bbb3ba6d884979b0dbe",
+  "excerpt": "A lower Brier loss, for instance, does not necessarily mean a better calibrated model",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

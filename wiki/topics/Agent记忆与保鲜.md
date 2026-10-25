@@ -2,8 +2,8 @@
 id: memory
 module: harness
 status: published
-page_version: 3
-last_checked: 2026-10-24
+page_version: 4
+last_checked: 2026-10-25
 depth: worked
 practice_status: designed
 claim_ids: [claim-memory-v1, claim-memory-eligible-memories-v1, claim-memory-freshness-score-v1, claim-memory-invalidation-closure-v1]
@@ -209,6 +209,12 @@ flowchart TD
 最后问清有效期代表什么：来源尚未更正、最近一次人工复核、缓存允许驻留时间是不同概念。时间衰减处理排序，硬失效处理资格，用户删除处理持有权；将三者混成一个更新时间字段，会导致到期误用或删除传播缺失。
 
 本文源码链接均锁定实际读取的提交；论文锁定 arXiv 版本，在线官方文档记录读取日和正文指纹。公式中标为“教学模型”的预算、阈值和状态集合是本页设计，不是论文测得的效果。第三方文件只作为阅读依据，教学实现为独立简化。
+
+## 2026研究进展
+
+ACL 2026的经验跟随研究提醒读者，相似输入检索到的记忆可能传播错误或产生错配。记忆数量、相似度与经验质量应分别记录；本轮只核验该论文官方摘要，因此没有将未读取的实验过程当作已复现依据。 [会议来源与读取范围](../../sources/library/2026-paper-harness-memory/README.md)
+
+更多公式、代码示例、结构图及当前开源版本见[Harness研究进展](../frontiers/Harness研究进展.md)。新内容未执行真实模型实验。
 
 ---
 

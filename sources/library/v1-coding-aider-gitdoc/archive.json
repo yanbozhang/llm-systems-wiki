@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-coding-aider-gitdoc",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "1469e351b879780852b550b3b1d702d26cba36e2a7738b3613e2577441bbcf8c",
+      "bytes": 3758,
+      "cache_file": "sources/.local/objects/1469e351b879780852b550b3b1d702d26cba36e2a7738b3613e2577441bbcf8c.bin",
+      "requested_url": "https://raw.githubusercontent.com/Aider-AI/aider/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/website/docs/git.md",
+      "resolved_url": "https://raw.githubusercontent.com/Aider-AI/aider/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/website/docs/git.md",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:12:06.094791+00:00",
+      "declared_source_version": "text-sha256:1469e351b879780852b550b3b1d702d26cba36e2a7738b3613e2577441bbcf8c",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:12:06.094791+00:00",
+    "status": "saved"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchmark-mmlu-pro-accuracy",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "c0052d10d0d8ada49f796a4a73fcf36c3a9348a0017f8fe46f41cede5457a599",
+      "bytes": 2041,
+      "cache_file": "sources/.local/objects/c0052d10d0d8ada49f796a4a73fcf36c3a9348a0017f8fe46f41cede5457a599.bin",
+      "requested_url": "https://raw.githubusercontent.com/TIGER-AI-Lab/MMLU-Pro/f418b116db00b065c2aea046518d8fcf74d39872/compute_accuracy.py",
+      "resolved_url": "https://raw.githubusercontent.com/TIGER-AI-Lab/MMLU-Pro/f418b116db00b065c2aea046518d8fcf74d39872/compute_accuracy.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:11:44.666476+00:00",
+      "declared_source_version": "text-sha256:c0052d10d0d8ada49f796a4a73fcf36c3a9348a0017f8fe46f41cede5457a599",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:11:44.666476+00:00",
+    "status": "saved"
+  }
+}

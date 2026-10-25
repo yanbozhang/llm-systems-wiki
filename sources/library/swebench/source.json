@@ -1,0 +1,16 @@
+{
+  "id": "swebench",
+  "title": "SWE-bench 项目说明",
+  "url": "https://github.com/SWE-bench/SWE-bench/blob/main/README.md",
+  "version": "text-sha256:06841624d7b5130dfe3cc6714642e9a8fd2a608c95c66ae0180e409f12b73aaa",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "正文的相关章节；公式和图表未逐项独立复核",
+  "locator": "Overview；Set Up",
+  "text_sha256": "06841624d7b5130dfe3cc6714642e9a8fd2a608c95c66ae0180e409f12b73aaa",
+  "excerpt": "SWE-bench is a benchmark for evaluating large language models on real world software issues collected from GitHub. Given a *codebase* and an *issue*, a language model is tasked wit",
+  "archive_policy": "保留短摘与指纹，全文在原站；不承诺原站失效后可完整恢复"
+}

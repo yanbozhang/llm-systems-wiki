@@ -1,0 +1,18 @@
+{
+  "id": "2026-paper-knowledge-crag",
+  "title": "From Extraction to Deduction: Resolving Functional Misalignment in RAG via a Collaborative Critic-Reasoner Framework",
+  "url": "https://icml.cc/virtual/2026/poster/66383",
+  "version": "text-sha256:01e632ad40953be3318a74459fe4efc158094fc38808410617d12abef1325960",
+  "native_version": "ICML 2026 · 官方Poster目录",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "会议官方详情的标题、会议归属、摘要与公开说明；全文若取得，另列全文来源记录",
+  "locator": "Official paper record; Abstract",
+  "text_sha256": "01e632ad40953be3318a74459fe4efc158094fc38808410617d12abef1325960",
+  "excerpt": "ICML Poster From Extraction to Deduction: Resolving Functional Misalignment in RAG via a Collaborative Critic-Reasoner Framework ICML 2026 Skip to yearly menu b",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "conference": "ICML 2026 · 官方Poster目录",
+  "conference_year": 2026
+}

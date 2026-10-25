@@ -2,8 +2,8 @@
 id: kv-cache
 module: inference
 status: published
-page_version: 3
-last_checked: 2026-10-24
+page_version: 4
+last_checked: 2026-10-25
 depth: worked
 practice_status: designed
 claim_ids: [claim-kv-cache-v1, claim-kv-cache-bytes-v1, claim-kv-cache-append-attend-v1, claim-kv-cache-prefix-identity-v1]
@@ -190,6 +190,12 @@ flowchart LR
 注意力小例子中 $q=0$使所有权重相等，但这不是生产模型的常见假设，只是为了使手算可审查。若令查询更偏向某历史键，权重会随点积变化，历史值对输出的影响也改变；因此把缓存看作“只需最新一条”的队列，会在全注意力下改变模型语义。使用滑动窗口时可以丢弃窗口外状态，是因为可见范围的模型定义已经改变，不能把这种策略无条件套到标准全注意力模型。
 
 [块引用与替换](https://github.com/vllm-project/vllm/blob/7a64fb8fc9239cb65e0df9313fa759594dfb206a/vllm/v1/core/block_pool.py#L752)；[多模态与适配器身份](https://github.com/vllm-project/vllm/blob/7a64fb8fc9239cb65e0df9313fa759594dfb206a/vllm/v1/core/kv_cache_utils.py#L637)；[GQA与缓存读取](https://github.com/huggingface/transformers/blob/50e35cc0ca18ec19b80653690de553e6decf74f5/src/transformers/models/llama/modeling_llama.py#L167)；[分布式缓存管理 §4.6](https://arxiv.org/html/2309.06180v1).
+
+## 2026研究进展
+
+CapKV的官方摘要从信息容量角度讨论保留哪些KV。它与本页的容量估算处于不同层次：预算回答能放多少，选择策略还要回答保留哪些信息。缓存缩小后的任务质量需要单独测量，不能只报告显存下降。 [会议来源与读取范围](../../sources/library/2026-paper-inference-eviction/README.md)
+
+更多公式、代码示例、结构图及当前开源版本见[推理研究进展](../frontiers/推理研究进展.md)。新内容未执行真实模型实验。
 
 ---
 

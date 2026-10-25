@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-app-license",
+  "title": "AppAgent MIT License",
+  "url": "https://github.com/TencentQQGYLab/AppAgent/blob/2c1900422caf6f9e94e96d5dd984b530e5a5fbf8/LICENSE",
+  "version": "text-sha256:d9e2b107cbaa3599336510dbb6703cb30210f1b4345221e76cf75cba85c2d113",
+  "native_version": "2c1900422caf6f9e94e96d5dd984b530e5a5fbf8",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "完整根LICENSE；与assets/license.txt内容指纹一致",
+  "locator": "LICENSE; assets/license.txt",
+  "text_sha256": "d9e2b107cbaa3599336510dbb6703cb30210f1b4345221e76cf75cba85c2d113",
+  "excerpt": "MIT License",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

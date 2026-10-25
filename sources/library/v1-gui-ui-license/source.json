@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-ui-license",
+  "title": "UI-TARS Desktop Apache-2.0许可",
+  "url": "https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/LICENSE",
+  "version": "text-sha256:c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+  "native_version": "3ac2cb8d946d78d5ff92ad17b318eaafa18c178c",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "定义、再分发第4节、声明保留与免责条款",
+  "locator": "LICENSE §4",
+  "text_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+  "excerpt": "You must give any other recipients of the Work or Derivative Works a copy of this License",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

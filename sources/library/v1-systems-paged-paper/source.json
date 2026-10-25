@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-paged-paper",
+  "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+  "url": "https://arxiv.org/html/2309.06180v1",
+  "version": "text-sha256:c1ae88f9865444fbbb4497ac0710b095018a83ed43558f5234a829cc3861478e",
+  "native_version": "2309.06180v1",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "§2.1–2.3、§4.2–4.6、§5.1–5.2；正文43–163、185–252、285–308",
+  "locator": "§2；§4.2–4.6；§5.1–5.2",
+  "text_sha256": "c1ae88f9865444fbbb4497ac0710b095018a83ed43558f5234a829cc3861478e",
+  "excerpt": "The last KV block’s unfilled positions are reserved for future generations.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

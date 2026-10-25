@@ -1,0 +1,16 @@
+{
+  "id": "2026-code-network-transformers",
+  "title": "huggingface/transformers：src/transformers/generation/utils.py",
+  "url": "https://github.com/huggingface/transformers/blob/50e35cc0ca18ec19b80653690de553e6decf74f5/src/transformers/generation/utils.py",
+  "version": "text-sha256:fc39b1e4e7ac56cf6e44fe4d691b64549cd6cb96eb13f4169c26d555b8af3a8c",
+  "native_version": "50e35cc0ca18ec19b80653690de553e6decf74f5",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "GenerationMixin.prepare_inputs_for_generation，661行起；静态阅读，未运行完整框架",
+  "locator": "GenerationMixin.prepare_inputs_for_generation，661行起",
+  "text_sha256": "fc39b1e4e7ac56cf6e44fe4d691b64549cd6cb96eb13f4169c26d555b8af3a8c",
+  "excerpt": "# Copyright 2020 The Google AI Language Team Authors, Facebook AI Research authors and The HuggingFace Inc. team. # Copyright (c) 2020, NVIDIA CORPORATION. All ",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验"
+}

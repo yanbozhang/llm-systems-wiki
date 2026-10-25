@@ -1,0 +1,2 @@
+# Preserve verified upstream snapshot bytes across checkouts.
+sources/library/**/snapshot/* -text -whitespace

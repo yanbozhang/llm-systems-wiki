@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchmark-humaneval-eval",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "e926d5e9b8f1ec040096cd5952e8cf79f8dc0b7fb80ba6667ce604ffea0397bc",
+      "bytes": 3438,
+      "cache_file": "sources/.local/objects/e926d5e9b8f1ec040096cd5952e8cf79f8dc0b7fb80ba6667ce604ffea0397bc.bin",
+      "requested_url": "https://raw.githubusercontent.com/openai/human-eval/b9453e8f1865df0a0057a1383767caa400acfbcf/human_eval/evaluation.py",
+      "resolved_url": "https://raw.githubusercontent.com/openai/human-eval/b9453e8f1865df0a0057a1383767caa400acfbcf/human_eval/evaluation.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:04:46.644572+00:00",
+      "declared_source_version": "text-sha256:e926d5e9b8f1ec040096cd5952e8cf79f8dc0b7fb80ba6667ce604ffea0397bc",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:04:46.644572+00:00",
+    "status": "saved"
+  }
+}

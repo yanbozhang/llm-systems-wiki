@@ -1,0 +1,16 @@
+{
+  "id": "nashsu-wiki",
+  "title": "nashsu 的 LLM Wiki 实现",
+  "url": "https://raw.githubusercontent.com/nashsu/llm_wiki/main/README.md",
+  "version": "text-sha256:1d5e91a86372a3497fd593d34f9343763b4474f4e369c4849cc14056bb424a0e",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "正文的相关章节；公式和图表未逐项独立复核",
+  "locator": "Purpose.md；Persistent Ingest Queue",
+  "text_sha256": "1d5e91a86372a3497fd593d34f9343763b4474f4e369c4849cc14056bb424a0e",
+  "excerpt": "Defines goals, key questions, research scope, evolving thesis - LLM reads it during every ingest and query for context - LLM can suggest updates based on usage patterns - Different",
+  "archive_policy": "保留短摘与指纹，全文在原站；不承诺原站失效后可完整恢复"
+}

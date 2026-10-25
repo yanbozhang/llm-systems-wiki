@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-light-core",
+  "title": "lightrag/lightrag.py",
+  "url": "https://github.com/HKUDS/LightRAG/blob/aaebfe1bb8d55deb6a4304d357a3bf4c92fcd40a/lightrag/lightrag.py",
+  "version": "text-sha256:f92e25bf1bf8082dba64f604fe22badaeaa69ef2eaa34d23c5058059be8031d3",
+  "native_version": "aaebfe1bb8d55deb6a4304d357a3bf4c92fcd40a",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "ainsert_custom_chunks身份2430–2474、提交2880–2970；_purge_kg_contributions 6150–6260；_purge_derived_kg_contributions 6540–6667",
+  "locator": "ainsert_custom_chunks；_purge_kg_contributions；_purge_derived_kg_contributions",
+  "text_sha256": "f92e25bf1bf8082dba64f604fe22badaeaa69ef2eaa34d23c5058059be8031d3",
+  "excerpt": "write PROCESSED (the commit record) last with the journal cleared.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "2026-repo-inference-sglang",
+  "title": "sgl-project/sglang：固定提交项目说明",
+  "url": "https://github.com/sgl-project/sglang/blob/d558ac2f3e7a59a876bbce4687fa49334de777fa/README.md",
+  "version": "text-sha256:a764981ec1a7b8346c1f46f4960b1b3ead61b4a627cffde513d0b3c0c19d3d0f",
+  "native_version": "d558ac2f3e7a59a876bbce4687fa49334de777fa",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "README的项目定位、组成、入口与许可提示；未运行完整项目",
+  "locator": "README.md",
+  "text_sha256": "a764981ec1a7b8346c1f46f4960b1b3ead61b4a627cffde513d0b3c0c19d3d0f",
+  "excerpt": "# SGLang: Fast inference for LLMs and multimodal models <p align=\"center\" id=\"sglangtop\"> <img src=\"https://raw.githubusercontent.com/sgl-project/sglang/main/as",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "maintainer": "sgl-project",
+  "commit_date": "2026-10-25T03:30:24Z",
+  "license_spdx": "Apache-2.0"
+}

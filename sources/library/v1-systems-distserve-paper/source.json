@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-distserve-paper",
+  "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving",
+  "url": "https://arxiv.org/html/2401.09670v3",
+  "version": "text-sha256:8e9725f01e6852ce7c825c6dceafd3dca9d33b894717990907013519c0711cdd",
+  "native_version": "arXiv:2401.09670v3",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "Introduction、§2.1–2.2、§3.2–3.3，正文63–116、176–189",
+  "locator": "§1 goodput定义；§3.3 variable length与communication",
+  "text_sha256": "8e9725f01e6852ce7c825c6dceafd3dca9d33b894717990907013519c0711cdd",
+  "excerpt": "maximizing the requests served per second adhering to the SLO attainment goal for each GPU provisioned",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchagents-swebench-paper",
+  "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+  "url": "https://arxiv.org/html/2310.06770v1",
+  "version": "text-sha256:bc105c7e79f5041dc98ee0c2d146d3e928d1e83b2e20069bf44a1b0da7a93fd9",
+  "native_version": "2310.06770v1",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "§2.1–2.2，缓存正文104–133：测试收集、至少一个F2P、补丁应用和实例级解决率",
+  "locator": "§2 SWE-bench；§2.1 Dataset Construction；§2.2 Evaluation",
+  "text_sha256": "bc105c7e79f5041dc98ee0c2d146d3e928d1e83b2e20069bf44a1b0da7a93fd9",
+  "excerpt": "at least one test that changes from fail-to-pass",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

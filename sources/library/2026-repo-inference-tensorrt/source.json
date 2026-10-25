@@ -1,0 +1,19 @@
+{
+  "id": "2026-repo-inference-tensorrt",
+  "title": "NVIDIA/TensorRT-LLM：固定提交项目说明",
+  "url": "https://github.com/NVIDIA/TensorRT-LLM/blob/fe180a952d576d576e70b4f129c39883b49ff0aa/README.md",
+  "version": "text-sha256:019fd3a6ead551d10450cd6c3845c7471955c681fd0d58adb10ce0a9a205e6c2",
+  "native_version": "fe180a952d576d576e70b4f129c39883b49ff0aa",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "README的项目定位、组成、入口与许可提示；未运行完整项目",
+  "locator": "README.md",
+  "text_sha256": "019fd3a6ead551d10450cd6c3845c7471955c681fd0d58adb10ce0a9a205e6c2",
+  "excerpt": "<div align=\"center\"> TensorRT LLM =========================== <h4>TensorRT LLM optimizes inference for LLMs and Visual Gen models with specialized kernels for c",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "maintainer": "NVIDIA",
+  "commit_date": "2026-10-24T18:59:43Z",
+  "license_spdx": "NOASSERTION"
+}

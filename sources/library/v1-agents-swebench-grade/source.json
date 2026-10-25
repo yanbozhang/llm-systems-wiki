@@ -1,0 +1,16 @@
+{
+  "id": "v1-agents-swebench-grade",
+  "title": "SWE-bench 测试分组与解决状态",
+  "url": "https://github.com/SWE-bench/SWE-bench/blob/02e7a74ffd0b707aab73d203fe87bdc7c76afc8e/swebench/harness/grading.py#L179",
+  "native_version": "02e7a74ffd0b707aab73d203fe87bdc7c76afc8e",
+  "kind": "source_code",
+  "reading_scope": "_resolve_case、test_passed、test_maintained、test_failed 59–110；get_eval_tests_report 179–285；compute_fail_to_pass 288–295；compute_pass_to_pass 298–306；get_resolution_status 309–326",
+  "locator": "_resolve_case、test_passed、test_maintained、test_failed 59–110；get_eval_tests_report 179–285；compute_fail_to_pass 288–295；compute_pass_to_pass 298–306；get_resolution_status 309–326",
+  "text_sha256": "a095273010175001a6779e365b3b77abb8657c7ac2e4f80b4bc360faa6f09483",
+  "excerpt": "def get_eval_tests_report(",
+  "version": "text-sha256:a095273010175001a6779e365b3b77abb8657c7ac2e4f80b4bc360faa6f09483",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

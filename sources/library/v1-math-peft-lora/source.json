@@ -1,0 +1,16 @@
+{
+  "id": "v1-math-peft-lora",
+  "title": "PEFT LoRA 层实现",
+  "url": "https://github.com/huggingface/peft/blob/7d6315ae910bf62b6044a7ca917bccf5881f5e43/src/peft/tuners/lora/layer.py",
+  "version": "text-sha256:7f0952efd6df729e060055566cef17a3fff6876a3b4dc4a4502b8d9e31349ffa",
+  "native_version": "7d6315ae910bf62b6044a7ca917bccf5881f5e43",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "第219–283、359–372、1046–1109、1138–1209行；参数、缩放、初始化、merge、get_delta_weight与forward",
+  "locator": "LoraLayer.update_layer; reset_lora_parameters; Linear.merge; Linear.get_delta_weight; Linear.forward",
+  "text_sha256": "7f0952efd6df729e060055566cef17a3fff6876a3b4dc4a4502b8d9e31349ffa",
+  "excerpt": "result = result + lora_B(lora_A(dropout(x))) * scaling",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

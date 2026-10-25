@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchagents-agentdojo-runtime",
+  "title": "AgentDojo 工具注册、参数校验和依赖注入",
+  "url": "https://github.com/ethz-spylab/agentdojo/blob/089ed468cf3ed0322acc66b0211f26d9d90dbf60/src/agentdojo/functions_runtime.py",
+  "version": "text-sha256:3c67f71eb8a7f15d2a15fe9595d84218c5e6868d95fd71d1cef679cd2192d0f7",
+  "native_version": "089ed468cf3ed0322acc66b0211f26d9d90dbf60",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "_parse_args 147–169；FunctionsRuntime.__init__ 185–186；_execute_nested_calls 219–244；run_function 246–309",
+  "locator": "src/agentdojo/functions_runtime.py::FunctionsRuntime.run_function、_execute_nested_calls、_parse_args",
+  "text_sha256": "3c67f71eb8a7f15d2a15fe9595d84218c5e6868d95fd71d1cef679cd2192d0f7",
+  "excerpt": "args = f.parameters.model_validate(resolved_kwargs).model_dump()",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

@@ -1,0 +1,22 @@
+{
+  "source_id": "sglang",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "0c4bcac162e49238d7e7b701c0642b8b95b33226851d62d8349d5ae7a7de6e18",
+      "bytes": 228083,
+      "cache_file": "sources/.local/objects/0c4bcac162e49238d7e7b701c0642b8b95b33226851d62d8349d5ae7a7de6e18.bin",
+      "requested_url": "https://arxiv.org/html/2312.07104v2",
+      "resolved_url": "https://arxiv.org/html/2312.07104v2",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:01:51.662901+00:00",
+      "declared_source_version": "text-sha256:d46806b6c924d15e959feb4f15c13938688a8be83e5764cc8d1d01dec20dd24e",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:01:51.662901+00:00",
+    "status": "saved"
+  }
+}

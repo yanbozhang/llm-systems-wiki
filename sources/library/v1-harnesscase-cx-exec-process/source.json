@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-cx-exec-process",
+  "title": "Codex 进程执行与输出回收",
+  "url": "https://github.com/openai/codex/blob/970111f6cb62cc02fe36a82ea7d71b37a2889c97/codex-rs/core/src/exec.rs#L982",
+  "version": "text-sha256:83f72b788b041e2865ebd5b10ce6878b4a471ea4082116c821d87ef39b710888",
+  "native_version": "970111f6cb62cc02fe36a82ea7d71b37a2889c97",
+  "kind": "source_code",
+  "reading_scope": "ExecExpiration 150–200；ExecCapturePolicy 274–291；process_exec_tool_call 302–336；consume_output 982–1191；read_output 1194–1247",
+  "locator": "ExecExpiration 150–200；ExecCapturePolicy 274–291；process_exec_tool_call 302–336；consume_output 982–1191；read_output 1194–1247",
+  "text_sha256": "83f72b788b041e2865ebd5b10ce6878b4a471ea4082116c821d87ef39b710888",
+  "excerpt": "async fn consume_output(",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}

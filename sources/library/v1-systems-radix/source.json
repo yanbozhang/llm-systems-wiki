@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-radix",
+  "title": "python/sglang/srt/mem_cache/radix_cache.py",
+  "url": "https://github.com/sgl-project/sglang/blob/3ea7e210d28e26a13590d3244cedfe17f8c3e58c/python/sglang/srt/mem_cache/radix_cache.py",
+  "version": "text-sha256:eea7015fcf678167ac7296b08c8dc568ccbe42a4bb106da23b33a7c59debec01",
+  "native_version": "3ea7e210d28e26a13590d3244cedfe17f8c3e58c",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "RadixKey.match_at 178–220；TreeNode 250–275；evict/inc_lock_ref/dec_lock_ref 552–617；_match_prefix_helper/_split_node 651–701",
+  "locator": "RadixKey.match_at；RadixCache._split_node；RadixCache.evict",
+  "text_sha256": "eea7015fcf678167ac7296b08c8dc568ccbe42a4bb106da23b33a7c59debec01",
+  "excerpt": "new_node.lock_ref = child.lock_ref",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

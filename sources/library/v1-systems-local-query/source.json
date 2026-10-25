@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-local-query",
+  "title": "packages/graphrag/graphrag/query/structured_search/local_search/mixed_context.py",
+  "url": "https://github.com/microsoft/graphrag/blob/c600ff80b77b9b62c47d539a3ac9569e95d8949b/packages/graphrag/graphrag/query/structured_search/local_search/mixed_context.py",
+  "version": "text-sha256:93c019de4fbce62e7c4031eeb161d06f58818ed1660c6b4122770fba26c08287",
+  "native_version": "c600ff80b77b9b62c47d539a3ac9569e95d8949b",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "LocalSearchMixedContext.build_context91–221；_build_text_unit_context316–375",
+  "locator": "LocalSearchMixedContext.build_context；_build_text_unit_context",
+  "text_sha256": "93c019de4fbce62e7c4031eeb161d06f58818ed1660c6b4122770fba26c08287",
+  "excerpt": "unit_info_list.sort(key=lambda x: (x[1], -x[2]))",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

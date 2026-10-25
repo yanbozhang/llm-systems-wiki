@@ -1,0 +1,16 @@
+{
+  "id": "v1-math-trl-grpo",
+  "title": "TRL GRPOTrainer 实现",
+  "url": "https://github.com/huggingface/trl/blob/1117c3b9c1632ee9814c30f6c9fc884b792a54e5/trl/trainer/grpo_trainer.py",
+  "version": "text-sha256:5706d33cbdaf2f984d608f228af28d4afdbf88060be59f4a9fca7829e613da1f",
+  "native_version": "1117c3b9c1632ee9814c30f6c9fc884b792a54e5",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "第2797–2857、3067–3220行；奖励缺失、组标准化、old detach、概率比、KL、裁剪和归约",
+  "locator": "_generate_and_score_completions; _compute_loss",
+  "text_sha256": "5706d33cbdaf2f984d608f228af28d4afdbf88060be59f4a9fca7829e613da1f",
+  "excerpt": "per_token_loss = -torch.min(per_token_loss1, per_token_loss2)",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

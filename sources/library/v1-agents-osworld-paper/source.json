@@ -1,0 +1,16 @@
+{
+  "id": "v1-agents-osworld-paper",
+  "title": "OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments",
+  "url": "https://arxiv.org/html/2404.07972v1",
+  "native_version": "arXiv:2404.07972v1",
+  "kind": "paper",
+  "reading_scope": "第2.2.3节 Execution-Based Evaluation；第2.3节 Observation Space",
+  "locator": "第2.2.3节 Execution-Based Evaluation；第2.3节 Observation Space",
+  "text_sha256": "a4a0c51ff1830185e1c7a803d9ef3e27bad9a081677af71411210f2c0c343711",
+  "excerpt": "we design example-specific evaluation metrics",
+  "version": "text-sha256:a4a0c51ff1830185e1c7a803d9ef3e27bad9a081677af71411210f2c0c343711",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

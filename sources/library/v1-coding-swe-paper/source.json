@@ -1,0 +1,16 @@
+{
+  "id": "v1-coding-swe-paper",
+  "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering",
+  "url": "https://arxiv.org/html/2405.15793v1",
+  "version": "text-sha256:27fee138ac43175802038247739c3e87ba24cd2d1fd1cab22504602919adc78a",
+  "native_version": "2405.15793v1",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "§2 ACI设计原则、§3 search/view/edit/context、§4实验任务范围；正文98–181",
+  "locator": "§2 Agent-Computer Interfaces；§3 SWE-agent",
+  "text_sha256": "27fee138ac43175802038247739c3e87ba24cd2d1fd1cab22504602919adc78a",
+  "excerpt": "Environment feedback should be informative.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

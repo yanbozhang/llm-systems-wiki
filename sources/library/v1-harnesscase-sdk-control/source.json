@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-sdk-control",
+  "title": "Claude SDK 控制请求分发",
+  "url": "https://github.com/anthropics/claude-agent-sdk-python/blob/0e89b298e771259378a6cd3734e00d323dff5703/src/claude_agent_sdk/_internal/query.py#L577",
+  "version": "text-sha256:0562517de949f4431177f204fe84cda3265f495d0eb0a949b9ced96cc5bd8276",
+  "native_version": "0e89b298e771259378a6cd3734e00d323dff5703",
+  "kind": "source_code",
+  "reading_scope": "Query.initialize 309–363；_handle_control_request 577–704",
+  "locator": "Query.initialize 309–363；_handle_control_request 577–704",
+  "text_sha256": "0562517de949f4431177f204fe84cda3265f495d0eb0a949b9ced96cc5bd8276",
+  "excerpt": "async def _handle_control_request(self, request: SDKControlRequest) -> None:",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}

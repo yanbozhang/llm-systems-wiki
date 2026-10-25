@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchsys-mmmu-doc",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "a4e89dd389f9b4c82b92e54b5d50a58e55a53c077a5009f7d4b4e53c09bdcc3a",
+      "bytes": 7881,
+      "cache_file": "sources/.local/objects/a4e89dd389f9b4c82b92e54b5d50a58e55a53c077a5009f7d4b4e53c09bdcc3a.bin",
+      "requested_url": "https://raw.githubusercontent.com/MMMU-Benchmark/MMMU/268471d0d488258990025331c7528359c324aa25/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/MMMU-Benchmark/MMMU/268471d0d488258990025331c7528359c324aa25/README.md",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:05:45.667677+00:00",
+      "declared_source_version": "text-sha256:a4e89dd389f9b4c82b92e54b5d50a58e55a53c077a5009f7d4b4e53c09bdcc3a",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:05:45.667677+00:00",
+    "status": "saved"
+  }
+}

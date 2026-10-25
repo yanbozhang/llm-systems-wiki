@@ -1,0 +1,16 @@
+{
+  "id": "v1-agents-mcp-lifecycle",
+  "title": "MCP Lifecycle 规范",
+  "url": "https://modelcontextprotocol.io/specification/2025-06-18/basic/lifecycle",
+  "native_version": "2025-06-18",
+  "kind": "official_document",
+  "reading_scope": "Initialization；Version Negotiation；Timeouts",
+  "locator": "Initialization；Version Negotiation；Timeouts",
+  "text_sha256": "442da26cd6917ba003b1887959c2da354d7623e8b84497c751e6e602be6dcc69",
+  "excerpt": "After successful initialization, the client MUST send an initialized notification",
+  "version": "text-sha256:442da26cd6917ba003b1887959c2da354d7623e8b84497c751e6e602be6dcc69",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

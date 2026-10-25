@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-systems-graph-paper",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "e71aba110390a5844dc886c4469547540c0de0552a81e1dafbc6a428871462c1",
+      "bytes": 619003,
+      "cache_file": "sources/.local/objects/e71aba110390a5844dc886c4469547540c0de0552a81e1dafbc6a428871462c1.bin",
+      "requested_url": "https://arxiv.org/html/2404.16130v2",
+      "resolved_url": "https://arxiv.org/html/2404.16130v2",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:14:18.271219+00:00",
+      "declared_source_version": "text-sha256:7c4bb4d83507e0cfcc337bcca23db2de1a63679e46753a04eae50aa21fd121b2",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:14:18.271219+00:00",
+    "status": "saved"
+  }
+}

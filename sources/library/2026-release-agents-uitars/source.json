@@ -1,0 +1,18 @@
+{
+  "id": "2026-release-agents-uitars",
+  "title": "bytedance/UI-TARS-desktop：v0.3.1发布说明",
+  "url": "https://github.com/bytedance/UI-TARS-desktop/releases/tag/v0.3.1",
+  "version": "text-sha256:ebe4e882883c7eb3fff502246c0a3e941249ac7601e0294b4186959521f4e0bd",
+  "native_version": "v0.3.1",
+  "published_at": "2026-10-08",
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "完整发布说明；不将最新分支提交等同于该发布的代码",
+  "locator": "Release notes",
+  "text_sha256": "ebe4e882883c7eb3fff502246c0a3e941249ac7601e0294b4186959521f4e0bd",
+  "excerpt": "This release closes several security issues in the Agent TARS CLI server (`@agent-tars/cli`, `@tarko/agent-server`). It changes how the server can be reached, s",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "release_date": "2026-10-08T21:14:26Z",
+  "prerelease": false
+}

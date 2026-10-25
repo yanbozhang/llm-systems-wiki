@@ -1,0 +1,18 @@
+{
+  "id": "2026-release-knowledge-graphrag",
+  "title": "microsoft/graphrag：v3.3.0发布说明",
+  "url": "https://github.com/microsoft/graphrag/releases/tag/v3.3.0",
+  "version": "text-sha256:28d721e3d55a5bc3b4767b76ea49fdac6686b9befe2299ee02351d445d012b77",
+  "native_version": "v3.3.0",
+  "published_at": "2026-10-08",
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "完整发布说明；不将最新分支提交等同于该发布的代码",
+  "locator": "Release notes",
+  "text_sha256": "28d721e3d55a5bc3b4767b76ea49fdac6686b9befe2299ee02351d445d012b77",
+  "excerpt": "## What's Changed * fix sqlite performance issue by @gaudyb in https://github.com/microsoft/graphrag/pull/2591 * Release v3.3.0 by @gaudyb in https://github.com",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "release_date": "2026-10-08T18:28:43Z",
+  "prerelease": false
+}

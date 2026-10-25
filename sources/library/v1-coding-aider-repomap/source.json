@@ -1,0 +1,16 @@
+{
+  "id": "v1-coding-aider-repomap",
+  "title": "aider/repomap.py",
+  "url": "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/repomap.py",
+  "version": "text-sha256:a5d4befe70445114b9f62da47b0eeb2a5384f9e84a0c083c77a4b339caf61ecd",
+  "native_version": "5dc9490bb35f9729ef2c95d00a19ccd30c26339c",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "get_tags_raw279–324；get_ranked_tags365–555；get_ranked_tags_map_uncached629–709",
+  "locator": "RepoMap.get_tags_raw；get_ranked_tags；get_ranked_tags_map_uncached",
+  "text_sha256": "a5d4befe70445114b9f62da47b0eeb2a5384f9e84a0c083c77a4b339caf61ecd",
+  "excerpt": "G.add_edge(referencer, definer, weight=use_mul * num_refs, ident=ident)",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

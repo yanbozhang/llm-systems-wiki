@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-mobile-api",
+  "title": "Mobile-Agent-v2 模型调用适配",
+  "url": "https://github.com/X-PLUG/MobileAgent/blob/11cea575561fb7800b5fb6b6cafa56f7a91de11f/Mobile-Agent-v2/MobileAgent/api.py",
+  "version": "text-sha256:dbd9b27e2d26d967e846113ba583097af41cc042436c3c517f17c0125a5c6022",
+  "native_version": "11cea575561fb7800b5fb6b6cafa56f7a91de11f",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "第9–40行；messages构造、HTTP模型调用和响应提取，未调用任何服务",
+  "locator": "inference_chat",
+  "text_sha256": "dbd9b27e2d26d967e846113ba583097af41cc042436c3c517f17c0125a5c6022",
+  "excerpt": "res_content = res_json['choices'][0]['message']['content']",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

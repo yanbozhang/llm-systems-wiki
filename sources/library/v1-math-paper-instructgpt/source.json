@@ -1,0 +1,16 @@
+{
+  "id": "v1-math-paper-instructgpt",
+  "title": "Training language models to follow instructions with human feedback",
+  "url": "https://arxiv.org/html/2203.02155v1",
+  "version": "text-sha256:2a06d93ff9f996e633196c043424dd8f5163d047ef41bbd6ef72bfce535c7964",
+  "native_version": "2203.02155v1",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "第3.1节步骤1、3.2节数据与3.5节SFT训练说明；示范训练与偏好数据分工",
+  "locator": "§3.1 Step 1; Data; Supervised fine-tuning",
+  "text_sha256": "2a06d93ff9f996e633196c043424dd8f5163d047ef41bbd6ef72bfce535c7964",
+  "excerpt": "Our labelers provide demonstrations of the desired behavior on the input prompt distribution",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

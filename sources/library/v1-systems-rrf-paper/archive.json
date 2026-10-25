@@ -1,0 +1,15 @@
+{
+  "source_id": "v1-systems-rrf-paper",
+  "status": "failed",
+  "captures": [],
+  "last_attempt": {
+    "at": "2026-10-25T04:14:15.203677+00:00",
+    "status": "failed",
+    "errors": [
+      {
+        "url": "https://plg.uwaterloo.ca/~gvcormac/cormacksigir09-rrf.pdf",
+        "reason": "ValueError"
+      }
+    ]
+  }
+}

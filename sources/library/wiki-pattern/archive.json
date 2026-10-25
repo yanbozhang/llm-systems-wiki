@@ -1,0 +1,15 @@
+{
+  "source_id": "wiki-pattern",
+  "status": "failed",
+  "captures": [],
+  "last_attempt": {
+    "at": "2026-10-25T03:58:57.153027+00:00",
+    "status": "failed",
+    "errors": [
+      {
+        "url": "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f",
+        "reason": "ValueError"
+      }
+    ]
+  }
+}

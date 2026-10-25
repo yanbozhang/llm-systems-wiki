@@ -1,0 +1,16 @@
+{
+  "id": "v1-math-trl-grpo-doc",
+  "title": "TRL GRPO Trainer 文档",
+  "url": "https://github.com/huggingface/trl/blob/1117c3b9c1632ee9814c30f6c9fc884b792a54e5/docs/source/grpo_trainer.md",
+  "version": "text-sha256:a3a495392fe0c7ba165856b15e7dc617d2e4a65edd3d6acd4e098933c8e63d02",
+  "native_version": "1117c3b9c1632ee9814c30f6c9fc884b792a54e5",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "第57–146行；组优势、KL估计、loss类型、与原论文归约差异说明",
+  "locator": "Computing the advantage; Estimating the KL divergence; Loss Types",
+  "text_sha256": "a3a495392fe0c7ba165856b15e7dc617d2e4a65edd3d6acd4e098933c8e63d02",
+  "excerpt": "To use this formulation, set loss_type=\"dr_grpo\"",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

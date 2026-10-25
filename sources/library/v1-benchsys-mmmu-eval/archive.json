@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchsys-mmmu-eval",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "cc1a89b4a27f697702d340bc6a7578b5237135754ddaa9ef105239a3d9847367",
+      "bytes": 8992,
+      "cache_file": "sources/.local/objects/cc1a89b4a27f697702d340bc6a7578b5237135754ddaa9ef105239a3d9847367.bin",
+      "requested_url": "https://raw.githubusercontent.com/MMMU-Benchmark/MMMU/268471d0d488258990025331c7528359c324aa25/mmmu/utils/eval_utils.py",
+      "resolved_url": "https://raw.githubusercontent.com/MMMU-Benchmark/MMMU/268471d0d488258990025331c7528359c324aa25/mmmu/utils/eval_utils.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:05:46.433981+00:00",
+      "declared_source_version": "text-sha256:cc1a89b4a27f697702d340bc6a7578b5237135754ddaa9ef105239a3d9847367",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:05:46.433981+00:00",
+    "status": "saved"
+  }
+}

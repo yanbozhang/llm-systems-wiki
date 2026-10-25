@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-harnesscase-ag-readme",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "60fa90168565070a61b0f28296ff590bd6853da2477141f5ed0775007c20d7f2",
+      "bytes": 21521,
+      "cache_file": "sources/.local/objects/60fa90168565070a61b0f28296ff590bd6853da2477141f5ed0775007c20d7f2.bin",
+      "requested_url": "https://raw.githubusercontent.com/microsoft/autogen/004749e6b7102c8fd317b9b1499ce5807223c278/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/microsoft/autogen/004749e6b7102c8fd317b9b1499ce5807223c278/README.md",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:36.949589+00:00",
+      "declared_source_version": "text-sha256:60fa90168565070a61b0f28296ff590bd6853da2477141f5ed0775007c20d7f2",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:36.949589+00:00",
+    "status": "saved"
+  }
+}

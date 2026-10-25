@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-lg-interrupt-doc",
+  "title": "LangGraph Interrupts 官方文档",
+  "url": "https://docs.langchain.com/oss/python/langgraph/interrupts",
+  "version": "text-sha256:55888e48110707346579c21bfcec6ef24ddfb5be472321198c83baa52ca59b88",
+  "native_version": "2026-10-24 页面快照",
+  "kind": "official_document",
+  "reading_scope": "节点从头重跑；interrupt顺序；前置副作用幂等；response_schema",
+  "locator": "节点从头重跑；interrupt顺序；前置副作用幂等；response_schema",
+  "text_sha256": "55888e48110707346579c21bfcec6ef24ddfb5be472321198c83baa52ca59b88",
+  "excerpt": "the runtime restarts the entire node from the beginning",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}

@@ -1,0 +1,22 @@
+{
+  "source_id": "v02-mmlu-pro",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "dfbab62320e644f3682d4697e206160bbb59baafa324c59a17e4424328e3e5a5",
+      "bytes": 5993,
+      "cache_file": "sources/.local/objects/dfbab62320e644f3682d4697e206160bbb59baafa324c59a17e4424328e3e5a5.bin",
+      "requested_url": "https://raw.githubusercontent.com/TIGER-AI-Lab/MMLU-Pro/main/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/TIGER-AI-Lab/MMLU-Pro/main/README.md",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:03:19.396363+00:00",
+      "declared_source_version": "text-sha256:dfbab62320e644f3682d4697e206160bbb59baafa324c59a17e4424328e3e5a5",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:19.396363+00:00",
+    "status": "saved"
+  }
+}

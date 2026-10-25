@@ -1,0 +1,22 @@
+{
+  "source_id": "hf-trl",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "1aeae29c1a33bfe4842158f24de3f77a75586c959c49485e21595101123bfb76",
+      "bytes": 138161,
+      "cache_file": "sources/.local/objects/1aeae29c1a33bfe4842158f24de3f77a75586c959c49485e21595101123bfb76.bin",
+      "requested_url": "https://huggingface.co/docs/trl/index",
+      "resolved_url": "https://huggingface.co/docs/trl/index",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:02:51.713273+00:00",
+      "declared_source_version": "text-sha256:696881224f521732574e87165874c98751b58d94fc6da227fe222dbb92c441e6",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:02:51.713273+00:00",
+    "status": "saved"
+  }
+}

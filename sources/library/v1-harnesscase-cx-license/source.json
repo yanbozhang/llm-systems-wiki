@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-cx-license",
+  "title": "Codex Apache-2.0 许可",
+  "url": "https://github.com/openai/codex/blob/970111f6cb62cc02fe36a82ea7d71b37a2889c97/LICENSE#L1",
+  "version": "text-sha256:d17f227e4df5da1600391338865ce0f3055211760a36688f816941d58232d8dc",
+  "native_version": "970111f6cb62cc02fe36a82ea7d71b37a2889c97",
+  "kind": "official_document",
+  "reading_scope": "Apache License Version 2.0及许可条款",
+  "locator": "Apache License Version 2.0及许可条款",
+  "text_sha256": "d17f227e4df5da1600391338865ce0f3055211760a36688f816941d58232d8dc",
+  "excerpt": "Apache License",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}

@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-agents-store-memory",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "3992c9bc44f1883fa9fb83482fb3a364d68f24e51fc7296aa11e165b79d8aa24",
+      "bytes": 21161,
+      "cache_file": "sources/.local/objects/3992c9bc44f1883fa9fb83482fb3a364d68f24e51fc7296aa11e165b79d8aa24.bin",
+      "requested_url": "https://raw.githubusercontent.com/langchain-ai/langgraph/4c52e129eb1ab69a3da58b799f67929f77d81149/libs/checkpoint/langgraph/store/memory/__init__.py",
+      "resolved_url": "https://raw.githubusercontent.com/langchain-ai/langgraph/4c52e129eb1ab69a3da58b799f67929f77d81149/libs/checkpoint/langgraph/store/memory/__init__.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:03:33.879967+00:00",
+      "declared_source_version": "text-sha256:3992c9bc44f1883fa9fb83482fb3a364d68f24e51fc7296aa11e165b79d8aa24",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:33.879967+00:00",
+    "status": "saved"
+  }
+}

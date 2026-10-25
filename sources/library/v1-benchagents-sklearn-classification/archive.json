@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchagents-sklearn-classification",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "bd6218b44c62124709e13c2041e114f1d231c5e524b8916b79226ae52c682026",
+      "bytes": 155134,
+      "cache_file": "sources/.local/objects/bd6218b44c62124709e13c2041e114f1d231c5e524b8916b79226ae52c682026.bin",
+      "requested_url": "https://raw.githubusercontent.com/scikit-learn/scikit-learn/59106029d483678e79825f753bde67f8ade4332b/sklearn/metrics/_classification.py",
+      "resolved_url": "https://raw.githubusercontent.com/scikit-learn/scikit-learn/59106029d483678e79825f753bde67f8ade4332b/sklearn/metrics/_classification.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:04:52.120742+00:00",
+      "declared_source_version": "text-sha256:bd6218b44c62124709e13c2041e114f1d231c5e524b8916b79226ae52c682026",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:04:52.120742+00:00",
+    "status": "saved"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-repo-network-megatron",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "9da0af3c6ccb7fb9dae98930e369293d5872dce1ca9fc22e506d302a83d5f91f",
+      "bytes": 10448,
+      "cache_file": "sources/.local/objects/9da0af3c6ccb7fb9dae98930e369293d5872dce1ca9fc22e506d302a83d5f91f.bin",
+      "requested_url": "https://api.github.com/repos/NVIDIA/Megatron-LM/readme?ref=2052769557dcf7045c4091d1996f0bc59afeb80e",
+      "resolved_url": "https://api.github.com/repos/NVIDIA/Megatron-LM/readme?ref=2052769557dcf7045c4091d1996f0bc59afeb80e",
+      "content_type": "text/markdown",
+      "representation": "decoded_repository_document",
+      "retrieved_at": "2026-10-25T03:59:08.027435+00:00",
+      "declared_source_version": "text-sha256:35d57777ae1a710399aebbc14fef5a8ef05dd86cb037789b842313caa2f780dd",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "Base64-decoded GitHub Contents API file"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:59:08.027435+00:00",
+    "status": "saved"
+  }
+}

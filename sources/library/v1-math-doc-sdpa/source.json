@@ -1,0 +1,16 @@
+{
+  "id": "v1-math-doc-sdpa",
+  "title": "PyTorch 2.14 scaled_dot_product_attention",
+  "url": "https://docs.pytorch.org/docs/2.14/generated/torch.nn.functional.scaled_dot_product_attention.html",
+  "version": "text-sha256:51ae520cb41f401a25865a64b0efc462434e9d7b1dae72dce0533599e69c23c1",
+  "native_version": "PyTorch 2.14 文档快照",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "正文参考伪代码、dropout与布尔mask说明、GQA约束和参数说明",
+  "locator": "scaled_dot_product_attention; Warning; Parameters",
+  "text_sha256": "51ae520cb41f401a25865a64b0efc462434e9d7b1dae72dce0533599e69c23c1",
+  "excerpt": "True indicates values that should take part in attention.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

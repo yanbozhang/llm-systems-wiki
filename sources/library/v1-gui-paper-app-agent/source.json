@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-paper-app-agent",
+  "title": "AppAgent: Multimodal Agents as Smartphone Users",
+  "url": "https://arxiv.org/html/2312.13771v1",
+  "version": "text-sha256:f49749b9d7abd2aad25b1db3034c5a95383f218b438477c014206776f04b905b",
+  "native_version": "2312.13771v1",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "第3.1–3.3节；截图/XML环境、元素动作空间、自主/示范探索与部署文档",
+  "locator": "§3.1–3.3",
+  "text_sha256": "f49749b9d7abd2aad25b1db3034c5a95383f218b438477c014206776f04b905b",
+  "excerpt": "the agent learns app functionalities either through autonomous interactions or by observing human demonstrations",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

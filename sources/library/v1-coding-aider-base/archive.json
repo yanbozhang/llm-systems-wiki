@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-coding-aider-base",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "04a7b38c4f1d2b1684ac958f40bcd81a28b00139eae88afed59d2c970bef1ee1",
+      "bytes": 86302,
+      "cache_file": "sources/.local/objects/04a7b38c4f1d2b1684ac958f40bcd81a28b00139eae88afed59d2c970bef1ee1.bin",
+      "requested_url": "https://raw.githubusercontent.com/Aider-AI/aider/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/coders/base_coder.py",
+      "resolved_url": "https://raw.githubusercontent.com/Aider-AI/aider/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/coders/base_coder.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:12:03.055285+00:00",
+      "declared_source_version": "text-sha256:04a7b38c4f1d2b1684ac958f40bcd81a28b00139eae88afed59d2c970bef1ee1",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:12:03.055285+00:00",
+    "status": "saved"
+  }
+}

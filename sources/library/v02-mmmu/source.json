@@ -1,0 +1,16 @@
+{
+  "id": "v02-mmmu",
+  "title": "MMMU 基准",
+  "url": "https://mmmu-benchmark.github.io/",
+  "version": "text-sha256:0e318563d4444f15fa8b9a8bb0657b996249716630cb1653303a074c7f5c5be4",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "public_learning_or_evaluation_document",
+  "reading_scope": "读取入口、课程大纲或项目说明的相关正文；不代表完成全部课程、作业或基准运行",
+  "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页",
+  "text_sha256": "0e318563d4444f15fa8b9a8bb0657b996249716630cb1653303a074c7f5c5be4",
+  "excerpt": "MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI MMMU A Massive Multi-discipline Multimodal Understand",
+  "archive_policy": "只保存定位短摘与指纹，不镜像第三方全文"
+}

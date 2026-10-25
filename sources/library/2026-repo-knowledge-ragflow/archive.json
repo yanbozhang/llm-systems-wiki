@@ -1,0 +1,31 @@
+{
+  "source_id": "2026-repo-knowledge-ragflow",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "22bcc2881978416c6eac909be53d69869c3001424227440758ee8fc309362f3c",
+      "bytes": 17265,
+      "cache_file": "sources/.local/objects/22bcc2881978416c6eac909be53d69869c3001424227440758ee8fc309362f3c.bin",
+      "requested_url": "https://api.github.com/repos/infiniflow/ragflow/readme?ref=e5a5060c42f1d4c2251e458b000d40ee309bffc4",
+      "resolved_url": "https://api.github.com/repos/infiniflow/ragflow/readme?ref=e5a5060c42f1d4c2251e458b000d40ee309bffc4",
+      "content_type": "text/markdown",
+      "representation": "decoded_repository_document",
+      "retrieved_at": "2026-10-25T03:59:23.656364+00:00",
+      "declared_source_version": "text-sha256:6f4df051255682ee15cabd41e57b2ca22ea519a033776355d9582649d81dd779",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "Base64-decoded GitHub Contents API file"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:59:23.656364+00:00",
+    "status": "saved"
+  },
+  "public_snapshot": {
+    "spdx_id": "Apache-2.0",
+    "content_file": "sources/library/2026-repo-knowledge-ragflow/snapshot/source.txt",
+    "license_file": "sources/library/2026-repo-knowledge-ragflow/snapshot/LICENSE",
+    "upstream_license_url": "https://github.com/infiniflow/ragflow/blob/e5a5060c42f1d4c2251e458b000d40ee309bffc4/LICENSE",
+    "source_commit": "e5a5060c42f1d4c2251e458b000d40ee309bffc4",
+    "content_sha256": "22bcc2881978416c6eac909be53d69869c3001424227440758ee8fc309362f3c"
+  }
+}

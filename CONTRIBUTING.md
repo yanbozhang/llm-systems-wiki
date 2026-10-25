@@ -59,6 +59,12 @@ Python 测试放在 `tests/`，用独立手算值、状态不变量或已核验�
 
 贡献的原创内容适用仓库 [MIT License](LICENSE)。引述第三方资料应保留来源和其许可边界；不能将未公开产品实现包装成开源源码。讨论围绕证据、条件与可复查结果，尊重不同经验的贡献者。
 
-## 网站展示层
+## 研究进展与来源资料库
+
+新论文与当前开源进展放在wiki/frontiers/，并登记knowledge/frontiers.json。会议身份引用官方记录，预印本版本和会议记录分开；发布标签、发布日与当前分支commit分别保存。只读到摘要就明确写摘要范围，不用生成的公式或小程序冒充论文复现。
+
+来源先登记到sources/manifest/sources.json，再用`python scripts/source_library.py index`建立独立目录。原文件使用`capture`保存到Git忽略的本地缓存；提交前运行`python scripts/source_library.py check`。有缓存的机器可加`--local`核对真实大小与SHA-256。保留原始来源身份，不用当前抓取结果覆盖旧声明依赖的版本。具体规则见[来源资料库契约](schema/来源资料库契约.md)。
+
+## 网站展示层开发
 
 网站位于web目录，使用Astro与TypeScript，直接读取受管Markdown与knowledge清单。Node.js 22及以上版本下运行npm ci、npm run check、npm test和npm run build。设计约定见[设计说明](web/DESIGN.md)，开发入口见[网站开发](web/README.md)。正文变更不应在前端另写副本；UI的英文导航不等于正文已经翻译。网站通过GitHub Pages发布，构建产物与node_modules不提交。

@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchsys-ragas-precision",
+  "title": "Ragas 上下文精度实现",
+  "url": "https://github.com/explodinggradients/ragas/blob/298b68274234c060deacab3cf5fb52aa3a20e885/src/ragas/metrics/_context_precision.py",
+  "version": "text-sha256:baaf3981986602754ccbaef2936b6ac8e6d6551cab86477e64170683d74a4716",
+  "native_version": "298b68274234c060deacab3cf5fb52aa3a20e885",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "LLMContextPrecisionWithReference 80–181；WithoutReference181–196；IDBasedContextPrecision250–309",
+  "locator": "LLMContextPrecisionWithReference._calculate_average_precision；IDBasedContextPrecision._single_turn_ascore",
+  "text_sha256": "baaf3981986602754ccbaef2936b6ac8e6d6551cab86477e64170683d74a4716",
+  "excerpt": "denominator = cumsum + 1e-10",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

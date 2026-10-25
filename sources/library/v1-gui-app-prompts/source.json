@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-app-prompts",
+  "title": "AppAgent 反思协议",
+  "url": "https://github.com/TencentQQGYLab/AppAgent/blob/2c1900422caf6f9e94e96d5dd984b530e5a5fbf8/scripts/prompts.py",
+  "version": "text-sha256:a07e5a275c72e55ebd0a72206622849a8710043288bf34c9c6857a6db42fb3f5",
+  "native_version": "2c1900422caf6f9e94e96d5dd984b530e5a5fbf8",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "第184–222行；BACK、INEFFECTIVE、CONTINUE与SUCCESS语义及通用文档描述要求",
+  "locator": "self_explore_reflect_template",
+  "text_sha256": "a07e5a275c72e55ebd0a72206622849a8710043288bf34c9c6857a6db42fb3f5",
+  "excerpt": "Never include the numeric tag of the UI element in your description.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

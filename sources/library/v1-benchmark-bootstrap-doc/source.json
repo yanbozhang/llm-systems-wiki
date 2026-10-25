@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchmark-bootstrap-doc",
+  "title": "SciPy Bootstrap 官方文档",
+  "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html",
+  "version": "text-sha256:dafd869e884f7c42bd2569ce836f55f374a4f8e2414c92d109e75da7de304c06",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "读取相关正文；具体章节在文章中定位",
+  "locator": "正文相关章节",
+  "text_sha256": "dafd869e884f7c42bd2569ce836f55f374a4f8e2414c92d109e75da7de304c06",
+  "excerpt": "",
+  "archive_policy": "仅保留链接与指纹，全文在原站"
+}

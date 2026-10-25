@@ -1,0 +1,16 @@
+{
+  "id": "v1-coding-aider-gitdoc",
+  "title": "aider/website/docs/git.md",
+  "url": "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/website/docs/git.md",
+  "version": "text-sha256:1469e351b879780852b550b3b1d702d26cba36e2a7738b3613e2577441bbcf8c",
+  "native_version": "5dc9490bb35f9729ef2c95d00a19ccd30c26339c",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "完整文档1–76：预提交、自动提交、禁用选项及hook默认",
+  "locator": "Git integration；Disabling git integration",
+  "text_sha256": "1469e351b879780852b550b3b1d702d26cba36e2a7738b3613e2577441bbcf8c",
+  "excerpt": "Aider will first commit any preexisting changes with a descriptive commit message.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

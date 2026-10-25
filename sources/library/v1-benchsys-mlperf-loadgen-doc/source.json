@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchsys-mlperf-loadgen-doc",
+  "title": "loadgen/README.md",
+  "url": "https://github.com/mlcommons/inference/blob/3fbc329939999c13d0a7b5e67fb2092287e06047/loadgen/README.md",
+  "version": "text-sha256:074479dbeb369205ccc8800450c647893b4901c247e0e4ee7f321f05254e9305",
+  "native_version": "3fbc329939999c13d0a7b5e67fb2092287e06047",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "Introduction、integration、scope、submission considerations及accuracy职责1–110",
+  "locator": "Scope of the LoadGen Responsibilities；Submission Considerations",
+  "text_sha256": "074479dbeb369205ccc8800450c647893b4901c247e0e4ee7f321f05254e9305",
+  "excerpt": "The LoadGen is NOT aware of how to score the accuracy of a model outputs.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

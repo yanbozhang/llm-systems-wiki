@@ -2,8 +2,8 @@
 id: benchmark-rag
 module: benchmark
 status: published
-page_version: 3
-last_checked: 2026-10-24
+page_version: 4
+last_checked: 2026-10-25
 depth: worked
 practice_status: designed
 claim_ids: [claim-benchmark-rag-v1, claim-benchmark-rag-context-ranking-v1, claim-benchmark-rag-claim-denominators-v1, claim-benchmark-rag-judge-estimation-v1]
@@ -193,6 +193,12 @@ flowchart LR
 
 原论文的人工偏好一致性只在其标注设置和样本中成立。当前评测应让人工和裁判查看相同上下文，避免人工参考全文而裁判只见截断段落。分歧既可能是裁判错误，也可能来自证据访问范围不一致。保存原始判定理由有助于复核，但流畅的理由不能取代明确的证据支持关系。
 [WithReference与WithoutReference字段](https://github.com/explodinggradients/ragas/blob/298b68274234c060deacab3cf5fb52aa3a20e885/src/ragas/metrics/_context_precision.py#L93)；[空参考声明处理](https://github.com/explodinggradients/ragas/blob/298b68274234c060deacab3cf5fb52aa3a20e885/src/ragas/metrics/_context_recall.py#L114)；[WikiEval协议与局限](https://arxiv.org/html/2309.15217v2).
+
+## 2026研究进展
+
+ConfRAG分别衡量答案聚类、答案覆盖与理由覆盖，关注多来源证据中的分歧。覆盖多个观点不等于判定这些观点都真实，结构合规也不能替代语义正确；因此需要保留逐项指标和来源条件。 [会议来源与读取范围](../../sources/library/2026-paper-benchmark-conflicts/README.md)
+
+更多公式、代码示例、结构图及当前开源版本见[Benchmark研究进展](../frontiers/Benchmark研究进展.md)。新内容未执行真实模型实验。
 
 ---
 

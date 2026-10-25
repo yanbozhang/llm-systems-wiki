@@ -1,0 +1,16 @@
+{
+  "id": "sglang",
+  "title": "SGLang 原论文",
+  "url": "https://arxiv.org/html/2312.07104v2",
+  "version": "text-sha256:d46806b6c924d15e959feb4f15c13938688a8be83e5764cc8d1d01dec20dd24e",
+  "native_version": "2312.07104v2",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "正文的相关章节；公式和图表未逐项独立复核",
+  "locator": "3 RadixAttention；6 Evaluation",
+  "text_sha256": "d46806b6c924d15e959feb4f15c13938688a8be83e5764cc8d1d01dec20dd24e",
+  "excerpt": "RadixAttention 4 Efficient Constrained Decoding with Compressed Finite State Machine 5 Efficient Endpoint Calling with API Speculative Execution 6 Evaluation 6.1 Setup 6.2 End-to-E",
+  "archive_policy": "保留短摘与指纹，全文在原站；不承诺原站失效后可完整恢复"
+}

@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-coding-oh-eventstore",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "af721391c46a1979c45e0e414c45a82dfc42d8a92d62ac2ccea0242f725450b0",
+      "bytes": 14192,
+      "cache_file": "sources/.local/objects/af721391c46a1979c45e0e414c45a82dfc42d8a92d62ac2ccea0242f725450b0.bin",
+      "requested_url": "https://raw.githubusercontent.com/OpenHands/software-agent-sdk/acd96e6fa424c02432304395b9208f99be24b54d/openhands-sdk/openhands/sdk/conversation/event_store.py",
+      "resolved_url": "https://raw.githubusercontent.com/OpenHands/software-agent-sdk/acd96e6fa424c02432304395b9208f99be24b54d/openhands-sdk/openhands/sdk/conversation/event_store.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:11:54.874235+00:00",
+      "declared_source_version": "text-sha256:af721391c46a1979c45e0e414c45a82dfc42d8a92d62ac2ccea0242f725450b0",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:11:54.874235+00:00",
+    "status": "saved"
+  }
+}

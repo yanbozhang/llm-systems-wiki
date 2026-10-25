@@ -1,0 +1,22 @@
+{
+  "source_id": "v02-ragas-metrics",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "a3ceb880695dec3ddfde6725b69f6e1bfaf417922a6e2124322fa209a773298f",
+      "bytes": 140606,
+      "cache_file": "sources/.local/objects/a3ceb880695dec3ddfde6725b69f6e1bfaf417922a6e2124322fa209a773298f.bin",
+      "requested_url": "https://docs.ragas.io/en/stable/concepts/metrics/overview/",
+      "resolved_url": "https://docs.ragas.io/en/stable/concepts/metrics/overview/",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:03:16.571011+00:00",
+      "declared_source_version": "text-sha256:1e74cc05cca8ab3c1fa50856dcc0393747aac45dd9ae966bbef714473467c1aa",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:16.571011+00:00",
+    "status": "saved"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-math-paper-llama",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "bfc0c589520aeab5803ac91cc665eae0de67f77aa0ac6a4de2354bd8be11a791",
+      "bytes": 420375,
+      "cache_file": "sources/.local/objects/bfc0c589520aeab5803ac91cc665eae0de67f77aa0ac6a4de2354bd8be11a791.bin",
+      "requested_url": "https://arxiv.org/html/2302.13971v1",
+      "resolved_url": "https://arxiv.org/html/2302.13971v1",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:00:12.663713+00:00",
+      "declared_source_version": "text-sha256:55842d07729c5bdc5517dc7ac501d71fb34112e64e8eb0c4a60a0a43855b5ff6",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:00:12.663713+00:00",
+    "status": "saved"
+  }
+}

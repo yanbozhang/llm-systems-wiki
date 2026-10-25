@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-release-harness-agentframework",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "9c6f3012bff7429d6f7c5131a82c6dfdedcba091e868ce077872d70874f132db",
+      "bytes": 15016,
+      "cache_file": "sources/.local/objects/9c6f3012bff7429d6f7c5131a82c6dfdedcba091e868ce077872d70874f132db.bin",
+      "requested_url": "https://api.github.com/repos/microsoft/agent-framework/releases/latest",
+      "resolved_url": "https://api.github.com/repos/microsoft/agent-framework/releases/latest",
+      "content_type": "application/json",
+      "representation": "release_api_snapshot",
+      "retrieved_at": "2026-10-25T04:17:03.719442+00:00",
+      "declared_source_version": "text-sha256:71ec07b4e33ade500c5153026435813d05f16c785f447d13d09e6425e2cb6370",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "GitHub Releases API object serialized as JSON"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:17:03.719442+00:00",
+    "status": "saved"
+  }
+}

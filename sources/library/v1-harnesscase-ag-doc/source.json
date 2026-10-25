@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-ag-doc",
+  "title": "AutoGen Termination 官方教程",
+  "url": "https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/tutorial/termination.html",
+  "version": "text-sha256:8a27f07c014a476f0c45a4e1520c641a87297389ff3c05f7c3517c9736f1435f",
+  "native_version": "2026-10-24 页面快照",
+  "kind": "official_document",
+  "reading_scope": "内置终止条件、增量消息、自动reset、AND与OR组合",
+  "locator": "内置终止条件、增量消息、自动reset、AND与OR组合",
+  "text_sha256": "8a27f07c014a476f0c45a4e1520c641a87297389ff3c05f7c3517c9736f1435f",
+  "excerpt": "MaxMessageTermination: Stops after a specified number of messages",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}

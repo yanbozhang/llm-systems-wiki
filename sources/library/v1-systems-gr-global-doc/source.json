@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-gr-global-doc",
+  "title": "docs/query/global_search.md",
+  "url": "https://github.com/microsoft/graphrag/blob/c600ff80b77b9b62c47d539a3ac9569e95d8949b/docs/query/global_search.md",
+  "version": "text-sha256:21d90708c0d9a1c2b68258e5482bb7c1b94e269a3252a29bbcc0a069aecb8060",
+  "native_version": "c600ff80b77b9b62c47d539a3ac9569e95d8949b",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "Whole Dataset Reasoning与Methodology、Configuration 1–73行",
+  "locator": "Methodology；Configuration",
+  "text_sha256": "21d90708c0d9a1c2b68258e5482bb7c1b94e269a3252a29bbcc0a069aecb8060",
+  "excerpt": "At the reduce step, a filtered set of the most important points from the intermediate responses are aggregated.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

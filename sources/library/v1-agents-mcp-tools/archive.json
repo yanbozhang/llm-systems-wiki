@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-agents-mcp-tools",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "b7c7b9f0ba3906c1a33d84d127aae5c5edfbd07b15a255d44c48821b6a8b5ca2",
+      "bytes": 498714,
+      "cache_file": "sources/.local/objects/b7c7b9f0ba3906c1a33d84d127aae5c5edfbd07b15a255d44c48821b6a8b5ca2.bin",
+      "requested_url": "https://modelcontextprotocol.io/specification/2025-06-18/server/tools",
+      "resolved_url": "https://modelcontextprotocol.io/specification/2025-06-18/server/tools",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:03:58.546451+00:00",
+      "declared_source_version": "text-sha256:deebf14f94e60dc1db48f7d4c215285bbb109f195ced301c8723b7d9b789f049",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:58.546451+00:00",
+    "status": "saved"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-mobile-v2-readme",
+  "title": "Mobile-Agent-v2 官方目录说明",
+  "url": "https://github.com/X-PLUG/MobileAgent/blob/11cea575561fb7800b5fb6b6cafa56f7a91de11f/Mobile-Agent-v2/README.md",
+  "version": "text-sha256:31d766a855215cab92585d4eafd527421f6790ae49ead3606838fb32f0153235",
+  "native_version": "11cea575561fb7800b5fb6b6cafa56f7a91de11f",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "Introduction、Getting Started、平台与ADB键盘、模型选择及reflection/memory开关",
+  "locator": "Introduction; Preparation; Choose the Appropriate Execution Method",
+  "text_sha256": "31d766a855215cab92585d4eafd527421f6790ae49ead3606838fb32f0153235",
+  "excerpt": "only Android OS and Harmony OS (version <= 4) support tool debugging",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

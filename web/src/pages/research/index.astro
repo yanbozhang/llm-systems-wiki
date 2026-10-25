@@ -1,0 +1,27 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import ModuleIcon from '../../components/ModuleIcon.astro';
+import {frontiers,modules} from '../../lib/content';
+import {sitePath} from '../../lib/navigation';
+---
+<SiteLayout title="2026研究进展" active="research" section="研究进展">
+  <div class="content-wrap inner-page">
+    <header class="page-intro">
+      <div class="eyebrow"><span class="eyebrow-line"></span><span>RESEARCH / 2026</span></div>
+      <h1 data-zh="读懂基础，再看前沿。" data-en="Connect the foundations to new research.">读懂基础，再看前沿。</h1>
+      <p>沿七个模块阅读2026年顶会论文与当前开源实现。每篇综述说明什么发生了变化、依据在哪里、哪些条件仍需验证。</p>
+    </header>
+    <div class="module-grid">
+      {frontiers.map(f=>{
+        const mod=modules.find(m=>m.id===f.module)!;
+        return <a class={`module-card ${mod.color}`} href={sitePath(`/research/${f.id}/`)} data-research-card>
+          <div class="module-card-top"><span class={`module-icon ${mod.color}`}><ModuleIcon id={mod.id} size={23}/></span><span class="section-kicker">{f.as_of}</span></div>
+          <h2>{f.title}</h2><p>{f.summary}</p>
+          <div class="module-card-foot"><span>{f.paper_ids.length} 篇论文 · {f.repository_ids.length} 个项目</span><span>阅读 →</span></div>
+        </a>;
+      })}
+    </div>
+    <div class="reading-note"><p>会议录用以官方记录为准；发布版本与当前提交分别记录。论文原文陈述、教学推演和真实复现实验保持区分。</p></div>
+    <a class="button secondary" href={sitePath('/sources/')} data-zh="进入来源资料库" data-en="Explore the source library">进入来源资料库</a>
+  </div>
+</SiteLayout>

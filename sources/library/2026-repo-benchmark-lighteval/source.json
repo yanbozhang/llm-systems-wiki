@@ -1,0 +1,19 @@
+{
+  "id": "2026-repo-benchmark-lighteval",
+  "title": "huggingface/lighteval：固定提交项目说明",
+  "url": "https://github.com/huggingface/lighteval/blob/7fa19dc6f53a713ba8bb6541e7ed66dad2e24fd7/README.md",
+  "version": "text-sha256:86a6d53163870f26f75ec546f3877aab206d996608d4d9ee7274716f905528da",
+  "native_version": "7fa19dc6f53a713ba8bb6541e7ed66dad2e24fd7",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "README的项目定位、组成、入口与许可提示；未运行完整项目",
+  "locator": "README.md",
+  "text_sha256": "86a6d53163870f26f75ec546f3877aab206d996608d4d9ee7274716f905528da",
+  "excerpt": "<p align=\"center\"> <br/> <img alt=\"lighteval library logo\" src=\"./assets/lighteval-doc.svg\" width=\"376\" height=\"59\" style=\"max-width: 100%;\"> <br/> </p> <p alig",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "maintainer": "huggingface",
+  "commit_date": "2026-10-06T09:36:51Z",
+  "license_spdx": "MIT"
+}

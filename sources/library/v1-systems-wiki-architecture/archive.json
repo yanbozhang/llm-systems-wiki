@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-systems-wiki-architecture",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "0b0f6d59bed782983b595de16299757966ec3b15f01b39a5bfe4ed33b07c3b28",
+      "bytes": 32820,
+      "cache_file": "sources/.local/objects/0b0f6d59bed782983b595de16299757966ec3b15f01b39a5bfe4ed33b07c3b28.bin",
+      "requested_url": "https://raw.githubusercontent.com/microsoft/llmwiki/e09126f257c1fcf8e63234382748a51cf6a5df7f/ARCHITECTURE.md",
+      "resolved_url": "https://raw.githubusercontent.com/microsoft/llmwiki/e09126f257c1fcf8e63234382748a51cf6a5df7f/ARCHITECTURE.md",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:14:19.741855+00:00",
+      "declared_source_version": "text-sha256:0b0f6d59bed782983b595de16299757966ec3b15f01b39a5bfe4ed33b07c3b28",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:14:19.741855+00:00",
+    "status": "saved"
+  }
+}

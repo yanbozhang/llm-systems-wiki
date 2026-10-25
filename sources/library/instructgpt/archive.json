@@ -1,0 +1,22 @@
+{
+  "source_id": "instructgpt",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "ca9f1af4f2111b5915e8c3518f00d063f8aeb953c91164ac08c9ccd5b81c4c25",
+      "bytes": 45463,
+      "cache_file": "sources/.local/objects/ca9f1af4f2111b5915e8c3518f00d063f8aeb953c91164ac08c9ccd5b81c4c25.bin",
+      "requested_url": "https://arxiv.org/abs/2203.02155v1",
+      "resolved_url": "https://arxiv.org/abs/2203.02155v1",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_landing_page",
+      "retrieved_at": "2026-10-25T04:00:12.664690+00:00",
+      "declared_source_version": "text-sha256:67c4a350fdd70e374d887083045be465d3a6da270bc2d0883a8e980d8d279029",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:00:12.664690+00:00",
+    "status": "saved"
+  }
+}

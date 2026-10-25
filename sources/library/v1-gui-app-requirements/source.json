@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-app-requirements",
+  "title": "AppAgent Python依赖清单",
+  "url": "https://github.com/TencentQQGYLab/AppAgent/blob/2c1900422caf6f9e94e96d5dd984b530e5a5fbf8/requirements.txt",
+  "version": "text-sha256:dcafa0cc48f058c2caeae8dcaa129c019889bbabb127d70cd71443e156e980b2",
+  "native_version": "2c1900422caf6f9e94e96d5dd984b530e5a5fbf8",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "完整requirements.txt，无固定包版本",
+  "locator": "requirements.txt",
+  "text_sha256": "dcafa0cc48f058c2caeae8dcaa129c019889bbabb127d70cd71443e156e980b2",
+  "excerpt": "dashscope",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

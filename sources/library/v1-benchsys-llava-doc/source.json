@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchsys-llava-doc",
+  "title": "README.md",
+  "url": "https://github.com/haotian-liu/LLaVA/blob/c121f0432da27facab705978f83c4ada465e46fd/README.md",
+  "version": "text-sha256:bf7fbd57f27198308d9ed8fb2813267a9d18cf79198c5ac534fba1ad757a287b",
+  "native_version": "c121f0432da27facab705978f83c4ada465e46fd",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "Training相关选项369–384，image_aspect_ratio pad说明",
+  "locator": "image_aspect_ratio pad",
+  "text_sha256": "bf7fbd57f27198308d9ed8fb2813267a9d18cf79198c5ac534fba1ad757a287b",
+  "excerpt": "This pads the non-square images to square, instead of cropping them.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

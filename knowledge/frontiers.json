@@ -1,0 +1,245 @@
+[
+  {
+    "id": "network",
+    "module": "network",
+    "title": "模型网络研究进展",
+    "page": "wiki/frontiers/模型网络研究进展.md",
+    "as_of": "2026-10-25",
+    "summary": "从固定计算预算，走向专家宽度、MLA稀疏性与硬件约束。",
+    "topic_ids": [
+      "transformer",
+      "attention-heads",
+      "position",
+      "ffn-norm"
+    ],
+    "source_ids": [
+      "2026-paper-network-mose",
+      "2026-full-network-mose",
+      "2026-paper-network-robsa",
+      "2026-full-network-robsa",
+      "2026-repo-network-megatron",
+      "2026-release-network-megatron",
+      "2026-code-network-megatron",
+      "2026-repo-network-transformers",
+      "2026-release-network-transformers",
+      "2026-code-network-transformers"
+    ],
+    "paper_ids": [
+      "2026-paper-network-mose",
+      "2026-paper-network-robsa"
+    ],
+    "repository_ids": [
+      "NVIDIA/Megatron-LM",
+      "huggingface/transformers"
+    ]
+  },
+  {
+    "id": "training",
+    "module": "training",
+    "title": "训练研究进展",
+    "page": "wiki/frontiers/训练研究进展.md",
+    "as_of": "2026-10-25",
+    "summary": "把奖励归一化、正负样本与异步训练中的版本差异连起来。",
+    "topic_ids": [
+      "pretraining",
+      "sft",
+      "preference",
+      "policy-optimization"
+    ],
+    "source_ids": [
+      "2026-paper-training-grpo",
+      "2026-paper-training-polarity",
+      "2026-full-training-polarity",
+      "2026-repo-training-trl",
+      "2026-release-training-trl",
+      "2026-repo-training-verl",
+      "2026-release-training-verl",
+      "2026-code-training-verl"
+    ],
+    "paper_ids": [
+      "2026-paper-training-grpo",
+      "2026-paper-training-polarity"
+    ],
+    "repository_ids": [
+      "huggingface/trl",
+      "volcengine/verl"
+    ]
+  },
+  {
+    "id": "inference",
+    "module": "inference",
+    "title": "推理研究进展",
+    "page": "wiki/frontiers/推理研究进展.md",
+    "as_of": "2026-10-25",
+    "summary": "比较缓存淘汰、长上下文推测解码和真实服务预算。",
+    "topic_ids": [
+      "prefill-decode",
+      "kv-cache",
+      "cache-scheduling",
+      "inference-frameworks"
+    ],
+    "source_ids": [
+      "2026-paper-inference-eviction",
+      "2026-paper-inference-longspec",
+      "2026-full-inference-longspec",
+      "2026-repo-inference-sglang",
+      "2026-release-inference-sglang",
+      "2026-code-inference-sglang",
+      "2026-repo-inference-tensorrt",
+      "2026-release-inference-tensorrt"
+    ],
+    "paper_ids": [
+      "2026-paper-inference-eviction",
+      "2026-paper-inference-longspec"
+    ],
+    "repository_ids": [
+      "sgl-project/sglang",
+      "NVIDIA/TensorRT-LLM"
+    ]
+  },
+  {
+    "id": "harness",
+    "module": "harness",
+    "title": "Harness研究进展",
+    "page": "wiki/frontiers/Harness研究进展.md",
+    "as_of": "2026-10-25",
+    "summary": "让跨轨迹压缩、经验质量与可恢复的运行状态一起工作。",
+    "topic_ids": [
+      "agent-loop",
+      "context",
+      "memory",
+      "tools-skills",
+      "langgraph",
+      "autogen"
+    ],
+    "source_ids": [
+      "2026-paper-harness-retrac",
+      "2026-full-harness-retrac",
+      "2026-paper-harness-memory",
+      "2026-repo-harness-agentframework",
+      "2026-release-harness-agentframework",
+      "2026-repo-harness-langgraph",
+      "2026-release-harness-langgraph",
+      "2026-code-harness-langgraph"
+    ],
+    "paper_ids": [
+      "2026-paper-harness-retrac",
+      "2026-paper-harness-memory"
+    ],
+    "repository_ids": [
+      "microsoft/agent-framework",
+      "langchain-ai/langgraph"
+    ]
+  },
+  {
+    "id": "knowledge",
+    "module": "knowledge",
+    "title": "知识库研究进展",
+    "page": "wiki/frontiers/知识库研究进展.md",
+    "as_of": "2026-10-25",
+    "summary": "从语义相似检索，走向需要推理且能处理冲突的证据链。",
+    "topic_ids": [
+      "rag",
+      "ingestion",
+      "hybrid-search",
+      "graph-wiki"
+    ],
+    "source_ids": [
+      "2026-paper-knowledge-crag",
+      "2026-paper-knowledge-reasonembed",
+      "2026-full-knowledge-reasonembed",
+      "2026-repo-knowledge-graphrag",
+      "2026-release-knowledge-graphrag",
+      "2026-repo-knowledge-ragflow",
+      "2026-release-knowledge-ragflow"
+    ],
+    "paper_ids": [
+      "2026-paper-knowledge-crag",
+      "2026-paper-knowledge-reasonembed"
+    ],
+    "repository_ids": [
+      "microsoft/graphrag",
+      "infiniflow/ragflow"
+    ]
+  },
+  {
+    "id": "agents",
+    "module": "agents",
+    "title": "业务Agent研究进展",
+    "page": "wiki/frontiers/业务Agent研究进展.md",
+    "as_of": "2026-10-25",
+    "summary": "细化软件任务记忆与GUI步骤监督，理解执行边界的工程变化。",
+    "topic_ids": [
+      "task-loop",
+      "gui-agent",
+      "coding-agent",
+      "agent-evaluation",
+      "openhands",
+      "swe-agent",
+      "aider",
+      "mobile-agent",
+      "app-agent",
+      "ui-tars",
+      "codex-cli",
+      "claude-code"
+    ],
+    "source_ids": [
+      "2026-paper-agents-subtask",
+      "2026-paper-agents-webstar",
+      "2026-full-agents-webstar",
+      "2026-repo-agents-codex",
+      "2026-release-agents-codex",
+      "2026-code-agents-codex",
+      "2026-repo-agents-uitars",
+      "2026-release-agents-uitars"
+    ],
+    "paper_ids": [
+      "2026-paper-agents-subtask",
+      "2026-paper-agents-webstar"
+    ],
+    "repository_ids": [
+      "openai/codex",
+      "bytedance/UI-TARS-desktop"
+    ]
+  },
+  {
+    "id": "benchmark",
+    "module": "benchmark",
+    "title": "Benchmark研究进展",
+    "page": "wiki/frontiers/Benchmark研究进展.md",
+    "as_of": "2026-10-25",
+    "summary": "检查排行榜饱和、冲突证据与评分管线的可比性。",
+    "topic_ids": [
+      "benchmark-protocol",
+      "benchmark-metrics",
+      "benchmark-contamination",
+      "benchmark-general",
+      "benchmark-reasoning-code",
+      "benchmark-multimodal",
+      "benchmark-agents",
+      "benchmark-rag",
+      "benchmark-judge",
+      "benchmark-systems",
+      "benchmark-robustness"
+    ],
+    "source_ids": [
+      "2026-paper-benchmark-saturation",
+      "2026-paper-benchmark-conflicts",
+      "2026-full-benchmark-conflicts",
+      "2026-repo-benchmark-harness",
+      "2026-release-benchmark-harness",
+      "2026-code-benchmark-harness",
+      "2026-repo-benchmark-lighteval",
+      "2026-release-benchmark-lighteval",
+      "2026-code-benchmark-lighteval"
+    ],
+    "paper_ids": [
+      "2026-paper-benchmark-saturation",
+      "2026-paper-benchmark-conflicts"
+    ],
+    "repository_ids": [
+      "EleutherAI/lm-evaluation-harness",
+      "huggingface/lighteval"
+    ]
+  }
+]

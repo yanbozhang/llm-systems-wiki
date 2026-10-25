@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-llama-code",
+  "title": "src/transformers/models/llama/modeling_llama.py",
+  "url": "https://github.com/huggingface/transformers/blob/50e35cc0ca18ec19b80653690de553e6decf74f5/src/transformers/models/llama/modeling_llama.py",
+  "version": "text-sha256:46d35513266b2a232549531b9cefce1b87dc1632479e2497c36bf4c5ecef12f0",
+  "native_version": "50e35cc0ca18ec19b80653690de553e6decf74f5",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "repeat_kv、eager_attention_forward、LlamaAttention.forward 167–265",
+  "locator": "eager_attention_forward；LlamaAttention.forward",
+  "text_sha256": "46d35513266b2a232549531b9cefce1b87dc1632479e2497c36bf4c5ecef12f0",
+  "excerpt": "key_states, value_states = past_key_values.update(key_states, value_states, self.layer_idx)",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

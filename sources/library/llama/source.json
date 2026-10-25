@@ -1,0 +1,16 @@
+{
+  "id": "llama",
+  "title": "LLaMA 原论文",
+  "url": "https://arxiv.org/html/2302.13971v1",
+  "version": "text-sha256:a170fc10ca377b49288ea43b224aed18078ec0ab5ba917114dabb4061139c787",
+  "native_version": "2302.13971v1",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "正文的相关章节；公式和图表未逐项独立复核",
+  "locator": "2.1 Data；2.2 Architecture",
+  "text_sha256": "a170fc10ca377b49288ea43b224aed18078ec0ab5ba917114dabb4061139c787",
+  "excerpt": "To improve the training stability, we normalize the input of each transformer sub-layer, instead of normalizing the output. We use the RMSNorm normalizing function, introduced by Z",
+  "archive_policy": "保留短摘与指纹，全文在原站；不承诺原站失效后可完整恢复"
+}

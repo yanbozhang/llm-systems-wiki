@@ -1,0 +1,16 @@
+{
+  "id": "2026-code-inference-sglang",
+  "title": "sgl-project/sglang：python/sglang/srt/mem_cache/radix_cache.py",
+  "url": "https://github.com/sgl-project/sglang/blob/d558ac2f3e7a59a876bbce4687fa49334de777fa/python/sglang/srt/mem_cache/radix_cache.py",
+  "version": "text-sha256:61d55b14e7d229049685ab27a8bf5dcc0b28fb25a134778c99784682011cafcf",
+  "native_version": "d558ac2f3e7a59a876bbce4687fa49334de777fa",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "RadixCache.evict、inc_lock_ref、dec_lock_ref，552行起；静态阅读，未运行完整框架",
+  "locator": "RadixCache.evict、inc_lock_ref、dec_lock_ref，552行起",
+  "text_sha256": "61d55b14e7d229049685ab27a8bf5dcc0b28fb25a134778c99784682011cafcf",
+  "excerpt": "from __future__ import annotations from sglang.srt.mem_cache.cache_init_params import CacheInitParams \"\"\" Copyright 2023-2024 SGLang Team Licensed under the Apa",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验"
+}

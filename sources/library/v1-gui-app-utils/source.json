@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-app-utils",
+  "title": "AppAgent 网格绘制",
+  "url": "https://github.com/TencentQQGYLab/AppAgent/blob/2c1900422caf6f9e94e96d5dd984b530e5a5fbf8/scripts/utils.py",
+  "version": "text-sha256:8142b4c2b75aa164e4737ab7572859f7722999554092ea9d336052f9153e66ee",
+  "native_version": "2c1900422caf6f9e94e96d5dd984b530e5a5fbf8",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "第63–95行；120至180像素可整除单元选择、回退尺寸及行列标签",
+  "locator": "draw_grid",
+  "text_sha256": "8142b4c2b75aa164e4737ab7572859f7722999554092ea9d336052f9153e66ee",
+  "excerpt": "label = i * cols + j + 1",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

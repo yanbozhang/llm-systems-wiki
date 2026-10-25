@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchsys-mmmu-run",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "e23143247c1976ee500bb4815fbf1087b80de0a9702a98280100193a5f079692",
+      "bytes": 3944,
+      "cache_file": "sources/.local/objects/e23143247c1976ee500bb4815fbf1087b80de0a9702a98280100193a5f079692.bin",
+      "requested_url": "https://raw.githubusercontent.com/MMMU-Benchmark/MMMU/268471d0d488258990025331c7528359c324aa25/mmmu/run_llava.py",
+      "resolved_url": "https://raw.githubusercontent.com/MMMU-Benchmark/MMMU/268471d0d488258990025331c7528359c324aa25/mmmu/run_llava.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:08:15.834560+00:00",
+      "declared_source_version": "text-sha256:e23143247c1976ee500bb4815fbf1087b80de0a9702a98280100193a5f079692",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:08:15.834560+00:00",
+    "status": "saved"
+  }
+}

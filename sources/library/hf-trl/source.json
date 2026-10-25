@@ -1,0 +1,16 @@
+{
+  "id": "hf-trl",
+  "title": "TRL 训练文档",
+  "url": "https://huggingface.co/docs/trl/index",
+  "version": "text-sha256:696881224f521732574e87165874c98751b58d94fc6da227fe222dbb92c441e6",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "正文的相关章节；公式和图表未逐项独立复核",
+  "locator": "Trainers",
+  "text_sha256": "696881224f521732574e87165874c98751b58d94fc6da227fe222dbb92c441e6",
+  "excerpt": "SFTTrainer , sharded across your GPUs at load time. See the 8-node LoRA example . 🚀 Training on AWS Trainium: TRL’s trainers now run on AWS Trainium through TorchNeuron, PyTorch’s",
+  "archive_policy": "保留短摘与指纹，全文在原站；不承诺原站失效后可完整恢复"
+}

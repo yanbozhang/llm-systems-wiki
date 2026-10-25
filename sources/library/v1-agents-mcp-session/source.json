@@ -1,0 +1,16 @@
+{
+  "id": "v1-agents-mcp-session",
+  "title": "MCP Python SDK 工具调用与结果校验",
+  "url": "https://github.com/modelcontextprotocol/python-sdk/blob/2af9e3089ac66b35c1550c500aae86a82efb1e17/src/mcp/client/session.py#L1052",
+  "native_version": "2af9e3089ac66b35c1550c500aae86a82efb1e17",
+  "kind": "source_code",
+  "reading_scope": "ClientSession.call_tool 1052–1109；validate_tool_result 1118–1154；_output_schema_validator 1156–1183",
+  "locator": "ClientSession.call_tool 1052–1109；validate_tool_result 1118–1154；_output_schema_validator 1156–1183",
+  "text_sha256": "031512d2cd20670f542534274e39c514d2a8e4dba678256d97ed57e60f4bc5ac",
+  "excerpt": "async def call_tool(",
+  "version": "text-sha256:031512d2cd20670f542534274e39c514d2a8e4dba678256d97ed57e60f4bc5ac",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

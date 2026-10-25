@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-ui-host",
+  "title": "UI-TARS Desktop runAgent宿主装配",
+  "url": "https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/apps/ui-tars/src/main/services/runAgent.ts",
+  "version": "text-sha256:b9a87adcea41f5c250253fac55c791d2280b228a471a0128782672c887e84fc8",
+  "native_version": "3ac2cb8d946d78d5ff92ad17b318eaafa18c178c",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "第5–37、121–255行；SDK导入、Operator选择、模型设置、回调与重试配置",
+  "locator": "runAgent",
+  "text_sha256": "b9a87adcea41f5c250253fac55c791d2280b228a471a0128782672c887e84fc8",
+  "excerpt": "operator = new NutJSElectronOperator();",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

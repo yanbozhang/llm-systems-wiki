@@ -1,0 +1,16 @@
+{
+  "id": "v1-agents-context-guide",
+  "title": "Effective context engineering for AI agents",
+  "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+  "native_version": "2025-09-29 文章；2026-10-24 页面快照",
+  "kind": "official_document",
+  "reading_scope": "Context engineering vs. prompt engineering；Compaction；Structured note-taking",
+  "locator": "Context engineering vs. prompt engineering；Compaction；Structured note-taking",
+  "text_sha256": "6c6fad62eddc4f9b04b7c4c342046848c6185ffb6f8d3828456c47ce2a8510c8",
+  "excerpt": "Compaction is the practice of taking a conversation nearing the context window limit",
+  "version": "text-sha256:6c6fad62eddc4f9b04b7c4c342046848c6185ffb6f8d3828456c47ce2a8510c8",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

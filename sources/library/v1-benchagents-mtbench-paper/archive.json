@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchagents-mtbench-paper",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "a1768d348815995e70fe3c49c1164e220a74fbd2c35211cffea1861b6ed4e30f",
+      "bytes": 248401,
+      "cache_file": "sources/.local/objects/a1768d348815995e70fe3c49c1164e220a74fbd2c35211cffea1861b6ed4e30f.bin",
+      "requested_url": "https://arxiv.org/html/2306.05685",
+      "resolved_url": "https://arxiv.org/html/2306.05685",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:04:48.594904+00:00",
+      "declared_source_version": "text-sha256:2f9fcdbbc421ec86a3019543702497daa9bb6563107db4aa300e24a16c235330",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:04:48.594904+00:00",
+    "status": "saved"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchagents-agentdojo-paper",
+  "title": "AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents",
+  "url": "https://arxiv.org/html/2406.13352",
+  "version": "text-sha256:e6c52897c6ce82a3c75fcb64ec79df365b97b1a73ef1390ea814cbf69a9ea279",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "缓存1235–1455任务/安全案例和§3.1状态、工具及确定性判据；1815–1896 §3.4结果口径；2324–2395工具过滤和正常效用权衡",
+  "locator": "§3.1 AgentDojo Components；§3.4 Reporting AgentDojo Results；Figure 9 defense trade-offs",
+  "text_sha256": "e6c52897c6ce82a3c75fcb64ec79df365b97b1a73ef1390ea814cbf69a9ea279",
+  "excerpt": "Utility Under Attack: the fraction of security cases where the agent solves the user task correctly, without any adversarial side effects.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

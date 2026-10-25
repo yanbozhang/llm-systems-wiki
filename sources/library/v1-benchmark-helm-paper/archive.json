@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchmark-helm-paper",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "3dd1a55980c3971b4b1f82c02f2615647943f6bf2ad0a780647c06fb41fe1fc7",
+      "bytes": 1714421,
+      "cache_file": "sources/.local/objects/3dd1a55980c3971b4b1f82c02f2615647943f6bf2ad0a780647c06fb41fe1fc7.bin",
+      "requested_url": "https://arxiv.org/html/2211.09110",
+      "resolved_url": "https://arxiv.org/html/2211.09110",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:08:17.880829+00:00",
+      "declared_source_version": "text-sha256:d94371e353f630af4f14cfa41e306221571c2f60e4120c977fce05eb7f4fb3bd",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:08:17.880829+00:00",
+    "status": "saved"
+  }
+}

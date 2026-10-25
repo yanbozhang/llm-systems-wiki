@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-systems-light-utils",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "8c49d4b0150fdfc3343d85770a46c0c49da5b6c6a81c09eb5ca10a997c8dcdbe",
+      "bytes": 358232,
+      "cache_file": "sources/.local/objects/8c49d4b0150fdfc3343d85770a46c0c49da5b6c6a81c09eb5ca10a997c8dcdbe.bin",
+      "requested_url": "https://raw.githubusercontent.com/HKUDS/LightRAG/aaebfe1bb8d55deb6a4304d357a3bf4c92fcd40a/lightrag/utils.py",
+      "resolved_url": "https://raw.githubusercontent.com/HKUDS/LightRAG/aaebfe1bb8d55deb6a4304d357a3bf4c92fcd40a/lightrag/utils.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:14:05.761146+00:00",
+      "declared_source_version": "text-sha256:8c49d4b0150fdfc3343d85770a46c0c49da5b6c6a81c09eb5ca10a997c8dcdbe",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:14:05.761146+00:00",
+    "status": "saved"
+  }
+}

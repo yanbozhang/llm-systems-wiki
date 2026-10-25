@@ -1,0 +1,16 @@
+{
+  "id": "v1-math-nano-model",
+  "title": "nanoGPT model.py",
+  "url": "https://github.com/karpathy/nanoGPT/blob/3adf61e154c3fe3fca428ad6bc3818b27a3b8291/model.py",
+  "version": "text-sha256:7c01703240dbec5d554527dc666e35b3df8391d0b117fddc07afcf325a21d11c",
+  "native_version": "3adf61e154c3fe3fca428ad6bc3818b27a3b8291",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "实际读取第20–205、303–330行；LayerNorm、CausalSelfAttention、MLP、Block、GPT.forward与generate",
+  "locator": "CausalSelfAttention.forward; Block.forward; GPT.forward; GPT.generate",
+  "text_sha256": "7c01703240dbec5d554527dc666e35b3df8391d0b117fddc07afcf325a21d11c",
+  "excerpt": "att = att.masked_fill(self.bias[:,:,:T,:T] == 0, float('-inf'))",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

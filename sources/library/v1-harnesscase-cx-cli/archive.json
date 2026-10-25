@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-harnesscase-cx-cli",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "ac51c153916132c0be2c37ea1136562685b832957bc2e43e53d71608d0b28a4a",
+      "bytes": 185257,
+      "cache_file": "sources/.local/objects/ac51c153916132c0be2c37ea1136562685b832957bc2e43e53d71608d0b28a4a.bin",
+      "requested_url": "https://raw.githubusercontent.com/openai/codex/970111f6cb62cc02fe36a82ea7d71b37a2889c97/codex-rs/cli/src/main.rs",
+      "resolved_url": "https://raw.githubusercontent.com/openai/codex/970111f6cb62cc02fe36a82ea7d71b37a2889c97/codex-rs/cli/src/main.rs",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:13.873983+00:00",
+      "declared_source_version": "text-sha256:ac51c153916132c0be2c37ea1136562685b832957bc2e43e53d71608d0b28a4a",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:13.873983+00:00",
+    "status": "saved"
+  }
+}

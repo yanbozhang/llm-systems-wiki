@@ -1,0 +1,16 @@
+{
+  "id": "v1-coding-oh-eventstore",
+  "title": "openhands-sdk/openhands/sdk/conversation/event_store.py",
+  "url": "https://github.com/OpenHands/software-agent-sdk/blob/acd96e6fa424c02432304395b9208f99be24b54d/openhands-sdk/openhands/sdk/conversation/event_store.py",
+  "version": "text-sha256:af721391c46a1979c45e0e414c45a82dfc42d8a92d62ac2ccea0242f725450b0",
+  "native_version": "acd96e6fa424c02432304395b9208f99be24b54d",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "_effective_parent_id/path_to_root95–131；append188–245",
+  "locator": "EventLog.path_to_root；EventLog.append",
+  "text_sha256": "af721391c46a1979c45e0e414c45a82dfc42d8a92d62ac2ccea0242f725450b0",
+  "excerpt": "Raises ValueError on a cycle, KeyError if leaf_id or an ancestor is missing.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

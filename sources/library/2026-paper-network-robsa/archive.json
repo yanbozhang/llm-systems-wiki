@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-paper-network-robsa",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "bbfef176fe5dacc918a55a72191d624588416d990809b51c0b93e5d2f786f10c",
+      "bytes": 43773,
+      "cache_file": "sources/.local/objects/bbfef176fe5dacc918a55a72191d624588416d990809b51c0b93e5d2f786f10c.bin",
+      "requested_url": "https://aclanthology.org/2026.acl-long.46/",
+      "resolved_url": "https://aclanthology.org/2026.acl-long.46/",
+      "content_type": "text/html",
+      "representation": "conference_record_html",
+      "retrieved_at": "2026-10-25T03:56:41.554103+00:00",
+      "declared_source_version": "text-sha256:c496549aa9f960681ff239f5d722fcf87e9c193426d75435abaf2de300f8436c",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "HTTP response"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:56:41.554103+00:00",
+    "status": "saved"
+  }
+}

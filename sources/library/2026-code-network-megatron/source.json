@@ -1,0 +1,16 @@
+{
+  "id": "2026-code-network-megatron",
+  "title": "NVIDIA/Megatron-LM：megatron/core/transformer/moe/moe_layer.py",
+  "url": "https://github.com/NVIDIA/Megatron-LM/blob/2052769557dcf7045c4091d1996f0bc59afeb80e/megatron/core/transformer/moe/moe_layer.py",
+  "version": "text-sha256:95dc78afe985a752a9de32984e219fe5b718acc46ae7ea6ca5ca922e966a1896",
+  "native_version": "2052769557dcf7045c4091d1996f0bc59afeb80e",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "MoELayer初始化、router与dispatch组件，241行起；静态阅读，未运行完整框架",
+  "locator": "MoELayer初始化、router与dispatch组件，241行起",
+  "text_sha256": "95dc78afe985a752a9de32984e219fe5b718acc46ae7ea6ca5ca922e966a1896",
+  "excerpt": "# Copyright (c) 2025 NVIDIA CORPORATION & AFFILIATES. All rights reserved. from __future__ import annotations from abc import ABC, abstractmethod from dataclass",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验"
+}

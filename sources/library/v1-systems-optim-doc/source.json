@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-optim-doc",
+  "title": "docs/configuration/optimization.md",
+  "url": "https://github.com/vllm-project/vllm/blob/7a64fb8fc9239cb65e0df9313fa759594dfb206a/docs/configuration/optimization.md",
+  "version": "text-sha256:6464b660e86cf0724dc2042530ac588a23f50aeb6c6ec876c03622d88df35807",
+  "native_version": "7a64fb8fc9239cb65e0df9313fa759594dfb206a",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "Preemption 与 Chunked Prefill，27–80行",
+  "locator": "Preemption；Chunked Prefill",
+  "text_sha256": "6464b660e86cf0724dc2042530ac588a23f50aeb6c6ec876c03622d88df35807",
+  "excerpt": "Chunked prefill allows vLLM to process large prefills in smaller chunks and batch them together with decode requests.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

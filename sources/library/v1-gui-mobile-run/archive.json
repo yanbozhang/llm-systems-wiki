@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-gui-mobile-run",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "80f2d5fe878995aafe5504621a303627caad2e243c609f7dfa1cb3563b6e7b3f",
+      "bytes": 17936,
+      "cache_file": "sources/.local/objects/80f2d5fe878995aafe5504621a303627caad2e243c609f7dfa1cb3563b6e7b3f.bin",
+      "requested_url": "https://raw.githubusercontent.com/X-PLUG/MobileAgent/11cea575561fb7800b5fb6b6cafa56f7a91de11f/Mobile-Agent-v2/run.py",
+      "resolved_url": "https://raw.githubusercontent.com/X-PLUG/MobileAgent/11cea575561fb7800b5fb6b6cafa56f7a91de11f/Mobile-Agent-v2/run.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:12:48.818039+00:00",
+      "declared_source_version": "text-sha256:80f2d5fe878995aafe5504621a303627caad2e243c609f7dfa1cb3563b6e7b3f",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:12:48.818039+00:00",
+    "status": "saved"
+  }
+}

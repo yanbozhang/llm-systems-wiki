@@ -1,0 +1,16 @@
+{
+  "id": "v1-coding-aider-mapdoc",
+  "title": "aider/website/docs/repomap.md",
+  "url": "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/website/docs/repomap.md",
+  "version": "text-sha256:ac41c8843d66c04bb5951155015118ef702f107417be62f280cb8955baf1eec8",
+  "native_version": "5dc9490bb35f9729ef2c95d00a19ccd30c26339c",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "完整文档1–112，Repository map与Optimizing the map",
+  "locator": "Repository map；Optimizing the map",
+  "text_sha256": "ac41c8843d66c04bb5951155015118ef702f107417be62f280cb8955baf1eec8",
+  "excerpt": "A graph where each source file is a node and edges connect files which have dependencies.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

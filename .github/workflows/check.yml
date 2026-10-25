@@ -23,6 +23,8 @@ jobs:
         run: python scripts/wiki_tool.py check --curriculum
       - name: 逐知识点公式代码图与来源绑定
         run: python scripts/learning_check.py
+      - name: 来源目录与保存记录
+        run: python scripts/source_library.py check
       - name: 单进程维护工具与教学示例测试
         env:
           PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'

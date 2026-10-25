@@ -1,0 +1,16 @@
+{
+  "id": "seeclick",
+  "title": "SeeClick 原论文",
+  "url": "https://arxiv.org/html/2401.10935v1",
+  "version": "text-sha256:f97f66cb7a12de09226cec26d76442971cfeee1b102f52785d3c4e0835f027d6",
+  "native_version": "2401.10935v1",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "正文的相关章节；公式和图表未逐项独立复核",
+  "locator": "Abstract；GUI grounding",
+  "text_sha256": "f97f66cb7a12de09226cec26d76442971cfeee1b102f52785d3c4e0835f027d6",
+  "excerpt": "GUI Grounding for Advanced Visual GUI Agents Report GitHub Issue × Title: Content selection saved. Describe the issue below: Description: Submit without GitHub Submit in GitHub arX",
+  "archive_policy": "保留短摘与指纹，全文在原站；不承诺原站失效后可完整恢复"
+}

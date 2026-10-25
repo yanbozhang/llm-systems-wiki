@@ -1,0 +1,16 @@
+{
+  "id": "v1-coding-oh-local",
+  "title": "openhands-sdk/openhands/sdk/conversation/impl/local_conversation.py",
+  "url": "https://github.com/OpenHands/software-agent-sdk/blob/acd96e6fa424c02432304395b9208f99be24b54d/openhands-sdk/openhands/sdk/conversation/impl/local_conversation.py",
+  "version": "text-sha256:bd3ba6aaa53b9583fc1f2f19da5034aa122190ebaa970ee8a3e41ae93b5ac1b6",
+  "native_version": "acd96e6fa424c02432304395b9208f99be24b54d",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "run/_run1959–2078，运行状态与确认",
+  "locator": "LocalConversation.run；LocalConversation._run",
+  "text_sha256": "bd3ba6aaa53b9583fc1f2f19da5034aa122190ebaa970ee8a3e41ae93b5ac1b6",
+  "excerpt": "First call: creates actions but does not execute them, stops and waits",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

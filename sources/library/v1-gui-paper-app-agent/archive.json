@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-gui-paper-app-agent",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "6636e58afdcd49dac4e5736d1a5e28c3af3f425fb4b71584f5d106eb39ab415a",
+      "bytes": 98698,
+      "cache_file": "sources/.local/objects/6636e58afdcd49dac4e5736d1a5e28c3af3f425fb4b71584f5d106eb39ab415a.bin",
+      "requested_url": "https://arxiv.org/html/2312.13771v1",
+      "resolved_url": "https://arxiv.org/html/2312.13771v1",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:12:52.934239+00:00",
+      "declared_source_version": "text-sha256:f49749b9d7abd2aad25b1db3034c5a95383f218b438477c014206776f04b905b",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:12:52.934239+00:00",
+    "status": "saved"
+  }
+}

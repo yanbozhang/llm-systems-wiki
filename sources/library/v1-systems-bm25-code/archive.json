@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-systems-bm25-code",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "f091ec839fc57e14b38f8cd91fa2f6c216bbddb7691cae85834ea981601c0e82",
+      "bytes": 13647,
+      "cache_file": "sources/.local/objects/f091ec839fc57e14b38f8cd91fa2f6c216bbddb7691cae85834ea981601c0e82.bin",
+      "requested_url": "https://raw.githubusercontent.com/apache/lucene/ea57360912ed31ae2f2c0a7a5fef422ddf4e06b0/lucene/core/src/java/org/apache/lucene/search/similarities/BM25Similarity.java",
+      "resolved_url": "https://raw.githubusercontent.com/apache/lucene/ea57360912ed31ae2f2c0a7a5fef422ddf4e06b0/lucene/core/src/java/org/apache/lucene/search/similarities/BM25Similarity.java",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:14:11.703972+00:00",
+      "declared_source_version": "text-sha256:f091ec839fc57e14b38f8cd91fa2f6c216bbddb7691cae85834ea981601c0e82",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:14:11.703972+00:00",
+    "status": "saved"
+  }
+}

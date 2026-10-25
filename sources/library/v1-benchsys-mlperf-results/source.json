@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchsys-mlperf-results",
+  "title": "MLPerf LoadGen 结果与延迟计算",
+  "url": "https://github.com/mlcommons/inference/blob/3fbc329939999c13d0a7b5e67fb2092287e06047/loadgen/results.cc",
+  "version": "text-sha256:a4f401b46e76c0af5c1db1b237b5fba81961390cf930173e7263cc40b1cf2f01",
+  "native_version": "3fbc329939999c13d0a7b5e67fb2092287e06047",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "ProcessLatencies/ProcessTokenLatencies21–147；PerfConstraintsMet335–381；LogSummary约485–582",
+  "locator": "PerformanceSummary.ProcessLatencies；ProcessTokenLatencies；PerfConstraintsMet；LogSummary",
+  "text_sha256": "a4f401b46e76c0af5c1db1b237b5fba81961390cf930173e7263cc40b1cf2f01",
+  "excerpt": "all_constraints_met = min_duration_met && min_queries_met && perf_constraints_met && early_stopping_met",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

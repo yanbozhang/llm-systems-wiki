@@ -1,0 +1,19 @@
+{
+  "id": "2026-repo-agents-uitars",
+  "title": "bytedance/UI-TARS-desktop：固定提交项目说明",
+  "url": "https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/README.md",
+  "version": "text-sha256:55cf304c573c16fc695d9531f2d4b274012052d798bff6c1f4b2e8e7daced6ea",
+  "native_version": "3ac2cb8d946d78d5ff92ad17b318eaafa18c178c",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "README的项目定位、组成、入口与许可提示；未运行完整项目",
+  "locator": "README.md",
+  "text_sha256": "55cf304c573c16fc695d9531f2d4b274012052d798bff6c1f4b2e8e7daced6ea",
+  "excerpt": "<picture> <img alt=\"Agent TARS Banner\" src=\"./images/tars.png\"> </picture> <br/> ## Introduction English | [简体中文](./README.zh-CN.md) [![](https://trendshift.io/",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "maintainer": "bytedance",
+  "commit_date": "2026-10-09T01:29:51Z",
+  "license_spdx": "Apache-2.0"
+}

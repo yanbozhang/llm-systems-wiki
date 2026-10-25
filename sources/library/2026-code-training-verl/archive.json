@@ -1,0 +1,31 @@
+{
+  "source_id": "2026-code-training-verl",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "369b614f239f237a04a38a40b1877cd6fd14aa7bd5f9ff4fe4d7758b682a6948",
+      "bytes": 105282,
+      "cache_file": "sources/.local/objects/369b614f239f237a04a38a40b1877cd6fd14aa7bd5f9ff4fe4d7758b682a6948.bin",
+      "requested_url": "https://api.github.com/repos/volcengine/verl/contents/verl/trainer/ppo/core_algos.py?ref=3c6d9b43b67c74ec343d77874cd8fa6e841523da",
+      "resolved_url": "https://api.github.com/repos/volcengine/verl/contents/verl/trainer/ppo/core_algos.py?ref=3c6d9b43b67c74ec343d77874cd8fa6e841523da",
+      "content_type": "text/plain",
+      "representation": "decoded_source_file",
+      "retrieved_at": "2026-10-25T04:06:01.967534+00:00",
+      "declared_source_version": "text-sha256:e2bb4b27eb8d3e32dcd780fe6e9fa904f1f832db6df58920d4c0738a428920cf",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "Base64-decoded GitHub Contents API file"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:06:01.967534+00:00",
+    "status": "saved"
+  },
+  "public_snapshot": {
+    "spdx_id": "Apache-2.0",
+    "content_file": "sources/library/2026-code-training-verl/snapshot/source.txt",
+    "license_file": "sources/library/2026-code-training-verl/snapshot/LICENSE",
+    "upstream_license_url": "https://github.com/volcengine/verl/blob/3c6d9b43b67c74ec343d77874cd8fa6e841523da/LICENSE",
+    "source_commit": "3c6d9b43b67c74ec343d77874cd8fa6e841523da",
+    "content_sha256": "369b614f239f237a04a38a40b1877cd6fd14aa7bd5f9ff4fe4d7758b682a6948"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchmark-helm-paper",
+  "title": "HELM：语言模型的整体评估",
+  "url": "https://arxiv.org/html/2211.09110",
+  "version": "text-sha256:d94371e353f630af4f14cfa41e306221571c2f60e4120c977fce05eb7f4fb3bd",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "读取相关正文；具体章节在文章中定位",
+  "locator": "正文相关章节",
+  "text_sha256": "d94371e353f630af4f14cfa41e306221571c2f60e4120c977fce05eb7f4fb3bd",
+  "excerpt": "",
+  "archive_policy": "仅保留链接与指纹，全文在原站"
+}

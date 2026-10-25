@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-systems-paged-paper",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "cdd57e1b503f1503fc221973f15bb049fe61a3a4a8a95474aac242f5a828df21",
+      "bytes": 230528,
+      "cache_file": "sources/.local/objects/cdd57e1b503f1503fc221973f15bb049fe61a3a4a8a95474aac242f5a828df21.bin",
+      "requested_url": "https://arxiv.org/html/2309.06180v1",
+      "resolved_url": "https://arxiv.org/html/2309.06180v1",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:01:51.662046+00:00",
+      "declared_source_version": "text-sha256:c1ae88f9865444fbbb4497ac0710b095018a83ed43558f5234a829cc3861478e",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:01:51.662046+00:00",
+    "status": "saved"
+  }
+}

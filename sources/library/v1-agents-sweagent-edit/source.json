@@ -1,0 +1,16 @@
+{
+  "id": "v1-agents-sweagent-edit",
+  "title": "SWE-agent WindowedFile 定位与替换",
+  "url": "https://github.com/SWE-agent/SWE-agent/blob/3ea751c087f32b16e039a2233dd6eefecef325d5/tools/windowed/lib/windowed_file.py#L190",
+  "native_version": "3ea751c087f32b16e039a2233dd6eefecef325d5",
+  "kind": "source_code",
+  "reading_scope": "get_window_text 150–175；replace_in_window 190–226；replace 240–259",
+  "locator": "get_window_text 150–175；replace_in_window 190–226；replace 240–259",
+  "text_sha256": "f48b36722d0b952d4ad8b900db9fa63a0fbcf242205f23633bb5d3d314b07b89",
+  "excerpt": "def replace_in_window(",
+  "version": "text-sha256:f48b36722d0b952d4ad8b900db9fa63a0fbcf242205f23633bb5d3d314b07b89",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

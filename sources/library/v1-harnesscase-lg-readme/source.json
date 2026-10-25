@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-lg-readme",
+  "title": "LangGraph 官方仓库说明",
+  "url": "https://github.com/langchain-ai/langgraph/blob/4c52e129eb1ab69a3da58b799f67929f77d81149/README.md#L1",
+  "version": "text-sha256:3a13e257af1216962d53d72414a7f44ac1fc5cea34d994bdff60ea2a3b045933",
+  "native_version": "4c52e129eb1ab69a3da58b799f67929f77d81149",
+  "kind": "official_document",
+  "reading_scope": "低层有状态编排定位、durable execution、interrupt、memory",
+  "locator": "低层有状态编排定位、durable execution、interrupt、memory",
+  "text_sha256": "3a13e257af1216962d53d72414a7f44ac1fc5cea34d994bdff60ea2a3b045933",
+  "excerpt": "<div align=\"center\">",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}

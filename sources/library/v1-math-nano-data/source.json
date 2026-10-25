@@ -1,0 +1,16 @@
+{
+  "id": "v1-math-nano-data",
+  "title": "nanoGPT OpenWebText 准备脚本",
+  "url": "https://github.com/karpathy/nanoGPT/blob/3adf61e154c3fe3fca428ad6bc3818b27a3b8291/data/openwebtext/prepare.py",
+  "version": "text-sha256:77f3ef0cc8132d77f90c2bd5f9c3be86d1b3da7428e100559c58aee2bcb6eb12",
+  "native_version": "3adf61e154c3fe3fca428ad6bc3818b27a3b8291",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "第19–78行；文档划分、process分词、添加EOT和拼接token流；仅阅读未执行",
+  "locator": "train_test_split; process; binary concatenation",
+  "text_sha256": "77f3ef0cc8132d77f90c2bd5f9c3be86d1b3da7428e100559c58aee2bcb6eb12",
+  "excerpt": "ids.append(enc.eot_token)",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

@@ -1,0 +1,22 @@
+{
+  "source_id": "v02-mmlu",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "59e7d8e808141d3eb8ba02bf38a53db6237d73cbe91d4d823693ead1f8f75182",
+      "bytes": 3256,
+      "cache_file": "sources/.local/objects/59e7d8e808141d3eb8ba02bf38a53db6237d73cbe91d4d823693ead1f8f75182.bin",
+      "requested_url": "https://raw.githubusercontent.com/hendrycks/test/master/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/hendrycks/test/master/README.md",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:03:18.757868+00:00",
+      "declared_source_version": "text-sha256:59e7d8e808141d3eb8ba02bf38a53db6237d73cbe91d4d823693ead1f8f75182",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:18.757868+00:00",
+    "status": "saved"
+  }
+}

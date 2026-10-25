@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchmark-humaneval-paper",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "f4cf10e19a9a3c9dc973a539d91a9e8ea1f148dafd51dcb03f8736d231a9371d",
+      "bytes": 1189952,
+      "cache_file": "sources/.local/objects/f4cf10e19a9a3c9dc973a539d91a9e8ea1f148dafd51dcb03f8736d231a9371d.bin",
+      "requested_url": "https://arxiv.org/html/2107.03374",
+      "resolved_url": "https://arxiv.org/html/2107.03374",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:04:47.829628+00:00",
+      "declared_source_version": "text-sha256:0bb002b63fe09d2ba67feb409ef3bcd75804cdaada3971f398f3d85779fcd9fa",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:04:47.829628+00:00",
+    "status": "saved"
+  }
+}

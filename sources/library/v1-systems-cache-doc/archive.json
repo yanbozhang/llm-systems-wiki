@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-systems-cache-doc",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "c77b8ad216eed7d36ee136f8497cb494ff2bfdc276c89fdb6e24c27d7e2747d6",
+      "bytes": 278197,
+      "cache_file": "sources/.local/objects/c77b8ad216eed7d36ee136f8497cb494ff2bfdc276c89fdb6e24c27d7e2747d6.bin",
+      "requested_url": "https://huggingface.co/docs/transformers/en/cache_explanation",
+      "resolved_url": "https://huggingface.co/docs/transformers/en/cache_explanation",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:02:50.502640+00:00",
+      "declared_source_version": "text-sha256:94ea4eba3d6f02415a6921a772fa762e01a4bfb20f6050c879f34f1fa7cc0620",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:02:50.502640+00:00",
+    "status": "saved"
+  }
+}

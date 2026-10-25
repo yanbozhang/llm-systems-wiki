@@ -1,0 +1,16 @@
+{
+  "id": "v1-math-paper-grpo",
+  "title": "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models",
+  "url": "https://arxiv.org/html/2402.03300v3",
+  "version": "text-sha256:f3bf523736c2fcc2ffab50e338e195a08b7a2e0bcf2c044b7ee7e4b5c29faf64",
+  "native_version": "2402.03300v3",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "第4.1.1–4.1.3节；式3/4、组内优势、算法1和outcome/process监督区别",
+  "locator": "§4.1.1–4.1.3; Eq.(3)–(4); Algorithm 1",
+  "text_sha256": "f3bf523736c2fcc2ffab50e338e195a08b7a2e0bcf2c044b7ee7e4b5c29faf64",
+  "excerpt": "GRPO samples a group of outputs from the old policy",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

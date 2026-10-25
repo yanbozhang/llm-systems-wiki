@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchsys-mmmu-paper",
+  "title": "MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI",
+  "url": "https://arxiv.org/html/2311.16502v4",
+  "version": "text-sha256:84bb8b3df02039b5ce2be9d33391b89faf324d8bd89adca941f4887880644cf5",
+  "native_version": "arXiv:2311.16502v4",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "§4.1实验输入与Evaluation，正文602–629；§5错误分析及§6局限678–692",
+  "locator": "§4 Experiments；§5 Error Analysis and Future Work",
+  "text_sha256": "84bb8b3df02039b5ce2be9d33391b89faf324d8bd89adca941f4887880644cf5",
+  "excerpt": "Expert annotators examine 150 randomly sampled error instances to identify root causes.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

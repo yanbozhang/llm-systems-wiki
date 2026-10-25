@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchmark-gsm-paper",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "4ea90b1486ef0cb823e899b36b9c396a9f893b8ad8bf83bdec65a8555d1274cf",
+      "bytes": 126931,
+      "cache_file": "sources/.local/objects/4ea90b1486ef0cb823e899b36b9c396a9f893b8ad8bf83bdec65a8555d1274cf.bin",
+      "requested_url": "https://arxiv.org/html/2110.14168",
+      "resolved_url": "https://arxiv.org/html/2110.14168",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:08:16.743210+00:00",
+      "declared_source_version": "text-sha256:a12b97e4e5fcc69dbc75a5b009eead0b8bd3526d162f8f9f5a56d4156307847f",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:08:16.743210+00:00",
+    "status": "saved"
+  }
+}

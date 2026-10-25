@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-ui-nutjs",
+  "title": "UI-TARS NutJS动作执行器",
+  "url": "https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/packages/ui-tars/operators/nut-js/src/index.ts",
+  "version": "text-sha256:c4a41b34fac082016171a460e9907371116ea67572d30f139e6d8f4a829e569c",
+  "native_version": "3ac2cb8d946d78d5ff92ad17b318eaafa18c178c",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "第36–325行；screenshot、execute、点击、拖动、输入、滚动与终止",
+  "locator": "NutJSOperator.screenshot; NutJSOperator.execute",
+  "text_sha256": "c4a41b34fac082016171a460e9907371116ea67572d30f139e6d8f4a829e569c",
+  "excerpt": "const { x: startX, y: startY } = parseBoxToScreenCoords({",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

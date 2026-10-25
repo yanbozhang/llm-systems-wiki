@@ -1,0 +1,16 @@
+{
+  "id": "mcp",
+  "title": "MCP 架构说明",
+  "url": "https://modelcontextprotocol.io/docs/learn/architecture",
+  "version": "text-sha256:1743c5b616eca7290c40127f88cf95e4163bb6f507b396d127bd85e4d9a6df72",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "正文的相关章节；公式和图表未逐项独立复核",
+  "locator": "Participants；Data layer",
+  "text_sha256": "1743c5b616eca7290c40127f88cf95e4163bb6f507b396d127bd85e4d9a6df72",
+  "excerpt": "MCP follows a client-server architecture where an MCP host — an AI application like Claude Code or Claude Desktop — establishes connections to one or more MCP servers. The MCP host",
+  "archive_policy": "保留短摘与指纹，全文在原站；不承诺原站失效后可完整恢复"
+}

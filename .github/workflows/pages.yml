@@ -26,6 +26,7 @@ jobs:
         run: |
           python scripts/wiki_tool.py check --curriculum
           python scripts/learning_check.py
+          python scripts/source_library.py check
       - name: 安装网站依赖
         working-directory: web
         run: npm ci --no-audit --no-fund

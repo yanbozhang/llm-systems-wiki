@@ -1,0 +1,16 @@
+{
+  "id": "2026-full-network-mose",
+  "title": "MoSE: Mixture of Slimmable Experts for Efficient and Adaptive Language Models：作者论文全文",
+  "url": "https://arxiv.org/html/2602.06154v2",
+  "version": "text-sha256:f5a20a6fb96040fe5cf7d512e98f3edeabd540f3b6aa0cd740e7e5517a00251e",
+  "native_version": "arXiv:2602.06154v2",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "摘要、§2.2–2.3嵌套宽度与训练目标；未复现实验",
+  "locator": "摘要、§2.2–2.3嵌套宽度与训练目标",
+  "text_sha256": "f5a20a6fb96040fe5cf7d512e98f3edeabd540f3b6aa0cd740e7e5517a00251e",
+  "excerpt": "MoSE: Mixture of Slimmable Experts for Efficient and Adaptive Language Models Report GitHub Issue × Title: Content selection saved. Describe the issue below: De",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验"
+}

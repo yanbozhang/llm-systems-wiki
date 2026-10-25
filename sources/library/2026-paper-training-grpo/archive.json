@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-paper-training-grpo",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "c726395207c378661b3787db3d72dbe3954660a9d12817f4aa2f3148a81a8409",
+      "bytes": 86922,
+      "cache_file": "sources/.local/objects/c726395207c378661b3787db3d72dbe3954660a9d12817f4aa2f3148a81a8409.bin",
+      "requested_url": "https://icml.cc/virtual/2026/poster/60548",
+      "resolved_url": "https://icml.cc/virtual/2026/poster/60548",
+      "content_type": "text/html",
+      "representation": "conference_record_html",
+      "retrieved_at": "2026-10-25T03:56:42.521098+00:00",
+      "declared_source_version": "text-sha256:60baf7d955268be9f6eb9404bc1118d0cc9d66c8b8035344d9561c809d87ca6c",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "HTTP response"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:56:42.521098+00:00",
+    "status": "saved"
+  }
+}

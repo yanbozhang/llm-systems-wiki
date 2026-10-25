@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-agents-seeclick-paper",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "f43568c0e968bb80e805f8b708145c9aae5bb9bfb43076d8b69b4eef93417d27",
+      "bytes": 167293,
+      "cache_file": "sources/.local/objects/f43568c0e968bb80e805f8b708145c9aae5bb9bfb43076d8b69b4eef93417d27.bin",
+      "requested_url": "https://arxiv.org/html/2401.10935v1",
+      "resolved_url": "https://arxiv.org/html/2401.10935v1",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:02:47.149975+00:00",
+      "declared_source_version": "text-sha256:b1bf72215e8087f186972e0579725464fb7d46a4a2da9e68c7786b06fea0013f",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:02:47.149975+00:00",
+    "status": "saved"
+  }
+}

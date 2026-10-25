@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchsys-ragas-precision-doc",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "b55677bc7f0f4b5633d14780e381124e4d4b5e77ec914b89cec59f6a4ca6ed09",
+      "bytes": 8710,
+      "cache_file": "sources/.local/objects/b55677bc7f0f4b5633d14780e381124e4d4b5e77ec914b89cec59f6a4ca6ed09.bin",
+      "requested_url": "https://raw.githubusercontent.com/explodinggradients/ragas/298b68274234c060deacab3cf5fb52aa3a20e885/docs/concepts/metrics/available_metrics/context_precision.md",
+      "resolved_url": "https://raw.githubusercontent.com/explodinggradients/ragas/298b68274234c060deacab3cf5fb52aa3a20e885/docs/concepts/metrics/available_metrics/context_precision.md",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:05:30.929421+00:00",
+      "declared_source_version": "text-sha256:b55677bc7f0f4b5633d14780e381124e4d4b5e77ec914b89cec59f6a4ca6ed09",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:05:30.929421+00:00",
+    "status": "saved"
+  }
+}

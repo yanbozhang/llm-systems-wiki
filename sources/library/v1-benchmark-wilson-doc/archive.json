@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchmark-wilson-doc",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "d8210f0a986f4a192703b4bf73446e82948b289fcc66a36f4a20092ee5bc0e92",
+      "bytes": 16673,
+      "cache_file": "sources/.local/objects/d8210f0a986f4a192703b4bf73446e82948b289fcc66a36f4a20092ee5bc0e92.bin",
+      "requested_url": "https://www.itl.nist.gov/div898/handbook/prc/section2/prc241.htm",
+      "resolved_url": "https://www.itl.nist.gov/div898/handbook/prc/section2/prc241.htm",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:11:46.907888+00:00",
+      "declared_source_version": "text-sha256:a31061395b22937605e05a75daa70a6394e3bb6effbc0c1ca5e2804b036e832e",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:11:46.907888+00:00",
+    "status": "saved"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "source_id": "v02-bfcl",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "ef72a8621b6ea1b8aa1d1b7691f73cc3079fd38e86f599c9a38cb626c911fc29",
+      "bytes": 16207,
+      "cache_file": "sources/.local/objects/ef72a8621b6ea1b8aa1d1b7691f73cc3079fd38e86f599c9a38cb626c911fc29.bin",
+      "requested_url": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+      "resolved_url": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:03:25.263311+00:00",
+      "declared_source_version": "text-sha256:13e060167097aee57c28222513ed5a415df27063465ddfeb0ceaf7bbc29cc780",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:25.263311+00:00",
+    "status": "saved"
+  }
+}

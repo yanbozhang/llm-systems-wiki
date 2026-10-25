@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-release-agents-uitars",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "ebd2b00132b7681a3d5a41e61dcecb15f5aed9648b07643799dbb03d536a3698",
+      "bytes": 5285,
+      "cache_file": "sources/.local/objects/ebd2b00132b7681a3d5a41e61dcecb15f5aed9648b07643799dbb03d536a3698.bin",
+      "requested_url": "https://api.github.com/repos/bytedance/UI-TARS-desktop/releases/latest",
+      "resolved_url": "https://api.github.com/repos/bytedance/UI-TARS-desktop/releases/latest",
+      "content_type": "application/json",
+      "representation": "release_api_snapshot",
+      "retrieved_at": "2026-10-25T04:17:03.715442+00:00",
+      "declared_source_version": "text-sha256:ebe4e882883c7eb3fff502246c0a3e941249ac7601e0294b4186959521f4e0bd",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "GitHub Releases API object serialized as JSON"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:17:03.715442+00:00",
+    "status": "saved"
+  }
+}

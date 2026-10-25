@@ -1,0 +1,22 @@
+{
+  "source_id": "v02-hf-agents-course",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "2a537827ef87720e1f1fc03599cca499a863725258b65a77c7194040697e245c",
+      "bytes": 126091,
+      "cache_file": "sources/.local/objects/2a537827ef87720e1f1fc03599cca499a863725258b65a77c7194040697e245c.bin",
+      "requested_url": "https://huggingface.co/learn/agents-course/unit0/introduction",
+      "resolved_url": "https://huggingface.co/learn/agents-course/unit0/introduction",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:02:58.119495+00:00",
+      "declared_source_version": "text-sha256:9fe66cc0aa127dc41e8ab36b8ced37020e1089b5f9d824128872bf21a412c1be",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:02:58.119495+00:00",
+    "status": "saved"
+  }
+}

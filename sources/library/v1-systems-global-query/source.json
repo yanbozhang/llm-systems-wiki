@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-global-query",
+  "title": "packages/graphrag/graphrag/query/structured_search/global_search/search.py",
+  "url": "https://github.com/microsoft/graphrag/blob/c600ff80b77b9b62c47d539a3ac9569e95d8949b/packages/graphrag/graphrag/query/structured_search/global_search/search.py",
+  "version": "text-sha256:c201e86aa401452ab4b5eee25f439283b572e7148ab3d823bf555f68c495cd30",
+  "native_version": "c600ff80b77b9b62c47d539a3ac9569e95d8949b",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "GlobalSearch.search142–215；_parse_search_response与_reduce_response276–382",
+  "locator": "GlobalSearch.search；_reduce_response",
+  "text_sha256": "c201e86aa401452ab4b5eee25f439283b572e7148ab3d823bf555f68c495cd30",
+  "excerpt": "if total_tokens + len(self.tokenizer.encode(formatted_response_text)) > self.max_data_tokens: break",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "2026-code-benchmark-lighteval",
+  "title": "huggingface/lighteval：src/lighteval/tasks/lighteval_task.py",
+  "url": "https://github.com/huggingface/lighteval/blob/7fa19dc6f53a713ba8bb6541e7ed66dad2e24fd7/src/lighteval/tasks/lighteval_task.py",
+  "version": "text-sha256:6363bb6194dbfbb74575a127207c2bcd1420865f2e4ae96417d29bab34680f4b",
+  "native_version": "7fa19dc6f53a713ba8bb6541e7ed66dad2e24fd7",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "LightevalTaskConfig，49行起；静态阅读，未运行完整框架",
+  "locator": "LightevalTaskConfig，49行起",
+  "text_sha256": "6363bb6194dbfbb74575a127207c2bcd1420865f2e4ae96417d29bab34680f4b",
+  "excerpt": "# MIT License # Copyright (c) 2024 The HuggingFace Team # Permission is hereby granted, free of charge, to any person obtaining a copy # of this software and as",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验"
+}

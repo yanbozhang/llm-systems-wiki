@@ -1,0 +1,22 @@
+{
+  "source_id": "v02-sglang-learning",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "52bbc59d7cc8f4a03bd4965064e1587205cc70c06f7a7efb408b8650daade265",
+      "bytes": 232684,
+      "cache_file": "sources/.local/objects/52bbc59d7cc8f4a03bd4965064e1587205cc70c06f7a7efb408b8650daade265.bin",
+      "requested_url": "https://docs.sglang.io/",
+      "resolved_url": "https://docs.sglang.io/",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:03:12.352536+00:00",
+      "declared_source_version": "text-sha256:ec88976ea833c1263e6932aabced911089977245c881aa1d5c70c03e70686829",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:12.352536+00:00",
+    "status": "saved"
+  }
+}

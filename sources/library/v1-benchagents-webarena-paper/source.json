@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchagents-webarena-paper",
+  "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+  "url": "https://arxiv.org/html/2307.13854v1",
+  "version": "text-sha256:0165a0afee8089f63d42adbf60864a6284faf896072dbe6ba71387d90dc6856e",
+  "native_version": "2307.13854v1",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "§3.1任务定义、§3.3 Functional Correctness，缓存205–210、250–283",
+  "locator": "§3.3 Evaluation with Functional Correctness",
+  "text_sha256": "0165a0afee8089f63d42adbf60864a6284faf896072dbe6ba71387d90dc6856e",
+  "excerpt": "there often exist many valid paths to accomplish the same goal",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

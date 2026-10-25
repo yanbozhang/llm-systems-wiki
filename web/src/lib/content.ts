@@ -9,6 +9,8 @@ export interface Topic { id: string; title: string; module: string; page: string
 export interface Unit { id: string; topic: string; title: string; function: string; source_ids: string[]; }
 export interface Module { id: string; title: string; page: string; english: string; subtitle: string; color: string; number: string; }
 export interface Document { id: string; title: string; english: string; page: string; url: string; description: string; steps?: string; level?: string; }
+export interface Frontier { id:string; module:string; title:string; page:string; as_of:string; summary:string; topic_ids:string[]; source_ids:string[]; paper_ids:string[]; repository_ids:string[]; }
+export interface SourceCard { id:string; title:string; path:string; topic_ids:string[]; module_ids:string[]; archive_status:string; }
 export const moduleInfo: Record<string, [string, string, string]> = {
   network: ['Architecture', '理解 token 到智能的计算过程', 'blue'],
   training: ['Training', '从数据与目标，走向模型能力', 'amber'],
@@ -23,6 +25,8 @@ export const topics = json<Topic[]>('knowledge/topics.json');
 export const units = json<Unit[]>('knowledge/units.json');
 export const capabilities = json<{ id: string; module: string; outcome: string; level: string; deliverable: string; unit_ids: string[] }[]>('knowledge/capabilities.json');
 export const sources = json<{id:string; title:string; url:string; kind?:string; native_version?:string; reading_scope:string}[]>('sources/manifest/sources.json');
+export const frontiers = json<Frontier[]>('knowledge/frontiers.json');
+export const sourceCards = json<SourceCard[]>('sources/library/index.json');
 export const paths: Document[] = [
   {id:'foundations',title:'基础入门',english:'The foundations',page:'wiki/paths/基础入门路径.md',description:'从 Transformer 出发，建立大模型的完整认知。',steps:'概念 → 推导 → 实现',level:'从这里开始',url:'/paths/foundations/'},
   {id:'systems',title:'系统工程',english:'Systems engineering',page:'wiki/paths/系统工程路径.md',description:'把缓存、调度和负载连接成可以测量的系统。',steps:'内存 → 调度 → 性能',level:'工程进阶',url:'/paths/systems/'},
@@ -32,6 +36,7 @@ export const paths: Document[] = [
   {id:'coding',title:'AI 编程智能体',english:'Coding agents',page:'wiki/paths/AI编程智能体实践路径.md',description:'阅读 Codex、Claude Code 与编程工具的实现。',steps:'上下文 → 编辑 → 反馈',level:'专项深入',url:'/paths/coding/'}
 ];
 export const guides: Document[] = [
+  {id:'tour',title:'仓库导览',english:'Start here',page:'docs/仓库导览.md',description:'从学习、研究进展和来源三个入口理解这本手册。',url:'/guides/tour/'},
   {id:'map',title:'能力地图',english:'Capability map',page:'docs/能力地图.md',description:'28项能力，连接知识点与可提交的实践成果。',url:'/guides/map/'},
   {id:'resources',title:'学习资源',english:'Learning resources',page:'docs/系统学习资源指南.md',description:'课程、论文、官方文档与源码的系统阅读入口。',url:'/guides/resources/'},
   {id:'frameworks',title:'Agent 方案导读',english:'Agent frameworks',page:'docs/Agent开源方案导读.md',description:'十个代表方案的架构、状态、恢复与开放边界。',url:'/guides/frameworks/'},
@@ -42,8 +47,10 @@ export const guides: Document[] = [
 export const routes: Record<string,string> = Object.fromEntries([
   ...topics.map(t=>[t.page,`/read/${t.id}/`]), ...modules.map(m=>[m.page,`/modules/${m.id}/`]),
   ...paths.map(p=>[p.page,p.url]), ...guides.map(p=>[p.page,p.url]),
+  ...frontiers.map(p=>[p.page,`/research/${p.id}/`]), ...sourceCards.map(p=>[p.path,`/sources/${p.id}/`]),
   ...readdirSync(resolve(ROOT,'assets'),{withFileTypes:true}).filter(entry=>entry.isFile()).map(entry=>[`assets/${entry.name}`,`/${entry.name}`]),
-  ['docs/大模型持续学习知识库.md','/'],['README.md','/'],['sources/来源索引.md','/sources/']
+  ['docs/大模型持续学习知识库.md','/'],['README.md','/'],['sources/来源索引.md','/sources/'],
+  ['sources/README.md','/sources/'],['wiki/frontiers/README.md','/research/'],['wiki/README.md','/guides/tour/']
 ]);
 export function readDocument(path:string):string {
   return read(path).replace(/^---\r?\n[\s\S]*?\r?\n---(?:\r?\n|$)/, '').replace(/\r?\n---\r?\n\r?\n\[返回模块\][\s\S]*$/, '').trim();

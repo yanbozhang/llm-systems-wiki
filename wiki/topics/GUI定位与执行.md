@@ -2,8 +2,8 @@
 id: gui-agent
 module: agents
 status: published
-page_version: 3
-last_checked: 2026-10-24
+page_version: 4
+last_checked: 2026-10-25
 depth: worked
 practice_status: designed
 claim_ids: [claim-gui-agent-v1, claim-gui-agent-map-point-v1, claim-gui-agent-observation-gate-v1, claim-gui-agent-verify-gui-action-v1]
@@ -234,6 +234,12 @@ flowchart TD
 给每条轨迹记录截图身份和观测时间，还能区分“模型在这张图上定位错误”与“模型定位时正确、执行时界面已变”。这两种错误应分别反馈给定位模型和执行框架，否则通过增加视觉训练未必能改善执行竞态，反过来延长等待也未必能修正真正的定位错误。
 
 本文源码链接均锁定实际读取的提交；论文锁定 arXiv 版本，在线官方文档记录读取日和正文指纹。公式中标为“教学模型”的预算、阈值和状态集合是本页设计，不是论文测得的效果。第三方文件只作为阅读依据，教学实现为独立简化。
+
+## 2026研究进展
+
+WebSTAR先筛选任务轨迹，再评价成功轨迹内部的动作步骤。这使“整条任务最终成功”与“每个动作值得学习”分开。其网页实验、评分器与动作空间不能未经验证直接推广到手机设备或不同业务流程。 [会议来源与读取范围](../../sources/library/2026-paper-agents-webstar/README.md)
+
+更多公式、代码示例、结构图及当前开源版本见[业务Agent研究进展](../frontiers/业务Agent研究进展.md)。新内容未执行真实模型实验。
 
 ---
 

@@ -1,0 +1,22 @@
+{
+  "source_id": "lightrag",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "b495a0fb015976fca63152962ebd4a4daf82f32fdd8c3bb146fab90a0b09e8e4",
+      "bytes": 52594,
+      "cache_file": "sources/.local/objects/b495a0fb015976fca63152962ebd4a4daf82f32fdd8c3bb146fab90a0b09e8e4.bin",
+      "requested_url": "https://raw.githubusercontent.com/HKUDS/LightRAG/main/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/HKUDS/LightRAG/main/README.md",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:02:44.441452+00:00",
+      "declared_source_version": "text-sha256:b495a0fb015976fca63152962ebd4a4daf82f32fdd8c3bb146fab90a0b09e8e4",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:02:44.441452+00:00",
+    "status": "saved"
+  }
+}

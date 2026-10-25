@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchagents-kappa-doc",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "a7f3d577ca223e3ba609d1aeca679ae19b40f07820b2534b3a3cc8d293607176",
+      "bytes": 121366,
+      "cache_file": "sources/.local/objects/a7f3d577ca223e3ba609d1aeca679ae19b40f07820b2534b3a3cc8d293607176.bin",
+      "requested_url": "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.cohen_kappa_score.html",
+      "resolved_url": "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.cohen_kappa_score.html",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:04:53.195898+00:00",
+      "declared_source_version": "text-sha256:9958c6c8b3e2b3437063b95043048837aaa2087aba608e71bb0b272464ed85a8",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:04:53.195898+00:00",
+    "status": "saved"
+  }
+}

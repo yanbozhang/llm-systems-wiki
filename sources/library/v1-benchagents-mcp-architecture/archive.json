@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchagents-mcp-architecture",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "14af4a202dfaddcfb10468660aede35b26fa9a149b5d98bdd75a8ca4b28b4585",
+      "bytes": 306596,
+      "cache_file": "sources/.local/objects/14af4a202dfaddcfb10468660aede35b26fa9a149b5d98bdd75a8ca4b28b4585.bin",
+      "requested_url": "https://modelcontextprotocol.io/specification/2025-06-18/architecture",
+      "resolved_url": "https://modelcontextprotocol.io/specification/2025-06-18/architecture",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:05:18.862872+00:00",
+      "declared_source_version": "text-sha256:30f7d4645bb11f7d18e98ac44c2b9c9836e6c558474a08d7ee460158be7b986b",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:05:18.862872+00:00",
+    "status": "saved"
+  }
+}

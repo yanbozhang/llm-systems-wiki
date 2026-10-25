@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchmark-gsm-parser",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "c22b81bccaaebfd1123be296e8b3c3dca3ddc704c46b70bf4a50603bb627e197",
+      "bytes": 2246,
+      "cache_file": "sources/.local/objects/c22b81bccaaebfd1123be296e8b3c3dca3ddc704c46b70bf4a50603bb627e197.bin",
+      "requested_url": "https://raw.githubusercontent.com/openai/grade-school-math/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/dataset.py",
+      "resolved_url": "https://raw.githubusercontent.com/openai/grade-school-math/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/dataset.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:08:17.162434+00:00",
+      "declared_source_version": "text-sha256:c22b81bccaaebfd1123be296e8b3c3dca3ddc704c46b70bf4a50603bb627e197",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:08:17.162434+00:00",
+    "status": "saved"
+  }
+}

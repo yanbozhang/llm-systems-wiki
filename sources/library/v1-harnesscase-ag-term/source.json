@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-ag-term",
+  "title": "AutoGen 消息数与文本终止",
+  "url": "https://github.com/microsoft/autogen/blob/004749e6b7102c8fd317b9b1499ce5807223c278/python/packages/autogen-agentchat/src/autogen_agentchat/conditions/_terminations.py#L83",
+  "version": "text-sha256:cd9c0da75906da1728432fc96ae0566591dfb180524d3fb585bfdb8ff0260f5d",
+  "native_version": "004749e6b7102c8fd317b9b1499ce5807223c278",
+  "kind": "source_code",
+  "reading_scope": "MaxMessageTermination.__call__ 83–95；TextMentionTermination.__call__ 132–148",
+  "locator": "MaxMessageTermination.__call__ 83–95；TextMentionTermination.__call__ 132–148",
+  "text_sha256": "cd9c0da75906da1728432fc96ae0566591dfb180524d3fb585bfdb8ff0260f5d",
+  "excerpt": "async def __call__(self, messages: Sequence[BaseAgentEvent | BaseChatMessage]) -> StopMessage | None:",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}

@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-harnesscase-ag-doc",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "9a9c829b4d702790f0295a4e28f58627c5fc9dcf8383653a0e3247ee385deee6",
+      "bytes": 70701,
+      "cache_file": "sources/.local/objects/9a9c829b4d702790f0295a4e28f58627c5fc9dcf8383653a0e3247ee385deee6.bin",
+      "requested_url": "https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/tutorial/termination.html",
+      "resolved_url": "https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/tutorial/termination.html",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:13:41.516812+00:00",
+      "declared_source_version": "text-sha256:8a27f07c014a476f0c45a4e1520c641a87297389ff3c05f7c3517c9736f1435f",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:41.516812+00:00",
+    "status": "saved"
+  }
+}

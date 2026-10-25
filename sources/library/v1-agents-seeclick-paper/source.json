@@ -1,0 +1,16 @@
+{
+  "id": "v1-agents-seeclick-paper",
+  "title": "SeeClick: Harnessing GUI Grounding for Advanced Visual GUI Agents",
+  "url": "https://arxiv.org/html/2401.10935v1",
+  "native_version": "arXiv:2401.10935v1",
+  "kind": "paper",
+  "reading_scope": "第4节 ScreenSpot；第5.1节 click accuracy 定义",
+  "locator": "第4节 ScreenSpot；第5.1节 click accuracy 定义",
+  "text_sha256": "b1bf72215e8087f186972e0579725464fb7d46a4a2da9e68c7786b06fea0013f",
+  "excerpt": "we calculate the click accuracy as the metric",
+  "version": "text-sha256:b1bf72215e8087f186972e0579725464fb7d46a4a2da9e68c7786b06fea0013f",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

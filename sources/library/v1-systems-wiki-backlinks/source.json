@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-wiki-backlinks",
+  "title": "packages/core/src/backlinks.ts",
+  "url": "https://github.com/microsoft/llmwiki/blob/e09126f257c1fcf8e63234382748a51cf6a5df7f/packages/core/src/backlinks.ts",
+  "version": "text-sha256:701b01c7d17df07b1acbc0503a8c12b0f19eeb0acaa75c79f425c71ebb1f15cb",
+  "native_version": "e09126f257c1fcf8e63234382748a51cf6a5df7f",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "完整文件1–54行，getBacklinks扫描与相对路径解析",
+  "locator": "getBacklinks",
+  "text_sha256": "701b01c7d17df07b1acbc0503a8c12b0f19eeb0acaa75c79f425c71ebb1f15cb",
+  "excerpt": "Find all wiki pages that contain links pointing to targetPage.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "v1-agents-sweagent-loop",
+  "title": "SWE-agent DefaultAgent 动作与轨迹",
+  "url": "https://github.com/SWE-agent/SWE-agent/blob/3ea751c087f32b16e039a2233dd6eefecef325d5/sweagent/agent/agents.py#L936",
+  "native_version": "3ea751c087f32b16e039a2233dd6eefecef325d5",
+  "kind": "source_code",
+  "reading_scope": "handle_action 936–1004；step 1235–1263；run 1265–1294",
+  "locator": "handle_action 936–1004；step 1235–1263；run 1265–1294",
+  "text_sha256": "d6cdf7ac66a6509ceba08e3541b856f0734acf79f9a485ed8a6e2c72f0d211a8",
+  "excerpt": "def handle_action(self, step: StepOutput) -> StepOutput:",
+  "version": "text-sha256:d6cdf7ac66a6509ceba08e3541b856f0734acf79f9a485ed8a6e2c72f0d211a8",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

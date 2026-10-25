@@ -1,0 +1,31 @@
+{
+  "source_id": "2026-code-inference-sglang",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "eea7015fcf678167ac7296b08c8dc568ccbe42a4bb106da23b33a7c59debec01",
+      "bytes": 31391,
+      "cache_file": "sources/.local/objects/eea7015fcf678167ac7296b08c8dc568ccbe42a4bb106da23b33a7c59debec01.bin",
+      "requested_url": "https://api.github.com/repos/sgl-project/sglang/contents/python/sglang/srt/mem_cache/radix_cache.py?ref=d558ac2f3e7a59a876bbce4687fa49334de777fa",
+      "resolved_url": "https://api.github.com/repos/sgl-project/sglang/contents/python/sglang/srt/mem_cache/radix_cache.py?ref=d558ac2f3e7a59a876bbce4687fa49334de777fa",
+      "content_type": "text/plain",
+      "representation": "decoded_source_file",
+      "retrieved_at": "2026-10-25T04:06:04.052524+00:00",
+      "declared_source_version": "text-sha256:61d55b14e7d229049685ab27a8bf5dcc0b28fb25a134778c99784682011cafcf",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "Base64-decoded GitHub Contents API file"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:06:04.052524+00:00",
+    "status": "saved"
+  },
+  "public_snapshot": {
+    "spdx_id": "Apache-2.0",
+    "content_file": "sources/library/2026-code-inference-sglang/snapshot/source.txt",
+    "license_file": "sources/library/2026-code-inference-sglang/snapshot/LICENSE",
+    "upstream_license_url": "https://github.com/sgl-project/sglang/blob/d558ac2f3e7a59a876bbce4687fa49334de777fa/LICENSE",
+    "source_commit": "d558ac2f3e7a59a876bbce4687fa49334de777fa",
+    "content_sha256": "eea7015fcf678167ac7296b08c8dc568ccbe42a4bb106da23b33a7c59debec01"
+  }
+}

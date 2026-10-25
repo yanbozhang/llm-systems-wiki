@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-harnesscase-lg-last",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "36cbc586aeaac0f8c9b5a8d8b903039023a7d24294408391eb8c7f10aab3a308",
+      "bytes": 4324,
+      "cache_file": "sources/.local/objects/36cbc586aeaac0f8c9b5a8d8b903039023a7d24294408391eb8c7f10aab3a308.bin",
+      "requested_url": "https://raw.githubusercontent.com/langchain-ai/langgraph/4c52e129eb1ab69a3da58b799f67929f77d81149/libs/langgraph/langgraph/channels/last_value.py",
+      "resolved_url": "https://raw.githubusercontent.com/langchain-ai/langgraph/4c52e129eb1ab69a3da58b799f67929f77d81149/libs/langgraph/langgraph/channels/last_value.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:31.840871+00:00",
+      "declared_source_version": "text-sha256:36cbc586aeaac0f8c9b5a8d8b903039023a7d24294408391eb8c7f10aab3a308",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:31.840871+00:00",
+    "status": "saved"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-kv-manager",
+  "title": "vllm/v1/core/kv_cache_manager.py",
+  "url": "https://github.com/vllm-project/vllm/blob/7a64fb8fc9239cb65e0df9313fa759594dfb206a/vllm/v1/core/kv_cache_manager.py",
+  "version": "text-sha256:d061965aefb5b8d73a520ab5ebc4c819bb0109932f5d7f4afdd37a9c610c7893",
+  "native_version": "7a64fb8fc9239cb65e0df9313fa759594dfb206a",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "get_computed_blocks 264–326；allocate_slots 480–555",
+  "locator": "KVCacheManager.get_computed_blocks；KVCacheManager.allocate_slots",
+  "text_sha256": "d061965aefb5b8d73a520ab5ebc4c819bb0109932f5d7f4afdd37a9c610c7893",
+  "excerpt": "When all tokens hit the cache, we must recompute the last token to obtain logits.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

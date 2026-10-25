@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-gui-app-license",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "d9e2b107cbaa3599336510dbb6703cb30210f1b4345221e76cf75cba85c2d113",
+      "bytes": 1068,
+      "cache_file": "sources/.local/objects/d9e2b107cbaa3599336510dbb6703cb30210f1b4345221e76cf75cba85c2d113.bin",
+      "requested_url": "https://raw.githubusercontent.com/TencentQQGYLab/AppAgent/2c1900422caf6f9e94e96d5dd984b530e5a5fbf8/LICENSE",
+      "resolved_url": "https://raw.githubusercontent.com/TencentQQGYLab/AppAgent/2c1900422caf6f9e94e96d5dd984b530e5a5fbf8/LICENSE",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:12:59.033816+00:00",
+      "declared_source_version": "text-sha256:d9e2b107cbaa3599336510dbb6703cb30210f1b4345221e76cf75cba85c2d113",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:12:59.033816+00:00",
+    "status": "saved"
+  }
+}

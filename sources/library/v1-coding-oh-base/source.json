@@ -1,0 +1,16 @@
+{
+  "id": "v1-coding-oh-base",
+  "title": "openhands-sdk/openhands/sdk/event/base.py",
+  "url": "https://github.com/OpenHands/software-agent-sdk/blob/acd96e6fa424c02432304395b9208f99be24b54d/openhands-sdk/openhands/sdk/event/base.py",
+  "version": "text-sha256:0d90758757329bbd0d1301586b87612e7746e14e6d2bb3e272e2d58f16fbb60d",
+  "native_version": "acd96e6fa424c02432304395b9208f99be24b54d",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "Event 20–47；events_to_messages 107–157；_combine_action_events 176–199",
+  "locator": "Event；LLMConvertibleEvent.events_to_messages；_combine_action_events",
+  "text_sha256": "0d90758757329bbd0d1301586b87612e7746e14e6d2bb3e272e2d58f16fbb60d",
+  "excerpt": "This is a read-only projection over the event log.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

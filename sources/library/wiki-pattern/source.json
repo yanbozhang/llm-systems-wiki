@@ -1,0 +1,16 @@
+{
+  "id": "wiki-pattern",
+  "title": "Karpathy 的 LLM Wiki 模式",
+  "url": "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f",
+  "version": "text-sha256:dc3efe98ae62f23dd08acad13aba2e95287beb20b6bec2f4af0423557fe37401",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "正文的相关章节；公式和图表未逐项独立复核",
+  "locator": "Architecture；Operations",
+  "text_sha256": "dc3efe98ae62f23dd08acad13aba2e95287beb20b6bec2f4af0423557fe37401",
+  "excerpt": "There are three layers: **Raw sources** — your curated collection of source documents. Articles, papers, images, data files. These are immutable — the LLM reads from them but neve",
+  "archive_policy": "保留短摘与指纹，全文在原站；不承诺原站失效后可完整恢复"
+}

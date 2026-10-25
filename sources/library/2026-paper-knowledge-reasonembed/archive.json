@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-paper-knowledge-reasonembed",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "a7a02a2e23fcb5af077f503cb9469f2e699eb8f2da1d30b19abcf57fd30591e2",
+      "bytes": 43963,
+      "cache_file": "sources/.local/objects/a7a02a2e23fcb5af077f503cb9469f2e699eb8f2da1d30b19abcf57fd30591e2.bin",
+      "requested_url": "https://aclanthology.org/2026.acl-long.54/",
+      "resolved_url": "https://aclanthology.org/2026.acl-long.54/",
+      "content_type": "text/html",
+      "representation": "conference_record_html",
+      "retrieved_at": "2026-10-25T03:56:46.593080+00:00",
+      "declared_source_version": "text-sha256:c477df910adc8df85c78544357cccec768c4ee56826ab0d67820a41a77eb5a13",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "HTTP response"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:56:46.593080+00:00",
+    "status": "saved"
+  }
+}

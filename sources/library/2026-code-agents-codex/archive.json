@@ -1,0 +1,32 @@
+{
+  "source_id": "2026-code-agents-codex",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "8fdc85c3ccfb66cc41855622cd3219c43d3d55930c7a0e2595f29caaa74f895d",
+      "bytes": 33612,
+      "cache_file": "sources/.local/objects/8fdc85c3ccfb66cc41855622cd3219c43d3d55930c7a0e2595f29caaa74f895d.bin",
+      "requested_url": "https://api.github.com/repos/openai/codex/contents/codex-rs/core/src/compact.rs?ref=970111f6cb62cc02fe36a82ea7d71b37a2889c97",
+      "resolved_url": "https://api.github.com/repos/openai/codex/contents/codex-rs/core/src/compact.rs?ref=970111f6cb62cc02fe36a82ea7d71b37a2889c97",
+      "content_type": "text/plain",
+      "representation": "decoded_source_file",
+      "retrieved_at": "2026-10-25T04:06:06.987511+00:00",
+      "declared_source_version": "text-sha256:3ccc51727bb5a0f6245e070bf68f7b418a6097a4be3ec4ecf65ae53554ad4ad0",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "Base64-decoded GitHub Contents API file"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:06:06.987511+00:00",
+    "status": "saved"
+  },
+  "public_snapshot": {
+    "spdx_id": "Apache-2.0",
+    "content_file": "sources/library/2026-code-agents-codex/snapshot/source.txt",
+    "license_file": "sources/library/2026-code-agents-codex/snapshot/LICENSE",
+    "upstream_license_url": "https://github.com/openai/codex/blob/970111f6cb62cc02fe36a82ea7d71b37a2889c97/LICENSE",
+    "source_commit": "970111f6cb62cc02fe36a82ea7d71b37a2889c97",
+    "content_sha256": "8fdc85c3ccfb66cc41855622cd3219c43d3d55930c7a0e2595f29caaa74f895d",
+    "notice_file": "sources/library/2026-code-agents-codex/snapshot/NOTICE"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-rag-code",
+  "title": "src/transformers/models/rag/modeling_rag.py",
+  "url": "https://github.com/huggingface/transformers/blob/50e35cc0ca18ec19b80653690de553e6decf74f5/src/transformers/models/rag/modeling_rag.py",
+  "version": "text-sha256:fb424ac9ca252e1226ac05595c8e35fde6029628730ac48acd425a0514069f39",
+  "native_version": "50e35cc0ca18ec19b80653690de553e6decf74f5",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "RagSequenceForGeneration.get_nll 1028–1085；RagTokenForGeneration.marginalize 1216–1225",
+  "locator": "get_nll；marginalize",
+  "text_sha256": "fb424ac9ca252e1226ac05595c8e35fde6029628730ac48acd425a0514069f39",
+  "excerpt": "return torch.logsumexp(log_prob_sum, dim=1)",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

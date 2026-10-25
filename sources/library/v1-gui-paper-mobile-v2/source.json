@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-paper-mobile-v2",
+  "title": "Mobile-Agent-v2: Mobile Device Operation Assistant with Effective Navigation via Multi-Agent Collaboration",
+  "url": "https://arxiv.org/html/2406.01014v1",
+  "version": "text-sha256:4bff7c9a6baf6d1d3761425caaa19db321b587d6e40cbbdfd41a2c69f041fe4e",
+  "native_version": "2406.01014v1",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "第3.1–3.5节，视觉感知、记忆、规划、决策、反思及式1–5；不采用实验结果作独立验证",
+  "locator": "§3.1–3.5; Eq.(1)–(5)",
+  "text_sha256": "4bff7c9a6baf6d1d3761425caaa19db321b587d6e40cbbdfd41a2c69f041fe4e",
+  "excerpt": "Mobile-Agent-v2 has three specialized agent roles: planning agent, decision agent, and reflection agent.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

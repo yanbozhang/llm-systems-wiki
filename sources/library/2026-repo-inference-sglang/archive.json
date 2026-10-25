@@ -1,0 +1,31 @@
+{
+  "source_id": "2026-repo-inference-sglang",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "a7654a48a8cd08c824e4445cb906405704148a3c55fb84362c7071d27397303c",
+      "bytes": 9472,
+      "cache_file": "sources/.local/objects/a7654a48a8cd08c824e4445cb906405704148a3c55fb84362c7071d27397303c.bin",
+      "requested_url": "https://api.github.com/repos/sgl-project/sglang/readme?ref=d558ac2f3e7a59a876bbce4687fa49334de777fa",
+      "resolved_url": "https://api.github.com/repos/sgl-project/sglang/readme?ref=d558ac2f3e7a59a876bbce4687fa49334de777fa",
+      "content_type": "text/markdown",
+      "representation": "decoded_repository_document",
+      "retrieved_at": "2026-10-25T03:59:16.529396+00:00",
+      "declared_source_version": "text-sha256:a764981ec1a7b8346c1f46f4960b1b3ead61b4a627cffde513d0b3c0c19d3d0f",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "Base64-decoded GitHub Contents API file"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:59:16.529396+00:00",
+    "status": "saved"
+  },
+  "public_snapshot": {
+    "spdx_id": "Apache-2.0",
+    "content_file": "sources/library/2026-repo-inference-sglang/snapshot/source.txt",
+    "license_file": "sources/library/2026-repo-inference-sglang/snapshot/LICENSE",
+    "upstream_license_url": "https://github.com/sgl-project/sglang/blob/d558ac2f3e7a59a876bbce4687fa49334de777fa/LICENSE",
+    "source_commit": "d558ac2f3e7a59a876bbce4687fa49334de777fa",
+    "content_sha256": "a7654a48a8cd08c824e4445cb906405704148a3c55fb84362c7071d27397303c"
+  }
+}

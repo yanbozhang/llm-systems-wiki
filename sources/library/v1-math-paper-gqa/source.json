@@ -1,0 +1,16 @@
+{
+  "id": "v1-math-paper-gqa",
+  "title": "GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints",
+  "url": "https://arxiv.org/html/2305.13245v3",
+  "version": "text-sha256:d89625675fe43338758e0a6ebd2e5d6b6b34a5388f38075c4dd34845b17c0122",
+  "native_version": "2305.13245v3",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "第2.1与2.2节、3.1节实验设置；mean pooling、分组及继续训练协议",
+  "locator": "§2.1 Uptraining; §2.2 Grouped-query attention; §3.1",
+  "text_sha256": "d89625675fe43338758e0a6ebd2e5d6b6b34a5388f38075c4dd34845b17c0122",
+  "excerpt": "When converting a multi-head checkpoint to a GQA checkpoint, we construct each group key and value head by mean-pooling",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

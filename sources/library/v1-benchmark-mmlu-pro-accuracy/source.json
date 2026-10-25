@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchmark-mmlu-pro-accuracy",
+  "title": "MMLU-Pro 领域准确率统计",
+  "url": "https://github.com/TIGER-AI-Lab/MMLU-Pro/blob/f418b116db00b065c2aea046518d8fcf74d39872/compute_accuracy.py",
+  "version": "text-sha256:c0052d10d0d8ada49f796a4a73fcf36c3a9348a0017f8fe46f41cede5457a599",
+  "native_version": "f418b116db00b065c2aea046518d8fcf74d39872",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "实际读取相关函数与上下文；函数定位在知识点正文中列明",
+  "locator": "compute_accuracy.py",
+  "text_sha256": "c0052d10d0d8ada49f796a4a73fcf36c3a9348a0017f8fe46f41cede5457a599",
+  "excerpt": "",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

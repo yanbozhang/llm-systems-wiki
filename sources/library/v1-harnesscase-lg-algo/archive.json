@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-harnesscase-lg-algo",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "39a8eab7c318ca866b8b394447063444403ea668df6fd173af21bfcb5270e976",
+      "bytes": 52094,
+      "cache_file": "sources/.local/objects/39a8eab7c318ca866b8b394447063444403ea668df6fd173af21bfcb5270e976.bin",
+      "requested_url": "https://raw.githubusercontent.com/langchain-ai/langgraph/4c52e129eb1ab69a3da58b799f67929f77d81149/libs/langgraph/langgraph/pregel/_algo.py",
+      "resolved_url": "https://raw.githubusercontent.com/langchain-ai/langgraph/4c52e129eb1ab69a3da58b799f67929f77d81149/libs/langgraph/langgraph/pregel/_algo.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:30.624886+00:00",
+      "declared_source_version": "text-sha256:39a8eab7c318ca866b8b394447063444403ea668df6fd173af21bfcb5270e976",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:30.624886+00:00",
+    "status": "saved"
+  }
+}

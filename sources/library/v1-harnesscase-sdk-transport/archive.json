@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-harnesscase-sdk-transport",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "23c0b35acfcff5426255f1f17433e66fc7f8f6d5b8f339e93e085233c569e11c",
+      "bytes": 55543,
+      "cache_file": "sources/.local/objects/23c0b35acfcff5426255f1f17433e66fc7f8f6d5b8f339e93e085233c569e11c.bin",
+      "requested_url": "https://raw.githubusercontent.com/anthropics/claude-agent-sdk-python/0e89b298e771259378a6cd3734e00d323dff5703/src/claude_agent_sdk/_internal/transport/subprocess_cli.py",
+      "resolved_url": "https://raw.githubusercontent.com/anthropics/claude-agent-sdk-python/0e89b298e771259378a6cd3734e00d323dff5703/src/claude_agent_sdk/_internal/transport/subprocess_cli.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:21.635270+00:00",
+      "declared_source_version": "text-sha256:23c0b35acfcff5426255f1f17433e66fc7f8f6d5b8f339e93e085233c569e11c",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:21.635270+00:00",
+    "status": "saved"
+  }
+}

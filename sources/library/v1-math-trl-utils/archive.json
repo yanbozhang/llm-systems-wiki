@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-math-trl-utils",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "8eda2187676dcac8d7517532f63c8922bd789be28ff50cc3c1ad33fa66bc1668",
+      "bytes": 81024,
+      "cache_file": "sources/.local/objects/8eda2187676dcac8d7517532f63c8922bd789be28ff50cc3c1ad33fa66bc1668.bin",
+      "requested_url": "https://raw.githubusercontent.com/huggingface/trl/1117c3b9c1632ee9814c30f6c9fc884b792a54e5/trl/trainer/utils.py",
+      "resolved_url": "https://raw.githubusercontent.com/huggingface/trl/1117c3b9c1632ee9814c30f6c9fc884b792a54e5/trl/trainer/utils.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:55.950213+00:00",
+      "declared_source_version": "text-sha256:8eda2187676dcac8d7517532f63c8922bd789be28ff50cc3c1ad33fa66bc1668",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:55.950213+00:00",
+    "status": "saved"
+  }
+}

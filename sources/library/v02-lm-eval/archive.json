@@ -1,0 +1,22 @@
+{
+  "source_id": "v02-lm-eval",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "57c5cf1db6edb20393ca70851de820898bd8d10424a5a7574f9f566a6f8d70bd",
+      "bytes": 60912,
+      "cache_file": "sources/.local/objects/57c5cf1db6edb20393ca70851de820898bd8d10424a5a7574f9f566a6f8d70bd.bin",
+      "requested_url": "https://raw.githubusercontent.com/EleutherAI/lm-evaluation-harness/main/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/EleutherAI/lm-evaluation-harness/main/README.md",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:03:14.184978+00:00",
+      "declared_source_version": "text-sha256:57c5cf1db6edb20393ca70851de820898bd8d10424a5a7574f9f566a6f8d70bd",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:14.184978+00:00",
+    "status": "saved"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "2026-paper-training-polarity",
+  "title": "Rethinking Sample Polarity in Reinforcement Learning with Verifiable Rewards",
+  "url": "https://aclanthology.org/2026.acl-long.134/",
+  "version": "text-sha256:fc8a8a5b4045beab9a883c70f063490a1585247cbb2f13ddfe149e27945d04d4",
+  "native_version": "ACL 2026 · 主会长文",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "会议官方详情的标题、会议归属、摘要与公开说明；全文若取得，另列全文来源记录",
+  "locator": "Official paper record; Abstract",
+  "text_sha256": "fc8a8a5b4045beab9a883c70f063490a1585247cbb2f13ddfe149e27945d04d4",
+  "excerpt": "Rethinking Sample Polarity in Reinforcement Learning with Verifiable Rewards - ACL Anthology ACL Anthology AboutAnnouncementsCommunication channelsRelated workC",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "conference": "ACL 2026 · 主会长文",
+  "conference_year": 2026
+}

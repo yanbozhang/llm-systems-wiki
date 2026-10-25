@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchmark-humaneval-paper",
+  "title": "代码大模型评估与HumanEval",
+  "url": "https://arxiv.org/html/2107.03374",
+  "version": "text-sha256:0bb002b63fe09d2ba67feb409ef3bcd75804cdaada3971f398f3d85779fcd9fa",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "读取相关正文；具体章节在文章中定位",
+  "locator": "正文相关章节",
+  "text_sha256": "0bb002b63fe09d2ba67feb409ef3bcd75804cdaada3971f398f3d85779fcd9fa",
+  "excerpt": "",
+  "archive_policy": "仅保留链接与指纹，全文在原站"
+}

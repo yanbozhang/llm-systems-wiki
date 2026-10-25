@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-agents-osworld-env",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "8533d099d628acf9dcc5d16f793f2a99f76e497bdbf0c24aa71898f05e650f44",
+      "bytes": 25932,
+      "cache_file": "sources/.local/objects/8533d099d628acf9dcc5d16f793f2a99f76e497bdbf0c24aa71898f05e650f44.bin",
+      "requested_url": "https://raw.githubusercontent.com/xlang-ai/OSWorld/04718eab9327856efe8192cc58161acc7a7627e2/desktop_env/desktop_env.py",
+      "resolved_url": "https://raw.githubusercontent.com/xlang-ai/OSWorld/04718eab9327856efe8192cc58161acc7a7627e2/desktop_env/desktop_env.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:03:38.297480+00:00",
+      "declared_source_version": "text-sha256:8533d099d628acf9dcc5d16f793f2a99f76e497bdbf0c24aa71898f05e650f44",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:38.297480+00:00",
+    "status": "saved"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "2026-paper-benchmark-conflicts",
+  "title": "Benchmarking LLM’s Capability in Reasoning over Conflicting Web References",
+  "url": "https://aclanthology.org/2026.acl-long.11/",
+  "version": "text-sha256:b2a41a3688e9857ae54b557417e5f2fd608ecc31aabcb06318420e484c80dcc4",
+  "native_version": "ACL 2026 · 主会长文",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "会议官方详情的标题、会议归属、摘要与公开说明；全文若取得，另列全文来源记录",
+  "locator": "Official paper record; Abstract",
+  "text_sha256": "b2a41a3688e9857ae54b557417e5f2fd608ecc31aabcb06318420e484c80dcc4",
+  "excerpt": "Benchmarking LLM’s Capability in Reasoning over Conflicting Web References - ACL Anthology ACL Anthology AboutAnnouncementsCommunication channelsRelated workCop",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "conference": "ACL 2026 · 主会长文",
+  "conference_year": 2026
+}

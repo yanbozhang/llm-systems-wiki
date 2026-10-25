@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-ui-host-package",
+  "title": "UI-TARS Desktop包清单",
+  "url": "https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/apps/ui-tars/package.json",
+  "version": "text-sha256:3910259c16df19163da13a98deba79ba9fd9c18befc5b2559aa8ed87bc3e9c25",
+  "native_version": "3ac2cb8d946d78d5ff92ad17b318eaafa18c178c",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "应用name、version、main及包管理器字段；未执行脚本",
+  "locator": "package.json",
+  "text_sha256": "3910259c16df19163da13a98deba79ba9fd9c18befc5b2559aa8ed87bc3e9c25",
+  "excerpt": "\"version\": \"0.2.4\"",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

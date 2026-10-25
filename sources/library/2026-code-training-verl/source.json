@@ -1,0 +1,16 @@
+{
+  "id": "2026-code-training-verl",
+  "title": "volcengine/verl：verl/trainer/ppo/core_algos.py",
+  "url": "https://github.com/volcengine/verl/blob/3c6d9b43b67c74ec343d77874cd8fa6e841523da/verl/trainer/ppo/core_algos.py",
+  "version": "text-sha256:e2bb4b27eb8d3e32dcd780fe6e9fa904f1f832db6df58920d4c0738a428920cf",
+  "native_version": "3c6d9b43b67c74ec343d77874cd8fa6e841523da",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "compute_grpo_outcome_advantage，268行起；静态阅读，未运行完整框架",
+  "locator": "compute_grpo_outcome_advantage，268行起",
+  "text_sha256": "e2bb4b27eb8d3e32dcd780fe6e9fa904f1f832db6df58920d4c0738a428920cf",
+  "excerpt": "# Copyright 2024 Bytedance Ltd. and/or its affiliates # Copyright 2022 The HuggingFace Team. All rights reserved. # # Licensed under the Apache License, Version",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchagents-humaneval-paper",
+  "title": "Evaluating Large Language Models Trained on Code",
+  "url": "https://arxiv.org/html/2107.03374",
+  "version": "text-sha256:0bb002b63fe09d2ba67feb409ef3bcd75804cdaada3971f398f3d85779fcd9fa",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "缓存1468–1605：pass@k定义、n个候选中c个正确、无偏估计与乘积形式",
+  "locator": "§2 Evaluation Framework；Functional Correctness；pass@k estimator",
+  "text_sha256": "0bb002b63fe09d2ba67feb409ef3bcd75804cdaada3971f398f3d85779fcd9fa",
+  "excerpt": "we generate n samples per task and count the number of correct samples c",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "v1-coding-oh-action",
+  "title": "openhands-sdk/openhands/sdk/event/llm_convertible/action.py",
+  "url": "https://github.com/OpenHands/software-agent-sdk/blob/acd96e6fa424c02432304395b9208f99be24b54d/openhands-sdk/openhands/sdk/event/llm_convertible/action.py",
+  "version": "text-sha256:7bd55c8eee4e7ed6f042c10f837c06570c3cc1a903aa30d9ece486f199081f22",
+  "native_version": "acd96e6fa424c02432304395b9208f99be24b54d",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "ActionEvent字段40–97，含action/tool_call_id/llm_response_id",
+  "locator": "ActionEvent",
+  "text_sha256": "7bd55c8eee4e7ed6f042c10f837c06570c3cc1a903aa30d9ece486f199081f22",
+  "excerpt": "Single tool call returned by LLM (None when non-executable)",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

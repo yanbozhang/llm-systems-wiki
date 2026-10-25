@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchagents-agentdojo-suite",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "2e69da06f7e150dd6d238c53a74845b56eebeb224e07f694e1051a6e0c6a2bc1",
+      "bytes": 19818,
+      "cache_file": "sources/.local/objects/2e69da06f7e150dd6d238c53a74845b56eebeb224e07f694e1051a6e0c6a2bc1.bin",
+      "requested_url": "https://raw.githubusercontent.com/ethz-spylab/agentdojo/089ed468cf3ed0322acc66b0211f26d9d90dbf60/src/agentdojo/task_suite/task_suite.py",
+      "resolved_url": "https://raw.githubusercontent.com/ethz-spylab/agentdojo/089ed468cf3ed0322acc66b0211f26d9d90dbf60/src/agentdojo/task_suite/task_suite.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:05:08.158107+00:00",
+      "declared_source_version": "text-sha256:2e69da06f7e150dd6d238c53a74845b56eebeb224e07f694e1051a6e0c6a2bc1",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:05:08.158107+00:00",
+    "status": "saved"
+  }
+}

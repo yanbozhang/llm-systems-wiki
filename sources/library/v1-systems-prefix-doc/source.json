@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-prefix-doc",
+  "title": "docs/design/prefix_caching.md",
+  "url": "https://github.com/vllm-project/vllm/blob/7a64fb8fc9239cb65e0df9313fa759594dfb206a/docs/design/prefix_caching.md",
+  "version": "text-sha256:67ee4e2b7bc23d40e9b366e4a9053ae4ecd0925ddef51f412ac5c16b9dc83a61",
+  "native_version": "7a64fb8fc9239cb65e0df9313fa759594dfb206a",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "Automatic Prefix Caching 1–185行，哈希身份、数据结构与分配步骤",
+  "locator": "Data Structure；Block Allocation",
+  "text_sha256": "67ee4e2b7bc23d40e9b366e4a9053ae4ecd0925ddef51f412ac5c16b9dc83a61",
+  "excerpt": "Parent hash value: The hash value of the parent hash block.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

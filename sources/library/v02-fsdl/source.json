@@ -1,0 +1,16 @@
+{
+  "id": "v02-fsdl",
+  "title": "Full Stack LLM Bootcamp",
+  "url": "https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/",
+  "version": "text-sha256:30ecd28f0a432ddcddde78439e8135b28278c647faf69298c43aa7b2400f7eee",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "public_learning_or_evaluation_document",
+  "reading_scope": "读取入口、课程大纲或项目说明的相关正文；不代表完成全部课程、作业或基准运行",
+  "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页",
+  "text_sha256": "30ecd28f0a432ddcddde78439e8135b28278c647faf69298c43aa7b2400f7eee",
+  "excerpt": "LLM Bootcamp - Spring 2023 - The Full Stack Skip to content LLM Bootcamp - Spring 2023 What are the pre-requisites for this bootcamp? Our goal is to g",
+  "archive_policy": "只保存定位短摘与指纹，不镜像第三方全文"
+}

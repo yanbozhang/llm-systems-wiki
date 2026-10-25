@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-systems-gr-delta",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "f9c47d8959345ede23e6f23415c642a6d54f7f77b7e19c6c921b15ce81d42a99",
+      "bytes": 2323,
+      "cache_file": "sources/.local/objects/f9c47d8959345ede23e6f23415c642a6d54f7f77b7e19c6c921b15ce81d42a99.bin",
+      "requested_url": "https://raw.githubusercontent.com/microsoft/graphrag/c600ff80b77b9b62c47d539a3ac9569e95d8949b/packages/graphrag/graphrag/index/update/incremental_index.py",
+      "resolved_url": "https://raw.githubusercontent.com/microsoft/graphrag/c600ff80b77b9b62c47d539a3ac9569e95d8949b/packages/graphrag/graphrag/index/update/incremental_index.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:14:07.877426+00:00",
+      "declared_source_version": "text-sha256:f9c47d8959345ede23e6f23415c642a6d54f7f77b7e19c6c921b15ce81d42a99",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:14:07.877426+00:00",
+    "status": "saved"
+  }
+}

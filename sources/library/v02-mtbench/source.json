@@ -1,0 +1,16 @@
+{
+  "id": "v02-mtbench",
+  "title": "MT-Bench 评审工具",
+  "url": "https://raw.githubusercontent.com/lm-sys/FastChat/main/fastchat/llm_judge/README.md",
+  "version": "text-sha256:4104f9e877fe04a4a87a5b6618114adc8604f09ceca09be198f96189c4c2238e",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "public_learning_or_evaluation_document",
+  "reading_scope": "读取入口、课程大纲或项目说明的相关正文；不代表完成全部课程、作业或基准运行",
+  "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页",
+  "text_sha256": "4104f9e877fe04a4a87a5b6618114adc8604f09ceca09be198f96189c4c2238e",
+  "excerpt": "# LLM Judge | [Paper](https://arxiv.org/abs/2306.05685) | [Leaderboard](https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard) | In this packa",
+  "archive_policy": "只保存定位短摘与指纹，不镜像第三方全文"
+}

@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-release-benchmark-lighteval",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "30caa925fead17a34825375811d3d81a848d092ac71a89d1f7a6c42b6b398b06",
+      "bytes": 7678,
+      "cache_file": "sources/.local/objects/30caa925fead17a34825375811d3d81a848d092ac71a89d1f7a6c42b6b398b06.bin",
+      "requested_url": "https://api.github.com/repos/huggingface/lighteval/releases/latest",
+      "resolved_url": "https://api.github.com/repos/huggingface/lighteval/releases/latest",
+      "content_type": "application/json",
+      "representation": "release_api_snapshot",
+      "retrieved_at": "2026-10-25T04:17:03.718442+00:00",
+      "declared_source_version": "text-sha256:29ee0745f978ad6375bb2dbc2252dd7dc215efcfa7e83bc8121d8d1e370f8b9a",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "GitHub Releases API object serialized as JSON"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:17:03.718442+00:00",
+    "status": "saved"
+  }
+}

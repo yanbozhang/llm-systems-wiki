@@ -1,0 +1,16 @@
+{
+  "id": "pagedattention",
+  "title": "PagedAttention 原论文",
+  "url": "https://arxiv.org/html/2309.06180v1",
+  "version": "text-sha256:17eab179187ed013b430fdb6fbd72dae81b40d15a4b781ac5e411505ee252959",
+  "native_version": "2309.06180v1",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "正文的相关章节；公式和图表未逐项独立复核",
+  "locator": "2.2 LLM Service；4.1 PagedAttention",
+  "text_sha256": "17eab179187ed013b430fdb6fbd72dae81b40d15a4b781ac5e411505ee252959",
+  "excerpt": "PagedAttention divides the request’s KV cache into blocks, each of which can contain the attention keys and values of a fixed number of tokens. In PagedAttention, the blocks for th",
+  "archive_policy": "保留短摘与指纹，全文在原站；不承诺原站失效后可完整恢复"
+}

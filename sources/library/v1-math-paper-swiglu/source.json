@@ -1,0 +1,16 @@
+{
+  "id": "v1-math-paper-swiglu",
+  "title": "GLU Variants Improve Transformer",
+  "url": "https://arxiv.org/html/2002.05202v1",
+  "version": "text-sha256:0b3ab3f4a3c5924458896759750673af1e5cd611dcd0f59f838423b56772ce81",
+  "native_version": "2002.05202v1",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "第1–3节，GLU与SwiGLU公式、三矩阵FFN和2/3宽度比较",
+  "locator": "§2; Eq.(4)–(6)",
+  "text_sha256": "0b3ab3f4a3c5924458896759750673af1e5cd611dcd0f59f838423b56772ce81",
+  "excerpt": "All of these layers have three weight matrices, as opposed to two for the original FFN.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

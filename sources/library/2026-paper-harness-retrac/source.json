@@ -1,0 +1,18 @@
+{
+  "id": "2026-paper-harness-retrac",
+  "title": "RE-TRAC: REcursive TRAjectory Compression for Deep Search Agents",
+  "url": "https://icml.cc/virtual/2026/poster/60790",
+  "version": "text-sha256:cab346a8e17c878634eb1299b7c45838777e78ce98db28c7af98c9e36c8eda05",
+  "native_version": "ICML 2026 · 官方Poster目录",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "会议官方详情的标题、会议归属、摘要与公开说明；全文若取得，另列全文来源记录",
+  "locator": "Official paper record; Abstract",
+  "text_sha256": "cab346a8e17c878634eb1299b7c45838777e78ce98db28c7af98c9e36c8eda05",
+  "excerpt": "ICML Poster RE-TRAC: REcursive TRAjectory Compression for Deep Search Agents ICML 2026 Skip to yearly menu bar Skip to main content Main Navigation ICML Help/FA",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "conference": "ICML 2026 · 官方Poster目录",
+  "conference_year": 2026
+}

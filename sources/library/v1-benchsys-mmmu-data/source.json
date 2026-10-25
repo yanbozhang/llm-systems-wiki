@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchsys-mmmu-data",
+  "title": "mmmu/utils/data_utils.py",
+  "url": "https://github.com/MMMU-Benchmark/MMMU/blob/268471d0d488258990025331c7528359c324aa25/mmmu/utils/data_utils.py",
+  "version": "text-sha256:b64ab451e5bdf4aff275e442d8cd195269cbe7b63678f0e95fed8eb59fa05cdd",
+  "native_version": "268471d0d488258990025331c7528359c324aa25",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "process_single_sample83–101；construct_prompt134–174",
+  "locator": "process_single_sample；construct_prompt",
+  "text_sha256": "b64ab451e5bdf4aff275e442d8cd195269cbe7b63678f0e95fed8eb59fa05cdd",
+  "excerpt": "Returns image_1 in the single-image branch.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

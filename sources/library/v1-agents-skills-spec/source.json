@@ -1,0 +1,16 @@
+{
+  "id": "v1-agents-skills-spec",
+  "title": "Agent Skills Specification",
+  "url": "https://agentskills.io/specification",
+  "native_version": "2026-10-24 页面快照",
+  "kind": "official_document",
+  "reading_scope": "Directory structure；Body content；Progressive disclosure；allowed-tools",
+  "locator": "Directory structure；Body content；Progressive disclosure；allowed-tools",
+  "text_sha256": "2dc378b0c5edb91159822c86cb1362b15c6fa6855cfb389c655e0dd5be3e39b4",
+  "excerpt": "Agents load skills progressively, pulling in more detail only as a task calls for it.",
+  "version": "text-sha256:2dc378b0c5edb91159822c86cb1362b15c6fa6855cfb389c655e0dd5be3e39b4",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

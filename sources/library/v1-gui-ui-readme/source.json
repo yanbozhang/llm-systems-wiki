@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-ui-readme",
+  "title": "UI-TARS Desktop 官方仓库说明",
+  "url": "https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/README.md",
+  "version": "text-sha256:0f05aa4f447d43439f6b3f4ab179cbe1e59d170eaf6c0684fa9c2eb0872e5985",
+  "native_version": "3ac2cb8d946d78d5ff92ad17b318eaafa18c178c",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "项目区分表、UI-TARS Desktop段落、模型论文链接及License",
+  "locator": "UI-TARS Desktop; License",
+  "text_sha256": "0f05aa4f447d43439f6b3f4ab179cbe1e59d170eaf6c0684fa9c2eb0872e5985",
+  "excerpt": "UI-TARS Desktop is a native GUI agent for your local computer",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

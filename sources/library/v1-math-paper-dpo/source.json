@@ -1,0 +1,16 @@
+{
+  "id": "v1-math-paper-dpo",
+  "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+  "url": "https://arxiv.org/html/2305.18290v3",
+  "version": "text-sha256:b77f433b75b32fe177f7cb91efc76dc1c001fbfa2f75b14bd7d4fb7a08732115",
+  "native_version": "2305.18290v3",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "第3–4节；BT偏好模型、KL目标、最优策略映射、配分函数抵消、DPO梯度与第7节限制",
+  "locator": "§3–4; Eq.(1)–(7); Limitations & Future Work",
+  "text_sha256": "b77f433b75b32fe177f7cb91efc76dc1c001fbfa2f75b14bd7d4fb7a08732115",
+  "excerpt": "the partition function cancels",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

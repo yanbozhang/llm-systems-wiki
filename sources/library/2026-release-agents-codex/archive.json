@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-release-agents-codex",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "06966ebed0518cc617e677d17f91cf5bf956ac4fe64b93c2e7f2245677ab403f",
+      "bytes": 671409,
+      "cache_file": "sources/.local/objects/06966ebed0518cc617e677d17f91cf5bf956ac4fe64b93c2e7f2245677ab403f.bin",
+      "requested_url": "https://api.github.com/repos/openai/codex/releases/latest",
+      "resolved_url": "https://api.github.com/repos/openai/codex/releases/latest",
+      "content_type": "application/json",
+      "representation": "release_api_snapshot",
+      "retrieved_at": "2026-10-25T04:17:03.714442+00:00",
+      "declared_source_version": "text-sha256:bdb8095244c35e94ffb62705a655bccb05589aedf09e9b46984f458c8279483c",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "GitHub Releases API object serialized as JSON"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:17:03.714442+00:00",
+    "status": "saved"
+  }
+}

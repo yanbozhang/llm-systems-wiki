@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchsys-mlperf-rules",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "94c69f01f1e0be24dc057180af6db878d1f5339fd31d54cbe5c386f8e198ce08",
+      "bytes": 79883,
+      "cache_file": "sources/.local/objects/94c69f01f1e0be24dc057180af6db878d1f5339fd31d54cbe5c386f8e198ce08.bin",
+      "requested_url": "https://raw.githubusercontent.com/mlcommons/inference_policies/d3eba2f21026d868ad65cdcad2bb81e4a17ce3d3/inference_rules.adoc",
+      "resolved_url": "https://raw.githubusercontent.com/mlcommons/inference_policies/d3eba2f21026d868ad65cdcad2bb81e4a17ce3d3/inference_rules.adoc",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:05:40.450007+00:00",
+      "declared_source_version": "text-sha256:94c69f01f1e0be24dc057180af6db878d1f5339fd31d54cbe5c386f8e198ce08",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:05:40.450007+00:00",
+    "status": "saved"
+  }
+}

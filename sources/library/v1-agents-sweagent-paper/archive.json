@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-agents-sweagent-paper",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "080002bdc22e8807199a1ebd6b813cb536188614227f776c5eaf0dda6de8e4d3",
+      "bytes": 2556205,
+      "cache_file": "sources/.local/objects/080002bdc22e8807199a1ebd6b813cb536188614227f776c5eaf0dda6de8e4d3.bin",
+      "requested_url": "https://arxiv.org/html/2405.15793v3",
+      "resolved_url": "https://arxiv.org/html/2405.15793v3",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:04:08.506422+00:00",
+      "declared_source_version": "text-sha256:1632da782327fd484917d599e6707d0e9a9b4eb98d4a7e5f9a65f6dcd5c2120e",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:04:08.506422+00:00",
+    "status": "saved"
+  }
+}

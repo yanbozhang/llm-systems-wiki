@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchagents-mtbench-paper",
+  "title": "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena",
+  "url": "https://arxiv.org/html/2306.05685",
+  "version": "text-sha256:2f9fcdbbc421ec86a3019543702497daa9bb6563107db4aa300e24a16c235330",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "缓存1330–1410位置偏置；1645–1808冗长、自增强、推理局限及顺序交换；1900–2085人工一致性和S1/S2口径",
+  "locator": "§3.3 Limitations；§3.4 Addressing limitations；§4 Agreement evaluation、Table 5",
+  "text_sha256": "2f9fcdbbc421ec86a3019543702497daa9bb6563107db4aa300e24a16c235330",
+  "excerpt": "high consistency may not imply high accuracy",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

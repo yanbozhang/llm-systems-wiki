@@ -1,0 +1,16 @@
+{
+  "id": "context",
+  "title": "有效上下文工程",
+  "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+  "version": "text-sha256:7934543271b3c8e3e8ebe80fd02c3ae0dec60b896b1d8b8946933c3bf88d3d3a",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "正文的相关章节；公式和图表未逐项独立复核",
+  "locator": "Compaction；Structured note-taking",
+  "text_sha256": "7934543271b3c8e3e8ebe80fd02c3ae0dec60b896b1d8b8946933c3bf88d3d3a",
+  "excerpt": "Compaction is the practice of taking a conversation nearing the context window limit, summarizing its contents, and reinitiating a new context window with the summary. Compaction t",
+  "archive_policy": "保留短摘与指纹，全文在原站；不承诺原站失效后可完整恢复"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "2026-code-agents-codex",
+  "title": "openai/codex：codex-rs/core/src/compact.rs",
+  "url": "https://github.com/openai/codex/blob/970111f6cb62cc02fe36a82ea7d71b37a2889c97/codex-rs/core/src/compact.rs",
+  "version": "text-sha256:3ccc51727bb5a0f6245e070bf68f7b418a6097a4be3ec4ecf65ae53554ad4ad0",
+  "native_version": "970111f6cb62cc02fe36a82ea7d71b37a2889c97",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "run_inline_auto_compact_task、run_compact_task_inner，117行起；静态阅读，未运行完整框架",
+  "locator": "run_inline_auto_compact_task、run_compact_task_inner，117行起",
+  "text_sha256": "3ccc51727bb5a0f6245e070bf68f7b418a6097a4be3ec4ecf65ae53554ad4ad0",
+  "excerpt": "use crate::context::UserGoalUpdate; use std::collections::HashSet; use std::sync::Arc; use std::time::Instant; use crate::Prompt; use crate::client::ModelClient",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验"
+}

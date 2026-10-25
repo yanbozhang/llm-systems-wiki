@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-gui-ui-operator-factory",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "c9b68bf166e568bad234b5c8a7d2cf7e62f110b5c978cefc1154016a263b41a2",
+      "bytes": 3343,
+      "cache_file": "sources/.local/objects/c9b68bf166e568bad234b5c8a7d2cf7e62f110b5c978cefc1154016a263b41a2.bin",
+      "requested_url": "https://raw.githubusercontent.com/bytedance/UI-TARS-desktop/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/apps/ui-tars/src/main/agent/operator.ts",
+      "resolved_url": "https://raw.githubusercontent.com/bytedance/UI-TARS-desktop/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/apps/ui-tars/src/main/agent/operator.ts",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:02.477918+00:00",
+      "declared_source_version": "text-sha256:c9b68bf166e568bad234b5c8a7d2cf7e62f110b5c978cefc1154016a263b41a2",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:02.477918+00:00",
+    "status": "saved"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchsys-mmmu-paper",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "ff97bee45d51774000e62de9ffb9a57464c8629927269b8dd52cbcdee192cfb8",
+      "bytes": 923396,
+      "cache_file": "sources/.local/objects/ff97bee45d51774000e62de9ffb9a57464c8629927269b8dd52cbcdee192cfb8.bin",
+      "requested_url": "https://arxiv.org/html/2311.16502v4",
+      "resolved_url": "https://arxiv.org/html/2311.16502v4",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:05:47.730019+00:00",
+      "declared_source_version": "text-sha256:84bb8b3df02039b5ce2be9d33391b89faf324d8bd89adca941f4887880644cf5",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:05:47.730019+00:00",
+    "status": "saved"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "2026-release-harness-agentframework",
+  "title": "microsoft/agent-framework：dotnet-1.26.0发布说明",
+  "url": "https://github.com/microsoft/agent-framework/releases/tag/dotnet-1.26.0",
+  "version": "text-sha256:71ec07b4e33ade500c5153026435813d05f16c785f447d13d09e6425e2cb6370",
+  "native_version": "dotnet-1.26.0",
+  "published_at": "2026-10-23",
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "完整发布说明；不将最新分支提交等同于该发布的代码",
+  "locator": "Release notes",
+  "text_sha256": "71ec07b4e33ade500c5153026435813d05f16c785f447d13d09e6425e2cb6370",
+  "excerpt": "## Changes: * 9c8a3514a15a702f81bfda456d80c7ccaa4d2712 Update package versions for release (#9650) * c3b9f22d64fd86e8133395555a1fa4aa22f745e0 Add ACGS to the Py",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "release_date": "2026-10-23T14:32:13Z",
+  "prerelease": false
+}

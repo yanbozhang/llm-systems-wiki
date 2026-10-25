@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-release-knowledge-ragflow",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "9573961d5877a8b74df0858dd6e2faa7e3c45ef31cc32af895745d6c58454d6f",
+      "bytes": 78279,
+      "cache_file": "sources/.local/objects/9573961d5877a8b74df0858dd6e2faa7e3c45ef31cc32af895745d6c58454d6f.bin",
+      "requested_url": "https://api.github.com/repos/infiniflow/ragflow/releases/latest",
+      "resolved_url": "https://api.github.com/repos/infiniflow/ragflow/releases/latest",
+      "content_type": "application/json",
+      "representation": "release_api_snapshot",
+      "retrieved_at": "2026-10-25T04:17:03.727442+00:00",
+      "declared_source_version": "text-sha256:37966c0a81ff3aac5a3e4520aeece8856a82e9db940e03f1e59aaadfdb461243",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "GitHub Releases API object serialized as JSON"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:17:03.727442+00:00",
+    "status": "saved"
+  }
+}

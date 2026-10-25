@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-harnesscase-lg-interrupt-doc",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "a38a7f84d221fa3d200ba6931da60c7f33c10f685991903ad7d4eef2c6fe1444",
+      "bytes": 1494143,
+      "cache_file": "sources/.local/objects/a38a7f84d221fa3d200ba6931da60c7f33c10f685991903ad7d4eef2c6fe1444.bin",
+      "requested_url": "https://docs.langchain.com/oss/python/langgraph/interrupts",
+      "resolved_url": "https://docs.langchain.com/oss/python/langgraph/interrupts",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:13:34.825164+00:00",
+      "declared_source_version": "text-sha256:55888e48110707346579c21bfcec6ef24ddfb5be472321198c83baa52ca59b88",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:34.825164+00:00",
+    "status": "saved"
+  }
+}

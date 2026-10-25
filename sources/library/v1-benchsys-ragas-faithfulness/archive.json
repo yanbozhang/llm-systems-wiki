@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchsys-ragas-faithfulness",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "5370b57f3df537a1619f7c6ddeeb5fd67e392821a5dee30eb5e0830f3a75cdc9",
+      "bytes": 11231,
+      "cache_file": "sources/.local/objects/5370b57f3df537a1619f7c6ddeeb5fd67e392821a5dee30eb5e0830f3a75cdc9.bin",
+      "requested_url": "https://raw.githubusercontent.com/explodinggradients/ragas/298b68274234c060deacab3cf5fb52aa3a20e885/src/ragas/metrics/_faithfulness.py",
+      "resolved_url": "https://raw.githubusercontent.com/explodinggradients/ragas/298b68274234c060deacab3cf5fb52aa3a20e885/src/ragas/metrics/_faithfulness.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:05:26.679892+00:00",
+      "declared_source_version": "text-sha256:5370b57f3df537a1619f7c6ddeeb5fd67e392821a5dee30eb5e0830f3a75cdc9",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:05:26.679892+00:00",
+    "status": "saved"
+  }
+}

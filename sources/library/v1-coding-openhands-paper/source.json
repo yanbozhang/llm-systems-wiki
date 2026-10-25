@@ -1,0 +1,16 @@
+{
+  "id": "v1-coding-openhands-paper",
+  "title": "OpenHands: An Open Platform for AI Software Developers as Generalist Agents",
+  "url": "https://arxiv.org/html/2407.16741v2",
+  "version": "text-sha256:56f976ce3ec7409bfa3bd6ef305aacbda29f7e9eb1744986cd04f1120b24e5c1",
+  "native_version": "2407.16741v2",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "§2.1 Agent Definition、§2.2 Agent Runtime、§2.3 Agent Skills；正文142–219",
+  "locator": "§2.1–2.3",
+  "text_sha256": "56f976ce3ec7409bfa3bd6ef305aacbda29f7e9eb1744986cd04f1120b24e5c1",
+  "excerpt": "Runtime executes actions and returns execution results as observations.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-math-paper-swiglu",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "ac535e6b4c295f31e064cb0690926cd384166c852f0770174c949f1b5a134bda",
+      "bytes": 156960,
+      "cache_file": "sources/.local/objects/ac535e6b4c295f31e064cb0690926cd384166c852f0770174c949f1b5a134bda.bin",
+      "requested_url": "https://arxiv.org/html/2002.05202v1",
+      "resolved_url": "https://arxiv.org/html/2002.05202v1",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:13:46.838488+00:00",
+      "declared_source_version": "text-sha256:0b3ab3f4a3c5924458896759750673af1e5cd611dcd0f59f838423b56772ce81",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:46.838488+00:00",
+    "status": "saved"
+  }
+}

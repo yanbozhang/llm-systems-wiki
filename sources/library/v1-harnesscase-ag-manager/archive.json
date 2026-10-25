@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-harnesscase-ag-manager",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "73667dc739ab4b32660fba6e09c0d7f65e83ef6aae7f79fb45163709b519b266",
+      "bytes": 14831,
+      "cache_file": "sources/.local/objects/73667dc739ab4b32660fba6e09c0d7f65e83ef6aae7f79fb45163709b519b266.bin",
+      "requested_url": "https://raw.githubusercontent.com/microsoft/autogen/004749e6b7102c8fd317b9b1499ce5807223c278/python/packages/autogen-agentchat/src/autogen_agentchat/teams/_group_chat/_base_group_chat_manager.py",
+      "resolved_url": "https://raw.githubusercontent.com/microsoft/autogen/004749e6b7102c8fd317b9b1499ce5807223c278/python/packages/autogen-agentchat/src/autogen_agentchat/teams/_group_chat/_base_group_chat_manager.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:39.141836+00:00",
+      "declared_source_version": "text-sha256:73667dc739ab4b32660fba6e09c0d7f65e83ef6aae7f79fb45163709b519b266",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:39.141836+00:00",
+    "status": "saved"
+  }
+}

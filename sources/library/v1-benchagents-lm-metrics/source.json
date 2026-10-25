@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchagents-lm-metrics",
+  "title": "LM Evaluation Harness 多类 Brier 聚合",
+  "url": "https://github.com/EleutherAI/lm-evaluation-harness/blob/d6de81643928d653435c431bae19945d41d32520/lm_eval/api/metrics.py",
+  "version": "text-sha256:f4794761c3f53fc036336e79c65dca355ea26a8d4cb00b27155ea2ab4846dbb2",
+  "native_version": "d6de81643928d653435c431bae19945d41d32520",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "lm_eval/api/metrics.py 156–163：one-hot、逐类平方差求和后按样本平均",
+  "locator": "lm_eval/api/metrics.py::brier_score",
+  "text_sha256": "f4794761c3f53fc036336e79c65dca355ea26a8d4cb00b27155ea2ab4846dbb2",
+  "excerpt": "return np.mean(np.sum((predictions - gold_one_hot) ** 2, axis=1))",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

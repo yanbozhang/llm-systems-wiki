@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-paper-training-polarity",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "30da060e40406de0d6ab3aa0da95e6577544aa756c34376fa9240810c899b733",
+      "bytes": 45334,
+      "cache_file": "sources/.local/objects/30da060e40406de0d6ab3aa0da95e6577544aa756c34376fa9240810c899b733.bin",
+      "requested_url": "https://aclanthology.org/2026.acl-long.134/",
+      "resolved_url": "https://aclanthology.org/2026.acl-long.134/",
+      "content_type": "text/html",
+      "representation": "conference_record_html",
+      "retrieved_at": "2026-10-25T03:56:43.477094+00:00",
+      "declared_source_version": "text-sha256:fc8a8a5b4045beab9a883c70f063490a1585247cbb2f13ddfe149e27945d04d4",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "HTTP response"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:56:43.477094+00:00",
+    "status": "saved"
+  }
+}

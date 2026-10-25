@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-cc-readme",
+  "title": "Claude Code 公开仓库说明",
+  "url": "https://github.com/anthropics/claude-code/blob/318b7e6ac4e726e88a4ad326214866a93c373b1b/README.md#L1",
+  "version": "text-sha256:aa0d8b80ac083e1591be0789273f447058cc9187b4331634a5614155da27778d",
+  "native_version": "318b7e6ac4e726e88a4ad326214866a93c373b1b",
+  "kind": "official_document",
+  "reading_scope": "README：产品描述、插件目录、反馈与文档入口",
+  "locator": "README：产品描述、插件目录、反馈与文档入口",
+  "text_sha256": "aa0d8b80ac083e1591be0789273f447058cc9187b4331634a5614155da27778d",
+  "excerpt": "# Claude Code",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}

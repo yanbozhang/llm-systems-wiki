@@ -1,0 +1,32 @@
+{
+  "source_id": "2026-repo-agents-codex",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "ba4e1f69ff48386e72a9c5e1edaf76aad64a475c2d51af79ccba6d1128261ba7",
+      "bytes": 3334,
+      "cache_file": "sources/.local/objects/ba4e1f69ff48386e72a9c5e1edaf76aad64a475c2d51af79ccba6d1128261ba7.bin",
+      "requested_url": "https://api.github.com/repos/openai/codex/readme?ref=970111f6cb62cc02fe36a82ea7d71b37a2889c97",
+      "resolved_url": "https://api.github.com/repos/openai/codex/readme?ref=970111f6cb62cc02fe36a82ea7d71b37a2889c97",
+      "content_type": "text/markdown",
+      "representation": "decoded_repository_document",
+      "retrieved_at": "2026-10-25T03:59:27.832345+00:00",
+      "declared_source_version": "text-sha256:294c0820b099b6a802a6f5a3bb8a4c92568621fe1f86511e70467f95380ca998",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "Base64-decoded GitHub Contents API file"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:59:27.832345+00:00",
+    "status": "saved"
+  },
+  "public_snapshot": {
+    "spdx_id": "Apache-2.0",
+    "content_file": "sources/library/2026-repo-agents-codex/snapshot/source.txt",
+    "license_file": "sources/library/2026-repo-agents-codex/snapshot/LICENSE",
+    "upstream_license_url": "https://github.com/openai/codex/blob/970111f6cb62cc02fe36a82ea7d71b37a2889c97/LICENSE",
+    "source_commit": "970111f6cb62cc02fe36a82ea7d71b37a2889c97",
+    "content_sha256": "ba4e1f69ff48386e72a9c5e1edaf76aad64a475c2d51af79ccba6d1128261ba7",
+    "notice_file": "sources/library/2026-repo-agents-codex/snapshot/NOTICE"
+  }
+}

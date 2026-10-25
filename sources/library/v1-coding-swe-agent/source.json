@@ -1,0 +1,16 @@
+{
+  "id": "v1-coding-swe-agent",
+  "title": "sweagent/agent/agents.py",
+  "url": "https://github.com/SWE-agent/SWE-agent/blob/3ea751c087f32b16e039a2233dd6eefecef325d5/sweagent/agent/agents.py",
+  "version": "text-sha256:d6cdf7ac66a6509ceba08e3541b856f0734acf79f9a485ed8a6e2c72f0d211a8",
+  "native_version": "3ea751c087f32b16e039a2233dd6eefecef325d5",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "DefaultAgent.forward1006–1061；forward_with_handling1062–1179及1201–1220；add_step_to_trajectory/step/run1220–1294",
+  "locator": "DefaultAgent.forward；forward_with_handling；add_step_to_trajectory；run",
+  "text_sha256": "d6cdf7ac66a6509ceba08e3541b856f0734acf79f9a485ed8a6e2c72f0d211a8",
+  "excerpt": "This will update the trajectory, but not the history.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

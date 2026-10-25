@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-math-doc-sdpa",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "9ae13ea42826fd2c649143fa221b9c3a1e8a45c29633b3097b9ce532869f9d58",
+      "bytes": 214389,
+      "cache_file": "sources/.local/objects/9ae13ea42826fd2c649143fa221b9c3a1e8a45c29633b3097b9ce532869f9d58.bin",
+      "requested_url": "https://docs.pytorch.org/docs/2.14/generated/torch.nn.functional.scaled_dot_product_attention.html",
+      "resolved_url": "https://docs.pytorch.org/docs/2.14/generated/torch.nn.functional.scaled_dot_product_attention.html",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:13:43.881903+00:00",
+      "declared_source_version": "text-sha256:51ae520cb41f401a25865a64b0efc462434e9d7b1dae72dce0533599e69c23c1",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:43.881903+00:00",
+    "status": "saved"
+  }
+}

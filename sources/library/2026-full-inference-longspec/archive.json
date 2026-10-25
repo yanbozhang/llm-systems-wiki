@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-full-inference-longspec",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "74b93d39d6342da18ac5aa7e716759171d228637c59a370a246b1e9c83928988",
+      "bytes": 2081511,
+      "cache_file": "sources/.local/objects/74b93d39d6342da18ac5aa7e716759171d228637c59a370a246b1e9c83928988.bin",
+      "requested_url": "https://aclanthology.org/2026.acl-long.83.pdf",
+      "resolved_url": "https://aclanthology.org/2026.acl-long.83.pdf",
+      "content_type": "application/pdf",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:08:57.322727+00:00",
+      "declared_source_version": "text-sha256:73e909579a72afd431ded1be2c1b838a15e4cc49c206a2d1d29b8e28acb25634",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "HTTP response"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:08:57.322727+00:00",
+    "status": "saved"
+  }
+}

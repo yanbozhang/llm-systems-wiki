@@ -2,8 +2,8 @@
 id: policy-optimization
 module: training
 status: published
-page_version: 3
-last_checked: 2026-10-24
+page_version: 4
+last_checked: 2026-10-25
 depth: worked
 practice_status: designed
 claim_ids: [claim-policy-optimization-v1, claim-policy-optimization-advantages-v1, claim-policy-optimization-clipping-v1, claim-policy-optimization-kl-reduction-v1]
@@ -232,6 +232,12 @@ GRPO 的奖励上升不是独立任务成功的充分条件。需要保留验证
 ## 源码与后续阅读
 
 实际读取 DeepSeekMath 第4.1节、固定 TRL 的 Trainer、nanstd和配套文档。原始训练、奖励器、模型数学成绩及分布式效果未独立复现。关联阅读：[预训练目标与数据](预训练目标与数据.md)、[Agent评测与失败归因](Agent评测与失败归因.md)。
+
+## 2026研究进展
+
+ICML 2026的新分析关注二值奖励下GRPO的归一化、KL参考与成功概率动力学。本页的优势计算可作为起点；阅读时应区分参考策略、旧策略、组内统计与真正执行的裁剪目标。本轮该论文只核验官方摘要，不据此补写其完整定理。 [会议来源与读取范围](../../sources/library/2026-paper-training-grpo/README.md)
+
+更多公式、代码示例、结构图及当前开源版本见[训练研究进展](../frontiers/训练研究进展.md)。新内容未执行真实模型实验。
 
 ---
 

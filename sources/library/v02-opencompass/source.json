@@ -1,0 +1,16 @@
+{
+  "id": "v02-opencompass",
+  "title": "OpenCompass 文档",
+  "url": "https://opencompass.readthedocs.io/en/latest/",
+  "version": "text-sha256:4a045654eefbe5b30cc5089afd66e367d19d561cc16989e6fd666be53e7885a6",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "public_learning_or_evaluation_document",
+  "reading_scope": "读取入口、课程大纲或项目说明的相关正文；不代表完成全部课程、作业或基准运行",
+  "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页",
+  "text_sha256": "4a045654eefbe5b30cc5089afd66e367d19d561cc16989e6fd666be53e7885a6",
+  "excerpt": "Welcome to the OpenCompass Documentation — OpenCompass 0.5.4 documentation GitHub Homepage Leaderboard LLM VLM Table of Contents Docs > Welcome to the",
+  "archive_policy": "只保存定位短摘与指纹，不镜像第三方全文"
+}

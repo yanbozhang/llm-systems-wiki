@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchagents-agentdojo-suite",
+  "title": "AgentDojo 任务执行、效用与安全目标检查",
+  "url": "https://github.com/ethz-spylab/agentdojo/blob/089ed468cf3ed0322acc66b0211f26d9d90dbf60/src/agentdojo/task_suite/task_suite.py",
+  "version": "text-sha256:2e69da06f7e150dd6d238c53a74845b56eebeb224e07f694e1051a6e0c6a2bc1",
+  "native_version": "089ed468cf3ed0322acc66b0211f26d9d90dbf60",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "validate_injections 94–98；环境构建139–146；结果判据281–337；run_task_with_pipeline 339–420；check 422–479；is_task_injectable 482–491",
+  "locator": "src/agentdojo/task_suite/task_suite.py::run_task_with_pipeline、_check_task_result、check、is_task_injectable",
+  "text_sha256": "2e69da06f7e150dd6d238c53a74845b56eebeb224e07f694e1051a6e0c6a2bc1",
+  "excerpt": "if injection_task is None: return utility, True",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

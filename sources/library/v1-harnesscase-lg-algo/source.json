@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-lg-algo",
+  "title": "LangGraph apply_writes",
+  "url": "https://github.com/langchain-ai/langgraph/blob/4c52e129eb1ab69a3da58b799f67929f77d81149/libs/langgraph/langgraph/pregel/_algo.py#L233",
+  "version": "text-sha256:39a8eab7c318ca866b8b394447063444403ea668df6fd173af21bfcb5270e976",
+  "native_version": "4c52e129eb1ab69a3da58b799f67929f77d81149",
+  "kind": "source_code",
+  "reading_scope": "apply_writes 233–344：按任务路径排序、按通道归组及更新版本",
+  "locator": "apply_writes 233–344：按任务路径排序、按通道归组及更新版本",
+  "text_sha256": "39a8eab7c318ca866b8b394447063444403ea668df6fd173af21bfcb5270e976",
+  "excerpt": "def apply_writes(",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}

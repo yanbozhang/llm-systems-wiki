@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchagents-swebench-grading",
+  "title": "SWE-bench 测试状态与修复评分",
+  "url": "https://github.com/SWE-bench/SWE-bench/blob/02e7a74ffd0b707aab73d203fe87bdc7c76afc8e/swebench/harness/grading.py",
+  "version": "text-sha256:a095273010175001a6779e365b3b77abb8657c7ac2e4f80b4bc360faa6f09483",
+  "native_version": "02e7a74ffd0b707aab73d203fe87bdc7c76afc8e",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "test_passed/test_maintained/test_failed 85–109；get_logs_eval 113–176；get_eval_tests_report 179–285；compute与resolution 288–326；get_eval_report 329–393",
+  "locator": "swebench/harness/grading.py::get_eval_tests_report、get_resolution_status、get_logs_eval",
+  "text_sha256": "a095273010175001a6779e365b3b77abb8657c7ac2e4f80b4bc360faa6f09483",
+  "excerpt": "P2P semantics: a skipped test is not a regression, unlike for F2P.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

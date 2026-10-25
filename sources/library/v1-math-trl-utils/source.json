@@ -1,0 +1,16 @@
+{
+  "id": "v1-math-trl-utils",
+  "title": "TRL trainer utils nanstd",
+  "url": "https://github.com/huggingface/trl/blob/1117c3b9c1632ee9814c30f6c9fc884b792a54e5/trl/trainer/utils.py",
+  "version": "text-sha256:8eda2187676dcac8d7517532f63c8922bd789be28ff50cc3c1ad33fa66bc1668",
+  "native_version": "1117c3b9c1632ee9814c30f6c9fc884b792a54e5",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "第1016–1049行；NaN忽略、Bessel修正与样本计数",
+  "locator": "nanstd",
+  "text_sha256": "8eda2187676dcac8d7517532f63c8922bd789be28ff50cc3c1ad33fa66bc1668",
+  "excerpt": "variance *= correction  # Bessel's correction",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

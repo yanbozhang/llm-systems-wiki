@@ -1,0 +1,18 @@
+{
+  "id": "2026-full-network-robsa",
+  "title": "RoBSA: RoPE-based Blockwise Sparse Multi-head Latent Attention：会议论文正文",
+  "url": "https://aclanthology.org/2026.acl-long.46.pdf",
+  "version": "text-sha256:843daddc540b7ce66e3b97510a610a6174f54b960e969eaa95a8444130959cb9",
+  "native_version": "ACL 2026 · 主会长文 PDF",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "摘要、引言和方法相关段落；实验结果为作者报告，未运行复现",
+  "locator": "Abstract; Introduction; Method",
+  "text_sha256": "843daddc540b7ce66e3b97510a610a6174f54b960e969eaa95a8444130959cb9",
+  "excerpt": "Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (V olume 1: Long Papers), pages 1028–1044 July 2-7, 2026 ©2026 Associati",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "conference": "ACL 2026 · 主会长文",
+  "conference_year": 2026
+}

@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-ui-parser",
+  "title": "UI-TARS动作文本解析器",
+  "url": "https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/packages/ui-tars/action-parser/src/actionParser.ts",
+  "version": "text-sha256:9bd0aa22c39239dd18ded59d84d764a99599fa44d0ae8a249da4d98adefd8187",
+  "native_version": "3ac2cb8d946d78d5ff92ad17b318eaafa18c178c",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "第16–329行；smartResizeForV15、parseActionVlm、parseAction、框归一化和坐标字段",
+  "locator": "actionParser; parseActionVlm; parseAction; smartResizeForV15",
+  "text_sha256": "9bd0aa22c39239dd18ded59d84d764a99599fa44d0ae8a249da4d98adefd8187",
+  "excerpt": "return Number.parseFloat(num) / factors[factorIndex];",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

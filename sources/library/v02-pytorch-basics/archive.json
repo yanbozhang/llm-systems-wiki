@@ -1,0 +1,22 @@
+{
+  "source_id": "v02-pytorch-basics",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "dbcaf00f4b36d98a34f2e903f3d3890e42b28746938bae04fa6bc9afae8fa9f4",
+      "bytes": 139279,
+      "cache_file": "sources/.local/objects/dbcaf00f4b36d98a34f2e903f3d3890e42b28746938bae04fa6bc9afae8fa9f4.bin",
+      "requested_url": "https://docs.pytorch.org/tutorials/beginner/basics/intro.html",
+      "resolved_url": "https://docs.pytorch.org/tutorials/beginner/basics/intro.html",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:02:59.117848+00:00",
+      "declared_source_version": "text-sha256:4b262708cf626698741b9f20ed0735287dad249efafd8514afa7e5f0ab44521a",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:02:59.117848+00:00",
+    "status": "saved"
+  }
+}

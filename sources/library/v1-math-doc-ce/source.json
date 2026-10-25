@@ -1,0 +1,16 @@
+{
+  "id": "v1-math-doc-ce",
+  "title": "PyTorch 2.14 CrossEntropyLoss",
+  "url": "https://docs.pytorch.org/docs/2.14/generated/torch.nn.CrossEntropyLoss.html",
+  "version": "text-sha256:70fa22819952b4a366188ecf7a577c15a7ac4c00a4a7675508a80b24b1ad8ca3",
+  "native_version": "PyTorch 2.14 文档快照",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "正文类索引损失、ignore_index、均值分母与label_smoothing参数",
+  "locator": "CrossEntropyLoss; class-index target; ignore_index",
+  "text_sha256": "70fa22819952b4a366188ecf7a577c15a7ac4c00a4a7675508a80b24b1ad8ca3",
+  "excerpt": "When size_average is True, the loss is averaged over non-ignored targets.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

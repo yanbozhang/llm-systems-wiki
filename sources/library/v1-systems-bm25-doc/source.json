@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-bm25-doc",
+  "title": "Lucene BM25Similarity 官方API",
+  "url": "https://lucene.apache.org/core/10_3_1/core/org/apache/lucene/search/similarities/BM25Similarity.html",
+  "version": "text-sha256:226f32484d8bbe91df6a0d2ccaff7bcdc8a2b6eb5f1b183986e38eb814c80d00",
+  "native_version": "Lucene 10.3.1",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "Constructor Details及idf/avgFieldLength，95–151行",
+  "locator": "BM25Similarity；idf；avgFieldLength",
+  "text_sha256": "226f32484d8bbe91df6a0d2ccaff7bcdc8a2b6eb5f1b183986e38eb814c80d00",
+  "excerpt": "k1 Controls non-linear term frequency normalization (saturation).",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

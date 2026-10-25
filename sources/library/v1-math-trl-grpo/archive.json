@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-math-trl-grpo",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "5706d33cbdaf2f984d608f228af28d4afdbf88060be59f4a9fca7829e613da1f",
+      "bytes": 201296,
+      "cache_file": "sources/.local/objects/5706d33cbdaf2f984d608f228af28d4afdbf88060be59f4a9fca7829e613da1f.bin",
+      "requested_url": "https://raw.githubusercontent.com/huggingface/trl/1117c3b9c1632ee9814c30f6c9fc884b792a54e5/trl/trainer/grpo_trainer.py",
+      "resolved_url": "https://raw.githubusercontent.com/huggingface/trl/1117c3b9c1632ee9814c30f6c9fc884b792a54e5/trl/trainer/grpo_trainer.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:54.863645+00:00",
+      "declared_source_version": "text-sha256:5706d33cbdaf2f984d608f228af28d4afdbf88060be59f4a9fca7829e613da1f",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:54.863645+00:00",
+    "status": "saved"
+  }
+}

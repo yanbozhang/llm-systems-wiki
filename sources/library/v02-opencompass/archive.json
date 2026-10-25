@@ -1,0 +1,22 @@
+{
+  "source_id": "v02-opencompass",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "6aa2fad842b9953062b00da82683c79513c3a9dc1b71cae27874f79c3de8d67f",
+      "bytes": 27414,
+      "cache_file": "sources/.local/objects/6aa2fad842b9953062b00da82683c79513c3a9dc1b71cae27874f79c3de8d67f.bin",
+      "requested_url": "https://opencompass.readthedocs.io/en/latest/",
+      "resolved_url": "https://opencompass.readthedocs.io/en/latest/",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:03:15.042584+00:00",
+      "declared_source_version": "text-sha256:4a045654eefbe5b30cc5089afd66e367d19d561cc16989e6fd666be53e7885a6",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:15.042584+00:00",
+    "status": "saved"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-math-paper-grpo",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "dfcd357c9f12643480ea44356c4206965a4cc8fd7128d5739f4e4d37937afc04",
+      "bytes": 464869,
+      "cache_file": "sources/.local/objects/dfcd357c9f12643480ea44356c4206965a4cc8fd7128d5739f4e4d37937afc04.bin",
+      "requested_url": "https://arxiv.org/html/2402.03300v3",
+      "resolved_url": "https://arxiv.org/html/2402.03300v3",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:01:43.326050+00:00",
+      "declared_source_version": "text-sha256:f3bf523736c2fcc2ffab50e338e195a08b7a2e0bcf2c044b7ee7e4b5c29faf64",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:01:43.326050+00:00",
+    "status": "saved"
+  }
+}

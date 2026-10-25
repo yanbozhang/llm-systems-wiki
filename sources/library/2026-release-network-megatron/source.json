@@ -1,0 +1,18 @@
+{
+  "id": "2026-release-network-megatron",
+  "title": "NVIDIA/Megatron-LM：core_v0.19.2发布说明",
+  "url": "https://github.com/NVIDIA/Megatron-LM/releases/tag/core_v0.19.2",
+  "version": "text-sha256:b111f4357f2869dd69edfecddff0773e06db9b0363548df74e5a3e58fb3e390b",
+  "native_version": "core_v0.19.2",
+  "published_at": "2026-09-18",
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "完整发布说明；不将最新分支提交等同于该发布的代码",
+  "locator": "Release notes",
+  "text_sha256": "b111f4357f2869dd69edfecddff0773e06db9b0363548df74e5a3e58fb3e390b",
+  "excerpt": "- TransformerEngine upgraded from 2.17 to 2.18 - Added support for FP4 in 1F1B A2A overlap ([#6135](https://github.com/NVIDIA/Megatron-LM/pull/6135)) <details><",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "release_date": "2026-09-18T19:40:26Z",
+  "prerelease": false
+}

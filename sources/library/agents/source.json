@@ -1,0 +1,16 @@
+{
+  "id": "agents",
+  "title": "构建有效 Agent",
+  "url": "https://www.anthropic.com/engineering/building-effective-agents",
+  "version": "text-sha256:07896b6c64f00f61289d45741395d106c90db9497b334f5699482ce77aeb20d0",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "正文的相关章节；公式和图表未逐项独立复核",
+  "locator": "When to use agents；Agents",
+  "text_sha256": "07896b6c64f00f61289d45741395d106c90db9497b334f5699482ce77aeb20d0",
+  "excerpt": "When building applications with LLMs, we recommend finding the simplest solution possible, and only increasing complexity when needed. This might mean not building agentic systems",
+  "archive_policy": "保留短摘与指纹，全文在原站；不承诺原站失效后可完整恢复"
+}

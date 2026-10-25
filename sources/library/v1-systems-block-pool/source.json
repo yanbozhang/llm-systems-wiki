@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-block-pool",
+  "title": "vllm/v1/core/block_pool.py",
+  "url": "https://github.com/vllm-project/vllm/blob/7a64fb8fc9239cb65e0df9313fa759594dfb206a/vllm/v1/core/block_pool.py",
+  "version": "text-sha256:c87af7ef1e2fbc1e4d092c36f52d9f7f0aed5ce98fd54ed4b2e90e7537235b02",
+  "native_version": "7a64fb8fc9239cb65e0df9313fa759594dfb206a",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "get_new_blocks 666–700；_maybe_evict_cached_block、touch、is_block_writable、free_blocks 729–808",
+  "locator": "BlockPool.get_new_blocks；touch；free_blocks",
+  "text_sha256": "c87af7ef1e2fbc1e4d092c36f52d9f7f0aed5ce98fd54ed4b2e90e7537235b02",
+  "excerpt": "ref_cnt=0 means this block is in the free list (i.e. eviction candidate), so remove it.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "2026-release-benchmark-lighteval",
+  "title": "huggingface/lighteval：v0.13.0发布说明",
+  "url": "https://github.com/huggingface/lighteval/releases/tag/v0.13.0",
+  "version": "text-sha256:29ee0745f978ad6375bb2dbc2252dd7dc215efcfa7e83bc8121d8d1e370f8b9a",
+  "native_version": "v0.13.0",
+  "published_at": "2025-11-24",
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "完整发布说明；不将最新分支提交等同于该发布的代码",
+  "locator": "Release notes",
+  "text_sha256": "29ee0745f978ad6375bb2dbc2252dd7dc215efcfa7e83bc8121d8d1e370f8b9a",
+  "excerpt": "<!-- Release notes generated using configuration in .github/release.yml at v0.13.0 --> ## What's Changed ### Breaking !! * One file one task definition by @Nath",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "release_date": "2025-11-24T15:57:33Z",
+  "prerelease": false
+}

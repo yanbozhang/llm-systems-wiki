@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-math-paper-instructgpt",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "6d8e81f561c9b6f3b9b125197b23ce59f3b1f70c198be30fb9f45f3c0cb579bc",
+      "bytes": 679724,
+      "cache_file": "sources/.local/objects/6d8e81f561c9b6f3b9b125197b23ce59f3b1f70c198be30fb9f45f3c0cb579bc.bin",
+      "requested_url": "https://arxiv.org/html/2203.02155v1",
+      "resolved_url": "https://arxiv.org/html/2203.02155v1",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:01:13.372423+00:00",
+      "declared_source_version": "text-sha256:2a06d93ff9f996e633196c043424dd8f5163d047ef41bbd6ef72bfce535c7964",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:01:13.372423+00:00",
+    "status": "saved"
+  }
+}

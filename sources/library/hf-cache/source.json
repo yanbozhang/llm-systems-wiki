@@ -1,0 +1,16 @@
+{
+  "id": "hf-cache",
+  "title": "Transformers 缓存原理",
+  "url": "https://huggingface.co/docs/transformers/en/cache_explanation",
+  "version": "text-sha256:ee1f15f6a309832fccd943368cce6851aba544a582e24c6e46a7dd547ed7123e",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "正文的相关章节；公式和图表未逐项独立复核",
+  "locator": "Cache class",
+  "text_sha256": "ee1f15f6a309832fccd943368cce6851aba544a582e24c6e46a7dd547ed7123e",
+  "excerpt": "attention mask shape matches the combined length of the past and current kv pairs. The attention mask should have the shape (batch_size, past_kv_length + new_tokens_length) . This",
+  "archive_policy": "保留短摘与指纹，全文在原站；不承诺原站失效后可完整恢复"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-ui-utils",
+  "title": "UI-TARS SDK坐标与图像窗口工具",
+  "url": "https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/packages/ui-tars/sdk/src/utils.ts",
+  "version": "text-sha256:e212b03cf649544c5e4969d7cd49bd89eb0eb135f09a63abc28c6ef8f41e8f57",
+  "native_version": "3ac2cb8d946d78d5ff92ad17b318eaafa18c178c",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "第29–88、193–225行；parseBoxToScreenCoords、processVlmParams与preprocessResizeImage",
+  "locator": "parseBoxToScreenCoords; processVlmParams; preprocessResizeImage",
+  "text_sha256": "e212b03cf649544c5e4969d7cd49bd89eb0eb135f09a63abc28c6ef8f41e8f57",
+  "excerpt": "images = images.slice(excessCount);",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

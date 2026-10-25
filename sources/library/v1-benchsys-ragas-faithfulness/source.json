@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchsys-ragas-faithfulness",
+  "title": "Ragas 忠实度实现",
+  "url": "https://github.com/explodinggradients/ragas/blob/298b68274234c060deacab3cf5fb52aa3a20e885/src/ragas/metrics/_faithfulness.py",
+  "version": "text-sha256:5370b57f3df537a1619f7c6ddeeb5fd67e392821a5dee30eb5e0830f3a75cdc9",
+  "native_version": "298b68274234c060deacab3cf5fb52aa3a20e885",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "StatementGeneratorPrompt30–52；NLIStatementPrompt73–81；Faithfulness144–224",
+  "locator": "Faithfulness._create_statements；_create_verdicts；_compute_score",
+  "text_sha256": "5370b57f3df537a1619f7c6ddeeb5fd67e392821a5dee30eb5e0830f3a75cdc9",
+  "excerpt": "Check each statement against the retrieved contexts before averaging the verdicts.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

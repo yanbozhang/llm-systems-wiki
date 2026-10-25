@@ -1,0 +1,31 @@
+{
+  "source_id": "2026-repo-agents-uitars",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "0f05aa4f447d43439f6b3f4ab179cbe1e59d170eaf6c0684fa9c2eb0872e5985",
+      "bytes": 16262,
+      "cache_file": "sources/.local/objects/0f05aa4f447d43439f6b3f4ab179cbe1e59d170eaf6c0684fa9c2eb0872e5985.bin",
+      "requested_url": "https://api.github.com/repos/bytedance/UI-TARS-desktop/readme?ref=3ac2cb8d946d78d5ff92ad17b318eaafa18c178c",
+      "resolved_url": "https://api.github.com/repos/bytedance/UI-TARS-desktop/readme?ref=3ac2cb8d946d78d5ff92ad17b318eaafa18c178c",
+      "content_type": "text/markdown",
+      "representation": "decoded_repository_document",
+      "retrieved_at": "2026-10-25T03:59:27.495346+00:00",
+      "declared_source_version": "text-sha256:55cf304c573c16fc695d9531f2d4b274012052d798bff6c1f4b2e8e7daced6ea",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "Base64-decoded GitHub Contents API file"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:59:27.495346+00:00",
+    "status": "saved"
+  },
+  "public_snapshot": {
+    "spdx_id": "Apache-2.0",
+    "content_file": "sources/library/2026-repo-agents-uitars/snapshot/source.txt",
+    "license_file": "sources/library/2026-repo-agents-uitars/snapshot/LICENSE",
+    "upstream_license_url": "https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/LICENSE",
+    "source_commit": "3ac2cb8d946d78d5ff92ad17b318eaafa18c178c",
+    "content_sha256": "0f05aa4f447d43439f6b3f4ab179cbe1e59d170eaf6c0684fa9c2eb0872e5985"
+  }
+}

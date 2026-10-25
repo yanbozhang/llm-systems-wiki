@@ -1,0 +1,22 @@
+{
+  "source_id": "dpo",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "46515bc6001158063f3da04695b1412099bc40b90c53f54bf1834581aefa15d1",
+      "bytes": 411092,
+      "cache_file": "sources/.local/objects/46515bc6001158063f3da04695b1412099bc40b90c53f54bf1834581aefa15d1.bin",
+      "requested_url": "https://arxiv.org/html/2305.18290v3",
+      "resolved_url": "https://arxiv.org/html/2305.18290v3",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:01:40.564070+00:00",
+      "declared_source_version": "text-sha256:5dd82c6d51fadca9a9335a5febb80072af3ba37df81bb49ccfdbe80874af4273",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:01:40.564070+00:00",
+    "status": "saved"
+  }
+}

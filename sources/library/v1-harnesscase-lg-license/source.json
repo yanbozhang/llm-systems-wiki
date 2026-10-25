@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-lg-license",
+  "title": "LangGraph MIT许可",
+  "url": "https://github.com/langchain-ai/langgraph/blob/4c52e129eb1ab69a3da58b799f67929f77d81149/LICENSE#L1",
+  "version": "text-sha256:d9bb52f2e3540d60ff50d8f0f5b6ba649b7fd346948c4c3d086c8afb120763c7",
+  "native_version": "4c52e129eb1ab69a3da58b799f67929f77d81149",
+  "kind": "official_document",
+  "reading_scope": "MIT License全文",
+  "locator": "MIT License全文",
+  "text_sha256": "d9bb52f2e3540d60ff50d8f0f5b6ba649b7fd346948c4c3d086c8afb120763c7",
+  "excerpt": "MIT License",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}

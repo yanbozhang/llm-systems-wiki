@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-code-network-megatron",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "438e1de48c2a3e893a6299d9a91bc8f58f79c718a3614778d1b367c40dde8577",
+      "bytes": 39847,
+      "cache_file": "sources/.local/objects/438e1de48c2a3e893a6299d9a91bc8f58f79c718a3614778d1b367c40dde8577.bin",
+      "requested_url": "https://api.github.com/repos/NVIDIA/Megatron-LM/contents/megatron/core/transformer/moe/moe_layer.py?ref=2052769557dcf7045c4091d1996f0bc59afeb80e",
+      "resolved_url": "https://api.github.com/repos/NVIDIA/Megatron-LM/contents/megatron/core/transformer/moe/moe_layer.py?ref=2052769557dcf7045c4091d1996f0bc59afeb80e",
+      "content_type": "text/plain",
+      "representation": "decoded_source_file",
+      "retrieved_at": "2026-10-25T04:06:00.270542+00:00",
+      "declared_source_version": "text-sha256:95dc78afe985a752a9de32984e219fe5b718acc46ae7ea6ca5ca922e966a1896",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "Base64-decoded GitHub Contents API file"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:06:00.270542+00:00",
+    "status": "saved"
+  }
+}

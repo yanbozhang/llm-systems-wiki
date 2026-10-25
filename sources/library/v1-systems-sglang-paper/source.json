@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-sglang-paper",
+  "title": "SGLang: Efficient Execution of Structured Language Model Programs",
+  "url": "https://arxiv.org/html/2312.07104v2",
+  "version": "text-sha256:029bb3fdae8a167721dceef6f0451c7fa5935287ef51e1b56e525513de1bfea8",
+  "native_version": "2312.07104v2",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "§3 RadixAttention与cache-aware scheduling；§6.1 Setup，正文155–240",
+  "locator": "§3；§6.1",
+  "text_sha256": "029bb3fdae8a167721dceef6f0451c7fa5935287ef51e1b56e525513de1bfea8",
+  "excerpt": "While greedy cache-aware scheduling can achieve high throughput, it can lead to starvation.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

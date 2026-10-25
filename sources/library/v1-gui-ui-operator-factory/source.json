@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-ui-operator-factory",
+  "title": "UI-TARS Electron本地Operator",
+  "url": "https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/apps/ui-tars/src/main/agent/operator.ts",
+  "version": "text-sha256:c9b68bf166e568bad234b5c8a7d2cf7e62f110b5c978cefc1154016a263b41a2",
+  "native_version": "3ac2cb8d946d78d5ff92ad17b318eaafa18c178c",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "第20–105行；动作声明、desktopCapturer截图及Windows输入覆盖",
+  "locator": "NutJSElectronOperator.screenshot; NutJSElectronOperator.execute",
+  "text_sha256": "c9b68bf166e568bad234b5c8a7d2cf7e62f110b5c978cefc1154016a263b41a2",
+  "excerpt": "return await super.execute(params);",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

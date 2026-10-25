@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchmark-gsm-parser",
+  "title": "GSM8K 最终答案提取与正确性检查",
+  "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/dataset.py",
+  "version": "text-sha256:c22b81bccaaebfd1123be296e8b3c3dca3ddc704c46b70bf4a50603bb627e197",
+  "native_version": "3101c7d5072418e28b9008a6636bde82a006892c",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "实际读取相关函数与上下文；函数定位在知识点正文中列明",
+  "locator": "grade_school_math/dataset.py",
+  "text_sha256": "c22b81bccaaebfd1123be296e8b3c3dca3ddc704c46b70bf4a50603bb627e197",
+  "excerpt": "",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

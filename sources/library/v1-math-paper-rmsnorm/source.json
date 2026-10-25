@@ -1,0 +1,16 @@
+{
+  "id": "v1-math-paper-rmsnorm",
+  "title": "Root Mean Square Layer Normalization",
+  "url": "https://arxiv.org/html/1910.07467v1",
+  "version": "text-sha256:19844ec3eb8a05541422884c59330b4fb7a230edbdefcbb66a04cc426c696d17",
+  "native_version": "1910.07467v1",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "第3–4.2节；RMS、与LayerNorm区别、缩放不变性和梯度分析",
+  "locator": "§4 RMSNorm; §4.1; §4.2; Eq.(4)–(10)",
+  "text_sha256": "19844ec3eb8a05541422884c59330b4fb7a230edbdefcbb66a04cc426c696d17",
+  "excerpt": "RMSNorm simplifies LayerNorm by totally removing the mean statistic",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

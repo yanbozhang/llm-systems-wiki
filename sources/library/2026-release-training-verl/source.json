@@ -1,0 +1,18 @@
+{
+  "id": "2026-release-training-verl",
+  "title": "volcengine/verl：v0.9.1发布说明",
+  "url": "https://github.com/verl-project/verl/releases/tag/v0.9.1",
+  "version": "text-sha256:45f4b942fff97691ed641e2e8adf10c3da7d8aa2431f33b6db9d5764e88d2d0f",
+  "native_version": "v0.9.1",
+  "published_at": "2026-09-20",
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "完整发布说明；不将最新分支提交等同于该发布的代码",
+  "locator": "Release notes",
+  "text_sha256": "45f4b942fff97691ed641e2e8adf10c3da7d8aa2431f33b6db9d5764e88d2d0f",
+  "excerpt": "## Highlights ### Trainer #### Unified V1 trainer - `separate_async` can now lend idle trainer GPUs to generation: once a step's prompts are submitted, the trai",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "release_date": "2026-09-20T07:24:43Z",
+  "prerelease": false
+}

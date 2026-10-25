@@ -1,0 +1,16 @@
+{
+  "id": "v1-math-paper-lora",
+  "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+  "url": "https://arxiv.org/html/2106.09685v2",
+  "version": "text-sha256:da3e9183b24911177b9e62fafd797723ace356f1d37e81df97845accab22524c",
+  "native_version": "2106.09685v2",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "第4.1节；BA分解、冻结权重、初始化、alpha/r与合并推理",
+  "locator": "§4.1; Eq.(3)",
+  "text_sha256": "da3e9183b24911177b9e62fafd797723ace356f1d37e81df97845accab22524c",
+  "excerpt": "We use a random Gaussian initialization for A and zero for B",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

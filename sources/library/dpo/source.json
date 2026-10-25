@@ -1,0 +1,16 @@
+{
+  "id": "dpo",
+  "title": "DPO 原论文",
+  "url": "https://arxiv.org/html/2305.18290v3",
+  "version": "text-sha256:5dd82c6d51fadca9a9335a5febb80072af3ba37df81bb49ccfdbe80874af4273",
+  "native_version": "2305.18290v3",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "正文的相关章节；公式和图表未逐项独立复核",
+  "locator": "4 Direct Preference Optimization",
+  "text_sha256": "5dd82c6d51fadca9a9335a5febb80072af3ba37df81bb49ccfdbe80874af4273",
+  "excerpt": "simple classification loss. The resulting algorithm, which we call Direct Preference Optimization (DPO), is stable, performant, and computationally lightweight, eliminating the nee",
+  "archive_policy": "保留短摘与指纹，全文在原站；不承诺原站失效后可完整恢复"
+}

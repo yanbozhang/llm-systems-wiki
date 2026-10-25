@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-cx-registry",
+  "title": "Codex ToolRegistry 调度",
+  "url": "https://github.com/openai/codex/blob/970111f6cb62cc02fe36a82ea7d71b37a2889c97/codex-rs/core/src/tools/registry.rs#L691",
+  "version": "text-sha256:fa928f78a1c2b06778d97138c195f46c574072e4538a9cb99bdec33ecd171a15",
+  "native_version": "970111f6cb62cc02fe36a82ea7d71b37a2889c97",
+  "kind": "source_code",
+  "reading_scope": "dispatch_any_with_state 691–790：工具查找和载荷类型检查",
+  "locator": "dispatch_any_with_state 691–790：工具查找和载荷类型检查",
+  "text_sha256": "fa928f78a1c2b06778d97138c195f46c574072e4538a9cb99bdec33ecd171a15",
+  "excerpt": "pub(crate) async fn dispatch_any_with_state(",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}

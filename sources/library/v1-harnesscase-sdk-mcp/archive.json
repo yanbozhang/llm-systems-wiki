@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-harnesscase-sdk-mcp",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "1582188cfc10ce1eb3892a6e7c6d5639cdb0cca5e9e6ef1a1f5ebf68b75a072b",
+      "bytes": 28105,
+      "cache_file": "sources/.local/objects/1582188cfc10ce1eb3892a6e7c6d5639cdb0cca5e9e6ef1a1f5ebf68b75a072b.bin",
+      "requested_url": "https://raw.githubusercontent.com/anthropics/claude-agent-sdk-python/0e89b298e771259378a6cd3734e00d323dff5703/src/claude_agent_sdk/__init__.py",
+      "resolved_url": "https://raw.githubusercontent.com/anthropics/claude-agent-sdk-python/0e89b298e771259378a6cd3734e00d323dff5703/src/claude_agent_sdk/__init__.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:24.158922+00:00",
+      "declared_source_version": "text-sha256:1582188cfc10ce1eb3892a6e7c6d5639cdb0cca5e9e6ef1a1f5ebf68b75a072b",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:24.158922+00:00",
+    "status": "saved"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "instructgpt",
+  "title": "InstructGPT 原论文",
+  "url": "https://arxiv.org/html/2203.02155v1",
+  "version": "text-sha256:67c4a350fdd70e374d887083045be465d3a6da270bc2d0883a8e980d8d279029",
+  "native_version": "2203.02155v1",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "正文的相关章节；公式和图表未逐项独立复核",
+  "locator": "3.1 High-level methodology",
+  "text_sha256": "67c4a350fdd70e374d887083045be465d3a6da270bc2d0883a8e980d8d279029",
+  "excerpt": "Step 1: Collect demonstration data, and train a supervised policy. Step 2: Collect comparison data, and train a reward model. Step 3: Optimize a policy against the reward model usi",
+  "archive_policy": "保留短摘与指纹，全文在原站；不承诺原站失效后可完整恢复"
+}

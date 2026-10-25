@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-systems-light-purge-doc",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "2c821ba65df705a73a08e02ea21c15c6f6b74533e3576bd2c1b8b31acf5d9453",
+      "bytes": 48076,
+      "cache_file": "sources/.local/objects/2c821ba65df705a73a08e02ea21c15c6f6b74533e3576bd2c1b8b31acf5d9453.bin",
+      "requested_url": "https://raw.githubusercontent.com/HKUDS/LightRAG/aaebfe1bb8d55deb6a4304d357a3bf4c92fcd40a/docs/design/PurgeRecoveryContract.md",
+      "resolved_url": "https://raw.githubusercontent.com/HKUDS/LightRAG/aaebfe1bb8d55deb6a4304d357a3bf4c92fcd40a/docs/design/PurgeRecoveryContract.md",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:14:10.855141+00:00",
+      "declared_source_version": "text-sha256:2c821ba65df705a73a08e02ea21c15c6f6b74533e3576bd2c1b8b31acf5d9453",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:14:10.855141+00:00",
+    "status": "saved"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "source_id": "swebench",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "06841624d7b5130dfe3cc6714642e9a8fd2a608c95c66ae0180e409f12b73aaa",
+      "bytes": 13302,
+      "cache_file": "sources/.local/objects/06841624d7b5130dfe3cc6714642e9a8fd2a608c95c66ae0180e409f12b73aaa.bin",
+      "requested_url": "https://raw.githubusercontent.com/SWE-bench/SWE-bench/main/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/SWE-bench/SWE-bench/main/README.md",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:02:45.291077+00:00",
+      "declared_source_version": "text-sha256:06841624d7b5130dfe3cc6714642e9a8fd2a608c95c66ae0180e409f12b73aaa",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:02:45.291077+00:00",
+    "status": "saved"
+  }
+}

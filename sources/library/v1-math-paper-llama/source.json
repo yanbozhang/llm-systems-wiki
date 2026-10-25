@@ -1,0 +1,16 @@
+{
+  "id": "v1-math-paper-llama",
+  "title": "LLaMA: Open and Efficient Foundation Language Models",
+  "url": "https://arxiv.org/html/2302.13971v1",
+  "version": "text-sha256:55842d07729c5bdc5517dc7ac501d71fb34112e64e8eb0c4a60a0a43855b5ff6",
+  "native_version": "2302.13971v1",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "第2.1–2.4节；数据预处理、混合、SwiGLU宽度、Pre-Norm、RMSNorm与优化器",
+  "locator": "§2.1 Pre-training Data; §2.2 Architecture; §2.3–2.4",
+  "text_sha256": "55842d07729c5bdc5517dc7ac501d71fb34112e64e8eb0c4a60a0a43855b5ff6",
+  "excerpt": "We use a dimension of 2/3 4d instead of 4d as in PaLM.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

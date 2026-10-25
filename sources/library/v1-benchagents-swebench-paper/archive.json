@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchagents-swebench-paper",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "ca6006644964cbdb3d9389583cc09facfcd9f8e2ee70798a8d7efafea7d14f62",
+      "bytes": 1245487,
+      "cache_file": "sources/.local/objects/ca6006644964cbdb3d9389583cc09facfcd9f8e2ee70798a8d7efafea7d14f62.bin",
+      "requested_url": "https://arxiv.org/html/2310.06770v1",
+      "resolved_url": "https://arxiv.org/html/2310.06770v1",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:04:31.970114+00:00",
+      "declared_source_version": "text-sha256:bc105c7e79f5041dc98ee0c2d146d3e928d1e83b2e20069bf44a1b0da7a93fd9",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:04:31.970114+00:00",
+    "status": "saved"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-systems-kv-utils",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "774fa7691b5b496b8fe7c74d0e0488bec475048ef9d085872c3bf2fe1ccc63f2",
+      "bytes": 46300,
+      "cache_file": "sources/.local/objects/774fa7691b5b496b8fe7c74d0e0488bec475048ef9d085872c3bf2fe1ccc63f2.bin",
+      "requested_url": "https://raw.githubusercontent.com/vllm-project/vllm/7a64fb8fc9239cb65e0df9313fa759594dfb206a/vllm/v1/core/kv_cache_utils.py",
+      "resolved_url": "https://raw.githubusercontent.com/vllm-project/vllm/7a64fb8fc9239cb65e0df9313fa759594dfb206a/vllm/v1/core/kv_cache_utils.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:14:01.045372+00:00",
+      "declared_source_version": "text-sha256:774fa7691b5b496b8fe7c74d0e0488bec475048ef9d085872c3bf2fe1ccc63f2",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:14:01.045372+00:00",
+    "status": "saved"
+  }
+}

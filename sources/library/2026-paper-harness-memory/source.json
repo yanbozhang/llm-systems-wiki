@@ -1,0 +1,18 @@
+{
+  "id": "2026-paper-harness-memory",
+  "title": "How Memory Management Impacts LLM Agents: An Empirical Study of Experience-Following Behavior",
+  "url": "https://aclanthology.org/2026.acl-long.27/",
+  "version": "text-sha256:3b93df5001aed7f176de7e0abbd44dc33fc2d3115919ee84d81d7451f31af1f7",
+  "native_version": "ACL 2026 · 主会长文",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "会议官方详情的标题、会议归属、摘要与公开说明；全文若取得，另列全文来源记录",
+  "locator": "Official paper record; Abstract",
+  "text_sha256": "3b93df5001aed7f176de7e0abbd44dc33fc2d3115919ee84d81d7451f31af1f7",
+  "excerpt": "How Memory Management Impacts LLM Agents: An Empirical Study of Experience-Following Behavior - ACL Anthology ACL Anthology AboutAnnouncementsCommunication chan",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "conference": "ACL 2026 · 主会长文",
+  "conference_year": 2026
+}

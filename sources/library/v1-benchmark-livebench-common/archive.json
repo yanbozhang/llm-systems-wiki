@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchmark-livebench-common",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "1943b30760d15cfc92b3a9ecb48c6fce2368d96132029ca783505f8c46ee7aa2",
+      "bytes": 18655,
+      "cache_file": "sources/.local/objects/1943b30760d15cfc92b3a9ecb48c6fce2368d96132029ca783505f8c46ee7aa2.bin",
+      "requested_url": "https://raw.githubusercontent.com/LiveBench/LiveBench/1d1006a0d10ece52c2e706f8a208a659b5bbb96f/livebench/common.py",
+      "resolved_url": "https://raw.githubusercontent.com/LiveBench/LiveBench/1d1006a0d10ece52c2e706f8a208a659b5bbb96f/livebench/common.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:11:40.340615+00:00",
+      "declared_source_version": "text-sha256:1943b30760d15cfc92b3a9ecb48c6fce2368d96132029ca783505f8c46ee7aa2",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:11:40.340615+00:00",
+    "status": "saved"
+  }
+}

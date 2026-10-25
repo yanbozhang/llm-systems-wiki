@@ -2,8 +2,8 @@
 id: sft
 module: training
 status: published
-page_version: 3
-last_checked: 2026-10-24
+page_version: 4
+last_checked: 2026-10-25
 depth: worked
 practice_status: designed
 claim_ids: [claim-sft-v1, claim-sft-label-mask-v1, claim-sft-lora-gradient-v1, claim-sft-lora-merge-v1]
@@ -190,6 +190,12 @@ SFT 的低训练损失可能来自模板泄漏、答案记忆或分布过窄。L
 ## 源码与后续阅读
 
 本页引用固定版 InstructGPT、LoRA 原论文，PEFT 与 TRL 具体提交，以及 Transformers 标签移位实现。未独立复现全参数或低秩微调任务质量。关联阅读：[偏好学习与DPO](偏好学习与DPO.md)。
+
+## 2026研究进展
+
+ACL 2026的样本极性研究讨论正、负rollout及token级优势塑形。SFT中的“模仿正确标签”与RL中的“降低负优势动作概率”并不相同，因此不能把错误轨迹直接当作SFT正例来吸收负样本。 [会议来源与读取范围](../../sources/library/2026-paper-training-polarity/README.md)
+
+更多公式、代码示例、结构图及当前开源版本见[训练研究进展](../frontiers/训练研究进展.md)。新内容未执行真实模型实验。
 
 ---
 

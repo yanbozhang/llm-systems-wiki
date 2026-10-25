@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-harnesscase-lg-persist-doc",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "2179a3ea522c178b3e7330f167ffc17c4d1985d16f0b01105eff0c21a40a8a8b",
+      "bytes": 706329,
+      "cache_file": "sources/.local/objects/2179a3ea522c178b3e7330f167ffc17c4d1985d16f0b01105eff0c21a40a8a8b.bin",
+      "requested_url": "https://docs.langchain.com/oss/python/langgraph/persistence",
+      "resolved_url": "https://docs.langchain.com/oss/python/langgraph/persistence",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:03:48.426309+00:00",
+      "declared_source_version": "text-sha256:188da68bb70db61e0670973154c9d19bf30fff5dd4536b776cf3fa3c05028d1a",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:48.426309+00:00",
+    "status": "saved"
+  }
+}

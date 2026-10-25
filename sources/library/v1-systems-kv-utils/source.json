@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-kv-utils",
+  "title": "vllm/v1/core/kv_cache_utils.py",
+  "url": "https://github.com/vllm-project/vllm/blob/7a64fb8fc9239cb65e0df9313fa759594dfb206a/vllm/v1/core/kv_cache_utils.py",
+  "version": "text-sha256:774fa7691b5b496b8fe7c74d0e0488bec475048ef9d085872c3bf2fe1ccc63f2",
+  "native_version": "7a64fb8fc9239cb65e0df9313fa759594dfb206a",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "KVCacheBlock 162–205；FreeKVCacheBlockQueue 258–274；hash extra keys 590–674；hash_block_tokens 707–737",
+  "locator": "KVCacheBlock；FreeKVCacheBlockQueue；hash_block_tokens",
+  "text_sha256": "774fa7691b5b496b8fe7c74d0e0488bec475048ef9d085872c3bf2fe1ccc63f2",
+  "excerpt": "hash_function((parent_block_hash, curr_block_token_ids_tuple, extra_keys))",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

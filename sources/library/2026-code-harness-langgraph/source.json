@@ -1,0 +1,16 @@
+{
+  "id": "2026-code-harness-langgraph",
+  "title": "langchain-ai/langgraph：libs/langgraph/langgraph/pregel/_loop.py",
+  "url": "https://github.com/langchain-ai/langgraph/blob/4c52e129eb1ab69a3da58b799f67929f77d81149/libs/langgraph/langgraph/pregel/_loop.py",
+  "version": "text-sha256:0f3f93bea4ba9d289dd1e906452a1615a32d556b162d874bf8deed10bca4e7fb",
+  "native_version": "4c52e129eb1ab69a3da58b799f67929f77d81149",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "PregelLoop.tick，650行起；静态阅读，未运行完整框架",
+  "locator": "PregelLoop.tick，650行起",
+  "text_sha256": "0f3f93bea4ba9d289dd1e906452a1615a32d556b162d874bf8deed10bca4e7fb",
+  "excerpt": "from __future__ import annotations import asyncio import binascii import concurrent.futures from collections import defaultdict, deque from collections.abc impo",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验"
+}

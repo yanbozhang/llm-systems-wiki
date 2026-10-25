@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-harnesscase-sdk-client",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "980f956d963338b39f4fd5224e69594eb513bfda37e5b215cf94bb0499ea047c",
+      "bytes": 26948,
+      "cache_file": "sources/.local/objects/980f956d963338b39f4fd5224e69594eb513bfda37e5b215cf94bb0499ea047c.bin",
+      "requested_url": "https://raw.githubusercontent.com/anthropics/claude-agent-sdk-python/0e89b298e771259378a6cd3734e00d323dff5703/src/claude_agent_sdk/client.py",
+      "resolved_url": "https://raw.githubusercontent.com/anthropics/claude-agent-sdk-python/0e89b298e771259378a6cd3734e00d323dff5703/src/claude_agent_sdk/client.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:22.528154+00:00",
+      "declared_source_version": "text-sha256:980f956d963338b39f4fd5224e69594eb513bfda37e5b215cf94bb0499ea047c",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:22.528154+00:00",
+    "status": "saved"
+  }
+}

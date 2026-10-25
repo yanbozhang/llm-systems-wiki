@@ -1,0 +1,16 @@
+{
+  "id": "v1-coding-oh-sdk-readme",
+  "title": "README.md",
+  "url": "https://github.com/OpenHands/software-agent-sdk/blob/acd96e6fa424c02432304395b9208f99be24b54d/README.md",
+  "version": "text-sha256:95094c9745c7cc58136d4eaa1688fb6038aafefec2be05344293f6df7e55dbf8",
+  "native_version": "acd96e6fa424c02432304395b9208f99be24b54d",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "README 28–106：SDK用途、本地/远端workspace与Repository boundaries",
+  "locator": "Repository boundaries",
+  "text_sha256": "95094c9745c7cc58136d4eaa1688fb6038aafefec2be05344293f6df7e55dbf8",
+  "excerpt": "The normal flow is SDK/Agent Server → OpenAPI contract → clients/typescript → Agent Canvas.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

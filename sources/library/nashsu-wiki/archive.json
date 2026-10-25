@@ -1,0 +1,22 @@
+{
+  "source_id": "nashsu-wiki",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "1d5e91a86372a3497fd593d34f9343763b4474f4e369c4849cc14056bb424a0e",
+      "bytes": 32048,
+      "cache_file": "sources/.local/objects/1d5e91a86372a3497fd593d34f9343763b4474f4e369c4849cc14056bb424a0e.bin",
+      "requested_url": "https://raw.githubusercontent.com/nashsu/llm_wiki/main/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/nashsu/llm_wiki/main/README.md",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T03:58:57.930925+00:00",
+      "declared_source_version": "text-sha256:1d5e91a86372a3497fd593d34f9343763b4474f4e369c4849cc14056bb424a0e",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:58:57.930925+00:00",
+    "status": "saved"
+  }
+}

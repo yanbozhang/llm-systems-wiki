@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-sdk-license",
+  "title": "Claude Agent SDK Python MIT许可",
+  "url": "https://github.com/anthropics/claude-agent-sdk-python/blob/0e89b298e771259378a6cd3734e00d323dff5703/LICENSE#L1",
+  "version": "text-sha256:cebdde8a8fb9ee59e5eaaed19578bf8085aa7047562259c31f38f225c26f6812",
+  "native_version": "0e89b298e771259378a6cd3734e00d323dff5703",
+  "kind": "official_document",
+  "reading_scope": "MIT License全文",
+  "locator": "MIT License全文",
+  "text_sha256": "cebdde8a8fb9ee59e5eaaed19578bf8085aa7047562259c31f38f225c26f6812",
+  "excerpt": "MIT License",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}

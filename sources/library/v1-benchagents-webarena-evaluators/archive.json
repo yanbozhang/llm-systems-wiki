@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchagents-webarena-evaluators",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "e23edb390c4e39b3fff97dfd456fb04f7a59a0fb1ea30a4f2fa42bcb77e00c22",
+      "bytes": 13264,
+      "cache_file": "sources/.local/objects/e23edb390c4e39b3fff97dfd456fb04f7a59a0fb1ea30a4f2fa42bcb77e00c22.bin",
+      "requested_url": "https://raw.githubusercontent.com/web-arena-x/webarena/dce04686a56253aefba7b18a4fa0937cf1dc987b/evaluation_harness/evaluators.py",
+      "resolved_url": "https://raw.githubusercontent.com/web-arena-x/webarena/dce04686a56253aefba7b18a4fa0937cf1dc987b/evaluation_harness/evaluators.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:04:43.137227+00:00",
+      "declared_source_version": "text-sha256:e23edb390c4e39b3fff97dfd456fb04f7a59a0fb1ea30a4f2fa42bcb77e00c22",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:04:43.137227+00:00",
+    "status": "saved"
+  }
+}

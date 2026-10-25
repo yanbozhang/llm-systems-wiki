@@ -1,0 +1,16 @@
+{
+  "id": "v1-agents-swebench-paper",
+  "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+  "url": "https://arxiv.org/html/2310.06770v3",
+  "native_version": "arXiv:2310.06770v3",
+  "kind": "paper",
+  "reading_scope": "附录A.4 Evaluation Procedure；表9 FAIL_TO_PASS、PASS_TO_PASS",
+  "locator": "附录A.4 Evaluation Procedure；表9 FAIL_TO_PASS、PASS_TO_PASS",
+  "text_sha256": "4b243a18f76986685b8a30a02618f7cb601bf21b6788180a47348bf20c255f0d",
+  "excerpt": "a task is considered solved if all tests across FAIL_TO_PASS and PASS_TO_PASS pass.",
+  "version": "text-sha256:4b243a18f76986685b8a30a02618f7cb601bf21b6788180a47348bf20c255f0d",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

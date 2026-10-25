@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-agents-osworld-control",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "385263ab94271557deb904cdcf666dae324753d59896d1f011084ba7da8b2205",
+      "bytes": 32946,
+      "cache_file": "sources/.local/objects/385263ab94271557deb904cdcf666dae324753d59896d1f011084ba7da8b2205.bin",
+      "requested_url": "https://raw.githubusercontent.com/xlang-ai/OSWorld/04718eab9327856efe8192cc58161acc7a7627e2/desktop_env/controllers/python.py",
+      "resolved_url": "https://raw.githubusercontent.com/xlang-ai/OSWorld/04718eab9327856efe8192cc58161acc7a7627e2/desktop_env/controllers/python.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:03:39.449076+00:00",
+      "declared_source_version": "text-sha256:385263ab94271557deb904cdcf666dae324753d59896d1f011084ba7da8b2205",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:39.449076+00:00",
+    "status": "saved"
+  }
+}

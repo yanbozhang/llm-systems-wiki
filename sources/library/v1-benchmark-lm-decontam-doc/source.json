@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchmark-lm-decontam-doc",
+  "title": "LM Evaluation Harness 去污染说明",
+  "url": "https://github.com/EleutherAI/lm-evaluation-harness/blob/d6de81643928d653435c431bae19945d41d32520/docs/decontamination.md",
+  "version": "text-sha256:b30a50c2acc87826cdc46ad2b7de678e91dcab24a39cb94e1a3cee094ccbccec",
+  "native_version": "d6de81643928d653435c431bae19945d41d32520",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "实际读取相关函数与上下文；函数定位在知识点正文中列明",
+  "locator": "docs/decontamination.md",
+  "text_sha256": "b30a50c2acc87826cdc46ad2b7de678e91dcab24a39cb94e1a3cee094ccbccec",
+  "excerpt": "",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

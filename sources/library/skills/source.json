@@ -1,0 +1,16 @@
+{
+  "id": "skills",
+  "title": "Agent Skills 规范",
+  "url": "https://agentskills.io/specification",
+  "version": "text-sha256:72624e7702ff7a5f0e7f2667c1989591f91f94170a8a1350e2d400f98303a43d",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "正文的相关章节；公式和图表未逐项独立复核",
+  "locator": "SKILL.md；Progressive disclosure",
+  "text_sha256": "72624e7702ff7a5f0e7f2667c1989591f91f94170a8a1350e2d400f98303a43d",
+  "excerpt": "Progressive disclosure File references Validation Specification Copy page Copy page The complete format specification for Agent Skills. Copy page Copy page ​ Directory structure A",
+  "archive_policy": "保留短摘与指纹，全文在原站；不承诺原站失效后可完整恢复"
+}

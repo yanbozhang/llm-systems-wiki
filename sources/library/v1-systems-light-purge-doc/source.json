@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-light-purge-doc",
+  "title": "docs/design/PurgeRecoveryContract.md",
+  "url": "https://github.com/HKUDS/LightRAG/blob/aaebfe1bb8d55deb6a4304d357a3bf4c92fcd40a/docs/design/PurgeRecoveryContract.md",
+  "version": "text-sha256:2c821ba65df705a73a08e02ea21c15c6f6b74533e3576bd2c1b8b31acf5d9453",
+  "native_version": "aaebfe1bb8d55deb6a4304d357a3bf4c92fcd40a",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "Purge Recovery Contract 前42行：不变量、恢复证明、四阶段、chunk tracking authority",
+  "locator": "Purge Recovery Contract；Chunk tracking authority",
+  "text_sha256": "2c821ba65df705a73a08e02ea21c15c6f6b74533e3576bd2c1b8b31acf5d9453",
+  "excerpt": "A purge must never delete something that CARRIES attribution and leave those objects behind.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "v1-agents-langgraph-persistence",
+  "title": "LangGraph Persistence 官方文档",
+  "url": "https://docs.langchain.com/oss/python/langgraph/persistence",
+  "native_version": "2026-10-24 页面快照",
+  "kind": "official_document",
+  "reading_scope": "Checkpointer vs. store；MemorySaver does not persist between restarts",
+  "locator": "Checkpointer vs. store；MemorySaver does not persist between restarts",
+  "text_sha256": "188da68bb70db61e0670973154c9d19bf30fff5dd4536b776cf3fa3c05028d1a",
+  "excerpt": "Checkpointers persist a thread’s graph state as checkpoints.",
+  "version": "text-sha256:188da68bb70db61e0670973154c9d19bf30fff5dd4536b776cf3fa3c05028d1a",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

@@ -20,6 +20,16 @@ The website supports search, module filters, learning paths, article navigation,
 
 [![Knowledge library website preview](assets/site-preview.png)](https://yanbozhang.github.io/llm-systems-wiki/)
 
+## Choose a starting point
+
+| Your goal | Start here |
+|---|---|
+| Learn the foundations and run small examples | [Repository guide](docs/仓库导览.md) · [Foundations path](wiki/paths/基础入门路径.md) |
+| Follow research and engineering changes in 2026 | [Research across seven areas](wiki/frontiers/README.md) · [Reading site](https://yanbozhang.github.io/llm-systems-wiki/research/) |
+| Trace a paper, source version, or local archive | [Source library](sources/README.md) · [Complete index](sources/来源索引.md) |
+
+The new reading collection connects 14 ICML/ACL 2026 papers and 14 open-source projects to the existing foundations. Each entry distinguishes conference records, full-text reading, abstract-only evidence, releases, and current commits. Every source has its own directory. Local copies of third-party material are kept outside version control unless redistribution rights have been reviewed. Research articles are written in Chinese.
+
 ## Start with a question
 
 | What would you like to understand? | Read | Teaching example |

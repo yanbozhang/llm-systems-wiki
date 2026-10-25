@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-systems-block-pool",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "c87af7ef1e2fbc1e4d092c36f52d9f7f0aed5ce98fd54ed4b2e90e7537235b02",
+      "bytes": 36355,
+      "cache_file": "sources/.local/objects/c87af7ef1e2fbc1e4d092c36f52d9f7f0aed5ce98fd54ed4b2e90e7537235b02.bin",
+      "requested_url": "https://raw.githubusercontent.com/vllm-project/vllm/7a64fb8fc9239cb65e0df9313fa759594dfb206a/vllm/v1/core/block_pool.py",
+      "resolved_url": "https://raw.githubusercontent.com/vllm-project/vllm/7a64fb8fc9239cb65e0df9313fa759594dfb206a/vllm/v1/core/block_pool.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:14:02.573062+00:00",
+      "declared_source_version": "text-sha256:c87af7ef1e2fbc1e4d092c36f52d9f7f0aed5ce98fd54ed4b2e90e7537235b02",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:14:02.573062+00:00",
+    "status": "saved"
+  }
+}

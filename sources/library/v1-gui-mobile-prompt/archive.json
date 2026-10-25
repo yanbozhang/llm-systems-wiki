@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-gui-mobile-prompt",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "b9b8a3f871eb67444bd17fdc02776cf1c2eb83461a435b421622bac3e20f824f",
+      "bytes": 12400,
+      "cache_file": "sources/.local/objects/b9b8a3f871eb67444bd17fdc02776cf1c2eb83461a435b421622bac3e20f824f.bin",
+      "requested_url": "https://raw.githubusercontent.com/X-PLUG/MobileAgent/11cea575561fb7800b5fb6b6cafa56f7a91de11f/Mobile-Agent-v2/MobileAgent/prompt.py",
+      "resolved_url": "https://raw.githubusercontent.com/X-PLUG/MobileAgent/11cea575561fb7800b5fb6b6cafa56f7a91de11f/Mobile-Agent-v2/MobileAgent/prompt.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:12:49.541497+00:00",
+      "declared_source_version": "text-sha256:b9b8a3f871eb67444bd17fdc02776cf1c2eb83461a435b421622bac3e20f824f",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:12:49.541497+00:00",
+    "status": "saved"
+  }
+}

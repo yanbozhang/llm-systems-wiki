@@ -1,0 +1,16 @@
+{
+  "id": "v1-coding-aider-base",
+  "title": "aider/coders/base_coder.py",
+  "url": "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/coders/base_coder.py",
+  "version": "text-sha256:04a7b38c4f1d2b1684ac958f40bcd81a28b00139eae88afed59d2c970bef1ee1",
+  "native_version": "5dc9490bb35f9729ef2c95d00a19ccd30c26339c",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "构造参数405–414；check_for_dirty_commit/allowed_to_edit2175–2245；prepare_to_edit2269–2300；auto_commit/dirty_commit2375–2440",
+  "locator": "Coder.check_for_dirty_commit；prepare_to_edit；auto_commit；dirty_commit",
+  "text_sha256": "04a7b38c4f1d2b1684ac958f40bcd81a28b00139eae88afed59d2c970bef1ee1",
+  "excerpt": "self.repo.commit(fnames=self.need_commit_before_edits, coder=self)",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

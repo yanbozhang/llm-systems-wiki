@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchmark-wilson-doc",
+  "title": "NIST 二项比例区间",
+  "url": "https://www.itl.nist.gov/div898/handbook/prc/section2/prc241.htm",
+  "version": "text-sha256:a31061395b22937605e05a75daa70a6394e3bb6effbc0c1ca5e2804b036e832e",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "读取相关正文；具体章节在文章中定位",
+  "locator": "正文相关章节",
+  "text_sha256": "a31061395b22937605e05a75daa70a6394e3bb6effbc0c1ca5e2804b036e832e",
+  "excerpt": "",
+  "archive_policy": "仅保留链接与指纹，全文在原站"
+}

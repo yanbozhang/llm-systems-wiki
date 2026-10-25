@@ -1,0 +1,31 @@
+{
+  "source_id": "2026-repo-harness-langgraph",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "3a13e257af1216962d53d72414a7f44ac1fc5cea34d994bdff60ea2a3b045933",
+      "bytes": 6395,
+      "cache_file": "sources/.local/objects/3a13e257af1216962d53d72414a7f44ac1fc5cea34d994bdff60ea2a3b045933.bin",
+      "requested_url": "https://api.github.com/repos/langchain-ai/langgraph/readme?ref=4c52e129eb1ab69a3da58b799f67929f77d81149",
+      "resolved_url": "https://api.github.com/repos/langchain-ai/langgraph/readme?ref=4c52e129eb1ab69a3da58b799f67929f77d81149",
+      "content_type": "text/markdown",
+      "representation": "decoded_repository_document",
+      "retrieved_at": "2026-10-25T03:59:20.122380+00:00",
+      "declared_source_version": "text-sha256:d8c82b567e780f67f757f4aae9683859d58e3a98abf86a06c5d3fb10f570cc63",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "Base64-decoded GitHub Contents API file"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:59:20.122380+00:00",
+    "status": "saved"
+  },
+  "public_snapshot": {
+    "spdx_id": "MIT",
+    "content_file": "sources/library/2026-repo-harness-langgraph/snapshot/source.txt",
+    "license_file": "sources/library/2026-repo-harness-langgraph/snapshot/LICENSE",
+    "upstream_license_url": "https://github.com/langchain-ai/langgraph/blob/4c52e129eb1ab69a3da58b799f67929f77d81149/LICENSE",
+    "source_commit": "4c52e129eb1ab69a3da58b799f67929f77d81149",
+    "content_sha256": "3a13e257af1216962d53d72414a7f44ac1fc5cea34d994bdff60ea2a3b045933"
+  }
+}

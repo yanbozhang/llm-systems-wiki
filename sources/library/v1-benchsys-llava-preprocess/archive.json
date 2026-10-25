@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchsys-llava-preprocess",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "5551c1a52ea5e7d6e4ae5ad5da430271b0cd648b044a9b812127a49f46895bcf",
+      "bytes": 9555,
+      "cache_file": "sources/.local/objects/5551c1a52ea5e7d6e4ae5ad5da430271b0cd648b044a9b812127a49f46895bcf.bin",
+      "requested_url": "https://raw.githubusercontent.com/haotian-liu/LLaVA/c121f0432da27facab705978f83c4ada465e46fd/llava/mm_utils.py",
+      "resolved_url": "https://raw.githubusercontent.com/haotian-liu/LLaVA/c121f0432da27facab705978f83c4ada465e46fd/llava/mm_utils.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:05:43.838788+00:00",
+      "declared_source_version": "text-sha256:5551c1a52ea5e7d6e4ae5ad5da430271b0cd648b044a9b812127a49f46895bcf",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:05:43.838788+00:00",
+    "status": "saved"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-qmd-store",
+  "title": "src/store.ts",
+  "url": "https://github.com/tobi/qmd/blob/86d2365d17fc682e491c2c53d1e4a884aee8682a/src/store.ts",
+  "version": "text-sha256:8260c1b639b874dc3aba247e862c954e76d31c7f0363f8b84f285e40ec14cf41",
+  "native_version": "86d2365d17fc682e491c2c53d1e4a884aee8682a",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "reciprocalRankFusion/buildRrfTrace5371–5475；hybridQuery6388–6520；FTS归一化4768–4788",
+  "locator": "reciprocalRankFusion；buildRrfTrace；hybridQuery",
+  "text_sha256": "8260c1b639b874dc3aba247e862c954e76d31c7f0363f8b84f285e40ec14cf41",
+  "excerpt": "const rrfContribution = weight / (k + rank + 1);",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-wiki-architecture",
+  "title": "ARCHITECTURE.md",
+  "url": "https://github.com/microsoft/llmwiki/blob/e09126f257c1fcf8e63234382748a51cf6a5df7f/ARCHITECTURE.md",
+  "version": "text-sha256:0b0f6d59bed782983b595de16299757966ec3b15f01b39a5bfe4ed33b07c3b28",
+  "native_version": "e09126f257c1fcf8e63234382748a51cf6a5df7f",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "System Overview、Three-Layer Architecture，1–90行",
+  "locator": "Three-Layer Architecture",
+  "text_sha256": "0b0f6d59bed782983b595de16299757966ec3b15f01b39a5bfe4ed33b07c3b28",
+  "excerpt": "All wiki content traces back to raw sources.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

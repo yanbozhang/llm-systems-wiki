@@ -1,0 +1,16 @@
+{
+  "id": "v1-agents-langgraph-memory",
+  "title": "LangGraph Memory overview 官方文档",
+  "url": "https://docs.langchain.com/oss/python/langgraph/memory",
+  "native_version": "2026-10-24 页面快照",
+  "kind": "official_document",
+  "reading_scope": "Short-term memory；Manage short-term memory；Long-term memory",
+  "locator": "Short-term memory；Manage short-term memory；Long-term memory",
+  "text_sha256": "9555b263a97d9986dc06ae1fb26e62ebe9ed109d509f5e97ba2e3536ceb40524",
+  "excerpt": "Long-term memory stores user-specific or application-level data across sessions",
+  "version": "text-sha256:9555b263a97d9986dc06ae1fb26e62ebe9ed109d509f5e97ba2e3536ceb40524",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

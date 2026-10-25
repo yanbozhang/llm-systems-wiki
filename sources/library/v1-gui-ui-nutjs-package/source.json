@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-ui-nutjs-package",
+  "title": "UI-TARS NutJS包清单",
+  "url": "https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/packages/ui-tars/operators/nut-js/package.json",
+  "version": "text-sha256:7987bd726ecabb27a0dc0d0b1272c149c079738a5bf98e320c42828bd98aae51",
+  "native_version": "3ac2cb8d946d78d5ff92ad17b318eaafa18c178c",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "name、version、dependencies、peerDependencies和license",
+  "locator": "package.json",
+  "text_sha256": "7987bd726ecabb27a0dc0d0b1272c149c079738a5bf98e320c42828bd98aae51",
+  "excerpt": "\"@computer-use/nut-js\": \"^4.2.0\"",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

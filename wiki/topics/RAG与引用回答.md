@@ -2,8 +2,8 @@
 id: rag
 module: knowledge
 status: published
-page_version: 3
-last_checked: 2026-10-24
+page_version: 4
+last_checked: 2026-10-25
 depth: worked
 practice_status: designed
 claim_ids: [claim-rag-v1, claim-rag-marginal-v1, claim-rag-context-v1, claim-rag-citation-v1]
@@ -194,6 +194,12 @@ flowchart TD
 无答案任务的评分应提前定义。有的任务允许参数知识补充，有的要求只依据指定资料；两者不能共享同一个“正确”判据。本文面向可查证回答，资料不足时保留缺口。让候选系统自己生成问题、答案和支持标签，再评估自己，会把独立性假设破坏掉，实践中应冻结材料、问题和评审标准后再运行候选。
 
 [RAG 概率模型与FEVER信息不足分类](https://arxiv.org/html/2005.11401v4)；[实际上下文与引用生成](https://github.com/HKUDS/LightRAG/blob/aaebfe1bb8d55deb6a4304d357a3bf4c92fcd40a/lightrag/operate.py#L5993)；[局部查询证据组织](https://github.com/microsoft/graphrag/blob/c600ff80b77b9b62c47d539a3ac9569e95d8949b/docs/query/local_search.md).
+
+## 2026研究进展
+
+Critic-Reasoner研究区分背景相关性与答案片段可靠性。保留有用背景、处理误导片段与最终推理是不同步骤；本轮该论文证据来自ICML官方摘要，不能将本库的遮蔽示例视为论文完整方法实现。 [会议来源与读取范围](../../sources/library/2026-paper-knowledge-crag/README.md)
+
+更多公式、代码示例、结构图及当前开源版本见[知识库研究进展](../frontiers/知识库研究进展.md)。新内容未执行真实模型实验。
 
 ---
 

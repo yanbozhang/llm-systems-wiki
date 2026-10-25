@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-cc-hooks",
+  "title": "Claude Code Hooks 官方参考",
+  "url": "https://code.claude.com/docs/en/hooks",
+  "version": "text-sha256:7454be33e741d700eb87bf56f045247c4a8210dd471e2b90732c5eb9f6878c3f",
+  "native_version": "2026-10-24 页面快照",
+  "kind": "official_document",
+  "reading_scope": "生命周期表；PreToolUse决策示例与permissionDecision",
+  "locator": "生命周期表；PreToolUse决策示例与permissionDecision",
+  "text_sha256": "7454be33e741d700eb87bf56f045247c4a8210dd471e2b90732c5eb9f6878c3f",
+  "excerpt": "PreToolUseBefore a tool call executes. Can block it",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}

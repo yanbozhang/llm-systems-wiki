@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-sdk-readme",
+  "title": "Claude Agent SDK Python 官方说明",
+  "url": "https://github.com/anthropics/claude-agent-sdk-python/blob/0e89b298e771259378a6cd3734e00d323dff5703/README.md#L1",
+  "version": "text-sha256:c38a933bf8fef26316ea38635989b254e69a26d21d80b96bf5731cba4e88bcc6",
+  "native_version": "0e89b298e771259378a6cd3734e00d323dff5703",
+  "kind": "official_document",
+  "reading_scope": "安装与内置CLI、query、工具许可、SDK MCP、Hooks章节",
+  "locator": "安装与内置CLI、query、工具许可、SDK MCP、Hooks章节",
+  "text_sha256": "c38a933bf8fef26316ea38635989b254e69a26d21d80b96bf5731cba4e88bcc6",
+  "excerpt": "# Claude Agent SDK for Python",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}

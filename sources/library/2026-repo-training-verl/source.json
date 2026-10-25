@@ -1,0 +1,19 @@
+{
+  "id": "2026-repo-training-verl",
+  "title": "volcengine/verl：固定提交项目说明",
+  "url": "https://github.com/volcengine/verl/blob/3c6d9b43b67c74ec343d77874cd8fa6e841523da/README.md",
+  "version": "text-sha256:b7faf4b96ef240737069fd47500d9e6db8b30ea2fb4d81dd9ee0e5be109ad985",
+  "native_version": "3c6d9b43b67c74ec343d77874cd8fa6e841523da",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "README的项目定位、组成、入口与许可提示；未运行完整项目",
+  "locator": "README.md",
+  "text_sha256": "b7faf4b96ef240737069fd47500d9e6db8b30ea2fb4d81dd9ee0e5be109ad985",
+  "excerpt": "<div align=\"center\"> 👋 Hi, everyone! verl is a RL training library initiated by <b>ByteDance Seed team</b> and maintained by the verl community. <br> <br> </div",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "maintainer": "volcengine",
+  "commit_date": "2026-10-23T14:35:07Z",
+  "license_spdx": "Apache-2.0"
+}

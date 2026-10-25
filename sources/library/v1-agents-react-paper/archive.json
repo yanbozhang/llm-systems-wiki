@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-agents-react-paper",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "196e152afc40784aac059e66a7ceb06d5e1dcef21fe15ae33d9be5a85474d391",
+      "bytes": 546946,
+      "cache_file": "sources/.local/objects/196e152afc40784aac059e66a7ceb06d5e1dcef21fe15ae33d9be5a85474d391.bin",
+      "requested_url": "https://arxiv.org/html/2210.03629v3",
+      "resolved_url": "https://arxiv.org/html/2210.03629v3",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:04:07.834947+00:00",
+      "declared_source_version": "text-sha256:7ff971fb0371f5663999ce58e70b0f3eee9e41e53164b18b399f2cd8b5b81e11",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:04:07.834947+00:00",
+    "status": "saved"
+  }
+}

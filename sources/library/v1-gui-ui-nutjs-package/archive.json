@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-gui-ui-nutjs-package",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "7987bd726ecabb27a0dc0d0b1272c149c079738a5bf98e320c42828bd98aae51",
+      "bytes": 1221,
+      "cache_file": "sources/.local/objects/7987bd726ecabb27a0dc0d0b1272c149c079738a5bf98e320c42828bd98aae51.bin",
+      "requested_url": "https://raw.githubusercontent.com/bytedance/UI-TARS-desktop/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/packages/ui-tars/operators/nut-js/package.json",
+      "resolved_url": "https://raw.githubusercontent.com/bytedance/UI-TARS-desktop/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/packages/ui-tars/operators/nut-js/package.json",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:09.023553+00:00",
+      "declared_source_version": "text-sha256:7987bd726ecabb27a0dc0d0b1272c149c079738a5bf98e320c42828bd98aae51",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:09.023553+00:00",
+    "status": "saved"
+  }
+}

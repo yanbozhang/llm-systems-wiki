@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-ag-readme",
+  "title": "AutoGen 官方仓库说明",
+  "url": "https://github.com/microsoft/autogen/blob/004749e6b7102c8fd317b9b1499ce5807223c278/README.md#L1",
+  "version": "text-sha256:60fa90168565070a61b0f28296ff590bd6853da2477141f5ed0775007c20d7f2",
+  "native_version": "004749e6b7102c8fd317b9b1499ce5807223c278",
+  "kind": "official_document",
+  "reading_scope": "顶部归档公告、后继Agent Framework建议；后文maintenance措辞；Legal Notices",
+  "locator": "顶部归档公告、后继Agent Framework建议；后文maintenance措辞；Legal Notices",
+  "text_sha256": "60fa90168565070a61b0f28296ff590bd6853da2477141f5ed0775007c20d7f2",
+  "excerpt": "<a name=\"readme-top\"></a>",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}

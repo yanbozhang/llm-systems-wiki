@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchsys-mlperf-settings",
+  "title": "MLPerf LoadGen 测试设置",
+  "url": "https://github.com/mlcommons/inference/blob/3fbc329939999c13d0a7b5e67fb2092287e06047/loadgen/test_settings.h",
+  "version": "text-sha256:a2bd6aacb6894530a5d12dcb253c818e5416bd245b77227c3a3343d25362120f",
+  "native_version": "3fbc329939999c13d0a7b5e67fb2092287e06047",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "TestScenario/TestMode35–108；默认参数114–199；token设置267–274",
+  "locator": "TestScenario；TestMode；TestSettings",
+  "text_sha256": "a2bd6aacb6894530a5d12dcb253c818e5416bd245b77227c3a3343d25362120f",
+  "excerpt": "The latency of a MultiStream query is the maximum latency of its samples.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

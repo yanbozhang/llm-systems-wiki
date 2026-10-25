@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-agents-swebench-grade",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "a095273010175001a6779e365b3b77abb8657c7ac2e4f80b4bc360faa6f09483",
+      "bytes": 14144,
+      "cache_file": "sources/.local/objects/a095273010175001a6779e365b3b77abb8657c7ac2e4f80b4bc360faa6f09483.bin",
+      "requested_url": "https://raw.githubusercontent.com/SWE-bench/SWE-bench/02e7a74ffd0b707aab73d203fe87bdc7c76afc8e/swebench/harness/grading.py",
+      "resolved_url": "https://raw.githubusercontent.com/SWE-bench/SWE-bench/02e7a74ffd0b707aab73d203fe87bdc7c76afc8e/swebench/harness/grading.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:03:42.359348+00:00",
+      "declared_source_version": "text-sha256:a095273010175001a6779e365b3b77abb8657c7ac2e4f80b4bc360faa6f09483",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:42.359348+00:00",
+    "status": "saved"
+  }
+}

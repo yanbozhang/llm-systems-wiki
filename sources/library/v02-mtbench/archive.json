@@ -1,0 +1,22 @@
+{
+  "source_id": "v02-mtbench",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "4104f9e877fe04a4a87a5b6618114adc8604f09ceca09be198f96189c4c2238e",
+      "bytes": 6796,
+      "cache_file": "sources/.local/objects/4104f9e877fe04a4a87a5b6618114adc8604f09ceca09be198f96189c4c2238e.bin",
+      "requested_url": "https://raw.githubusercontent.com/lm-sys/FastChat/main/fastchat/llm_judge/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/lm-sys/FastChat/main/fastchat/llm_judge/README.md",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:03:28.925419+00:00",
+      "declared_source_version": "text-sha256:4104f9e877fe04a4a87a5b6618114adc8604f09ceca09be198f96189c4c2238e",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:28.925419+00:00",
+    "status": "saved"
+  }
+}

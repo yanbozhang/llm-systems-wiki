@@ -1,0 +1,16 @@
+{
+  "id": "v1-agents-mcp-tools",
+  "title": "MCP Tools 规范",
+  "url": "https://modelcontextprotocol.io/specification/2025-06-18/server/tools",
+  "native_version": "2025-06-18",
+  "kind": "official_document",
+  "reading_scope": "Listing Tools；Calling Tools；Output Schema；Error Handling",
+  "locator": "Listing Tools；Calling Tools；Output Schema；Error Handling",
+  "text_sha256": "deebf14f94e60dc1db48f7d4c215285bbb109f195ced301c8723b7d9b789f049",
+  "excerpt": "Tools use two error reporting mechanisms:",
+  "version": "text-sha256:deebf14f94e60dc1db48f7d4c215285bbb109f195ced301c8723b7d9b789f049",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

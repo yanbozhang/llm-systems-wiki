@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-harnesscase-lg-readme",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "3a13e257af1216962d53d72414a7f44ac1fc5cea34d994bdff60ea2a3b045933",
+      "bytes": 6395,
+      "cache_file": "sources/.local/objects/3a13e257af1216962d53d72414a7f44ac1fc5cea34d994bdff60ea2a3b045933.bin",
+      "requested_url": "https://raw.githubusercontent.com/langchain-ai/langgraph/4c52e129eb1ab69a3da58b799f67929f77d81149/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/langchain-ai/langgraph/4c52e129eb1ab69a3da58b799f67929f77d81149/README.md",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:29.925944+00:00",
+      "declared_source_version": "text-sha256:3a13e257af1216962d53d72414a7f44ac1fc5cea34d994bdff60ea2a3b045933",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:29.925944+00:00",
+    "status": "saved"
+  }
+}

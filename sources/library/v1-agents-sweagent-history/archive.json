@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-agents-sweagent-history",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "8e3621a9b7d94761d184c57dc2ab1028f7eb04b01fdfcbe8ba122977d19e477a",
+      "bytes": 14869,
+      "cache_file": "sources/.local/objects/8e3621a9b7d94761d184c57dc2ab1028f7eb04b01fdfcbe8ba122977d19e477a.bin",
+      "requested_url": "https://raw.githubusercontent.com/SWE-agent/SWE-agent/3ea751c087f32b16e039a2233dd6eefecef325d5/sweagent/agent/history_processors.py",
+      "resolved_url": "https://raw.githubusercontent.com/SWE-agent/SWE-agent/3ea751c087f32b16e039a2233dd6eefecef325d5/sweagent/agent/history_processors.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:03:41.603987+00:00",
+      "declared_source_version": "text-sha256:8e3621a9b7d94761d184c57dc2ab1028f7eb04b01fdfcbe8ba122977d19e477a",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:41.603987+00:00",
+    "status": "saved"
+  }
+}

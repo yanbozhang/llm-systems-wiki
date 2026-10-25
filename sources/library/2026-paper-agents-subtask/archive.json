@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-paper-agents-subtask",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "b6e90e7e16605b1b30456c19704188e551f280fbb1fc2883f0e1769be9aaae17",
+      "bytes": 87775,
+      "cache_file": "sources/.local/objects/b6e90e7e16605b1b30456c19704188e551f280fbb1fc2883f0e1769be9aaae17.bin",
+      "requested_url": "https://icml.cc/virtual/2026/poster/66605",
+      "resolved_url": "https://icml.cc/virtual/2026/poster/66605",
+      "content_type": "text/html",
+      "representation": "conference_record_html",
+      "retrieved_at": "2026-10-25T03:56:47.579075+00:00",
+      "declared_source_version": "text-sha256:c065a997c62b5fc78450c8bbda0a75f8d0206ad1d327c6c7ee279ef71b372859",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "HTTP response"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:56:47.579075+00:00",
+    "status": "saved"
+  }
+}

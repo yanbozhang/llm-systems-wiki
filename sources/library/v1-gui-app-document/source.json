@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-app-document",
+  "title": "AppAgent 示范文档生成脚本",
+  "url": "https://github.com/TencentQQGYLab/AppAgent/blob/2c1900422caf6f9e94e96d5dd984b530e5a5fbf8/scripts/document_generation.py",
+  "version": "text-sha256:b94c2c25733262fcc0d9c8dd4e2b8817694e9eb4d3b03c1b4b4e07276e8e1382",
+  "native_version": "2c1900422caf6f9e94e96d5dd984b530e5a5fbf8",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "第58–132行；录制步骤读取、动作类型、旧文档refine与demo_docs更新",
+  "locator": "record loop; DOC_REFINE; mllm.get_model_response",
+  "text_sha256": "b94c2c25733262fcc0d9c8dd4e2b8817694e9eb4d3b03c1b4b4e07276e8e1382",
+  "excerpt": "doc_content[action_type] = rsp",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

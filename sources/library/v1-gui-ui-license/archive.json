@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-gui-ui-license",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "cache_file": "sources/.local/objects/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.bin",
+      "requested_url": "https://raw.githubusercontent.com/bytedance/UI-TARS-desktop/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/LICENSE",
+      "resolved_url": "https://raw.githubusercontent.com/bytedance/UI-TARS-desktop/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/LICENSE",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:10.450411+00:00",
+      "declared_source_version": "text-sha256:c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:10.450411+00:00",
+    "status": "saved"
+  }
+}

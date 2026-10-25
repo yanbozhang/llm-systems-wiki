@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-cx-router",
+  "title": "Codex ToolRouter 工具调用构造",
+  "url": "https://github.com/openai/codex/blob/970111f6cb62cc02fe36a82ea7d71b37a2889c97/codex-rs/core/src/tools/router.rs#L257",
+  "version": "text-sha256:004482b5398df9b02c503a9115f4899802f6793661f84212e00af76a167ff2d4",
+  "native_version": "970111f6cb62cc02fe36a82ea7d71b37a2889c97",
+  "kind": "source_code",
+  "reading_scope": "build_tool_call 257–308；dispatch_tool_call_with_code_mode_result_inner 359–393；注册与可见性注释397–417",
+  "locator": "build_tool_call 257–308；dispatch_tool_call_with_code_mode_result_inner 359–393；注册与可见性注释397–417",
+  "text_sha256": "004482b5398df9b02c503a9115f4899802f6793661f84212e00af76a167ff2d4",
+  "excerpt": "pub fn build_tool_call(item: ResponseItem) -> Result<Option<ToolCall>, FunctionCallError> {",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}

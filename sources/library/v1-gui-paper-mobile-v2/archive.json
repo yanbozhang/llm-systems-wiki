@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-gui-paper-mobile-v2",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "6dc0b8819b14b6767c70e5b805a3f6836b514db0c49452cdaad7e3b3b5d99a8d",
+      "bytes": 264568,
+      "cache_file": "sources/.local/objects/6dc0b8819b14b6767c70e5b805a3f6836b514db0c49452cdaad7e3b3b5d99a8d.bin",
+      "requested_url": "https://arxiv.org/html/2406.01014v1",
+      "resolved_url": "https://arxiv.org/html/2406.01014v1",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:12:08.320543+00:00",
+      "declared_source_version": "text-sha256:4bff7c9a6baf6d1d3761425caaa19db321b587d6e40cbbdfd41a2c69f041fe4e",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:12:08.320543+00:00",
+    "status": "saved"
+  }
+}

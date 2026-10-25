@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchsys-mlperf-submission-doc",
+  "title": "tools/submission/README.md",
+  "url": "https://github.com/mlcommons/inference/blob/3fbc329939999c13d0a7b5e67fb2092287e06047/tools/submission/README.md",
+  "version": "text-sha256:f8c77da5cfd0dcaaf49942e5a368a45d8a97083e315fabe37ec4e17d0d9b7bd8",
+  "native_version": "3fbc329939999c13d0a7b5e67fb2092287e06047",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "checker使用与Implemented checks，约47–127",
+  "locator": "Implemented checks",
+  "text_sha256": "f8c77da5cfd0dcaaf49942e5a368a45d8a97083e315fabe37ec4e17d0d9b7bd8",
+  "excerpt": "Checks accuracy, performance, compliance, measurements, power, and system information.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

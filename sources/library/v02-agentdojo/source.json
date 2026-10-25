@@ -1,0 +1,16 @@
+{
+  "id": "v02-agentdojo",
+  "title": "AgentDojo 评测环境",
+  "url": "https://raw.githubusercontent.com/ethz-spylab/agentdojo/main/README.md",
+  "version": "text-sha256:d8c6460ecce9bbf59ed300fbc74b4440188f74cd147a7611836270be49e7660e",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "public_learning_or_evaluation_document",
+  "reading_scope": "读取入口、课程大纲或项目说明的相关正文；不代表完成全部课程、作业或基准运行",
+  "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页",
+  "text_sha256": "d8c6460ecce9bbf59ed300fbc74b4440188f74cd147a7611836270be49e7660e",
+  "excerpt": "<center> # AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents ![GitHub License](https://img.shields.io/",
+  "archive_policy": "只保存定位短摘与指纹，不镜像第三方全文"
+}

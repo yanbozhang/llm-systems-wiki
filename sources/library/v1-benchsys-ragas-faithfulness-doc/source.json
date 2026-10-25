@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchsys-ragas-faithfulness-doc",
+  "title": "docs/concepts/metrics/available_metrics/faithfulness.md",
+  "url": "https://github.com/explodinggradients/ragas/blob/298b68274234c060deacab3cf5fb52aa3a20e885/docs/concepts/metrics/available_metrics/faithfulness.md",
+  "version": "text-sha256:f764e088128237bec5c117a11e0cc76f68f787831d3efaf640495bd1a62ba196",
+  "native_version": "298b68274234c060deacab3cf5fb52aa3a20e885",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "定义、计算步骤和公式1–15；示例及说明18–68",
+  "locator": "Faithfulness；How It Is Calculated",
+  "text_sha256": "f764e088128237bec5c117a11e0cc76f68f787831d3efaf640495bd1a62ba196",
+  "excerpt": "A response is faithful if all its claims can be supported by the retrieved context.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

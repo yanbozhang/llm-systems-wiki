@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-paper-benchmark-conflicts",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "4eca4b237948a3f6f0928c5890a42c705586e5412d3a74125a9b4f920c43314c",
+      "bytes": 47199,
+      "cache_file": "sources/.local/objects/4eca4b237948a3f6f0928c5890a42c705586e5412d3a74125a9b4f920c43314c.bin",
+      "requested_url": "https://aclanthology.org/2026.acl-long.11/",
+      "resolved_url": "https://aclanthology.org/2026.acl-long.11/",
+      "content_type": "text/html",
+      "representation": "conference_record_html",
+      "retrieved_at": "2026-10-25T03:56:49.072068+00:00",
+      "declared_source_version": "text-sha256:b2a41a3688e9857ae54b557417e5f2fd608ecc31aabcb06318420e484c80dcc4",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "HTTP response"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:56:49.072068+00:00",
+    "status": "saved"
+  }
+}

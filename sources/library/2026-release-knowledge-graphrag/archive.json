@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-release-knowledge-graphrag",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "90ef270de4814a798b2911e1a6a1a7a2bf85f2af658bac362e54adc74086eede",
+      "bytes": 2221,
+      "cache_file": "sources/.local/objects/90ef270de4814a798b2911e1a6a1a7a2bf85f2af658bac362e54adc74086eede.bin",
+      "requested_url": "https://api.github.com/repos/microsoft/graphrag/releases/latest",
+      "resolved_url": "https://api.github.com/repos/microsoft/graphrag/releases/latest",
+      "content_type": "application/json",
+      "representation": "release_api_snapshot",
+      "retrieved_at": "2026-10-25T04:17:03.725442+00:00",
+      "declared_source_version": "text-sha256:28d721e3d55a5bc3b4767b76ea49fdac6686b9befe2299ee02351d445d012b77",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "GitHub Releases API object serialized as JSON"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:17:03.725442+00:00",
+    "status": "saved"
+  }
+}

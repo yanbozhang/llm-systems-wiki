@@ -1,0 +1,16 @@
+{
+  "id": "v1-coding-swe-toolconf",
+  "title": "tools/edit_anthropic/config.yaml",
+  "url": "https://github.com/SWE-agent/SWE-agent/blob/3ea751c087f32b16e039a2233dd6eefecef325d5/tools/edit_anthropic/config.yaml",
+  "version": "text-sha256:f01b59da4df1c25ab2ee3b1284efe4025c0a999e2f6a3a9ab2930a499e04ea09",
+  "native_version": "3ea751c087f32b16e039a2233dd6eefecef325d5",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "完整文件1–56，str_replace_editor参数和唯一匹配要求",
+  "locator": "tools.str_replace_editor",
+  "text_sha256": "f01b59da4df1c25ab2ee3b1284efe4025c0a999e2f6a3a9ab2930a499e04ea09",
+  "excerpt": "If old_str is not unique in the file, the replacement will not be performed.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

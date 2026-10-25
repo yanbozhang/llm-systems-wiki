@@ -5,10 +5,10 @@ import remarkParse from 'remark-parse';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, existsSync, mkdtempSync, writeFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
-import { resolve, join } from 'node:path';
+import { resolve, join, posix } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { modules, topics, units, paths, guides, routes, readDocument, topicDescription, buildSearchIndex, type Topic, type Unit } from '../src/lib/content';
-import type { SearchItem } from '../src/lib/navigation';
+import { modules, topics, units, paths, guides, routes, frontiers, sourceCards, readDocument, topicDescription, buildSearchIndex, type Topic, type Unit } from '../src/lib/content';
+import { resolveLink, type SearchItem } from '../src/lib/navigation';
 import { GET } from '../src/pages/search-index.json.js';
 
 const repo=fileURLToPath(new URL('../../',import.meta.url));
@@ -113,4 +113,49 @@ test("搜索：真实正文长段落进入索引而非仅标题", async () => {
   assert.equal(snippets.length,2,'原始文档应提供两段独立正文作为期待值');
   const actual=buildSearchIndex().find(row=>row.id===rawTopics[0].id)!;
   for(const snippet of snippets)assert.ok(actual.text.includes(snippet),'正文片段未进入全文索引：'+snippet.slice(0,40));
+});
+
+test("前沿清单：直接保留权威JSON的全部字段", () => {
+  const expected=JSON.parse(readFileSync(resolve(repo,'knowledge/frontiers.json'),'utf8'));
+  assert.deepEqual(frontiers,expected);
+  for(const frontier of frontiers){assert.ok(frontier.id);assert.ok(frontier.title);assert.ok(frontier.summary);assert.ok(frontier.as_of);}
+});
+
+test("前沿路由：七模块均有唯一研究入口且不依赖正文预加载", () => {
+  assert.equal(frontiers.length,7);
+  assert.deepEqual(new Set(frontiers.map(f=>f.module)),new Set(rawModules.map(m=>m.id)));
+  assert.equal(new Set(frontiers.map(f=>f.id)).size,frontiers.length);
+  assert.equal(new Set(frontiers.map(f=>f.page)).size,frontiers.length);
+  for(const frontier of frontiers)assert.equal(routes[frontier.page],'/research/'+frontier.id+'/');
+});
+
+test("来源清单：读取资料卡索引并保留身份主题与归档状态", () => {
+  const expected=JSON.parse(readFileSync(resolve(repo,'sources/library/index.json'),'utf8'));
+  assert.deepEqual(sourceCards,expected);
+  assert.equal(new Set(sourceCards.map(card=>card.id)).size,sourceCards.length);
+  for(const card of sourceCards)assert.equal(routes[card.path],'/sources/'+card.id+'/');
+});
+
+test("来源路由：研究正文的相对资料卡链接转换到一次站点base", () => {
+  assert.ok(frontiers.length>0);assert.ok(sourceCards.length>0);
+  const origin=frontiers[0].page;
+  for(const card of sourceCards){
+    const href=posix.relative(posix.dirname(origin),card.path);
+    assert.equal(resolveLink(href,origin,routes),'/llm-systems-wiki/sources/'+card.id+'/');
+  }
+});
+
+test("导览：学习研究与来源入口都有可解析的站内路由", () => {
+  const guide=guides.find(g=>g.id==='tour');assert.ok(guide);
+  assert.equal(guide.page,'docs/仓库导览.md');assert.equal(routes[guide.page],'/guides/tour/');
+  assert.equal(resolveLink('../wiki/paths/基础入门路径.md',guide.page,routes),'/llm-systems-wiki/paths/foundations/');
+  assert.equal(resolveLink('../wiki/frontiers/README.md',guide.page,routes),'/llm-systems-wiki/research/');
+  assert.equal(resolveLink('../sources/README.md',guide.page,routes),'/llm-systems-wiki/sources/');
+});
+
+test("资料库路由：不把本地原文缓存登记为网站页面", () => {
+  for(const [source,target] of Object.entries(routes)){
+    assert.equal(source.includes('sources/.local/'),false,source);
+    assert.equal(target.includes('sources/.local/'),false,target);
+  }
 });

@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchmark-lm-janitor",
+  "title": "LM Evaluation Harness 文本规范化与Ngram",
+  "url": "https://github.com/EleutherAI/lm-evaluation-harness/blob/d6de81643928d653435c431bae19945d41d32520/lm_eval/decontamination/janitor.py",
+  "version": "text-sha256:2e9f13026e749a38052eac953fc07995d4a35be1b9f320a07b149b55de576307",
+  "native_version": "d6de81643928d653435c431bae19945d41d32520",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "实际读取相关函数与上下文；函数定位在知识点正文中列明",
+  "locator": "lm_eval/decontamination/janitor.py",
+  "text_sha256": "2e9f13026e749a38052eac953fc07995d4a35be1b9f320a07b149b55de576307",
+  "excerpt": "",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

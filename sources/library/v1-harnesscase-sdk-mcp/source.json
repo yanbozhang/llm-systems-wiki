@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-sdk-mcp",
+  "title": "Claude SDK 进程内MCP工具",
+  "url": "https://github.com/anthropics/claude-agent-sdk-python/blob/0e89b298e771259378a6cd3734e00d323dff5703/src/claude_agent_sdk/__init__.py#L620",
+  "version": "text-sha256:1582188cfc10ce1eb3892a6e7c6d5639cdb0cca5e9e6ef1a1f5ebf68b75a072b",
+  "native_version": "0e89b298e771259378a6cd3734e00d323dff5703",
+  "kind": "source_code",
+  "reading_scope": "create_sdk_mcp_server 517–645，内部run_tool 620–641",
+  "locator": "create_sdk_mcp_server 517–645，内部run_tool 620–641",
+  "text_sha256": "1582188cfc10ce1eb3892a6e7c6d5639cdb0cca5e9e6ef1a1f5ebf68b75a072b",
+  "excerpt": "async def run_tool(tool_name: str, arguments: dict[str, Any]) -> CallToolResult:",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}

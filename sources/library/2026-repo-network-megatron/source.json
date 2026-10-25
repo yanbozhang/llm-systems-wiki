@@ -1,0 +1,19 @@
+{
+  "id": "2026-repo-network-megatron",
+  "title": "NVIDIA/Megatron-LM：固定提交项目说明",
+  "url": "https://github.com/NVIDIA/Megatron-LM/blob/2052769557dcf7045c4091d1996f0bc59afeb80e/README.md",
+  "version": "text-sha256:35d57777ae1a710399aebbc14fef5a8ef05dd86cb037789b842313caa2f780dd",
+  "native_version": "2052769557dcf7045c4091d1996f0bc59afeb80e",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "README的项目定位、组成、入口与许可提示；未运行完整项目",
+  "locator": "README.md",
+  "text_sha256": "35d57777ae1a710399aebbc14fef5a8ef05dd86cb037789b842313caa2f780dd",
+  "excerpt": "<div align=\"center\"> Megatron-LM and Megatron Core ============================= <h4>GPU-optimized library for training transformer models at scale</h4> [![Docu",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "maintainer": "NVIDIA",
+  "commit_date": "2026-10-23T23:17:30Z",
+  "license_spdx": "NOASSERTION"
+}

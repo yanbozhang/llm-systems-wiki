@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-math-paper-rmsnorm",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "123eee1103c34b7aa54e84daea4493e83502e55ca77e6ce507e51d3934525b0e",
+      "bytes": 222365,
+      "cache_file": "sources/.local/objects/123eee1103c34b7aa54e84daea4493e83502e55ca77e6ce507e51d3934525b0e.bin",
+      "requested_url": "https://arxiv.org/html/1910.07467v1",
+      "resolved_url": "https://arxiv.org/html/1910.07467v1",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:13:47.372337+00:00",
+      "declared_source_version": "text-sha256:19844ec3eb8a05541422884c59330b4fb7a230edbdefcbb66a04cc426c696d17",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:47.372337+00:00",
+    "status": "saved"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-mobile-controller",
+  "title": "Mobile-Agent-v2 ADB controller",
+  "url": "https://github.com/X-PLUG/MobileAgent/blob/11cea575561fb7800b5fb6b6cafa56f7a91de11f/Mobile-Agent-v2/MobileAgent/controller.py",
+  "version": "text-sha256:fbcc7fd135a289c9e81d8ba05dd9ce126be79b43f3e5c32252209ff4eb2d393f",
+  "native_version": "11cea575561fb7800b5fb6b6cafa56f7a91de11f",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "第7–60行；截图、tap、type、slide、back、home",
+  "locator": "get_screenshot; tap; type; slide; back; home",
+  "text_sha256": "fbcc7fd135a289c9e81d8ba05dd9ce126be79b43f3e5c32252209ff4eb2d393f",
+  "excerpt": "command = adb_path + f\" shell input tap {x} {y}\"",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

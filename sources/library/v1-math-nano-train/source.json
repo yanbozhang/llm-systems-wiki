@@ -1,0 +1,16 @@
+{
+  "id": "v1-math-nano-train",
+  "title": "nanoGPT train.py",
+  "url": "https://github.com/karpathy/nanoGPT/blob/3adf61e154c3fe3fca428ad6bc3818b27a3b8291/train.py",
+  "version": "text-sha256:413bd97b40bb400a2a0d01230e2946f056c263ebac1b7281c2367d964a123085",
+  "native_version": "3adf61e154c3fe3fca428ad6bc3818b27a3b8291",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "第115–131和290–305行，get_batch输入目标错位与等长microbatch平均",
+  "locator": "get_batch; gradient_accumulation_steps",
+  "text_sha256": "413bd97b40bb400a2a0d01230e2946f056c263ebac1b7281c2367d964a123085",
+  "excerpt": "y = torch.stack([torch.from_numpy((data[i+1:i+1+block_size]).astype(np.int64)) for i in ix])",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

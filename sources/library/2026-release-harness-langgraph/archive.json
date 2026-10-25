@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-release-harness-langgraph",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "c574e022d8c1b1479edef3039b5f847a63e2e6f444613cc9ea88d7f313e8a6f7",
+      "bytes": 2655,
+      "cache_file": "sources/.local/objects/c574e022d8c1b1479edef3039b5f847a63e2e6f444613cc9ea88d7f313e8a6f7.bin",
+      "requested_url": "https://api.github.com/repos/langchain-ai/langgraph/releases/latest",
+      "resolved_url": "https://api.github.com/repos/langchain-ai/langgraph/releases/latest",
+      "content_type": "application/json",
+      "representation": "release_api_snapshot",
+      "retrieved_at": "2026-10-25T04:17:03.720442+00:00",
+      "declared_source_version": "text-sha256:4b9dc43de97fd6ddaab5325f94b002e0f1aea516f50a3b2575fda618c27b1cc1",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "GitHub Releases API object serialized as JSON"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:17:03.720442+00:00",
+    "status": "saved"
+  }
+}

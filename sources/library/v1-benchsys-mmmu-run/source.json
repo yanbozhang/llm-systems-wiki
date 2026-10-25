@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchsys-mmmu-run",
+  "title": "mmmu/run_llava.py",
+  "url": "https://github.com/MMMU-Benchmark/MMMU/blob/268471d0d488258990025331c7528359c324aa25/mmmu/run_llava.py",
+  "version": "text-sha256:e23143247c1976ee500bb4815fbf1087b80de0a9702a98280100193a5f079692",
+  "native_version": "268471d0d488258990025331c7528359c324aa25",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "run_model18–29；main样本预处理及运行阶段约80–101",
+  "locator": "run_model；main",
+  "text_sha256": "e23143247c1976ee500bb4815fbf1087b80de0a9702a98280100193a5f079692",
+  "excerpt": "sample = process_single_sample(sample)",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

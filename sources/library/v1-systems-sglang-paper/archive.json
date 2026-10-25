@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-systems-sglang-paper",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "0c4bcac162e49238d7e7b701c0642b8b95b33226851d62d8349d5ae7a7de6e18",
+      "bytes": 228083,
+      "cache_file": "sources/.local/objects/0c4bcac162e49238d7e7b701c0642b8b95b33226851d62d8349d5ae7a7de6e18.bin",
+      "requested_url": "https://arxiv.org/html/2312.07104v2",
+      "resolved_url": "https://arxiv.org/html/2312.07104v2",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:01:53.877203+00:00",
+      "declared_source_version": "text-sha256:029bb3fdae8a167721dceef6f0451c7fa5935287ef51e1b56e525513de1bfea8",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:01:53.877203+00:00",
+    "status": "saved"
+  }
+}

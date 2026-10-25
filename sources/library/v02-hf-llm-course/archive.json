@@ -1,0 +1,22 @@
+{
+  "source_id": "v02-hf-llm-course",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "bdbe37885d846e19e0d47d855e31c3553f128339b58b251ee50d80210efa42cb",
+      "bytes": 139179,
+      "cache_file": "sources/.local/objects/bdbe37885d846e19e0d47d855e31c3553f128339b58b251ee50d80210efa42cb.bin",
+      "requested_url": "https://huggingface.co/learn/llm-course/chapter1/1",
+      "resolved_url": "https://huggingface.co/learn/llm-course/chapter1/1",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:02:57.257705+00:00",
+      "declared_source_version": "text-sha256:16ffe46835c897a3df8a1f39a5556fa9217c9d21c12e84398e1e4fcb04d2d9bd",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:02:57.257705+00:00",
+    "status": "saved"
+  }
+}

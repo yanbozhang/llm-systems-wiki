@@ -1,0 +1,22 @@
+{
+  "source_id": "v02-webarena",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "e3c0fc9931f63f109a9ad58e345916a42b23d59d661a4da266a0f05aa4b5b03d",
+      "bytes": 4288,
+      "cache_file": "sources/.local/objects/e3c0fc9931f63f109a9ad58e345916a42b23d59d661a4da266a0f05aa4b5b03d.bin",
+      "requested_url": "https://webarena.dev/",
+      "resolved_url": "https://webarena.dev/",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:03:23.247585+00:00",
+      "declared_source_version": "text-sha256:da64af591d78fdefb77bfdd93c3e8d5c1e64aa421cc903ba91e49f007da8cb41",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:23.247585+00:00",
+    "status": "saved"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "source_id": "rope",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "db7f300b9abd24e0d225bcfcd53d3fd64c0255acb60e8dac28014361005c1f07",
+      "bytes": 310054,
+      "cache_file": "sources/.local/objects/db7f300b9abd24e0d225bcfcd53d3fd64c0255acb60e8dac28014361005c1f07.bin",
+      "requested_url": "https://arxiv.org/html/2104.09864v5",
+      "resolved_url": "https://arxiv.org/html/2104.09864v5",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T03:59:52.511037+00:00",
+      "declared_source_version": "text-sha256:b4c87d09b3cd896f89530f0f05f7177ff98380818d26aeae6eddddb125cb5657",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:59:52.511037+00:00",
+    "status": "saved"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "2026-repo-agents-codex",
+  "title": "openai/codex：固定提交项目说明",
+  "url": "https://github.com/openai/codex/blob/970111f6cb62cc02fe36a82ea7d71b37a2889c97/README.md",
+  "version": "text-sha256:294c0820b099b6a802a6f5a3bb8a4c92568621fe1f86511e70467f95380ca998",
+  "native_version": "970111f6cb62cc02fe36a82ea7d71b37a2889c97",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "README的项目定位、组成、入口与许可提示；未运行完整项目",
+  "locator": "README.md",
+  "text_sha256": "294c0820b099b6a802a6f5a3bb8a4c92568621fe1f86511e70467f95380ca998",
+  "excerpt": "<p align=\"center\"><strong>Codex CLI</strong> is a coding agent from OpenAI that runs locally on your computer. <p align=\"center\"> <img src=\"https://github.com/o",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "maintainer": "openai",
+  "commit_date": "2026-10-23T18:50:54Z",
+  "license_spdx": "Apache-2.0"
+}

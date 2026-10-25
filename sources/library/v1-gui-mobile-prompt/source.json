@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-mobile-prompt",
+  "title": "Mobile-Agent-v2 prompt.py",
+  "url": "https://github.com/X-PLUG/MobileAgent/blob/11cea575561fb7800b5fb6b6cafa56f7a91de11f/Mobile-Agent-v2/MobileAgent/prompt.py",
+  "version": "text-sha256:b9b8a3f871eb67444bd17fdc02776cf1c2eb83461a435b421622bac3e20f824f",
+  "native_version": "11cea575561fb7800b5fb6b6cafa56f7a91de11f",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "第1–196行；get_action_prompt、get_reflect_prompt、get_memory_prompt和get_process_prompt",
+  "locator": "get_action_prompt; get_reflect_prompt; get_process_prompt",
+  "text_sha256": "b9b8a3f871eb67444bd17fdc02776cf1c2eb83461a435b421622bac3e20f824f",
+  "excerpt": "B: The Operation action results in a wrong page and I need to return to the previous page.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

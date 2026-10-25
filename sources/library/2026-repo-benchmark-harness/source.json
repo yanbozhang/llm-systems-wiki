@@ -1,0 +1,19 @@
+{
+  "id": "2026-repo-benchmark-harness",
+  "title": "EleutherAI/lm-evaluation-harness：固定提交项目说明",
+  "url": "https://github.com/EleutherAI/lm-evaluation-harness/blob/d6de81643928d653435c431bae19945d41d32520/README.md",
+  "version": "text-sha256:3c754d0b286c3f60bcd49ffc002da5fb6eb1c0f592fe1f7155d7ff8b0f3ee988",
+  "native_version": "d6de81643928d653435c431bae19945d41d32520",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "README的项目定位、组成、入口与许可提示；未运行完整项目",
+  "locator": "README.md",
+  "text_sha256": "3c754d0b286c3f60bcd49ffc002da5fb6eb1c0f592fe1f7155d7ff8b0f3ee988",
+  "excerpt": "# Language Model Evaluation Harness [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10256836.svg)](https://doi.org/10.5281/zenodo.10256836) --- ## Latest Ne",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "maintainer": "EleutherAI",
+  "commit_date": "2026-09-14T10:51:05Z",
+  "license_spdx": "MIT"
+}

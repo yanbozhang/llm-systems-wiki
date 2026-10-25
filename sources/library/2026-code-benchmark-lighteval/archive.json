@@ -1,0 +1,31 @@
+{
+  "source_id": "2026-code-benchmark-lighteval",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "6268e843e28848050de11d264caa06fa1391dfd70ef6bfc7df764423969bd9c4",
+      "bytes": 19708,
+      "cache_file": "sources/.local/objects/6268e843e28848050de11d264caa06fa1391dfd70ef6bfc7df764423969bd9c4.bin",
+      "requested_url": "https://api.github.com/repos/huggingface/lighteval/contents/src/lighteval/tasks/lighteval_task.py?ref=7fa19dc6f53a713ba8bb6541e7ed66dad2e24fd7",
+      "resolved_url": "https://api.github.com/repos/huggingface/lighteval/contents/src/lighteval/tasks/lighteval_task.py?ref=7fa19dc6f53a713ba8bb6541e7ed66dad2e24fd7",
+      "content_type": "text/plain",
+      "representation": "decoded_source_file",
+      "retrieved_at": "2026-10-25T04:06:07.932507+00:00",
+      "declared_source_version": "text-sha256:6363bb6194dbfbb74575a127207c2bcd1420865f2e4ae96417d29bab34680f4b",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "Base64-decoded GitHub Contents API file"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:06:07.932507+00:00",
+    "status": "saved"
+  },
+  "public_snapshot": {
+    "spdx_id": "MIT",
+    "content_file": "sources/library/2026-code-benchmark-lighteval/snapshot/source.txt",
+    "license_file": "sources/library/2026-code-benchmark-lighteval/snapshot/LICENSE",
+    "upstream_license_url": "https://github.com/huggingface/lighteval/blob/7fa19dc6f53a713ba8bb6541e7ed66dad2e24fd7/LICENSE",
+    "source_commit": "7fa19dc6f53a713ba8bb6541e7ed66dad2e24fd7",
+    "content_sha256": "6268e843e28848050de11d264caa06fa1391dfd70ef6bfc7df764423969bd9c4"
+  }
+}

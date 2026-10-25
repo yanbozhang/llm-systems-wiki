@@ -1,0 +1,31 @@
+{
+  "source_id": "2026-code-network-transformers",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "ece5acedebe8cc3ba448f0e9b0d8ae9ddd7469a6ae017bc2598c2489159b9cbb",
+      "bytes": 243101,
+      "cache_file": "sources/.local/objects/ece5acedebe8cc3ba448f0e9b0d8ae9ddd7469a6ae017bc2598c2489159b9cbb.bin",
+      "requested_url": "https://api.github.com/repos/huggingface/transformers/contents/src/transformers/generation/utils.py?ref=50e35cc0ca18ec19b80653690de553e6decf74f5",
+      "resolved_url": "https://api.github.com/repos/huggingface/transformers/contents/src/transformers/generation/utils.py?ref=50e35cc0ca18ec19b80653690de553e6decf74f5",
+      "content_type": "text/plain",
+      "representation": "decoded_source_file",
+      "retrieved_at": "2026-10-25T04:05:59.049547+00:00",
+      "declared_source_version": "text-sha256:fc39b1e4e7ac56cf6e44fe4d691b64549cd6cb96eb13f4169c26d555b8af3a8c",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "Base64-decoded GitHub Contents API file"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:05:59.049547+00:00",
+    "status": "saved"
+  },
+  "public_snapshot": {
+    "spdx_id": "Apache-2.0",
+    "content_file": "sources/library/2026-code-network-transformers/snapshot/source.txt",
+    "license_file": "sources/library/2026-code-network-transformers/snapshot/LICENSE",
+    "upstream_license_url": "https://github.com/huggingface/transformers/blob/50e35cc0ca18ec19b80653690de553e6decf74f5/LICENSE",
+    "source_commit": "50e35cc0ca18ec19b80653690de553e6decf74f5",
+    "content_sha256": "ece5acedebe8cc3ba448f0e9b0d8ae9ddd7469a6ae017bc2598c2489159b9cbb"
+  }
+}

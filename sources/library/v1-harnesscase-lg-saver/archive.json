@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-harnesscase-lg-saver",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "9e81ce01b41fc1bf591e930e350629282fb4ac86d667e211899bae9b5b573a84",
+      "bytes": 26460,
+      "cache_file": "sources/.local/objects/9e81ce01b41fc1bf591e930e350629282fb4ac86d667e211899bae9b5b573a84.bin",
+      "requested_url": "https://raw.githubusercontent.com/langchain-ai/langgraph/4c52e129eb1ab69a3da58b799f67929f77d81149/libs/checkpoint/langgraph/checkpoint/memory/__init__.py",
+      "resolved_url": "https://raw.githubusercontent.com/langchain-ai/langgraph/4c52e129eb1ab69a3da58b799f67929f77d81149/libs/checkpoint/langgraph/checkpoint/memory/__init__.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:33.224007+00:00",
+      "declared_source_version": "text-sha256:9e81ce01b41fc1bf591e930e350629282fb4ac86d667e211899bae9b5b573a84",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:33.224007+00:00",
+    "status": "saved"
+  }
+}

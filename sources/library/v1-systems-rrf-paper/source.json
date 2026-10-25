@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-rrf-paper",
+  "title": "Reciprocal Rank Fusion outperforms Condorcet and individual Rank Learning Methods",
+  "url": "https://plg.uwaterloo.ca/~gvcormac/cormacksigir09-rrf.pdf",
+  "version": "text-sha256:e549b60a8c7351e2fd939370162b0d493f197ea20f8c9f1d936700f11de7f4c5",
+  "native_version": "SIGIR 2009 author PDF",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "§1 RRF公式及k=60选择；正文由PDF文字流提取，公式跨文本块需按页面逻辑阅读",
+  "locator": "§1 Reciprocal Rank Fusion",
+  "text_sha256": "e549b60a8c7351e2fd939370162b0d493f197ea20f8c9f1d936700f11de7f4c5",
+  "excerpt": "k = 60 was fixed during a pilot investigation",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

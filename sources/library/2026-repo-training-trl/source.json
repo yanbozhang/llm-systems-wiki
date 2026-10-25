@@ -1,0 +1,19 @@
+{
+  "id": "2026-repo-training-trl",
+  "title": "huggingface/trl：固定提交项目说明",
+  "url": "https://github.com/huggingface/trl/blob/1117c3b9c1632ee9814c30f6c9fc884b792a54e5/README.md",
+  "version": "text-sha256:1ee0ae0e44ae927da5eda6d88bdef5c585696fd25e3d51cefe56ce959406931a",
+  "native_version": "1117c3b9c1632ee9814c30f6c9fc884b792a54e5",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "README的项目定位、组成、入口与许可提示；未运行完整项目",
+  "locator": "README.md",
+  "text_sha256": "1ee0ae0e44ae927da5eda6d88bdef5c585696fd25e3d51cefe56ce959406931a",
+  "excerpt": "# TRL - Transformers Reinforcement Learning <div style=\"text-align: center\"> <picture> <source media=\"(prefers-color-scheme: light)\" srcset=\"https://huggingface",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "maintainer": "huggingface",
+  "commit_date": "2026-10-24T08:35:32Z",
+  "license_spdx": "Apache-2.0"
+}

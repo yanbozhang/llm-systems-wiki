@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchmark-scipy-binom",
+  "title": "SciPy 二项检验与Wilson区间实现",
+  "url": "https://github.com/scipy/scipy/blob/ebde5c3eb28bf9410878ea5f242ecf4b5f596b3d/scipy/stats/_binomtest.py",
+  "version": "text-sha256:296ae07e882ce2c821ba37c57840753e43d4b88ace2130e6f392d413051c8023",
+  "native_version": "ebde5c3eb28bf9410878ea5f242ecf4b5f596b3d",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "实际读取相关函数与上下文；函数定位在知识点正文中列明",
+  "locator": "scipy/stats/_binomtest.py",
+  "text_sha256": "296ae07e882ce2c821ba37c57840753e43d4b88ace2130e6f392d413051c8023",
+  "excerpt": "",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

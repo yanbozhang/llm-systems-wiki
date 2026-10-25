@@ -1,0 +1,16 @@
+{
+  "id": "v1-gui-ui-sdk-readme",
+  "title": "UI-TARS SDK使用文档",
+  "url": "https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/packages/ui-tars/sdk/README.md",
+  "version": "text-sha256:b2cd7c3fcc5036860d4cc453f535402d1fd0a38139f05a8fc1bfb067e4e9fdaf",
+  "native_version": "3ac2cb8d946d78d5ff92ad17b318eaafa18c178c",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "Overview、Operator接口、Agent Execution Process与Basic Usage",
+  "locator": "Overview; Agent Execution Process",
+  "text_sha256": "b2cd7c3fcc5036860d4cc453f535402d1fd0a38139f05a8fc1bfb067e4e9fdaf",
+  "excerpt": "Operator exposes screenshot() and execute()",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

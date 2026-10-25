@@ -1,0 +1,10 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Reader from '../../components/Reader.astro';
+import {frontiers} from '../../lib/content';
+export function getStaticPaths(){return frontiers.map(frontier=>({params:{id:frontier.id},props:{frontier}}));}
+const {frontier}=Astro.props;
+---
+<SiteLayout title={frontier.title} description={frontier.summary} active="research" section="研究进展">
+  <Reader title={frontier.title} file={frontier.page} description={`${frontier.as_of} · ${frontier.summary}`} kicker="RESEARCH / 2026"/>
+</SiteLayout>

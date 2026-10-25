@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-gui-mobile-controller",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "fbcc7fd135a289c9e81d8ba05dd9ce126be79b43f3e5c32252209ff4eb2d393f",
+      "bytes": 2459,
+      "cache_file": "sources/.local/objects/fbcc7fd135a289c9e81d8ba05dd9ce126be79b43f3e5c32252209ff4eb2d393f.bin",
+      "requested_url": "https://raw.githubusercontent.com/X-PLUG/MobileAgent/11cea575561fb7800b5fb6b6cafa56f7a91de11f/Mobile-Agent-v2/MobileAgent/controller.py",
+      "resolved_url": "https://raw.githubusercontent.com/X-PLUG/MobileAgent/11cea575561fb7800b5fb6b6cafa56f7a91de11f/Mobile-Agent-v2/MobileAgent/controller.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:12:50.243261+00:00",
+      "declared_source_version": "text-sha256:fbcc7fd135a289c9e81d8ba05dd9ce126be79b43f3e5c32252209ff4eb2d393f",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:12:50.243261+00:00",
+    "status": "saved"
+  }
+}

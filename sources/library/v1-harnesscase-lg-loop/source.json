@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-lg-loop",
+  "title": "LangGraph PregelLoop",
+  "url": "https://github.com/langchain-ai/langgraph/blob/4c52e129eb1ab69a3da58b799f67929f77d81149/libs/langgraph/langgraph/pregel/_loop.py#L650",
+  "version": "text-sha256:cc51e52a6624aa064ac1688e4a55326012d11b615d9810d4b5c1f19bf5f579e0",
+  "native_version": "4c52e129eb1ab69a3da58b799f67929f77d81149",
+  "kind": "source_code",
+  "reading_scope": "tick 650–735；after_tick 737–811；检查点保存",
+  "locator": "tick 650–735；after_tick 737–811；检查点保存",
+  "text_sha256": "cc51e52a6624aa064ac1688e4a55326012d11b615d9810d4b5c1f19bf5f579e0",
+  "excerpt": "def tick(self) -> bool:",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}

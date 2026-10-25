@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-full-benchmark-conflicts",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "08da96c5f38d1abf6829c362e4dcea74aeaf08b3661a45f0fe1c7d364ec35c27",
+      "bytes": 1767187,
+      "cache_file": "sources/.local/objects/08da96c5f38d1abf6829c362e4dcea74aeaf08b3661a45f0fe1c7d364ec35c27.bin",
+      "requested_url": "https://aclanthology.org/2026.acl-long.11.pdf",
+      "resolved_url": "https://aclanthology.org/2026.acl-long.11.pdf",
+      "content_type": "application/pdf",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T03:59:34.532314+00:00",
+      "declared_source_version": "text-sha256:e07a399d5658f09a045368f40dc1ff99b98f9d72fe783c33fe08a7004bfae673",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "HTTP response"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:59:34.532314+00:00",
+    "status": "saved"
+  }
+}

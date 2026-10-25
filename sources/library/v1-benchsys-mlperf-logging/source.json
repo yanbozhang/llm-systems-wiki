@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchsys-mlperf-logging",
+  "title": "loadgen/logging.cc",
+  "url": "https://github.com/mlcommons/inference/blob/3fbc329939999c13d0a7b5e67fb2092287e06047/loadgen/logging.cc",
+  "version": "text-sha256:aaa03469e39c9b407eb1326e093bc9f2dc81fe90a5a3fb6d6ef7a0dcbc2be284",
+  "native_version": "3fbc329939999c13d0a7b5e67fb2092287e06047",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "RecordSampleCompletion相关token路径416–482",
+  "locator": "AsyncLog::RecordSampleCompletion（360行开始，416–482为本批读取范围）",
+  "text_sha256": "aaa03469e39c9b407eb1326e093bc9f2dc81fe90a5a3fb6d6ef7a0dcbc2be284",
+  "excerpt": "time_per_output_token_[i] = (latency - token_latencies_[i]) / (n_tokens - 1)",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

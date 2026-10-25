@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchagents-kappa-doc",
+  "title": "scikit-learn cohen_kappa_score 官方文档",
+  "url": "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.cohen_kappa_score.html",
+  "version": "text-sha256:9958c6c8b3e2b3437063b95043048837aaa2087aba608e71bb0b272464ed85a8",
+  "native_version": "scikit-learn 1.9.1 官方文档快照",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "缓存680–729：定义、经验随机一致、对称性、未定义条件与参数",
+  "locator": "cohen_kappa_score：定义与参数说明",
+  "text_sha256": "9958c6c8b3e2b3437063b95043048837aaa2087aba608e71bb0b272464ed85a8",
+  "excerpt": "The kappa statistic is symmetric, so swapping y1 and y2 doesn’t change the value.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

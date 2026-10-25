@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-gui-ui-host-package",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "3910259c16df19163da13a98deba79ba9fd9c18befc5b2559aa8ed87bc3e9c25",
+      "bytes": 5192,
+      "cache_file": "sources/.local/objects/3910259c16df19163da13a98deba79ba9fd9c18befc5b2559aa8ed87bc3e9c25.bin",
+      "requested_url": "https://raw.githubusercontent.com/bytedance/UI-TARS-desktop/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/apps/ui-tars/package.json",
+      "resolved_url": "https://raw.githubusercontent.com/bytedance/UI-TARS-desktop/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/apps/ui-tars/package.json",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:09.704228+00:00",
+      "declared_source_version": "text-sha256:3910259c16df19163da13a98deba79ba9fd9c18befc5b2559aa8ed87bc3e9c25",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:09.704228+00:00",
+    "status": "saved"
+  }
+}

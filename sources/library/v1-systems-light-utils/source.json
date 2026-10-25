@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-light-utils",
+  "title": "lightrag/utils.py",
+  "url": "https://github.com/HKUDS/LightRAG/blob/aaebfe1bb8d55deb6a4304d357a3bf4c92fcd40a/lightrag/utils.py",
+  "version": "text-sha256:8c49d4b0150fdfc3343d85770a46c0c49da5b6c6a81c09eb5ca10a997c8dcdbe",
+  "native_version": "aaebfe1bb8d55deb6a4304d357a3bf4c92fcd40a",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "apply_rerank_if_enabled 6924–7018；generate_reference_list_from_chunks及render_chunks_context_text 7735–7858",
+  "locator": "apply_rerank_if_enabled；generate_reference_list_from_chunks",
+  "text_sha256": "8c49d4b0150fdfc3343d85770a46c0c49da5b6c6a81c09eb5ca10a997c8dcdbe",
+  "excerpt": "Generate reference list from chunks, prioritizing by occurrence frequency.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

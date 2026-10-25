@@ -1,0 +1,31 @@
+{
+  "source_id": "2026-code-harness-langgraph",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "cc51e52a6624aa064ac1688e4a55326012d11b615d9810d4b5c1f19bf5f579e0",
+      "bytes": 91418,
+      "cache_file": "sources/.local/objects/cc51e52a6624aa064ac1688e4a55326012d11b615d9810d4b5c1f19bf5f579e0.bin",
+      "requested_url": "https://api.github.com/repos/langchain-ai/langgraph/contents/libs/langgraph/langgraph/pregel/_loop.py?ref=4c52e129eb1ab69a3da58b799f67929f77d81149",
+      "resolved_url": "https://api.github.com/repos/langchain-ai/langgraph/contents/libs/langgraph/langgraph/pregel/_loop.py?ref=4c52e129eb1ab69a3da58b799f67929f77d81149",
+      "content_type": "text/plain",
+      "representation": "decoded_source_file",
+      "retrieved_at": "2026-10-25T04:06:05.380518+00:00",
+      "declared_source_version": "text-sha256:0f3f93bea4ba9d289dd1e906452a1615a32d556b162d874bf8deed10bca4e7fb",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "Base64-decoded GitHub Contents API file"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:06:05.380518+00:00",
+    "status": "saved"
+  },
+  "public_snapshot": {
+    "spdx_id": "MIT",
+    "content_file": "sources/library/2026-code-harness-langgraph/snapshot/source.txt",
+    "license_file": "sources/library/2026-code-harness-langgraph/snapshot/LICENSE",
+    "upstream_license_url": "https://github.com/langchain-ai/langgraph/blob/4c52e129eb1ab69a3da58b799f67929f77d81149/LICENSE",
+    "source_commit": "4c52e129eb1ab69a3da58b799f67929f77d81149",
+    "content_sha256": "cc51e52a6624aa064ac1688e4a55326012d11b615d9810d4b5c1f19bf5f579e0"
+  }
+}

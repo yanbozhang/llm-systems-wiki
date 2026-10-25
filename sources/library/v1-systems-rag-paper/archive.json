@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-systems-rag-paper",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "7f643ebcf14fa024288da5e7d79c834246101f8ff8d1258994b690fc79aeb892",
+      "bytes": 244097,
+      "cache_file": "sources/.local/objects/7f643ebcf14fa024288da5e7d79c834246101f8ff8d1258994b690fc79aeb892.bin",
+      "requested_url": "https://arxiv.org/html/2005.11401v4",
+      "resolved_url": "https://arxiv.org/html/2005.11401v4",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:02:42.924165+00:00",
+      "declared_source_version": "text-sha256:1427827155600c37a9376d8602605c3e8a1ae3cac70b750695925643d27e6c2e",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:02:42.924165+00:00",
+    "status": "saved"
+  }
+}

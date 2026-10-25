@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-release-network-transformers",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "28c7f2bbb1411a41f56181d51c1f64480fe4ba998bdb75aa03c2dd42b80b7e0a",
+      "bytes": 2985,
+      "cache_file": "sources/.local/objects/28c7f2bbb1411a41f56181d51c1f64480fe4ba998bdb75aa03c2dd42b80b7e0a.bin",
+      "requested_url": "https://api.github.com/repos/huggingface/transformers/releases/latest",
+      "resolved_url": "https://api.github.com/repos/huggingface/transformers/releases/latest",
+      "content_type": "application/json",
+      "representation": "release_api_snapshot",
+      "retrieved_at": "2026-10-25T04:17:03.729442+00:00",
+      "declared_source_version": "text-sha256:7d70b332ab4cd48adf70a018318da4b64e510e23329f1d3743529de65d99d799",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "GitHub Releases API object serialized as JSON"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:17:03.729442+00:00",
+    "status": "saved"
+  }
+}

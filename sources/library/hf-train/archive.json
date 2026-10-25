@@ -1,0 +1,22 @@
+{
+  "source_id": "hf-train",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "d67b43ceb49659fbaa8dede232614d3df47532fcc68979a1d5b0e900b34d6931",
+      "bytes": 231182,
+      "cache_file": "sources/.local/objects/d67b43ceb49659fbaa8dede232614d3df47532fcc68979a1d5b0e900b34d6931.bin",
+      "requested_url": "https://huggingface.co/learn/llm-course/chapter7/6",
+      "resolved_url": "https://huggingface.co/learn/llm-course/chapter7/6",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:02:50.503502+00:00",
+      "declared_source_version": "text-sha256:fcafe9d560c26c13f6909251b6fe8f64e484f85ac0ba44e19b2790ffc7aa463a",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:02:50.503502+00:00",
+    "status": "saved"
+  }
+}

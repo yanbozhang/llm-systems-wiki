@@ -30,8 +30,8 @@
     "page": "wiki/topics/MHA与MQA及GQA.md",
     "aliases": [],
     "coverage": "source_guided",
-    "page_version": 3,
-    "last_checked": "2026-10-24",
+    "page_version": 4,
+    "last_checked": "2026-10-25",
     "learning_objectives": [
       "计算Q到KV组映射",
       "核算缓存与得分矩阵的不同缩放",
@@ -78,8 +78,8 @@
     "page": "wiki/topics/前馈网络与归一化.md",
     "aliases": [],
     "coverage": "source_guided",
-    "page_version": 3,
-    "last_checked": "2026-10-24",
+    "page_version": 4,
+    "last_checked": "2026-10-25",
     "learning_objectives": [
       "推导门控参数预算",
       "区分归一化统计并计算雅可比",
@@ -129,8 +129,8 @@
       "LoRA"
     ],
     "coverage": "source_guided",
-    "page_version": 3,
-    "last_checked": "2026-10-24",
+    "page_version": 4,
+    "last_checked": "2026-10-25",
     "learning_objectives": [
       "核验模板mask和监督目标",
       "推导LoRA参数梯度",
@@ -177,8 +177,8 @@
     "page": "wiki/topics/策略优化与GRPO.md",
     "aliases": [],
     "coverage": "source_guided",
-    "page_version": 3,
-    "last_checked": "2026-10-24",
+    "page_version": 4,
+    "last_checked": "2026-10-25",
     "learning_objectives": [
       "计算组优势及缺失奖励边界",
       "推导裁剪梯度与old冻结作用",
@@ -228,8 +228,8 @@
       "键值缓存"
     ],
     "coverage": "source_guided",
-    "page_version": 3,
-    "last_checked": "2026-10-24",
+    "page_version": 4,
+    "last_checked": "2026-10-25",
     "learning_objectives": [
       "估算不同请求的缓存",
       "区分逻辑长度与物理分配",
@@ -252,8 +252,8 @@
     "page": "wiki/topics/缓存分页与连续批处理.md",
     "aliases": [],
     "coverage": "source_guided",
-    "page_version": 3,
-    "last_checked": "2026-10-24",
+    "page_version": 4,
+    "last_checked": "2026-10-25",
     "learning_objectives": [
       "区分分页、共享和调度",
       "计算尾块浪费",
@@ -324,8 +324,8 @@
     "page": "wiki/topics/上下文选择与压缩.md",
     "aliases": [],
     "coverage": "source_guided",
-    "page_version": 3,
-    "last_checked": "2026-10-24",
+    "page_version": 4,
+    "last_checked": "2026-10-25",
     "learning_objectives": [
       "按任务选择上下文",
       "设计压缩检查点",
@@ -348,8 +348,8 @@
     "page": "wiki/topics/Agent记忆与保鲜.md",
     "aliases": [],
     "coverage": "source_guided",
-    "page_version": 3,
-    "last_checked": "2026-10-24",
+    "page_version": 4,
+    "last_checked": "2026-10-25",
     "learning_objectives": [
       "定义记忆写入与失效条件",
       "区分个人偏好和公共事实",
@@ -396,8 +396,8 @@
     "page": "wiki/topics/RAG与引用回答.md",
     "aliases": [],
     "coverage": "source_guided",
-    "page_version": 3,
-    "last_checked": "2026-10-24",
+    "page_version": 4,
+    "last_checked": "2026-10-25",
     "learning_objectives": [
       "拆分检索和回答误差",
       "建立可回查引用",
@@ -444,8 +444,8 @@
     "page": "wiki/topics/混合检索与重排.md",
     "aliases": [],
     "coverage": "source_guided",
-    "page_version": 3,
-    "last_checked": "2026-10-24",
+    "page_version": 4,
+    "last_checked": "2026-10-25",
     "learning_objectives": [
       "识别不同召回器的优劣",
       "理解排序融合",
@@ -519,8 +519,8 @@
     "page": "wiki/topics/GUI定位与执行.md",
     "aliases": [],
     "coverage": "source_guided",
-    "page_version": 3,
-    "last_checked": "2026-10-24",
+    "page_version": 4,
+    "last_checked": "2026-10-25",
     "learning_objectives": [
       "统一截图与坐标空间",
       "区分定位和执行",
@@ -543,8 +543,8 @@
     "page": "wiki/topics/AI代码开发与反馈.md",
     "aliases": [],
     "coverage": "source_guided",
-    "page_version": 3,
-    "last_checked": "2026-10-24",
+    "page_version": 4,
+    "last_checked": "2026-10-25",
     "learning_objectives": [
       "按契约形成补丁",
       "区分测试缺口与修复",
@@ -663,8 +663,8 @@
     "page": "wiki/topics/通用能力基准与选型.md",
     "aliases": [],
     "coverage": "source_guided",
-    "page_version": 3,
-    "last_checked": "2026-10-24",
+    "page_version": 4,
+    "last_checked": "2026-10-25",
     "learning_objectives": [
       "能从对数似然构造选择题预测，解释长度归一化可能改变排序。",
       "能计算不同选项数量下的均匀随机基线，并说清基线调整的局限。",
@@ -759,8 +759,8 @@
     "page": "wiki/topics/RAG检索与回答评测.md",
     "aliases": [],
     "coverage": "source_guided",
-    "page_version": 3,
-    "last_checked": "2026-10-24",
+    "page_version": 4,
+    "last_checked": "2026-10-25",
     "learning_objectives": [
       "分开评估检索与回答",
       "手算检索指标",

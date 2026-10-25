@@ -1,0 +1,22 @@
+{
+  "source_id": "v02-mmmu",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "4f00a8c6523a84776718e95e4f1a1e0277868e8315505257276718952dd464bd",
+      "bytes": 40229,
+      "cache_file": "sources/.local/objects/4f00a8c6523a84776718e95e4f1a1e0277868e8315505257276718952dd464bd.bin",
+      "requested_url": "https://mmmu-benchmark.github.io/",
+      "resolved_url": "https://mmmu-benchmark.github.io/",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:03:22.249729+00:00",
+      "declared_source_version": "text-sha256:0e318563d4444f15fa8b9a8bb0657b996249716630cb1653303a074c7f5c5be4",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:22.249729+00:00",
+    "status": "saved"
+  }
+}

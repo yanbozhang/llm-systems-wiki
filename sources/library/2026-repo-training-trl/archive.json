@@ -1,0 +1,31 @@
+{
+  "source_id": "2026-repo-training-trl",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "79285b14d679df55eb4338f78304a9779fc62bdbdaa1548afa4c2f5421051019",
+      "bytes": 9157,
+      "cache_file": "sources/.local/objects/79285b14d679df55eb4338f78304a9779fc62bdbdaa1548afa4c2f5421051019.bin",
+      "requested_url": "https://api.github.com/repos/huggingface/trl/readme?ref=1117c3b9c1632ee9814c30f6c9fc884b792a54e5",
+      "resolved_url": "https://api.github.com/repos/huggingface/trl/readme?ref=1117c3b9c1632ee9814c30f6c9fc884b792a54e5",
+      "content_type": "text/markdown",
+      "representation": "decoded_repository_document",
+      "retrieved_at": "2026-10-25T03:59:12.181416+00:00",
+      "declared_source_version": "text-sha256:1ee0ae0e44ae927da5eda6d88bdef5c585696fd25e3d51cefe56ce959406931a",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "Base64-decoded GitHub Contents API file"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:59:12.181416+00:00",
+    "status": "saved"
+  },
+  "public_snapshot": {
+    "spdx_id": "Apache-2.0",
+    "content_file": "sources/library/2026-repo-training-trl/snapshot/source.txt",
+    "license_file": "sources/library/2026-repo-training-trl/snapshot/LICENSE",
+    "upstream_license_url": "https://github.com/huggingface/trl/blob/1117c3b9c1632ee9814c30f6c9fc884b792a54e5/LICENSE",
+    "source_commit": "1117c3b9c1632ee9814c30f6c9fc884b792a54e5",
+    "content_sha256": "79285b14d679df55eb4338f78304a9779fc62bdbdaa1548afa4c2f5421051019"
+  }
+}

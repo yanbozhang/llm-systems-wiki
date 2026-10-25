@@ -1,0 +1,4603 @@
+[
+  {
+    "id": "wiki-pattern",
+    "title": "Karpathy 的 LLM Wiki 模式",
+    "path": "sources/library/wiki-pattern/README.md",
+    "topic_ids": [
+      "graph-wiki",
+      "ingestion",
+      "memory"
+    ],
+    "module_ids": [
+      "harness",
+      "knowledge"
+    ],
+    "archive_status": "failed"
+  },
+  {
+    "id": "microsoft-wiki",
+    "title": "Microsoft 的 LLM Wiki 实现",
+    "path": "sources/library/microsoft-wiki/README.md",
+    "topic_ids": [
+      "graph-wiki"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "nashsu-wiki",
+    "title": "nashsu 的 LLM Wiki 实现",
+    "path": "sources/library/nashsu-wiki/README.md",
+    "topic_ids": [
+      "graph-wiki",
+      "hybrid-search",
+      "ingestion"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "qmd",
+    "title": "qmd 检索工具",
+    "path": "sources/library/qmd/README.md",
+    "topic_ids": [
+      "hybrid-search"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "attention",
+    "title": "Transformer 原论文",
+    "path": "sources/library/attention/README.md",
+    "topic_ids": [
+      "ffn-norm",
+      "position",
+      "transformer"
+    ],
+    "module_ids": [
+      "network"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "gqa",
+    "title": "GQA 原论文",
+    "path": "sources/library/gqa/README.md",
+    "topic_ids": [
+      "attention-heads",
+      "kv-cache"
+    ],
+    "module_ids": [
+      "inference",
+      "network"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "rope",
+    "title": "RoFormer 与 RoPE 原论文",
+    "path": "sources/library/rope/README.md",
+    "topic_ids": [
+      "position"
+    ],
+    "module_ids": [
+      "network"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "llama",
+    "title": "LLaMA 原论文",
+    "path": "sources/library/llama/README.md",
+    "topic_ids": [
+      "ffn-norm",
+      "pretraining",
+      "transformer"
+    ],
+    "module_ids": [
+      "network",
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "instructgpt",
+    "title": "InstructGPT 原论文",
+    "path": "sources/library/instructgpt/README.md",
+    "topic_ids": [
+      "policy-optimization",
+      "preference",
+      "sft"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "dpo",
+    "title": "DPO 原论文",
+    "path": "sources/library/dpo/README.md",
+    "topic_ids": [
+      "preference"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "grpo",
+    "title": "DeepSeekMath 与 GRPO 原论文",
+    "path": "sources/library/grpo/README.md",
+    "topic_ids": [
+      "policy-optimization"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "lora",
+    "title": "LoRA 原论文",
+    "path": "sources/library/lora/README.md",
+    "topic_ids": [
+      "sft"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "pagedattention",
+    "title": "PagedAttention 原论文",
+    "path": "sources/library/pagedattention/README.md",
+    "topic_ids": [
+      "cache-scheduling",
+      "inference-frameworks",
+      "kv-cache",
+      "prefill-decode"
+    ],
+    "module_ids": [
+      "inference"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "sglang",
+    "title": "SGLang 原论文",
+    "path": "sources/library/sglang/README.md",
+    "topic_ids": [
+      "cache-scheduling",
+      "inference-frameworks"
+    ],
+    "module_ids": [
+      "inference"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "context",
+    "title": "有效上下文工程",
+    "path": "sources/library/context/README.md",
+    "topic_ids": [
+      "context",
+      "memory"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "agents",
+    "title": "构建有效 Agent",
+    "path": "sources/library/agents/README.md",
+    "topic_ids": [
+      "agent-loop",
+      "coding-agent",
+      "context",
+      "task-loop",
+      "tools-skills"
+    ],
+    "module_ids": [
+      "agents",
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "mcp",
+    "title": "MCP 架构说明",
+    "path": "sources/library/mcp/README.md",
+    "topic_ids": [
+      "agent-loop",
+      "benchmark-robustness",
+      "tools-skills"
+    ],
+    "module_ids": [
+      "benchmark",
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "skills",
+    "title": "Agent Skills 规范",
+    "path": "sources/library/skills/README.md",
+    "topic_ids": [
+      "tools-skills"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "rag",
+    "title": "RAG 原论文",
+    "path": "sources/library/rag/README.md",
+    "topic_ids": [
+      "rag"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "graphrag",
+    "title": "GraphRAG 官方文档",
+    "path": "sources/library/graphrag/README.md",
+    "topic_ids": [
+      "benchmark-rag",
+      "graph-wiki",
+      "hybrid-search",
+      "rag"
+    ],
+    "module_ids": [
+      "benchmark",
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "lightrag",
+    "title": "LightRAG 项目说明",
+    "path": "sources/library/lightrag/README.md",
+    "topic_ids": [],
+    "module_ids": [],
+    "archive_status": "saved"
+  },
+  {
+    "id": "swebench",
+    "title": "SWE-bench 项目说明",
+    "path": "sources/library/swebench/README.md",
+    "topic_ids": [
+      "agent-evaluation",
+      "benchmark-agents",
+      "coding-agent"
+    ],
+    "module_ids": [
+      "agents",
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "osworld",
+    "title": "OSWorld 原论文",
+    "path": "sources/library/osworld/README.md",
+    "topic_ids": [
+      "agent-evaluation",
+      "benchmark-agents",
+      "benchmark-multimodal",
+      "gui-agent",
+      "task-loop"
+    ],
+    "module_ids": [
+      "agents",
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "seeclick",
+    "title": "SeeClick 原论文",
+    "path": "sources/library/seeclick/README.md",
+    "topic_ids": [
+      "agent-evaluation",
+      "benchmark-multimodal",
+      "gui-agent"
+    ],
+    "module_ids": [
+      "agents",
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "vllm",
+    "title": "vLLM 前缀缓存设计",
+    "path": "sources/library/vllm/README.md",
+    "topic_ids": [
+      "cache-scheduling",
+      "inference-frameworks"
+    ],
+    "module_ids": [
+      "inference"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "hf-cache",
+    "title": "Transformers 缓存原理",
+    "path": "sources/library/hf-cache/README.md",
+    "topic_ids": [
+      "attention-heads",
+      "kv-cache",
+      "prefill-decode"
+    ],
+    "module_ids": [
+      "inference",
+      "network"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "hf-train",
+    "title": "语言模型预训练课程",
+    "path": "sources/library/hf-train/README.md",
+    "topic_ids": [
+      "pretraining"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "hf-trl",
+    "title": "TRL 训练文档",
+    "path": "sources/library/hf-trl/README.md",
+    "topic_ids": [
+      "policy-optimization",
+      "sft"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "hf-token",
+    "title": "分词器课程",
+    "path": "sources/library/hf-token/README.md",
+    "topic_ids": [
+      "pretraining"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-d2l",
+    "title": "动手学深度学习",
+    "path": "sources/library/v02-d2l/README.md",
+    "topic_ids": [],
+    "module_ids": [],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-cs336",
+    "title": "Stanford CS336",
+    "path": "sources/library/v02-cs336/README.md",
+    "topic_ids": [
+      "benchmark-contamination"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-hf-llm-course",
+    "title": "Hugging Face LLM Course",
+    "path": "sources/library/v02-hf-llm-course/README.md",
+    "topic_ids": [],
+    "module_ids": [],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-hf-agents-course",
+    "title": "Hugging Face Agents Course",
+    "path": "sources/library/v02-hf-agents-course/README.md",
+    "topic_ids": [
+      "benchmark-robustness"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-pytorch-basics",
+    "title": "PyTorch 基础教程",
+    "path": "sources/library/v02-pytorch-basics/README.md",
+    "topic_ids": [],
+    "module_ids": [],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-pytorch-sdpa",
+    "title": "PyTorch SDPA 教程",
+    "path": "sources/library/v02-pytorch-sdpa/README.md",
+    "topic_ids": [],
+    "module_ids": [],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-fsdl",
+    "title": "Full Stack LLM Bootcamp",
+    "path": "sources/library/v02-fsdl/README.md",
+    "topic_ids": [],
+    "module_ids": [],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-llm-systems",
+    "title": "LLM Systems",
+    "path": "sources/library/v02-llm-systems/README.md",
+    "topic_ids": [
+      "benchmark-systems"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-langgraph",
+    "title": "LangGraph 官方文档",
+    "path": "sources/library/v02-langgraph/README.md",
+    "topic_ids": [],
+    "module_ids": [],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-hf-rag-cookbook",
+    "title": "Hugging Face RAG 实践",
+    "path": "sources/library/v02-hf-rag-cookbook/README.md",
+    "topic_ids": [
+      "benchmark-rag"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-vllm-learning",
+    "title": "vLLM 文档入口",
+    "path": "sources/library/v02-vllm-learning/README.md",
+    "topic_ids": [
+      "benchmark-systems"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-sglang-learning",
+    "title": "SGLang 文档入口",
+    "path": "sources/library/v02-sglang-learning/README.md",
+    "topic_ids": [],
+    "module_ids": [],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-helm",
+    "title": "HELM 评测框架",
+    "path": "sources/library/v02-helm/README.md",
+    "topic_ids": [
+      "benchmark-metrics",
+      "benchmark-protocol"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-lm-eval",
+    "title": "LM Evaluation Harness",
+    "path": "sources/library/v02-lm-eval/README.md",
+    "topic_ids": [
+      "benchmark-general",
+      "benchmark-protocol"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-opencompass",
+    "title": "OpenCompass 文档",
+    "path": "sources/library/v02-opencompass/README.md",
+    "topic_ids": [
+      "benchmark-contamination",
+      "benchmark-judge",
+      "benchmark-metrics",
+      "benchmark-protocol",
+      "benchmark-reasoning-code"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-ragas-metrics",
+    "title": "Ragas 评测指标",
+    "path": "sources/library/v02-ragas-metrics/README.md",
+    "topic_ids": [
+      "benchmark-judge",
+      "benchmark-rag"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-mmlu",
+    "title": "MMLU 基准",
+    "path": "sources/library/v02-mmlu/README.md",
+    "topic_ids": [
+      "benchmark-general"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-mmlu-pro",
+    "title": "MMLU-Pro 基准",
+    "path": "sources/library/v02-mmlu-pro/README.md",
+    "topic_ids": [
+      "benchmark-general"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-gpqa",
+    "title": "GPQA 基准",
+    "path": "sources/library/v02-gpqa/README.md",
+    "topic_ids": [
+      "benchmark-general"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-livebench",
+    "title": "LiveBench 基准",
+    "path": "sources/library/v02-livebench/README.md",
+    "topic_ids": [
+      "benchmark-contamination",
+      "benchmark-reasoning-code"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-humaneval",
+    "title": "HumanEval 评测",
+    "path": "sources/library/v02-humaneval/README.md",
+    "topic_ids": [
+      "benchmark-reasoning-code"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-mmmu",
+    "title": "MMMU 基准",
+    "path": "sources/library/v02-mmmu/README.md",
+    "topic_ids": [
+      "benchmark-multimodal"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-webarena",
+    "title": "WebArena 基准",
+    "path": "sources/library/v02-webarena/README.md",
+    "topic_ids": [
+      "benchmark-agents"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-bfcl",
+    "title": "Berkeley Function Calling Leaderboard",
+    "path": "sources/library/v02-bfcl/README.md",
+    "topic_ids": [
+      "benchmark-agents"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-mtbench",
+    "title": "MT-Bench 评审工具",
+    "path": "sources/library/v02-mtbench/README.md",
+    "topic_ids": [
+      "benchmark-judge"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-mlperf",
+    "title": "MLPerf Inference",
+    "path": "sources/library/v02-mlperf/README.md",
+    "topic_ids": [
+      "benchmark-systems"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-agentdojo",
+    "title": "AgentDojo 评测环境",
+    "path": "sources/library/v02-agentdojo/README.md",
+    "topic_ids": [
+      "benchmark-robustness"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v02-bootstrap",
+    "title": "SciPy Bootstrap 文档",
+    "path": "sources/library/v02-bootstrap/README.md",
+    "topic_ids": [
+      "benchmark-metrics"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-agents-pregel-loop",
+    "title": "LangGraph PregelLoop 状态推进",
+    "path": "sources/library/v1-agents-pregel-loop/README.md",
+    "topic_ids": [
+      "agent-loop",
+      "task-loop"
+    ],
+    "module_ids": [
+      "agents",
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-agents-store-memory",
+    "title": "LangGraph InMemoryStore 过滤与删除",
+    "path": "sources/library/v1-agents-store-memory/README.md",
+    "topic_ids": [
+      "memory"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-agents-autogen-buffer",
+    "title": "AutoGen BufferedChatCompletionContext.get_messages",
+    "path": "sources/library/v1-agents-autogen-buffer/README.md",
+    "topic_ids": [
+      "context"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-agents-autogen-token",
+    "title": "AutoGen TokenLimitedChatCompletionContext.get_messages",
+    "path": "sources/library/v1-agents-autogen-token/README.md",
+    "topic_ids": [
+      "context",
+      "tools-skills"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-agents-autogen-stop",
+    "title": "AutoGen token 与超时终止条件",
+    "path": "sources/library/v1-agents-autogen-stop/README.md",
+    "topic_ids": [
+      "agent-loop"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-agents-mcp-session",
+    "title": "MCP Python SDK 工具调用与结果校验",
+    "path": "sources/library/v1-agents-mcp-session/README.md",
+    "topic_ids": [
+      "tools-skills"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-agents-osworld-env",
+    "title": "OSWorld DesktopEnv 观测、步骤与验收",
+    "path": "sources/library/v1-agents-osworld-env/README.md",
+    "topic_ids": [
+      "agent-evaluation",
+      "gui-agent",
+      "task-loop"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-agents-osworld-control",
+    "title": "OSWorld PythonController.execute_action",
+    "path": "sources/library/v1-agents-osworld-control/README.md",
+    "topic_ids": [
+      "gui-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-agents-sweagent-loop",
+    "title": "SWE-agent DefaultAgent 动作与轨迹",
+    "path": "sources/library/v1-agents-sweagent-loop/README.md",
+    "topic_ids": [
+      "agent-evaluation",
+      "coding-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-agents-sweagent-history",
+    "title": "SWE-agent LastNObservations 历史处理",
+    "path": "sources/library/v1-agents-sweagent-history/README.md",
+    "topic_ids": [
+      "coding-agent",
+      "context"
+    ],
+    "module_ids": [
+      "agents",
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-agents-swebench-grade",
+    "title": "SWE-bench 测试分组与解决状态",
+    "path": "sources/library/v1-agents-swebench-grade/README.md",
+    "topic_ids": [
+      "agent-evaluation",
+      "coding-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-agents-skills-prompt",
+    "title": "Agent Skills 参考实现 to_prompt",
+    "path": "sources/library/v1-agents-skills-prompt/README.md",
+    "topic_ids": [
+      "tools-skills"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-agents-sweagent-edit",
+    "title": "SWE-agent WindowedFile 定位与替换",
+    "path": "sources/library/v1-agents-sweagent-edit/README.md",
+    "topic_ids": [
+      "coding-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-agents-langgraph-persistence",
+    "title": "LangGraph Persistence 官方文档",
+    "path": "sources/library/v1-agents-langgraph-persistence/README.md",
+    "topic_ids": [
+      "agent-loop",
+      "context",
+      "memory",
+      "task-loop"
+    ],
+    "module_ids": [
+      "agents",
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-agents-langgraph-memory",
+    "title": "LangGraph Memory overview 官方文档",
+    "path": "sources/library/v1-agents-langgraph-memory/README.md",
+    "topic_ids": [
+      "context",
+      "memory"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-agents-context-guide",
+    "title": "Effective context engineering for AI agents",
+    "path": "sources/library/v1-agents-context-guide/README.md",
+    "topic_ids": [
+      "context",
+      "memory",
+      "tools-skills"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-agents-mcp-tools",
+    "title": "MCP Tools 规范",
+    "path": "sources/library/v1-agents-mcp-tools/README.md",
+    "topic_ids": [
+      "task-loop",
+      "tools-skills"
+    ],
+    "module_ids": [
+      "agents",
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-agents-mcp-lifecycle",
+    "title": "MCP Lifecycle 规范",
+    "path": "sources/library/v1-agents-mcp-lifecycle/README.md",
+    "topic_ids": [
+      "agent-loop",
+      "task-loop",
+      "tools-skills"
+    ],
+    "module_ids": [
+      "agents",
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-agents-skills-spec",
+    "title": "Agent Skills Specification",
+    "path": "sources/library/v1-agents-skills-spec/README.md",
+    "topic_ids": [
+      "tools-skills"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-agents-react-paper",
+    "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+    "path": "sources/library/v1-agents-react-paper/README.md",
+    "topic_ids": [
+      "agent-evaluation",
+      "agent-loop",
+      "gui-agent"
+    ],
+    "module_ids": [
+      "agents",
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-agents-osworld-paper",
+    "title": "OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments",
+    "path": "sources/library/v1-agents-osworld-paper/README.md",
+    "topic_ids": [
+      "agent-evaluation",
+      "gui-agent",
+      "task-loop"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-agents-seeclick-paper",
+    "title": "SeeClick: Harnessing GUI Grounding for Advanced Visual GUI Agents",
+    "path": "sources/library/v1-agents-seeclick-paper/README.md",
+    "topic_ids": [
+      "gui-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-agents-sweagent-paper",
+    "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering",
+    "path": "sources/library/v1-agents-sweagent-paper/README.md",
+    "topic_ids": [
+      "agent-evaluation",
+      "coding-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-agents-swebench-paper",
+    "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+    "path": "sources/library/v1-agents-swebench-paper/README.md",
+    "topic_ids": [
+      "agent-evaluation",
+      "coding-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchagents-swebench-grading",
+    "title": "SWE-bench 测试状态与修复评分",
+    "path": "sources/library/v1-benchagents-swebench-grading/README.md",
+    "topic_ids": [
+      "benchmark-agents"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchagents-swebench-paper",
+    "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+    "path": "sources/library/v1-benchagents-swebench-paper/README.md",
+    "topic_ids": [
+      "benchmark-agents"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchagents-webarena-evaluators",
+    "title": "WebArena 功能正确性评估器",
+    "path": "sources/library/v1-benchagents-webarena-evaluators/README.md",
+    "topic_ids": [
+      "benchmark-agents"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchagents-webarena-paper",
+    "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+    "path": "sources/library/v1-benchagents-webarena-paper/README.md",
+    "topic_ids": [
+      "benchmark-agents"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchagents-humaneval-eval",
+    "title": "HumanEval pass@k 估计与按任务聚合",
+    "path": "sources/library/v1-benchagents-humaneval-eval/README.md",
+    "topic_ids": [
+      "benchmark-agents"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchagents-humaneval-paper",
+    "title": "Evaluating Large Language Models Trained on Code",
+    "path": "sources/library/v1-benchagents-humaneval-paper/README.md",
+    "topic_ids": [
+      "benchmark-agents"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchagents-fastchat-judge",
+    "title": "FastChat 成对裁判调用、顺序交换与结果加载",
+    "path": "sources/library/v1-benchagents-fastchat-judge/README.md",
+    "topic_ids": [
+      "benchmark-judge"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchagents-mtbench-paper",
+    "title": "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena",
+    "path": "sources/library/v1-benchagents-mtbench-paper/README.md",
+    "topic_ids": [
+      "benchmark-judge"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchagents-sklearn-classification",
+    "title": "scikit-learn Cohen kappa 实现",
+    "path": "sources/library/v1-benchagents-sklearn-classification/README.md",
+    "topic_ids": [
+      "benchmark-judge"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchagents-kappa-doc",
+    "title": "scikit-learn cohen_kappa_score 官方文档",
+    "path": "sources/library/v1-benchagents-kappa-doc/README.md",
+    "topic_ids": [
+      "benchmark-judge"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchagents-calibration-doc",
+    "title": "scikit-learn 概率校准官方指南",
+    "path": "sources/library/v1-benchagents-calibration-doc/README.md",
+    "topic_ids": [
+      "benchmark-judge"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchagents-lm-metrics",
+    "title": "LM Evaluation Harness 多类 Brier 聚合",
+    "path": "sources/library/v1-benchagents-lm-metrics/README.md",
+    "topic_ids": [
+      "benchmark-judge"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchagents-agentdojo-suite",
+    "title": "AgentDojo 任务执行、效用与安全目标检查",
+    "path": "sources/library/v1-benchagents-agentdojo-suite/README.md",
+    "topic_ids": [
+      "benchmark-robustness"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchagents-agentdojo-runtime",
+    "title": "AgentDojo 工具注册、参数校验和依赖注入",
+    "path": "sources/library/v1-benchagents-agentdojo-runtime/README.md",
+    "topic_ids": [
+      "benchmark-robustness"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchagents-agentdojo-paper",
+    "title": "AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents",
+    "path": "sources/library/v1-benchagents-agentdojo-paper/README.md",
+    "topic_ids": [
+      "benchmark-robustness"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchagents-mcp-architecture",
+    "title": "MCP 2025-06-18 架构与宿主责任",
+    "path": "sources/library/v1-benchagents-mcp-architecture/README.md",
+    "topic_ids": [
+      "benchmark-robustness"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchsys-ragas-faithfulness",
+    "title": "Ragas 忠实度实现",
+    "path": "sources/library/v1-benchsys-ragas-faithfulness/README.md",
+    "topic_ids": [
+      "benchmark-rag"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchsys-ragas-faithfulness-doc",
+    "title": "docs/concepts/metrics/available_metrics/faithfulness.md",
+    "path": "sources/library/v1-benchsys-ragas-faithfulness-doc/README.md",
+    "topic_ids": [
+      "benchmark-rag"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchsys-ragas-paper",
+    "title": "Ragas: Automated Evaluation of Retrieval Augmented Generation",
+    "path": "sources/library/v1-benchsys-ragas-paper/README.md",
+    "topic_ids": [
+      "benchmark-rag"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchsys-ragas-precision",
+    "title": "Ragas 上下文精度实现",
+    "path": "sources/library/v1-benchsys-ragas-precision/README.md",
+    "topic_ids": [
+      "benchmark-rag"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchsys-ragas-precision-doc",
+    "title": "docs/concepts/metrics/available_metrics/context_precision.md",
+    "path": "sources/library/v1-benchsys-ragas-precision-doc/README.md",
+    "topic_ids": [
+      "benchmark-rag"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchsys-ragas-recall",
+    "title": "Ragas 上下文召回实现",
+    "path": "sources/library/v1-benchsys-ragas-recall/README.md",
+    "topic_ids": [
+      "benchmark-rag"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchsys-ragas-recall-doc",
+    "title": "docs/concepts/metrics/available_metrics/context_recall.md",
+    "path": "sources/library/v1-benchsys-ragas-recall-doc/README.md",
+    "topic_ids": [
+      "benchmark-rag"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchsys-bench-serve",
+    "title": "vllm/benchmarks/serve.py",
+    "path": "sources/library/v1-benchsys-bench-serve/README.md",
+    "topic_ids": [
+      "benchmark-systems"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchsys-distserve-paper",
+    "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving",
+    "path": "sources/library/v1-benchsys-distserve-paper/README.md",
+    "topic_ids": [
+      "benchmark-systems"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchsys-mlperf-accuracy-check",
+    "title": "tools/submission/submission_checker/checks/accuracy_check.py",
+    "path": "sources/library/v1-benchsys-mlperf-accuracy-check/README.md",
+    "topic_ids": [
+      "benchmark-systems"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchsys-mlperf-loadgen-doc",
+    "title": "loadgen/README.md",
+    "path": "sources/library/v1-benchsys-mlperf-loadgen-doc/README.md",
+    "topic_ids": [
+      "benchmark-systems"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchsys-mlperf-logging",
+    "title": "loadgen/logging.cc",
+    "path": "sources/library/v1-benchsys-mlperf-logging/README.md",
+    "topic_ids": [
+      "benchmark-systems"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchsys-mlperf-performance-check",
+    "title": "tools/submission/submission_checker/checks/performance_check.py",
+    "path": "sources/library/v1-benchsys-mlperf-performance-check/README.md",
+    "topic_ids": [
+      "benchmark-systems"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchsys-mlperf-results",
+    "title": "MLPerf LoadGen 结果与延迟计算",
+    "path": "sources/library/v1-benchsys-mlperf-results/README.md",
+    "topic_ids": [
+      "benchmark-systems"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchsys-mlperf-rules",
+    "title": "inference_rules.adoc",
+    "path": "sources/library/v1-benchsys-mlperf-rules/README.md",
+    "topic_ids": [
+      "benchmark-systems"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchsys-mlperf-settings",
+    "title": "MLPerf LoadGen 测试设置",
+    "path": "sources/library/v1-benchsys-mlperf-settings/README.md",
+    "topic_ids": [
+      "benchmark-systems"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchsys-mlperf-submission-doc",
+    "title": "tools/submission/README.md",
+    "path": "sources/library/v1-benchsys-mlperf-submission-doc/README.md",
+    "topic_ids": [
+      "benchmark-systems"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchsys-llava-doc",
+    "title": "README.md",
+    "path": "sources/library/v1-benchsys-llava-doc/README.md",
+    "topic_ids": [
+      "benchmark-multimodal"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchsys-llava-preprocess",
+    "title": "llava/mm_utils.py",
+    "path": "sources/library/v1-benchsys-llava-preprocess/README.md",
+    "topic_ids": [
+      "benchmark-multimodal"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchsys-mmmu-data",
+    "title": "mmmu/utils/data_utils.py",
+    "path": "sources/library/v1-benchsys-mmmu-data/README.md",
+    "topic_ids": [
+      "benchmark-multimodal"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchsys-mmmu-doc",
+    "title": "README.md",
+    "path": "sources/library/v1-benchsys-mmmu-doc/README.md",
+    "topic_ids": [
+      "benchmark-multimodal"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchsys-mmmu-eval",
+    "title": "MMMU 答案解析与评估",
+    "path": "sources/library/v1-benchsys-mmmu-eval/README.md",
+    "topic_ids": [
+      "benchmark-multimodal"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchsys-mmmu-model-utils",
+    "title": "mmmu/utils/model_utils.py",
+    "path": "sources/library/v1-benchsys-mmmu-model-utils/README.md",
+    "topic_ids": [
+      "benchmark-multimodal"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchsys-mmmu-paper",
+    "title": "MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI",
+    "path": "sources/library/v1-benchsys-mmmu-paper/README.md",
+    "topic_ids": [
+      "benchmark-multimodal"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchsys-mmmu-run",
+    "title": "mmmu/run_llava.py",
+    "path": "sources/library/v1-benchsys-mmmu-run/README.md",
+    "topic_ids": [
+      "benchmark-multimodal"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchmark-bootstrap-doc",
+    "title": "SciPy Bootstrap 官方文档",
+    "path": "sources/library/v1-benchmark-bootstrap-doc/README.md",
+    "topic_ids": [
+      "benchmark-metrics"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchmark-gsm-paper",
+    "title": "数学文字题验证器与GSM8K",
+    "path": "sources/library/v1-benchmark-gsm-paper/README.md",
+    "topic_ids": [
+      "benchmark-reasoning-code"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchmark-gsm-parser",
+    "title": "GSM8K 最终答案提取与正确性检查",
+    "path": "sources/library/v1-benchmark-gsm-parser/README.md",
+    "topic_ids": [
+      "benchmark-reasoning-code"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchmark-helm-paper",
+    "title": "HELM：语言模型的整体评估",
+    "path": "sources/library/v1-benchmark-helm-paper/README.md",
+    "topic_ids": [
+      "benchmark-general",
+      "benchmark-metrics"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchmark-humaneval-eval",
+    "title": "HumanEval pass@k与执行汇总",
+    "path": "sources/library/v1-benchmark-humaneval-eval/README.md",
+    "topic_ids": [
+      "benchmark-reasoning-code"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchmark-humaneval-execution",
+    "title": "HumanEval 执行检查与隔离说明",
+    "path": "sources/library/v1-benchmark-humaneval-execution/README.md",
+    "topic_ids": [
+      "benchmark-reasoning-code"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchmark-humaneval-paper",
+    "title": "代码大模型评估与HumanEval",
+    "path": "sources/library/v1-benchmark-humaneval-paper/README.md",
+    "topic_ids": [
+      "benchmark-reasoning-code"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchmark-livebench-common",
+    "title": "LiveBench 数据版本与公共评测逻辑",
+    "path": "sources/library/v1-benchmark-livebench-common/README.md",
+    "topic_ids": [
+      "benchmark-contamination"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchmark-lm-decontam-doc",
+    "title": "LM Evaluation Harness 去污染说明",
+    "path": "sources/library/v1-benchmark-lm-decontam-doc/README.md",
+    "topic_ids": [
+      "benchmark-contamination",
+      "benchmark-protocol"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchmark-lm-decontaminate",
+    "title": "LM Evaluation Harness 去污染实现",
+    "path": "sources/library/v1-benchmark-lm-decontaminate/README.md",
+    "topic_ids": [
+      "benchmark-contamination"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchmark-lm-janitor",
+    "title": "LM Evaluation Harness 文本规范化与Ngram",
+    "path": "sources/library/v1-benchmark-lm-janitor/README.md",
+    "topic_ids": [
+      "benchmark-contamination"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchmark-lm-metrics",
+    "title": "LM Evaluation Harness 指标实现",
+    "path": "sources/library/v1-benchmark-lm-metrics/README.md",
+    "topic_ids": [
+      "benchmark-general",
+      "benchmark-metrics"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchmark-lm-task",
+    "title": "LM Evaluation Harness 任务协议",
+    "path": "sources/library/v1-benchmark-lm-task/README.md",
+    "topic_ids": [
+      "benchmark-general",
+      "benchmark-protocol"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchmark-lm-tracker",
+    "title": "LM Evaluation Harness 结果追踪",
+    "path": "sources/library/v1-benchmark-lm-tracker/README.md",
+    "topic_ids": [
+      "benchmark-contamination",
+      "benchmark-protocol"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchmark-mmlu-pro-accuracy",
+    "title": "MMLU-Pro 领域准确率统计",
+    "path": "sources/library/v1-benchmark-mmlu-pro-accuracy/README.md",
+    "topic_ids": [
+      "benchmark-general"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchmark-scipy-binom",
+    "title": "SciPy 二项检验与Wilson区间实现",
+    "path": "sources/library/v1-benchmark-scipy-binom/README.md",
+    "topic_ids": [
+      "benchmark-metrics"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-benchmark-wilson-doc",
+    "title": "NIST 二项比例区间",
+    "path": "sources/library/v1-benchmark-wilson-doc/README.md",
+    "topic_ids": [
+      "benchmark-metrics"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-coding-oh-action",
+    "title": "openhands-sdk/openhands/sdk/event/llm_convertible/action.py",
+    "path": "sources/library/v1-coding-oh-action/README.md",
+    "topic_ids": [
+      "openhands"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-coding-oh-agent",
+    "title": "openhands-sdk/openhands/sdk/agent/agent.py",
+    "path": "sources/library/v1-coding-oh-agent/README.md",
+    "topic_ids": [
+      "openhands"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-coding-oh-base",
+    "title": "openhands-sdk/openhands/sdk/event/base.py",
+    "path": "sources/library/v1-coding-oh-base/README.md",
+    "topic_ids": [
+      "openhands"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-coding-oh-eventstore",
+    "title": "openhands-sdk/openhands/sdk/conversation/event_store.py",
+    "path": "sources/library/v1-coding-oh-eventstore/README.md",
+    "topic_ids": [
+      "openhands"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-coding-oh-local",
+    "title": "openhands-sdk/openhands/sdk/conversation/impl/local_conversation.py",
+    "path": "sources/library/v1-coding-oh-local/README.md",
+    "topic_ids": [
+      "openhands"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-coding-oh-observation",
+    "title": "openhands-sdk/openhands/sdk/event/llm_convertible/observation.py",
+    "path": "sources/library/v1-coding-oh-observation/README.md",
+    "topic_ids": [
+      "openhands"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-coding-oh-sdk-readme",
+    "title": "README.md",
+    "path": "sources/library/v1-coding-oh-sdk-readme/README.md",
+    "topic_ids": [
+      "openhands"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-coding-openhands-paper",
+    "title": "OpenHands: An Open Platform for AI Software Developers as Generalist Agents",
+    "path": "sources/library/v1-coding-openhands-paper/README.md",
+    "topic_ids": [
+      "openhands"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-coding-swe-agent",
+    "title": "sweagent/agent/agents.py",
+    "path": "sources/library/v1-coding-swe-agent/README.md",
+    "topic_ids": [
+      "swe-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-coding-swe-default",
+    "title": "config/default.yaml",
+    "path": "sources/library/v1-coding-swe-default/README.md",
+    "topic_ids": [
+      "swe-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-coding-swe-editor",
+    "title": "tools/edit_anthropic/bin/str_replace_editor",
+    "path": "sources/library/v1-coding-swe-editor/README.md",
+    "topic_ids": [
+      "swe-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-coding-swe-paper",
+    "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering",
+    "path": "sources/library/v1-coding-swe-paper/README.md",
+    "topic_ids": [
+      "swe-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-coding-swe-toolconf",
+    "title": "tools/edit_anthropic/config.yaml",
+    "path": "sources/library/v1-coding-swe-toolconf/README.md",
+    "topic_ids": [
+      "swe-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-coding-swe-trajectories",
+    "title": "docs/usage/trajectories.md",
+    "path": "sources/library/v1-coding-swe-trajectories/README.md",
+    "topic_ids": [
+      "swe-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-coding-swe-window",
+    "title": "tools/windowed/lib/windowed_file.py",
+    "path": "sources/library/v1-coding-swe-window/README.md",
+    "topic_ids": [
+      "swe-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-coding-aider-base",
+    "title": "aider/coders/base_coder.py",
+    "path": "sources/library/v1-coding-aider-base/README.md",
+    "topic_ids": [
+      "aider"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-coding-aider-edit",
+    "title": "aider/coders/editblock_coder.py",
+    "path": "sources/library/v1-coding-aider-edit/README.md",
+    "topic_ids": [
+      "aider"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-coding-aider-editdoc",
+    "title": "aider/website/docs/more/edit-formats.md",
+    "path": "sources/library/v1-coding-aider-editdoc/README.md",
+    "topic_ids": [
+      "aider"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-coding-aider-git",
+    "title": "aider/repo.py",
+    "path": "sources/library/v1-coding-aider-git/README.md",
+    "topic_ids": [
+      "aider"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-coding-aider-gitdoc",
+    "title": "aider/website/docs/git.md",
+    "path": "sources/library/v1-coding-aider-gitdoc/README.md",
+    "topic_ids": [
+      "aider"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-coding-aider-mapdoc",
+    "title": "aider/website/docs/repomap.md",
+    "path": "sources/library/v1-coding-aider-mapdoc/README.md",
+    "topic_ids": [
+      "aider"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-coding-aider-repomap",
+    "title": "aider/repomap.py",
+    "path": "sources/library/v1-coding-aider-repomap/README.md",
+    "topic_ids": [
+      "aider"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-paper-mobile-v2",
+    "title": "Mobile-Agent-v2: Mobile Device Operation Assistant with Effective Navigation via Multi-Agent Collaboration",
+    "path": "sources/library/v1-gui-paper-mobile-v2/README.md",
+    "topic_ids": [
+      "mobile-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-mobile-v2-readme",
+    "title": "Mobile-Agent-v2 官方目录说明",
+    "path": "sources/library/v1-gui-mobile-v2-readme/README.md",
+    "topic_ids": [
+      "mobile-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-mobile-run",
+    "title": "Mobile-Agent-v2 run.py",
+    "path": "sources/library/v1-gui-mobile-run/README.md",
+    "topic_ids": [
+      "mobile-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-mobile-prompt",
+    "title": "Mobile-Agent-v2 prompt.py",
+    "path": "sources/library/v1-gui-mobile-prompt/README.md",
+    "topic_ids": [
+      "mobile-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-mobile-controller",
+    "title": "Mobile-Agent-v2 ADB controller",
+    "path": "sources/library/v1-gui-mobile-controller/README.md",
+    "topic_ids": [
+      "mobile-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-mobile-api",
+    "title": "Mobile-Agent-v2 模型调用适配",
+    "path": "sources/library/v1-gui-mobile-api/README.md",
+    "topic_ids": [
+      "mobile-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-mobile-license",
+    "title": "MobileAgent MIT License",
+    "path": "sources/library/v1-gui-mobile-license/README.md",
+    "topic_ids": [
+      "mobile-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-mobile-requirements",
+    "title": "Mobile-Agent-v2 依赖清单",
+    "path": "sources/library/v1-gui-mobile-requirements/README.md",
+    "topic_ids": [
+      "mobile-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-paper-app-agent",
+    "title": "AppAgent: Multimodal Agents as Smartphone Users",
+    "path": "sources/library/v1-gui-paper-app-agent/README.md",
+    "topic_ids": [
+      "app-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-app-readme",
+    "title": "TencentQQGYLab AppAgent 官方说明",
+    "path": "sources/library/v1-gui-app-readme/README.md",
+    "topic_ids": [
+      "app-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-app-controller",
+    "title": "AppAgent Android控制与元素身份",
+    "path": "sources/library/v1-gui-app-controller/README.md",
+    "topic_ids": [
+      "app-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-app-explorer",
+    "title": "AppAgent 自主探索脚本",
+    "path": "sources/library/v1-gui-app-explorer/README.md",
+    "topic_ids": [
+      "app-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-app-document",
+    "title": "AppAgent 示范文档生成脚本",
+    "path": "sources/library/v1-gui-app-document/README.md",
+    "topic_ids": [
+      "app-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-app-executor",
+    "title": "AppAgent 部署执行脚本",
+    "path": "sources/library/v1-gui-app-executor/README.md",
+    "topic_ids": [
+      "app-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-app-model",
+    "title": "AppAgent 响应解析函数",
+    "path": "sources/library/v1-gui-app-model/README.md",
+    "topic_ids": [
+      "app-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-app-utils",
+    "title": "AppAgent 网格绘制",
+    "path": "sources/library/v1-gui-app-utils/README.md",
+    "topic_ids": [
+      "app-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-app-prompts",
+    "title": "AppAgent 反思协议",
+    "path": "sources/library/v1-gui-app-prompts/README.md",
+    "topic_ids": [
+      "app-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-app-license",
+    "title": "AppAgent MIT License",
+    "path": "sources/library/v1-gui-app-license/README.md",
+    "topic_ids": [
+      "app-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-app-requirements",
+    "title": "AppAgent Python依赖清单",
+    "path": "sources/library/v1-gui-app-requirements/README.md",
+    "topic_ids": [
+      "app-agent"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-paper-ui-tars",
+    "title": "UI-TARS: Pioneering Automated GUI Interaction with Native Agents",
+    "path": "sources/library/v1-gui-paper-ui-tars/README.md",
+    "topic_ids": [
+      "ui-tars"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-ui-readme",
+    "title": "UI-TARS Desktop 官方仓库说明",
+    "path": "sources/library/v1-gui-ui-readme/README.md",
+    "topic_ids": [
+      "ui-tars"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-ui-host",
+    "title": "UI-TARS Desktop runAgent宿主装配",
+    "path": "sources/library/v1-gui-ui-host/README.md",
+    "topic_ids": [
+      "ui-tars"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-ui-operator-factory",
+    "title": "UI-TARS Electron本地Operator",
+    "path": "sources/library/v1-gui-ui-operator-factory/README.md",
+    "topic_ids": [
+      "ui-tars"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-ui-sdk",
+    "title": "UI-TARS SDK GUIAgent",
+    "path": "sources/library/v1-gui-ui-sdk/README.md",
+    "topic_ids": [
+      "ui-tars"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-ui-model",
+    "title": "UI-TARS SDK模型适配器",
+    "path": "sources/library/v1-gui-ui-model/README.md",
+    "topic_ids": [
+      "ui-tars"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-ui-parser",
+    "title": "UI-TARS动作文本解析器",
+    "path": "sources/library/v1-gui-ui-parser/README.md",
+    "topic_ids": [
+      "ui-tars"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-ui-utils",
+    "title": "UI-TARS SDK坐标与图像窗口工具",
+    "path": "sources/library/v1-gui-ui-utils/README.md",
+    "topic_ids": [
+      "ui-tars"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-ui-sdk-constants",
+    "title": "UI-TARS SDK默认因子",
+    "path": "sources/library/v1-gui-ui-sdk-constants/README.md",
+    "topic_ids": [
+      "ui-tars"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-ui-nutjs",
+    "title": "UI-TARS NutJS动作执行器",
+    "path": "sources/library/v1-gui-ui-nutjs/README.md",
+    "topic_ids": [
+      "ui-tars"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-ui-sdk-readme",
+    "title": "UI-TARS SDK使用文档",
+    "path": "sources/library/v1-gui-ui-sdk-readme/README.md",
+    "topic_ids": [
+      "ui-tars"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-ui-sdk-package",
+    "title": "UI-TARS SDK包清单",
+    "path": "sources/library/v1-gui-ui-sdk-package/README.md",
+    "topic_ids": [
+      "ui-tars"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-ui-nutjs-package",
+    "title": "UI-TARS NutJS包清单",
+    "path": "sources/library/v1-gui-ui-nutjs-package/README.md",
+    "topic_ids": [
+      "ui-tars"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-ui-host-package",
+    "title": "UI-TARS Desktop包清单",
+    "path": "sources/library/v1-gui-ui-host-package/README.md",
+    "topic_ids": [
+      "ui-tars"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-gui-ui-license",
+    "title": "UI-TARS Desktop Apache-2.0许可",
+    "path": "sources/library/v1-gui-ui-license/README.md",
+    "topic_ids": [
+      "ui-tars"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-cx-readme",
+    "title": "Codex CLI 仓库说明",
+    "path": "sources/library/v1-harnesscase-cx-readme/README.md",
+    "topic_ids": [],
+    "module_ids": [],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-cx-license",
+    "title": "Codex Apache-2.0 许可",
+    "path": "sources/library/v1-harnesscase-cx-license/README.md",
+    "topic_ids": [],
+    "module_ids": [],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-cx-core-doc",
+    "title": "codex-core 开发说明",
+    "path": "sources/library/v1-harnesscase-cx-core-doc/README.md",
+    "topic_ids": [
+      "codex-cli"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-cx-tools-doc",
+    "title": "codex-tools 开发说明",
+    "path": "sources/library/v1-harnesscase-cx-tools-doc/README.md",
+    "topic_ids": [
+      "codex-cli"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-cx-cli",
+    "title": "Codex cli_main 入口分派",
+    "path": "sources/library/v1-harnesscase-cx-cli/README.md",
+    "topic_ids": [
+      "codex-cli"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-cx-exec-front",
+    "title": "Codex run_main 与 run_exec_session",
+    "path": "sources/library/v1-harnesscase-cx-exec-front/README.md",
+    "topic_ids": [
+      "codex-cli"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-cx-router",
+    "title": "Codex ToolRouter 工具调用构造",
+    "path": "sources/library/v1-harnesscase-cx-router/README.md",
+    "topic_ids": [
+      "codex-cli"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-cx-registry",
+    "title": "Codex ToolRegistry 调度",
+    "path": "sources/library/v1-harnesscase-cx-registry/README.md",
+    "topic_ids": [
+      "codex-cli"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-cx-orchestrator",
+    "title": "Codex ToolOrchestrator 执行前策略",
+    "path": "sources/library/v1-harnesscase-cx-orchestrator/README.md",
+    "topic_ids": [
+      "codex-cli"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-cx-exec-process",
+    "title": "Codex 进程执行与输出回收",
+    "path": "sources/library/v1-harnesscase-cx-exec-process/README.md",
+    "topic_ids": [
+      "codex-cli"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-cc-readme",
+    "title": "Claude Code 公开仓库说明",
+    "path": "sources/library/v1-harnesscase-cc-readme/README.md",
+    "topic_ids": [],
+    "module_ids": [],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-cc-license",
+    "title": "Claude Code 仓库许可",
+    "path": "sources/library/v1-harnesscase-cc-license/README.md",
+    "topic_ids": [],
+    "module_ids": [],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-sdk-readme",
+    "title": "Claude Agent SDK Python 官方说明",
+    "path": "sources/library/v1-harnesscase-sdk-readme/README.md",
+    "topic_ids": [
+      "claude-code"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-sdk-license",
+    "title": "Claude Agent SDK Python MIT许可",
+    "path": "sources/library/v1-harnesscase-sdk-license/README.md",
+    "topic_ids": [],
+    "module_ids": [],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-sdk-transport",
+    "title": "Claude SDK SubprocessCLITransport",
+    "path": "sources/library/v1-harnesscase-sdk-transport/README.md",
+    "topic_ids": [
+      "claude-code"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-sdk-client",
+    "title": "ClaudeSDKClient 查询与响应流",
+    "path": "sources/library/v1-harnesscase-sdk-client/README.md",
+    "topic_ids": [
+      "claude-code"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-sdk-control",
+    "title": "Claude SDK 控制请求分发",
+    "path": "sources/library/v1-harnesscase-sdk-control/README.md",
+    "topic_ids": [
+      "claude-code"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-sdk-mcp",
+    "title": "Claude SDK 进程内MCP工具",
+    "path": "sources/library/v1-harnesscase-sdk-mcp/README.md",
+    "topic_ids": [
+      "claude-code"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-cc-hooks",
+    "title": "Claude Code Hooks 官方参考",
+    "path": "sources/library/v1-harnesscase-cc-hooks/README.md",
+    "topic_ids": [
+      "claude-code"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-cc-workflow",
+    "title": "How Claude Code works",
+    "path": "sources/library/v1-harnesscase-cc-workflow/README.md",
+    "topic_ids": [
+      "claude-code"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-lg-readme",
+    "title": "LangGraph 官方仓库说明",
+    "path": "sources/library/v1-harnesscase-lg-readme/README.md",
+    "topic_ids": [
+      "langgraph"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-lg-license",
+    "title": "LangGraph MIT许可",
+    "path": "sources/library/v1-harnesscase-lg-license/README.md",
+    "topic_ids": [],
+    "module_ids": [],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-lg-algo",
+    "title": "LangGraph apply_writes",
+    "path": "sources/library/v1-harnesscase-lg-algo/README.md",
+    "topic_ids": [
+      "langgraph"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-lg-loop",
+    "title": "LangGraph PregelLoop",
+    "path": "sources/library/v1-harnesscase-lg-loop/README.md",
+    "topic_ids": [
+      "langgraph"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-lg-last",
+    "title": "LangGraph LastValue.update",
+    "path": "sources/library/v1-harnesscase-lg-last/README.md",
+    "topic_ids": [
+      "langgraph"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-lg-binop",
+    "title": "LangGraph BinaryOperatorAggregate.update",
+    "path": "sources/library/v1-harnesscase-lg-binop/README.md",
+    "topic_ids": [
+      "langgraph"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-lg-saver",
+    "title": "LangGraph InMemorySaver",
+    "path": "sources/library/v1-harnesscase-lg-saver/README.md",
+    "topic_ids": [
+      "langgraph"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-lg-interrupt",
+    "title": "LangGraph interrupt",
+    "path": "sources/library/v1-harnesscase-lg-interrupt/README.md",
+    "topic_ids": [
+      "langgraph"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-lg-persist-doc",
+    "title": "LangGraph Persistence 官方文档",
+    "path": "sources/library/v1-harnesscase-lg-persist-doc/README.md",
+    "topic_ids": [
+      "langgraph"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-lg-interrupt-doc",
+    "title": "LangGraph Interrupts 官方文档",
+    "path": "sources/library/v1-harnesscase-lg-interrupt-doc/README.md",
+    "topic_ids": [
+      "langgraph"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-ag-readme",
+    "title": "AutoGen 官方仓库说明",
+    "path": "sources/library/v1-harnesscase-ag-readme/README.md",
+    "topic_ids": [
+      "autogen"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-ag-license",
+    "title": "AutoGen 代码MIT许可",
+    "path": "sources/library/v1-harnesscase-ag-license/README.md",
+    "topic_ids": [],
+    "module_ids": [],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-ag-team",
+    "title": "AutoGen BaseGroupChat 运行和存档",
+    "path": "sources/library/v1-harnesscase-ag-team/README.md",
+    "topic_ids": [
+      "autogen"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-ag-manager",
+    "title": "AutoGen BaseGroupChatManager",
+    "path": "sources/library/v1-harnesscase-ag-manager/README.md",
+    "topic_ids": [
+      "autogen"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-ag-round",
+    "title": "AutoGen RoundRobinGroupChatManager",
+    "path": "sources/library/v1-harnesscase-ag-round/README.md",
+    "topic_ids": [
+      "autogen"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-ag-term",
+    "title": "AutoGen 消息数与文本终止",
+    "path": "sources/library/v1-harnesscase-ag-term/README.md",
+    "topic_ids": [
+      "autogen"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-ag-compose",
+    "title": "AutoGen AND与OR终止组合",
+    "path": "sources/library/v1-harnesscase-ag-compose/README.md",
+    "topic_ids": [
+      "autogen"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-harnesscase-ag-doc",
+    "title": "AutoGen Termination 官方教程",
+    "path": "sources/library/v1-harnesscase-ag-doc/README.md",
+    "topic_ids": [
+      "autogen"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-math-paper-transformer",
+    "title": "Attention Is All You Need",
+    "path": "sources/library/v1-math-paper-transformer/README.md",
+    "topic_ids": [
+      "ffn-norm",
+      "position",
+      "pretraining",
+      "transformer"
+    ],
+    "module_ids": [
+      "network",
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-math-nano-model",
+    "title": "nanoGPT model.py",
+    "path": "sources/library/v1-math-nano-model/README.md",
+    "topic_ids": [
+      "ffn-norm",
+      "pretraining",
+      "transformer"
+    ],
+    "module_ids": [
+      "network",
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-math-llama",
+    "title": "Transformers Llama 模型实现",
+    "path": "sources/library/v1-math-llama/README.md",
+    "topic_ids": [
+      "attention-heads",
+      "ffn-norm",
+      "position"
+    ],
+    "module_ids": [
+      "network"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-math-doc-sdpa",
+    "title": "PyTorch 2.14 scaled_dot_product_attention",
+    "path": "sources/library/v1-math-doc-sdpa/README.md",
+    "topic_ids": [
+      "attention-heads",
+      "transformer"
+    ],
+    "module_ids": [
+      "network"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-math-paper-gqa",
+    "title": "GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints",
+    "path": "sources/library/v1-math-paper-gqa/README.md",
+    "topic_ids": [
+      "attention-heads"
+    ],
+    "module_ids": [
+      "network"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-math-paper-rope",
+    "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding",
+    "path": "sources/library/v1-math-paper-rope/README.md",
+    "topic_ids": [
+      "position"
+    ],
+    "module_ids": [
+      "network"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-math-rope-utils",
+    "title": "Transformers RoPE 参数实现",
+    "path": "sources/library/v1-math-rope-utils/README.md",
+    "topic_ids": [
+      "position"
+    ],
+    "module_ids": [
+      "network"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-math-paper-llama",
+    "title": "LLaMA: Open and Efficient Foundation Language Models",
+    "path": "sources/library/v1-math-paper-llama/README.md",
+    "topic_ids": [
+      "ffn-norm",
+      "pretraining"
+    ],
+    "module_ids": [
+      "network",
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-math-paper-swiglu",
+    "title": "GLU Variants Improve Transformer",
+    "path": "sources/library/v1-math-paper-swiglu/README.md",
+    "topic_ids": [
+      "ffn-norm"
+    ],
+    "module_ids": [
+      "network"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-math-paper-rmsnorm",
+    "title": "Root Mean Square Layer Normalization",
+    "path": "sources/library/v1-math-paper-rmsnorm/README.md",
+    "topic_ids": [
+      "ffn-norm"
+    ],
+    "module_ids": [
+      "network"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-math-nano-train",
+    "title": "nanoGPT train.py",
+    "path": "sources/library/v1-math-nano-train/README.md",
+    "topic_ids": [
+      "pretraining"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-math-nano-data",
+    "title": "nanoGPT OpenWebText 准备脚本",
+    "path": "sources/library/v1-math-nano-data/README.md",
+    "topic_ids": [
+      "pretraining"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-math-loss-utils",
+    "title": "Transformers 因果语言模型损失",
+    "path": "sources/library/v1-math-loss-utils/README.md",
+    "topic_ids": [
+      "pretraining",
+      "sft"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-math-doc-ce",
+    "title": "PyTorch 2.14 CrossEntropyLoss",
+    "path": "sources/library/v1-math-doc-ce/README.md",
+    "topic_ids": [
+      "pretraining"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-math-paper-instructgpt",
+    "title": "Training language models to follow instructions with human feedback",
+    "path": "sources/library/v1-math-paper-instructgpt/README.md",
+    "topic_ids": [
+      "sft"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-math-paper-lora",
+    "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+    "path": "sources/library/v1-math-paper-lora/README.md",
+    "topic_ids": [
+      "sft"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-math-peft-lora",
+    "title": "PEFT LoRA 层实现",
+    "path": "sources/library/v1-math-peft-lora/README.md",
+    "topic_ids": [
+      "sft"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-math-trl-sft",
+    "title": "TRL SFTTrainer 与文本collator",
+    "path": "sources/library/v1-math-trl-sft/README.md",
+    "topic_ids": [
+      "sft"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-math-paper-dpo",
+    "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+    "path": "sources/library/v1-math-paper-dpo/README.md",
+    "topic_ids": [
+      "preference"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-math-trl-dpo",
+    "title": "TRL DPOTrainer 实现",
+    "path": "sources/library/v1-math-trl-dpo/README.md",
+    "topic_ids": [
+      "preference"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-math-trl-dpo-doc",
+    "title": "TRL DPO Trainer 文档",
+    "path": "sources/library/v1-math-trl-dpo-doc/README.md",
+    "topic_ids": [
+      "preference"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-math-paper-grpo",
+    "title": "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models",
+    "path": "sources/library/v1-math-paper-grpo/README.md",
+    "topic_ids": [
+      "policy-optimization"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-math-trl-grpo",
+    "title": "TRL GRPOTrainer 实现",
+    "path": "sources/library/v1-math-trl-grpo/README.md",
+    "topic_ids": [
+      "policy-optimization"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-math-trl-utils",
+    "title": "TRL trainer utils nanstd",
+    "path": "sources/library/v1-math-trl-utils/README.md",
+    "topic_ids": [
+      "policy-optimization"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-math-trl-grpo-doc",
+    "title": "TRL GRPO Trainer 文档",
+    "path": "sources/library/v1-math-trl-grpo-doc/README.md",
+    "topic_ids": [
+      "policy-optimization"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-bench-serve",
+    "title": "vllm/benchmarks/serve.py",
+    "path": "sources/library/v1-systems-bench-serve/README.md",
+    "topic_ids": [
+      "inference-frameworks",
+      "prefill-decode"
+    ],
+    "module_ids": [
+      "inference"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-cache-doc",
+    "title": "Transformers Caching",
+    "path": "sources/library/v1-systems-cache-doc/README.md",
+    "topic_ids": [
+      "kv-cache",
+      "prefill-decode"
+    ],
+    "module_ids": [
+      "inference"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-llama-code",
+    "title": "src/transformers/models/llama/modeling_llama.py",
+    "path": "sources/library/v1-systems-llama-code/README.md",
+    "topic_ids": [
+      "kv-cache",
+      "prefill-decode"
+    ],
+    "module_ids": [
+      "inference"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-optim-doc",
+    "title": "docs/configuration/optimization.md",
+    "path": "sources/library/v1-systems-optim-doc/README.md",
+    "topic_ids": [
+      "cache-scheduling",
+      "inference-frameworks",
+      "prefill-decode"
+    ],
+    "module_ids": [
+      "inference"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-paged-paper",
+    "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+    "path": "sources/library/v1-systems-paged-paper/README.md",
+    "topic_ids": [
+      "cache-scheduling",
+      "kv-cache",
+      "prefill-decode"
+    ],
+    "module_ids": [
+      "inference"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-scheduler",
+    "title": "vllm/v1/core/sched/scheduler.py",
+    "path": "sources/library/v1-systems-scheduler/README.md",
+    "topic_ids": [
+      "cache-scheduling",
+      "prefill-decode"
+    ],
+    "module_ids": [
+      "inference"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-cache-code",
+    "title": "src/transformers/cache_utils.py",
+    "path": "sources/library/v1-systems-cache-code/README.md",
+    "topic_ids": [
+      "kv-cache"
+    ],
+    "module_ids": [
+      "inference"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-kv-manager",
+    "title": "vllm/v1/core/kv_cache_manager.py",
+    "path": "sources/library/v1-systems-kv-manager/README.md",
+    "topic_ids": [
+      "cache-scheduling",
+      "kv-cache"
+    ],
+    "module_ids": [
+      "inference"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-kv-utils",
+    "title": "vllm/v1/core/kv_cache_utils.py",
+    "path": "sources/library/v1-systems-kv-utils/README.md",
+    "topic_ids": [
+      "cache-scheduling",
+      "kv-cache"
+    ],
+    "module_ids": [
+      "inference"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-prefix-doc",
+    "title": "docs/design/prefix_caching.md",
+    "path": "sources/library/v1-systems-prefix-doc/README.md",
+    "topic_ids": [
+      "cache-scheduling",
+      "kv-cache"
+    ],
+    "module_ids": [
+      "inference"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-block-pool",
+    "title": "vllm/v1/core/block_pool.py",
+    "path": "sources/library/v1-systems-block-pool/README.md",
+    "topic_ids": [
+      "cache-scheduling"
+    ],
+    "module_ids": [
+      "inference"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-radix",
+    "title": "python/sglang/srt/mem_cache/radix_cache.py",
+    "path": "sources/library/v1-systems-radix/README.md",
+    "topic_ids": [
+      "cache-scheduling"
+    ],
+    "module_ids": [
+      "inference"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-sglang-paper",
+    "title": "SGLang: Efficient Execution of Structured Language Model Programs",
+    "path": "sources/library/v1-systems-sglang-paper/README.md",
+    "topic_ids": [
+      "cache-scheduling",
+      "inference-frameworks"
+    ],
+    "module_ids": [
+      "inference"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-distserve-paper",
+    "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving",
+    "path": "sources/library/v1-systems-distserve-paper/README.md",
+    "topic_ids": [
+      "inference-frameworks"
+    ],
+    "module_ids": [
+      "inference"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-gr-local-doc",
+    "title": "docs/query/local_search.md",
+    "path": "sources/library/v1-systems-gr-local-doc/README.md",
+    "topic_ids": [
+      "graph-wiki",
+      "rag"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-light-operate",
+    "title": "lightrag/operate.py",
+    "path": "sources/library/v1-systems-light-operate/README.md",
+    "topic_ids": [
+      "graph-wiki",
+      "ingestion",
+      "rag"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-light-utils",
+    "title": "lightrag/utils.py",
+    "path": "sources/library/v1-systems-light-utils/README.md",
+    "topic_ids": [
+      "hybrid-search",
+      "rag"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-rag-code",
+    "title": "src/transformers/models/rag/modeling_rag.py",
+    "path": "sources/library/v1-systems-rag-code/README.md",
+    "topic_ids": [
+      "rag"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-rag-paper",
+    "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+    "path": "sources/library/v1-systems-rag-paper/README.md",
+    "topic_ids": [
+      "hybrid-search",
+      "ingestion",
+      "rag"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-gr-delta",
+    "title": "packages/graphrag/graphrag/index/update/incremental_index.py",
+    "path": "sources/library/v1-systems-gr-delta/README.md",
+    "topic_ids": [
+      "ingestion"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-gr-update",
+    "title": "packages/graphrag/graphrag/index/workflows/load_update_documents.py",
+    "path": "sources/library/v1-systems-gr-update/README.md",
+    "topic_ids": [
+      "ingestion"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-light-core",
+    "title": "lightrag/lightrag.py",
+    "path": "sources/library/v1-systems-light-core/README.md",
+    "topic_ids": [
+      "ingestion"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-light-paper",
+    "title": "LightRAG: Simple and Fast Retrieval-Augmented Generation",
+    "path": "sources/library/v1-systems-light-paper/README.md",
+    "topic_ids": [
+      "graph-wiki",
+      "ingestion"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-light-purge-doc",
+    "title": "docs/design/PurgeRecoveryContract.md",
+    "path": "sources/library/v1-systems-light-purge-doc/README.md",
+    "topic_ids": [
+      "ingestion"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-bm25-code",
+    "title": "lucene/core/src/java/org/apache/lucene/search/similarities/BM25Similarity.java",
+    "path": "sources/library/v1-systems-bm25-code/README.md",
+    "topic_ids": [
+      "hybrid-search"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-bm25-doc",
+    "title": "Lucene BM25Similarity 官方API",
+    "path": "sources/library/v1-systems-bm25-doc/README.md",
+    "topic_ids": [
+      "hybrid-search"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-qmd-doc",
+    "title": "README.md",
+    "path": "sources/library/v1-systems-qmd-doc/README.md",
+    "topic_ids": [
+      "hybrid-search"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-qmd-store",
+    "title": "src/store.ts",
+    "path": "sources/library/v1-systems-qmd-store/README.md",
+    "topic_ids": [
+      "hybrid-search"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-rrf-paper",
+    "title": "Reciprocal Rank Fusion outperforms Condorcet and individual Rank Learning Methods",
+    "path": "sources/library/v1-systems-rrf-paper/README.md",
+    "topic_ids": [
+      "hybrid-search"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "failed"
+  },
+  {
+    "id": "v1-systems-global-query",
+    "title": "packages/graphrag/graphrag/query/structured_search/global_search/search.py",
+    "path": "sources/library/v1-systems-global-query/README.md",
+    "topic_ids": [
+      "graph-wiki"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-gr-global-doc",
+    "title": "docs/query/global_search.md",
+    "path": "sources/library/v1-systems-gr-global-doc/README.md",
+    "topic_ids": [
+      "graph-wiki"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-graph-paper",
+    "title": "From Local to Global: A Graph RAG Approach to Query-Focused Summarization",
+    "path": "sources/library/v1-systems-graph-paper/README.md",
+    "topic_ids": [
+      "graph-wiki"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-local-query",
+    "title": "packages/graphrag/graphrag/query/structured_search/local_search/mixed_context.py",
+    "path": "sources/library/v1-systems-local-query/README.md",
+    "topic_ids": [
+      "graph-wiki"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-wiki-architecture",
+    "title": "ARCHITECTURE.md",
+    "path": "sources/library/v1-systems-wiki-architecture/README.md",
+    "topic_ids": [
+      "graph-wiki"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-wiki-backlinks",
+    "title": "packages/core/src/backlinks.ts",
+    "path": "sources/library/v1-systems-wiki-backlinks/README.md",
+    "topic_ids": [
+      "graph-wiki"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "v1-systems-wiki-doc",
+    "title": "README.md",
+    "path": "sources/library/v1-systems-wiki-doc/README.md",
+    "topic_ids": [
+      "graph-wiki"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-paper-network-mose",
+    "title": "MoSE: Mixture of Slimmable Experts for Efficient and Adaptive Language Models",
+    "path": "sources/library/2026-paper-network-mose/README.md",
+    "topic_ids": [
+      "attention-heads",
+      "ffn-norm",
+      "position",
+      "transformer"
+    ],
+    "module_ids": [
+      "network"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-full-network-mose",
+    "title": "MoSE: Mixture of Slimmable Experts for Efficient and Adaptive Language Models：作者论文全文",
+    "path": "sources/library/2026-full-network-mose/README.md",
+    "topic_ids": [
+      "attention-heads",
+      "ffn-norm",
+      "position",
+      "transformer"
+    ],
+    "module_ids": [
+      "network"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-paper-network-robsa",
+    "title": "RoBSA: RoPE-based Blockwise Sparse Multi-head Latent Attention",
+    "path": "sources/library/2026-paper-network-robsa/README.md",
+    "topic_ids": [
+      "attention-heads",
+      "ffn-norm",
+      "position",
+      "transformer"
+    ],
+    "module_ids": [
+      "network"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-full-network-robsa",
+    "title": "RoBSA: RoPE-based Blockwise Sparse Multi-head Latent Attention：会议论文正文",
+    "path": "sources/library/2026-full-network-robsa/README.md",
+    "topic_ids": [
+      "attention-heads",
+      "ffn-norm",
+      "position",
+      "transformer"
+    ],
+    "module_ids": [
+      "network"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-paper-training-grpo",
+    "title": "Reinforcement Learning with Verifiable Rewards: GRPO’s Loss, Dynamics, and Success Amplification",
+    "path": "sources/library/2026-paper-training-grpo/README.md",
+    "topic_ids": [
+      "policy-optimization",
+      "preference",
+      "pretraining",
+      "sft"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-paper-training-polarity",
+    "title": "Rethinking Sample Polarity in Reinforcement Learning with Verifiable Rewards",
+    "path": "sources/library/2026-paper-training-polarity/README.md",
+    "topic_ids": [
+      "policy-optimization",
+      "preference",
+      "pretraining",
+      "sft"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-full-training-polarity",
+    "title": "Rethinking Sample Polarity in Reinforcement Learning with Verifiable Rewards：会议论文正文",
+    "path": "sources/library/2026-full-training-polarity/README.md",
+    "topic_ids": [
+      "policy-optimization",
+      "preference",
+      "pretraining",
+      "sft"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-paper-inference-eviction",
+    "title": "Rethinking KV Cache Eviction via a Unified Information-Theoretic Objective",
+    "path": "sources/library/2026-paper-inference-eviction/README.md",
+    "topic_ids": [
+      "cache-scheduling",
+      "inference-frameworks",
+      "kv-cache",
+      "prefill-decode"
+    ],
+    "module_ids": [
+      "inference"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-paper-inference-longspec",
+    "title": "LongSpec: Long-Context Lossless Speculative Decoding with Efficient Drafting and Verification",
+    "path": "sources/library/2026-paper-inference-longspec/README.md",
+    "topic_ids": [
+      "cache-scheduling",
+      "inference-frameworks",
+      "kv-cache",
+      "prefill-decode"
+    ],
+    "module_ids": [
+      "inference"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-full-inference-longspec",
+    "title": "LongSpec: Long-Context Lossless Speculative Decoding with Efficient Drafting and Verification：会议论文正文",
+    "path": "sources/library/2026-full-inference-longspec/README.md",
+    "topic_ids": [
+      "cache-scheduling",
+      "inference-frameworks",
+      "kv-cache",
+      "prefill-decode"
+    ],
+    "module_ids": [
+      "inference"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-paper-harness-retrac",
+    "title": "RE-TRAC: REcursive TRAjectory Compression for Deep Search Agents",
+    "path": "sources/library/2026-paper-harness-retrac/README.md",
+    "topic_ids": [
+      "agent-loop",
+      "autogen",
+      "context",
+      "langgraph",
+      "memory",
+      "tools-skills"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-full-harness-retrac",
+    "title": "RE-TRAC: REcursive TRAjectory Compression for Deep Search Agents：作者论文全文",
+    "path": "sources/library/2026-full-harness-retrac/README.md",
+    "topic_ids": [
+      "agent-loop",
+      "autogen",
+      "context",
+      "langgraph",
+      "memory",
+      "tools-skills"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-paper-harness-memory",
+    "title": "How Memory Management Impacts LLM Agents: An Empirical Study of Experience-Following Behavior",
+    "path": "sources/library/2026-paper-harness-memory/README.md",
+    "topic_ids": [
+      "agent-loop",
+      "autogen",
+      "context",
+      "langgraph",
+      "memory",
+      "tools-skills"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-paper-knowledge-crag",
+    "title": "From Extraction to Deduction: Resolving Functional Misalignment in RAG via a Collaborative Critic-Reasoner Framework",
+    "path": "sources/library/2026-paper-knowledge-crag/README.md",
+    "topic_ids": [
+      "graph-wiki",
+      "hybrid-search",
+      "ingestion",
+      "rag"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-paper-knowledge-reasonembed",
+    "title": "ReasonEmbed: Enhanced Text Embeddings for Reasoning-Intensive Document Retrieval",
+    "path": "sources/library/2026-paper-knowledge-reasonembed/README.md",
+    "topic_ids": [
+      "graph-wiki",
+      "hybrid-search",
+      "ingestion",
+      "rag"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-full-knowledge-reasonembed",
+    "title": "ReasonEmbed: Enhanced Text Embeddings for Reasoning-Intensive Document Retrieval：会议论文正文",
+    "path": "sources/library/2026-full-knowledge-reasonembed/README.md",
+    "topic_ids": [
+      "graph-wiki",
+      "hybrid-search",
+      "ingestion",
+      "rag"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-paper-agents-subtask",
+    "title": "Structurally Aligned Subtask-Level Memory for Software Engineering Agents",
+    "path": "sources/library/2026-paper-agents-subtask/README.md",
+    "topic_ids": [
+      "agent-evaluation",
+      "aider",
+      "app-agent",
+      "claude-code",
+      "codex-cli",
+      "coding-agent",
+      "gui-agent",
+      "mobile-agent",
+      "openhands",
+      "swe-agent",
+      "task-loop",
+      "ui-tars"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-paper-agents-webstar",
+    "title": "WebSTAR: Scalable Data Synthesis for Computer Use Agents with Step-Level Filtering",
+    "path": "sources/library/2026-paper-agents-webstar/README.md",
+    "topic_ids": [
+      "agent-evaluation",
+      "aider",
+      "app-agent",
+      "claude-code",
+      "codex-cli",
+      "coding-agent",
+      "gui-agent",
+      "mobile-agent",
+      "openhands",
+      "swe-agent",
+      "task-loop",
+      "ui-tars"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-full-agents-webstar",
+    "title": "WebSTAR: Scalable Data Synthesis for Computer Use Agents with Step-Level Filtering：会议论文正文",
+    "path": "sources/library/2026-full-agents-webstar/README.md",
+    "topic_ids": [
+      "agent-evaluation",
+      "aider",
+      "app-agent",
+      "claude-code",
+      "codex-cli",
+      "coding-agent",
+      "gui-agent",
+      "mobile-agent",
+      "openhands",
+      "swe-agent",
+      "task-loop",
+      "ui-tars"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-paper-benchmark-saturation",
+    "title": "When AI Benchmarks Plateau: A Systematic Study of Benchmark Saturation",
+    "path": "sources/library/2026-paper-benchmark-saturation/README.md",
+    "topic_ids": [
+      "benchmark-agents",
+      "benchmark-contamination",
+      "benchmark-general",
+      "benchmark-judge",
+      "benchmark-metrics",
+      "benchmark-multimodal",
+      "benchmark-protocol",
+      "benchmark-rag",
+      "benchmark-reasoning-code",
+      "benchmark-robustness",
+      "benchmark-systems"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-paper-benchmark-conflicts",
+    "title": "Benchmarking LLM’s Capability in Reasoning over Conflicting Web References",
+    "path": "sources/library/2026-paper-benchmark-conflicts/README.md",
+    "topic_ids": [
+      "benchmark-agents",
+      "benchmark-contamination",
+      "benchmark-general",
+      "benchmark-judge",
+      "benchmark-metrics",
+      "benchmark-multimodal",
+      "benchmark-protocol",
+      "benchmark-rag",
+      "benchmark-reasoning-code",
+      "benchmark-robustness",
+      "benchmark-systems"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-full-benchmark-conflicts",
+    "title": "Benchmarking LLM’s Capability in Reasoning over Conflicting Web References：会议论文正文",
+    "path": "sources/library/2026-full-benchmark-conflicts/README.md",
+    "topic_ids": [
+      "benchmark-agents",
+      "benchmark-contamination",
+      "benchmark-general",
+      "benchmark-judge",
+      "benchmark-metrics",
+      "benchmark-multimodal",
+      "benchmark-protocol",
+      "benchmark-rag",
+      "benchmark-reasoning-code",
+      "benchmark-robustness",
+      "benchmark-systems"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-repo-agents-codex",
+    "title": "openai/codex：固定提交项目说明",
+    "path": "sources/library/2026-repo-agents-codex/README.md",
+    "topic_ids": [
+      "agent-evaluation",
+      "aider",
+      "app-agent",
+      "claude-code",
+      "codex-cli",
+      "coding-agent",
+      "gui-agent",
+      "mobile-agent",
+      "openhands",
+      "swe-agent",
+      "task-loop",
+      "ui-tars"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-release-agents-codex",
+    "title": "openai/codex：rust-v0.164.0发布说明",
+    "path": "sources/library/2026-release-agents-codex/README.md",
+    "topic_ids": [
+      "agent-evaluation",
+      "aider",
+      "app-agent",
+      "claude-code",
+      "codex-cli",
+      "coding-agent",
+      "gui-agent",
+      "mobile-agent",
+      "openhands",
+      "swe-agent",
+      "task-loop",
+      "ui-tars"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-code-agents-codex",
+    "title": "openai/codex：codex-rs/core/src/compact.rs",
+    "path": "sources/library/2026-code-agents-codex/README.md",
+    "topic_ids": [
+      "agent-evaluation",
+      "aider",
+      "app-agent",
+      "claude-code",
+      "codex-cli",
+      "coding-agent",
+      "gui-agent",
+      "mobile-agent",
+      "openhands",
+      "swe-agent",
+      "task-loop",
+      "ui-tars"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-repo-agents-uitars",
+    "title": "bytedance/UI-TARS-desktop：固定提交项目说明",
+    "path": "sources/library/2026-repo-agents-uitars/README.md",
+    "topic_ids": [
+      "agent-evaluation",
+      "aider",
+      "app-agent",
+      "claude-code",
+      "codex-cli",
+      "coding-agent",
+      "gui-agent",
+      "mobile-agent",
+      "openhands",
+      "swe-agent",
+      "task-loop",
+      "ui-tars"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-release-agents-uitars",
+    "title": "bytedance/UI-TARS-desktop：v0.3.1发布说明",
+    "path": "sources/library/2026-release-agents-uitars/README.md",
+    "topic_ids": [
+      "agent-evaluation",
+      "aider",
+      "app-agent",
+      "claude-code",
+      "codex-cli",
+      "coding-agent",
+      "gui-agent",
+      "mobile-agent",
+      "openhands",
+      "swe-agent",
+      "task-loop",
+      "ui-tars"
+    ],
+    "module_ids": [
+      "agents"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-repo-benchmark-harness",
+    "title": "EleutherAI/lm-evaluation-harness：固定提交项目说明",
+    "path": "sources/library/2026-repo-benchmark-harness/README.md",
+    "topic_ids": [
+      "benchmark-agents",
+      "benchmark-contamination",
+      "benchmark-general",
+      "benchmark-judge",
+      "benchmark-metrics",
+      "benchmark-multimodal",
+      "benchmark-protocol",
+      "benchmark-rag",
+      "benchmark-reasoning-code",
+      "benchmark-robustness",
+      "benchmark-systems"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-release-benchmark-harness",
+    "title": "EleutherAI/lm-evaluation-harness：v0.4.13发布说明",
+    "path": "sources/library/2026-release-benchmark-harness/README.md",
+    "topic_ids": [
+      "benchmark-agents",
+      "benchmark-contamination",
+      "benchmark-general",
+      "benchmark-judge",
+      "benchmark-metrics",
+      "benchmark-multimodal",
+      "benchmark-protocol",
+      "benchmark-rag",
+      "benchmark-reasoning-code",
+      "benchmark-robustness",
+      "benchmark-systems"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-code-benchmark-harness",
+    "title": "EleutherAI/lm-evaluation-harness：lm_eval/api/samplers.py",
+    "path": "sources/library/2026-code-benchmark-harness/README.md",
+    "topic_ids": [
+      "benchmark-agents",
+      "benchmark-contamination",
+      "benchmark-general",
+      "benchmark-judge",
+      "benchmark-metrics",
+      "benchmark-multimodal",
+      "benchmark-protocol",
+      "benchmark-rag",
+      "benchmark-reasoning-code",
+      "benchmark-robustness",
+      "benchmark-systems"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-repo-benchmark-lighteval",
+    "title": "huggingface/lighteval：固定提交项目说明",
+    "path": "sources/library/2026-repo-benchmark-lighteval/README.md",
+    "topic_ids": [
+      "benchmark-agents",
+      "benchmark-contamination",
+      "benchmark-general",
+      "benchmark-judge",
+      "benchmark-metrics",
+      "benchmark-multimodal",
+      "benchmark-protocol",
+      "benchmark-rag",
+      "benchmark-reasoning-code",
+      "benchmark-robustness",
+      "benchmark-systems"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-release-benchmark-lighteval",
+    "title": "huggingface/lighteval：v0.13.0发布说明",
+    "path": "sources/library/2026-release-benchmark-lighteval/README.md",
+    "topic_ids": [
+      "benchmark-agents",
+      "benchmark-contamination",
+      "benchmark-general",
+      "benchmark-judge",
+      "benchmark-metrics",
+      "benchmark-multimodal",
+      "benchmark-protocol",
+      "benchmark-rag",
+      "benchmark-reasoning-code",
+      "benchmark-robustness",
+      "benchmark-systems"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-code-benchmark-lighteval",
+    "title": "huggingface/lighteval：src/lighteval/tasks/lighteval_task.py",
+    "path": "sources/library/2026-code-benchmark-lighteval/README.md",
+    "topic_ids": [
+      "benchmark-agents",
+      "benchmark-contamination",
+      "benchmark-general",
+      "benchmark-judge",
+      "benchmark-metrics",
+      "benchmark-multimodal",
+      "benchmark-protocol",
+      "benchmark-rag",
+      "benchmark-reasoning-code",
+      "benchmark-robustness",
+      "benchmark-systems"
+    ],
+    "module_ids": [
+      "benchmark"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-repo-harness-agentframework",
+    "title": "microsoft/agent-framework：固定提交项目说明",
+    "path": "sources/library/2026-repo-harness-agentframework/README.md",
+    "topic_ids": [
+      "agent-loop",
+      "autogen",
+      "context",
+      "langgraph",
+      "memory",
+      "tools-skills"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-release-harness-agentframework",
+    "title": "microsoft/agent-framework：dotnet-1.26.0发布说明",
+    "path": "sources/library/2026-release-harness-agentframework/README.md",
+    "topic_ids": [
+      "agent-loop",
+      "autogen",
+      "context",
+      "langgraph",
+      "memory",
+      "tools-skills"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-repo-harness-langgraph",
+    "title": "langchain-ai/langgraph：固定提交项目说明",
+    "path": "sources/library/2026-repo-harness-langgraph/README.md",
+    "topic_ids": [
+      "agent-loop",
+      "autogen",
+      "context",
+      "langgraph",
+      "memory",
+      "tools-skills"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-release-harness-langgraph",
+    "title": "langchain-ai/langgraph：1.2.17发布说明",
+    "path": "sources/library/2026-release-harness-langgraph/README.md",
+    "topic_ids": [
+      "agent-loop",
+      "autogen",
+      "context",
+      "langgraph",
+      "memory",
+      "tools-skills"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-code-harness-langgraph",
+    "title": "langchain-ai/langgraph：libs/langgraph/langgraph/pregel/_loop.py",
+    "path": "sources/library/2026-code-harness-langgraph/README.md",
+    "topic_ids": [
+      "agent-loop",
+      "autogen",
+      "context",
+      "langgraph",
+      "memory",
+      "tools-skills"
+    ],
+    "module_ids": [
+      "harness"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-repo-inference-sglang",
+    "title": "sgl-project/sglang：固定提交项目说明",
+    "path": "sources/library/2026-repo-inference-sglang/README.md",
+    "topic_ids": [
+      "cache-scheduling",
+      "inference-frameworks",
+      "kv-cache",
+      "prefill-decode"
+    ],
+    "module_ids": [
+      "inference"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-release-inference-sglang",
+    "title": "sgl-project/sglang：v0.5.22发布说明",
+    "path": "sources/library/2026-release-inference-sglang/README.md",
+    "topic_ids": [
+      "cache-scheduling",
+      "inference-frameworks",
+      "kv-cache",
+      "prefill-decode"
+    ],
+    "module_ids": [
+      "inference"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-code-inference-sglang",
+    "title": "sgl-project/sglang：python/sglang/srt/mem_cache/radix_cache.py",
+    "path": "sources/library/2026-code-inference-sglang/README.md",
+    "topic_ids": [
+      "cache-scheduling",
+      "inference-frameworks",
+      "kv-cache",
+      "prefill-decode"
+    ],
+    "module_ids": [
+      "inference"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-repo-inference-tensorrt",
+    "title": "NVIDIA/TensorRT-LLM：固定提交项目说明",
+    "path": "sources/library/2026-repo-inference-tensorrt/README.md",
+    "topic_ids": [
+      "cache-scheduling",
+      "inference-frameworks",
+      "kv-cache",
+      "prefill-decode"
+    ],
+    "module_ids": [
+      "inference"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-release-inference-tensorrt",
+    "title": "NVIDIA/TensorRT-LLM：v1.2.1发布说明",
+    "path": "sources/library/2026-release-inference-tensorrt/README.md",
+    "topic_ids": [
+      "cache-scheduling",
+      "inference-frameworks",
+      "kv-cache",
+      "prefill-decode"
+    ],
+    "module_ids": [
+      "inference"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-repo-knowledge-graphrag",
+    "title": "microsoft/graphrag：固定提交项目说明",
+    "path": "sources/library/2026-repo-knowledge-graphrag/README.md",
+    "topic_ids": [
+      "graph-wiki",
+      "hybrid-search",
+      "ingestion",
+      "rag"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-release-knowledge-graphrag",
+    "title": "microsoft/graphrag：v3.3.0发布说明",
+    "path": "sources/library/2026-release-knowledge-graphrag/README.md",
+    "topic_ids": [
+      "graph-wiki",
+      "hybrid-search",
+      "ingestion",
+      "rag"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-repo-knowledge-ragflow",
+    "title": "infiniflow/ragflow：固定提交项目说明",
+    "path": "sources/library/2026-repo-knowledge-ragflow/README.md",
+    "topic_ids": [
+      "graph-wiki",
+      "hybrid-search",
+      "ingestion",
+      "rag"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-release-knowledge-ragflow",
+    "title": "infiniflow/ragflow：v1.0.0-rc2发布说明",
+    "path": "sources/library/2026-release-knowledge-ragflow/README.md",
+    "topic_ids": [
+      "graph-wiki",
+      "hybrid-search",
+      "ingestion",
+      "rag"
+    ],
+    "module_ids": [
+      "knowledge"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-repo-network-megatron",
+    "title": "NVIDIA/Megatron-LM：固定提交项目说明",
+    "path": "sources/library/2026-repo-network-megatron/README.md",
+    "topic_ids": [
+      "attention-heads",
+      "ffn-norm",
+      "position",
+      "transformer"
+    ],
+    "module_ids": [
+      "network"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-release-network-megatron",
+    "title": "NVIDIA/Megatron-LM：core_v0.19.2发布说明",
+    "path": "sources/library/2026-release-network-megatron/README.md",
+    "topic_ids": [
+      "attention-heads",
+      "ffn-norm",
+      "position",
+      "transformer"
+    ],
+    "module_ids": [
+      "network"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-code-network-megatron",
+    "title": "NVIDIA/Megatron-LM：megatron/core/transformer/moe/moe_layer.py",
+    "path": "sources/library/2026-code-network-megatron/README.md",
+    "topic_ids": [
+      "attention-heads",
+      "ffn-norm",
+      "position",
+      "transformer"
+    ],
+    "module_ids": [
+      "network"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-repo-network-transformers",
+    "title": "huggingface/transformers：固定提交项目说明",
+    "path": "sources/library/2026-repo-network-transformers/README.md",
+    "topic_ids": [
+      "attention-heads",
+      "ffn-norm",
+      "position",
+      "transformer"
+    ],
+    "module_ids": [
+      "network"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-release-network-transformers",
+    "title": "huggingface/transformers：v5.20.2发布说明",
+    "path": "sources/library/2026-release-network-transformers/README.md",
+    "topic_ids": [
+      "attention-heads",
+      "ffn-norm",
+      "position",
+      "transformer"
+    ],
+    "module_ids": [
+      "network"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-code-network-transformers",
+    "title": "huggingface/transformers：src/transformers/generation/utils.py",
+    "path": "sources/library/2026-code-network-transformers/README.md",
+    "topic_ids": [
+      "attention-heads",
+      "ffn-norm",
+      "position",
+      "transformer"
+    ],
+    "module_ids": [
+      "network"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-repo-training-trl",
+    "title": "huggingface/trl：固定提交项目说明",
+    "path": "sources/library/2026-repo-training-trl/README.md",
+    "topic_ids": [
+      "policy-optimization",
+      "preference",
+      "pretraining",
+      "sft"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-release-training-trl",
+    "title": "huggingface/trl：v1.16.0发布说明",
+    "path": "sources/library/2026-release-training-trl/README.md",
+    "topic_ids": [
+      "policy-optimization",
+      "preference",
+      "pretraining",
+      "sft"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-repo-training-verl",
+    "title": "volcengine/verl：固定提交项目说明",
+    "path": "sources/library/2026-repo-training-verl/README.md",
+    "topic_ids": [
+      "policy-optimization",
+      "preference",
+      "pretraining",
+      "sft"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-release-training-verl",
+    "title": "volcengine/verl：v0.9.1发布说明",
+    "path": "sources/library/2026-release-training-verl/README.md",
+    "topic_ids": [
+      "policy-optimization",
+      "preference",
+      "pretraining",
+      "sft"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  },
+  {
+    "id": "2026-code-training-verl",
+    "title": "volcengine/verl：verl/trainer/ppo/core_algos.py",
+    "path": "sources/library/2026-code-training-verl/README.md",
+    "topic_ids": [
+      "policy-optimization",
+      "preference",
+      "pretraining",
+      "sft"
+    ],
+    "module_ids": [
+      "training"
+    ],
+    "archive_status": "saved"
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-math-trl-dpo",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "148ae182814e8983409209bf3898397923cbdb67d4a195f2af3af36f895f9f4f",
+      "bytes": 103746,
+      "cache_file": "sources/.local/objects/148ae182814e8983409209bf3898397923cbdb67d4a195f2af3af36f895f9f4f.bin",
+      "requested_url": "https://raw.githubusercontent.com/huggingface/trl/1117c3b9c1632ee9814c30f6c9fc884b792a54e5/trl/trainer/dpo_trainer.py",
+      "resolved_url": "https://raw.githubusercontent.com/huggingface/trl/1117c3b9c1632ee9814c30f6c9fc884b792a54e5/trl/trainer/dpo_trainer.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:53.139377+00:00",
+      "declared_source_version": "text-sha256:148ae182814e8983409209bf3898397923cbdb67d4a195f2af3af36f895f9f4f",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:53.139377+00:00",
+    "status": "saved"
+  }
+}

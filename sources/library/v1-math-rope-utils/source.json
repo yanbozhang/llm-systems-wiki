@@ -1,0 +1,16 @@
+{
+  "id": "v1-math-rope-utils",
+  "title": "Transformers RoPE 参数实现",
+  "url": "https://github.com/huggingface/transformers/blob/50e35cc0ca18ec19b80653690de553e6decf74f5/src/transformers/modeling_rope_utils.py",
+  "version": "text-sha256:8b08f3f372207816eae420e7d33b982e44858dc9e4be7728d95f606b07c23fd0",
+  "native_version": "50e35cc0ca18ec19b80653690de553e6decf74f5",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "第133–190行的线性缩放函数，包括频率计算与factor处理",
+  "locator": "_compute_linear_scaling_rope_parameters",
+  "text_sha256": "8b08f3f372207816eae420e7d33b982e44858dc9e4be7728d95f606b07c23fd0",
+  "excerpt": "inv_freq /= factor",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

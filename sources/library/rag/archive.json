@@ -1,0 +1,22 @@
+{
+  "source_id": "rag",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "23e3249e9a1e75418d82efecab0ea8c4d033b89c93742f63208d47ce01f21233",
+      "bytes": 885323,
+      "cache_file": "sources/.local/objects/23e3249e9a1e75418d82efecab0ea8c4d033b89c93742f63208d47ce01f21233.bin",
+      "requested_url": "https://arxiv.org/pdf/2005.11401v4",
+      "resolved_url": "https://arxiv.org/pdf/2005.11401v4",
+      "content_type": "application/pdf",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:02:04.018636+00:00",
+      "declared_source_version": "text-sha256:d7558dde8821c163af968f6e204d40d64f25c47acdd46746feb6f2bf37459f09",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:02:04.018636+00:00",
+    "status": "saved"
+  }
+}

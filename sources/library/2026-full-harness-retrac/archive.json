@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-full-harness-retrac",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "b85b2a0cd60943592197f005116f9f6934543c4a9f3fde94775b864b9a7e3936",
+      "bytes": 254786,
+      "cache_file": "sources/.local/objects/b85b2a0cd60943592197f005116f9f6934543c4a9f3fde94775b864b9a7e3936.bin",
+      "requested_url": "https://arxiv.org/html/2602.02486",
+      "resolved_url": "https://arxiv.org/html/2602.02486",
+      "content_type": "text/html",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:07:35.526103+00:00",
+      "declared_source_version": "text-sha256:01e6440280c29e1399710396e6dcf890678033163680f5ffa7e625309e990832",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "HTTP response; article version read from document"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:07:35.526103+00:00",
+    "status": "saved"
+  }
+}

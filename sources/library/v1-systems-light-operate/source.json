@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-light-operate",
+  "title": "lightrag/operate.py",
+  "url": "https://github.com/HKUDS/LightRAG/blob/aaebfe1bb8d55deb6a4304d357a3bf4c92fcd40a/lightrag/operate.py",
+  "version": "text-sha256:176585e3f686574ab98657b666982302ce47d58229baacb529ef601bd6799326",
+  "native_version": "aaebfe1bb8d55deb6a4304d357a3bf4c92fcd40a",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "rebuild_knowledge_from_chunks1102–1198；_apply_token_truncation5501–5595；_build_context_str5873–6015；_get_node_data6200–6260；_get_edge_data及_find_most_related_entities_from_relationships6529–6620",
+  "locator": "rebuild_knowledge_from_chunks；_build_context_str；_get_node_data；_get_edge_data",
+  "text_sha256": "176585e3f686574ab98657b666982302ce47d58229baacb529ef601bd6799326",
+  "excerpt": "Relations maintain vector search order (sorted by similarity).",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

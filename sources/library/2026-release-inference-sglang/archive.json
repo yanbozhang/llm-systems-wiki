@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-release-inference-sglang",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "27247a78db4816bc2f4110798e9fb5955962bc800a1584277a0613b6a33c0793",
+      "bytes": 114547,
+      "cache_file": "sources/.local/objects/27247a78db4816bc2f4110798e9fb5955962bc800a1584277a0613b6a33c0793.bin",
+      "requested_url": "https://api.github.com/repos/sgl-project/sglang/releases/latest",
+      "resolved_url": "https://api.github.com/repos/sgl-project/sglang/releases/latest",
+      "content_type": "application/json",
+      "representation": "release_api_snapshot",
+      "retrieved_at": "2026-10-25T04:17:03.724442+00:00",
+      "declared_source_version": "text-sha256:475f9504d90a6b0fe5004e6a3b5f21c4d4be2e24c61c8fe6b8e6c0058b59de59",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "GitHub Releases API object serialized as JSON"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:17:03.724442+00:00",
+    "status": "saved"
+  }
+}

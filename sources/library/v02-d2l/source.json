@@ -1,0 +1,16 @@
+{
+  "id": "v02-d2l",
+  "title": "动手学深度学习",
+  "url": "https://zh.d2l.ai/",
+  "version": "text-sha256:9520ea534dceb8f158143ff02158ef202cb9706c42136fbaafda66ce2d127d83",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "public_learning_or_evaluation_document",
+  "reading_scope": "读取入口、课程大纲或项目说明的相关正文；不代表完成全部课程、作业或基准运行",
+  "locator": "课程概览、学习安排、方法或评测说明；具体使用位置见主题页",
+  "text_sha256": "9520ea534dceb8f158143ff02158ef202cb9706c42136fbaafda66ce2d127d83",
+  "excerpt": "《动手学深度学习》 — 动手学深度学习 2.0.0 documentation Table Of Contents Table Of Contents 《动手学深度学习》 ¶ 《动手学深度学习》 第二版 跳转 第一版 面向中文读者的能运行、可讨论的深度学习教科书 含 PyTorch、NumPy/MX",
+  "archive_policy": "只保存定位短摘与指纹，不镜像第三方全文"
+}

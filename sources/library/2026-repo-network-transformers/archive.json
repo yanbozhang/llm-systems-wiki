@@ -1,0 +1,31 @@
+{
+  "source_id": "2026-repo-network-transformers",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "b9f1f01787738eab63e57aea1081b560e90b2880e1555395b3a683198dd474c6",
+      "bytes": 17010,
+      "cache_file": "sources/.local/objects/b9f1f01787738eab63e57aea1081b560e90b2880e1555395b3a683198dd474c6.bin",
+      "requested_url": "https://api.github.com/repos/huggingface/transformers/readme?ref=50e35cc0ca18ec19b80653690de553e6decf74f5",
+      "resolved_url": "https://api.github.com/repos/huggingface/transformers/readme?ref=50e35cc0ca18ec19b80653690de553e6decf74f5",
+      "content_type": "text/markdown",
+      "representation": "decoded_repository_document",
+      "retrieved_at": "2026-10-25T03:59:08.502433+00:00",
+      "declared_source_version": "text-sha256:8cfb580d965463d79faac0eef7c0c36e3c829f28c19432550a22150506b58939",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "Base64-decoded GitHub Contents API file"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:59:08.502433+00:00",
+    "status": "saved"
+  },
+  "public_snapshot": {
+    "spdx_id": "Apache-2.0",
+    "content_file": "sources/library/2026-repo-network-transformers/snapshot/source.txt",
+    "license_file": "sources/library/2026-repo-network-transformers/snapshot/LICENSE",
+    "upstream_license_url": "https://github.com/huggingface/transformers/blob/50e35cc0ca18ec19b80653690de553e6decf74f5/LICENSE",
+    "source_commit": "50e35cc0ca18ec19b80653690de553e6decf74f5",
+    "content_sha256": "b9f1f01787738eab63e57aea1081b560e90b2880e1555395b3a683198dd474c6"
+  }
+}

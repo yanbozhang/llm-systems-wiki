@@ -1,0 +1,16 @@
+{
+  "id": "2026-code-benchmark-harness",
+  "title": "EleutherAI/lm-evaluation-harness：lm_eval/api/samplers.py",
+  "url": "https://github.com/EleutherAI/lm-evaluation-harness/blob/d6de81643928d653435c431bae19945d41d32520/lm_eval/api/samplers.py",
+  "version": "text-sha256:3bac780724c58d5a2a5b4a4be9159e54764167b002b3f76835162330b1444cfc",
+  "native_version": "d6de81643928d653435c431bae19945d41d32520",
+  "published_at": null,
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "sampler类与rm_eval_doc、sample入口；静态阅读，未运行完整框架",
+  "locator": "sampler类与rm_eval_doc、sample入口",
+  "text_sha256": "3bac780724c58d5a2a5b4a4be9159e54764167b002b3f76835162330b1444cfc",
+  "excerpt": "from __future__ import annotations import logging from random import Random from typing import TYPE_CHECKING if TYPE_CHECKING: from collections.abc import Itera",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验"
+}

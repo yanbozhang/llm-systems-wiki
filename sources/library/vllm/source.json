@@ -1,0 +1,16 @@
+{
+  "id": "vllm",
+  "title": "vLLM 前缀缓存设计",
+  "url": "https://docs.vllm.ai/en/stable/design/prefix_caching/",
+  "version": "text-sha256:96c817606a0cd0f23ea82ff253bc3e6b28d3e71694048af7b6d6536e2619630b",
+  "native_version": null,
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "正文的相关章节；公式和图表未逐项独立复核",
+  "locator": "Design；Block hashing",
+  "text_sha256": "96c817606a0cd0f23ea82ff253bc3e6b28d3e71694048af7b6d6536e2619630b",
+  "excerpt": "Prefix Caching - vLLM Skip to content vLLM Automatic Prefix Caching Initializing search GitHub Home User Guide Developer Guide Benchmarking API Reference CLI Reference Community vL",
+  "archive_policy": "保留短摘与指纹，全文在原站；不承诺原站失效后可完整恢复"
+}

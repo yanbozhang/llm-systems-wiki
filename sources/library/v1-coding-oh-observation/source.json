@@ -1,0 +1,16 @@
+{
+  "id": "v1-coding-oh-observation",
+  "title": "openhands-sdk/openhands/sdk/event/llm_convertible/observation.py",
+  "url": "https://github.com/OpenHands/software-agent-sdk/blob/acd96e6fa424c02432304395b9208f99be24b54d/openhands-sdk/openhands/sdk/event/llm_convertible/observation.py",
+  "version": "text-sha256:14eb6d888914a8d6a5ea205b7b4edd95b98c454d20d218256df3f0f26ac7e159",
+  "native_version": "acd96e6fa424c02432304395b9208f99be24b54d",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "ObservationBaseEvent、ObservationEvent 16–91",
+  "locator": "ObservationEvent.to_llm_message",
+  "text_sha256": "14eb6d888914a8d6a5ea205b7b4edd95b98c454d20d218256df3f0f26ac7e159",
+  "excerpt": "The action id that this observation is responding to",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

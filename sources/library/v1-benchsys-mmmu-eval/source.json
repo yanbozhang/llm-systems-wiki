@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchsys-mmmu-eval",
+  "title": "MMMU 答案解析与评估",
+  "url": "https://github.com/MMMU-Benchmark/MMMU/blob/268471d0d488258990025331c7528359c324aa25/mmmu/utils/eval_utils.py",
+  "version": "text-sha256:cc1a89b4a27f697702d340bc6a7578b5237135754ddaa9ef105239a3d9847367",
+  "native_version": "268471d0d488258990025331c7528359c324aa25",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "完整文件1–256：选择题解析、开放题标准化/判分、evaluate与calculate_ins_level_acc",
+  "locator": "parse_multi_choice_response；normalize_str；eval_multi_choice；eval_open；calculate_ins_level_acc",
+  "text_sha256": "cc1a89b4a27f697702d340bc6a7578b5237135754ddaa9ef105239a3d9847367",
+  "excerpt": "If no candidate is parsed, parse_multi_choice_response uses random.choice(all_choices).",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

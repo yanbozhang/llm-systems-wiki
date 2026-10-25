@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-cache-doc",
+  "title": "Transformers Caching",
+  "url": "https://huggingface.co/docs/transformers/en/cache_explanation",
+  "version": "text-sha256:94ea4eba3d6f02415a6921a772fa762e01a4bfb20f6050c879f34f1fa7cc0620",
+  "native_version": "cache_explanation",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "How caching works；Attention matrices；Cache class；Cache storage implementation，正文70–130",
+  "locator": "Attention matrices；Cache storage implementation",
+  "text_sha256": "94ea4eba3d6f02415a6921a772fa762e01a4bfb20f6050c879f34f1fa7cc0620",
+  "excerpt": "Attention is calculated independently in each layer of the model, and caching is done on a per-layer basis.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

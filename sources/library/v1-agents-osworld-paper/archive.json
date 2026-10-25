@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-agents-osworld-paper",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "c41eb2defc974855034d93ac43be73b800cde167d9013b2cb87b00e83bceb5a1",
+      "bytes": 764846,
+      "cache_file": "sources/.local/objects/c41eb2defc974855034d93ac43be73b800cde167d9013b2cb87b00e83bceb5a1.bin",
+      "requested_url": "https://arxiv.org/html/2404.07972v1",
+      "resolved_url": "https://arxiv.org/html/2404.07972v1",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:02:46.568959+00:00",
+      "declared_source_version": "text-sha256:a4a0c51ff1830185e1c7a803d9ef3e27bad9a081677af71411210f2c0c343711",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:02:46.568959+00:00",
+    "status": "saved"
+  }
+}

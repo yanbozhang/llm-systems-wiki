@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchsys-ragas-recall",
+  "title": "Ragas 上下文召回实现",
+  "url": "https://github.com/explodinggradients/ragas/blob/298b68274234c060deacab3cf5fb52aa3a20e885/src/ragas/metrics/_context_recall.py",
+  "version": "text-sha256:154a260678839c3f3d7dcf15f38820e36a3514b492245fdc899e93b946554ada",
+  "native_version": "298b68274234c060deacab3cf5fb52aa3a20e885",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "LLMContextRecall97–158；IDBasedContextRecall233–287",
+  "locator": "LLMContextRecall._compute_score；IDBasedContextRecall._single_turn_ascore",
+  "text_sha256": "154a260678839c3f3d7dcf15f38820e36a3514b492245fdc899e93b946554ada",
+  "excerpt": "score = numerator / denom if denom > 0 else np.nan",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

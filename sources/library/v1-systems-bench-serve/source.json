@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-bench-serve",
+  "title": "vllm/benchmarks/serve.py",
+  "url": "https://github.com/vllm-project/vllm/blob/7a64fb8fc9239cb65e0df9313fa759594dfb206a/vllm/benchmarks/serve.py",
+  "version": "text-sha256:ad1f21c13d5094cc115c005f312489032b7e001c872930de7f734fcf05806bf0",
+  "native_version": "7a64fb8fc9239cb65e0df9313fa759594dfb206a",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "get_request 431–511；calculate_metrics 602–706、773–812",
+  "locator": "get_request；calculate_metrics",
+  "text_sha256": "ad1f21c13d5094cc115c005f312489032b7e001c872930de7f734fcf05806bf0",
+  "excerpt": "request_goodput=good_completed / dur_s",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

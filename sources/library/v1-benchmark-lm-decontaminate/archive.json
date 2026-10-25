@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchmark-lm-decontaminate",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "e84d299aebbe47b69fd5a383e260f6d6e6b7a865cc792f941fa51562e43131b0",
+      "bytes": 6821,
+      "cache_file": "sources/.local/objects/e84d299aebbe47b69fd5a383e260f6d6e6b7a865cc792f941fa51562e43131b0.bin",
+      "requested_url": "https://raw.githubusercontent.com/EleutherAI/lm-evaluation-harness/d6de81643928d653435c431bae19945d41d32520/lm_eval/decontamination/decontaminate.py",
+      "resolved_url": "https://raw.githubusercontent.com/EleutherAI/lm-evaluation-harness/d6de81643928d653435c431bae19945d41d32520/lm_eval/decontamination/decontaminate.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:11:41.752214+00:00",
+      "declared_source_version": "text-sha256:e84d299aebbe47b69fd5a383e260f6d6e6b7a865cc792f941fa51562e43131b0",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:11:41.752214+00:00",
+    "status": "saved"
+  }
+}

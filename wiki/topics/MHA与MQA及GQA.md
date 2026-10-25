@@ -2,8 +2,8 @@
 id: attention-heads
 module: network
 status: published
-page_version: 3
-last_checked: 2026-10-24
+page_version: 4
+last_checked: 2026-10-25
 depth: worked
 practice_status: designed
 claim_ids: [claim-attention-heads-v1, claim-attention-heads-mapping-v1, claim-attention-heads-budget-v1, claim-attention-heads-conversion-v1]
@@ -191,6 +191,12 @@ flowchart LR
 ## 源码与后续阅读
 
 固定版本证据包括 GQA 论文、Transformers Llama 源码和 PyTorch 2.14 SDPA 文档。本页未复现论文训练或硬件性能；下一步可读[KV缓存原理与显存估算](KV缓存原理与显存估算.md)与[位置编码与RoPE](位置编码与RoPE.md)。
+
+## 2026研究进展
+
+RoBSA针对MLA解码，用RoPE部分形成选择代理，再进行块级注意力计算。它连接了缓存压缩、位置分量和稀疏计算三个问题；论文条件不能直接推广到本页所有MHA/MQA/GQA设置。 [会议来源与读取范围](../../sources/library/2026-paper-network-robsa/README.md)
+
+更多公式、代码示例、结构图及当前开源版本见[模型网络研究进展](../frontiers/模型网络研究进展.md)。新内容未执行真实模型实验。
 
 ---
 

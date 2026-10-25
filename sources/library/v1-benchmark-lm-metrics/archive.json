@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchmark-lm-metrics",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "f4794761c3f53fc036336e79c65dca355ea26a8d4cb00b27155ea2ab4846dbb2",
+      "bytes": 20788,
+      "cache_file": "sources/.local/objects/f4794761c3f53fc036336e79c65dca355ea26a8d4cb00b27155ea2ab4846dbb2.bin",
+      "requested_url": "https://raw.githubusercontent.com/EleutherAI/lm-evaluation-harness/d6de81643928d653435c431bae19945d41d32520/lm_eval/api/metrics.py",
+      "resolved_url": "https://raw.githubusercontent.com/EleutherAI/lm-evaluation-harness/d6de81643928d653435c431bae19945d41d32520/lm_eval/api/metrics.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:05:08.157423+00:00",
+      "declared_source_version": "text-sha256:f4794761c3f53fc036336e79c65dca355ea26a8d4cb00b27155ea2ab4846dbb2",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:05:08.157423+00:00",
+    "status": "saved"
+  }
+}

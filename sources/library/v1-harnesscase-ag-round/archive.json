@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-harnesscase-ag-round",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "d154eff992eb7235cf97d1266ad5a2404305ecaa59f5c0593513d48b20e0b1e5",
+      "bytes": 14424,
+      "cache_file": "sources/.local/objects/d154eff992eb7235cf97d1266ad5a2404305ecaa59f5c0593513d48b20e0b1e5.bin",
+      "requested_url": "https://raw.githubusercontent.com/microsoft/autogen/004749e6b7102c8fd317b9b1499ce5807223c278/python/packages/autogen-agentchat/src/autogen_agentchat/teams/_group_chat/_round_robin_group_chat.py",
+      "resolved_url": "https://raw.githubusercontent.com/microsoft/autogen/004749e6b7102c8fd317b9b1499ce5807223c278/python/packages/autogen-agentchat/src/autogen_agentchat/teams/_group_chat/_round_robin_group_chat.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:39.950983+00:00",
+      "declared_source_version": "text-sha256:d154eff992eb7235cf97d1266ad5a2404305ecaa59f5c0593513d48b20e0b1e5",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:39.950983+00:00",
+    "status": "saved"
+  }
+}

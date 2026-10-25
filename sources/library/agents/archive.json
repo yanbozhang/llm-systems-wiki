@@ -1,0 +1,22 @@
+{
+  "source_id": "agents",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "bee583e698837a6a18760c8ffcddc245ae4b7b6a96461923c116b9364b99fffb",
+      "bytes": 258324,
+      "cache_file": "sources/.local/objects/bee583e698837a6a18760c8ffcddc245ae4b7b6a96461923c116b9364b99fffb.bin",
+      "requested_url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "resolved_url": "https://www.anthropic.com/research/building-effective-agents",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:01:55.574985+00:00",
+      "declared_source_version": "text-sha256:07896b6c64f00f61289d45741395d106c90db9497b334f5699482ce77aeb20d0",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:01:55.574985+00:00",
+    "status": "saved"
+  }
+}

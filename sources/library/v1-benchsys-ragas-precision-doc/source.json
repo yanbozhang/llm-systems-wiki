@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchsys-ragas-precision-doc",
+  "title": "docs/concepts/metrics/available_metrics/context_precision.md",
+  "url": "https://github.com/explodinggradients/ragas/blob/298b68274234c060deacab3cf5fb52aa3a20e885/docs/concepts/metrics/available_metrics/context_precision.md",
+  "version": "text-sha256:b55677bc7f0f4b5633d14780e381124e4d4b5e77ec914b89cec59f6a4ca6ed09",
+  "native_version": "298b68274234c060deacab3cf5fb52aa3a20e885",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "Context Precision定义和公式1–17；参考答案与利用率实例20–111",
+  "locator": "Context Precision；Context Utilization",
+  "text_sha256": "b55677bc7f0f4b5633d14780e381124e4d4b5e77ec914b89cec59f6a4ca6ed09",
+  "excerpt": "Total number of relevant items in the top K results",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-benchsys-ragas-precision",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "baaf3981986602754ccbaef2936b6ac8e6d6551cab86477e64170683d74a4716",
+      "bytes": 13261,
+      "cache_file": "sources/.local/objects/baaf3981986602754ccbaef2936b6ac8e6d6551cab86477e64170683d74a4716.bin",
+      "requested_url": "https://raw.githubusercontent.com/explodinggradients/ragas/298b68274234c060deacab3cf5fb52aa3a20e885/src/ragas/metrics/_context_precision.py",
+      "resolved_url": "https://raw.githubusercontent.com/explodinggradients/ragas/298b68274234c060deacab3cf5fb52aa3a20e885/src/ragas/metrics/_context_precision.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:05:30.024769+00:00",
+      "declared_source_version": "text-sha256:baaf3981986602754ccbaef2936b6ac8e6d6551cab86477e64170683d74a4716",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:05:30.024769+00:00",
+    "status": "saved"
+  }
+}

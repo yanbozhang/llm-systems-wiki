@@ -1,0 +1,31 @@
+{
+  "source_id": "2026-code-benchmark-harness",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "b9541ec0ea1144d2003301ae6584f86abfab2237aebeafb0f7dd2a3adaf82c42",
+      "bytes": 4545,
+      "cache_file": "sources/.local/objects/b9541ec0ea1144d2003301ae6584f86abfab2237aebeafb0f7dd2a3adaf82c42.bin",
+      "requested_url": "https://api.github.com/repos/EleutherAI/lm-evaluation-harness/contents/lm_eval/api/samplers.py?ref=d6de81643928d653435c431bae19945d41d32520",
+      "resolved_url": "https://api.github.com/repos/EleutherAI/lm-evaluation-harness/contents/lm_eval/api/samplers.py?ref=d6de81643928d653435c431bae19945d41d32520",
+      "content_type": "text/plain",
+      "representation": "decoded_source_file",
+      "retrieved_at": "2026-10-25T04:06:08.722503+00:00",
+      "declared_source_version": "text-sha256:3bac780724c58d5a2a5b4a4be9159e54764167b002b3f76835162330b1444cfc",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "Base64-decoded GitHub Contents API file"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:06:08.722503+00:00",
+    "status": "saved"
+  },
+  "public_snapshot": {
+    "spdx_id": "MIT",
+    "content_file": "sources/library/2026-code-benchmark-harness/snapshot/source.txt",
+    "license_file": "sources/library/2026-code-benchmark-harness/snapshot/LICENSE",
+    "upstream_license_url": "https://github.com/EleutherAI/lm-evaluation-harness/blob/d6de81643928d653435c431bae19945d41d32520/LICENSE.md",
+    "source_commit": "d6de81643928d653435c431bae19945d41d32520",
+    "content_sha256": "b9541ec0ea1144d2003301ae6584f86abfab2237aebeafb0f7dd2a3adaf82c42"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchsys-mlperf-rules",
+  "title": "inference_rules.adoc",
+  "url": "https://github.com/mlcommons/inference_policies/blob/d3eba2f21026d868ad65cdcad2bb81e4a17ce3d3/inference_rules.adoc",
+  "version": "text-sha256:94c69f01f1e0be24dc057180af6db878d1f5339fd31d54cbe5c386f8e198ce08",
+  "native_version": "d3eba2f21026d868ad65cdcad2bb81e4a17ce3d3",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "Scenarios132–174；KV-cache FAQ895–915；Overview8–14",
+  "locator": "Scenarios；KV-cache FAQ；Overview",
+  "text_sha256": "94c69f01f1e0be24dc057180af6db878d1f5339fd31d54cbe5c386f8e198ce08",
+  "excerpt": "A KV-cache is allowed in the same way as in the reference model, where it does not apply across queries.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

@@ -1,0 +1,10 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Reader from '../../components/Reader.astro';
+import {sourceCards} from '../../lib/content';
+export function getStaticPaths(){return sourceCards.map(card=>({params:{id:card.id},props:{card}}));}
+const {card}=Astro.props;
+---
+<SiteLayout title={card.title} active="sources" section="来源资料卡">
+  <Reader title={card.title} file={card.path} description="原始来源、版本、阅读范围与本地保存记录。" kicker="SOURCE LIBRARY"/>
+</SiteLayout>

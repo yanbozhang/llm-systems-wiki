@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-math-nano-data",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "77f3ef0cc8132d77f90c2bd5f9c3be86d1b3da7428e100559c58aee2bcb6eb12",
+      "bytes": 3167,
+      "cache_file": "sources/.local/objects/77f3ef0cc8132d77f90c2bd5f9c3be86d1b3da7428e100559c58aee2bcb6eb12.bin",
+      "requested_url": "https://raw.githubusercontent.com/karpathy/nanoGPT/3adf61e154c3fe3fca428ad6bc3818b27a3b8291/data/openwebtext/prepare.py",
+      "resolved_url": "https://raw.githubusercontent.com/karpathy/nanoGPT/3adf61e154c3fe3fca428ad6bc3818b27a3b8291/data/openwebtext/prepare.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:13:48.496411+00:00",
+      "declared_source_version": "text-sha256:77f3ef0cc8132d77f90c2bd5f9c3be86d1b3da7428e100559c58aee2bcb6eb12",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:13:48.496411+00:00",
+    "status": "saved"
+  }
+}

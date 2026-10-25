@@ -1,0 +1,22 @@
+{
+  "source_id": "mcp",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "3f5cdc194aab7f1e15ecc255030fa42522e24341beaf7328ce71161cfa2963ca",
+      "bytes": 688587,
+      "cache_file": "sources/.local/objects/3f5cdc194aab7f1e15ecc255030fa42522e24341beaf7328ce71161cfa2963ca.bin",
+      "requested_url": "https://modelcontextprotocol.io/docs/learn/architecture",
+      "resolved_url": "https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:01:57.334998+00:00",
+      "declared_source_version": "text-sha256:1743c5b616eca7290c40127f88cf95e4163bb6f507b396d127bd85e4d9a6df72",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:01:57.334998+00:00",
+    "status": "saved"
+  }
+}

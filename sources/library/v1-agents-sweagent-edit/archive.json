@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-agents-sweagent-edit",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "f48b36722d0b952d4ad8b900db9fa63a0fbcf242205f23633bb5d3d314b07b89",
+      "bytes": 11628,
+      "cache_file": "sources/.local/objects/f48b36722d0b952d4ad8b900db9fa63a0fbcf242205f23633bb5d3d314b07b89.bin",
+      "requested_url": "https://raw.githubusercontent.com/SWE-agent/SWE-agent/3ea751c087f32b16e039a2233dd6eefecef325d5/tools/windowed/lib/windowed_file.py",
+      "resolved_url": "https://raw.githubusercontent.com/SWE-agent/SWE-agent/3ea751c087f32b16e039a2233dd6eefecef325d5/tools/windowed/lib/windowed_file.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:03:44.010598+00:00",
+      "declared_source_version": "text-sha256:f48b36722d0b952d4ad8b900db9fa63a0fbcf242205f23633bb5d3d314b07b89",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:44.010598+00:00",
+    "status": "saved"
+  }
+}

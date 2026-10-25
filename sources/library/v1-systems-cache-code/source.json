@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-cache-code",
+  "title": "src/transformers/cache_utils.py",
+  "url": "https://github.com/huggingface/transformers/blob/50e35cc0ca18ec19b80653690de553e6decf74f5/src/transformers/cache_utils.py",
+  "version": "text-sha256:36c4cd52d66f39fdb51fa2fc92cfc43e2e8b152e07f7c2a17186eac1e81237e7",
+  "native_version": "50e35cc0ca18ec19b80653690de553e6decf74f5",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "DynamicLayer 103–151行",
+  "locator": "DynamicLayer.update；DynamicLayer.get_seq_length",
+  "text_sha256": "36c4cd52d66f39fdb51fa2fc92cfc43e2e8b152e07f7c2a17186eac1e81237e7",
+  "excerpt": "self.keys = torch.cat([self.keys, key_states], dim=-2)",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

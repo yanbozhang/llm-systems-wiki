@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-release-benchmark-harness",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "c892b0826b9bb771488f58d876ddbb4c7a4a34e08e6007280deba51945b365b9",
+      "bytes": 47765,
+      "cache_file": "sources/.local/objects/c892b0826b9bb771488f58d876ddbb4c7a4a34e08e6007280deba51945b365b9.bin",
+      "requested_url": "https://api.github.com/repos/EleutherAI/lm-evaluation-harness/releases/latest",
+      "resolved_url": "https://api.github.com/repos/EleutherAI/lm-evaluation-harness/releases/latest",
+      "content_type": "application/json",
+      "representation": "release_api_snapshot",
+      "retrieved_at": "2026-10-25T04:17:03.718442+00:00",
+      "declared_source_version": "text-sha256:01433f3d4687b0ccb391a21a82f44d981be82489c8fb16c5b0ecf52c0538a9dc",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "GitHub Releases API object serialized as JSON"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:17:03.718442+00:00",
+    "status": "saved"
+  }
+}

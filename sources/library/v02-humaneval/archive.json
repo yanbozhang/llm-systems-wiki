@@ -1,0 +1,22 @@
+{
+  "source_id": "v02-humaneval",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "a6a3741a64527ae20026b7880e37af5de88e8ae4dcfed81eb19620c674b6e272",
+      "bytes": 5031,
+      "cache_file": "sources/.local/objects/a6a3741a64527ae20026b7880e37af5de88e8ae4dcfed81eb19620c674b6e272.bin",
+      "requested_url": "https://raw.githubusercontent.com/openai/human-eval/master/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/openai/human-eval/master/README.md",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:03:21.527891+00:00",
+      "declared_source_version": "text-sha256:a6a3741a64527ae20026b7880e37af5de88e8ae4dcfed81eb19620c674b6e272",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:21.527891+00:00",
+    "status": "saved"
+  }
+}

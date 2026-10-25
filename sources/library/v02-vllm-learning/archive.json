@@ -1,0 +1,22 @@
+{
+  "source_id": "v02-vllm-learning",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "212614adb2dc89c3425018128b6db534de6a38dc38e9fbe67d7010dde43c1568",
+      "bytes": 183600,
+      "cache_file": "sources/.local/objects/212614adb2dc89c3425018128b6db534de6a38dc38e9fbe67d7010dde43c1568.bin",
+      "requested_url": "https://docs.vllm.ai/en/stable/",
+      "resolved_url": "https://docs.vllm.ai/en/stable/",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:03:11.311315+00:00",
+      "declared_source_version": "text-sha256:60a86da6b6d9da66260a3bbf3b72c77acdb4f21ae8041ee0b5aaf2727019e6f5",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:11.311315+00:00",
+    "status": "saved"
+  }
+}

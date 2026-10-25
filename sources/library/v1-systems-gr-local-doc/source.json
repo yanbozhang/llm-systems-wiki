@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-gr-local-doc",
+  "title": "docs/query/local_search.md",
+  "url": "https://github.com/microsoft/graphrag/blob/c600ff80b77b9b62c47d539a3ac9569e95d8949b/docs/query/local_search.md",
+  "version": "text-sha256:260b15b16a7f9207e3bddbdeb3efc47a1820666d6ca8b87770c21e5c55976261",
+  "native_version": "c600ff80b77b9b62c47d539a3ac9569e95d8949b",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "全文1–62行，Entity-based Reasoning与Methodology",
+  "locator": "Entity-based Reasoning；Methodology",
+  "text_sha256": "260b15b16a7f9207e3bddbdeb3efc47a1820666d6ca8b87770c21e5c55976261",
+  "excerpt": "These candidate data sources are then prioritized and filtered to fit within a single context window of pre-defined size.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

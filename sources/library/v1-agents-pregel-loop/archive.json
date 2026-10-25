@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-agents-pregel-loop",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "cc51e52a6624aa064ac1688e4a55326012d11b615d9810d4b5c1f19bf5f579e0",
+      "bytes": 91418,
+      "cache_file": "sources/.local/objects/cc51e52a6624aa064ac1688e4a55326012d11b615d9810d4b5c1f19bf5f579e0.bin",
+      "requested_url": "https://raw.githubusercontent.com/langchain-ai/langgraph/4c52e129eb1ab69a3da58b799f67929f77d81149/libs/langgraph/langgraph/pregel/_loop.py",
+      "resolved_url": "https://raw.githubusercontent.com/langchain-ai/langgraph/4c52e129eb1ab69a3da58b799f67929f77d81149/libs/langgraph/langgraph/pregel/_loop.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T03:57:57.096548+00:00",
+      "declared_source_version": "text-sha256:cc51e52a6624aa064ac1688e4a55326012d11b615d9810d4b5c1f19bf5f579e0",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:03:33.050526+00:00",
+    "status": "saved"
+  }
+}

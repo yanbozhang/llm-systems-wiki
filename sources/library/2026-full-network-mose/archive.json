@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-full-network-mose",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "69e3d3b4197e16767b9ea13569f88551df059ce6c339a119976025d0d9b946ad",
+      "bytes": 333980,
+      "cache_file": "sources/.local/objects/69e3d3b4197e16767b9ea13569f88551df059ce6c339a119976025d0d9b946ad.bin",
+      "requested_url": "https://arxiv.org/html/2602.06154",
+      "resolved_url": "https://arxiv.org/html/2602.06154",
+      "content_type": "text/html",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T04:07:32.417118+00:00",
+      "declared_source_version": "text-sha256:f5a20a6fb96040fe5cf7d512e98f3edeabd540f3b6aa0cd740e7e5517a00251e",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "HTTP response; article version read from document"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:07:32.417118+00:00",
+    "status": "saved"
+  }
+}

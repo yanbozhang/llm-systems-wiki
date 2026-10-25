@@ -1,0 +1,18 @@
+{
+  "id": "2026-release-training-trl",
+  "title": "huggingface/trl：v1.16.0发布说明",
+  "url": "https://github.com/huggingface/trl/releases/tag/v1.16.0",
+  "version": "text-sha256:8ce8ed9293c13bf83c06f04c1dc2d775ae4ceabe0a3f8f5eaaf8ab78fb9be701",
+  "native_version": "v1.16.0",
+  "published_at": "2026-10-15",
+  "checked_at": "2026-10-25",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "完整发布说明；不将最新分支提交等同于该发布的代码",
+  "locator": "Release notes",
+  "text_sha256": "8ce8ed9293c13bf83c06f04c1dc2d775ae4ceabe0a3f8f5eaaf8ab78fb9be701",
+  "excerpt": "## Features ### 🛠️ TRL now trains on AWS Trainium <img width=\"1672\" height=\"941\" alt=\"Neon Warehouse_ AWS and Trainium Support\" src=\"https://github.com/user-att",
+  "archive_policy": "来源卡片与版本公开；已取得全文只在本地缓存，第三方再分发许可未逐件核验",
+  "release_date": "2026-10-15T18:00:33Z",
+  "prerelease": false
+}

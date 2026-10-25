@@ -1,0 +1,16 @@
+{
+  "id": "v1-benchsys-mlperf-accuracy-check",
+  "title": "tools/submission/submission_checker/checks/accuracy_check.py",
+  "url": "https://github.com/mlcommons/inference/blob/3fbc329939999c13d0a7b5e67fb2092287e06047/tools/submission/submission_checker/checks/accuracy_check.py",
+  "version": "text-sha256:c57da881394728bd1308109a0f61513c1dd0c139c0360bbb8dce7b06f6afc70d",
+  "native_version": "3fbc329939999c13d0a7b5e67fb2092287e06047",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "AccuracyCheck说明10–40；setup_checks77–98",
+  "locator": "AccuracyCheck.setup_checks；accuracy_result_check",
+  "text_sha256": "c57da881394728bd1308109a0f61513c1dd0c139c0360bbb8dce7b06f6afc70d",
+  "excerpt": "Accuracy checks include expected dataset coverage and configured metric thresholds.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

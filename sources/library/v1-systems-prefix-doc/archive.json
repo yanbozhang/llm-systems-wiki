@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-systems-prefix-doc",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "67ee4e2b7bc23d40e9b366e4a9053ae4ecd0925ddef51f412ac5c16b9dc83a61",
+      "bytes": 13916,
+      "cache_file": "sources/.local/objects/67ee4e2b7bc23d40e9b366e4a9053ae4ecd0925ddef51f412ac5c16b9dc83a61.bin",
+      "requested_url": "https://raw.githubusercontent.com/vllm-project/vllm/7a64fb8fc9239cb65e0df9313fa759594dfb206a/docs/design/prefix_caching.md",
+      "resolved_url": "https://raw.githubusercontent.com/vllm-project/vllm/7a64fb8fc9239cb65e0df9313fa759594dfb206a/docs/design/prefix_caching.md",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:14:01.853209+00:00",
+      "declared_source_version": "text-sha256:67ee4e2b7bc23d40e9b366e4a9053ae4ecd0925ddef51f412ac5c16b9dc83a61",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:14:01.853209+00:00",
+    "status": "saved"
+  }
+}

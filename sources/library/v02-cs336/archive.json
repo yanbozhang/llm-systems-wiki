@@ -1,0 +1,22 @@
+{
+  "source_id": "v02-cs336",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "2754583fe0977dfb746c0ae40fc19afd82437641d52919e3693d94fcaace9004",
+      "bytes": 30463,
+      "cache_file": "sources/.local/objects/2754583fe0977dfb746c0ae40fc19afd82437641d52919e3693d94fcaace9004.bin",
+      "requested_url": "https://cs336.stanford.edu/spring2025/",
+      "resolved_url": "https://cs336.stanford.edu/spring2025/",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "web_page",
+      "retrieved_at": "2026-10-25T04:02:55.519893+00:00",
+      "declared_source_version": "text-sha256:b9f7a9bf751e43a3cc9a4f48bd778a4608801b200689d2ca83cee0bc70af1bcf",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:02:55.519893+00:00",
+    "status": "saved"
+  }
+}

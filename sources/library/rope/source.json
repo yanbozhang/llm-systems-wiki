@@ -1,0 +1,16 @@
+{
+  "id": "rope",
+  "title": "RoFormer 与 RoPE 原论文",
+  "url": "https://arxiv.org/html/2104.09864v5",
+  "version": "text-sha256:b4c87d09b3cd896f89530f0f05f7177ff98380818d26aeae6eddddb125cb5657",
+  "native_version": "2104.09864v5",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "正文的相关章节；公式和图表未逐项独立复核",
+  "locator": "3.2 Rotary position embedding",
+  "text_sha256": "b4c87d09b3cd896f89530f0f05f7177ff98380818d26aeae6eddddb125cb5657",
+  "excerpt": "encodes the absolute position with a rotation matrix and meanwhile incorporates the explicit relative position dependency in self-attention formulation. Notably, RoPE enables valua",
+  "archive_policy": "保留短摘与指纹，全文在原站；不承诺原站失效后可完整恢复"
+}

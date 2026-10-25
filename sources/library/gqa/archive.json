@@ -1,0 +1,22 @@
+{
+  "source_id": "gqa",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "a2f67d048b753d117a14f43cbe2c0c86d05254bcce039878aafc329ae72e2768",
+      "bytes": 163339,
+      "cache_file": "sources/.local/objects/a2f67d048b753d117a14f43cbe2c0c86d05254bcce039878aafc329ae72e2768.bin",
+      "requested_url": "https://arxiv.org/html/2305.13245v3",
+      "resolved_url": "https://arxiv.org/html/2305.13245v3",
+      "content_type": "text/html; charset=utf-8",
+      "representation": "paper_full_text",
+      "retrieved_at": "2026-10-25T03:59:16.014082+00:00",
+      "declared_source_version": "text-sha256:ce4304148fdaed1c7fb0804a5b0c00dd57237e7e12b3e5b54bf4fd9c962bacf7",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:59:16.014082+00:00",
+    "status": "saved"
+  }
+}

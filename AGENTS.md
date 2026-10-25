@@ -15,3 +15,6 @@
 
 - 网站展示层在web/，Astro静态生成；样式使用CSS变量。修改前阅读web/DESIGN.md。保持Markdown与knowledge为唯一内容来源，网站代码使用Node.js 22+与npm锁文件。
 - README.md与README.en.md互相提供语言入口；网站界面可切换中英文，正文语言单独说明，不展示固定发布时间承诺。
+
+- 2026研究进展在wiki/frontiers/，以knowledge/frontiers.json登记，与基础主题交叉链接。严格区分论文录用年份、读取版本、仓库release与当前commit。
+- 每条来源在sources/library/<id>/有独立资料卡；原文缓存位于Git忽略的sources/.local/。遵循schema/来源资料库契约.md，运行python scripts/source_library.py check；本地缓存验证另加--local。

@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-systems-radix",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "eea7015fcf678167ac7296b08c8dc568ccbe42a4bb106da23b33a7c59debec01",
+      "bytes": 31391,
+      "cache_file": "sources/.local/objects/eea7015fcf678167ac7296b08c8dc568ccbe42a4bb106da23b33a7c59debec01.bin",
+      "requested_url": "https://raw.githubusercontent.com/sgl-project/sglang/3ea7e210d28e26a13590d3244cedfe17f8c3e58c/python/sglang/srt/mem_cache/radix_cache.py",
+      "resolved_url": "https://raw.githubusercontent.com/sgl-project/sglang/3ea7e210d28e26a13590d3244cedfe17f8c3e58c/python/sglang/srt/mem_cache/radix_cache.py",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:14:03.293833+00:00",
+      "declared_source_version": "text-sha256:eea7015fcf678167ac7296b08c8dc568ccbe42a4bb106da23b33a7c59debec01",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:14:03.293833+00:00",
+    "status": "saved"
+  }
+}

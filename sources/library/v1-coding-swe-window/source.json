@@ -1,0 +1,16 @@
+{
+  "id": "v1-coding-swe-window",
+  "title": "tools/windowed/lib/windowed_file.py",
+  "url": "https://github.com/SWE-agent/SWE-agent/blob/3ea751c087f32b16e039a2233dd6eefecef325d5/tools/windowed/lib/windowed_file.py",
+  "version": "text-sha256:f48b36722d0b952d4ad8b900db9fa63a0fbcf242205f23633bb5d3d314b07b89",
+  "native_version": "3ea751c087f32b16e039a2233dd6eefecef325d5",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "WindowedFile first_line/line_range/get_window_text117–176",
+  "locator": "WindowedFile.get_window_text；line_range",
+  "text_sha256": "f48b36722d0b952d4ad8b900db9fa63a0fbcf242205f23633bb5d3d314b07b89",
+  "excerpt": "Return first and last line of the display window.",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "v1-math-trl-dpo-doc",
+  "title": "TRL DPO Trainer 文档",
+  "url": "https://github.com/huggingface/trl/blob/1117c3b9c1632ee9814c30f6c9fc884b792a54e5/docs/source/dpo_trainer.md",
+  "version": "text-sha256:30ada5876faf1a2bf52b9fe4f0928036c1807d32e1b42887842f3df47dd5ec4c",
+  "native_version": "1117c3b9c1632ee9814c30f6c9fc884b792a54e5",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "official_document",
+  "reading_scope": "Loss types、Expected dataset type、训练配置与相对奖励说明；只读取正文相关段落",
+  "locator": "Loss types; Expected dataset type",
+  "text_sha256": "30ada5876faf1a2bf52b9fe4f0928036c1807d32e1b42887842f3df47dd5ec4c",
+  "excerpt": "\"sigmoid\" (default)",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

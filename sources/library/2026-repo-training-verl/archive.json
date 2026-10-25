@@ -1,0 +1,31 @@
+{
+  "source_id": "2026-repo-training-verl",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "ddf49da56b709047d7641c6885c00bb43a68944aa458f03965008978d75a019d",
+      "bytes": 39437,
+      "cache_file": "sources/.local/objects/ddf49da56b709047d7641c6885c00bb43a68944aa458f03965008978d75a019d.bin",
+      "requested_url": "https://api.github.com/repos/volcengine/verl/readme?ref=3c6d9b43b67c74ec343d77874cd8fa6e841523da",
+      "resolved_url": "https://api.github.com/repos/volcengine/verl/readme?ref=3c6d9b43b67c74ec343d77874cd8fa6e841523da",
+      "content_type": "text/markdown",
+      "representation": "decoded_repository_document",
+      "retrieved_at": "2026-10-25T03:59:13.099412+00:00",
+      "declared_source_version": "text-sha256:b7faf4b96ef240737069fd47500d9e6db8b30ea2fb4d81dd9ee0e5be109ad985",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "Base64-decoded GitHub Contents API file"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:59:13.099412+00:00",
+    "status": "saved"
+  },
+  "public_snapshot": {
+    "spdx_id": "Apache-2.0",
+    "content_file": "sources/library/2026-repo-training-verl/snapshot/source.txt",
+    "license_file": "sources/library/2026-repo-training-verl/snapshot/LICENSE",
+    "upstream_license_url": "https://github.com/volcengine/verl/blob/3c6d9b43b67c74ec343d77874cd8fa6e841523da/LICENSE",
+    "source_commit": "3c6d9b43b67c74ec343d77874cd8fa6e841523da",
+    "content_sha256": "ddf49da56b709047d7641c6885c00bb43a68944aa458f03965008978d75a019d"
+  }
+}

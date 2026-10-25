@@ -1,0 +1,23 @@
+{
+  "source_id": "2026-paper-inference-eviction",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "24c24b7ed99168a16c4351870a8ed9bd67a3d3ba66fff2ef9d631240a4864727",
+      "bytes": 87670,
+      "cache_file": "sources/.local/objects/24c24b7ed99168a16c4351870a8ed9bd67a3d3ba66fff2ef9d631240a4864727.bin",
+      "requested_url": "https://icml.cc/virtual/2026/poster/66558",
+      "resolved_url": "https://icml.cc/virtual/2026/poster/66558",
+      "content_type": "text/html",
+      "representation": "conference_record_html",
+      "retrieved_at": "2026-10-25T03:56:43.615093+00:00",
+      "declared_source_version": "text-sha256:ec0fbc448fcba740e07fa02fa5910ee4918a925a4ab42a83e9a0859675732dc4",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "HTTP response"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:56:43.615093+00:00",
+    "status": "saved"
+  }
+}

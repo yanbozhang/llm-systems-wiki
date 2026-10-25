@@ -1,0 +1,22 @@
+{
+  "source_id": "v1-gui-app-readme",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "ac94cca1f69807d2d31d30bd5521fbf1bda6155996881054df87a85522cd8f5b",
+      "bytes": 11385,
+      "cache_file": "sources/.local/objects/ac94cca1f69807d2d31d30bd5521fbf1bda6155996881054df87a85522cd8f5b.bin",
+      "requested_url": "https://raw.githubusercontent.com/TencentQQGYLab/AppAgent/2c1900422caf6f9e94e96d5dd984b530e5a5fbf8/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/TencentQQGYLab/AppAgent/2c1900422caf6f9e94e96d5dd984b530e5a5fbf8/README.md",
+      "content_type": "text/plain; charset=utf-8",
+      "representation": "source_file",
+      "retrieved_at": "2026-10-25T04:12:53.439065+00:00",
+      "declared_source_version": "text-sha256:ac94cca1f69807d2d31d30bd5521fbf1bda6155996881054df87a85522cd8f5b",
+      "redistribution": "local_only_license_not_reviewed"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T04:12:53.439065+00:00",
+    "status": "saved"
+  }
+}

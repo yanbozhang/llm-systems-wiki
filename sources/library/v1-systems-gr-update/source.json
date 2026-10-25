@@ -1,0 +1,16 @@
+{
+  "id": "v1-systems-gr-update",
+  "title": "packages/graphrag/graphrag/index/workflows/load_update_documents.py",
+  "url": "https://github.com/microsoft/graphrag/blob/c600ff80b77b9b62c47d539a3ac9569e95d8949b/packages/graphrag/graphrag/index/workflows/load_update_documents.py",
+  "version": "text-sha256:00990f71f661472a685fce7318424c949b962695aa3f5c3ffd68c0b61fd0ca7e",
+  "native_version": "c600ff80b77b9b62c47d539a3ac9569e95d8949b",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "kind": "source_code",
+  "reading_scope": "全文1–62行，load_update_documents只返回new_inputs",
+  "locator": "run_workflow；load_update_documents",
+  "text_sha256": "00990f71f661472a685fce7318424c949b962695aa3f5c3ffd68c0b61fd0ca7e",
+  "excerpt": "return delta_documents.new_inputs",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

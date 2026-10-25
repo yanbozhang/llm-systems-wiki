@@ -1,0 +1,31 @@
+{
+  "source_id": "2026-repo-knowledge-graphrag",
+  "status": "saved",
+  "captures": [
+    {
+      "sha256": "36df9326f1e83343fd46373a2a059093590e4c2ad2256d3ed5de5c5e6e492709",
+      "bytes": 5099,
+      "cache_file": "sources/.local/objects/36df9326f1e83343fd46373a2a059093590e4c2ad2256d3ed5de5c5e6e492709.bin",
+      "requested_url": "https://api.github.com/repos/microsoft/graphrag/readme?ref=c600ff80b77b9b62c47d539a3ac9569e95d8949b",
+      "resolved_url": "https://api.github.com/repos/microsoft/graphrag/readme?ref=c600ff80b77b9b62c47d539a3ac9569e95d8949b",
+      "content_type": "text/markdown",
+      "representation": "decoded_repository_document",
+      "retrieved_at": "2026-10-25T03:59:23.547364+00:00",
+      "declared_source_version": "text-sha256:2aaa5d66cc4616600bdfd423e47cf608b3bc8c5e840dfe3af4b07fbe558e8138",
+      "redistribution": "local_only_license_not_reviewed",
+      "processing": "Base64-decoded GitHub Contents API file"
+    }
+  ],
+  "last_attempt": {
+    "at": "2026-10-25T03:59:23.547364+00:00",
+    "status": "saved"
+  },
+  "public_snapshot": {
+    "spdx_id": "MIT",
+    "content_file": "sources/library/2026-repo-knowledge-graphrag/snapshot/source.txt",
+    "license_file": "sources/library/2026-repo-knowledge-graphrag/snapshot/LICENSE",
+    "upstream_license_url": "https://github.com/microsoft/graphrag/blob/c600ff80b77b9b62c47d539a3ac9569e95d8949b/LICENSE",
+    "source_commit": "c600ff80b77b9b62c47d539a3ac9569e95d8949b",
+    "content_sha256": "36df9326f1e83343fd46373a2a059093590e4c2ad2256d3ed5de5c5e6e492709"
+  }
+}

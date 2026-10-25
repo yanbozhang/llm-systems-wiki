@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-cx-cli",
+  "title": "Codex cli_main 入口分派",
+  "url": "https://github.com/openai/codex/blob/970111f6cb62cc02fe36a82ea7d71b37a2889c97/codex-rs/cli/src/main.rs#L1053",
+  "version": "text-sha256:ac51c153916132c0be2c37ea1136562685b832957bc2e43e53d71608d0b28a4a",
+  "native_version": "970111f6cb62cc02fe36a82ea7d71b37a2889c97",
+  "kind": "source_code",
+  "reading_scope": "main、cli_main 1043–1180；prepend_config_flags 2255–2259；reject_remote_mode_for_subcommand 2262–2275",
+  "locator": "main、cli_main 1043–1180；prepend_config_flags 2255–2259；reject_remote_mode_for_subcommand 2262–2275",
+  "text_sha256": "ac51c153916132c0be2c37ea1136562685b832957bc2e43e53d71608d0b28a4a",
+  "excerpt": "async fn cli_main(",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "v1-agents-react-paper",
+  "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+  "url": "https://arxiv.org/html/2210.03629v3",
+  "native_version": "arXiv:2210.03629v3",
+  "kind": "paper",
+  "reading_scope": "第2节 ReAct 状态、动作、上下文定义",
+  "locator": "第2节 ReAct 状态、动作、上下文定义",
+  "text_sha256": "7ff971fb0371f5663999ce58e70b0f3eee9e41e53164b18b399f2cd8b5b81e11",
+  "excerpt": "an agent receives an observation",
+  "version": "text-sha256:7ff971fb0371f5663999ce58e70b0f3eee9e41e53164b18b399f2cd8b5b81e11",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、短摘与指纹，全文在原站"
+}

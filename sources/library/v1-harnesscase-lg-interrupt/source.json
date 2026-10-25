@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-lg-interrupt",
+  "title": "LangGraph interrupt",
+  "url": "https://github.com/langchain-ai/langgraph/blob/4c52e129eb1ab69a3da58b799f67929f77d81149/libs/langgraph/langgraph/types.py#L903",
+  "version": "text-sha256:062583a1c0af9833477935a9a78d336408cc9a33c425722a1191e000d032107a",
+  "native_version": "4c52e129eb1ab69a3da58b799f67929f77d81149",
+  "kind": "source_code",
+  "reading_scope": "interrupt 903–1046：节点重启、按序resume及GraphInterrupt",
+  "locator": "interrupt 903–1046：节点重启、按序resume及GraphInterrupt",
+  "text_sha256": "062583a1c0af9833477935a9a78d336408cc9a33c425722a1191e000d032107a",
+  "excerpt": "def interrupt(",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}

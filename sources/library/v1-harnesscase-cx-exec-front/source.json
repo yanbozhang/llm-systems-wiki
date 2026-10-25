@@ -1,0 +1,16 @@
+{
+  "id": "v1-harnesscase-cx-exec-front",
+  "title": "Codex run_main 与 run_exec_session",
+  "url": "https://github.com/openai/codex/blob/970111f6cb62cc02fe36a82ea7d71b37a2889c97/codex-rs/exec/src/lib.rs#L854",
+  "version": "text-sha256:4229c67ec7a4d9aa21f26c500f1206660f7ccb3a6c047843a3fa7295938a0848",
+  "native_version": "970111f6cb62cc02fe36a82ea7d71b37a2889c97",
+  "kind": "source_code",
+  "reading_scope": "run_main 267–315、731–774；run_exec_session 854–898、1021–1047、1198–1255",
+  "locator": "run_main 267–315、731–774；run_exec_session 854–898、1021–1047、1198–1255",
+  "text_sha256": "4229c67ec7a4d9aa21f26c500f1206660f7ccb3a6c047843a3fa7295938a0848",
+  "excerpt": "async fn run_exec_session(args: ExecRunArgs) -> anyhow::Result<()> {",
+  "published_at": null,
+  "checked_at": "2026-10-24",
+  "status": "active",
+  "archive_policy": "保留链接、读取范围与必要短摘；全文缓存不入库；observed来源不填原文指纹"
+}
