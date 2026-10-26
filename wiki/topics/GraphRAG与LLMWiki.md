@@ -41,10 +41,10 @@ GraphRAG局部查询的入口通常是与查询语义相近的实体描述，而
 将上述计算或状态约束集中写为：
 
 $$
-\operatorname{key}(t)=\big(r(e_{first}(t)),-n(e_{first}(t),t)\big),\qquad \mathrm{order}=\operatorname{sort}_{lex}(\operatorname{key}).
+\mathrm{key}(t)=\big(r(e_{first}(t)),-n(e_{first}(t),t)\big),\qquad \mathrm{order}=\mathrm{sort}_{lex}(\mathrm{key}).
 $$
 
-其中 $e_{first}(t)$ 是按实体入口次序首次关联到片段 $t$ 的实体，$\operatorname{sort}_{lex}$ 表示按二元键的字典序排序。
+其中 $e_{first}(t)$ 是按实体入口次序首次关联到片段 $t$ 的实体，$\mathrm{sort}_{lex}$ 表示按二元键的字典序排序。
 
 ```python
 def local_graph_context(entities, entity_chunks, relations):
@@ -90,7 +90,7 @@ LightRAG的双层检索名称容易混淆：低层关键词查实体向量，再
 将上述计算或状态约束集中写为：
 
 $$
-\pi=\operatorname{argsort}_{s_j>0}(-s_j),\qquad k=\max\left\{r:\sum_{j=1}^{r}c_{\pi_j}\le B\right\},\qquad \mathrm{selected}=\{a_{\pi_1},\ldots,a_{\pi_k}\}.
+\pi=\mathrm{argsort}_{s_j>0}(-s_j),\qquad k=\max\left\{r:\sum_{j=1}^{r}c_{\pi_j}\le B\right\},\qquad \mathrm{selected}=\{a_{\pi_1},\ldots,a_{\pi_k}\}.
 $$
 
 其中 $\pi$ 是正分要点的降序排列，$k$ 为预算允许的最长前缀；相同分数保持输入次序。

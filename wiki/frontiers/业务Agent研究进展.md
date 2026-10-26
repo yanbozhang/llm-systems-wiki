@@ -9,7 +9,7 @@ ICML 2026的《Structurally Aligned Subtask-Level Memory for Software Engineerin
 下面用一个教学检索规则解释阶段约束，不复现论文的完整记忆表示或学习算法：
 
 $$
-m^*=\arg\max_{m\in M:\,stage(m)=stage(t)}\operatorname{sim}(q,m)
+m^*=\arg\max_{m\in M:\,stage(m)=stage(t)}\mathrm{sim}(q,m)
 $$
 
 stage(t)是当前阶段。示例以词集合的Jaccard相似度代替真正的语义模型；先过滤阶段，再排序，而不是先挑最相似记录后忽略它属于哪一步。

@@ -32,7 +32,7 @@ token ID 经 embedding 和位置信息成为 $X\in\mathbb R^{B\times T\times C}$
 
 ### 知识点一：缩放、可见范围与稳定的因果注意力
 
-**问题与机制。** 为什么点积要除以平方根，而且屏蔽未来必须发生在归一化之前？令 $q,k\in\mathbb R^{d_k}$ 的分量相互独立、均值为零且方差为一。则 $\operatorname{Var}(q_i k_i)=1$，交叉协方差为零，所以 $\operatorname{Var}(q^Tk)=d_k$；除以 $\sqrt{d_k}$ 后方差回到一。这个推导解释初始化尺度，并不声称训练后分量仍然独立。得分过大时 softmax 接近单点，雅可比 $\partial a_i/\partial s_j=a_i(\mathbf1_{i=j}-a_j)$ 的许多元素接近零。[Transformer 缩放点积与因果掩码](https://arxiv.org/html/1706.03762v7#S3.SS2)
+**问题与机制。** 为什么点积要除以平方根，而且屏蔽未来必须发生在归一化之前？令 $q,k\in\mathbb R^{d_k}$ 的分量相互独立、均值为零且方差为一。则 $\mathrm{Var}(q_i k_i)=1$，交叉协方差为零，所以 $\mathrm{Var}(q^Tk)=d_k$；除以 $\sqrt{d_k}$ 后方差回到一。这个推导解释初始化尺度，并不声称训练后分量仍然独立。得分过大时 softmax 接近单点，雅可比 $\partial a_i/\partial s_j=a_i(\mathbf1_{i=j}-a_j)$ 的许多元素接近零。[Transformer 缩放点积与因果掩码](https://arxiv.org/html/1706.03762v7#S3.SS2)
 
 定义 $s_{ij}=q_i^Tk_j/\sqrt{d_k}$，$M_{ij}=0$（$j\le i$）或 $-\infty$（$j>i$）。输出为
 
@@ -84,7 +84,7 @@ flowchart LR
 **问题与机制。** 拆头不会凭空新增 token，也不是把同一个注意力结果平均 $H$ 次。输入先由学习得到的投影产生 $Q,K,V\in\mathbb R^{B\times T\times C}$，再重排为 `[B,H,T,dk]`。令通道索引 $c=h d_k+r$，则 $Q'_{b,h,t,r}=Q_{b,t,c}$。每头独立得到 $O_h=A_hV_h$，最后
 
 $$
-O_{b,t,:}=\operatorname{Concat}(O_{b,0,t,:},\ldots,O_{b,H-1,t,:})W_O,
+O_{b,t,:}=\mathrm{Concat}(O_{b,0,t,:},\ldots,O_{b,H-1,t,:})W_O,
 \qquad W_O\in\mathbb R^{C\times C}.
 $$
 

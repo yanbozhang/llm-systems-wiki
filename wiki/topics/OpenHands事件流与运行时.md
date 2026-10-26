@@ -40,7 +40,7 @@ OpenHands把模型决策、工具执行、环境反馈和界面展示连接成�
 将上述计算或状态约束集中写为：
 
 $$
-\operatorname{path}(h)=\operatorname{reverse}\big(h,p(h),p^2(h),\ldots,p^k(h)\big),\quad p^{k+1}(h)=\varnothing.
+\mathrm{path}(h)=\mathrm{reverse}\big(h,p(h),p^2(h),\ldots,p^k(h)\big),\quad p^{k+1}(h)=\varnothing.
 $$
 
 ```python
@@ -88,7 +88,7 @@ flowchart LR
 将上述计算或状态约束集中写为：
 
 $$
-P(A_r)=\big(\mathrm{assistant},[\operatorname{call}(a_1),\ldots,\operatorname{call}(a_k)]\big),\quad |\operatorname{tool\_calls}(P(A_r))|=k.
+P(A_r)=\big(\mathrm{assistant},[\mathrm{call}(a_1),\ldots,\mathrm{call}(a_k)]\big),\quad |\mathrm{tool\_calls}(P(A_r))|=k.
 $$
 
 ```python

@@ -36,7 +36,7 @@ MHA 取 $H_{kv}=H_q$，MQA 取 $H_{kv}=1$，GQA 在其间共享。查询投影�
 
 $$
 u(h)=\lfloor h/g\rfloor,\qquad
-A_{h,t,s}=\operatorname{softmax}_{s}\!\left(\frac{Q_{h,t,:}K_{\nu(h),s,:}^T}{\sqrt{d_h}}+M_{t,s}\right),
+A_{h,t,s}=\mathrm{softmax}_{s}\!\left(\frac{Q_{h,t,:}K_{\nu(h),s,:}^T}{\sqrt{d_h}}+M_{t,s}\right),
 \quad O_{h,t,:}=\sum_s A_{h,t,s}V_{\nu(h),s,:}.
 $$
 
@@ -161,7 +161,7 @@ def mean_pool_heads(head_vectors, kv_heads):
 
 代码将每头同形投影展平，并按相邻头分组。四行 `[[1,0],[-1,0],[2,4],[4,2]]` 合并为两头，得到 `[[0,0],[3,3]]`。前一组发生抵消，这是不可逆的信息损失。若保留原头数，组大小为一，输出回到原投影；这个边界可用于检查分组实现。
 
-为了说明权重均值不保持注意力，考虑两个头、两个位置、$q=1$，两头键分别为 `[a,0]` 与 `[-a,0]`。仅比较第一头，原来对第一个位置的权重是 $\sigma(a)$；合并后键为 `[0,0]`，变为 $1/2$。取 $a=\ln3$，权重从0.75变成0.5。即使 V 保持相同，输出也改变。一般有 $\operatorname{softmax}(\operatorname{mean}S_i)\ne\operatorname{mean}\operatorname{softmax}(S_i)$；对称特殊输入可能偶然相等，不能作为无损证明。
+为了说明权重均值不保持注意力，考虑两个头、两个位置、$q=1$，两头键分别为 `[a,0]` 与 `[-a,0]`。仅比较第一头，原来对第一个位置的权重是 $\sigma(a)$；合并后键为 `[0,0]`，变为 $1/2$。取 $a=\ln3$，权重从0.75变成0.5。即使 V 保持相同，输出也改变。一般有 $\mathrm{softmax}(\mathrm{mean}S_i)\ne\mathrm{mean}\mathrm{softmax}(S_i)$；对称特殊输入可能偶然相等，不能作为无损证明。
 
 ```mermaid
 flowchart LR

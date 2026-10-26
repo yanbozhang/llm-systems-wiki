@@ -74,12 +74,12 @@ flowchart LR
 
 ### 知识点二：唯一匹配与具体失败反馈限制错误传播
 
-修改“第几行”依赖最新文件状态；SEARCH式编辑则依赖旧文本唯一匹配。当前工具配置要求old_str逐字匹配且在文件中唯一。设匹配次数为 $c=\operatorname{count}(text,old)$，仅在 $c=1$且 $old\ne new$时应用替换；$c=0$提示重新阅读，$c>1$提示增加上下文，不猜测该改哪一个。
+修改“第几行”依赖最新文件状态；SEARCH式编辑则依赖旧文本唯一匹配。当前工具配置要求old_str逐字匹配且在文件中唯一。设匹配次数为 $c=\mathrm{count}(text,old)$，仅在 $c=1$且 $old\ne new$时应用替换；$c=0$提示重新阅读，$c>1$提示增加上下文，不猜测该改哪一个。
 
 将上述计算或状态约束集中写为：
 
 $$
-c=\operatorname{count}(text,old),\qquad \mathrm{apply}\iff (c=1)\land(old\ne new).
+c=\mathrm{count}(text,old),\qquad \mathrm{apply}\iff (c=1)\land(old\ne new).
 $$
 
 ```python

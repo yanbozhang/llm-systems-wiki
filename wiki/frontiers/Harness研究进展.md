@@ -7,7 +7,7 @@
 ICML 2026官方目录可确认RE-TRAC的会议归属；本轮实际读取的是arXiv v1的§4.1–4.2。论文将跨轨迹探索组织为递归过程，而非每轮都从原问题重新开始。它保留答案与分析结论、证据与来源核验、未决问题与探索轨迹三个方面。[会议记录](../../sources/library/2026-paper-harness-retrac/README.md) · [实际读取的论文版本](../../sources/library/2026-full-harness-retrac/README.md)
 
 $$
-S_t=\operatorname{Compress}(\tau_t,S_{t-1};\mathcal C)
+S_t=\mathrm{Compress}(\tau_t,S_{t-1};\mathcal C)
 $$
 
 τ_t是本轮轨迹，S_t是压缩后的状态，C是压缩规范。关键不只是缩短token，而是保留什么已经有依据、什么仍是假设，以及哪些方向已经尝试过。下面只演示结构化合并，不实现模型摘要或证据真实性判断。

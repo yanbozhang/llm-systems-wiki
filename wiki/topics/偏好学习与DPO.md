@@ -91,7 +91,7 @@ $$
 $$
 
 $$
-L=-\log\sigma(z)=\operatorname{softplus}(-z),\quad
+L=-\log\sigma(z)=\mathrm{softplus}(-z),\quad
 \frac{\partial L}{\partial\log\pi_\theta(y_w|x)}=-\beta\sigma(-z),\quad
 \frac{\partial L}{\partial\log\pi_\theta(y_l|x)}=+\beta\sigma(-z).
 $$

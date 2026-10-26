@@ -84,7 +84,7 @@ flowchart LR
 
 $$
 \rho=\exp(\log\pi_\theta-\log\pi_{old}),\quad
-f(\rho,A)=\min(\rho A,\operatorname{clip}(\rho,1-\varepsilon,1+\varepsilon)A),\quad
+f(\rho,A)=\min(\rho A,\mathrm{clip}(\rho,1-\varepsilon,1+\varepsilon)A),\quad
 \ell=-f.
 $$
 
