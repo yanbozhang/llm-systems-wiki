@@ -1,9 +1,9 @@
 {
-  "date": "2026-10-25",
-  "module": "benchmark",
-  "topic": "benchmark-protocol",
+  "date": "2026-10-26",
+  "module": "network",
+  "topic": "attention-heads",
   "reason": "七模块轮换；模块内按登记顺序持续推进",
-  "review_due": true,
-  "learning_objective": "能把模型、数据、提示、评分与预算写成明确的协议对象，并解释指纹能证明什么。",
-  "deliverable": "构造两个只在键顺序上不同的协议，核对指纹相同；再逐项改变提示、评分器或预算并记录身份变化。为train/dev/test各建三个ID，制造一个跨切分重叠与一个仅正文重复的反例。最后为四题分别记录两次通过、一次失败、一次错误，手算完整成功率和已评分准确率，并解释为何不能只发布较高的那个数字。"
+  "review_due": false,
+  "learning_objective": "计算Q到KV组映射",
+  "deliverable": "头映射、缓存预算和合并反例三张表"
 }

@@ -1,28 +1,7 @@
 {
-  "checked_at": "2026-10-25T10:50:53.643587+08:00",
-  "status": "changed",
-  "candidates": [
-    {
-      "id": "74783d20c4535eead69d5a389309768114a082f250ed2ae04c2982d2b70d81ac",
-      "feed_id": "osworld",
-      "entry_id": "tag:github.com,2008:Grit::Commit/044bc33901cb893808e3f91ebc9a17ed8e54b44c",
-      "title": "Merge pull request #665 from salma2vec/codex/fix-pymupdf-evaluator-di…",
-      "url": "https://github.com/xlang-ai/OSWorld/commit/044bc33901cb893808e3f91ebc9a17ed8e54b44c",
-      "updated": "2026-10-24T14:56:26Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "4929900e6092e9835871638f4514ed01511c5e91408ac65ca7a90d67d500bf8b",
-      "feed_id": "osworld",
-      "entry_id": "tag:github.com,2008:Grit::Commit/b7ca8ea4efd30a49b5859f0d97b6e3795758b24f",
-      "title": "fix(evaluator): keep PyMuPDF messages out of blog PDF result",
-      "url": "https://github.com/xlang-ai/OSWorld/commit/b7ca8ea4efd30a49b5859f0d97b6e3795758b24f",
-      "updated": "2026-10-23T19:53:38Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    }
-  ],
+  "checked_at": "2026-10-26T10:49:04.435254+08:00",
+  "status": "unchanged",
+  "candidates": [],
   "feeds": [
     {
       "feed_id": "transformers",
@@ -72,7 +51,7 @@
     {
       "feed_id": "osworld",
       "status": "ok",
-      "new_count": 2
+      "new_count": 0
     },
     {
       "feed_id": "bench-lm-eval",
