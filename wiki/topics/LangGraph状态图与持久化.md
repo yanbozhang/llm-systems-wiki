@@ -36,13 +36,13 @@ claim_ids: [claim-langgraph-merge-superstep-v1, claim-langgraph-checkpoint-write
 
 两个节点同时返回某字段时，不能默认“谁最后结束谁赢”。apply_writes明确先按任务路径排序，再把值聚合到通道。LastValue.update要求本步只有一个值，否则抛InvalidUpdateError；BinaryOperatorAggregate则使用operator归并，还包含Overwrite的特殊路径。
 
-设超步前通道值为 $x_c^{(t)}$，本步写集合按规定顺序成为 $w_{c,1},\ldots,w_{c,n}$。教学归并为
+设超步前通道值为 $x_c^{(t)}$ ，本步写集合按规定顺序成为 $w_{c,1},\ldots,w_{c,n}$ 。教学归并为
 
 $$
 x_c^{(t+1)}=R_c(x_c^{(t)},w_{c,1},\ldots,w_{c,n}).
 $$
 
-对sum，$R_c=x+\sum_iw_i$；对普通last，本页定义n=0保持原值、n=1赋新值、n>1报错。这与“任意取最后一个写入”完全不同。把冲突显式暴露，可以促使开发者选择符合业务含义的归并器。
+对sum， $R_c=x+\sum_iw_i$ ；对普通last，本页定义n=0保持原值、n=1赋新值、n>1报错。这与“任意取最后一个写入”完全不同。把冲突显式暴露，可以促使开发者选择符合业务含义的归并器。
 
 手算total初值1，节点a写2、b写3，sum得到6；last则拒绝。加法在此整数域满足结合与交换，输入完成顺序不影响结果。但列表拼接不交换，A后B和B后A不同；即使源码固定顺序，也应理解它是确定性规则，不是证明任意归并器都与顺序无关。
 
@@ -147,10 +147,10 @@ flowchart TD
 
 暂停不是保存Python函数调用栈。types.interrupt首次找不到恢复值时抛出GraphInterrupt；恢复后整个节点从头执行，scratchpad用interrupt_counter取得序号，先查此前的resume列表，再接收当前恢复值。官方Interrupts文档也明确警告不要更改节点内interrupt顺序。
 
-对固定问题序列 $q_0,\ldots,q_{m-1}$ 和已有答案 $a_0,\ldots,a_{k-1}$，本文的**恢复槽位模型**为
+对固定问题序列 $q_0,\ldots,q_{m-1}$ 和已有答案 $a_0,\ldots,a_{k-1}$ ，本文的**恢复槽位模型**为
 
 $$
-resume(q_i)=a_i\ (i<k),\qquad pause=q_k\ (k<m).
+resume(q_i)=a_i\ (i\lt k),\qquad pause=q_k\ (k\lt m).
 $$
 
 完成条件k=m，单位为interrupt次数。顺序改变会让同一个答案绑定到另一个问题；即使答案类型都是字符串，也可能静默变成业务错误。该提交的typed response_schema可以校验某些类型，但字典Schema路径不构造同样的TypeAdapter，不能笼统说任何Schema都自动验证恢复值。

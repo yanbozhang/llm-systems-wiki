@@ -22,26 +22,26 @@ Transformer 把“历史内容如何混合”和“下一个 token 如何选择�
 
 ## 前置知识
 
-需要矩阵乘法、条件概率、方差与 softmax。本文输入按行放 token，序列长度为 $T$，隐藏宽度为 $C$，头数为 $H$，每头键宽度 $d_k=C/H$；$B$ 是批量大小。源码的线性层权重通常存成 `[out,in]`，数学行向量式写作 $XW$ 时要作转置，不能仅凭打印出的形状判断乘法错误。
+需要矩阵乘法、条件概率、方差与 softmax。本文输入按行放 token，序列长度为 $T$ ，隐藏宽度为 $C$ ，头数为 $H$ ，每头键宽度 $d_k=C/H$ ； $B$ 是批量大小。源码的线性层权重通常存成 `[out,in]`，数学行向量式写作 $XW$ 时要作转置，不能仅凭打印出的形状判断乘法错误。
 
 ## 基本机制
 
-token ID 经 embedding 和位置信息成为 $X\in\mathbb R^{B\times T\times C}$。每层得到 Q/K/V，用注意力跨位置混合，再由逐位置 FFN 变换特征，残差保留输入通路。最后的词表 logits $z_t$ 描述 $p(x_{t+1}\mid x_{\le t})$，并非 $x_t$ 的标签。该版本 nanoGPT 的 `GPT.forward` 在训练时投影全部位置；推理时只投影末位置。原 Transformer 的 Post-Norm 与这里的 Pre-Norm 不相同，不能把具体模型代码当作论文架构逐行复刻。[nanoGPT Block 与 GPT.forward](https://github.com/karpathy/nanoGPT/blob/3adf61e154c3fe3fca428ad6bc3818b27a3b8291/model.py#L94-L193)
+token ID 经 embedding 和位置信息成为 $X\in\mathbb R^{B\times T\times C}$ 。每层得到 Q/K/V，用注意力跨位置混合，再由逐位置 FFN 变换特征，残差保留输入通路。最后的词表 logits $z_t$ 描述 $p(x_{t+1}\mid x_{\le t})$ ，并非 $x_t$ 的标签。该版本 nanoGPT 的 `GPT.forward` 在训练时投影全部位置；推理时只投影末位置。原 Transformer 的 Post-Norm 与这里的 Pre-Norm 不相同，不能把具体模型代码当作论文架构逐行复刻。[nanoGPT Block 与 GPT.forward](https://github.com/karpathy/nanoGPT/blob/3adf61e154c3fe3fca428ad6bc3818b27a3b8291/model.py#L94-L193)
 
 ## 推导或示例
 
 ### 知识点一：缩放、可见范围与稳定的因果注意力
 
-**问题与机制。** 为什么点积要除以平方根，而且屏蔽未来必须发生在归一化之前？令 $q,k\in\mathbb R^{d_k}$ 的分量相互独立、均值为零且方差为一。则 $\mathrm{Var}(q_i k_i)=1$，交叉协方差为零，所以 $\mathrm{Var}(q^Tk)=d_k$；除以 $\sqrt{d_k}$ 后方差回到一。这个推导解释初始化尺度，并不声称训练后分量仍然独立。得分过大时 softmax 接近单点，雅可比 $\partial a_i/\partial s_j=a_i(\mathbf1_{i=j}-a_j)$ 的许多元素接近零。[Transformer 缩放点积与因果掩码](https://arxiv.org/html/1706.03762v7#S3.SS2)
+**问题与机制。** 为什么点积要除以平方根，而且屏蔽未来必须发生在归一化之前？令 $q,k\in\mathbb R^{d_k}$ 的分量相互独立、均值为零且方差为一。则 $\mathrm{Var}(q_i k_i)=1$ ，交叉协方差为零，所以 $\mathrm{Var}(q^Tk)=d_k$ ；除以 $\sqrt{d_k}$ 后方差回到一。这个推导解释初始化尺度，并不声称训练后分量仍然独立。得分过大时 softmax 接近单点，雅可比 $\partial a_i/\partial s_j=a_i(\mathbf1_{i=j}-a_j)$ 的许多元素接近零。[Transformer 缩放点积与因果掩码](https://arxiv.org/html/1706.03762v7#S3.SS2)
 
-定义 $s_{ij}=q_i^Tk_j/\sqrt{d_k}$，$M_{ij}=0$（$j\le i$）或 $-\infty$（$j>i$）。输出为
+定义 $s_{ij}=q_i^Tk_j/\sqrt{d_k}$ ， $M_{ij}=0$ （ $j\le i$ ）或 $-\infty$ （ $j\gt i$ ）。输出为
 
 $$
 a_{ij}=\frac{\exp(s_{ij}+M_{ij}-c_i)}{\sum_{r\le i}\exp(s_{ir}-c_i)},\quad
 c_i=\max_{r\le i}s_{ir},\quad o_i=\sum_{j\le i}a_{ij}v_j.
 $$
 
-$c_i$ 是同一行的常数，会在分子分母约去；它防止指数上溢。教学实现直接截取可见键，等价于先加 $-\infty$，然后把未来权重补零。输入 Q/K 为 `[T,dk]`，V 为 `[T,dv]`；返回 `[T,T]` 权重与 `[T,dv]` 输出。
+$c_i$ 是同一行的常数，会在分子分母约去；它防止指数上溢。教学实现直接截取可见键，等价于先加 $-\infty$ ，然后把未来权重补零。输入 Q/K 为 `[T,dk]`，V 为 `[T,dv]`；返回 `[T,T]` 权重与 `[T,dv]` 输出。
 
 ```python
 def causal_attention(q, k, v):
@@ -64,7 +64,7 @@ def causal_attention(q, k, v):
     return {"weights": weights, "output": output}
 ```
 
-逐步核算第二行：取 $d_k=4$、未缩放分数 `[2,0,1]`、V 的一个通道为 `[1,3,9]`。可见分数 `[1,0]` 的权重为 `[0.731059,0.268941]`，输出约 $1.537883$；第三项不参与分母。若先对三个得分 softmax 再把第三项置零，剩余权重和只有约 $0.692804$，输出也改变。这个反例能区分“数值看起来合理”和“分布定义正确”。
+逐步核算第二行：取 $d_k=4$ 、未缩放分数 `[2,0,1]`、V 的一个通道为 `[1,3,9]`。可见分数 `[1,0]` 的权重为 `[0.731059,0.268941]`，输出约 $1.537883$ ；第三项不参与分母。若先对三个得分 softmax 再把第三项置零，剩余权重和只有约 $0.692804$ ，输出也改变。这个反例能区分“数值看起来合理”和“分布定义正确”。
 
 ```mermaid
 flowchart LR
@@ -81,14 +81,14 @@ flowchart LR
 
 ### 知识点二：多头的索引变换与输出投影
 
-**问题与机制。** 拆头不会凭空新增 token，也不是把同一个注意力结果平均 $H$ 次。输入先由学习得到的投影产生 $Q,K,V\in\mathbb R^{B\times T\times C}$，再重排为 `[B,H,T,dk]`。令通道索引 $c=h d_k+r$，则 $Q'_{b,h,t,r}=Q_{b,t,c}$。每头独立得到 $O_h=A_hV_h$，最后
+**问题与机制。** 拆头不会凭空新增 token，也不是把同一个注意力结果平均 $H$ 次。输入先由学习得到的投影产生 $Q,K,V\in\mathbb R^{B\times T\times C}$ ，再重排为 `[B,H,T,dk]`。令通道索引 $c=h d_k+r$ ，则 $Q^\prime_{b,h,t,r}=Q_{b,t,c}$ 。每头独立得到 $O_h=A_hV_h$ ，最后
 
 $$
 O_{b,t,:}=\mathrm{Concat}(O_{b,0,t,:},\ldots,O_{b,H-1,t,:})W_O,
 \qquad W_O\in\mathbb R^{C\times C}.
 $$
 
-每头有自己的相似度分布，因此 $H$ 个 `[T,T]` 矩阵不能合成一个固定平均权重来代替；$W_O$ 还会混合不同头的通道。投影、reshape、转置、连接四者各有职责。[Transformer 多头注意力](https://arxiv.org/html/1706.03762v7#S3.SS2.SSS2)
+每头有自己的相似度分布，因此 $H$ 个 `[T,T]` 矩阵不能合成一个固定平均权重来代替； $W_O$ 还会混合不同头的通道。投影、reshape、转置、连接四者各有职责。[Transformer 多头注意力](https://arxiv.org/html/1706.03762v7#S3.SS2.SSS2)
 
 ```python
 def split_merge_heads(rows, heads):
@@ -104,7 +104,7 @@ def split_merge_heads(rows, heads):
     return {"heads": split, "merged": merged, "shape": [heads, len(rows), d]}
 ```
 
-函数只演示元素索引。输入 `[[0,1,2,3],[4,5,6,7]]`、$H=2$ 时，第一头为 `[[0,1],[4,5]]`，第二头为 `[[2,3],[6,7]]`；还原后必须与输入逐元素一致。实际调用应分别把投影后的 Q/K/V 拆头，再调用各头的因果注意力，最后连接输出。代码返回 `shape=[2,2,2]` 只是这一小例；旧页的 $B=1,T=3,C=8,H=2$ 对应 `[1,2,3,4]`。
+函数只演示元素索引。输入 `[[0,1,2,3],[4,5,6,7]]`、 $H=2$ 时，第一头为 `[[0,1],[4,5]]`，第二头为 `[[2,3],[6,7]]`；还原后必须与输入逐元素一致。实际调用应分别把投影后的 Q/K/V 拆头，再调用各头的因果注意力，最后连接输出。代码返回 `shape=[2,2,2]` 只是这一小例；旧页的 $B=1,T=3,C=8,H=2$ 对应 `[1,2,3,4]`。
 
 ```mermaid
 flowchart LR
@@ -124,13 +124,13 @@ flowchart LR
 **问题与机制。** 无循环神经网络不意味着普通自回归生成可以同时决定所有未来 token。链式法则为
 
 $$
-p_\theta(x_{1:T})=\prod_{t=1}^{T}p_\theta(x_t\mid x_{<t}),\qquad
-\log p_\theta(x_{1:T})=\sum_t\log p_\theta(x_t\mid x_{<t}).
+p_\theta(x_{1:T})=\prod_{t=1}^{T}p_\theta(x_t\mid x_{\lt t}),\qquad
+\log p_\theta(x_{1:T})=\sum_t\log p_\theta(x_t\mid x_{\lt t}).
 $$
 
 teacher forcing 在训练时已知全部真实历史，可以一次带因果掩码的前向得到所有条件项；生成时 $x_t$ 尚未得到，下一项的输入要等当前抽样。下例将真实网络简化成“末 token→下一 token logits”的转移表，保留状态依赖，便于重放每一步。它不是用一阶马尔可夫链描述真实 Transformer 的全部记忆。[Transformer 自回归解码说明](https://arxiv.org/html/1706.03762v7#S3)
 
-设温度 $\tau>0$，保留集合 $K$ 由 top-k 阈值确定，则采样分布是 $q_i=\mathbf1_{i\in K}\exp(z_i/\tau)/\sum_{j\in K}\exp(z_j/\tau)$。$\tau$ 不改变 logits 排序，却改变概率集中程度；top-k 删除支持集外的事件，不能把它的概率当作原模型似然。下面把随机数显式作为 `draws` 输入，按累积概率选 token。
+设温度 $\tau\gt 0$ ，保留集合 $K$ 由 top-k 阈值确定，则采样分布是 $q_i=\mathbf1_{i\in K}\exp(z_i/\tau)/\sum_{j\in K}\exp(z_j/\tau)$ 。 $\tau$ 不改变 logits 排序，却改变概率集中程度；top-k 删除支持集外的事件，不能把它的概率当作原模型似然。下面把随机数显式作为 `draws` 输入，按累积概率选 token。
 
 ```python
 def generate_tokens(transition_logits, start, draws, temperature=1.0, top_k=None):
@@ -165,7 +165,7 @@ def generate_tokens(transition_logits, start, draws, temperature=1.0, top_k=None
     return {"tokens": tokens, "trace": trace}
 ```
 
-输入两行 logits `[0,ln3]` 与 `[ln4,0]`，初始 token 为0、两次 draw 均为0.5：第一步分布 `[0.25,0.75]` 选择1；第二步查第1行，分布 `[0.8,0.2]` 选择0，得到 `[0,1,0]`。若错误地复用初始行，第二步仍选1。这里序列的两步条件概率乘积为 $0.75\times0.8=0.6$，不是两个概率相加。
+输入两行 logits `[0,ln3]` 与 `[ln4,0]`，初始 token 为0、两次 draw 均为0.5：第一步分布 `[0.25,0.75]` 选择1；第二步查第1行，分布 `[0.8,0.2]` 选择0，得到 `[0,1,0]`。若错误地复用初始行，第二步仍选1。这里序列的两步条件概率乘积为 $0.75\times0.8=0.6$ ，不是两个概率相加。
 
 ```mermaid
 flowchart LR

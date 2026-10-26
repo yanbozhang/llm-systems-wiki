@@ -35,11 +35,13 @@ Aider没有在本页被包装为某个未核验论文算法的严格复现：公
 
 RepoMap不是目录树，也不是每个文件各生成一份自然语言摘要。Aider从语法树提取定义与引用标签，构造“引用文件→定义文件”的带符号多重边，再给当前聊天相关文件和提到的标识符增加权重。该版引用次数经过平方根缩放，避免高频但低价值名字完全主导；提到的名字、下划线开头和定义过多的通用名字还存在不同权重修正。
 
-令 $w_{uv}$为边权，$P_{uv}=w_{uv}/\sum_jw_{uj}$，个性化分布为 $p$，阻尼 $\alpha\in(0,1)$。PageRank迭代为：
+令 $w_{uv}$ 为边权， $P_{uv}=w_{uv}/\sum_jw_{uj}$ ，个性化分布为 $p$ ，阻尼 $\alpha\in(0,1)$ 。PageRank迭代为：
 
-$$r_{t+1}(v)=(1-\alpha)p(v)+\alpha\sum_{u:out(u)>0}r_t(u)P_{uv}+\alpha d_t p(v),$$
+$$
+r_{t+1}(v)=(1-\alpha)p(v)+\alpha\sum_{u:out(u)\gt 0}r_t(u)P_{uv}+\alpha d_t p(v),
+$$
 
-其中 $d_t$是无出边节点的概率质量。最后一项将悬空节点质量送回个性化分布，否则每轮总质量会流失。文件排名得到后，该版把 $r(u)$按出边权重再分配，累加到 `(定义文件,符号)`，所以符号排序不简单等于其文件的PageRank。
+其中 $d_t$ 是无出边节点的概率质量。最后一项将悬空节点质量送回个性化分布，否则每轮总质量会流失。文件排名得到后，该版把 $r(u)$ 按出边权重再分配，累加到 `(定义文件,符号)`，所以符号排序不简单等于其文件的PageRank。
 
 ```python
 def repo_map(files, edges, personalization, symbol_costs, budget, damping=0.85, iterations=50):
@@ -85,7 +87,7 @@ def repo_map(files, edges, personalization, symbol_costs, budget, damping=0.85, 
             "selected": selected, "remaining_tokens": remaining, "residual_l1": residual}
 ```
 
-函数对给定图迭代 $I$轮，核心成本 $O(I(|V|+|E|))$，再按符号得分排序。两节点A→B、个性化全在A且B悬空，取 $\alpha=0.85$，稳定方程为 $r_A=0.15+0.85r_B,r_B=0.85r_A$，得到约0.5405和0.4595，总和1。示例返回残差说明只是有限迭代，不假装得到精确解析值。
+函数对给定图迭代 $I$ 轮，核心成本 $O(I(|V|+|E|))$ ，再按符号得分排序。两节点A→B、个性化全在A且B悬空，取 $\alpha=0.85$ ，稳定方程为 $r_A=0.15+0.85r_B,r_B=0.85r_A$ ，得到约0.5405和0.4595，总和1。示例返回残差说明只是有限迭代，不假装得到精确解析值。
 
 ```mermaid
 flowchart TD
@@ -103,12 +105,12 @@ flowchart TD
 
 ### 知识点二：SEARCH/REPLACE是有匹配策略的编辑协议
 
-Aider的diff格式要求模型给文件路径和SEARCH/REPLACE块，用局部旧文本说明要替换哪里。协议与Git unified diff不同：没有必要靠行号定位，但必须找到当前文件中的旧行块。令原文行列为 $L$，搜索块为 $S$，长度 $m$，精确匹配集合为 $M=\{i:L[i:i+m]=S\}$。该版 `perfect_replace`从前向后扫描，找到第一项即返回；它不会像前一篇SWE-agent工具一样在 $|M|>1$时拒绝。
+Aider的diff格式要求模型给文件路径和SEARCH/REPLACE块，用局部旧文本说明要替换哪里。协议与Git unified diff不同：没有必要靠行号定位，但必须找到当前文件中的旧行块。令原文行列为 $L$ ，搜索块为 $S$ ，长度 $m$ ，精确匹配集合为 $M=\lbrace i:L[i:i+m]=S\rbrace$ 。该版 `perfect_replace`从前向后扫描，找到第一项即返回；它不会像前一篇SWE-agent工具一样在 $|M|\gt 1$ 时拒绝。
 
 将上述计算或状态约束集中写为：
 
 $$
-M=\{i:L[i:i+m]=S\},\qquad i_{replace}=\min M\quad (M\ne\varnothing).
+M=\lbrace i:L[i:i+m]=S\rbrace ,\qquad i_{replace}=\min M\quad (M\ne\varnothing).
 $$
 
 ```python
@@ -147,7 +149,7 @@ def search_replace(text, search, replacement):
     return {"text": text, "mode": "no_match", "match_count": 0, "start_line": None}
 ```
 
-`x = 1`出现两次时，exact模式只改首个，示例额外返回match_count让歧义可见。若文件为四空格缩进而SEARCH缺少统一外层缩进，回退可恢复该缩进再写REPLACE；若各行缩进差不一致或内容不同，则no_match并保留原文。代码为纯字符串模型，行数 $n$、搜索长 $m$时朴素扫描约 $O(nm)$，没有真实文件副作用。
+`x = 1`出现两次时，exact模式只改首个，示例额外返回match_count让歧义可见。若文件为四空格缩进而SEARCH缺少统一外层缩进，回退可恢复该缩进再写REPLACE；若各行缩进差不一致或内容不同，则no_match并保留原文。代码为纯字符串模型，行数 $n$ 、搜索长 $m$ 时朴素扫描约 $O(nm)$ ，没有真实文件副作用。
 
 ```mermaid
 flowchart LR
@@ -166,7 +168,7 @@ flowchart LR
 
 ### 知识点三：文件级检查点将用户改动与智能体改动分开
 
-编辑器需要知道哪些改动在智能体开始前就存在。设用户已有未提交改动文件集为 $D$，本轮允许编辑的文件集为 $E$。在启用相关选项时，编辑前检查点涉及 $D\cap E$；与本轮无关的dirty文件 $D\setminus E$不应被这个计划顺手纳入。编辑后才为本轮 $E$的实际改动形成后续记录。
+编辑器需要知道哪些改动在智能体开始前就存在。设用户已有未提交改动文件集为 $D$ ，本轮允许编辑的文件集为 $E$ 。在启用相关选项时，编辑前检查点涉及 $D\cap E$ ；与本轮无关的dirty文件 $D\setminus E$ 不应被这个计划顺手纳入。编辑后才为本轮 $E$ 的实际改动形成后续记录。
 
 将上述计算或状态约束集中写为：
 

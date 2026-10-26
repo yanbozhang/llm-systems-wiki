@@ -22,7 +22,7 @@ DPO 用同一提示下的偏好回答与非偏好回答，优化当前策略相�
 
 ## 前置知识
 
-需要条件概率、对数、KL 散度与链式法则。记提示为 x，偏好回答为 $y_w$，非偏好回答为 $y_l$；$\pi_\theta$ 是当前模型，$\pi_{ref}$ 是参考策略，$\beta>0$ 控制 KL 正则的尺度。本文先用有限回答空间推导，再连接语言模型的 token 序列；数值例子没有真正优化模型参数。
+需要条件概率、对数、KL 散度与链式法则。记提示为 x，偏好回答为 $y_w$ ，非偏好回答为 $y_l$ ； $\pi_\theta$ 是当前模型， $\pi_{ref}$ 是参考策略， $\beta\gt 0$ 控制 KL 正则的尺度。本文先用有限回答空间推导，再连接语言模型的 token 序列；数值例子没有真正优化模型参数。
 
 ## 基本机制
 
@@ -32,21 +32,21 @@ DPO 用同一提示下的偏好回答与非偏好回答，优化当前策略相�
 
 ### 知识点一：KL最优策略与配分函数抵消
 
-**问题与机制。** 奖励训练与直接偏好拟合如何联系？固定 x，令候选回答概率为 $p_y$，参考概率为 $q_y>0$、奖励为 $r_y$，求
+**问题与机制。** 奖励训练与直接偏好拟合如何联系？固定 x，令候选回答概率为 $p_y$ ，参考概率为 $q_y\gt 0$ 、奖励为 $r_y$ ，求
 
 $$
 \max_p\sum_y p_y r_y-\beta\sum_y p_y\log(p_y/q_y),\qquad \sum_yp_y=1.
 $$
 
-引入约束乘子 $\lambda$，对 $p_y$ 求导：$r_y-\beta(\log(p_y/q_y)+1)+\lambda=0$。整理并归一化得
+引入约束乘子 $\lambda$ ，对 $p_y$ 求导： $r_y-\beta(\log(p_y/q_y)+1)+\lambda=0$ 。整理并归一化得
 
 $$
-p_y^*=q_y e^{r_y/\beta}/Z(x),\quad
+p_y^\ast =q_y e^{r_y/\beta}/Z(x),\quad
 Z(x)=\sum_yq_y e^{r_y/\beta},\quad
-r_y=\beta\log(p_y^*/q_y)+\beta\log Z(x).
+r_y=\beta\log(p_y^\ast /q_y)+\beta\log Z(x).
 $$
 
-Bradley–Terry 模型令偏好概率为 $P(y_w\succ y_l\mid x)=\sigma(r_w-r_l)$。同一 x 下，两个奖励的 $\beta\log Z(x)$ 相消；代入后只剩当前/参考 log 比值的差。DPO 于是用参数模型 $\pi_\theta$ 拟合这种偏好似然。[DPO 最优策略与奖励重参数化](https://arxiv.org/html/2305.18290v3#S4)
+Bradley–Terry 模型令偏好概率为 $P(y_w\succ y_l\mid x)=\sigma(r_w-r_l)$ 。同一 x 下，两个奖励的 $\beta\log Z(x)$ 相消；代入后只剩当前/参考 log 比值的差。DPO 于是用参数模型 $\pi_\theta$ 拟合这种偏好似然。[DPO 最优策略与奖励重参数化](https://arxiv.org/html/2305.18290v3#S4)
 
 ```python
 def optimal_policy(reference, rewards, beta=1.0):
@@ -64,9 +64,9 @@ def optimal_policy(reference, rewards, beta=1.0):
     return {"policy": [p / total for p in shifted], "log_partition": peak + math.log(total)}
 ```
 
-函数在有限候选空间内用稳定 softmax 计算 $p^*$，并返回 $\log Z$。参考 `[0.5,0.5]`，奖励 `[ln3,0]`，$\beta=1$ 时，未归一化权重 `[1.5,0.5]`，得到 `[0.75,0.25]`。给两个奖励同时加常数7，$Z$ 乘 $e^7$，策略不变；隐式奖励只在同一提示内的差值上可辨认。
+函数在有限候选空间内用稳定 softmax 计算 $p^\ast$ ，并返回 $\log Z$ 。参考 `[0.5,0.5]`，奖励 `[ln3,0]`， $\beta=1$ 时，未归一化权重 `[1.5,0.5]`，得到 `[0.75,0.25]`。给两个奖励同时加常数7， $Z$ 乘 $e^7$ ，策略不变；隐式奖励只在同一提示内的差值上可辨认。
 
-真实语言模型的回答空间巨大，不能像这个二元素表一样枚举所有 y 计算 Z；DPO 恰好通过偏好差值避开它。这里的函数是验证解析关系，不是 DPOTrainer 实际运行的枚举算法。若偏好对来自不同提示 $x_1,x_2$，两个 Z 一般不同，不能直接套用上述抵消。
+真实语言模型的回答空间巨大，不能像这个二元素表一样枚举所有 y 计算 Z；DPO 恰好通过偏好差值避开它。这里的函数是验证解析关系，不是 DPOTrainer 实际运行的枚举算法。若偏好对来自不同提示 $x_1,x_2$ ，两个 Z 一般不同，不能直接套用上述抵消。
 
 ```mermaid
 flowchart LR
@@ -96,7 +96,7 @@ L=-\log\sigma(z)=\mathrm{softplus}(-z),\quad
 \frac{\partial L}{\partial\log\pi_\theta(y_l|x)}=+\beta\sigma(-z).
 $$
 
-再对参数应用链式法则，得到 $-\beta\sigma(-z)(\nabla\log\pi_\theta(y_w)-\nabla\log\pi_\theta(y_l))$。偏好差距反向或不足时权重较大；正 margin 很大时梯度趋小。这里两个 logp 是理解局部偏导的中间量，真实网络参数共享，不能把它们当成可以独立拨动的旋钮。[DPO 目标与更新梯度](https://arxiv.org/html/2305.18290v3#S4)
+再对参数应用链式法则，得到 $-\beta\sigma(-z)(\nabla\log\pi_\theta(y_w)-\nabla\log\pi_\theta(y_l))$ 。偏好差距反向或不足时权重较大；正 margin 很大时梯度趋小。这里两个 logp 是理解局部偏导的中间量，真实网络参数共享，不能把它们当成可以独立拨动的旋钮。[DPO 目标与更新梯度](https://arxiv.org/html/2305.18290v3#S4)
 
 ```python
 def dpo_loss(chosen_logp, rejected_logp, ref_chosen_logp, ref_rejected_logp, beta=0.1):
@@ -113,7 +113,7 @@ def dpo_loss(chosen_logp, rejected_logp, ref_chosen_logp, ref_rejected_logp, bet
             "grad_rejected_logp": beta * wrong_probability}
 ```
 
-当当前与参考完全相同，$\Delta=0,L=\ln2$；$\beta=0.1$ 时两项偏导分别为-0.05、0.05。当 $z=\ln3$，偏好概率为0.75，损失为 $\ln(4/3)$；实现用 `max(0,-z)+log1p(exp(-abs(z)))`，避免直接计算极大指数。参考模型在这些偏导中保持固定。
+当当前与参考完全相同， $\Delta=0,L=\ln2$ ； $\beta=0.1$ 时两项偏导分别为-0.05、0.05。当 $z=\ln3$ ，偏好概率为0.75，损失为 $\ln(4/3)$ ；实现用 `max(0,-z)+log1p(exp(-abs(z)))`，避免直接计算极大指数。参考模型在这些偏导中保持固定。
 
 一个绝对概率反例：固定参考，某次更新让 chosen logp 下降0.1、rejected logp 下降0.5，则 $\Delta$ 增加0.4，DPO loss 下降，尽管 chosen 的绝对概率也下降。回答空间还有其他序列可吸收概率质量，因此这并不违反归一化。仅看 chosen 概率或奖励曲线不足以判断训练达成了什么，还要看 pair margin、独立任务与长度分层。
 
@@ -129,18 +129,18 @@ flowchart LR
 
 **源码定位。** 该版本标准 `sigmoid` 分支是 `-F.logsigmoid(beta*delta_score)`；它本身没有将 label_smoothing 混入这个分支。其他 loss 类型必须另查公式和参数，不能把 API 有某参数就解释成全部目标均使用它。[TRL 标准sigmoid实现](https://github.com/huggingface/trl/blob/1117c3b9c1632ee9814c30f6c9fc884b792a54e5/trl/trainer/dpo_trainer.py#L1435-L1447) [TRL 各loss类型说明](https://github.com/huggingface/trl/blob/1117c3b9c1632ee9814c30f6c9fc884b792a54e5/docs/source/dpo_trainer.md)
 
-**条件与反例。** 大 beta 会改变 margin 和梯度饱和区，但“beta越大每个样本梯度都越大”不成立，因为还有 $\sigma(-\beta\Delta)$。若两个答案都错、chosen 只是更流畅，梯度会强化该相对偏好而不会自动发明事实监督。需要另外的正确性依据和标签协议，不能把偏好胜率当成事实正确率。
+**条件与反例。** 大 beta 会改变 margin 和梯度饱和区，但“beta越大每个样本梯度都越大”不成立，因为还有 $\sigma(-\beta\Delta)$ 。若两个答案都错、chosen 只是更流畅，梯度会强化该相对偏好而不会自动发明事实监督。需要另外的正确性依据和标签协议，不能把偏好胜率当成事实正确率。
 
 ### 知识点三：序列log概率、回复mask与长度偏差
 
-**问题与机制。** 从 token logp 到 DPO 标量时该求和还是平均？对完整回答 $y_{1:T}$，链式法则给出
+**问题与机制。** 从 token logp 到 DPO 标量时该求和还是平均？对完整回答 $y_{1:T}$ ，链式法则给出
 
 $$
-\log\pi(y|x)=\sum_{t=1}^{T}\log\pi(y_t|x,y_{<t}),\quad
+\log\pi(y|x)=\sum_{t=1}^{T}\log\pi(y_t|x,y_{\lt t}),\quad
 R(y)=\sum_tm_t(\log\pi_\theta(y_t|\cdot)-\log\pi_{ref}(y_t|\cdot)).
 $$
 
-mask 应保留回复目标，排除 prompt、padding，并与下一 token logits 对齐；包含 EOS 的方式也需两模型一致。标准 DPO 使用序列 log 概率和。若改为 $R(y)/T$，就改变了目标和长度权重，不能称为无影响的数值稳定化。[DPO 以回答概率定义的目标](https://arxiv.org/html/2305.18290v3#S4)
+mask 应保留回复目标，排除 prompt、padding，并与下一 token logits 对齐；包含 EOS 的方式也需两模型一致。标准 DPO 使用序列 log 概率和。若改为 $R(y)/T$ ，就改变了目标和长度权重，不能称为无影响的数值稳定化。[DPO 以回答概率定义的目标](https://arxiv.org/html/2305.18290v3#S4)
 
 ```python
 def completion_logratio(policy_logps, reference_logps, mask):
@@ -189,7 +189,7 @@ flowchart LR
 
 ## 掌握标准
 
-能从拉格朗日一阶条件得到 $q e^{r/\beta}/Z$；能解释为什么必须是同提示的奖励差；能正确写出两个偏导符号；能用数值证明求和改均值会改变目标。能指出参考身份、模板和mask是哪一版，而不是仅说“跑了DPO”。
+能从拉格朗日一阶条件得到 $q e^{r/\beta}/Z$ ；能解释为什么必须是同提示的奖励差；能正确写出两个偏导符号；能用数值证明求和改均值会改变目标。能指出参考身份、模板和mask是哪一版，而不是仅说“跑了DPO”。
 
 ## 源码与后续阅读
 

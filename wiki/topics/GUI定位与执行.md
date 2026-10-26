@@ -34,7 +34,7 @@ SeeClick将GUI grounding作为独立能力，ScreenSpot用预测点是否落在�
 
 ### 知识点一：展示坐标到设备坐标需要完整变换
 
-截图可能被缩小显示、居中留白或裁剪。设展示内容矩形左上角为 $(v_x,v_y)$、尺寸 $(v_w,v_h)$；设备对应裁剪区域为 $(d_x,d_y,d_w,d_h)$。对展示点 $(x,y)$，先归一化再映射：
+截图可能被缩小显示、居中留白或裁剪。设展示内容矩形左上角为 $(v_x,v_y)$ 、尺寸 $(v_w,v_h)$ ；设备对应裁剪区域为 $(d_x,d_y,d_w,d_h)$ 。对展示点 $(x,y)$ ，先归一化再映射：
 
 $$
 u=(x-v_x)/v_w,\quad v=(y-v_y)/v_h,
@@ -89,13 +89,13 @@ flowchart TD
 
 ### 知识点二：观测有效性是动作执行前的条件
 
-坐标“算得对”不意味着“现在可点”。令观测为 $o_t=(image_t,geometry_t,scroll_t,overlay_t,revision_t,\tau_t)$，其中时间戳 $\tau_t$ 与当前时间单位相同。本文的**保守执行条件**是
+坐标“算得对”不意味着“现在可点”。令观测为 $o_t=(image_t,geometry_t,scroll_t,overlay_t,revision_t,\tau_t)$ ，其中时间戳 $\tau_t$ 与当前时间单位相同。本文的**保守执行条件**是
 
 $$
-valid(o_t,x)=sameLayout\land sameGeometry\land sameScroll\land sameOverlay\land(0\le now-\tau_t<\Delta).
+valid(o_t,x)=sameLayout\land sameGeometry\land sameScroll\land sameOverlay\land(0\le now-\tau_t\lt \Delta).
 $$
 
-$\Delta$为教学有效期阈值，不是某篇论文估计的通用安全时长。任一布局指纹变化就需要重新定位；仅年龄过大但其他指纹未变时重新观察；界面明确忙碌时先等待。没有可靠指纹的系统只能用新截图等其他证据重新确认，不能因为“过了很短时间”就证明按钮没动。
+$\Delta$ 为教学有效期阈值，不是某篇论文估计的通用安全时长。任一布局指纹变化就需要重新定位；仅年龄过大但其他指纹未变时重新观察；界面明确忙碌时先等待。没有可靠指纹的系统只能用新截图等其他证据重新确认，不能因为“过了很短时间”就证明按钮没动。
 
 例如定位时页面滚动偏移为0，执行前变成600，旧按钮点即使仍在屏幕内也不再对应目标。遮挡弹窗则可能让同一坐标命中弹窗确认按钮；这不是缩放误差。保持坐标身份与观测身份绑定，才能把布局变化与模型定位错误分开。
 

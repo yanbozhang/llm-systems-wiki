@@ -36,7 +36,7 @@ anthropics/claude-code提交 `318b7e6ac4e726e88a4ad326214866a93c373b1b` 的READM
 
 官方描述回答“产品如何工作”，SDK源码回答“外部应用如何接入”。SubprocessCLITransport._build_command构造CLI参数，包含stream-json输出；connect负责启动子进程。ClaudeSDKClient.query向传输写入用户消息，receive_response逐条产出消息，遇到ResultMessage后返回。这些都是公开SDK代码，不是客户端核心模型循环的源码。
 
-将一次响应的消息序列记为 $e_1,\ldots,e_n$，首个result的位置为 $k=\min\{i:type(e_i)=result\}$，本页的**读取窗口模型**为
+将一次响应的消息序列记为 $e_1,\ldots,e_n$ ，首个result的位置为 $k=\min\lbrace i:type(e_i)=result\rbrace$ ，本页的**读取窗口模型**为
 
 $$
 W(e)=e_{1:k},\qquad responseComplete=\mathbf1[k\text{存在}].
@@ -86,7 +86,7 @@ SDK Query.initialize为hook分配callback ID，向CLI发送matcher和回调ID配
 官方Hooks参考中，PreToolUse发生在工具执行前，可以给出决策。本文将控制返回建模为
 
 $$
-reply=(requestId,transportStatus,decision),\quad decision\in\{allow,deny,\varnothing\}.
+reply=(requestId,transportStatus,decision),\quad decision\in\lbrace allow,deny,\varnothing\rbrace .
 $$
 
 transportStatus说明回调是否成功处理请求，decision说明对动作的意见，二者正交。一个正常运行的hook返回deny，其控制响应仍为success；如果只读最外层success就执行动作，会把明确拒绝反转。反之，未知callback ID是协议处理错误，不是业务工具已经运行失败。

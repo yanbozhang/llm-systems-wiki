@@ -9,7 +9,7 @@ ICML 2026的《Structurally Aligned Subtask-Level Memory for Software Engineerin
 下面用一个教学检索规则解释阶段约束，不复现论文的完整记忆表示或学习算法：
 
 $$
-m^*=\arg\max_{m\in M:\,stage(m)=stage(t)}\mathrm{sim}(q,m)
+m^\ast =\arg\max_{m\in M:\thinspace stage(m)=stage(t)}\mathrm{sim}(q,m)
 $$
 
 stage(t)是当前阶段。示例以词集合的Jaccard相似度代替真正的语义模型；先过滤阶段，再排序，而不是先挑最相似记录后忽略它属于哪一步。
@@ -48,7 +48,7 @@ WebSTAR是ACL 2026主会长文。本轮读取§2–3：先对教师轨迹做任�
 不要把这项工作简化为“只要最终成功，所有动作都是好样本”。下面的掩码损失说明只对已选中步骤施加监督的概念；论文还包含轨迹筛选、推理增强等过程。
 
 $$
-L=-\frac{\sum_t m_t\log p_t}{\sum_t m_t},\qquad m_t\in\{0,1\}
+L=-\frac{\sum_t m_t\log p_t}{\sum_t m_t},\qquad m_t\in\lbrace 0,1\rbrace
 $$
 
 p_t是目标思考—动作对的示意概率，m_t由外部步骤质量判断给定。此处没有实现评分模型，更没有用模型自报成功替代环境终态。

@@ -34,13 +34,15 @@ Prefill 同时处理多个提示位置并建立各层缓存，最后位置的 lo
 
 ### 知识点一：首 token、逐 token 与请求计时边界
 
-请求到达、进入计算、提示处理完成、首 token 传回、末 token 传回不是同一事件。设到达时刻为 $a$，第 $j$ 个输出的客户端时刻为 $t_j$，总输出数为 $m$，所有时间单位为秒：
+请求到达、进入计算、提示处理完成、首 token 传回、末 token 传回不是同一事件。设到达时刻为 $a$ ，第 $j$ 个输出的客户端时刻为 $t_j$ ，总输出数为 $m$ ，所有时间单位为秒：
 
-$$\mathrm{TTFT}=t_1-a,\quad \mathrm{E2E}=t_m-a,\quad \mathrm{ITL}_j=t_j-t_{j-1},\quad \mathrm{TPOT}=\frac{t_m-t_1}{m-1}\;(m>1).$$
+$$
+\mathrm{TTFT}=t_1-a,\quad \mathrm{E2E}=t_m-a,\quad \mathrm{ITL}_j=t_j-t_{j-1},\quad \mathrm{TPOT}=\frac{t_m-t_1}{m-1}\thickspace (m\gt 1).
+$$
 
-TTFT 可分成排队、提示计算和传输等可观测部分，但跨进程时钟未同步时，不能直接拿服务端绝对时间减客户端绝对时间。末 token 的到达也不等于连接关闭时间。上式分母是 $m-1$，因为首 token 已经在 Prefill 末端产生；把它再平均一次会系统性压低后续间隔。
+TTFT 可分成排队、提示计算和传输等可观测部分，但跨进程时钟未同步时，不能直接拿服务端绝对时间减客户端绝对时间。末 token 的到达也不等于连接关闭时间。上式分母是 $m-1$ ，因为首 token 已经在 Prefill 末端产生；把它再平均一次会系统性压低后续间隔。
 
-输入 `[0.8,0.9,1.0,1.1,1.2]` 和 $a=0$，得到 TTFT=0.8秒、E2E=1.2秒、TPOT=0.1秒。把中间时间改成 `[0.8,0.81,0.82,0.83,1.2]`，TPOT不变，最长 ITL 却由0.1秒增到0.37秒。这解释了均值相同而体验不同的情况。计算是教学算例，不是引擎实测。
+输入 `[0.8,0.9,1.0,1.1,1.2]` 和 $a=0$ ，得到 TTFT=0.8秒、E2E=1.2秒、TPOT=0.1秒。把中间时间改成 `[0.8,0.81,0.82,0.83,1.2]`，TPOT不变，最长 ITL 却由0.1秒增到0.37秒。这解释了均值相同而体验不同的情况。计算是教学算例，不是引擎实测。
 
 ```python
 def request_metrics(arrival, token_times):
@@ -58,7 +60,7 @@ def request_metrics(arrival, token_times):
             "tpot_s": sum(intervals) / len(intervals) if intervals else None}
 ```
 
-函数先校验事件的有限性和顺序，再相邻相减，时间与空间复杂度均为 $O(m)$。输出保留所有 ITL，便于后续统计分位数；单 token 输出 `None` 表示没有间隔，空输出则属于失败或尚未结束，需要上层分类。
+函数先校验事件的有限性和顺序，再相邻相减，时间与空间复杂度均为 $O(m)$ 。输出保留所有 ITL，便于后续统计分位数；单 token 输出 `None` 表示没有间隔，空输出则属于失败或尚未结束，需要上层分类。
 
 ```mermaid
 flowchart LR
@@ -69,19 +71,21 @@ flowchart LR
  E --> F["分别计算 TTFT 和 ITL"]
 ```
 
-该版本源码显示，`calculate_metrics` 对 $m>1$ 使用上述公式；对 $m\le1$ 不加入 TPOT 分布，却为 goodput 判定填入0。这是评测程序的约定，不能解读成物理上存在“零延迟解码”。如果流协议把多个 token 合为一个块，块间隔也不能直接充当 ITL。
+该版本源码显示，`calculate_metrics` 对 $m\gt 1$ 使用上述公式；对 $m\le1$ 不加入 TPOT 分布，却为 goodput 判定填入0。这是评测程序的约定，不能解读成物理上存在“零延迟解码”。如果流协议把多个 token 合为一个块，块间隔也不能直接充当 ITL。
 
 [vLLM calculate_metrics](https://github.com/vllm-project/vllm/blob/7a64fb8fc9239cb65e0df9313fa759594dfb206a/vllm/benchmarks/serve.py#L602)；[PagedAttention §4.3](https://arxiv.org/html/2309.06180v1)；[vLLM 分块 Prefill 文档](https://github.com/vllm-project/vllm/blob/7a64fb8fc9239cb65e0df9313fa759594dfb206a/docs/configuration/optimization.md#L49).
 
 ### 知识点二：缓存改变了每步要计算哪些位置
 
-设提示长 $n$，已有提示的 K/V 均缓存。一次 Prefill 中第 $i$ 个位置只允许看前 $i$ 个位置，所以有效因果位置对数为 $P=n(n+1)/2$。Prefill 预测首个输出之后，再处理 $k$ 个新 token，需要访问的历史位置数为 $n+1,n+2,\ldots,n+k$，总数为：
+设提示长 $n$ ，已有提示的 K/V 均缓存。一次 Prefill 中第 $i$ 个位置只允许看前 $i$ 个位置，所以有效因果位置对数为 $P=n(n+1)/2$ 。Prefill 预测首个输出之后，再处理 $k$ 个新 token，需要访问的历史位置数为 $n+1,n+2,\ldots,n+k$ ，总数为：
 
-$$D=\sum_{j=1}^{k}(n+j)=kn+\frac{k(k+1)}2.$$
+$$
+D=\sum_{j=1}^{k}(n+j)=kn+\frac{k(k+1)}2.
+$$
 
-这里 $k$ 是实际额外 forward 步数；如果总共只想输出 $m$ 个 token，且 Prefill 已给出第一个，普通单步解码通常取 $k=m-1$。不能把提示长、已输出长和已缓存长混成一个计数。缓存避免重算过去位置的投影及隐藏状态，但新 Q 仍须读取历史 K，并用注意力权重加权历史 V。
+这里 $k$ 是实际额外 forward 步数；如果总共只想输出 $m$ 个 token，且 Prefill 已给出第一个，普通单步解码通常取 $k=m-1$ 。不能把提示长、已输出长和已缓存长混成一个计数。缓存避免重算过去位置的投影及隐藏状态，但新 Q 仍须读取历史 K，并用注意力权重加权历史 V。
 
-设查询头数为 $H_q$，每头维度 $d$，乘加计2 FLOP，QK和AV各贡献约 $2H_qd$ FLOP/位置对，因此理想有效注意力工作量为 $4H_qd(P+D)$。这是带因果三角裁剪的算法量；某个 eager 内核仍可能做被 mask 的方阵乘法，FlashAttention 也有分块填充，不能拿有效位置对推断精确GPU指令数。
+设查询头数为 $H_q$ ，每头维度 $d$ ，乘加计2 FLOP，QK和AV各贡献约 $2H_qd$ FLOP/位置对，因此理想有效注意力工作量为 $4H_qd(P+D)$ 。这是带因果三角裁剪的算法量；某个 eager 内核仍可能做被 mask 的方阵乘法，FlashAttention 也有分块填充，不能拿有效位置对推断精确GPU指令数。
 
 ```python
 def attention_work(prompt_tokens, decode_steps, heads=1, head_dim=1):
@@ -97,7 +101,7 @@ def attention_work(prompt_tokens, decode_steps, heads=1, head_dim=1):
             "attention_flops": 4 * heads * head_dim * (prefill + decode)}
 ```
 
-当 $n=4,k=2,H_q=2,d=8$，Prefill有10对，Decode有5+6=11对，理想注意力总量1344 FLOP。函数只做闭式计数，时间和空间是 $O(1)$；它没有执行 attention，也没有模拟设备吞吐。生产实现还包含投影、MLP、通信、权重读取及采样。尤其小 batch Decode 常受带宽约束，FLOP下降比例不等于延迟下降比例。
+当 $n=4,k=2,H_q=2,d=8$ ，Prefill有10对，Decode有5+6=11对，理想注意力总量1344 FLOP。函数只做闭式计数，时间和空间是 $O(1)$ ；它没有执行 attention，也没有模拟设备吞吐。生产实现还包含投影、MLP、通信、权重读取及采样。尤其小 batch Decode 常受带宽约束，FLOP下降比例不等于延迟下降比例。
 
 ```mermaid
 flowchart LR
@@ -108,17 +112,19 @@ flowchart LR
  E --> F["权重加权历史 V"]
 ```
 
-该版本 `LlamaAttention.forward` 先投影与应用位置编码，再调用 `past_key_values.update`，随后交给 attention 后端；`eager_attention_forward` 明确执行 QK、softmax、AV。GQA的缓存头数是 $H_{kv}$，但参与点积的查询头数仍是 $H_q$，不能把二者都替换为同一个较小头数。滑动窗口或稀疏注意力会改变可见位置集合，需重新计数。
+该版本 `LlamaAttention.forward` 先投影与应用位置编码，再调用 `past_key_values.update`，随后交给 attention 后端；`eager_attention_forward` 明确执行 QK、softmax、AV。GQA的缓存头数是 $H_{kv}$ ，但参与点积的查询头数仍是 $H_q$ ，不能把二者都替换为同一个较小头数。滑动窗口或稀疏注意力会改变可见位置集合，需重新计数。
 
 [Transformers LlamaAttention.forward](https://github.com/huggingface/transformers/blob/50e35cc0ca18ec19b80653690de553e6decf74f5/src/transformers/models/llama/modeling_llama.py#L232)；[Transformers 缓存机制](https://huggingface.co/docs/transformers/en/cache_explanation)；[PagedAttention 背景与解码流程](https://arxiv.org/html/2309.06180v1).
 
 ### 知识点三：分块 Prefill 是受预算约束的状态推进
 
-只有区分“想计算多少”和“本轮能计算多少”，才能解释长提示为何跨多个迭代。教学模型为请求 $i$ 保存目标数 $T_i$、已计算数 $C_i$、分块上限 $Q$，调度器维护本轮剩余 token 预算 $B$：
+只有区分“想计算多少”和“本轮能计算多少”，才能解释长提示为何跨多个迭代。教学模型为请求 $i$ 保存目标数 $T_i$ 、已计算数 $C_i$ 、分块上限 $Q$ ，调度器维护本轮剩余 token 预算 $B$ ：
 
-$$\Delta_i=\min(T_i-C_i,Q,B),\qquad C_i'=C_i+\Delta_i,\quad B'=B-\Delta_i.$$
+$$
+\Delta_i=\min(T_i-C_i,Q,B),\qquad C_i^\prime=C_i+\Delta_i,\quad B^\prime=B-\Delta_i.
+$$
 
-不变量是 $0\le C_i'\le T_i$、$B'\ge0$，且一轮所有 $\Delta_i$ 之和不超过初始预算。Decode 已缓存100个位置但还有1个已采样 token 未 forward 时，可写成 $(T,C)=(101,100)$；新提示12个 token 则是 $(12,0)$。按前者优先、预算5、分块4，本轮分配1与4，提示还剩8个位置，下轮继续。
+不变量是 $0\le C_i^\prime\le T_i$ 、 $B^\prime\ge0$ ，且一轮所有 $\Delta_i$ 之和不超过初始预算。Decode 已缓存100个位置但还有1个已采样 token 未 forward 时，可写成 $(T,C)=(101,100)$ ；新提示12个 token 则是 $(12,0)$ 。按前者优先、预算5、分块4，本轮分配1与4，提示还剩8个位置，下轮继续。
 
 ```python
 def schedule_tokens(requests, budget, chunk_limit):
@@ -179,7 +185,7 @@ flowchart TD
 
 若观察窗口固定为0至1.5秒，完整计入这两请求，则输出吞吐为 $8/1.5$ token/秒，完成请求吞吐为 $2/1.5$ 请求/秒。把窗口改为仅观察A活跃期间而仍把B全部输出计入，会造成边界不一致。实际统计需在窗口内按事件计数，或明确按某批请求从开始到排空计数。客户端有重试时，还要说明分母是逻辑请求还是实际尝试，否则重试可能把负载放大却被隐藏。
 
-算法工作量也不能独自决定运行时间。可用教学下界 $t\ge\max(F/P,M/\beta)$ 理解瓶颈：$F$是FLOP，$P$是有效FLOP/秒，$M$是需要移动的字节，$\beta$是有效字节/秒。Prefill把多位置组织成矩阵计算，可能更充分利用算力；Decode即使只有少量FLOP，仍可能读取大批权重与KV。这个式子忽略通信、启动和排队，只是下界，不是对真实GPU时间的预测器。batch扩大还会同时改变有效算力和每请求分摊的权重读取，不能保持两个参数不变外推。
+算法工作量也不能独自决定运行时间。可用教学下界 $t\ge\max(F/P,M/\beta)$ 理解瓶颈： $F$ 是FLOP， $P$ 是有效FLOP/秒， $M$ 是需要移动的字节， $\beta$ 是有效字节/秒。Prefill把多位置组织成矩阵计算，可能更充分利用算力；Decode即使只有少量FLOP，仍可能读取大批权重与KV。这个式子忽略通信、启动和排队，只是下界，不是对真实GPU时间的预测器。batch扩大还会同时改变有效算力和每请求分摊的权重读取，不能保持两个参数不变外推。
 
 最后回看调度器计数。提示长度12、分块4时，已计算计数从0到4到8到12。在最后提示块执行完并采样后，目标数才可能增加到13；随后Decode把刚采样位置写入KV。若测试仅重复调用同一组目标与计数而不注入采样事件，最终停止是合理的，不能据此判定调度器丢失请求。反过来，异步模式若把尚在飞行的输出提前计为完成，就可能重复调度或越过最大长度；生产代码中的placeholder与stale output状态正是这种并发边界的额外账本。
 

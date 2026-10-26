@@ -34,10 +34,14 @@ RAG把外部资料引入生成过程，但检索到相关文本、把文本放�
 
 ### 知识点一：检索文档是潜变量，求和与求积不能交换
 
-原论文中的RAG不是仅把搜索结果复制到prompt。令查询为 $x$，候选文档为 $z$，目标序列为 $y_1,\ldots,y_m$；检索器给文档先验 $p_\eta(z\mid x)$，生成器给条件概率 $p_\theta(y_j\mid x,z,y_{<j})$。论文用top-k文档近似边缘化：
+原论文中的RAG不是仅把搜索结果复制到prompt。令查询为 $x$ ，候选文档为 $z$ ，目标序列为 $y_1,\ldots,y_m$ ；检索器给文档先验 $p_\eta(z\mid x)$ ，生成器给条件概率 $p_\theta(y_j\mid x,z,y_{\lt j})$ 。论文用top-k文档近似边缘化：
 
-$$P_{seq}(y\mid x)\approx\sum_z p_\eta(z\mid x)\prod_jp_\theta(y_j\mid x,z,y_{<j}),$$
-$$P_{tok}(y\mid x)\approx\prod_j\sum_zp_\eta(z\mid x)p_\theta(y_j\mid x,z,y_{<j}).$$
+$$
+P_{seq}(y\mid x)\approx\sum_z p_\eta(z\mid x)\prod_jp_\theta(y_j\mid x,z,y_{\lt j}),
+$$
+$$
+P_{tok}(y\mid x)\approx\prod_j\sum_zp_\eta(z\mid x)p_\theta(y_j\mid x,z,y_{\lt j}).
+$$
 
 Sequence为完整序列共享同一个潜在文档；Token允许每个位置从不同潜在文档得到贡献。检索先验来自查询/文档表示的点积softmax，分数是模型分布，不等于证据可靠性。本例在已选文档上要求先验归一，明确采用截断后归一化的教学约定。
 
@@ -58,7 +62,7 @@ def rag_marginals(doc_probs, token_probs):
             "per_token_probabilities": per_token}
 ```
 
-两文档先验 `[0.6,0.4]`，对两个目标token的条件概率分别 `[0.9,0.1]` 与 `[0.2,0.8]`：Sequence为 $0.6\times0.9\times0.1+0.4\times0.2\times0.8=0.118$；Token为 $(0.54+0.08)(0.06+0.32)=0.2356$。第二式包含跨文档贡献，不能把两者混称同一个概率。长度1时两式相等，提供边界检查。
+两文档先验 `[0.6,0.4]`，对两个目标token的条件概率分别 `[0.9,0.1]` 与 `[0.2,0.8]`：Sequence为 $0.6\times0.9\times0.1+0.4\times0.2\times0.8=0.118$ ；Token为 $(0.54+0.08)(0.06+0.32)=0.2356$ 。第二式包含跨文档贡献，不能把两者混称同一个概率。长度1时两式相等，提供边界检查。
 
 ```mermaid
 flowchart TD
@@ -68,20 +72,20 @@ flowchart TD
  D --> E["沿位置连乘 得Token"]
 ```
 
-复杂度 $O(km)$，空间由输入概率表与 $m$ 个中间值决定。长序列直接连乘会下溢，真实实现用log-softmax与logsumexp；该版本 `get_nll`在token维累加后对文档logsumexp，`marginalize`则先沿文档维logsumexp。现代检索上下文拼接方案未必训练这一潜变量模型，引用原RAG论文时要说明借用了哪层思想，而非把所有工程RAG写成同一目标函数。
+复杂度 $O(km)$ ，空间由输入概率表与 $m$ 个中间值决定。长序列直接连乘会下溢，真实实现用log-softmax与logsumexp；该版本 `get_nll`在token维累加后对文档logsumexp，`marginalize`则先沿文档维logsumexp。现代检索上下文拼接方案未必训练这一潜变量模型，引用原RAG论文时要说明借用了哪层思想，而非把所有工程RAG写成同一目标函数。
 
 [Transformers RAG-Sequence get_nll](https://github.com/huggingface/transformers/blob/50e35cc0ca18ec19b80653690de553e6decf74f5/src/transformers/models/rag/modeling_rag.py#L1028)；[RAG-Token marginalize](https://github.com/huggingface/transformers/blob/50e35cc0ca18ec19b80653690de553e6decf74f5/src/transformers/models/rag/modeling_rag.py#L1216)；[RAG §2.1–2.2](https://arxiv.org/html/2005.11401v4).
 
 ### 知识点二：召回集合不等于实际进入上下文的证据
 
-设上下文窗口 $W$ token，固定模板与查询开销 $F$，预留输出 $O$，证据预算 $B=W-F-O$。候选片段 $i$ 的最终序列化成本为 $c_i$，选择变量 $s_i\in\{0,1\}$，必须满足 $\sum_i s_ic_i\le B$。相关性排序只确定考虑顺序，不能让预算约束消失。
+设上下文窗口 $W$ token，固定模板与查询开销 $F$ ，预留输出 $O$ ，证据预算 $B=W-F-O$ 。候选片段 $i$ 的最终序列化成本为 $c_i$ ，选择变量 $s_i\in\lbrace 0,1\rbrace$ ，必须满足 $\sum_i s_ic_i\le B$ 。相关性排序只确定考虑顺序，不能让预算约束消失。
 
 教学窗口10、固定2、输出2，证据预算6。片段A成本4、B成本3，按A优先只能放A；如果问题必须同时依赖A与B，虽然Recall@2=1，实际回答证据仍不完整。直接把原文截成剩余2token可能删掉否定条件或单位，因此这里选择整段放入或跳过。
 
 将上述计算或状态约束集中写为：
 
 $$
-B=W-F-O,\qquad s_i\in\{0,1\},\qquad \sum_i s_ic_i\le B.
+B=W-F-O,\qquad s_i\in\lbrace 0,1\rbrace ,\qquad \sum_i s_ic_i\le B.
 $$
 
 ```python
@@ -109,7 +113,7 @@ def select_context(chunks, window_tokens, fixed_tokens, output_reserve):
     return {"selected": picked, "skipped": skipped, "remaining_tokens": budget}
 ```
 
-函数先扣除全局开销，再按 `(source,version,chunk)` 去重并保留输入顺序。过长片段被记录为skipped，后续较短片段仍有机会进入；这是明确的教学策略，不保证最大相关性总和，更不保证满足所有论证依赖。遍历 $n$ 个候选是期望 $O(n)$ 时间、$O(n)$额外空间，set身份比较按固定长度处理。
+函数先扣除全局开销，再按 `(source,version,chunk)` 去重并保留输入顺序。过长片段被记录为skipped，后续较短片段仍有机会进入；这是明确的教学策略，不保证最大相关性总和，更不保证满足所有论证依赖。遍历 $n$ 个候选是期望 $O(n)$ 时间、 $O(n)$ 额外空间，set身份比较按固定长度处理。
 
 ```mermaid
 flowchart LR
@@ -126,9 +130,11 @@ flowchart LR
 
 ### 知识点三：引用格式有效不等于声明得到支持
 
-引用首先解决定位，然后才解决支持。给每条声明 $c$ 一组引用 $R_c$，证据键包含来源ID、版本和片段ID。定义人工核验的支持关系 $E\models c$，声明覆盖率为：
+引用首先解决定位，然后才解决支持。给每条声明 $c$ 一组引用 $R_c$ ，证据键包含来源ID、版本和片段ID。定义人工核验的支持关系 $E\models c$ ，声明覆盖率为：
 
-$$\mathrm{Coverage}=\frac{\sum_c\mathbf1[\exists e\in R_c:\ e\text{可回查且}\ e\models c]}{|C|}.$$
+$$
+\mathrm{Coverage}=\frac{\sum_c\mathbf1[\exists e\in R_c:\ e\text{可回查且}\ e\models c]}{|C|}.
+$$
 
 这是本页的教学审计口径，不是原RAG训练损失。它只检查是否至少有一条已标注支持的证据；多源论证、相互矛盾与引用精确率仍需另查。原论文FEVER任务明确区分支持、反驳与信息不足，说明相关性和事实验证必须分开。
 
@@ -149,7 +155,7 @@ def audit_citations(claim_citations, evidence_support):
             "coverage": count / len(result) if result else None}
 ```
 
-函数不让模型自己宣布“引用支持”，而查预先冻结的支持表。证据表只有 `(A,v1,a)` 时，引用 `(A,v2,a)`会列为unknown，哪怕来源链接与片段名字相同。一个真实但不支持的片段同样不能计入覆盖。重复引用去重避免堆数量；空声明集合返回None，避免无内容回答被评为100%。按总引用数 $r$，哈希查询期望 $O(r)$。
+函数不让模型自己宣布“引用支持”，而查预先冻结的支持表。证据表只有 `(A,v1,a)` 时，引用 `(A,v2,a)`会列为unknown，哪怕来源链接与片段名字相同。一个真实但不支持的片段同样不能计入覆盖。重复引用去重避免堆数量；空声明集合返回None，避免无内容回答被评为100%。按总引用数 $r$ ，哈希查询期望 $O(r)$ 。
 
 ```mermaid
 flowchart TD
@@ -183,9 +189,9 @@ flowchart TD
 
 ## 源码导读与边界推演
 
-把召回和引用误差画成集合包含关系，可以避免改错模块。若相关集合为 $G$，召回集合为 $C$，进入上下文的是 $S$，最终被引用的是 $R$，通常应有 $R\subseteq S\subseteq C$。发现回答引用了 $C$之外的片段时，需要判断是否来自允许的额外检索；没有额外检索记录，就属于引用链无法解释。反之，$G\subseteq C$但 $G\nsubseteq S$时，优先检查去重、chunk选择和预算，而不是先更换向量模型。
+把召回和引用误差画成集合包含关系，可以避免改错模块。若相关集合为 $G$ ，召回集合为 $C$ ，进入上下文的是 $S$ ，最终被引用的是 $R$ ，通常应有 $R\subseteq S\subseteq C$ 。发现回答引用了 $C$ 之外的片段时，需要判断是否来自允许的额外检索；没有额外检索记录，就属于引用链无法解释。反之， $G\subseteq C$ 但 $G\nsubseteq S$ 时，优先检查去重、chunk选择和预算，而不是先更换向量模型。
 
-多源问题还需要“最小充分证据组”。例如声明“B版比A版增加了一个配置项”至少需要A版和B版两份材料，单独任一文档都不充分。可将充分组集合记为 $\mathcal W_c$，支持条件改为存在 $W\in\mathcal W_c$满足 $W\subseteq R_c$。本页 `audit_citations`使用单片段支持标签，不能覆盖这种组合推理；评测者应把它作为明确缺口，而不是把存在一个相关链接误当完整支持。存在相互矛盾来源时，即使一个充分组成立，也还需要解释冲突或限定版本。
+多源问题还需要“最小充分证据组”。例如声明“B版比A版增加了一个配置项”至少需要A版和B版两份材料，单独任一文档都不充分。可将充分组集合记为 $\mathcal W_c$ ，支持条件改为存在 $W\in\mathcal W_c$ 满足 $W\subseteq R_c$ 。本页 `audit_citations`使用单片段支持标签，不能覆盖这种组合推理；评测者应把它作为明确缺口，而不是把存在一个相关链接误当完整支持。存在相互矛盾来源时，即使一个充分组成立，也还需要解释冲突或限定版本。
 
 原RAG的检索先验也不是支持标签。检索器可能很确信文档相关，但文档只是讨论相同主题而没有回答问题；生成器也可能利用参数记忆给出正确答案，却没有使用所提供的片段。因此答案偶然正确不能反推检索完整，检索完整也不能反推模型有忠实利用证据。可设计对照题：将支撑关键数值的片段替换为同主题但无数值片段，要求系统报告资料不足；若输出仍给出同一个确定数值，应进一步检查参数记忆或过度推断。
 

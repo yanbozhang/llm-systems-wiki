@@ -41,16 +41,16 @@ Agent 基准测量的是在指定环境、工具与预算下完成任务的系�
 
 SWE-bench 的修复测试集合 $F$ 包含修复前失败、参考修复后通过的测试；回归集合 $P$ 包含应继续保持通过的测试。[SWE-bench 论文的构建与评估说明](https://arxiv.org/html/2310.06770v1#S2)要求任务包含至少一个 fail-to-pass 测试，并通过应用候选补丁后运行测试判断实例是否解决。论文的“解决”不能缩成“存在一个新测试通过”。
 
-令 $z_j$ 是可信日志解析出的测试状态，$I$ 表示补丁应用和测试运行证据有效。所读源码的 `PASS_AND_FAIL` 分支采用：
+令 $z_j$ 是可信日志解析出的测试状态， $I$ 表示补丁应用和测试运行证据有效。所读源码的 `PASS_AND_FAIL` 分支采用：
 
 $$
-f=\frac{\sum_{j\in F}\mathbf1[z_j\in\{\mathrm{PASSED},\mathrm{XFAIL}\}]}{|F|},\qquad
-p=\frac{\sum_{j\in P}\mathbf1[z_j\in\{\mathrm{PASSED},\mathrm{XFAIL},\mathrm{SKIPPED}\}]}{|P|}.
+f=\frac{\sum_{j\in F}\mathbf1[z_j\in\lbrace \mathrm{PASSED},\mathrm{XFAIL}\rbrace ]}{|F|},\qquad
+p=\frac{\sum_{j\in P}\mathbf1[z_j\in\lbrace \mathrm{PASSED},\mathrm{XFAIL},\mathrm{SKIPPED}\rbrace ]}{|P|}.
 $$
 
-当 $P$ 为空时，该版本令 $p=1$；这只是聚合约定，报告仍应显示回归测试数为零。教学函数拒绝空 $F$，避免空目标产生平凡通过。整题成功为 $R=I\land(f=1)\land(p=1)$。若所有回归保持且仅部分修复通过，才是 `PARTIAL`；回归一旦失败，不能用其他修复通过的比例抵消。
+当 $P$ 为空时，该版本令 $p=1$ ；这只是聚合约定，报告仍应显示回归测试数为零。教学函数拒绝空 $F$ ，避免空目标产生平凡通过。整题成功为 $R=I\land(f=1)\land(p=1)$ 。若所有回归保持且仅部分修复通过，才是 `PARTIAL`；回归一旦失败，不能用其他修复通过的比例抵消。
 
-例如 $F=\{\text{fix}\}$、$P=\{\text{keep}\}$，状态分别是 `PASSED`、`FAILED`：$f=1,p=0,R=0$。若 `fix` 被跳过，则 $f=0$；若只有 `keep` 被跳过，所读实现把它视作保持。这个处理体现评估政策，不代表被跳过的功能已验证。`XFAIL` 被接受同样是特定实现语义，不是对所有测试框架的统一结论。
+例如 $F=\lbrace \text{fix}\rbrace$ 、 $P=\lbrace \text{keep}\rbrace$ ，状态分别是 `PASSED`、`FAILED`： $f=1,p=0,R=0$ 。若 `fix` 被跳过，则 $f=0$ ；若只有 `keep` 被跳过，所读实现把它视作保持。这个处理体现评估政策，不代表被跳过的功能已验证。`XFAIL` 被接受同样是特定实现语义，不是对所有测试框架的统一结论。
 
 ```python
 def grade_patch(fail_to_pass, pass_to_pass, status_map, patch_applied=True, suite_ran=True):
@@ -98,14 +98,14 @@ flowchart TD
 
 网页任务通常允许不同但等效的操作顺序。[WebArena 的功能正确性评估](https://arxiv.org/html/2307.13854v1#S3.SS3)讨论检查页面内容、后端状态或执行效果，以避免只有一条标准轨迹的限制。路径可变不代表目标可含糊：创建记录必须确认记录落在正确位置且已保存，而不能只看到输入框中出现了文字。
 
-对任务 $i$，冻结 $m$ 个谓词 $g_{ij}(s_i^\mathrm{final})\in\{0,1\}$。本例字段 $j$ 的允许值集合为 $V_j$，缺失字段判不满足：
+对任务 $i$ ，冻结 $m$ 个谓词 $g_{ij}(s_i^\mathrm{final})\in\lbrace 0,1\rbrace$ 。本例字段 $j$ 的允许值集合为 $V_j$ ，缺失字段判不满足：
 
 $$
 g_{ij}=\mathbf1[j\text{存在于终态}]\mathbf1[s_i^\mathrm{final}[j]\in V_j],\quad
 R_i=\prod_{j=1}^{m}g_{ij},\quad D_i=\frac1m\sum_{j=1}^{m}g_{ij}.
 $$
 
-$R_i$ 是整题成功；$D_i$ 是定位差错的条件满足比例，二者不是同一指标。集合 $V_j$ 内是 OR，各字段之间是 AND。例如 `record=R1`、`title=示例`、`saved=False`，前三者对应条件为 $1,1,0$：诊断分 $D=2/3$，整题分 $R=0$。若有两个允许标题，仅需匹配其中之一，不应把允许别名的个数增加到任务分母。
+$R_i$ 是整题成功； $D_i$ 是定位差错的条件满足比例，二者不是同一指标。集合 $V_j$ 内是 OR，各字段之间是 AND。例如 `record=R1`、`title=示例`、`saved=False`，前三者对应条件为 $1,1,0$ ：诊断分 $D=2/3$ ，整题分 $R=0$ 。若有两个允许标题，仅需匹配其中之一，不应把允许别名的个数增加到任务分母。
 
 ```python
 def state_acceptance(final_state, requirements):
@@ -137,11 +137,11 @@ flowchart LR
 
 本例只示意 AND/OR 组合，使用结构化字段精确比较；源码对内容有字符串包含、清洗等规则，对 URL 有自己的匹配约定，不能声称它对任意网站都验证了严格数据库等价。源码还会执行配置指定的页面脚本或辅助表达式，因此评估配置本身位于信任边界内，不应从被评网页生成。这不是建议在教学例子中使用动态 `eval`，例子没有任何网页或表达式执行能力。
 
-终态充分性必须由任务作者审查。若目标只检查“新记录存在”，却没检查旧记录是否被误改，$R=1$ 仍可能伴随副作用；需要补充保持性谓词、操作审计或可信状态差异。反过来，强制每一步都等于参考轨迹会误伤合法捷径。二者应按需要分别作为结果与过程约束。
+终态充分性必须由任务作者审查。若目标只检查“新记录存在”，却没检查旧记录是否被误改， $R=1$ 仍可能伴随副作用；需要补充保持性谓词、操作审计或可信状态差异。反过来，强制每一步都等于参考轨迹会误伤合法捷径。二者应按需要分别作为结果与过程约束。
 
 ### 知识点三：任务分母、尝试分母与预算内成功回答不同问题
 
-设预先分配 $N$ 个任务；$y_{ir}$ 表示任务 $i$ 的第 $r$ 次尝试确已解决；$c_{ir}$ 是该尝试消耗的调用数。约定每任务至多 $K$ 次尝试、累计至多 $B$ 次调用，失败与环境故障尝试的调用也计入成本。定义资格与任务成功：
+设预先分配 $N$ 个任务； $y_{ir}$ 表示任务 $i$ 的第 $r$ 次尝试确已解决； $c_{ir}$ 是该尝试消耗的调用数。约定每任务至多 $K$ 次尝试、累计至多 $B$ 次调用，失败与环境故障尝试的调用也计入成本。定义资格与任务成功：
 
 $$
 e_{ir}=\mathbf1[r\le K]\mathbf1[\sum_{q\le r}c_{iq}\le B],\qquad
@@ -149,7 +149,7 @@ Y_i^{B,K}=\max_r(e_{ir}y_{ir}),\qquad
 S_{B,K}=\frac{\sum_{i=1}^N Y_i^{B,K}}{N}.
 $$
 
-没有尝试的任务约定最大值为零。首尝试率是 $S_1=N^{-1}\sum_i e_{i1}y_{i1}$；它和最终成功率共同展示从反馈与预算中获得的提升。若 $E$ 是至少发生过一次非基础设施故障执行的任务集合，可另报条件率 $\sum_{i\in E}Y_i^{B,K}/|E|$，但必须同时披露 $|E|$ 与 $N$。本页主率仍以全部已分配任务为分母，避免事后筛选。
+没有尝试的任务约定最大值为零。首尝试率是 $S_1=N^{-1}\sum_i e_{i1}y_{i1}$ ；它和最终成功率共同展示从反馈与预算中获得的提升。若 $E$ 是至少发生过一次非基础设施故障执行的任务集合，可另报条件率 $\sum_{i\in E}Y_i^{B,K}/|E|$ ，但必须同时披露 $|E|$ 与 $N$ 。本页主率仍以全部已分配任务为分母，避免事后筛选。
 
 ```python
 def budget_report(task_ids, attempts, max_attempts=3, max_calls=5):
@@ -197,7 +197,7 @@ def budget_report(task_ids, attempts, max_attempts=3, max_calls=5):
 
 函数验证任务 ID、连续的尝试序号和非负调用成本，再按每任务累计成本。超预算事件仍保留在观测成本及异常数里，只有其成功不计入预算内成绩。`executable_tasks` 的定义是所有记录中至少一次有效执行，包含预算外的执行；若报告希望采用“预算内至少有效执行”的分母，应另立字段，不能静默换掉本函数的含义。`valid_attempts` 则只包含预算内、非环境故障的尝试。
 
-手算 `demo()` 中三项任务：A 第一次失败花 2 次调用，第二次成功再花 2 次；B 一次失败花 3 次；C 环境故障花 0 次。预算 $K=3,B=5$。最终任务成功率 $1/3$，首尝试率 $0/3$；有效执行过的任务只有 A、B，条件成功率为 $1/2$；预算内有效尝试是 A 两次加 B 一次，尝试成功率为 $1/3$。总成本 7 次调用。若把 A 第二次改为 4 次调用，累计为 6，成功不再计入预算内分子。
+手算 `demo()` 中三项任务：A 第一次失败花 2 次调用，第二次成功再花 2 次；B 一次失败花 3 次；C 环境故障花 0 次。预算 $K=3,B=5$ 。最终任务成功率 $1/3$ ，首尝试率 $0/3$ ；有效执行过的任务只有 A、B，条件成功率为 $1/2$ ；预算内有效尝试是 A 两次加 B 一次，尝试成功率为 $1/3$ 。总成本 7 次调用。若把 A 第二次改为 4 次调用，累计为 6，成功不再计入预算内分子。
 
 ```mermaid
 flowchart TD
@@ -216,7 +216,7 @@ $$
 \widehat{\mathrm{pass@}k}=1-\frac{\binom{n-c}{k}}{\binom{n}{k}}.
 $$
 
-推导是“所有 $k$ 个均来自失败集合”的组合概率取补集；例如 $n=5,c=2,k=2$，得到 $1-3/10=0.7$。[estimate_pass_at_k](https://github.com/openai/human-eval/blob/b9453e8f1865df0a0057a1383767caa400acfbcf/human_eval/evaluation.py#L13-L36)用等价乘积避免直接计算大组合数；[evaluate_functional_correctness 的逐任务聚合](https://github.com/openai/human-eval/blob/b9453e8f1865df0a0057a1383767caa400acfbcf/human_eval/evaluation.py#L70-L90)先按任务计算 $n,c$，只有全部任务满足 $n\ge k$ 才报告该 $k$。这不同于把所有候选混合成一个通过比例。
+推导是“所有 $k$ 个均来自失败集合”的组合概率取补集；例如 $n=5,c=2,k=2$ ，得到 $1-3/10=0.7$ 。[estimate_pass_at_k](https://github.com/openai/human-eval/blob/b9453e8f1865df0a0057a1383767caa400acfbcf/human_eval/evaluation.py#L13-L36)用等价乘积避免直接计算大组合数；[evaluate_functional_correctness 的逐任务聚合](https://github.com/openai/human-eval/blob/b9453e8f1865df0a0057a1383767caa400acfbcf/human_eval/evaluation.py#L70-L90)先按任务计算 $n,c$ ，只有全部任务满足 $n\ge k$ 才报告该 $k$ 。这不同于把所有候选混合成一个通过比例。
 
 顺序重试会利用前次反馈，候选不再来自同一冻结提示下的独立采样协议；把实际重试成功率叫作同口径的 HumanEval `pass@k` 会误导。主函数计算的是已观测预算策略的任务成功率，没有估计未运行的 $k$ 次机会。SWE-bench 的[环境故障标注分支](https://github.com/SWE-bench/SWE-bench/blob/02e7a74ffd0b707aab73d203fe87bdc7c76afc8e/swebench/harness/grading.py#L357-L372)同样没有将故障直接改成解决，这支持将环境故障作为单独可追查标签的做法；是否从某个辅助统计中排除应由协议预先决定。
 

@@ -22,7 +22,7 @@ claim_ids: [claim-mobile-agent-perception-v1, claim-mobile-agent-planning-memory
 
 ## 前置知识
 
-需要像素坐标、有限状态机、条件策略和基本工具调用。记截图为 $S_t$，感知列表为 $P_t$，任务进度为 $TP_t$，页面事实记忆为 $FC_t$，本轮动作 $O_t$，反思结果 $R_t$。这些是显式外部记录；本文不会把未观测的内部模型推理当作可验证事实。截图宽 W、高 H，横轴向右、纵轴向下，坐标单位为截图像素。
+需要像素坐标、有限状态机、条件策略和基本工具调用。记截图为 $S_t$ ，感知列表为 $P_t$ ，任务进度为 $TP_t$ ，页面事实记忆为 $FC_t$ ，本轮动作 $O_t$ ，反思结果 $R_t$ 。这些是显式外部记录；本文不会把未观测的内部模型推理当作可验证事实。截图宽 W、高 H，横轴向右、纵轴向下，坐标单位为截图像素。
 
 ## 基本机制
 
@@ -34,12 +34,12 @@ claim_ids: [claim-mobile-agent-perception-v1, claim-mobile-agent-planning-memory
 
 ### 知识点一：感知框如何变成动作可用的坐标索引
 
-**问题与机制。** OCR 给出的文字框和模型看到的截图如何对齐？论文定义 $P_t=VPM(S_t)$；该版本实现先 OCR 合并文本块，再检测图标、裁剪并描述，最后将边界框转为中心点。对框 $b=(x_1,y_1,x_2,y_2)$，
+**问题与机制。** OCR 给出的文字框和模型看到的截图如何对齐？论文定义 $P_t=VPM(S_t)$ ；该版本实现先 OCR 合并文本块，再检测图标、裁剪并描述，最后将边界框转为中心点。对框 $b=(x_1,y_1,x_2,y_2)$ ，
 
 $$
 c_x=\left\lfloor\frac{x_1+x_2}{2}\right\rfloor,\quad
 c_y=\left\lfloor\frac{y_1+y_2}{2}\right\rfloor,\quad
-0\le x_1<x_2\le W,\quad0\le y_1<y_2\le H.
+0\le x_1\lt x_2\le W,\quad0\le y_1\lt y_2\le H.
 $$
 
 对非负坐标，Python `int` 与这里向下取整一致。文本合并并非语义模型：源码按 y/x 排序，对连续候选要求左边界差小于10像素、竖直间隔在[-10,30)像素、框高度差小于10像素。教学实现保留这些不对称边界，额外拒绝越界框。[文本框合并与感知信息构造](https://github.com/X-PLUG/MobileAgent/blob/11cea575561fb7800b5fb6b6cafa56f7a91de11f/Mobile-Agent-v2/run.py#L129-L232) [v2 视觉感知模块](https://arxiv.org/html/2406.01014v1#S3.SS1)
@@ -102,7 +102,7 @@ flowchart LR
 为做确定性教学，设子目标 ID 集合为 G，人工标注的成功步骤为 H，完成集合为
 
 $$
-C(H)=\{g\in G:\exists h\in H, h.goal=g\land h.completes\},\quad U=G\setminus C(H).
+C(H)=\lbrace g\in G:\exists h\in H, h.goal=g\land h.completes\rbrace ,\quad U=G\setminus C(H).
 $$
 
 这个集合投影只用于检查账目，不是论文中 LLM 自动判断任务完成的算法。真实规划仍可能把一次尝试误总结为完成，必须保留底层证据。
@@ -138,21 +138,21 @@ flowchart LR
 
 **源码定位。** 该版本在成功分支调用 `get_process_prompt` 更新 `completed_requirements`，决策提示分别拼接 History、Progress、Memory 和错误时的 Last operation。[成功分支的进度更新](https://github.com/X-PLUG/MobileAgent/blob/11cea575561fb7800b5fb6b6cafa56f7a91de11f/Mobile-Agent-v2/run.py#L401-L417) [决策提示的四类历史字段](https://github.com/X-PLUG/MobileAgent/blob/11cea575561fb7800b5fb6b6cafa56f7a91de11f/Mobile-Agent-v2/MobileAgent/prompt.py#L33-L53) 值得精确区分的是：论文的规划公式包含记忆，当前 `get_process_prompt` 函数参数并不直接接收 `memory`；记忆在 `get_action_prompt` 进入决策。本文不把论文抽象中的每条边都硬说成该函数的实参。
 
-**预算与反例。** 原代码仍遍历历史操作生成提示，因此有进度摘要不等于历史上下文被裁剪为常数大小。令保留成功步骤数为 n、每步文本平均 l 字，历史开销仍约为 $nl$，再叠加进度和记忆长度。页面事实可能过期，字符串“重复包含”检查也不是具有来源和版本的知识库去重。教学函数用字典便于观察，但原版 `memory` 是持续追加的文本，不要误称它拥有结构化事实冲突解决。
+**预算与反例。** 原代码仍遍历历史操作生成提示，因此有进度摘要不等于历史上下文被裁剪为常数大小。令保留成功步骤数为 n、每步文本平均 l 字，历史开销仍约为 $nl$ ，再叠加进度和记忆长度。页面事实可能过期，字符串“重复包含”检查也不是具有来源和版本的知识库去重。教学函数用字典便于观察，但原版 `memory` 是持续追加的文本，不要误称它拥有结构化事实冲突解决。
 
 **调用链边界。** `inference_chat` 通过 HTTP messages 适配接口取 `choices[0].message.content`；主循环再按固定文本标记拆动作、操作摘要和完成内容。这不是强类型工具调用协议。模型输出偏离格式时，字符串 split 可能取到意料之外的字段；教学例子不生成自然语言响应，也不承担模型可靠性证明。[v2 inference_chat 接口](https://github.com/X-PLUG/MobileAgent/blob/11cea575561fb7800b5fb6b6cafa56f7a91de11f/Mobile-Agent-v2/MobileAgent/api.py#L9-L40)
 
 ### 知识点三：反思结果如何控制历史提交与恢复
 
-**问题与机制。** 设备动作调用完成以后，为什么不能立即把它记成成功？v2 用动作前后屏幕判断预期是否达成，反思提示规定 A=达到预期、B=进入错误页面需回退、C=没有变化。对状态 $X=(H,TP,E)$，教学转移为
+**问题与机制。** 设备动作调用完成以后，为什么不能立即把它记成成功？v2 用动作前后屏幕判断预期是否达成，反思提示规定 A=达到预期、B=进入错误页面需回退、C=没有变化。对状态 $X=(H,TP,E)$ ，教学转移为
 
 $$
-F_A(X,O)=(H+[O],TP',false),\quad
+F_A(X,O)=(H+[O],TP^\prime,false),\quad
 F_B(X,O)=(H,TP,true;back),\quad
 F_C(X,O)=(H,TP,true;revise).
 $$
 
-其中 $TP'$ 是成功后规划给出的新进度；分号后的项是待执行控制意图。B/C 不进入成功历史，避免把失败尝试当成已完成路径。[v2 反思与历史更新](https://arxiv.org/html/2406.01014v1#S3.SS5)
+其中 $TP^\prime$ 是成功后规划给出的新进度；分号后的项是待执行控制意图。B/C 不进入成功历史，避免把失败尝试当成已完成路径。[v2 反思与历史更新](https://arxiv.org/html/2406.01014v1#S3.SS5)
 
 ```python
 def reflection_transition(state, verdict, operation, updated_progress=None):

@@ -10,6 +10,8 @@ claim_ids: [claim-ui-tars-action-protocol-v1, claim-ui-tars-coordinate-path-v1, 
 ---
 # UITARS感知与动作执行
 
+公式记号：`userStopped` 表示源码中的 `USER_STOPPED` 终态；实际枚举名称与状态转换规则不变。
+
 本文固定 `bytedance/UI-TARS-desktop` 提交 `3ac2cb8d946d78d5ff92ad17b318eaafa18c178c`，对照官方模型论文 `2501.12326v1`。选择 **LocalComputer → @ui-tars/sdk → NutJSElectronOperator/NutJSOperator** 这条真实导入链，以 V1_0 坐标分支为主；V1_5的缩放只作为明确标注的分支差异。仓库另有 Agent TARS 和 `multimodal/gui-agent`，本文不把它们的协议拼接到这条执行链。[Desktop实际导入与本地Operator装配](https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/apps/ui-tars/src/main/services/runAgent.ts#L5-L37)
 
 完整示例：[ui-tars.py](../../examples/agents/ui-tars.py)。它只解析人工字符串、计算坐标和演示状态，不调用模型、不采集截图、不控制鼠标键盘。所读包清单中桌面应用版本为0.2.4，SDK与NutJS包均为1.2.3；这些版本各自独立，也不等于模型权重版本。[Desktop包版本](https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/apps/ui-tars/package.json) [SDK包版本与依赖](https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/packages/ui-tars/sdk/package.json)
@@ -41,7 +43,7 @@ claim_ids: [claim-ui-tars-action-protocol-v1, claim-ui-tars-coordinate-path-v1, 
 
 ### 知识点一：截图观测如何经过明确的动作协议
 
-**问题与机制。** 原生GUI模型为何仍需要动作解析？论文建模 $a_t\sim\pi_\theta(\cdot\mid I,H_{t-1},o_t)$，I是任务指令，o是截图，H保留历史交互；统一动作空间包括 click、drag、type、wait，以及 finished、call_user等终端动作。模型决定动作内容，解析器将字符串转成结构化字段，执行器才解释字段对应什么设备操作。[UI-TARS统一动作空间](https://arxiv.org/html/2501.12326v1#S4.SS3)
+**问题与机制。** 原生GUI模型为何仍需要动作解析？论文建模 $a_t\sim\pi_\theta(\cdot\mid I,H_{t-1},o_t)$ ，I是任务指令，o是截图，H保留历史交互；统一动作空间包括 click、drag、type、wait，以及 finished、call_user等终端动作。模型决定动作内容，解析器将字符串转成结构化字段，执行器才解释字段对应什么设备操作。[UI-TARS统一动作空间](https://arxiv.org/html/2501.12326v1#S4.SS3)
 
 对本例的协议子集，设 `Call = name(keyword=literal,...)`，可派发条件为
 
@@ -105,14 +107,14 @@ flowchart LR
 
 ### 知识点二：模型框、屏幕点与显示缩放不能混为一谈
 
-**问题与机制。** 为何同一 `[500,250]` 在不同路径可能得到不同坐标？V1_0路径先将原始框按因子归一化：$\bar x=x/F_x,\bar y=y/F_y$。归一化框中心映射到屏幕为
+**问题与机制。** 为何同一 `[500,250]` 在不同路径可能得到不同坐标？V1_0路径先将原始框按因子归一化： $\bar x=x/F_x,\bar y=y/F_y$ 。归一化框中心映射到屏幕为
 
 $$
-p_x=Q_{1000}\!\left(\frac{\bar x_1+\bar x_2}{2}W\right),\quad
-p_y=Q_{1000}\!\left(\frac{\bar y_1+\bar y_2}{2}H\right),
+p_x=Q_{1000}\negthinspace \left(\frac{\bar x_1+\bar x_2}{2}W\right),\quad
+p_y=Q_{1000}\negthinspace \left(\frac{\bar y_1+\bar y_2}{2}H\right),
 $$
 
-其中 $Q_f(v)=round(fv)/f$，是千分之一坐标单位的量化，不是最后必须取整数像素。默认因子由SDK常量 `[1000,1000]` 给出。[SDK默认坐标因子](https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/packages/ui-tars/sdk/src/constants.ts#L8-L10) [parseBoxToScreenCoords](https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/packages/ui-tars/sdk/src/utils.ts#L29-L55)
+其中 $Q_f(v)=round(fv)/f$ ，是千分之一坐标单位的量化，不是最后必须取整数像素。默认因子由SDK常量 `[1000,1000]` 给出。[SDK默认坐标因子](https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/packages/ui-tars/sdk/src/constants.ts#L8-L10) [parseBoxToScreenCoords](https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/packages/ui-tars/sdk/src/utils.ts#L29-L55)
 
 ```python
 def grounding_coordinates(box, screen_size, normalization=(1000.0, 1000.0), display_scale=1.0):
@@ -137,7 +139,7 @@ def grounding_coordinates(box, screen_size, normalization=(1000.0, 1000.0), disp
 
 在1920×1080屏幕上，原始点 `[500,250]` 归一化为 `[0.5,0.25]`，得到 `operator_point=[960,270]`。若scaleFactor=2，解析器附加的 `start_coords` 为 `[1920,540]`。所读 NutJS `execute` 不消费这个附加字段，它把 `start_box` 交给 `parseBoxToScreenCoords`，且该调用没有传scaleFactor；因此该路径采用前者，不能把后者再当作待归一化坐标。
 
-V1_5是另一个明确分支：`smartResizeForV15` 根据长宽比、像素上下限和对齐因子计算模型空间宽高，然后除以该宽高。其超预算缩放比例可写为 $\beta=\sqrt{WH/P_{max}}$，再对 $W/\beta,H/\beta$ 做因子向下对齐；像素过少时使用相应上采样与向上对齐。不能始终除1000，也不能拿宿主窗口的逻辑宽高代替该模型空间尺寸。教学函数允许显式传normalization，但没有模拟全部smart-resize分支。[V1_5缩放尺寸与模型版本分支](https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/packages/ui-tars/action-parser/src/actionParser.ts#L28-L58)
+V1_5是另一个明确分支：`smartResizeForV15` 根据长宽比、像素上下限和对齐因子计算模型空间宽高，然后除以该宽高。其超预算缩放比例可写为 $\beta=\sqrt{WH/P_{max}}$ ，再对 $W/\beta,H/\beta$ 做因子向下对齐；像素过少时使用相应上采样与向上对齐。不能始终除1000，也不能拿宿主窗口的逻辑宽高代替该模型空间尺寸。教学函数允许显式传normalization，但没有模拟全部smart-resize分支。[V1_5缩放尺寸与模型版本分支](https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/packages/ui-tars/action-parser/src/actionParser.ts#L28-L58)
 
 ```mermaid
 flowchart LR
@@ -152,7 +154,7 @@ flowchart LR
 
 **条件与反例。** 本函数只验证数值范围，不验证命中控件；归一化坐标1对应屏幕边界，具体点击仍需考虑操作系统像素索引和裁剪。模型空间与截图尺寸取错会按比例偏移，即使每个数字都合法。多屏原点、负坐标、横纵显示缩放不同及设备转换均不在本例中，不将单显示器推导推广成全部Operator保证。
 
-**定位误差应怎样记录。** 若模型输出偏差为 $\Delta x$ 个归一化单位，对屏幕横向误差约为 $W\Delta x/F_x$；提高屏幕分辨率不会自动消除模型定位误差。排查点击偏移应同时保存原截图尺寸、原始模型坐标、归一化分母、Operator实际使用的字段和最终输入坐标，而不是只保留一个截图上的红点。
+**定位误差应怎样记录。** 若模型输出偏差为 $\Delta x$ 个归一化单位，对屏幕横向误差约为 $W\Delta x/F_x$ ；提高屏幕分辨率不会自动消除模型定位误差。排查点击偏移应同时保存原截图尺寸、原始模型坐标、归一化分母、Operator实际使用的字段和最终输入坐标，而不是只保留一个截图上的红点。
 
 ### 知识点三：SDK循环、动作派发与终态的预算
 
@@ -160,10 +162,10 @@ flowchart LR
 
 $$
 X\ne RUNNING\Rightarrow\text{不推进},\quad
-abort\Rightarrow USER\_STOPPED,\quad n\ge L\Rightarrow ERROR;
+abort\Rightarrow userStopped,\quad n\ge L\Rightarrow ERROR;
 $$
 
-通过后令 $n'=n+1$，遍历本轮动作；遇到 `finished` 变为END，遇到 `call_user` 变为CALL_USER，并跳过其后的动作。它们的含义来自统一动作协议，不是任务效果的独立证明。[UI-TARS终端动作定义](https://arxiv.org/html/2501.12326v1#S4.SS3)
+通过后令 $n^\prime=n+1$ ，遍历本轮动作；遇到 `finished` 变为END，遇到 `call_user` 变为CALL_USER，并跳过其后的动作。它们的含义来自统一动作协议，不是任务效果的独立证明。[UI-TARS终端动作定义](https://arxiv.org/html/2501.12326v1#S4.SS3)
 
 ```python
 def agent_loop_transition(state, actions, max_loops, aborted=False):
@@ -213,7 +215,7 @@ flowchart LR
 
 **源码定位。** `GUIAgent.run` 检查轮数、分别重试截图和模型请求，再遍历 `parsedPredictions` 调 `operator.execute`；执行器返回状态可更新运行状态，之后对call_user和finished作专门终止映射。[轮数、截图与模型调用](https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/packages/ui-tars/sdk/src/GUIAgent.ts#L154-L300) [执行器派发和终态映射](https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/packages/ui-tars/sdk/src/GUIAgent.ts#L350-L421) NutJS会先对这些终端动作返回END，再由SDK将call_user单独映射为CALL_USER；这是实际调用顺序，不能画成模型直接结束宿主进程。
 
-**预算推导。** 在每轮最多K个动作、截图有效、执行器每动作最多重试r次的条件下，动作调用尝试数上界为 $L K(1+r)$；L本身不是鼠标事件数上限。宿主给模型和截图重试5次、执行重试1次，是这次读取版本的装配值；一次动作部分生效后重试仍可能产生重复效果，重试次数不是幂等保证。[Desktop重试与循环配置](https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/apps/ui-tars/src/main/services/runAgent.ts#L217-L230)
+**预算推导。** 在每轮最多K个动作、截图有效、执行器每动作最多重试r次的条件下，动作调用尝试数上界为 $L K(1+r)$ ；L本身不是鼠标事件数上限。宿主给模型和截图重试5次、执行重试1次，是这次读取版本的装配值；一次动作部分生效后重试仍可能产生重复效果，重试次数不是幂等保证。[Desktop重试与循环配置](https://github.com/bytedance/UI-TARS-desktop/blob/3ac2cb8d946d78d5ff92ad17b318eaafa18c178c/apps/ui-tars/src/main/services/runAgent.ts#L217-L230)
 
 **观测失败与状态含义。** 源码对于无法解码的截图会减少已加的loopCnt并增加独立截图错误计数，因此把全部请求次数简单界定为L也不准确。END可能来自模型自报完成或Operator状态，不等于按钮点击后业务真正保存成功；CALL_USER则是需要用户介入，不能记为任务通过。即便鼠标移动与点击都成功，也需下一张截图或独立系统状态才能验证真实结果。
 

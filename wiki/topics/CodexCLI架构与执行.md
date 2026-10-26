@@ -46,7 +46,7 @@ $$
 
 这里的箭头是控制与请求关系，不是五个必然独立的操作系统进程。线程也指产品会话对象，不应与Rust线程混淆。模型名称、cwd和输出格式是状态或配置，不能因为名字重要就画成独立服务。
 
-覆盖项模型只保留顺序 $O=O_{root}\mathbin{+}O_{sub}$，其中加号为有序串接。源码prepend_config_flags调用prepend_root_overrides；本文没有读取全部最终配置解析路径，因此不把这个串接公式宣称为所有层级的“后者覆盖前者”保证。完整配置还可能包含托管约束、配置文件和特定命令限制。
+覆盖项模型只保留顺序 $O=O_{root}\mathbin{+}O_{sub}$ ，其中加号为有序串接。源码prepend_config_flags调用prepend_root_overrides；本文没有读取全部最终配置解析路径，因此不把这个串接公式宣称为所有层级的“后者覆盖前者”保证。完整配置还可能包含托管约束、配置文件和特定命令限制。
 
 手算根级[(model,A)]、子级[(format,json)]，教学输出保留两个有序键值对。Exec加根级remote标记被拒绝，依据是该版本CLI的reject_remote_mode_for_subcommand；这只说明此入口限制，不说明产品所有功能都不能远程连接。
 
@@ -146,7 +146,7 @@ flowchart TD
 
 命令输出很多，宿主既不能无限保留，也不能停止读管道后让子进程阻塞。该版本read_output每次读取一块：尚未达到事件数量上限时发出增量事件，然后按保留字节策略追加到缓冲，最后继续读到EOF。consume_output独立等待子进程退出、超时或取消，并处理输出回收；后代进程仍占用管道时还需要回收期限。
 
-对输出块 $c_1,\ldots,c_n$，定义总消费字节 $D=\sum_i|c_i|$、保留上限B和事件上限K，本页验证
+对输出块 $c_1,\ldots,c_n$ ，定义总消费字节 $D=\sum_i|c_i|$ 、保留上限B和事件上限K，本页验证
 
 $$
 |buffer|\le B,\qquad emitted\le K,\qquad consumed=D.

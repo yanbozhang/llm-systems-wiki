@@ -22,25 +22,25 @@ MHA、MQA、GQA 改变的是查询头与 K/V 表示的共享关系。减少 KV �
 
 ## 前置知识
 
-需要理解多头注意力与解码缓存。记 $H_q$ 为查询头数、$H_{kv}$ 为键和值的头数，$d_h$ 为单头宽度，$S$ 为历史长度。以下是常见的均匀分组，要求 $H_q\bmod H_{kv}=0$；K 与 V 的头数相同。这个整除关系也是所读 SDPA 文档的 GQA 约束，不代表所有研究中的非均匀共享方案都只能如此设计。[PyTorch SDPA 的 GQA 约束](https://docs.pytorch.org/docs/2.14/generated/torch.nn.functional.scaled_dot_product_attention.html)
+需要理解多头注意力与解码缓存。记 $H_q$ 为查询头数、 $H_{kv}$ 为键和值的头数， $d_h$ 为单头宽度， $S$ 为历史长度。以下是常见的均匀分组，要求 $H_q\bmod H_{kv}=0$ ；K 与 V 的头数相同。这个整除关系也是所读 SDPA 文档的 GQA 约束，不代表所有研究中的非均匀共享方案都只能如此设计。[PyTorch SDPA 的 GQA 约束](https://docs.pytorch.org/docs/2.14/generated/torch.nn.functional.scaled_dot_product_attention.html)
 
 ## 基本机制
 
-MHA 取 $H_{kv}=H_q$，MQA 取 $H_{kv}=1$，GQA 在其间共享。查询投影仍输出 $H_qd_h$ 个通道，K/V 各输出 $H_{kv}d_h$ 个通道。该版本 Llama 的 `q_proj`、`k_proj`、`v_proj` 和 `o_proj` 明确区分两种宽度，因此仅修改配置而继续加载原 MHA 权重可能产生形状不匹配，也可能因错误转换而改变模型含义。[LlamaAttention 的投影层构造](https://github.com/huggingface/transformers/blob/50e35cc0ca18ec19b80653690de553e6decf74f5/src/transformers/models/llama/modeling_llama.py#L209-L230)
+MHA 取 $H_{kv}=H_q$ ，MQA 取 $H_{kv}=1$ ，GQA 在其间共享。查询投影仍输出 $H_qd_h$ 个通道，K/V 各输出 $H_{kv}d_h$ 个通道。该版本 Llama 的 `q_proj`、`k_proj`、`v_proj` 和 `o_proj` 明确区分两种宽度，因此仅修改配置而继续加载原 MHA 权重可能产生形状不匹配，也可能因错误转换而改变模型含义。[LlamaAttention 的投影层构造](https://github.com/huggingface/transformers/blob/50e35cc0ca18ec19b80653690de553e6decf74f5/src/transformers/models/llama/modeling_llama.py#L209-L230)
 
 ## 推导或示例
 
 ### 知识点一：共享键值并不共享查询分布
 
-**问题与机制。** 如果四个 Q 头读取同一个 K/V 头，它们是不是只重复了一次计算？令组大小 $g=H_q/H_{kv}$，按零起始连续分组，查询头 $h$ 使用
+**问题与机制。** 如果四个 Q 头读取同一个 K/V 头，它们是不是只重复了一次计算？令组大小 $g=H_q/H_{kv}$ ，按零起始连续分组，查询头 $h$ 使用
 
 $$
 u(h)=\lfloor h/g\rfloor,\qquad
-A_{h,t,s}=\mathrm{softmax}_{s}\!\left(\frac{Q_{h,t,:}K_{\nu(h),s,:}^T}{\sqrt{d_h}}+M_{t,s}\right),
+A_{h,t,s}=\mathrm{softmax}_{s}\negthinspace \left(\frac{Q_{h,t,:}K_{\nu(h),s,:}^T}{\sqrt{d_h}}+M_{t,s}\right),
 \quad O_{h,t,:}=\sum_s A_{h,t,s}V_{\nu(h),s,:}.
 $$
 
-不同 $Q_h$ 仍可产生不同 $A_h$。对 $H_q=16,H_{kv}=4$，头0–3读组0，头4–7读组1，之后类推；MHA 是 $\nu(h)=h$，MQA 是全部映射到0。分组是 K/V 的共享，softmax 仍沿历史位置，而不是沿头编号。[GQA 分组定义](https://arxiv.org/html/2305.13245v3#S2.SS2)
+不同 $Q_h$ 仍可产生不同 $A_h$ 。对 $H_q=16,H_{kv}=4$ ，头0–3读组0，头4–7读组1，之后类推；MHA 是 $\nu(h)=h$ ，MQA 是全部映射到0。分组是 K/V 的共享，softmax 仍沿历史位置，而不是沿头编号。[GQA 分组定义](https://arxiv.org/html/2305.13245v3#S2.SS2)
 
 ```python
 def grouped_attention(queries, keys, values):
@@ -91,18 +91,18 @@ flowchart LR
 
 **源码定位。** 该版本 `repeat_kv` 将 `[B,Hkv,S,dh]` 在组内展开到 `[B,Hq,S,dh]`；`eager_attention_forward` 随后与查询相乘。这个 `expand`/`reshape` 是普通路径的组织方式，融合 GQA 内核可以直接消费共享布局。[Llama repeat_kv 与 eager_attention_forward](https://github.com/huggingface/transformers/blob/50e35cc0ca18ec19b80653690de553e6decf74f5/src/transformers/models/llama/modeling_llama.py#L168-L202) [SDPA enable_gqa 参数及等价伪代码](https://docs.pytorch.org/docs/2.14/generated/torch.nn.functional.scaled_dot_product_attention.html)
 
-**条件与反例。** 整除与宽度校验不可省略。$H_q=6,H_{kv}=4$ 在这个接口下无合法均匀组映射。两个查询向量恰好相同时可以得到相同分布，但这是输入相同的结果，不是共享 K/V 的必然性质；如果把 Q 也平均，就进一步改变了模型结构。
+**条件与反例。** 整除与宽度校验不可省略。 $H_q=6,H_{kv}=4$ 在这个接口下无合法均匀组映射。两个查询向量恰好相同时可以得到相同分布，但这是输入相同的结果，不是共享 K/V 的必然性质；如果把 Q 也平均，就进一步改变了模型结构。
 
 ### 知识点二：从持久缓存推导字节数与计算边界
 
-**问题与机制。** 头数减少四倍，为何不应直接承诺延迟降低四倍？设批量 $B$、层数 $L$、历史长度 $S$、每元素 $b$ 字节；K 与 V 各存一个张量，因此
+**问题与机制。** 头数减少四倍，为何不应直接承诺延迟降低四倍？设批量 $B$ 、层数 $L$ 、历史长度 $S$ 、每元素 $b$ 字节；K 与 V 各存一个张量，因此
 
 $$
 M_{KV}=2BLSH_{kv}d_hb\quad\text{字节},\qquad
 \frac{M_{GQA}}{M_{MHA}}=\frac{H_{kv}}{H_q}.
 $$
 
-相比之下单步解码的得分元素仍是 $BH_qS$；若 Q 长度为 $T_q$，就是 $BH_qT_qS$。忽略偏置时，单层 K/V 投影参数从 $2CH_qd_h$ 变为 $2CH_{kv}d_h$，Q 与输出投影仍在。GQA 主要降低 KV 表示、相关读取和部分投影成本，并没有消除每个查询头对历史的加权汇聚。[GQA 对缓存和带宽的讨论](https://arxiv.org/html/2305.13245v3#S2.SS2)
+相比之下单步解码的得分元素仍是 $BH_qS$ ；若 Q 长度为 $T_q$ ，就是 $BH_qT_qS$ 。忽略偏置时，单层 K/V 投影参数从 $2CH_qd_h$ 变为 $2CH_{kv}d_h$ ，Q 与输出投影仍在。GQA 主要降低 KV 表示、相关读取和部分投影成本，并没有消除每个查询头对历史的加权汇聚。[GQA 对缓存和带宽的讨论](https://arxiv.org/html/2305.13245v3#S2.SS2)
 
 ```python
 def kv_budget(batch, layers, tokens, query_heads, kv_heads, head_dim, bytes_per_element=2):
@@ -118,7 +118,7 @@ def kv_budget(batch, layers, tokens, query_heads, kv_heads, head_dim, bytes_per_
             "mib": shared / 2**20, "decode_score_elements": batch * query_heads * tokens}
 ```
 
-代入 $B=1,L=32,S=4096,H_q=16,H_{kv}=4,d_h=64,b=2$，得到 $134217728$ 字节，即128 MiB；MHA 对照为512 MiB。每 token 每层为 $2\times4\times64\times2=1024$ 字节，与旧页算例一致。MiB 使用 $2^{20}$，不能写成十进制 MB 后继续用同一数值。一个解码步骤每层的得分元素数为 $16\times4096=65536$，没有因 KV 头变为四而降为16384。
+代入 $B=1,L=32,S=4096,H_q=16,H_{kv}=4,d_h=64,b=2$ ，得到 $134217728$ 字节，即128 MiB；MHA 对照为512 MiB。每 token 每层为 $2\times4\times64\times2=1024$ 字节，与旧页算例一致。MiB 使用 $2^{20}$ ，不能写成十进制 MB 后继续用同一数值。一个解码步骤每层的得分元素数为 $16\times4096=65536$ ，没有因 KV 头变为四而降为16384。
 
 ```mermaid
 flowchart LR
@@ -135,10 +135,10 @@ flowchart LR
 
 ### 知识点三：均值合并只是转换初始化
 
-**问题与机制。** 从 MHA 合并到 GQA 时为何论文用组内均值，为什么仍需继续训练？将同组 K 投影展平为等长向量 $w_1,\ldots,w_g$，求一个公共 $u$ 使平方距离最小：
+**问题与机制。** 从 MHA 合并到 GQA 时为何论文用组内均值，为什么仍需继续训练？将同组 K 投影展平为等长向量 $w_1,\ldots,w_g$ ，求一个公共 $u$ 使平方距离最小：
 
 $$
-J(u)=\sum_{i=1}^{g}\|w_i-u\|_2^2,\quad
+J(u)=\sum_{i=1}^{g}\Vert w_i-u\Vert _2^2,\quad
 \nabla_uJ=2gu-2\sum_iw_i=0
 \Rightarrow u=\frac1g\sum_iw_i.
 $$
@@ -161,7 +161,7 @@ def mean_pool_heads(head_vectors, kv_heads):
 
 代码将每头同形投影展平，并按相邻头分组。四行 `[[1,0],[-1,0],[2,4],[4,2]]` 合并为两头，得到 `[[0,0],[3,3]]`。前一组发生抵消，这是不可逆的信息损失。若保留原头数，组大小为一，输出回到原投影；这个边界可用于检查分组实现。
 
-为了说明权重均值不保持注意力，考虑两个头、两个位置、$q=1$，两头键分别为 `[a,0]` 与 `[-a,0]`。仅比较第一头，原来对第一个位置的权重是 $\sigma(a)$；合并后键为 `[0,0]`，变为 $1/2$。取 $a=\ln3$，权重从0.75变成0.5。即使 V 保持相同，输出也改变。一般有 $\mathrm{softmax}(\mathrm{mean}S_i)\ne\mathrm{mean}\mathrm{softmax}(S_i)$；对称特殊输入可能偶然相等，不能作为无损证明。
+为了说明权重均值不保持注意力，考虑两个头、两个位置、 $q=1$ ，两头键分别为 `[a,0]` 与 `[-a,0]`。仅比较第一头，原来对第一个位置的权重是 $\sigma(a)$ ；合并后键为 `[0,0]`，变为 $1/2$ 。取 $a=\ln3$ ，权重从0.75变成0.5。即使 V 保持相同，输出也改变。一般有 $\mathrm{softmax}(\mathrm{mean}S_i)\ne\mathrm{mean}\mathrm{softmax}(S_i)$ ；对称特殊输入可能偶然相等，不能作为无损证明。
 
 ```mermaid
 flowchart LR

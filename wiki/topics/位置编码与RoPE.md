@@ -26,7 +26,7 @@ claim_ids: [claim-position-v1, claim-position-relative-rotation-v1, claim-positi
 
 ## 基本机制
 
-设某个头投影后的向量为 $q=W_Qx_m,k=W_Kx_n$。RoPE 得到 $\widetilde q=R_mq,\widetilde k=R_nk$，随后计算缩放内积。该版本 Llama 的 `apply_rotary_pos_emb` 只返回旋转后的 Q/K；V 没有在该调用中旋转。频率生成、旋转应用、缓存更新和 attention 是分开的调用阶段，不应把 `position_ids` 的生成当作全部 RoPE 计算。[Llama 旋转应用与缓存顺序](https://github.com/huggingface/transformers/blob/50e35cc0ca18ec19b80653690de553e6decf74f5/src/transformers/models/llama/modeling_llama.py#L119-L149)
+设某个头投影后的向量为 $q=W_Qx_m,k=W_Kx_n$ 。RoPE 得到 $\widetilde q=R_mq,\widetilde k=R_nk$ ，随后计算缩放内积。该版本 Llama 的 `apply_rotary_pos_emb` 只返回旋转后的 Q/K；V 没有在该调用中旋转。频率生成、旋转应用、缓存更新和 attention 是分开的调用阶段，不应把 `position_ids` 的生成当作全部 RoPE 计算。[Llama 旋转应用与缓存顺序](https://github.com/huggingface/transformers/blob/50e35cc0ca18ec19b80653690de553e6decf74f5/src/transformers/models/llama/modeling_llama.py#L119-L149)
 
 ## 推导或示例
 
@@ -35,10 +35,10 @@ claim_ids: [claim-position-v1, claim-position-relative-rotation-v1, claim-positi
 **问题与机制。** 如何用绝对位置构造变换，又使点积只出现位置差？定义
 
 $$
-R(\phi)=\begin{pmatrix}\cos\phi&-\sin\phi\\\sin\phi&\cos\phi\end{pmatrix}.
+R(\phi)=\begin{pmatrix}\cos\phi&-\sin\phi\cr \sin\phi&\cos\phi\end{pmatrix}.
 $$
 
-由于 $R(\phi)^T=R(-\phi)$，并由三角函数和差公式得到 $R(a)R(b)=R(a+b)$，所以
+由于 $R(\phi)^T=R(-\phi)$ ，并由三角函数和差公式得到 $R(a)R(b)=R(a+b)$ ，所以
 
 $$
 (R(m\theta)q)^T(R(n\theta)k)
@@ -46,7 +46,7 @@ $$
 =q^TR((n-m)\theta)k.
 $$
 
-同时 $\|R(m\theta)q\|^2=q^TR^TRq=\|q\|^2$。注意“范数不变”不表示不同位置旋转后的内积不变；改变的恰好是 Q 与 K 的相对朝向。若对二者位置同时加偏移 $c$，差仍为 $n-m$，在固定原始向量和同一频率下得分不变。[RoFormer 二维形式及相对旋转等式](https://arxiv.org/html/2104.09864v5#S3.SS2)
+同时 $\Vert R(m\theta)q\Vert ^2=q^TR^TRq=\Vert q\Vert ^2$ 。注意“范数不变”不表示不同位置旋转后的内积不变；改变的恰好是 Q 与 K 的相对朝向。若对二者位置同时加偏移 $c$ ，差仍为 $n-m$ ，在固定原始向量和同一频率下得分不变。[RoFormer 二维形式及相对旋转等式](https://arxiv.org/html/2104.09864v5#S3.SS2)
 
 ```python
 def relative_rotation(q, k, m, n, theta):
@@ -61,7 +61,7 @@ def relative_rotation(q, k, m, n, theta):
             "rotated_norm_squared": sum(x * x for x in qm)}
 ```
 
-代码的 `both` 计算两端旋转后的内积，`relative` 只旋转 K，再与原 Q 相乘；另外返回两个范数平方供独立核对。取 $q=k=(1,0),m=0,n=1,\theta=\pi/2$，内积约为0，原始内积为1；若两者位置同时加7，相对内积仍约为0。再取 $q=(3,4)$，旋转前后范数平方应都为25。浮点三角函数通常不会返回严格的数学零，应使用容差。
+代码的 `both` 计算两端旋转后的内积，`relative` 只旋转 K，再与原 Q 相乘；另外返回两个范数平方供独立核对。取 $q=k=(1,0),m=0,n=1,\theta=\pi/2$ ，内积约为0，原始内积为1；若两者位置同时加7，相对内积仍约为0。再取 $q=(3,4)$ ，旋转前后范数平方应都为25。浮点三角函数通常不会返回严格的数学零，应使用容差。
 
 ```mermaid
 flowchart LR
@@ -76,17 +76,17 @@ flowchart LR
 
 **源码定位。** 该版本 `q*cos + rotate_half(q)*sin` 是旋转矩阵的稀疏实现；它不构造大块矩阵。`cos`、`sin` 增加头维后可广播到所有查询或 KV 头。[Llama apply_rotary_pos_emb](https://github.com/huggingface/transformers/blob/50e35cc0ca18ec19b80653690de553e6decf74f5/src/transformers/models/llama/modeling_llama.py#L126-L149) 数学依据是 [RoFormer 式13至16](https://arxiv.org/html/2104.09864v5#S3.SS2)。
 
-**条件与反例。** 恒等式要求 Q/K 使用相同频率和配对约定，且没有额外的非单位幅度缩放。如果把 Q 的角度取为 $m\theta$、K 取为 $2n\theta$，就不再仅依赖 $n-m$。此外，真实模型的原始 Q/K 本身依赖上下文，不能据这个局部恒等式断言任意整段文本平移后模型输出都不变。
+**条件与反例。** 恒等式要求 Q/K 使用相同频率和配对约定，且没有额外的非单位幅度缩放。如果把 Q 的角度取为 $m\theta$ 、K 取为 $2n\theta$ ，就不再仅依赖 $n-m$ 。此外，真实模型的原始 Q/K 本身依赖上下文，不能据这个局部恒等式断言任意整段文本平移后模型输出都不变。
 
 ### 知识点二：多频率与两种维度配对布局
 
-**问题与机制。** 为什么照抄二维公式却可能无法对齐现有 checkpoint？将 $d$ 维拆为 $d/2$ 个二维子空间，用零起始频率索引 $j$：
+**问题与机制。** 为什么照抄二维公式却可能无法对齐现有 checkpoint？将 $d$ 维拆为 $d/2$ 个二维子空间，用零起始频率索引 $j$ ：
 
 $$
-\omega_j=b^{-2j/d},\qquad \phi_{m,j}=m\omega_j,\qquad 0\le j<d/2.
+\omega_j=b^{-2j/d},\qquad \phi_{m,j}=m\omega_j,\qquad 0\le j\lt d/2.
 $$
 
-RoFormer 论文展示相邻维配对 $(0,1),(2,3),\ldots$。本次读取的 Llama 实现使用前后半配对 $(0,d/2),(1,d/2+1),\ldots$：`rotate_half` 先取前半 $x_1$ 与后半 $x_2$，返回 $[-x_2,x_1]$；频率也被连接为 `[freqs,freqs]`。两种写法可经固定置换 $P$ 对应，满足 $R_{split}=P R_{adj}P^T$，前提是投影通道也使用相应置换。[RoFormer 多维旋转矩阵](https://arxiv.org/html/2104.09864v5#S3.SS2.SSS2) [Llama 频率拼接和 rotate_half](https://github.com/huggingface/transformers/blob/50e35cc0ca18ec19b80653690de553e6decf74f5/src/transformers/models/llama/modeling_llama.py#L100-L123)
+RoFormer 论文展示相邻维配对 $(0,1),(2,3),\ldots$ 。本次读取的 Llama 实现使用前后半配对 $(0,d/2),(1,d/2+1),\ldots$ ：`rotate_half` 先取前半 $x_1$ 与后半 $x_2$ ，返回 $[-x_2,x_1]$ ；频率也被连接为 `[freqs,freqs]`。两种写法可经固定置换 $P$ 对应，满足 $R_{split}=P R_{adj}P^T$ ，前提是投影通道也使用相应置换。[RoFormer 多维旋转矩阵](https://arxiv.org/html/2104.09864v5#S3.SS2.SSS2) [Llama 频率拼接和 rotate_half](https://github.com/huggingface/transformers/blob/50e35cc0ca18ec19b80653690de553e6decf74f5/src/transformers/models/llama/modeling_llama.py#L100-L123)
 
 ```python
 def rope_layout(vector, position, base=10000.0, layout="split"):
@@ -104,11 +104,11 @@ def rope_layout(vector, position, base=10000.0, layout="split"):
     return out
 ```
 
-当 $d=4,b=10000$，频率为 `[1,0.01]`。对前后半布局的 $x=[1,2,3,4]$、位置1，结果为
+当 $d=4,b=10000$ ，频率为 `[1,0.01]`。对前后半布局的 $x=[1,2,3,4]$ 、位置1，结果为
 
 $$
-[\cos1-3\sin1,\;2\cos0.01-4\sin0.01,\;
-\sin1+3\cos1,\;2\sin0.01+4\cos0.01].
+[\cos1-3\sin1,\thickspace 2\cos0.01-4\sin0.01,\thickspace
+\sin1+3\cos1,\thickspace 2\sin0.01+4\cos0.01].
 $$
 
 第二个二维对变化较慢，这就是频率族的作用。若把同一存储向量直接按相邻维旋转，第一个对会变成 `(1,2)`，输出不同；正确比较应先把相邻形式 `[a0,b0,a1,b1]` 置换为分半形式 `[a0,a1,b0,b1]`，完成旋转后再逆置换。函数显式提供 `layout`，便于做这一逐元素检查。
@@ -129,14 +129,14 @@ flowchart LR
 
 ### 知识点三：线性缩放与缓存位置的一致性
 
-**问题与机制。** 扩大位置范围为什么不仅是改一个最大长度？对线性缩放因子 $s>0$，有
+**问题与机制。** 扩大位置范围为什么不仅是改一个最大长度？对线性缩放因子 $s\gt 0$ ，有
 
 $$
 (m/s)\omega_j=m(\omega_j/s),\qquad
 \widetilde q_m^T\widetilde k_n=q^TR((n-m)\omega_j/s)k
 $$
 
-（最后一式按每个二维子空间理解）。这证明缩放位置与反频率等价，但前提是 Q/K 共享同一个 $s$。若缓存键仍用旧 $s_1$、新 Q 用 $s_2$，相位差变成 $n\omega/s_1-m\omega/s_2$，不再等于一致的相对距离。该版本线性 RoPE 参数函数明确用 `inv_freq /= factor`，它并不是论文默认 RoPE 的定义。[Transformers 线性缩放参数](https://github.com/huggingface/transformers/blob/50e35cc0ca18ec19b80653690de553e6decf74f5/src/transformers/modeling_rope_utils.py#L174-L190)
+（最后一式按每个二维子空间理解）。这证明缩放位置与反频率等价，但前提是 Q/K 共享同一个 $s$ 。若缓存键仍用旧 $s_1$ 、新 Q 用 $s_2$ ，相位差变成 $n\omega/s_1-m\omega/s_2$ ，不再等于一致的相对距离。该版本线性 RoPE 参数函数明确用 `inv_freq /= factor`，它并不是论文默认 RoPE 的定义。[Transformers 线性缩放参数](https://github.com/huggingface/transformers/blob/50e35cc0ca18ec19b80653690de553e6decf74f5/src/transformers/modeling_rope_utils.py#L174-L190)
 
 ```python
 def cached_rope_scores(query, raw_keys, query_position, key_positions, scale=1.0):
@@ -178,7 +178,7 @@ RoPE 的局部正交结构给出可检查恒等式，不能单独证明长上下
 
 ## 掌握标准
 
-能不查代码推导 $R_m^TR_n=R_{n-m}$；能对四维向量指出实际配对；能说明换布局为何需同步投影；能用明确数值发现位置重置。对长上下文须区分“接口允许”“相位实现一致”“任务质量通过”三个条件，不能以其中一项替代其他项。
+能不查代码推导 $R_m^TR_n=R_{n-m}$ ；能对四维向量指出实际配对；能说明换布局为何需同步投影；能用明确数值发现位置重置。对长上下文须区分“接口允许”“相位实现一致”“任务质量通过”三个条件，不能以其中一项替代其他项。
 
 ## 源码与后续阅读
 

@@ -9,6 +9,8 @@ practice_status: designed
 ---
 # OpenHands事件流与运行时
 
+公式记号：`actionId`、`toolCallId`、`toolCalls`、`toolName` 分别对应源码字段 `action_id`、`tool_call_id`、`tool_calls`、`tool_name`；简写只用于公式展示。
+
 OpenHands把模型决策、工具执行、环境反馈和界面展示连接成可追踪事件流程。本页以当前社区代码为准：OpenHands/OpenHands是Agent Canvas，核心会话与事件接口在software-agent-sdk。论文提供设计背景，具体字段、分支与调用行为以固定提交源码为证。
 
 ## 学习目标
@@ -35,7 +37,7 @@ OpenHands把模型决策、工具执行、环境反馈和界面展示连接成�
 
 论文把历史描述为动作与观察的事件流；本次SDK源码已经支持带parent_id的事件树。必须同时区分持久化追加序号、事件唯一ID和当前分支。假设追加日志依次为root、a、old、new，而old与new的父节点都是a：选择new为活动叶子时，模型历史应为root→a→new，不能把old也拼入，否则旧分支的反馈会混入新尝试。
 
-令父映射为 $p:E\to E\cup\{\varnothing\}$，当前头为 $h$，活动路径为反转后的 $[h,p(h),p^2(h),\ldots]$。遍历时维护visited，若再次遇到同一ID则父链有环；若父ID不存在则轨迹缺失。时间戳不参与父链判定，因为不同事件可能同时间、客户端时钟不一致或历史来自回放。
+令父映射为 $p:E\to E\cup\lbrace \varnothing\rbrace$ ，当前头为 $h$ ，活动路径为反转后的 $[h,p(h),p^2(h),\ldots]$ 。遍历时维护visited，若再次遇到同一ID则父链有环；若父ID不存在则轨迹缺失。时间戳不参与父链判定，因为不同事件可能同时间、客户端时钟不一致或历史来自回放。
 
 将上述计算或状态约束集中写为：
 
@@ -64,7 +66,7 @@ def conversation_path(events, head_id):
     return list(reversed(chain))
 ```
 
-建立字典需 $O(n)$，回溯分支长度 $d$需 $O(d)$，返回深拷贝避免修改原始事件。实际SDK `EventLog.path_to_root`已有ID索引，还可用limit只取末尾窗口；`append`在文件锁内检查重复ID和显式父存在，再写payload、索引和长度标记。纯函数只检查给定快照，不能替代跨线程/跨进程写入协议。
+建立字典需 $O(n)$ ，回溯分支长度 $d$ 需 $O(d)$ ，返回深拷贝避免修改原始事件。实际SDK `EventLog.path_to_root`已有ID索引，还可用limit只取末尾窗口；`append`在文件锁内检查重复ID和显式父存在，再写payload、索引和长度标记。纯函数只检查给定快照，不能替代跨线程/跨进程写入协议。
 
 ```mermaid
 flowchart LR
@@ -83,12 +85,12 @@ flowchart LR
 
 事件粒度与模型API消息粒度不同。一次模型响应可能产生两个工具调用；运行时便于管理时把它们存成两个ActionEvent，但下一次调用模型时应还原成一个assistant消息中的两项tool_calls。否则把一个响应拆成两个独立assistant轮次，会改变原始交互协议。
 
-设活动事件流为 $E$，投影为 $P(E)$。对同一响应 $r$的连续动作块 $A_r=[a_1,\ldots,a_k]$，投影保留一份共享文本与 $k$ 个工具调用：$P(A_r)=(\text{assistant},[call(a_1),\ldots,call(a_k)])$。动作事件数从 $k$变成一条模型消息，但调用数必须仍为 $k$，即工具调用计数守恒。
+设活动事件流为 $E$ ，投影为 $P(E)$ 。对同一响应 $r$ 的连续动作块 $A_r=[a_1,\ldots,a_k]$ ，投影保留一份共享文本与 $k$ 个工具调用： $P(A_r)=(\text{assistant},[call(a_1),\ldots,call(a_k)])$ 。动作事件数从 $k$ 变成一条模型消息，但调用数必须仍为 $k$ ，即工具调用计数守恒。
 
 将上述计算或状态约束集中写为：
 
 $$
-P(A_r)=\big(\mathrm{assistant},[\mathrm{call}(a_1),\ldots,\mathrm{call}(a_k)]\big),\quad |\mathrm{tool\_calls}(P(A_r))|=k.
+P(A_r)=\big(\mathrm{assistant},[\mathrm{call}(a_1),\ldots,\mathrm{call}(a_k)]\big),\quad |\mathrm{toolCalls}(P(A_r))|=k.
 $$
 
 ```python
@@ -117,7 +119,7 @@ def project_action_batches(events):
     return messages
 ```
 
-demo的x/y共用响应r，输出一个assistant消息与调用cx/cy。若两个动作之间插入一次用户消息，函数不会跨过它合并，即便response_id相同；生产源码同样按连续块向前看。若后来动作也携带共享文本，示例报错，防止同一段内容被重复加入。时间 $O(n)$，返回空间与消息及调用数线性相关，原事件保持不变。
+demo的x/y共用响应r，输出一个assistant消息与调用cx/cy。若两个动作之间插入一次用户消息，函数不会跨过它合并，即便response_id相同；生产源码同样按连续块向前看。若后来动作也携带共享文本，示例报错，防止同一段内容被重复加入。时间 $O(n)$ ，返回空间与消息及调用数线性相关，原事件保持不变。
 
 ```mermaid
 flowchart TD
@@ -137,12 +139,12 @@ flowchart TD
 
 ActionEvent保存模型提出的结构化动作，执行器执行后产生ObservationEvent。动作本身既不是成功证明，也不保证已经执行；例如等待确认时动作已经出现，但尚无工具结果。普通观察同时携带action_id指向事件、tool_call_id连接模型调用、tool_name说明执行器。
 
-对普通观察 $o$，约束为存在唯一动作 $a$，满足 $o.action\_id=a.id$、$o.tool\_call\_id=a.tool\_call\_id$和工具名相同。记动作集合为 $A$、已收到正常观察的动作ID集合为 $O$，待结果集合是 $A\setminus O$。结果可以乱序到达，关联按ID完成，不能把第一个观察机械配给第一个动作。
+对普通观察 $o$ ，约束为存在唯一动作 $a$ ，满足 $o.actionId=a.id$ 、 $o.toolCallId=a.toolCallId$ 和工具名相同。记动作集合为 $A$ 、已收到正常观察的动作ID集合为 $O$ ，待结果集合是 $A\setminus O$ 。结果可以乱序到达，关联按ID完成，不能把第一个观察机械配给第一个动作。
 
 将上述计算或状态约束集中写为：
 
 $$
-\forall o,\ \exists! a:\ (o.\mathrm{action\_id},o.\mathrm{tool\_call\_id},o.\mathrm{tool\_name})=(a.\mathrm{id},a.\mathrm{tool\_call\_id},a.\mathrm{tool\_name}),\quad A_{pending}=A\setminus O.
+\forall o,\ \exists! a:\ (o.\mathrm{actionId},o.\mathrm{toolCallId},o.\mathrm{toolName})=(a.\mathrm{id},a.\mathrm{toolCallId},a.\mathrm{toolName}),\quad A_{pending}=A\setminus O.
 $$
 
 ```python
@@ -166,7 +168,7 @@ def observation_links(actions, observations):
     return {"observed": sorted(observed), "pending": sorted(index.keys() - observed)}
 ```
 
-demo先收到y的结果，则pending应只有x。未知action、错调用ID、错工具名或重复最终观察都会被拒绝。预索引与扫描期望为 $O(|A|+|O|)$，输出排序另计。示例把每个动作限制为一个最终普通观察，实际系统可有流式事件、错误事件或拒绝事件，不能用这一函数把它们全部判为无效。
+demo先收到y的结果，则pending应只有x。未知action、错调用ID、错工具名或重复最终观察都会被拒绝。预索引与扫描期望为 $O(|A|+|O|)$ ，输出排序另计。示例把每个动作限制为一个最终普通观察，实际系统可有流式事件、错误事件或拒绝事件，不能用这一函数把它们全部判为无效。
 
 ```mermaid
 flowchart LR

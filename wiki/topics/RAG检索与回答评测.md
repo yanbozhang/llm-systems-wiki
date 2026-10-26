@@ -34,11 +34,13 @@ RAG评测要分别解释召回、实际上下文、系统回答和评分裁判�
 
 ### 知识点一：上下文AP的分母决定它无法单独衡量漏召回
 
-评测召回排序时，先确定标签是“相关文档ID”还是“裁判认为对给定答案有用的片段”。该版本 `LLMContextPrecisionWithReference`逐片段把问题、reference和context交给模型判0/1，再计算AP式指标。令第 $i$ 个片段标签为 $v_i$，累计命中 $h_i=\sum_{j\le i}v_j$，有：
+评测召回排序时，先确定标签是“相关文档ID”还是“裁判认为对给定答案有用的片段”。该版本 `LLMContextPrecisionWithReference`逐片段把问题、reference和context交给模型判0/1，再计算AP式指标。令第 $i$ 个片段标签为 $v_i$ ，累计命中 $h_i=\sum_{j\le i}v_j$ ，有：
 
-$$CP=\frac{\sum_{i=1}^K v_i\,h_i/i}{\sum_{i=1}^K v_i+10^{-10}}.$$
+$$
+CP=\frac{\sum_{i=1}^K v_i\thinspace h_i/i}{\sum_{i=1}^K v_i+10^{-10}}.
+$$
 
-它不同于普通 $P@K=h_K/K$，也不同于把分母设为全库相关文档数 $R$的AP。分母只统计已召回片段中的正标签，因此即使只检到唯一一篇排第一的相关资料，CP仍接近1；若库中本来有10篇必需资料，Recall@1仅为0.1。
+它不同于普通 $P@K=h_K/K$ ，也不同于把分母设为全库相关文档数 $R$ 的AP。分母只统计已召回片段中的正标签，因此即使只检到唯一一篇排第一的相关资料，CP仍接近1；若库中本来有10篇必需资料，Recall@1仅为0.1。
 
 ```python
 def context_precision_profile(verdicts, corpus_relevant_count=None):
@@ -62,7 +64,7 @@ def context_precision_profile(verdicts, corpus_relevant_count=None):
             "empty_context": not labels}
 ```
 
-标签 `[1,0,1]`的分子为 $1+2/3=5/3$，上下文AP约 $5/6$，普通P@3为2/3。若人工完整相关集合有4项，Recall@3=1/2，全库分母AP为5/12。把最后一个正例移到第二名，上下文AP接近1，说明排名改善；它仍没有证明剩余两份证据被找到。函数按排名单次扫描，时间 $O(K)$，不执行任何模型判断。
+标签 `[1,0,1]`的分子为 $1+2/3=5/3$ ，上下文AP约 $5/6$ ，普通P@3为2/3。若人工完整相关集合有4项，Recall@3=1/2，全库分母AP为5/12。把最后一个正例移到第二名，上下文AP接近1，说明排名改善；它仍没有证明剩余两份证据被找到。函数按排名单次扫描，时间 $O(K)$ ，不执行任何模型判断。
 
 ```mermaid
 flowchart LR
@@ -81,9 +83,11 @@ flowchart LR
 
 ### 知识点二：上下文召回与回答忠实度检查不同声明集合
 
-将参考答案拆成声明集合 $G$，系统回答拆成集合 $A$，实际送给生成器的证据为 $C$。LLM上下文召回估计 $G$中有多少能从 $C$推出；Faithfulness估计 $A$中有多少能从 $C$推出：
+将参考答案拆成声明集合 $G$ ，系统回答拆成集合 $A$ ，实际送给生成器的证据为 $C$ 。LLM上下文召回估计 $G$ 中有多少能从 $C$ 推出；Faithfulness估计 $A$ 中有多少能从 $C$ 推出：
 
-$$CR=\frac{\sum_{g\in G}\mathbf1[C\models g]}{|G|},\qquad F=\frac{\sum_{a\in A}\mathbf1[C\models a]}{|A|}.$$
+$$
+CR=\frac{\sum_{g\in G}\mathbf1[C\models g]}{|G|},\qquad F=\frac{\sum_{a\in A}\mathbf1[C\models a]}{|A|}.
+$$
 
 这两个分母不同，因此不能把忠实度当答案完整度。参考答案有“方法、条件、版本、限制”四个声明，证据只支持方法；系统只回答方法，得到CR=1/4而F=1。若系统补上三个无依据细节，完整性表面增加，F反而下降。评价时应同时检查参考信息覆盖和回答是否增添无依据内容。
 
@@ -100,7 +104,7 @@ def claim_coverage(reference_attributed, answer_supported):
             "reference_supported": sum(reference), "answer_supported": sum(answer)}
 ```
 
-函数输入分别是参考声明的attributed标签与系统声明的supported标签，拒绝将非二值评分混入。空声明集返回None，对应源码的NaN语义，不能把空回答当100%忠实。扫描时间为 $O(|G|+|A|)$；它只演示聚合，不模拟语言模型如何拆声明或判断蕴含。
+函数输入分别是参考声明的attributed标签与系统声明的supported标签，拒绝将非二值评分混入。空声明集返回None，对应源码的NaN语义，不能把空回答当100%忠实。扫描时间为 $O(|G|+|A|)$ ；它只演示聚合，不模拟语言模型如何拆声明或判断蕴含。
 
 ```mermaid
 flowchart TD
@@ -114,17 +118,19 @@ flowchart TD
 
 该版 `LLMContextRecall._ascore`拼接retrieved_contexts并使用reference做分类，`Faithfulness`先从response生成声明再做NLI判断。用于评估生成器的retrieved_contexts应当与真正进入模型的上下文一致；若误传预算截断前的全部候选，就会给生成器未见过的证据记功。候选召回和最终上下文覆盖可分两次测量，字段须明确命名。
 
-这里 $C\models a$是语义支持，不是存在一个URL，也不是“相似度高”。忠实复制过期错误来源可能F=1而现实事实错误；正确答案来自模型记忆却缺上下文支持，可能事实正确而F低。多源联合论证还需足够证据组合，不能只找到一个同主题句子。参考答案自身若漏条件或有错误，CR也会偏，因此人工基准不是无需核验的绝对真理。
+这里 $C\models a$ 是语义支持，不是存在一个URL，也不是“相似度高”。忠实复制过期错误来源可能F=1而现实事实错误；正确答案来自模型记忆却缺上下文支持，可能事实正确而F低。多源联合论证还需足够证据组合，不能只找到一个同主题句子。参考答案自身若漏条件或有错误，CR也会偏，因此人工基准不是无需核验的绝对真理。
 
 [LLMContextRecall._compute_score 与 _ascore](https://github.com/explodinggradients/ragas/blob/298b68274234c060deacab3cf5fb52aa3a20e885/src/ragas/metrics/_context_recall.py#L114)；[Faithfulness声明生成与评分](https://github.com/explodinggradients/ragas/blob/298b68274234c060deacab3cf5fb52aa3a20e885/src/ragas/metrics/_faithfulness.py#L144)；[Context Recall 分母](https://github.com/explodinggradients/ragas/blob/298b68274234c060deacab3cf5fb52aa3a20e885/docs/concepts/metrics/available_metrics/context_recall.md#L1)；[Faithfulness 分母](https://github.com/explodinggradients/ragas/blob/298b68274234c060deacab3cf5fb52aa3a20e885/docs/concepts/metrics/available_metrics/faithfulness.md#L1)；[RAGAS Faithfulness](https://arxiv.org/html/2309.15217v2).
 
 ### 知识点三：自动支持判断是有误差的估计器
 
-Ragas的最终均值计算很简单，但输入标签来自模型。令真实支持率为 $f$，裁判对支持声明的真阳性率为 $a$，对不支持声明的假阳性率为 $b$。若这两个条件概率在目标样本上稳定，自动支持率满足：
+Ragas的最终均值计算很简单，但输入标签来自模型。令真实支持率为 $f$ ，裁判对支持声明的真阳性率为 $a$ ，对不支持声明的假阳性率为 $b$ 。若这两个条件概率在目标样本上稳定，自动支持率满足：
 
-$$\mathbb E[\hat f]=af+b(1-f)=b+(a-b)f.$$
+$$
+\mathbb E[\hat f]=af+b(1-f)=b+(a-b)f.
+$$
 
-因此更换裁判或提示词即可改变分数，而不改变被测回答。这个式子是教学误差分解，不是论文对某个模型给出的参数保证。若 $a=b$，裁判输出与真实支持性无关；不能用简单校准恢复能力排名。
+因此更换裁判或提示词即可改变分数，而不改变被测回答。这个式子是教学误差分解，不是论文对某个模型给出的参数保证。若 $a=b$ ，裁判输出与真实支持性无关；不能用简单校准恢复能力排名。
 
 ```python
 def judge_error_audit(human_labels, judge_labels):
@@ -149,7 +155,7 @@ def judge_error_audit(human_labels, judge_labels):
             "mean_bias": (counts["fp"] - counts["fn"]) / n if n else None}
 ```
 
-四个冻结声明，人工标签为 `[1,1,0,0]`，自动标签为 `[1,1,1,0]`，得到TP=2、FN=0、FP=1、TN=1。人工支持率0.5，自动0.75，偏移0.25，且 $0.5+(1-0.5)\times0.5=0.75$。函数按ID对齐，避免两个列表顺序不同却被zip后错误计分；某类人工标签缺失时，对应TPR或FPR返回None，不能伪造为0。
+四个冻结声明，人工标签为 `[1,1,0,0]`，自动标签为 `[1,1,1,0]`，得到TP=2、FN=0、FP=1、TN=1。人工支持率0.5，自动0.75，偏移0.25，且 $0.5+(1-0.5)\times0.5=0.75$ 。函数按ID对齐，避免两个列表顺序不同却被zip后错误计分；某类人工标签缺失时，对应TPR或FPR返回None，不能伪造为0。
 
 ```mermaid
 flowchart LR
@@ -163,7 +169,7 @@ flowchart LR
 
 更隐蔽的是声明拆分误差。把一个复杂错误声明拆成三条容易验证的正确前提和一条错误结论，可使按声明平均的分数与原先的一条标签不同。比较系统时应保存拆分结果、裁判版本、提示、采样参数与失败率，必要时使用同一份人工原子声明集合对照。源码的StatementGeneratorPrompt要求拆分并去掉代词，但自然语言提示本身不是可证明的约束。
 
-原论文WikiEval用人工成对偏好检查自动指标的一致性，它衡量“是否选中人工偏好的答案”，不等于裁判逐声明准确率，更不等于RAG任务成功率。教学函数线性扫描 $O(N)$，不含模型调用成本。若自动结果解析失败或生成零声明，应报告缺失比例；只对成功评分样本求平均会改变评估集合。论文局部的一致性成绩也不能替代当前中文、长上下文、冲突证据上的独立校准。
+原论文WikiEval用人工成对偏好检查自动指标的一致性，它衡量“是否选中人工偏好的答案”，不等于裁判逐声明准确率，更不等于RAG任务成功率。教学函数线性扫描 $O(N)$ ，不含模型调用成本。若自动结果解析失败或生成零声明，应报告缺失比例；只对成功评分样本求平均会改变评估集合。论文局部的一致性成绩也不能替代当前中文、长上下文、冲突证据上的独立校准。
 
 [StatementGeneratorPrompt与NLIStatementPrompt](https://github.com/explodinggradients/ragas/blob/298b68274234c060deacab3cf5fb52aa3a20e885/src/ragas/metrics/_faithfulness.py#L30)；[空声明处理](https://github.com/explodinggradients/ragas/blob/298b68274234c060deacab3cf5fb52aa3a20e885/src/ragas/metrics/_faithfulness.py#L183)；[Faithfulness计算流程](https://github.com/explodinggradients/ragas/blob/298b68274234c060deacab3cf5fb52aa3a20e885/docs/concepts/metrics/available_metrics/faithfulness.md#L1)；[RAGAS §4–5 人工对照](https://arxiv.org/html/2309.15217v2).
 

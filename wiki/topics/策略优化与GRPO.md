@@ -22,7 +22,7 @@ GRPO 把同题多条采样回答的相对奖励转为优势，再用新旧策略
 
 ## 前置知识
 
-同一提示记为 q，回答组大小为 G，第 i 个回答有效长度为 $T_i$。当前策略 $\pi_\theta$ 接收梯度；旧策略 $\pi_{old}$ 提供本批生成概率；参考策略 $\pi_{ref}$ 提供约束锚点。old 与 ref 即使某一时刻权重相同，也承担不同角色。奖励 $r_i$ 由规则或模型给出，不是语言模型的 token 概率。
+同一提示记为 q，回答组大小为 G，第 i 个回答有效长度为 $T_i$ 。当前策略 $\pi_\theta$ 接收梯度；旧策略 $\pi_{old}$ 提供本批生成概率；参考策略 $\pi_{ref}$ 提供约束锚点。old 与 ref 即使某一时刻权重相同，也承担不同角色。奖励 $r_i$ 由规则或模型给出，不是语言模型的 token 概率。
 
 ## 基本机制
 
@@ -32,7 +32,7 @@ DeepSeekMath 的原始组目标对每个回答内 token 求平均，再对组内
 
 ### 知识点一：组内基线、标准差约定与无区分信号
 
-**问题与机制。** 奖励 `[0,0,1,1]` 的优势到底是正负1，还是正负0.866？两种数值来自不同标准差约定。令有效评分数为 N、自由度修正为 $\delta$，定义
+**问题与机制。** 奖励 `[0,0,1,1]` 的优势到底是正负1，还是正负0.866？两种数值来自不同标准差约定。令有效评分数为 N、自由度修正为 $\delta$ ，定义
 
 $$
 \bar r=\frac1N\sum_ir_i,\quad
@@ -40,7 +40,7 @@ s_\delta=\sqrt{\frac{\sum_i(r_i-\bar r)^2}{N-\delta}},\quad
 A_i=\frac{r_i-\bar r}{s_\delta+\epsilon}.
 $$
 
-$\delta=0$ 为总体标准差，$\delta=1$ 为样本标准差。上述奖励均值0.5，总体标准差0.5；忽略 epsilon 时优势为 `[-1,-1,1,1]`。样本标准差为 $\sqrt{1/3}$，优势为 $[-\sqrt3/2,-\sqrt3/2,\sqrt3/2,\sqrt3/2]$。公式里的 std 不写约定，教学值就无法与实现精确对齐。[DeepSeekMath 结果监督的组内优势](https://arxiv.org/html/2402.03300v3#S4.SS1.SSS2)
+$\delta=0$ 为总体标准差， $\delta=1$ 为样本标准差。上述奖励均值0.5，总体标准差0.5；忽略 epsilon 时优势为 `[-1,-1,1,1]`。样本标准差为 $\sqrt{1/3}$ ，优势为 $[-\sqrt3/2,-\sqrt3/2,\sqrt3/2,\sqrt3/2]$ 。公式里的 std 不写约定，教学值就无法与实现精确对齐。[DeepSeekMath 结果监督的组内优势](https://arxiv.org/html/2402.03300v3#S4.SS1.SSS2)
 
 ```python
 def group_advantages(rewards, ddof=1, eps=1e-4):
@@ -61,7 +61,7 @@ def group_advantages(rewards, ddof=1, eps=1e-4):
 
 该函数默认 `ddof=1,eps=1e-4`，与所读 TRL `nanstd` 的 Bessel 修正和优势分母中的小量对应。缺失评分用 None 显式表示并排除，不能把“无法评分”当作真实奖励0，否则会改变其他回答的组基线。全部缺失时返回零优势和空均值；只有一个有效评分时也给零优势。这是教学边界约定，生产实现经 NaN 处理到零优势的中间过程不同。
 
-所有奖励相等时分子为零，无论“全部答对”还是“全部答错”，组内相对信号都没有区分度。若每个回答独立以概率 p 得到二值奖励1，则组内非退化的概率为 $1-p^G-(1-p)^G$。当 $p=0.5,G=4$，有7/8的概率同时出现0和1；p 接近0或1时更容易退化。此概率是独立伯努利教学模型，不是实际语言模型采样一定独立的质量预测。
+所有奖励相等时分子为零，无论“全部答对”还是“全部答错”，组内相对信号都没有区分度。若每个回答独立以概率 p 得到二值奖励1，则组内非退化的概率为 $1-p^G-(1-p)^G$ 。当 $p=0.5,G=4$ ，有7/8的概率同时出现0和1；p 接近0或1时更容易退化。此概率是独立伯努利教学模型，不是实际语言模型采样一定独立的质量预测。
 
 ```mermaid
 flowchart LR
@@ -88,9 +88,9 @@ f(\rho,A)=\min(\rho A,\mathrm{clip}(\rho,1-\varepsilon,1+\varepsilon)A),\quad
 \ell=-f.
 $$
 
-若 A 为正，提升该 token 概率有利，$\rho>1+\varepsilon$ 后目标收益封顶；若 A 为负，降低其概率有利，$\rho<1-\varepsilon$ 后收益封顶。对会让目标恶化的一侧仍保留原项，因此 clip 不是把实际模型概率比强制截断到一个信任区间。[DeepSeekMath 裁剪目标式3](https://arxiv.org/html/2402.03300v3#S4.SS1.SSS1)
+若 A 为正，提升该 token 概率有利， $\rho\gt 1+\varepsilon$ 后目标收益封顶；若 A 为负，降低其概率有利， $\rho\lt 1-\varepsilon$ 后收益封顶。对会让目标恶化的一侧仍保留原项，因此 clip 不是把实际模型概率比强制截断到一个信任区间。[DeepSeekMath 裁剪目标式3](https://arxiv.org/html/2402.03300v3#S4.SS1.SSS1)
 
-在非饱和区，$\partial\rho/\partial\log\pi_\theta=\rho$，所以 $\partial\ell/\partial\log\pi_\theta=-A\rho$；收益饱和的一侧为0。精确边界处是非光滑点，自动微分可能选择特定子梯度，不能用本页分段讨论保证全部框架在边界逐位一致。
+在非饱和区， $\partial\rho/\partial\log\pi_\theta=\rho$ ，所以 $\partial\ell/\partial\log\pi_\theta=-A\rho$ ；收益饱和的一侧为0。精确边界处是非光滑点，自动微分可能选择特定子梯度，不能用本页分段讨论保证全部框架在边界逐位一致。
 
 ```python
 def clipped_surrogate(new_logp, old_logp, advantage, epsilon=0.2):
@@ -108,9 +108,9 @@ def clipped_surrogate(new_logp, old_logp, advantage, epsilon=0.2):
             "grad_new_logp": 0.0 if saturated else -advantage * ratio, "saturated": saturated}
 ```
 
-令 $\varepsilon=0.2,\rho=1.5$。A=1时两项为1.5和1.2，取1.2，损失-1.2、局部梯度0；A=-1时两项为-1.5和-1.2，取-1.5，损失1.5，梯度1.5。把 `min` 错写成 `max` 会让正负两侧都失去保守目标含义。另取 $\rho=0.5,A=-1$，裁剪项-0.8更小，损失0.8且梯度0，展示负优势的饱和方向。
+令 $\varepsilon=0.2,\rho=1.5$ 。A=1时两项为1.5和1.2，取1.2，损失-1.2、局部梯度0；A=-1时两项为-1.5和-1.2，取-1.5，损失1.5，梯度1.5。把 `min` 错写成 `max` 会让正负两侧都失去保守目标含义。另取 $\rho=0.5,A=-1$ ，裁剪项-0.8更小，损失0.8且梯度0，展示负优势的饱和方向。
 
-还有容易误判的一点：更新开始时 current 与 old 数值相同，$\rho=1$，但 old 被视为常量，因此梯度仍是 $-A$。若用可微的同一个 logp 同时作分子分母，则二者相消，梯度错误地变为0。数值相等与计算图相同不是同一件事。
+还有容易误判的一点：更新开始时 current 与 old 数值相同， $\rho=1$ ，但 old 被视为常量，因此梯度仍是 $-A$ 。若用可微的同一个 logp 同时作分子分母，则二者相消，梯度错误地变为0。数值相等与计算图相同不是同一件事。
 
 ```mermaid
 flowchart LR
@@ -129,24 +129,24 @@ flowchart LR
 
 ### 知识点三：KL估计的期望条件与不等长归约
 
-**问题与机制。** 一个非负 token 罚项就等于整个策略的 KL 吗？令 $a=\log\pi_{ref}(y)-\log\pi_\theta(y)$，常见样本估计为
+**问题与机制。** 一个非负 token 罚项就等于整个策略的 KL 吗？令 $a=\log\pi_{ref}(y)-\log\pi_\theta(y)$ ，常见样本估计为
 
 $$
 k_3=e^a-a-1.
 $$
 
-由 $e^a\ge1+a$，它逐点非负。当 y 真正从当前策略采样，且参考与当前具有合适的共同支持时，
+由 $e^a\ge1+a$ ，它逐点非负。当 y 真正从当前策略采样，且参考与当前具有合适的共同支持时，
 
 $$
 \mathbb E_{y\sim\pi_\theta}k_3
 =\sum_y\pi_{ref}(y)-1+
 \mathbb E_{\pi_\theta}\log\frac{\pi_\theta(y)}{\pi_{ref}(y)}
-=D_{KL}(\pi_\theta\|\pi_{ref}).
+=D_{KL}(\pi_\theta\Vert \pi_{ref}).
 $$
 
 所以“无偏”有采样分布条件。数据来自旧策略且模型已更新时，直接平均这个值不自动等于当前策略的 KL；按 token 条件分布做重要性修正还需正确的比值和支持集，状态/历史分布与梯度处理另有边界。[DeepSeekMath KL估计式4](https://arxiv.org/html/2402.03300v3#S4.SS1.SSS1)
 
-把本知识点与前面的裁剪连接，逐 token 最小化项为 $\ell_{i,t}=-f(\rho_{i,t},A_i)+\beta k_{3,i,t}$。对有效 mask $m_{i,t}$，可以定义
+把本知识点与前面的裁剪连接，逐 token 最小化项为 $\ell_{i,t}=-f(\rho_{i,t},A_i)+\beta k_{3,i,t}$ 。对有效 mask $m_{i,t}$ ，可以定义
 
 $$
 L_{seq}=\frac1G\sum_i\frac{\sum_tm_{i,t}\ell_{i,t}}{T_i},\quad
@@ -197,9 +197,9 @@ def grpo_loss_terms(new_logps, old_logps, reference_logps, advantages, masks,
             "token_mean": total / sum(lengths), "constant_mean": total / (batch * cap)}
 ```
 
-KL 的两事件手算：当前分布 `[0.6,0.4]`、参考 `[0.5,0.5]`。两项 $k_3$ 约为0.015655、0.026856；按当前概率加权约0.020136，等于 $0.6\ln1.2+0.4\ln0.8$。单看第一个样本0.015655不能把它叫作精确总体 KL。代码用 `expm1(a)-a` 减少 a 接近零时的相消误差。
+KL 的两事件手算：当前分布 `[0.6,0.4]`、参考 `[0.5,0.5]`。两项 $k_3$ 约为0.015655、0.026856；按当前概率加权约0.020136，等于 $0.6\ln1.2+0.4\ln0.8$ 。单看第一个样本0.015655不能把它叫作精确总体 KL。代码用 `expm1(a)-a` 减少 a 接近零时的相消误差。
 
-归约反例取两条回答长度1和3，current=old=ref，因此 KL为零、概率比为一；人为给优势1和3，用来隔离归约本身（它们不是同一组中心化优势）。逐 token 损失为 `[-1]` 与 `[-3,-3,-3]`。则 $L_{seq}=-2$、$L_{token}=-2.5$、取 $T_{max}=3$ 时 $L_{const}=-5/3$。若这几个数字在记录中没有对应归约设置，仅凭“loss更低”无法比较算法。
+归约反例取两条回答长度1和3，current=old=ref，因此 KL为零、概率比为一；人为给优势1和3，用来隔离归约本身（它们不是同一组中心化优势）。逐 token 损失为 `[-1]` 与 `[-3,-3,-3]`。则 $L_{seq}=-2$ 、 $L_{token}=-2.5$ 、取 $T_{max}=3$ 时 $L_{const}=-5/3$ 。若这几个数字在记录中没有对应归约设置，仅凭“loss更低”无法比较算法。
 
 ```mermaid
 flowchart LR

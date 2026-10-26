@@ -34,13 +34,13 @@ ReAct 第2节将上下文写成观测与动作的历史，并区分语言推理�
 
 ### 知识点一：把结果未知作为可恢复状态
 
-为什么不能把所有异常转成重试？因为“没有收到响应”是通信事实，不是业务未发生的证明。设外部状态为 $x_t$，宿主知识状态为 $s_t$，工具回报为 $o_{t+1}$。本页的**教学状态机**是
+为什么不能把所有异常转成重试？因为“没有收到响应”是通信事实，不是业务未发生的证明。设外部状态为 $x_t$ ，宿主知识状态为 $s_t$ ，工具回报为 $o_{t+1}$ 。本页的**教学状态机**是
 
 $$
 s_{t+1}=\delta(s_t,o_{t+1}),\qquad x_{t+1}=F(x_t,a_t).
 $$
 
-$F$ 是实际副作用，$\delta$ 是宿主更新规则，两者不是同一个函数；超时可能出现在 $F$ 已执行之后。示例将阶段分为 ready、pending、unknown、verifying、done。“unknown → ready”需要回查得到不存在，“unknown → verifying”需要找到产物；只有 verifying 收到 accepted 才能完成。
+$F$ 是实际副作用， $\delta$ 是宿主更新规则，两者不是同一个函数；超时可能出现在 $F$ 已执行之后。示例将阶段分为 ready、pending、unknown、verifying、done。“unknown → ready”需要回查得到不存在，“unknown → verifying”需要找到产物；只有 verifying 收到 accepted 才能完成。
 
 手算一个保存草稿序列：ready 收到 dispatch 后成为 pending；响应超时成为 unknown；按动作键查到草稿成为 verifying；核对标题和内容后才成为 done。若省掉 unknown，第二次保存可能创建重复草稿；若省掉 verifying，保存到错误目录也会被算成功。保留独立状态让恢复动作有条件可依，而不是从最后一句自然语言猜测。
 
@@ -83,13 +83,13 @@ flowchart TD
 
 ### 知识点二：把停止条件变成执行前的预算预留
 
-只限制模型轮次会遗漏工具耗时；只在返回后累计token，又可能在最后一次调用越过预算。定义预算向量 $b_t=(n_t,q_t,d_t)$，单位分别为步、token和毫秒，动作预留上界为 $\bar c(a_t)$。下面是**宿主设计模型**：
+只限制模型轮次会遗漏工具耗时；只在返回后累计token，又可能在最后一次调用越过预算。定义预算向量 $b_t=(n_t,q_t,d_t)$ ，单位分别为步、token和毫秒，动作预留上界为 $\bar c(a_t)$ 。下面是**宿主设计模型**：
 
 $$
 \mathrm{admit}(a_t)\iff \bar c(a_t)\preceq b_t,\quad b_{t+1}=b_t-\bar c(a_t).
 $$
 
-偏序表示逐维不超过，不能把token与毫秒相加成没有单位的“总成本”。若剩余 $(3,100,500)$，预留 $(1,40,100)$ 后得到 $(2,60,400)$；下一动作需要70个token就被拒绝，即使还有两步。每个动作至少扣一步，所以在固定起始预算且不补充预算时，最多允许 $n_0$ 次调度。这是有限终止性的证明，不是任务必然成功的证明。
+偏序表示逐维不超过，不能把token与毫秒相加成没有单位的“总成本”。若剩余 $(3,100,500)$ ，预留 $(1,40,100)$ 后得到 $(2,60,400)$ ；下一动作需要70个token就被拒绝，即使还有两步。每个动作至少扣一步，所以在固定起始预算且不补充预算时，最多允许 $n_0$ 次调度。这是有限终止性的证明，不是任务必然成功的证明。
 
 AutoGen 的 TokenUsageTermination.__call__ 在收到消息后累计已有用量，TimeoutTermination 在被调用时检查单调时钟；它们是实际版本的停止检测。预留模型额外强调执行前准入，不能声称AutoGen已经提供严格的费用上界。工具自身还要有超时或取消机制，否则检查器无法中断一个永不返回的调用。
 
@@ -125,10 +125,10 @@ MCP Lifecycle 的 Timeouts 讨论单请求超时与总超时，未给出本文�
 
 ### 知识点三：检查点恢复与外部幂等不能互相替代
 
-假设在保存外部文件后、写本地检查点前崩溃。恢复到旧检查点只证明宿主尚未记账，不证明文件不存在。令业务动作身份为 $k$、载荷为 $p$、账本为 $L$，另以d表示权威确认不存在，本页定义恢复函数：
+假设在保存外部文件后、写本地检查点前崩溃。恢复到旧检查点只证明宿主尚未记账，不证明文件不存在。令业务动作身份为 $k$ 、载荷为 $p$ 、账本为 $L$ ，另以d表示权威确认不存在，本页定义恢复函数：
 
 $$
-R(k,p,L,d)=\begin{cases}\text{conflict},&k\in\mathrm{dom}L\land L[k].p\ne p\\\text{verify},&k\in\mathrm{dom}L\land L[k].p=p\land L[k].status=committed\\\text{wait},&k\in\mathrm{dom}L\land L[k].p=p\land L[k].status=pending\\\text{query},&k\notin\mathrm{dom}L\land\neg d\\\text{dispatch},&k\notin\mathrm{dom}L\land d\end{cases}
+R(k,p,L,d)=\begin{cases}\text{conflict},&k\in\mathrm{dom}L\land L[k].p\ne p\cr \text{verify},&k\in\mathrm{dom}L\land L[k].p=p\land L[k].status=committed\cr \text{wait},&k\in\mathrm{dom}L\land L[k].p=p\land L[k].status=pending\cr \text{query},&k\notin\mathrm{dom}L\land\neg d\cr \text{dispatch},&k\notin\mathrm{dom}L\land d\end{cases}
 $$
 
 这不是MCP原生的通用幂等承诺，而是业务服务可以实现的协议。相同键但不同内容必须冲突，否则用户改了目标却收到旧结果；相同键且已提交时返回核对入口，不再次执行写入。以 draft-1 为键保存正文后丢响应，账本已是committed，恢复应去核对已有草稿。

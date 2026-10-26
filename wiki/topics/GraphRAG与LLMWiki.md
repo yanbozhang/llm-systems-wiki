@@ -36,7 +36,7 @@ GraphRAG论文从chunk提取实体、关系和声明，合并成图，经社区�
 
 GraphRAG局部查询的入口通常是与查询语义相近的实体描述，而非对全图做任意多跳搜索。候选实体连接原始text units、关系、社区报告及其他属性，随后按预算分别构造上下文。该版 `build_context`调用 `map_query_to_entities`，扣除会话历史后，以比例分配社区、原始文本与实体关系预算。
 
-令实体入口排序 $r(e)$，片段 $t$与实体的相邻关系中有 $n(e,t)$ 条关系也引用 $t$。所读 `_build_text_unit_context`对首次命中的实体保存片段，按二元键 $(r(e),-n(e,t))$排序。这个键先尊重实体入口，再用结构关联数辅助排序，不是把实体度数直接当概率。
+令实体入口排序 $r(e)$ ，片段 $t$ 与实体的相邻关系中有 $n(e,t)$ 条关系也引用 $t$ 。所读 `_build_text_unit_context`对首次命中的实体保存片段，按二元键 $(r(e),-n(e,t))$ 排序。这个键先尊重实体入口，再用结构关联数辅助排序，不是把实体度数直接当概率。
 
 将上述计算或状态约束集中写为：
 
@@ -44,7 +44,7 @@ $$
 \mathrm{key}(t)=\big(r(e_{first}(t)),-n(e_{first}(t),t)\big),\qquad \mathrm{order}=\mathrm{sort}_{lex}(\mathrm{key}).
 $$
 
-其中 $e_{first}(t)$ 是按实体入口次序首次关联到片段 $t$ 的实体，$\mathrm{sort}_{lex}$ 表示按二元键的字典序排序。
+其中 $e_{first}(t)$ 是按实体入口次序首次关联到片段 $t$ 的实体， $\mathrm{sort}_{lex}$ 表示按二元键的字典序排序。
 
 ```python
 def local_graph_context(entities, entity_chunks, relations):
@@ -65,7 +65,7 @@ def local_graph_context(entities, entity_chunks, relations):
     return sorted(candidates, key=lambda c: (c["entity_rank"], -c["edge_count"]))
 ```
 
-设入口A先于B；A对应a、b，B对应b、c。A-B与A-C两条关系都来自b，B-D来自c，则b以A的关系计数2排在a前，c归B，最终顺序为b、a、c。b不会因为又被B命中而重复占上下文。代码扫描 $s$ 个入口时每次检查 $|E|$ 条关系，另对片段统计邻接支持并排序；这是所示遍历方式的成本，不能宣称图查询总是 $O(1)$。生产可借助邻接索引减少全边扫描。
+设入口A先于B；A对应a、b，B对应b、c。A-B与A-C两条关系都来自b，B-D来自c，则b以A的关系计数2排在a前，c归B，最终顺序为b、a、c。b不会因为又被B命中而重复占上下文。代码扫描 $s$ 个入口时每次检查 $|E|$ 条关系，另对片段统计邻接支持并排序；这是所示遍历方式的成本，不能宣称图查询总是 $O(1)$ 。生产可借助邻接索引减少全边扫描。
 
 ```mermaid
 flowchart LR
@@ -85,15 +85,15 @@ LightRAG的双层检索名称容易混淆：低层关键词查实体向量，再
 
 “语料主要讨论哪些主题”需要覆盖多个区域，单个top-k相似片段不保证全局覆盖。GraphRAG论文先从文档提取图，对图做层次社区划分，再自底向上生成社区摘要。查询时在选定层级把摘要打乱分批，每批生成回答要点和帮助度分数，最后汇总。
 
-设有 $m$ 批社区上下文，第 $j$ 批产生要点 $a_j$，分数 $s_j\in[0,100]$，最终包装后成本 $c_j$ token。过滤 $s_j=0$，按 $s_j$降序选择一个预算内的前缀，使 $\sum c_j\le B$。源码到第一个放不下的要点即break；它不是0/1背包最优解，也不是“跳过大项继续塞小项”。
+设有 $m$ 批社区上下文，第 $j$ 批产生要点 $a_j$ ，分数 $s_j\in[0,100]$ ，最终包装后成本 $c_j$ token。过滤 $s_j=0$ ，按 $s_j$ 降序选择一个预算内的前缀，使 $\sum c_j\le B$ 。源码到第一个放不下的要点即break；它不是0/1背包最优解，也不是“跳过大项继续塞小项”。
 
 将上述计算或状态约束集中写为：
 
 $$
-\pi=\mathrm{argsort}_{s_j>0}(-s_j),\qquad k=\max\left\{r:\sum_{j=1}^{r}c_{\pi_j}\le B\right\},\qquad \mathrm{selected}=\{a_{\pi_1},\ldots,a_{\pi_k}\}.
+\pi=\mathrm{argsort}_{s_j\gt 0}(-s_j),\qquad k=\max\left\lbrace r:\sum_{j=1}^{r}c_{\pi_j}\le B\right\rbrace ,\qquad \mathrm{selected}=\lbrace a_{\pi_1},\ldots,a_{\pi_k}\rbrace .
 $$
 
-其中 $\pi$ 是正分要点的降序排列，$k$ 为预算允许的最长前缀；相同分数保持输入次序。
+其中 $\pi$ 是正分要点的降序排列， $k$ 为预算允许的最长前缀；相同分数保持输入次序。
 
 ```python
 def reduce_points(points, budget):
@@ -128,7 +128,7 @@ flowchart TD
  E --> F["reduce 生成全局回答"]
 ```
 
-所读 `GlobalSearch.search`保留map响应、上下文及各阶段LLM调用/输入输出token数；`_reduce_response`在无正分且不允许通用知识时直接返回无数据回答。不能把这个帮助度分数当作校准概率或事实核验。$m$批可能需要 $m$ 次map与一次reduce；若正分要点共 $r$ 个，排序为 $O(r\log r)$，总LLM成本还取决于各批token及模型，不能用Python复杂度掩盖生成成本。
+所读 `GlobalSearch.search`保留map响应、上下文及各阶段LLM调用/输入输出token数；`_reduce_response`在无正分且不允许通用知识时直接返回无数据回答。不能把这个帮助度分数当作校准概率或事实核验。 $m$ 批可能需要 $m$ 次map与一次reduce；若正分要点共 $r$ 个，排序为 $O(r\log r)$ ，总LLM成本还取决于各批token及模型，不能用Python复杂度掩盖生成成本。
 
 社区层级细则会改变覆盖与摘要损失：更细层通常摘要更多，调用与token成本更高；更粗层可能省成本但遗漏少数事实。抽取错误、社区摘要失真和重要性打分偏差都会传播。原论文比较的是特定全局问答设置，不能据此断言GraphRAG对任何精确事实检索都更好。
 
@@ -138,9 +138,11 @@ flowchart TD
 
 LLM Wiki关注可阅读、可修订的持久知识页，图检索关注查询时怎样选取上下文；两者可以共用来源与索引。Microsoft LLM Wiki的公开设计分raw、wiki、schema三层，其 `getBacklinks`扫描所有页面，提取Markdown链接并按源页面目录解析相对路径，找出谁链接了目标。这个实现证明的是直接链接关系，不证明链接双方存在语义依赖。
 
-教学上给边显式类型：页面 `p`的 `supported_by`指向证据，`requires`指向其内容依赖对象，`related`只表示关联。来源变更集合为 $C$，允许传播的反向邻接为 $R_\Sigma$；影响集通过固定点得到：
+教学上给边显式类型：页面 `p`的 `supported_by`指向证据，`requires`指向其内容依赖对象，`related`只表示关联。来源变更集合为 $C$ ，允许传播的反向邻接为 $R_\Sigma$ ；影响集通过固定点得到：
 
-$$I_0=C,\qquad I_{k+1}=I_k\cup\{p:\exists v\in I_k,(v,p)\in R_\Sigma\}.$$
+$$
+I_0=C,\qquad I_{k+1}=I_k\cup\lbrace p:\exists v\in I_k,(v,p)\in R_\Sigma\rbrace .
+$$
 
 有限图上最多加入 $|V|$ 个新节点后稳定；使用visited避免循环重复入队。它产生待复核对象集合，不自动撤销这些对象的每条结论。多来源支持的页面可能复核后仍然有效。
 
@@ -164,7 +166,7 @@ def wiki_impact(page_links, changed, relation_types=("supported_by", "requires")
     return sorted(visited - roots)
 ```
 
-例子是source-v1→claim→topic→exercise；另有neighbor与topic仅related。变更source-v1应影响claim、topic、exercise，不能沿related把整个Wiki都标为失效。函数先构建反向索引，再BFS，核心遍历为 $O(|V|+|E_\Sigma|)$；为确定性输出对邻接与结果排序，额外有排序成本。输入关系没有语义标签时，不能假装靠算法已经推断出了标签。
+例子是source-v1→claim→topic→exercise；另有neighbor与topic仅related。变更source-v1应影响claim、topic、exercise，不能沿related把整个Wiki都标为失效。函数先构建反向索引，再BFS，核心遍历为 $O(|V|+|E_\Sigma|)$ ；为确定性输出对邻接与结果排序，额外有排序成本。输入关系没有语义标签时，不能假装靠算法已经推断出了标签。
 
 ```mermaid
 flowchart LR

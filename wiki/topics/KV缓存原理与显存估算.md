@@ -34,11 +34,13 @@ KV Cache 保存每层已处理token的K/V，使生成新token时复用历史计�
 
 ### 知识点一：有效状态、padding与物理分页的三本账
 
-KV张量是各层计算状态，不是权重。对 $L$ 层、$H_{kv}$ 个KV头、每头维度 $d$、每元素 $s$ 字节，两个张量K与V使每token成本为 $c=2LH_{kv}ds$，量纲为字节/token。变长请求 $T_1,\ldots,T_B$ 的有效容量为：
+KV张量是各层计算状态，不是权重。对 $L$ 层、 $H_{kv}$ 个KV头、每头维度 $d$ 、每元素 $s$ 字节，两个张量K与V使每token成本为 $c=2LH_{kv}ds$ ，量纲为字节/token。变长请求 $T_1,\ldots,T_B$ 的有效容量为：
 
-$$M_{\rm useful}=c\sum_i T_i,\quad M_{\rm pad}=cB\max_iT_i,\quad M_{\rm page}=cb\sum_i\lceil T_i/b\rceil.$$
+$$
+M_{\rm useful}=c\sum_i T_i,\quad M_{\rm pad}=cB\max_iT_i,\quad M_{\rm page}=cb\sum_i\lceil T_i/b\rceil.
+$$
 
-最后一式只用于每个请求独立分配、块大小 $b$ token 的分页。它计算分配容量而非其中已填入的有效KV。每个非空请求浪费小于 $b$ 个位置，所以浪费上界是 $B(b-1)$；如果物理块共享，就应按唯一物理块集合求和，不能仍把各请求块数相加。
+最后一式只用于每个请求独立分配、块大小 $b$ token 的分页。它计算分配容量而非其中已填入的有效KV。每个非空请求浪费小于 $b$ 个位置，所以浪费上界是 $B(b-1)$ ；如果物理块共享，就应按唯一物理块集合求和，不能仍把各请求块数相加。
 
 ```python
 def kv_layout(lengths, layers, kv_heads, head_dim, element_bytes, block_size):
@@ -68,15 +70,17 @@ flowchart LR
  D --> E
 ```
 
-函数对 $B$ 个请求线性扫描，$O(B)$ 时间；返回汇总而不分配模拟KV，因此不会真的占用估计大小的内存。该版本 `DynamicLayer` 文档给出 `[batch,heads,seq_len,head_dim]` 布局，vLLM manager则将请求需求转换为块申请。GQA应该用KV头数，不用查询头数；张量并行只有在头确实均分且无复制时才能简单除卡数。量化比例尺、混合注意力层、窗口截断、对齐、权重与临时激活都需要另立条目。
+函数对 $B$ 个请求线性扫描， $O(B)$ 时间；返回汇总而不分配模拟KV，因此不会真的占用估计大小的内存。该版本 `DynamicLayer` 文档给出 `[batch,heads,seq_len,head_dim]` 布局，vLLM manager则将请求需求转换为块申请。GQA应该用KV头数，不用查询头数；张量并行只有在头确实均分且无复制时才能简单除卡数。量化比例尺、混合注意力层、窗口截断、对齐、权重与临时激活都需要另立条目。
 
 [Transformers DynamicLayer](https://github.com/huggingface/transformers/blob/50e35cc0ca18ec19b80653690de553e6decf74f5/src/transformers/cache_utils.py#L103)；[vLLM allocate_slots](https://github.com/vllm-project/vllm/blob/7a64fb8fc9239cb65e0df9313fa759594dfb206a/vllm/v1/core/kv_cache_manager.py#L529)；[Transformers 缓存布局](https://huggingface.co/docs/transformers/en/cache_explanation)；[PagedAttention §4.2](https://arxiv.org/html/2309.06180v1).
 
 ### 知识点二：追加KV之后仍然要读取历史
 
-设历史有 $T$ 个键值对，当前查询 $q\in\mathbb R^d$、新键 $k\in\mathbb R^d$、新值 $v\in\mathbb R^{d_v}$。追加之后 $K'\in\mathbb R^{(T+1)\times d}$、$V'\in\mathbb R^{(T+1)\times d_v}$，计算为：
+设历史有 $T$ 个键值对，当前查询 $q\in\mathbb R^d$ 、新键 $k\in\mathbb R^d$ 、新值 $v\in\mathbb R^{d_v}$ 。追加之后 $K^\prime\in\mathbb R^{(T+1)\times d}$ 、 $V^\prime\in\mathbb R^{(T+1)\times d_v}$ ，计算为：
 
-$$z_i=q^\top k_i/\sqrt d,\quad a_i=\frac{e^{z_i-z_{\max}}}{\sum_j e^{z_j-z_{\max}}},\quad o=\sum_i a_i v_i.$$
+$$
+z_i=q^\top k_i/\sqrt d,\quad a_i=\frac{e^{z_i-z_{\max}}}{\sum_j e^{z_j-z_{\max}}},\quad o=\sum_i a_i v_i.
+$$
 
 减去同一个最大值不改变softmax，却避免指数溢出。单步只有当前查询，因此每个历史位置都在当前的因果可见范围；若同时输入多token，需要显式构建新位置之间的三角mask，不能直接复用这里的单行逻辑。
 
@@ -101,7 +105,7 @@ def cached_attention(query, past_keys, past_values, new_key, new_value):
     return {"output": output, "weights": weights, "keys": keys, "values": values}
 ```
 
-函数复制历史容器以避免修改调用者，再校验K/V长度及维度，追加新位置，计算权重和加权输出。当 $q=[0]$，历史值为 `[2]`，新值为 `[4]`，两项分数均为0，权重各1/2，输出 `[3]`。删掉历史会得到 `[4]`；这就是“有缓存所以不用读历史”的反例。交换KV两者配对顺序不影响结果，但只交换K不交换V会改变语义。
+函数复制历史容器以避免修改调用者，再校验K/V长度及维度，追加新位置，计算权重和加权输出。当 $q=[0]$ ，历史值为 `[2]`，新值为 `[4]`，两项分数均为0，权重各1/2，输出 `[3]`。删掉历史会得到 `[4]`；这就是“有缓存所以不用读历史”的反例。交换KV两者配对顺序不影响结果，但只交换K不交换V会改变语义。
 
 ```mermaid
 flowchart TD
@@ -112,15 +116,17 @@ flowchart TD
  E --> F["加权 V 得当前输出"]
 ```
 
-查询计算为 $O((T+1)(d+d_v))$，缓存空间为同阶；代码为了纯函数复制列表，真实分页实现可原位填槽，不能把Python复制成本归到生产算法。该版本 `LlamaAttention.forward` 先做RoPE再更新cache，`DynamicLayer.update`沿序列轴拼接，`eager_attention_forward`读取全部返回状态。位置编码配置或上下文改变时，旧K/V可能已经失效。双向编码器、训练中的dropout与改变权重后的状态不满足相同复用条件。
+查询计算为 $O((T+1)(d+d_v))$ ，缓存空间为同阶；代码为了纯函数复制列表，真实分页实现可原位填槽，不能把Python复制成本归到生产算法。该版本 `LlamaAttention.forward` 先做RoPE再更新cache，`DynamicLayer.update`沿序列轴拼接，`eager_attention_forward`读取全部返回状态。位置编码配置或上下文改变时，旧K/V可能已经失效。双向编码器、训练中的dropout与改变权重后的状态不满足相同复用条件。
 
 [LlamaAttention.forward 与 eager_attention_forward](https://github.com/huggingface/transformers/blob/50e35cc0ca18ec19b80653690de553e6decf74f5/src/transformers/models/llama/modeling_llama.py#L180)；[DynamicLayer.update](https://github.com/huggingface/transformers/blob/50e35cc0ca18ec19b80653690de553e6decf74f5/src/transformers/cache_utils.py#L118)；[Transformers Attention matrices](https://huggingface.co/docs/transformers/en/cache_explanation).
 
 ### 知识点三：块哈希必须包含历史和计算身份
 
-相同词出现在不同上下文时，经过多层注意力后的K/V一般不同。因此块号不是缓存内容身份，只哈希本块token也不够。令第 $j$ 块token序列为 $X_j$，额外身份为 $E$，采用：
+相同词出现在不同上下文时，经过多层注意力后的K/V一般不同。因此块号不是缓存内容身份，只哈希本块token也不够。令第 $j$ 块token序列为 $X_j$ ，额外身份为 $E$ ，采用：
 
-$$h_0=\varnothing,\qquad h_j=H(\mathrm{encode}(h_{j-1},X_j,E)).$$
+$$
+h_0=\varnothing,\qquad h_j=H(\mathrm{encode}(h_{j-1},X_j,E)).
+$$
 
 父哈希把完整前缀的依赖压缩到当前键中。例子中块大小2，A为 `[1,2,3,4]`，B为 `[9,2,3,4]`：末块都为 `[3,4]`，但父哈希不同，因此第二块不能共享；C为 `[1,2,3,4,5]` 则完整前两块可匹配，尾token没有形成新完整块。
 
@@ -156,7 +162,7 @@ flowchart LR
  E --> F["作为下一块父哈希"]
 ```
 
-对 $T$ 个token和固定大小身份，哈希总输入长度为 $O(T)$，返回 $O(T/b)$ 个摘要。它只产生键，不实现命中查找或物理块引用计数。非完整块匹配在新实现中可能另有专门路径，本函数不代表所有cache策略。该版本 `get_computed_blocks`默认最多命中 `num_tokens-1`，因为必须再算最后位置以拿到logits；“全部提示命中”也不意味着零forward。哈希碰撞概率很低不等于逻辑上绝不碰撞，更不能用摘要比较替代身份字段的正确选择。
+对 $T$ 个token和固定大小身份，哈希总输入长度为 $O(T)$ ，返回 $O(T/b)$ 个摘要。它只产生键，不实现命中查找或物理块引用计数。非完整块匹配在新实现中可能另有专门路径，本函数不代表所有cache策略。该版本 `get_computed_blocks`默认最多命中 `num_tokens-1`，因为必须再算最后位置以拿到logits；“全部提示命中”也不意味着零forward。哈希碰撞概率很低不等于逻辑上绝不碰撞，更不能用摘要比较替代身份字段的正确选择。
 
 [vLLM hash_block_tokens](https://github.com/vllm-project/vllm/blob/7a64fb8fc9239cb65e0df9313fa759594dfb206a/vllm/v1/core/kv_cache_utils.py#L707)；[vLLM generate_block_hash_extra_keys](https://github.com/vllm-project/vllm/blob/7a64fb8fc9239cb65e0df9313fa759594dfb206a/vllm/v1/core/kv_cache_utils.py#L637)；[vLLM get_computed_blocks](https://github.com/vllm-project/vllm/blob/7a64fb8fc9239cb65e0df9313fa759594dfb206a/vllm/v1/core/kv_cache_manager.py#L293)；[vLLM 前缀缓存身份](https://github.com/vllm-project/vllm/blob/7a64fb8fc9239cb65e0df9313fa759594dfb206a/docs/design/prefix_caching.md#L5)；[PagedAttention §4.4](https://arxiv.org/html/2309.06180v1).
 
@@ -187,7 +193,7 @@ flowchart LR
 
 缓存命中也有隐含语义。相同文本经不同chat template或tokenizer后可能是不同token序列；同样的token ID在不同模型词表下也未必同义。同一图像占位token若对应不同图像embedding，文本ID相同仍不能复用。所读extra keys路径将多模态和prompt embeddings纳入身份，说明匹配依据是实际计算输入，而不是页面显示的自然语言。
 
-注意力小例子中 $q=0$使所有权重相等，但这不是生产模型的常见假设，只是为了使手算可审查。若令查询更偏向某历史键，权重会随点积变化，历史值对输出的影响也改变；因此把缓存看作“只需最新一条”的队列，会在全注意力下改变模型语义。使用滑动窗口时可以丢弃窗口外状态，是因为可见范围的模型定义已经改变，不能把这种策略无条件套到标准全注意力模型。
+注意力小例子中 $q=0$ 使所有权重相等，但这不是生产模型的常见假设，只是为了使手算可审查。若令查询更偏向某历史键，权重会随点积变化，历史值对输出的影响也改变；因此把缓存看作“只需最新一条”的队列，会在全注意力下改变模型语义。使用滑动窗口时可以丢弃窗口外状态，是因为可见范围的模型定义已经改变，不能把这种策略无条件套到标准全注意力模型。
 
 [块引用与替换](https://github.com/vllm-project/vllm/blob/7a64fb8fc9239cb65e0df9313fa759594dfb206a/vllm/v1/core/block_pool.py#L752)；[多模态与适配器身份](https://github.com/vllm-project/vllm/blob/7a64fb8fc9239cb65e0df9313fa759594dfb206a/vllm/v1/core/kv_cache_utils.py#L637)；[GQA与缓存读取](https://github.com/huggingface/transformers/blob/50e35cc0ca18ec19b80653690de553e6decf74f5/src/transformers/models/llama/modeling_llama.py#L167)；[分布式缓存管理 §4.6](https://arxiv.org/html/2309.06180v1).
 

@@ -39,7 +39,7 @@ RoundRobinGroupChatManager.select_speaker返回当前游标对应的参与者，
 设参与者数为N、当前游标为i，本页直接写出源码对应的**调度状态模型**：
 
 $$
-speaker=P_i,\qquad i'=(i+1)\bmod N.
+speaker=P_i,\qquad i^\prime=(i+1)\bmod N.
 $$
 
 每次选择恰好一个人；在没有跳过、失败和提前终止的连续N次选择中，每位参与者恰好被选一次。这个性质是轮询公平性，不是任务分工有效性，更不是成功概率。不同角色提示词是否带来收益仍需独立评估。
@@ -83,10 +83,10 @@ MaxMessageTermination内部保存_message_count，每次只累计传入的新消
 用c表示计数、h表示文本条件是否曾命中、M表示消息门槛，教学模型为
 
 $$
-c'=c+\sum_{m\in\Delta}\mathbf1[eligible(m)]\quad(c<M),\qquad h'=h\lor match(\Delta).
+c^\prime=c+\sum_{m\in\Delta}\mathbf1[eligible(m)]\quad(c\lt M),\qquad h^\prime=h\lor match(\Delta).
 $$
 
-计数条件已满足后在AND组合里不再调用它，因此c保持锁存；组合OR为 $(c'\ge M)\lor h'$，AND为 $(c'\ge M)\land h'$。这里的AND不是“两个条件必须在同一条消息出现”，而是状态化子条件都曾达到终止。源码AndTerminationCondition只调用尚未终止的子条件，并收集已产生的StopMessage。
+计数条件已满足后在AND组合里不再调用它，因此c保持锁存；组合OR为 $(c^\prime\ge M)\lor h^\prime$ ，AND为 $(c^\prime\ge M)\land h^\prime$ 。这里的AND不是“两个条件必须在同一条消息出现”，而是状态化子条件都曾达到终止。源码AndTerminationCondition只调用尚未终止的子条件，并收集已产生的StopMessage。
 
 手算M=3，第一批两条普通消息且未命中，状态(2,False)；第二批一条来自critic的APPROVE，变为(3,True)，AND与OR都结束。若第二批只命中文本但没有可计数chat，AND仍等计数门槛，而OR已停止。一次delta可能包含多条消息，所以计数可能越过M，这不是执行前的硬预算限额。
 

@@ -10,6 +10,8 @@ claim_ids: [claim-app-agent-element-identity-v1, claim-app-agent-document-learni
 ---
 # AppAgent探索与技能学习
 
+公式记号：`classWidthHeight` 是源码中 `class_width_height` 形式标识的简写，仍表示使用下划线连接类名、宽度与高度，实际标识生成规则不变。
+
 本文以官方仓库 **TencentQQGYLab/AppAgent** 的提交 `2c1900422caf6f9e94e96d5dd984b530e5a5fbf8` 为准，对照论文 `2312.13771v1`。它把“学习应用”落实为探索或观察演示后生成元素动作文档，再在部署时检索当前界面的相关文档；这里的技能学习主要是外部知识积累，不是一次模型权重微调。[AppAgent 探索与部署方法](https://arxiv.org/html/2312.13771v1#S3)
 
 完整标准库示例：[app-agent.py](../../examples/agents/app-agent.py)。示例不调用ADB、不会点击应用，也不请求模型；展示的是元素键、文档槽位和动作坐标的可核算变化。
@@ -22,7 +24,7 @@ claim_ids: [claim-app-agent-element-identity-v1, claim-app-agent-document-learni
 
 ## 前置知识
 
-需要了解截图、Android UI XML、边界框和字典索引。记当前元素集合为 $E_t$、元素身份函数为 $u(e)$，文档库为 $D[u,a]$，a 为动作类型。截图上数字 j 仅标识本轮列表中的第 j 个元素；它不是 App 永久提供的业务 ID。教学示例用已解析字典替代 XML，保留与源码相同的身份组成逻辑。
+需要了解截图、Android UI XML、边界框和字典索引。记当前元素集合为 $E_t$ 、元素身份函数为 $u(e)$ ，文档库为 $D[u,a]$ ，a 为动作类型。截图上数字 j 仅标识本轮列表中的第 j 个元素；它不是 App 永久提供的业务 ID。教学示例用已解析字典替代 XML，保留与源码相同的身份组成逻辑。
 
 ## 基本机制
 
@@ -35,10 +37,10 @@ claim_ids: [claim-app-agent-element-identity-v1, claim-app-agent-document-learni
 **问题与机制。** 为什么同一个按钮在截图里编号变化后，文档仍可能被找到？论文提出从 XML 资源ID或元素属性构造身份，并在截图上叠加数字以便模型选择。源码的基础键可概括为
 
 $$
-b(e)=\begin{cases}sanitize(resourceId),&resourceId\ne\varnothing\\class\_width\_height,&\text{否则}\end{cases},
+b(e)=\begin{cases}sanitize(resourceId),&resourceId\ne\varnothing\cr classWidthHeight,&\text{否则}\end{cases},
 $$
 
-再附加长度小于20的 content-desc、直接父元素基础键和可选 index。临时标签映射是 $j\mapsto E_t[j-1]\mapsto u(e)$；前者依赖当前列表顺序，后者尝试依赖界面结构。两者只在当前截图和 XML 对应时一致。[AppAgent 环境与动作空间](https://arxiv.org/html/2312.13771v1#S3.SS1) [元素UID与树遍历](https://github.com/TencentQQGYLab/AppAgent/blob/2c1900422caf6f9e94e96d5dd984b530e5a5fbf8/scripts/and_controller.py#L41-L83)
+再附加长度小于20的 content-desc、直接父元素基础键和可选 index。临时标签映射是 $j\mapsto E_t[j-1]\mapsto u(e)$ ；前者依赖当前列表顺序，后者尝试依赖界面结构。两者只在当前截图和 XML 对应时一致。[AppAgent 环境与动作空间](https://arxiv.org/html/2312.13771v1#S3.SS1) [元素UID与树遍历](https://github.com/TencentQQGYLab/AppAgent/blob/2c1900422caf6f9e94e96d5dd984b530e5a5fbf8/scripts/and_controller.py#L41-L83)
 
 ```python
 def element_identity(attributes, parent=None, add_index=True):
@@ -84,14 +86,14 @@ flowchart LR
 
 **问题与机制。** 一次点击没有推进任务，是否就毫无学习价值？AppAgent 的反思区分 INEFFECTIVE、BACK、CONTINUE、SUCCESS。INEFFECTIVE 表示没有有效变化，不产生新文档；BACK/CONTINUE 虽未推进当前任务，仍可能揭示这个元素的通用功能，因此可以保存动作效果描述。SUCCESS 表示推进了一步，源码提示明确说它不一定完成整个任务。[AppAgent 四类探索反思](https://github.com/TencentQQGYLab/AppAgent/blob/2c1900422caf6f9e94e96d5dd984b530e5a5fbf8/scripts/prompts.py#L184-L222)
 
-令无用元素集合为 U，动作槽位为 $D[u,a]$。自主路径的转移为
+令无用元素集合为 U，动作槽位为 $D[u,a]$ 。自主路径的转移为
 
 $$
-U'=U\cup\{u\}\quad\text{当结果为INEFFECTIVE、BACK或CONTINUE},
+U^\prime=U\cup\lbrace u\rbrace \quad\text{当结果为INEFFECTIVE、BACK或CONTINUE},
 $$
 
 $$
-D'[u,a]=\begin{cases}description,&result\ne INEFFECTIVE\land D[u,a]=\varnothing\\D[u,a],&\text{其他}\end{cases}.
+D^\prime[u,a]=\begin{cases}description,&result\ne INEFFECTIVE\land D[u,a]=\varnothing\cr D[u,a],&\text{其他}\end{cases}.
 $$
 
 BACK 还产生返回动作。这里“无用”是该轮探索任务的筛选结果，不是证明控件对所有任务都无功能。
@@ -140,12 +142,12 @@ flowchart LR
 **问题与机制。** 保存的知识如何参与下一步决策？普通元素模式构造
 
 $$
-D_t=\{(j,u(e_j),D[u(e_j),\cdot]):e_j\in E_t\land u(e_j)\in D\},
+D_t=\lbrace (j,u(e_j),D[u(e_j),\cdot]):e_j\in E_t\land u(e_j)\in D\rbrace ,
 $$
 
 并把其中非空动作描述拼进当前提示。模型选择本轮标签 j 后，执行器把它变成元素中心。若目标没有数字标签，模型可请求 grid；下一轮叠加网格，响应由专门解析器转换为 `tap_grid`、`long_press_grid` 或 `swipe_grid`。这是一种切换动作定位表示的策略，不是知识库自动找到了新的控件。[可见元素文档检索与网格切换](https://github.com/TencentQQGYLab/AppAgent/blob/2c1900422caf6f9e94e96d5dd984b530e5a5fbf8/scripts/task_executor.py#L175-L217)
 
-对 r行c列、从1开始的区域 a，行列索引为 $i=\lfloor(a-1)/c\rfloor,j=(a-1)\bmod c$。设单元宽 $w=\lfloor W/c\rfloor$、高 $h=\lfloor H/r\rfloor$，子区域偏移 $(\alpha,\beta)$ 取1/4、1/2或3/4，则
+对 r行c列、从1开始的区域 a，行列索引为 $i=\lfloor(a-1)/c\rfloor,j=(a-1)\bmod c$ 。设单元宽 $w=\lfloor W/c\rfloor$ 、高 $h=\lfloor H/r\rfloor$ ，子区域偏移 $(\alpha,\beta)$ 取1/4、1/2或3/4，则
 
 $$
 x=jw+\lfloor\alpha w\rfloor,\qquad y=ih+\lfloor\beta h\rfloor.

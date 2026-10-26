@@ -22,7 +22,7 @@ SFT 规定“学习哪些示范输出”，LoRA 规定“用哪些参数表达�
 
 ## 前置知识
 
-需要下一 token 标签错位、交叉熵和矩阵链式法则。本文基础权重 $W_0\in\mathbb R^{d\times k}$，输入 $x\in\mathbb R^k$，A 为 `[r,k]`，B 为 `[d,r]`；注意 B 这里是低秩矩阵而非 batch。所有教学矩阵按输出维在前的约定存储。
+需要下一 token 标签错位、交叉熵和矩阵链式法则。本文基础权重 $W_0\in\mathbb R^{d\times k}$ ，输入 $x\in\mathbb R^k$ ，A 为 `[r,k]`，B 为 `[d,r]`；注意 B 这里是低秩矩阵而非 batch。所有教学矩阵按输出维在前的约定存储。
 
 ## 基本机制
 
@@ -32,10 +32,10 @@ SFT 使用示范数据拟合条件输出，通常保留提示供模型读取，�
 
 ### 知识点一：对话模板、mask交集与目标错位
 
-**问题与机制。** 一条多轮对话中，到底哪些字符或 token 在训练模型“回答”？设完整模板分词得到 $u_0,\ldots,u_{T-1}$，assistant 标记为 $a_i$、所选 completion 为 $c_i$、真实非 padding 位为 $p_i$。若三项都适用，监督位为 $m_i=a_ic_ip_i$。未移位 label 为 $\ell_i=u_i$（$m_i=1$）或 ignore；对因果模型真正参与的项是
+**问题与机制。** 一条多轮对话中，到底哪些字符或 token 在训练模型“回答”？设完整模板分词得到 $u_0,\ldots,u_{T-1}$ ，assistant 标记为 $a_i$ 、所选 completion 为 $c_i$ 、真实非 padding 位为 $p_i$ 。若三项都适用，监督位为 $m_i=a_ic_ip_i$ 。未移位 label 为 $\ell_i=u_i$ （ $m_i=1$ ）或 ignore；对因果模型真正参与的项是
 
 $$
-L_{SFT}=-\frac1{\sum_{i=1}^{T-1}m_i}\sum_{i=1}^{T-1}m_i\log p_\theta(u_i\mid u_{<i}).
+L_{SFT}=-\frac1{\sum_{i=1}^{T-1}m_i}\sum_{i=1}^{T-1}m_i\log p_\theta(u_i\mid u_{\lt i}).
 $$
 
 位置 i 的 token 由位置 i-1 的 logits 预测。只对 assistant 监督与只对最后 completion 监督不等价：多轮历史里的旧 assistant 回复可能满足前者而不满足后者。是否训练角色边界和 EOS，应以模板给出的实际 mask 为准。[TRL tokenize_fn 与 build_labels](https://github.com/huggingface/trl/blob/1117c3b9c1632ee9814c30f6c9fc884b792a54e5/trl/trainer/sft_trainer.py#L1362-L1475) [因果损失内部错位](https://github.com/huggingface/transformers/blob/50e35cc0ca18ec19b80653690de553e6decf74f5/src/transformers/loss/loss_utils.py#L63-L72)
@@ -83,14 +83,14 @@ $$
 h=W_0x+sBAx,\qquad s=\alpha/r.
 $$
 
-新增参数数为 $r(k+d)$，基础权重仍存储但不更新。给定上游梯度 $g=\partial L/\partial h\in\mathbb R^d$，令 $v=Ax$，有
+新增参数数为 $r(k+d)$ ，基础权重仍存储但不更新。给定上游梯度 $g=\partial L/\partial h\in\mathbb R^d$ ，令 $v=Ax$ ，有
 
 $$
 \frac{\partial L}{\partial B}=s g v^T,\qquad
 \frac{\partial L}{\partial A}=s(B^Tg)x^T.
 $$
 
-当 B=0、A 非零时，$\nabla_A L=0$，但 $Ax$ 可能非零，因而 $\nabla_B L$ 可以非零；B 更新后 A 才开始接收到非零梯度。如果把 A、B 都设为零，两个梯度都会为零，纯这条支路无法启动。[LoRA 参数化、缩放与初始化](https://arxiv.org/html/2106.09685v2#S4.SS1)
+当 B=0、A 非零时， $\nabla_A L=0$ ，但 $Ax$ 可能非零，因而 $\nabla_B L$ 可以非零；B 更新后 A 才开始接收到非零梯度。如果把 A、B 都设为零，两个梯度都会为零，纯这条支路无法启动。[LoRA 参数化、缩放与初始化](https://arxiv.org/html/2106.09685v2#S4.SS1)
 
 ```python
 def lora_gradients(x, a, b, upstream, alpha=1.0):
@@ -108,9 +108,9 @@ def lora_gradients(x, a, b, upstream, alpha=1.0):
             "trainable_parameters": rank * (inputs + outputs), "scale": scale}
 ```
 
-取 $x=[1,2]$、$A=[1,-1]$、$B=[0,0]^T$、$g=[1,-1]$、$r=1,\alpha=2$。$Ax=-1,s=2$，所以 $\nabla_B=[-2,2]^T$，$\nabla_A=[0,0]$，初始更新输出为零。函数返回这些量而不更新任何参数，便于独立核对链式法则。若损失换成平方误差，则先由预测与目标求 $g$，同一局部梯度公式仍适用。
+取 $x=[1,2]$ 、 $A=[1,-1]$ 、 $B=[0,0]^T$ 、 $g=[1,-1]$ 、 $r=1,\alpha=2$ 。 $Ax=-1,s=2$ ，所以 $\nabla_B=[-2,2]^T$ ， $\nabla_A=[0,0]$ ，初始更新输出为零。函数返回这些量而不更新任何参数，便于独立核对链式法则。若损失换成平方误差，则先由预测与目标求 $g$ ，同一局部梯度公式仍适用。
 
-对于 $d=k=4096,r=8$，低秩参数为65536，完整更新矩阵为16777216，比例是1/256。这里不含额外 bias、其他目标层和优化器状态；“可训练参数少”不代表基础模型权重、前向激活或输入梯度消失。冻结 $W_0$ 仍可能需要通过 $W_0^Tg$ 把梯度传回更早可训练层。
+对于 $d=k=4096,r=8$ ，低秩参数为65536，完整更新矩阵为16777216，比例是1/256。这里不含额外 bias、其他目标层和优化器状态；“可训练参数少”不代表基础模型权重、前向激活或输入梯度消失。冻结 $W_0$ 仍可能需要通过 $W_0^Tg$ 把梯度传回更早可训练层。
 
 ```mermaid
 flowchart LR
@@ -123,7 +123,7 @@ flowchart LR
     X --> GA
 ```
 
-**源码定位。** 该版本 PEFT 构造 A 的 `Linear(in,r)` 与 B 的 `Linear(r,out)`，普通分支用 $\alpha/r$，rsLoRA 分支用 $\alpha/\sqrt r$。默认 Linear 初始化 A 为 Kaiming uniform、B为零，原论文陈述的是 Gaussian A；不要把论文初始化分布误写成此版本默认。[PEFT LoRA参数与缩放](https://github.com/huggingface/peft/blob/7d6315ae910bf62b6044a7ca917bccf5881f5e43/src/peft/tuners/lora/layer.py#L253-L281) [PEFT reset_lora_parameters](https://github.com/huggingface/peft/blob/7d6315ae910bf62b6044a7ca917bccf5881f5e43/src/peft/tuners/lora/layer.py#L359-L372)
+**源码定位。** 该版本 PEFT 构造 A 的 `Linear(in,r)` 与 B 的 `Linear(r,out)`，普通分支用 $\alpha/r$ ，rsLoRA 分支用 $\alpha/\sqrt r$ 。默认 Linear 初始化 A 为 Kaiming uniform、B为零，原论文陈述的是 Gaussian A；不要把论文初始化分布误写成此版本默认。[PEFT LoRA参数与缩放](https://github.com/huggingface/peft/blob/7d6315ae910bf62b6044a7ca917bccf5881f5e43/src/peft/tuners/lora/layer.py#L253-L281) [PEFT reset_lora_parameters](https://github.com/huggingface/peft/blob/7d6315ae910bf62b6044a7ca917bccf5881f5e43/src/peft/tuners/lora/layer.py#L359-L372)
 
 **条件与反例。** 梯度推导针对无 dropout、无偏置、单适配器的普通 LoRA；DoRA 或其他变体需重新推导。保持 alpha 不变而增大 r 会改变 s，不能把效果差异只归因“容量更大”。比较时应同时记录秩、alpha、初始化、目标模块和有效训练 token。
 
@@ -135,7 +135,7 @@ $$
 W_0x+sB(Ax)=(W_0+sBA)x.
 $$
 
-因此可预先构造 $W_{merged}=W_0+sBA$。这是前向代数等价，不是声明任何量化方案、任意精度或多适配器调度都有零开销。两边浮点运算顺序不同，也可能产生小误差。[LoRA 合并推理讨论](https://arxiv.org/html/2106.09685v2#S4.SS1)
+因此可预先构造 $W_{merged}=W_0+sBA$ 。这是前向代数等价，不是声明任何量化方案、任意精度或多适配器调度都有零开销。两边浮点运算顺序不同，也可能产生小误差。[LoRA 合并推理讨论](https://arxiv.org/html/2106.09685v2#S4.SS1)
 
 ```python
 def lora_merge_equivalence(weight, a, b, x, alpha=1.0):
@@ -155,9 +155,9 @@ def lora_merge_equivalence(weight, a, b, x, alpha=1.0):
             "combined": combined, "max_error": max(abs(u - v) for u, v in zip(separate, combined))}
 ```
 
-函数按 `[out,in]` 构造 $\Delta W$ 与新矩阵，返回分支计算和合并计算，不修改原输入。取单位 $W_0$、$A=[1,-1]$、$B=[0.5,-0.5]^T$、$\alpha=2,r=1$，有 $\Delta W=[[1,-1],[-1,1]]$，合并权重 `[[2,-1],[-1,2]]`。输入 `[1,2]` 时，两种前向都得到 `[0,3]`。这比只比较权重 shape 更能检查转置和缩放是否正确。
+函数按 `[out,in]` 构造 $\Delta W$ 与新矩阵，返回分支计算和合并计算，不修改原输入。取单位 $W_0$ 、 $A=[1,-1]$ 、 $B=[0.5,-0.5]^T$ 、 $\alpha=2,r=1$ ，有 $\Delta W=[[1,-1],[-1,1]]$ ，合并权重 `[[2,-1],[-1,2]]`。输入 `[1,2]` 时，两种前向都得到 `[0,3]`。这比只比较权重 shape 更能检查转置和缩放是否正确。
 
-如果训练时适配器先对 x 做随机 dropout，支路变为 $sBA(Dx)$，基础分支仍是 $W_0x$。一般无法用一个与随机 D 无关的固定合并权重对所有掩码保持等价。推理关闭 dropout 后才能使用上式。再次合并同一个 adapter 会把增量加两遍，因此生产实现还需记录 merged 状态；反复低精度加减也可能累积舍入误差。
+如果训练时适配器先对 x 做随机 dropout，支路变为 $sBA(Dx)$ ，基础分支仍是 $W_0x$ 。一般无法用一个与随机 D 无关的固定合并权重对所有掩码保持等价。推理关闭 dropout 后才能使用上式。再次合并同一个 adapter 会把增量加两遍，因此生产实现还需记录 merged 状态；反复低精度加减也可能累积舍入误差。
 
 ```mermaid
 flowchart LR

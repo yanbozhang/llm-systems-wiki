@@ -35,7 +35,7 @@ README明确说主要开发工作转向mini-swe-agent并建议新使用者采用
 
 ACI不是给shell命令换名字。它同时定义动作空间、参数说明和观察格式：模型需要知道当前文件、总行数、显示哪段、还遗漏多少。论文中的viewer最多显示100行，并提供open/goto/scroll操作；当前仓库仍保留WindowedFile实现，但本次default.yaml选择的是edit_anthropic工具包，不能把历史论文的100行窗口写成当前所有入口默认值。
 
-对 $n$ 行文件、请求起点 $r$（从1开始）、窗口上限 $w$，教学起始偏移为 $s=\min(r-1,\max(0,n-w))$，终点为 $e=\min(n,s+w)$。展示行数 $e-s\le w$，上方隐藏 $s$行，下方隐藏 $n-e$行，三者之和为 $n$。到文件末尾时向前移动窗口，可以尽量展示完整上下文。
+对 $n$ 行文件、请求起点 $r$ （从1开始）、窗口上限 $w$ ，教学起始偏移为 $s=\min(r-1,\max(0,n-w))$ ，终点为 $e=\min(n,s+w)$ 。展示行数 $e-s\le w$ ，上方隐藏 $s$ 行，下方隐藏 $n-e$ 行，三者之和为 $n$ 。到文件末尾时向前移动窗口，可以尽量展示完整上下文。
 
 将上述计算或状态约束集中写为：
 
@@ -57,7 +57,7 @@ def file_window(text, requested_start=1, window_size=5):
             "above": start, "below": len(lines) - end, "total": len(lines)}
 ```
 
-六行文件请求第6行、窗口3，显示4/5/6行，above=3、below=0。空文件单独返回零行，不产生“第0行”伪记录。函数拆分整段文本为 $O(n)$空间时间，输出至多 $w$行；生产文件读取可能有不同缓存策略，不能把展示条数少直接等同于磁盘读取量小。
+六行文件请求第6行、窗口3，显示4/5/6行，above=3、below=0。空文件单独返回零行，不产生“第0行”伪记录。函数拆分整段文本为 $O(n)$ 空间时间，输出至多 $w$ 行；生产文件读取可能有不同缓存策略，不能把展示条数少直接等同于磁盘读取量小。
 
 ```mermaid
 flowchart LR
@@ -74,7 +74,7 @@ flowchart LR
 
 ### 知识点二：唯一匹配与具体失败反馈限制错误传播
 
-修改“第几行”依赖最新文件状态；SEARCH式编辑则依赖旧文本唯一匹配。当前工具配置要求old_str逐字匹配且在文件中唯一。设匹配次数为 $c=\mathrm{count}(text,old)$，仅在 $c=1$且 $old\ne new$时应用替换；$c=0$提示重新阅读，$c>1$提示增加上下文，不猜测该改哪一个。
+修改“第几行”依赖最新文件状态；SEARCH式编辑则依赖旧文本唯一匹配。当前工具配置要求old_str逐字匹配且在文件中唯一。设匹配次数为 $c=\mathrm{count}(text,old)$ ，仅在 $c=1$ 且 $old\ne new$ 时应用替换； $c=0$ 提示重新阅读， $c\gt 1$ 提示增加上下文，不猜测该改哪一个。
 
 将上述计算或状态约束集中写为：
 
@@ -117,12 +117,12 @@ Python字符串count与replace对常见输入扫描文本，代码没有构造�
 
 ### 知识点三：一个step可能含多次失败尝试，轨迹与模型历史不同
 
-智能体循环可写为 $H_t\xrightarrow{model}a_t\xrightarrow{parse/execute}o_t\xrightarrow{update}H_{t+1}$。但模型可能给出无效格式，此时没有合法动作被执行，系统先构造纠错反馈再请求模型。设本step已出现 $f$ 次可计数格式失败，上限 $F$；一次这类错误使 $f'=f+1$，当 $f'\ge F$结束格式重试，而不是无限重新采样。
+智能体循环可写为 $H_t\xrightarrow{model}a_t\xrightarrow{parse/execute}o_t\xrightarrow{update}H_{t+1}$ 。但模型可能给出无效格式，此时没有合法动作被执行，系统先构造纠错反馈再请求模型。设本step已出现 $f$ 次可计数格式失败，上限 $F$ ；一次这类错误使 $f^\prime=f+1$ ，当 $f^\prime\ge F$ 结束格式重试，而不是无限重新采样。
 
 将上述计算或状态约束集中写为：
 
 $$
-H_t\xrightarrow{model}a_t\xrightarrow{parse/execute}o_t\xrightarrow{update}H_{t+1},\qquad f^{\prime}=f+1,\quad \mathrm{stop}_{format}\iff f^{\prime}\ge F.
+H_t\xrightarrow{model}a_t\xrightarrow{parse/execute}o_t\xrightarrow{update}H_{t+1},\qquad f^\prime=f+1,\quad \mathrm{stop}_{format}\iff f^\prime\ge F.
 $$
 
 ```python

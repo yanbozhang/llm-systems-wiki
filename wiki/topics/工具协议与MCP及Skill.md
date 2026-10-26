@@ -10,6 +10,8 @@ claim_ids: [claim-tools-skills-v1, claim-tools-skills-validate-query-v1, claim-t
 ---
 # 工具协议与MCP及Skill
 
+公式记号：`protocolError`、`toolError`、`schemaError` 分别表示教学代码中的 `protocol_error`、`tool_error`、`schema_error` 分类，实际返回值仍使用下划线形式。
+
 > 工具定义可调用能力，MCP规定客户端与服务端如何发现和交换这些能力，Skill组织可复用任务方法。参数合法、协议成功、工具执行成功和业务完成分别位于不同边界，必须逐层判断。
 
 ## 学习目标
@@ -34,13 +36,13 @@ MCP的tools/list提供工具元数据和Schema，tools/call执行调用；规范
 
 ### 知识点一：结构合法与业务参数正确是两道门
 
-合法JSON只说明能被解析；Schema合法说明符合声明的字段、类型和取值范围；业务合法还需要实体与目标匹配。令参数为 $x$，结构判据为 $J(x)$，语义判据为 $D(x,g)$，宿主许可为 $A(x)$，本页的**准入模型**是
+合法JSON只说明能被解析；Schema合法说明符合声明的字段、类型和取值范围；业务合法还需要实体与目标匹配。令参数为 $x$ ，结构判据为 $J(x)$ ，语义判据为 $D(x,g)$ ，宿主许可为 $A(x)$ ，本页的**准入模型**是
 
 $$
 permit(x,g)=J(x)\land D(x,g)\land A(x).
 $$
 
-$g$表示当前任务，三个判据均是布尔值，不是可互相抵消的加权分数。示例函数演示前两项，宿主许可不在此函数内，也不会因为函数返回True就自动获得。
+$g$ 表示当前任务，三个判据均是布尔值，不是可互相抵消的加权分数。示例函数演示前两项，宿主许可不在此函数内，也不会因为函数返回True就自动获得。
 
 天气查询中city必须为字符串、days必须为1至7的整数。传入同名城市却不符合业务词表，结构可合法而语义不合法。Python中bool是int子类，直接isinstance(True,int)会接受True；示例使用type(x) is int，对齐本地模拟中“天数不能是布尔值”的契约。
 
@@ -80,7 +82,7 @@ flowchart TD
 一次调用至少可能停在五种不同位置：请求没有匹配响应、协议层拒绝、工具内部执行失败、返回结构不符合Schema、返回有效但业务尚未验收。本页定义**分类函数**
 
 $$
-C(r)=\begin{cases}unknown,&r=\varnothing\\protocol\_error,&r.error\text{ 存在}\\tool\_error,&r.result.isError=true\\schema\_error,&\neg valid(r.result)\\verify,&\text{其余有效结果}\end{cases}
+C(r)=\begin{cases}unknown,&r=\varnothing\cr protocolError,&r.error\text{ 存在}\cr toolError,&r.result.isError=true\cr schemaError,&\neg valid(r.result)\cr verify,&\text{其余有效结果}\end{cases}
 $$
 
 这是解释型分类，代码还优先检查jsonrpc版本、请求ID以及error/result是否恰好存在一个。空响应被标记unknown，因为客户端不知道服务是否已产生副作用；不能仅凭超时决定重发。协议参数错通常需要修正请求，业务错误可能需要换策略，输出结构错需要修复服务或适配器。
@@ -134,7 +136,7 @@ flowchart TD
 
 把所有Skill全文放进每轮输入既耗预算，又增加无关方法干扰。Agent Skills规范描述三层：启动时提供元数据，激活时加载正文，需要时读取资源。参考实现to_prompt遍历Skill目录，只把name、description和location输出到可用技能块；它本身并没有替宿主执行激活或资源调用。
 
-设目录集合为 $S$、激活集合为 $A\subseteq S$、需要的资源集合为 $R$，元数据、正文、资源成本分别为 $m_s,b_s,c_r$。本页的**加载预算模型**为
+设目录集合为 $S$ 、激活集合为 $A\subseteq S$ 、需要的资源集合为 $R$ ，元数据、正文、资源成本分别为 $m_s,b_s,c_r$ 。本页的**加载预算模型**为
 
 $$
 T=\sum_{s\in S}m_s+\sum_{s\in A}b_s+\sum_{r\in R}c_r,\quad T\le B,\quad owner(r)\in A.
