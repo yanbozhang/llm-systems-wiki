@@ -1,12 +1,133 @@
 {
-  "checked_at": "2026-10-26T10:49:04.435254+08:00",
-  "status": "unchanged",
-  "candidates": [],
+  "checked_at": "2026-10-27T11:22:54.927053+08:00",
+  "status": "changed",
+  "candidates": [
+    {
+      "id": "75f7d51b56d47e050f095b13a5805f7d43c4570e21c6e77bd32390c3c29dbfb1",
+      "feed_id": "transformers",
+      "entry_id": "tag:github.com,2008:Repository/155220641/v5.21",
+      "title": "Release: v5.21.0",
+      "url": "https://github.com/huggingface/transformers/releases/tag/v5.21",
+      "updated": "2026-10-26T18:21:30Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "0fbefcd49d0bd48f387292ab923c0d1d1187110272ec152acc03e223d836a58f",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/54b91cdb8f21825ce586c452704f319d49866ef8",
+      "title": "docs: add client suport matrix for Tasks",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/54b91cdb8f21825ce586c452704f319d49866ef8",
+      "updated": "2026-10-26T21:57:26Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "f600b0b8568d4e37065c38d29310f49884920258f5330fad05d7c3a61661c7c2",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/d2419e783d26be29d1c5850de4c37494f198d5c7",
+      "title": "Merge pull request #3446 from modelcontextprotocol/localden/file-uplo…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/d2419e783d26be29d1c5850de4c37494f198d5c7",
+      "updated": "2026-10-26T21:15:32Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "ddcd69dd3f8554629f524b5b927ca3eedf31b2e17afe425f9c92a81b0d3f2632",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/150e460367e9a67939b8d8dd87812061df990868",
+      "title": "build(deps-dev): bump typescript-eslint from 8.71.2 to 8.72.0 (#3455)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/150e460367e9a67939b8d8dd87812061df990868",
+      "updated": "2026-10-26T17:41:59Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "2ae5b28ce0facafd41aaa631c29274ce7c89f66455311050ab6bd52a97a287eb",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/67fe40ddf013987220e24bc0b12dffa0ef43da04",
+      "title": "build(deps-dev): bump eslint from 10.12.0 to 10.13.0 (#3456)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/67fe40ddf013987220e24bc0b12dffa0ef43da04",
+      "updated": "2026-10-26T17:41:42Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "12e05433d7bfc1184a8117261799ba12b274680eb91d6006028438f184a2d003",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/e4a92815b101ba4192f0939148e075dadaebaed8",
+      "title": "Prohibit third-party notetaker bots in community meetings (#3457)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/e4a92815b101ba4192f0939148e075dadaebaed8",
+      "updated": "2026-10-26T17:41:13Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "e9676cb63f3be320fbd59de8672310d45820f81dceeccf5712817c1cc79fb622",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/c254060614b5a7d5f40ecbab6234e47c8d74cd5a",
+      "title": "build(deps-dev): bump typescript-eslint from 8.71.1 to 8.71.2 (#3443)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/c254060614b5a7d5f40ecbab6234e47c8d74cd5a",
+      "updated": "2026-10-26T07:10:22Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "6971553475c742f07bdc0e15cc554099caee17f70cc408542d19ebedf43c9f67",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/d7f037d9d887015159007b1f94438923d34a7447",
+      "title": "build(deps-dev): bump prettier from 3.9.9 to 3.9.10 (#3444)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/d7f037d9d887015159007b1f94438923d34a7447",
+      "updated": "2026-10-26T07:08:30Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "63bb6ca8c16a1cf6ba62e3440122e12db10c18bf349904142d9e988620c132c1",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/cb954f19894be6dd27ecfdddbfb85991f7c41d16",
+      "title": "build(deps-dev): bump vite (#3445)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/cb954f19894be6dd27ecfdddbfb85991f7c41d16",
+      "updated": "2026-10-26T07:07:20Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "3a2f511c471d867de0d31a389d66e4fddd0bf651952ac913c182b8d400a72a9b",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/9955362ed370ff75f36b7f1f5e18755ee59bf0b9",
+      "title": "build(deps): bump the npm_and_yarn group across 1 directory with 2 up…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/9955362ed370ff75f36b7f1f5e18755ee59bf0b9",
+      "updated": "2026-10-26T07:06:53Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "741f5b8873906c17c4f072fd4b18b308f883c23d5c89040665dd06f1b8314b07",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/0e4b25f7c61458ed25f49eab9abdabadd7e069d0",
+      "title": "build(deps-dev): bump markdown-it (#3450)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/0e4b25f7c61458ed25f49eab9abdabadd7e069d0",
+      "updated": "2026-10-26T07:03:41Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "529cb85d8a9635446d7a2c06b8e1b43954a25b26f1aaee6b2986cf840a568dea",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/3d10d739864c8c84bf3e0ede1c42d4b2435cd4c1",
+      "title": "docs(community): add downloads to the File Uploads WG scope",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/3d10d739864c8c84bf3e0ede1c42d4b2435cd4c1",
+      "updated": "2026-10-21T14:51:07Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    }
+  ],
   "feeds": [
     {
       "feed_id": "transformers",
       "status": "ok",
-      "new_count": 0
+      "new_count": 1
     },
     {
       "feed_id": "trl",
@@ -26,7 +147,7 @@
     {
       "feed_id": "mcp",
       "status": "ok",
-      "new_count": 0
+      "new_count": 11
     },
     {
       "feed_id": "skills",
