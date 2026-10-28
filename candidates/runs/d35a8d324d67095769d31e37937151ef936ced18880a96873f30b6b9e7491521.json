@@ -1,0 +1,138 @@
+{
+  "checked_at": "2026-10-28T11:39:05.102731+08:00",
+  "status": "changed",
+  "candidates": [
+    {
+      "id": "983da4ba31d5f1bd99bc1271f099214164fa478ca6d1e65e18ec53e3b5b015bb",
+      "feed_id": "vllm",
+      "entry_id": "tag:github.com,2008:Repository/599547518/v0.33.0rc0",
+      "title": "v0.33.0rc0",
+      "url": "https://github.com/vllm-project/vllm/releases/tag/v0.33.0rc0",
+      "updated": "2026-10-26T17:59:24Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "cef20680ee63efea9116d50ca042223f0394b2ccf89a823d988cec4ddf894f42",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/ccaf9102ec5eb656eab50ca8333ef49dcd259c26",
+      "title": "Merge pull request #3398 from modelcontextprotocol/sep/release-cycle-…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/ccaf9102ec5eb656eab50ca8333ef49dcd259c26",
+      "updated": "2026-10-27T17:10:04Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "ce92833514877627938564a1bf0cd88b065289009ec11cdf4d1921f48d0b78b4",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/18432cc7e48672d69f896f25117345d78f803a72",
+      "title": "docs: clarify release manager access and record SEP-3398 acceptance",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/18432cc7e48672d69f896f25117345d78f803a72",
+      "updated": "2026-10-26T22:36:48Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "c1311915048fc8a6cc33fc55d494847384ae9787c26c15f93e6ed75ba0899d78",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/d7321f05ae6ffa90e56816ecd9a2f4375e34f304",
+      "title": "docs: clarify release dates and freeze voting deadlines",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/d7321f05ae6ffa90e56816ecd9a2f4375e34f304",
+      "updated": "2026-10-26T22:36:48Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "9bdc9d098ad9e931863193d6aa6df7af1131555815b390b73c25c4007410dde4",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/d06acedef4cc9299afcdae797ec6e576f4db6b3c",
+      "title": "docs: assign release cycle proposal SEP-3398",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/d06acedef4cc9299afcdae797ec6e576f4db6b3c",
+      "updated": "2026-10-26T22:36:48Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "372fa298e4ce5db85698a9b8f9eb947f3e5ae22b032b0c13b3c1f116df83620c",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/9aa516017299043eb8a49d033978b5aa499a3c73",
+      "title": "docs: propose release cycle process",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/9aa516017299043eb8a49d033978b5aa499a3c73",
+      "updated": "2026-10-26T22:36:48Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    }
+  ],
+  "feeds": [
+    {
+      "feed_id": "transformers",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "trl",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "vllm",
+      "status": "ok",
+      "new_count": 1
+    },
+    {
+      "feed_id": "sglang",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "mcp",
+      "status": "ok",
+      "new_count": 5
+    },
+    {
+      "feed_id": "skills",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "graphrag",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "lightrag",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "swebench",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "osworld",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-lm-eval",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-opencompass",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-mlperf",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-agentdojo",
+      "status": "ok",
+      "new_count": 0
+    }
+  ]
+}
