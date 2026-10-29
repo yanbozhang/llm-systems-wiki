@@ -1,9 +1,9 @@
 {
-  "date": "2026-10-28",
-  "module": "inference",
-  "topic": "kv-cache",
+  "date": "2026-10-29",
+  "module": "harness",
+  "topic": "context",
   "reason": "七模块轮换；模块内按登记顺序持续推进",
   "review_due": false,
-  "learning_objective": "估算不同请求的缓存",
-  "deliverable": "做一张请求长度表，计算有效KV、padding布局与分页布局的估计值。再列出跨请求复用所需身份：模型版本、adapter、token序列、位置与缓存精度等，并设计一个不兼容前缀的反例。"
+  "learning_objective": "按任务选择上下文",
+  "deliverable": "为自己的研究任务写一份检查点，标出必须逐字保留、可概括、可按需回读三类信息。让另一位读者仅根据检查点复述任务，记录遗漏；此处提供检查方法，不宣称已完成用户实验。"
 }

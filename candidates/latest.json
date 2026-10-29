@@ -1,64 +1,84 @@
 {
-  "checked_at": "2026-10-28T11:39:05.102731+08:00",
+  "checked_at": "2026-10-29T11:59:33.413195+08:00",
   "status": "changed",
   "candidates": [
     {
-      "id": "983da4ba31d5f1bd99bc1271f099214164fa478ca6d1e65e18ec53e3b5b015bb",
+      "id": "fa3c7d74b3a2bde2fa935e20e48adfc8d9271e5f360deaa91b57ae691bf33aa5",
       "feed_id": "vllm",
-      "entry_id": "tag:github.com,2008:Repository/599547518/v0.33.0rc0",
-      "title": "v0.33.0rc0",
-      "url": "https://github.com/vllm-project/vllm/releases/tag/v0.33.0rc0",
-      "updated": "2026-10-26T17:59:24Z",
+      "entry_id": "tag:github.com,2008:Repository/599547518/v0.33.0rc1",
+      "title": "v0.33.0rc1: [CI] Fix stale NVFP4 decode test selector on DGX Spark (#64107)",
+      "url": "https://github.com/vllm-project/vllm/releases/tag/v0.33.0rc1",
+      "updated": "2026-10-28T09:31:23Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "cef20680ee63efea9116d50ca042223f0394b2ccf89a823d988cec4ddf894f42",
+      "id": "5343970ffefd1e8908fccd1c2397545532f074e07ddcd79cf60e242eda8dd702",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/ccaf9102ec5eb656eab50ca8333ef49dcd259c26",
-      "title": "Merge pull request #3398 from modelcontextprotocol/sep/release-cycle-…",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/ccaf9102ec5eb656eab50ca8333ef49dcd259c26",
-      "updated": "2026-10-27T17:10:04Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/9850cae8923b0ee3d19a4476f1010b97aa161a55",
+      "title": "docs: move annotations out of resource in embedded resource example (…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/9850cae8923b0ee3d19a4476f1010b97aa161a55",
+      "updated": "2026-10-28T17:47:17Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "ce92833514877627938564a1bf0cd88b065289009ec11cdf4d1921f48d0b78b4",
+      "id": "ba6a17638ba55c653cee65fce64d04ece74a3a4c84292f5bdf94fc4fb9159eaf",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/18432cc7e48672d69f896f25117345d78f803a72",
-      "title": "docs: clarify release manager access and record SEP-3398 acceptance",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/18432cc7e48672d69f896f25117345d78f803a72",
-      "updated": "2026-10-26T22:36:48Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/f44325dc6718e974b90159df84996f03bf26a3d8",
+      "title": "docs: mark Tasks support for Claude Code and Claude.ai (#3459)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/f44325dc6718e974b90159df84996f03bf26a3d8",
+      "updated": "2026-10-28T17:23:47Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "c1311915048fc8a6cc33fc55d494847384ae9787c26c15f93e6ed75ba0899d78",
+      "id": "67d8db59967ab0d390387381696af75af3e6d341147b68c19a9fb6a9a6c61970",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/d7321f05ae6ffa90e56816ecd9a2f4375e34f304",
-      "title": "docs: clarify release dates and freeze voting deadlines",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/d7321f05ae6ffa90e56816ecd9a2f4375e34f304",
-      "updated": "2026-10-26T22:36:48Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/f66b955ef9c42b87c856c5640ac09b425cbb4d44",
+      "title": "docs: add Kiro Crew to extension support matrix (#3461)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/f66b955ef9c42b87c856c5640ac09b425cbb4d44",
+      "updated": "2026-10-28T17:23:00Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "9bdc9d098ad9e931863193d6aa6df7af1131555815b390b73c25c4007410dde4",
+      "id": "f25cc169032f42dc0cec90e0c815cd43a56b4505a3f19d5fbf10a4a0e750ae52",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/d06acedef4cc9299afcdae797ec6e576f4db6b3c",
-      "title": "docs: assign release cycle proposal SEP-3398",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/d06acedef4cc9299afcdae797ec6e576f4db6b3c",
-      "updated": "2026-10-26T22:36:48Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/2ff7595300887f96c3dc28309be5e0cfcd156486",
+      "title": "Merge pull request #3364 from sambhav/docs/legacy-extension-negotiation",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/2ff7595300887f96c3dc28309be5e0cfcd156486",
+      "updated": "2026-10-28T15:56:33Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "372fa298e4ce5db85698a9b8f9eb947f3e5ae22b032b0c13b3c1f116df83620c",
+      "id": "a2c5f4d2a5fffe4ef5db725c4726fd8d4142f96a6ed09dfd1ff2f4511381a054",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/9aa516017299043eb8a49d033978b5aa499a3c73",
-      "title": "docs: propose release cycle process",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/9aa516017299043eb8a49d033978b5aa499a3c73",
-      "updated": "2026-10-26T22:36:48Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/fdb308988d0354b9ecfac1cb83a23902e93e1ff8",
+      "title": "Merge branch 'main' into docs/legacy-extension-negotiation",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/fdb308988d0354b9ecfac1cb83a23902e93e1ff8",
+      "updated": "2026-10-27T07:33:57Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "fde03c6b79a8525252dc22fe79bc2dc294af91b0b12c09248f9e5fe4d164aa3d",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/04bd3f462497858d5f7758e7fffe6946c200e0c9",
+      "title": "docs: point legacy extension negotiation at graceful degradation",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/04bd3f462497858d5f7758e7fffe6946c200e0c9",
+      "updated": "2026-10-27T02:34:04Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "039be4351100985ca10dba0d3bed8130ead8c809dc10555e66bee3b8e8b6f172",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/9362c0752086d648bc360e319948cb27c470616e",
+      "title": "docs: keep legacy extension guidance out of the released spec",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/9362c0752086d648bc360e319948cb27c470616e",
+      "updated": "2026-10-27T02:26:33Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     }
@@ -87,7 +107,7 @@
     {
       "feed_id": "mcp",
       "status": "ok",
-      "new_count": 5
+      "new_count": 7
     },
     {
       "feed_id": "skills",
