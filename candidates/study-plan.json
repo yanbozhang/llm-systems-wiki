@@ -1,9 +1,9 @@
 {
-  "date": "2026-10-29",
-  "module": "harness",
-  "topic": "context",
+  "date": "2026-10-30",
+  "module": "knowledge",
+  "topic": "ingestion",
   "reason": "七模块轮换；模块内按登记顺序持续推进",
   "review_due": false,
-  "learning_objective": "按任务选择上下文",
-  "deliverable": "为自己的研究任务写一份检查点，标出必须逐字保留、可概括、可按需回读三类信息。让另一位读者仅根据检查点复述任务，记录遗漏；此处提供检查方法，不宣称已完成用户实验。"
+  "learning_objective": "保存来源身份和读取范围",
+  "deliverable": "制作一份来源卡和一份变更卡，模拟新增、仅排版变化、关键更正与暂时不可读四类事件。为每类事件列出应更新和不应更新的对象。"
 }
