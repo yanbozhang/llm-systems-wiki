@@ -1,9 +1,9 @@
 {
-  "date": "2026-10-30",
-  "module": "knowledge",
-  "topic": "ingestion",
+  "date": "2026-10-31",
+  "module": "agents",
+  "topic": "gui-agent",
   "reason": "七模块轮换；模块内按登记顺序持续推进",
   "review_due": false,
-  "learning_objective": "保存来源身份和读取范围",
-  "deliverable": "制作一份来源卡和一份变更卡，模拟新增、仅排版变化、关键更正与暂时不可读四类事件。为每类事件列出应更新和不应更新的对象。"
+  "learning_objective": "统一截图与坐标空间",
+  "deliverable": "用自建示意图设计坐标变换练习，分别加入缩放、滚动和遮挡。为每种情况选择重新截图、重定位、等待或回读状态；不要在真实账号上反复尝试有副作用的操作。"
 }

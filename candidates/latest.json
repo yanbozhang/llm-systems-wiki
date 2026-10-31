@@ -1,84 +1,144 @@
 {
-  "checked_at": "2026-10-30T12:00:20.733459+08:00",
+  "checked_at": "2026-10-31T11:45:01.826420+08:00",
   "status": "changed",
   "candidates": [
     {
-      "id": "2f3f55a6df6857f3d8ad00c3f9687128f75320bce08e7887ccde6cf8e280a6af",
+      "id": "3e4f0f2cc0e14bbae883ad9208aa670c984a4272788d28e8d4297676b373a88c",
       "feed_id": "transformers",
-      "entry_id": "tag:github.com,2008:Repository/155220641/v5.22.0",
-      "title": "v5.22.0: Mistral Large 4 (Le Chonk)",
-      "url": "https://github.com/huggingface/transformers/releases/tag/v5.22.0",
-      "updated": "2026-10-29T14:16:58Z",
+      "entry_id": "tag:github.com,2008:Repository/155220641/v5.22.1",
+      "title": "Patch release v5.22.1",
+      "url": "https://github.com/huggingface/transformers/releases/tag/v5.22.1",
+      "updated": "2026-10-30T09:36:03Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "d40453c50a9d5a6043003f0b9445288ddb3a0ca98f3416257006bb3cfdbc7707",
-      "feed_id": "transformers",
-      "entry_id": "tag:github.com,2008:Repository/155220641/v5.21.1",
-      "title": "Patch release v5.21.1",
-      "url": "https://github.com/huggingface/transformers/releases/tag/v5.21.1",
-      "updated": "2026-10-29T08:35:02Z",
+      "id": "c17cba1ed26d47d2aa2890396491b253669f6856e99abca57eb01c8ca3000f0b",
+      "feed_id": "trl",
+      "entry_id": "tag:github.com,2008:Repository/250510075/v1.17.1",
+      "title": "v1.17.1",
+      "url": "https://github.com/huggingface/trl/releases/tag/v1.17.1",
+      "updated": "2026-10-30T14:15:28Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "7a7b9d5c681d3ec14d7d7fb4888fbe46376e15445f18b22e3961a30c10f6f390",
+      "id": "a40a234c8c543ac22b4c7f450aa570d5fd102312ad8d94c3e976aaabab8a801d",
       "feed_id": "trl",
       "entry_id": "tag:github.com,2008:Repository/250510075/v1.17.0",
       "title": "v1.17.0",
       "url": "https://github.com/huggingface/trl/releases/tag/v1.17.0",
-      "updated": "2026-10-29T16:01:02Z",
+      "updated": "2026-10-30T05:42:15Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "dba33134b2e9c3f9cf8d92d47818497098fc78863fce2608b7c41a7358482c9d",
-      "feed_id": "sglang",
-      "entry_id": "tag:github.com,2008:Repository/740303686/v0.5.23",
-      "title": "v0.5.23",
-      "url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.23",
-      "updated": "2026-10-30T00:13:59Z",
+      "id": "3de285b2968726d175d44d063846575d13a7d4d3f39e77bb5777a85142463214",
+      "feed_id": "vllm",
+      "entry_id": "tag:github.com,2008:Repository/599547518/v0.33.0rc2",
+      "title": "v0.33.0rc2: [ROCm][Bugfix] Skip AITER tuned GEMM when M*N >= 2^31 on gfx950 (#64567)",
+      "url": "https://github.com/vllm-project/vllm/releases/tag/v0.33.0rc2",
+      "updated": "2026-10-30T09:10:43Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "e9dfdb0864fb6b3273ded0050da6a25e5fefaaf6354d80d6f01bc0904e40f5e5",
+      "id": "eb511dd0d3e6e8921b4640628f381080313d84d1c334a75981040080ece5ccbf",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/84d845729393f79b3fd3d392aa17cb86f5b6f95c",
-      "title": "Merge pull request #3392 from pja-ant/pja/sep-extension-lifecycle",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/84d845729393f79b3fd3d392aa17cb86f5b6f95c",
-      "updated": "2026-10-29T11:37:15Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/68619e4e8bb7ae11f1aa3872a27ee06f352b9d28",
+      "title": "docs: handle non-text and multiple tool-use blocks in the client tuto…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/68619e4e8bb7ae11f1aa3872a27ee06f352b9d28",
+      "updated": "2026-10-30T18:13:47Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "ed541d238db427b534551d14b801e77d6f30f1e3656c0b7dbaa71650d4c19874",
+      "id": "ec811029105d9a6fe7083700bc5d441eca87d0fdedcdd02216ecbd609879f712",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/d998c8049b8850d49d1fe3389ebf0e4a63262ab5",
-      "title": "Merge remote-tracking branch 'upstream/main' into pja/sep-extension-l…",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/d998c8049b8850d49d1fe3389ebf0e4a63262ab5",
-      "updated": "2026-10-27T18:12:30Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/d62b94127b2f96756f9eabd1ad54345033e525f7",
+      "title": "docs: fix stale one-liners in the build tutorials (#3474)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/d62b94127b2f96756f9eabd1ad54345033e525f7",
+      "updated": "2026-10-30T18:13:14Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "21f31b3a0127af5fe5478fce0ae4f6540905422be9c383ab6a8b19242246c088",
+      "id": "a8a5d96b467edd45506ee73e2180e0651c39a1424f1f1fddc85b0322dc58d8d0",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/a1e969d3b3d327ab31f2b41637b76c94b954b329",
-      "title": "Mark SEP-3392 Final",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/a1e969d3b3d327ab31f2b41637b76c94b954b329",
-      "updated": "2026-10-27T16:23:22Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/da72d8e77a619b3213f1d31fdaa5a3a43c97a14c",
+      "title": "docs: fix client-credentials samples and pin the issuer (#3472)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/da72d8e77a619b3213f1d31fdaa5a3a43c97a14c",
+      "updated": "2026-10-30T18:12:49Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "2dd675a338e3ff4293c0d71a5fc62972cd0d672034ed609d036ffcaa2b01b94f",
+      "id": "e759515448c8379365160ee32aa6a405c0c3bf56485e91d439be6b09efb44c9f",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/6f37979a18440f3d1a17bd1b5e1eea504e70dcb8",
-      "title": "Address review feedback and land extension lifecycle docs",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/6f37979a18440f3d1a17bd1b5e1eea504e70dcb8",
-      "updated": "2026-10-27T16:18:43Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/c713a5485f653cc1da8c2658510862030846d498",
+      "title": "docs: fix dead anchors and links, and add Linux paths (#3473)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/c713a5485f653cc1da8c2658510862030846d498",
+      "updated": "2026-10-30T18:12:14Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "d0ac1faae3b3ff22c5ef7d28d74c75280ba79846d94e64b62e0a74a004eb5a70",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/fe1ce63b3ba9194eca3d73367b020550b0a9cf8e",
+      "title": "docs: correct the Apps Node version and a Skills example, and remove …",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/fe1ce63b3ba9194eca3d73367b020550b0a9cf8e",
+      "updated": "2026-10-30T18:11:28Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "eedb8f72ffbea0145a60b6361f89118cb2de06993aceca0edee99d0fead2db25",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/1aca59bd76408843d235f8a2cf09be68cc9fc3aa",
+      "title": "Merge pull request #3400 from koic/add_ruby_sdk_tier_1_blog_post",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/1aca59bd76408843d235f8a2cf09be68cc9fc3aa",
+      "updated": "2026-10-30T13:55:46Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "18933be26b8c19e6d1c7defe9ac208c4a3f9bddca68b9e1e30d9b88a513bfd9c",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/82d60be17d75e69b350c9fe77df2e8cac202ac11",
+      "title": "Update Filesystems WG Charter (#3447)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/82d60be17d75e69b350c9fe77df2e8cac202ac11",
+      "updated": "2026-10-30T08:05:43Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "c94e8a753de69392308e36e5e9ae4188561ad6f91792e8a9103285877bdf7823",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/05456131a785fdac60c575636da8e33bdc80f317",
+      "title": "docs: mark Skills support for MCPJam in the extension matrix (#3467)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/05456131a785fdac60c575636da8e33bdc80f317",
+      "updated": "2026-10-30T08:05:08Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "9fad94a7f38b269e4ffeb8d04e3418730a60583c4ed7b3a5578a29b3539eff38",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/0b5e9de21a432aae0d778f169b8973567144bf11",
+      "title": "docs: fix dead links to the ext-auth specifications (#3470)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/0b5e9de21a432aae0d778f169b8973567144bf11",
+      "updated": "2026-10-30T08:04:34Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "18e90651f9ff953879cf12fdfd48adbd02b06bbc55ebc5a6a758ab92290f19df",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/710a132f56a6928b245a030376981ea73614677b",
+      "title": "Document identity provider support for enterprise managed auth (#3306)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/710a132f56a6928b245a030376981ea73614677b",
+      "updated": "2026-10-30T08:03:57Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     }
@@ -87,27 +147,27 @@
     {
       "feed_id": "transformers",
       "status": "ok",
-      "new_count": 2
+      "new_count": 1
     },
     {
       "feed_id": "trl",
       "status": "ok",
-      "new_count": 1
+      "new_count": 2
     },
     {
       "feed_id": "vllm",
       "status": "ok",
-      "new_count": 0
+      "new_count": 1
     },
     {
       "feed_id": "sglang",
       "status": "ok",
-      "new_count": 1
+      "new_count": 0
     },
     {
       "feed_id": "mcp",
       "status": "ok",
-      "new_count": 4
+      "new_count": 10
     },
     {
       "feed_id": "skills",
