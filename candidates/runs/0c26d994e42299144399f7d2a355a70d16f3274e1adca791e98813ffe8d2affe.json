@@ -1,0 +1,138 @@
+{
+  "checked_at": "2026-11-01T11:54:14.094324+08:00",
+  "status": "changed",
+  "candidates": [
+    {
+      "id": "58d1985f729d4e335ad0e110980d8538909a9afae0893189b0a0c50d0cf5c4c1",
+      "feed_id": "vllm",
+      "entry_id": "tag:github.com,2008:Repository/599547518/v0.33.0rc3",
+      "title": "v0.33.0rc3",
+      "url": "https://github.com/vllm-project/vllm/releases/tag/v0.33.0rc3",
+      "updated": "2026-10-31T07:15:45Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "a6cb9cba24d589552be2995031efb3ad2ea8e92d7358bc3e8eeebfd203240fed",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/d0e246ea3c69eafaa2806bc4cd28025703ba2c2b",
+      "title": "Restructure Security IG as a routing group (#3331)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/d0e246ea3c69eafaa2806bc4cd28025703ba2c2b",
+      "updated": "2026-10-31T15:43:32Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "5c069a7dda5d23a5acb43ab881df46ccb5cadbc760b5e0fd2865446c82dd9b64",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/6a6c3d42a162d1927c0d36d03838d1f626db5ade",
+      "title": "docs: fix Java and Kotlin tutorial samples that fail as printed (#3481)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/6a6c3d42a162d1927c0d36d03838d1f626db5ade",
+      "updated": "2026-10-31T15:31:10Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "ebac097ed5cea442d9f8f9a80f9837160cebca55c45107eac0afca57f85cc0b5",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/0aab7058fe6471f3d7b0301e13965f10ad9cb198",
+      "title": "docs: update the Rust client tutorial to rmcp 3 (#3484)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/0aab7058fe6471f3d7b0301e13965f10ad9cb198",
+      "updated": "2026-10-31T08:10:43Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "8a0b7d0062d744ec2ef1d59174cf99f287f7370022dc2f2ed4c1fdd55474764b",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/c1c81072057ed9a3eb40a1213eb7577651c1937b",
+      "title": "docs: bring the Inspector pages up to 2.13.0 (#3483)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/c1c81072057ed9a3eb40a1213eb7577651c1937b",
+      "updated": "2026-10-31T07:38:00Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "ee487213a31d95586a3902139526229517541eb95297b72082f81f01c5ec0c76",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/891534049ae842de72190fe4af7ce9a0f7c045e6",
+      "title": "docs: small fixes and released/draft sync (#3478)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/891534049ae842de72190fe4af7ce9a0f7c045e6",
+      "updated": "2026-10-31T07:36:04Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    }
+  ],
+  "feeds": [
+    {
+      "feed_id": "transformers",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "trl",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "vllm",
+      "status": "ok",
+      "new_count": 1
+    },
+    {
+      "feed_id": "sglang",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "mcp",
+      "status": "ok",
+      "new_count": 5
+    },
+    {
+      "feed_id": "skills",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "graphrag",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "lightrag",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "swebench",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "osworld",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-lm-eval",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-opencompass",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-mlperf",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-agentdojo",
+      "status": "ok",
+      "new_count": 0
+    }
+  ]
+}
