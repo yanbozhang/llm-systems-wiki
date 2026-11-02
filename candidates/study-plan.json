@@ -1,9 +1,9 @@
 {
-  "date": "2026-11-01",
-  "module": "benchmark",
-  "topic": "benchmark-metrics",
+  "date": "2026-11-02",
+  "module": "network",
+  "topic": "position",
   "reason": "七模块轮换；模块内按登记顺序持续推进",
-  "review_due": true,
-  "learning_objective": "能根据目标分布选择micro或macro，并从逐题记录还原分母。",
-  "deliverable": "先复算两类别的micro/macro反例，再比较0/10、5/10、10/10和90/100的Wilson区间。对一份同题A/B表按ID对齐，手工列出两次共同索引重采样；用相同seed验证分布可重复，用A=B和固定差值构造不变量检查。最后说明一次区间计算尚未解决的数据偏差与多次选型问题。"
+  "review_due": false,
+  "learning_objective": "证明相对旋转与范数保持",
+  "deliverable": "旋转恒等式、布局置换和缓存位置三份数值表"
 }
