@@ -1,9 +1,9 @@
 {
-  "date": "2026-11-02",
-  "module": "network",
-  "topic": "position",
+  "date": "2026-11-03",
+  "module": "training",
+  "topic": "preference",
   "reason": "七模块轮换；模块内按登记顺序持续推进",
   "review_due": false,
-  "learning_objective": "证明相对旋转与范数保持",
-  "deliverable": "旋转恒等式、布局置换和缓存位置三份数值表"
+  "learning_objective": "推导KL重参数化",
+  "deliverable": "最优策略表、DPO梯度表和长度分层log比值表"
 }
