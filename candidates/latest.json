@@ -1,288 +1,7 @@
 {
-  "checked_at": "2026-11-03T12:59:04.739146+08:00",
-  "status": "changed",
-  "candidates": [
-    {
-      "id": "498e8bd4db8b1ef1128ec0f0edad022715dfe06fc68160033ef405aa96ca099d",
-      "feed_id": "vllm",
-      "entry_id": "tag:github.com,2008:Repository/599547518/v0.33.0rc3",
-      "title": "v0.33.0",
-      "url": "https://github.com/vllm-project/vllm/releases/tag/v0.33.0rc3",
-      "updated": "2026-11-02T10:11:34Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "6766b3936807ce7ea0e1e348e1c1c0d5257e81126879d45619a8bdc6c23fb9a5",
-      "feed_id": "sglang",
-      "entry_id": "tag:github.com,2008:Repository/740303686/v0.5.23",
-      "title": "v0.5.23",
-      "url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.23",
-      "updated": "2026-11-02T22:14:10Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "e97f8083ec31867817f333003c6944804704f19281808d80e1774360115aeeb0",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/3c4d91b7e832d9b74338d56eed03403ccc662123",
-      "title": "Redesign the blog's post lists, post header and tag pages (#3500)",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/3c4d91b7e832d9b74338d56eed03403ccc662123",
-      "updated": "2026-11-03T04:33:04Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "06d06f8424631b0a13e1b44d1fc4c381fc49b971d168d7e35ef62ebc2599026a",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/a40e90cab4e50219d3274658c2b2f5c550c684c8",
-      "title": "build(deps-dev): bump typescript-eslint from 8.72.0 to 8.72.1 (#3493)",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/a40e90cab4e50219d3274658c2b2f5c550c684c8",
-      "updated": "2026-11-03T01:13:33Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "42858c77cdf6e77a0055296cd4f4b9dc617996833958abd5e5bd05023684b5c4",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/8b2bb08f73611b6c8673e074014794cb352c35b0",
-      "title": "build(deps): bump @vitest/mocker (#3499)",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/8b2bb08f73611b6c8673e074014794cb352c35b0",
-      "updated": "2026-11-03T01:13:17Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "4e6dfc8c290ea8a0811ccaec667067d68154fc68f2826bd99c6e2b68b3506148",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/05dc6d554639eddf39d23c21086b6e5e2e74af7b",
-      "title": "build(deps-dev): bump glob from 13.0.6 to 14.0.3 (#3494)",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/05dc6d554639eddf39d23c21086b6e5e2e74af7b",
-      "updated": "2026-11-03T00:43:00Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "5e53c7217689b2ad686b521c90d51de45b6cf525917416796be67f1349586897",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/66c6a64582db1cffb744f03cf5273304a5931959",
-      "title": "Add Glean to extension support matrix (#3495)",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/66c6a64582db1cffb744f03cf5273304a5931959",
-      "updated": "2026-11-03T00:42:30Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "bf4d20eda6ec1483a1f1947be93051ee4c392397bfcf3d7e1220b42184f99002",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/dfb142a648eb9fde42e74334c89fb1a0405d0056",
-      "title": "Update the Ruby SDK Tier 1 blog post (#3496)",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/dfb142a648eb9fde42e74334c89fb1a0405d0056",
-      "updated": "2026-11-03T00:40:35Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "ef0c59740ff4d4a097401fe1b497f3a465669077e54e0ac7dca51c5f3ed3e4f3",
-      "feed_id": "osworld",
-      "entry_id": "tag:github.com,2008:Grit::Commit/8903ebeb0efdf74331bd7dc37ed91ccbbff22317",
-      "title": "Merge pull request #684 from xlang-ai/fix/thunderbird-folder-565-revi…",
-      "url": "https://github.com/xlang-ai/OSWorld/commit/8903ebeb0efdf74331bd7dc37ed91ccbbff22317",
-      "updated": "2026-11-02T16:12:55Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "cd1bcfb8fa10632d0b13dd0245c316315a302c66ee13883b778b2e882abe20fb",
-      "feed_id": "osworld",
-      "entry_id": "tag:github.com,2008:Grit::Commit/135eaffb4a0ca176b758f407e7a8806392bd47b3",
-      "title": "fix(thunderbird): compare all folder messages and supplied files (#56…",
-      "url": "https://github.com/xlang-ai/OSWorld/commit/135eaffb4a0ca176b758f407e7a8806392bd47b3",
-      "updated": "2026-11-02T16:09:08Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "ae9a76b4174b3cef29d9536bf5fa966de012856b01438d275a21442fb2980c25",
-      "feed_id": "osworld",
-      "entry_id": "tag:github.com,2008:Grit::Commit/0e4318d5d0af2135e71fb7aec6bf08d8fbd89cd9",
-      "title": "Merge pull request #683 from xlang-ai/fix/volcengine-554-reviewed",
-      "url": "https://github.com/xlang-ai/OSWorld/commit/0e4318d5d0af2135e71fb7aec6bf08d8fbd89cd9",
-      "updated": "2026-11-02T16:03:39Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "d72dc48d0e0ddb04622031a9a4536890e3e75b588b40e95d16f1083c05df6d01",
-      "feed_id": "osworld",
-      "entry_id": "tag:github.com,2008:Grit::Commit/cb6efafef71456701a0c08fba4fc3d8ee14d553c",
-      "title": "fix(volcengine): preserve endpoint policy and retry incomplete EIP cl…",
-      "url": "https://github.com/xlang-ai/OSWorld/commit/cb6efafef71456701a0c08fba4fc3d8ee14d553c",
-      "updated": "2026-11-02T15:55:47Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "ef27e463c1dbb8eaf2886adc99236322dec58f1bdb35a9c4ba848b7556a8bb0d",
-      "feed_id": "osworld",
-      "entry_id": "tag:github.com,2008:Grit::Commit/e1ccdc4e6e398f753b12ecf0d024fbdfb84588cd",
-      "title": "Merge pull request #682 from xlang-ai/fix/key-autorepeat-594-reviewed",
-      "url": "https://github.com/xlang-ai/OSWorld/commit/e1ccdc4e6e398f753b12ecf0d024fbdfb84588cd",
-      "updated": "2026-11-02T13:39:32Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "691a43fe4001df3a25193d96eab7fdab577978ea8fab485b90141809110ffce1",
-      "feed_id": "osworld",
-      "entry_id": "tag:github.com,2008:Grit::Commit/4a4da7f6514d9917a73a243a56d268b12ec18d8c",
-      "title": "fix(input): verify guest key repeat policy and preserve boot setup (#…",
-      "url": "https://github.com/xlang-ai/OSWorld/commit/4a4da7f6514d9917a73a243a56d268b12ec18d8c",
-      "updated": "2026-11-02T13:37:35Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "a68c6304a27af4172cfc1186260f458d2cf4430d14f5e64f92b0addc44c4215b",
-      "feed_id": "osworld",
-      "entry_id": "tag:github.com,2008:Grit::Commit/991063c42faefa1dbd2106c8d9909ae5e894ca51",
-      "title": "Merge pull request #681 from xlang-ai/fix/gimp-511-reviewed",
-      "url": "https://github.com/xlang-ai/OSWorld/commit/991063c42faefa1dbd2106c8d9909ae5e894ca51",
-      "updated": "2026-11-02T13:19:41Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "caefe10bb49876ad38110273810a599368449052615efa00b4b0b1396ca5bab0",
-      "feed_id": "osworld",
-      "entry_id": "tag:github.com,2008:Grit::Commit/4f93224ee87159de704f63c89a5821148926cb64",
-      "title": "Merge pull request #680 from xlang-ai/fix/pr672-normalization-boundaries",
-      "url": "https://github.com/xlang-ai/OSWorld/commit/4f93224ee87159de704f63c89a5821148926cb64",
-      "updated": "2026-11-02T13:19:15Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "9a8ec7cf9384b798a3a5bba7e59c3648b070be39f8f6e152f48551f48b2ceaba",
-      "feed_id": "osworld",
-      "entry_id": "tag:github.com,2008:Grit::Commit/091f24e1d325324f6e1c7d3b053d4e9dded8591b",
-      "title": "Merge #511 with image-content and geometry regression fixes",
-      "url": "https://github.com/xlang-ai/OSWorld/commit/091f24e1d325324f6e1c7d3b053d4e9dded8591b",
-      "updated": "2026-11-02T13:16:39Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "155b8a5d9b8943c6106f37189d0e4d27f05c3c6ce932de7e7158541f4adbedb3",
-      "feed_id": "osworld",
-      "entry_id": "tag:github.com,2008:Grit::Commit/b76b873510aee5d842c3a2b89d9bc3ad269db5f6",
-      "title": "fix(evaluators): preserve address ranges and read strict DOCX table text",
-      "url": "https://github.com/xlang-ai/OSWorld/commit/b76b873510aee5d842c3a2b89d9bc3ad269db5f6",
-      "updated": "2026-11-02T12:41:39Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "0caac49e87a4a120591cc449f9b723385f535b11a99339c3f3b182f2280f41dc",
-      "feed_id": "osworld",
-      "entry_id": "tag:github.com,2008:Grit::Commit/cf6ce79a2d8824922ca5fa737f222f3750e63825",
-      "title": "Merge pull request #679 from xlang-ai/fix/ecs-reference-cache",
-      "url": "https://github.com/xlang-ai/OSWorld/commit/cf6ce79a2d8824922ca5fa737f222f3750e63825",
-      "updated": "2026-11-02T10:18:47Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "e616f2330ff296cd96f7c24d26742a29c662c1fde0b5ac775507b6f21000eec8",
-      "feed_id": "osworld",
-      "entry_id": "tag:github.com,2008:Grit::Commit/57a033f4ff57d39b18f8e421ac70f879eb4dcb11",
-      "title": "fix(tasks): invalidate stale ECS reference caches by checksum",
-      "url": "https://github.com/xlang-ai/OSWorld/commit/57a033f4ff57d39b18f8e421ac70f879eb4dcb11",
-      "updated": "2026-11-02T10:17:58Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "3d728a8a925e24c7ccc082f68e6a892c99813248c20de505e7f50fe06291a94d",
-      "feed_id": "osworld",
-      "entry_id": "tag:github.com,2008:Grit::Commit/7aa05590dca5bdd6daa2985e5943a9d214f97bf2",
-      "title": "Merge pull request #678 from xlang-ai/docs/guest-image-status-596",
-      "url": "https://github.com/xlang-ai/OSWorld/commit/7aa05590dca5bdd6daa2985e5943a9d214f97bf2",
-      "updated": "2026-11-02T10:11:05Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "97b32ea747c308a0ef24f02fef31d71d8cf813df890dfc5c4e1c25a66414759c",
-      "feed_id": "osworld",
-      "entry_id": "tag:github.com,2008:Grit::Commit/d31be83612cde1b2eb02c9c256dec8758f6e4dd8",
-      "title": "docs: clarify stale Ubuntu guest image and release checks",
-      "url": "https://github.com/xlang-ai/OSWorld/commit/d31be83612cde1b2eb02c9c256dec8758f6e4dd8",
-      "updated": "2026-11-02T10:10:05Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "4b5dfe9c48a2f90dc6737571219794a7042cd6a929d7478e702d0fb7938ebe4c",
-      "feed_id": "osworld",
-      "entry_id": "tag:github.com,2008:Grit::Commit/f8e7ccc1ac5bc9f3e4d8fcc00da6c91b21cca24c",
-      "title": "Merge pull request #677 from xlang-ai/fix/retire-live-booking-607",
-      "url": "https://github.com/xlang-ai/OSWorld/commit/f8e7ccc1ac5bc9f3e4d8fcc00da6c91b21cca24c",
-      "updated": "2026-11-02T10:08:44Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "6bfbe7ad007e632acef4df32031fcd6c9688cc323759152fd8695f643a2edcdc",
-      "feed_id": "osworld",
-      "entry_id": "tag:github.com,2008:Grit::Commit/0c2f18a4a07c92f25dd0c212882db5e51db09183",
-      "title": "fix(tasks): retire live MBTA appointment task",
-      "url": "https://github.com/xlang-ai/OSWorld/commit/0c2f18a4a07c92f25dd0c212882db5e51db09183",
-      "updated": "2026-11-02T10:07:51Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "43ca6949c07ee621a7c9848177aef850c9f1edd0d5be97dcfdf1f9aa2e30ca78",
-      "feed_id": "osworld",
-      "entry_id": "tag:github.com,2008:Grit::Commit/a2d80a1e8e8540cdd120c76f09f8eea31284a2e3",
-      "title": "Merge pull request #676 from xlang-ai/fix/ecs-pinned-reference-545",
-      "url": "https://github.com/xlang-ai/OSWorld/commit/a2d80a1e8e8540cdd120c76f09f8eea31284a2e3",
-      "updated": "2026-11-02T10:06:52Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "220d4407de67b2207f1a878f2c608af7fb4d8e1d1657ea988cb74e9f27d8aa4a",
-      "feed_id": "osworld",
-      "entry_id": "tag:github.com,2008:Grit::Commit/75efb5d188f0d19c6b68c34813f1e6ca796993b7",
-      "title": "fix(tasks): pin verified ECS academic-year reference data (#545)",
-      "url": "https://github.com/xlang-ai/OSWorld/commit/75efb5d188f0d19c6b68c34813f1e6ca796993b7",
-      "updated": "2026-11-02T10:05:38Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "2d0f6de3c955ea5e5abf7721039db0bc036c66447e98d731254beab046b3588e",
-      "feed_id": "osworld",
-      "entry_id": "tag:github.com,2008:Grit::Commit/aa9e3d261f72a3bfb4b24427d863d80f65ef3201",
-      "title": "Merge pull request #639 from xlang-ai/fix/movie-sheet-integrity",
-      "url": "https://github.com/xlang-ai/OSWorld/commit/aa9e3d261f72a3bfb4b24427d863d80f65ef3201",
-      "updated": "2026-11-02T10:01:50Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "0d22c79a0448a4469616b4533c47eab61481960dc2ad85c0542aaf61fb99338e",
-      "feed_id": "osworld",
-      "entry_id": "tag:github.com,2008:Grit::Commit/b0a7bf0cd6710cb06d32e02e231e36346a0db8a1",
-      "title": "Merge pull request #675 from xlang-ai/fix/delta-flight-selectors-662",
-      "url": "https://github.com/xlang-ai/OSWorld/commit/b0a7bf0cd6710cb06d32e02e231e36346a0db8a1",
-      "updated": "2026-11-02T10:00:45Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    }
-  ],
+  "checked_at": "2026-11-04T12:30:12.573544+08:00",
+  "status": "unchanged",
+  "candidates": [],
   "feeds": [
     {
       "feed_id": "transformers",
@@ -297,17 +16,17 @@
     {
       "feed_id": "vllm",
       "status": "ok",
-      "new_count": 1
+      "new_count": 0
     },
     {
       "feed_id": "sglang",
       "status": "ok",
-      "new_count": 1
+      "new_count": 0
     },
     {
       "feed_id": "mcp",
       "status": "ok",
-      "new_count": 6
+      "new_count": 0
     },
     {
       "feed_id": "skills",
@@ -332,7 +51,7 @@
     {
       "feed_id": "osworld",
       "status": "ok",
-      "new_count": 20
+      "new_count": 0
     },
     {
       "feed_id": "bench-lm-eval",
