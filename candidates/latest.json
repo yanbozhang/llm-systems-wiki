@@ -1,7 +1,28 @@
 {
-  "checked_at": "2026-11-04T12:30:12.573544+08:00",
-  "status": "unchanged",
-  "candidates": [],
+  "checked_at": "2026-11-05T12:46:38.128124+08:00",
+  "status": "changed",
+  "candidates": [
+    {
+      "id": "a3b0b717169ad5dd324d2b9c2eda5099b9d6f44a957fb71387c6253f9ade8294",
+      "feed_id": "skills",
+      "entry_id": "tag:github.com,2008:Grit::Commit/83021e2be457a9b6679148719c1f6074f0ad975e",
+      "title": "AAIF Donation: Add governance and maintainers (#648)",
+      "url": "https://github.com/agentskills/agentskills/commit/83021e2be457a9b6679148719c1f6074f0ad975e",
+      "updated": "2026-11-04T19:47:24Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "d0e87caa79cf681ca9d537c15dc4c8e5dc0b33acc8287db9a8acb274958d9c30",
+      "feed_id": "skills",
+      "entry_id": "tag:github.com,2008:Grit::Commit/d6dd4b71cee7a320ae7d52e1d8711b6806ac8201",
+      "title": "AAIF Donation: Add LF Projects legal notice to site footer (#649)",
+      "url": "https://github.com/agentskills/agentskills/commit/d6dd4b71cee7a320ae7d52e1d8711b6806ac8201",
+      "updated": "2026-11-04T19:47:03Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    }
+  ],
   "feeds": [
     {
       "feed_id": "transformers",
@@ -31,7 +52,7 @@
     {
       "feed_id": "skills",
       "status": "ok",
-      "new_count": 0
+      "new_count": 2
     },
     {
       "feed_id": "graphrag",
