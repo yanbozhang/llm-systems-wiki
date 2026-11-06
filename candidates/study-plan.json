@@ -1,9 +1,9 @@
 {
-  "date": "2026-11-05",
-  "module": "harness",
-  "topic": "memory",
+  "date": "2026-11-06",
+  "module": "knowledge",
+  "topic": "hybrid-search",
   "reason": "七模块轮换；模块内按登记顺序持续推进",
   "review_due": false,
-  "learning_objective": "定义记忆写入与失效条件",
-  "deliverable": "创建三条模拟记忆：项目版本事实、个人阅读偏好、一次失败过程。给它们分别制定召回条件、更新时间和删除传播清单，再设计一条不应被当前任务采用的旧记忆。"
+  "learning_objective": "识别不同召回器的优劣",
+  "deliverable": "设计精确术语、同义表达、长问题、无答案四类查询，保存关键词、向量、融合与重排后的候选列表。固定语料与问题，按查询类别比较，先分析漏召回再调整参数。"
 }
