@@ -1,9 +1,9 @@
 {
-  "date": "2026-11-06",
-  "module": "knowledge",
-  "topic": "hybrid-search",
+  "date": "2026-11-07",
+  "module": "agents",
+  "topic": "coding-agent",
   "reason": "七模块轮换；模块内按登记顺序持续推进",
   "review_due": false,
-  "learning_objective": "识别不同召回器的优劣",
-  "deliverable": "设计精确术语、同义表达、长问题、无答案四类查询，保存关键词、向量、融合与重排后的候选列表。固定语料与问题，按查询类别比较，先分析漏召回再调整参数。"
+  "learning_objective": "按契约形成补丁",
+  "deliverable": "选择一个自建小函数定义契约和反例，在修改前写下期望结果，再比较最小补丁与替代方案。冻结隐藏验证点的设计，不让实现本身决定全部断言。"
 }
