@@ -1,204 +1,64 @@
 {
-  "checked_at": "2026-11-07T12:14:44.517596+08:00",
+  "checked_at": "2026-11-08T11:57:23.004498+08:00",
   "status": "changed",
   "candidates": [
     {
-      "id": "e6140e87d92a3de5e9bd0ed72bedc8f4fe00790c4688bcd8a39e8529549b5a01",
-      "feed_id": "transformers",
-      "entry_id": "tag:github.com,2008:Repository/155220641/v5.22.2",
-      "title": "Patch release v5.22.2",
-      "url": "https://github.com/huggingface/transformers/releases/tag/v5.22.2",
-      "updated": "2026-11-06T15:43:27Z",
+      "id": "0939ff843ab3e70a085c1a9230791f5447d0ac6124f65c383eee6d5b0ac54490",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/fd502785f2732ae0028de7e9fa34d6ebcd950c65",
+      "title": "docs: rework the authorization guide for the 2026-07-28 specification…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/fd502785f2732ae0028de7e9fa34d6ebcd950c65",
+      "updated": "2026-11-08T01:19:26Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "b594849cd7dd8c6cfcd4f77bbac8be8342166f8d6f87573aa87a4ac65092a153",
+      "id": "a29fada88f22f2cbdac4bd0600aecdb3cc9bc3be4f4b27d248965c1fec50d484",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/c9b51b3a02f3851f9821d5191718652bab97adac",
-      "title": "fix(schema): restore optional _meta on input requests and responses (…",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/c9b51b3a02f3851f9821d5191718652bab97adac",
-      "updated": "2026-11-06T15:57:15Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/cf59bb0d8b43e711420f5f7313aa6cca3f1e1898",
+      "title": "Merge pull request #3508 from modelcontextprotocol/ci/adopt-checked-s…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/cf59bb0d8b43e711420f5f7313aa6cca3f1e1898",
+      "updated": "2026-11-07T11:03:06Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "3eed9be7940a9d659ff3d79257935652d9362a0b36da5baf0f734ea71681ff01",
+      "id": "5cfb4d232baa599257dceae3049786ee5b04f7cc27786e358bc3134d651dd98c",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/38353251fab3bdeead03dd8283b9e66076ce1a7f",
-      "title": "fix(schema): close oneOf type-check bypass and render SEP-2106 Tool e…",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/38353251fab3bdeead03dd8283b9e66076ce1a7f",
-      "updated": "2026-11-06T14:45:22Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/781687f6c996b7a641b8416de2c0fd5f6fd04b08",
+      "title": "Merge main into ci/adopt-checked-squash-merges",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/781687f6c996b7a641b8416de2c0fd5f6fd04b08",
+      "updated": "2026-11-06T18:47:22Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "f2eb422b986deba1b6da9d4314f20c2aa67b2ca2cd1afbac155532f8077bd128",
+      "id": "5ebcdf410b190ecf2cb163450c73bff37f8d600b27eef4caffcf9513ab92e8d8",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/22bb5b965a58e7f502deb184b51a8a4b8bf6067a",
-      "title": "Merge pull request #3482 from modelcontextprotocol/docs/client-tutori…",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/22bb5b965a58e7f502deb184b51a8a4b8bf6067a",
-      "updated": "2026-11-06T14:16:51Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/77d4f1afd50e3563dc26cefef106e79c049a4a99",
+      "title": "build: pin documentation build tools",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/77d4f1afd50e3563dc26cefef106e79c049a4a99",
+      "updated": "2026-11-05T13:00:49Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "2e2b85b3ab45f3f5a1c58b3aa0d38e43d79bd5f2db705b0c40379ad6cf2d65cb",
+      "id": "a9ab68a7c2e6887010a83c3ae303278a49451c7ca847f72c4b31aa645f92e192",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/352c0c9fc451387788fe8a0121184c944f1c82b7",
-      "title": "Merge pull request #3479 from modelcontextprotocol/docs/rust-server-t…",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/352c0c9fc451387788fe8a0121184c944f1c82b7",
-      "updated": "2026-11-06T14:02:48Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "83cc50b417d2701d9f5b63bc32cc28f762e35b217d3aa18a30e9eeb72b79b8a1",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/1e69fea8ee88fff4c2d5a64b78f01ee61eb373a9",
-      "title": "Merge pull request #3507 from modelcontextprotocol/ci/conventional-pr…",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/1e69fea8ee88fff4c2d5a64b78f01ee61eb373a9",
-      "updated": "2026-11-06T13:31:40Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "81adc399de43a9d2a26856cb31183377feee58cc042d7b4602ad4aa29fd8b294",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/d9d26ddbbe8e0bc97b4f365b4445b2642e664fef",
-      "title": "Merge pull request #3506 from modelcontextprotocol/fix/release-pr-met…",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/d9d26ddbbe8e0bc97b4f365b4445b2642e664fef",
-      "updated": "2026-11-06T10:19:00Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "57661cd43cc8d6ef4ae2b46c80d0ac67d0dd4ed4b0be164a721c1fea8c5bc027",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/bfe9502547784cca14cdeb3ab3c3899468e58a77",
-      "title": "fix(release): retain existing PR authentication",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/bfe9502547784cca14cdeb3ab3c3899468e58a77",
-      "updated": "2026-11-05T00:00:58Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "ae62e9f34a4a18c251cc7518a8f0602bd0d4ab2c6e9296f68c3f893bda22e301",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/bf2c1bc3f37a0bf7c4ea60ad7dfc1b8698d80863",
-      "title": "fix(release): create conventional release PRs with an App token",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/bf2c1bc3f37a0bf7c4ea60ad7dfc1b8698d80863",
+      "entry_id": "tag:github.com,2008:Grit::Commit/ed94711ea227e882ea7c2b3c76c586bf76cda095",
+      "title": "ci: narrow adoption PR to SEP verification",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/ed94711ea227e882ea7c2b3c76c586bf76cda095",
       "updated": "2026-11-04T23:56:37Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "3c6e1c9ee178c70d1d012a53d5f193e6ebd97bbb41a661c18b74e875ddc5ea08",
+      "id": "c763feca61dc4ed32bb92ab374931e361205c230dfa28505b1ffa08f800ef7b5",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/2dfb4ec0eb039394a27d3b78f102fd2b2216f6d0",
-      "title": "docs: remove temporary release title exception",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/2dfb4ec0eb039394a27d3b78f102fd2b2216f6d0",
-      "updated": "2026-11-04T23:18:37Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "05097833f40434770846d92486ddcf957c7b5b3f0c76c41f6563f2b0e4fdb851",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/e6a3501ecd3fe9b25907e63c340855bdaff26ca1",
-      "title": "ci: simplify PR title validation and guidance",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/e6a3501ecd3fe9b25907e63c340855bdaff26ca1",
-      "updated": "2026-11-04T23:16:29Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "b0a9d77cb08b0ffc90ebe54b216acdf1d449b9d91693c4f8f462a7b5c78f797b",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/c46c0fb806654a8f230c79481f55b3816868880e",
-      "title": "ci: validate PR titles with an inline script",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/c46c0fb806654a8f230c79481f55b3816868880e",
-      "updated": "2026-11-04T23:10:16Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "eed6eb1f33bfc1b7366a90b09c6a9bbd97cf5c7a76eeae1a203772baead9afc1",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/8a694e1175c0a9c4bcd16cbb9933bb0ffdc8eec0",
-      "title": "docs: make agent PR title guidance self-contained",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/8a694e1175c0a9c4bcd16cbb9933bb0ffdc8eec0",
-      "updated": "2026-11-04T22:56:25Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "d5f7d73924ebc5d2a1d906af2b84ace7e483f62d45f868bba4016fc709dfa5ba",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/5e3035b54cbad2343a7836449805fd94bf9b9621",
-      "title": "ci: clarify SEP title guidance and omit PR template",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/5e3035b54cbad2343a7836449805fd94bf9b9621",
-      "updated": "2026-11-04T22:50:38Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "55df9cc88b84b948158297f92d27f86a9714e4d0ed6be022474b8d364db3f667",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/4d7b669254d8bed72240cf95d2e1c1787adad710",
-      "title": "refactor(release): reuse existing publication steps",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/4d7b669254d8bed72240cf95d2e1c1787adad710",
-      "updated": "2026-11-04T22:20:27Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "9bf456d7537cb52643dd5680a2d7afb8bb79110d670f1a2e4bd12c1a02058d7a",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/4acacf939ba4e3d726ba0aba322cf044cfdc6104",
-      "title": "refactor(release): keep validation in the workflow",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/4acacf939ba4e3d726ba0aba322cf044cfdc6104",
-      "updated": "2026-11-04T21:50:54Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "2c2909ffc5f7d49758f1aafd21fb2a3687786bb739dc3687955bda61f38e5586",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/3f952f35da2fb861a8e114f32fe80ea7decb6f84",
-      "title": "fix(release): publish when release PRs merge",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/3f952f35da2fb861a8e114f32fe80ea7decb6f84",
-      "updated": "2026-11-04T21:31:40Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "bf0d129011f6922b081988d52d9f16e6eb8c4d8ba74ee1563c605a2d21061fa3",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/09e0e8bbd17973aaf517a8fca5c0103f580d6c9d",
-      "title": "ci: check conventional PR titles",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/09e0e8bbd17973aaf517a8fca5c0103f580d6c9d",
-      "updated": "2026-11-04T21:12:05Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "212712ffb2a31c82168cf242f079e69cd6028ff4984ab41cdcc92edf3cb759c6",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/598afa591e1bd5e38052b5e03c16d358ea9fa17e",
-      "title": "fix(release): identify releases from merged PR metadata",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/598afa591e1bd5e38052b5e03c16d358ea9fa17e",
-      "updated": "2026-11-04T21:09:09Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "4dbefca1cb20ff0837b91d4288f2c122cdbe605e5cdf204d7281e32b71e0c8b8",
-      "feed_id": "bench-opencompass",
-      "entry_id": "tag:github.com,2008:Repository/654124617/0.5.5",
-      "title": "0.5.5",
-      "url": "https://github.com/open-compass/opencompass/releases/tag/0.5.5",
-      "updated": "2026-11-06T08:08:44Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/1103ff1264dfabe5c5fb3a3ea4ada2769e61cdb1",
+      "title": "ci: adopt checked squash merges and conventional bot titles",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/1103ff1264dfabe5c5fb3a3ea4ada2769e61cdb1",
+      "updated": "2026-11-04T23:29:29Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     }
@@ -207,7 +67,7 @@
     {
       "feed_id": "transformers",
       "status": "ok",
-      "new_count": 1
+      "new_count": 0
     },
     {
       "feed_id": "trl",
@@ -227,7 +87,7 @@
     {
       "feed_id": "mcp",
       "status": "ok",
-      "new_count": 18
+      "new_count": 6
     },
     {
       "feed_id": "skills",
@@ -262,7 +122,7 @@
     {
       "feed_id": "bench-opencompass",
       "status": "ok",
-      "new_count": 1
+      "new_count": 0
     },
     {
       "feed_id": "bench-mlperf",

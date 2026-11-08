@@ -1,0 +1,138 @@
+{
+  "checked_at": "2026-11-08T11:57:23.004498+08:00",
+  "status": "changed",
+  "candidates": [
+    {
+      "id": "0939ff843ab3e70a085c1a9230791f5447d0ac6124f65c383eee6d5b0ac54490",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/fd502785f2732ae0028de7e9fa34d6ebcd950c65",
+      "title": "docs: rework the authorization guide for the 2026-07-28 specification…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/fd502785f2732ae0028de7e9fa34d6ebcd950c65",
+      "updated": "2026-11-08T01:19:26Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "a29fada88f22f2cbdac4bd0600aecdb3cc9bc3be4f4b27d248965c1fec50d484",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/cf59bb0d8b43e711420f5f7313aa6cca3f1e1898",
+      "title": "Merge pull request #3508 from modelcontextprotocol/ci/adopt-checked-s…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/cf59bb0d8b43e711420f5f7313aa6cca3f1e1898",
+      "updated": "2026-11-07T11:03:06Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "5cfb4d232baa599257dceae3049786ee5b04f7cc27786e358bc3134d651dd98c",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/781687f6c996b7a641b8416de2c0fd5f6fd04b08",
+      "title": "Merge main into ci/adopt-checked-squash-merges",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/781687f6c996b7a641b8416de2c0fd5f6fd04b08",
+      "updated": "2026-11-06T18:47:22Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "5ebcdf410b190ecf2cb163450c73bff37f8d600b27eef4caffcf9513ab92e8d8",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/77d4f1afd50e3563dc26cefef106e79c049a4a99",
+      "title": "build: pin documentation build tools",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/77d4f1afd50e3563dc26cefef106e79c049a4a99",
+      "updated": "2026-11-05T13:00:49Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "a9ab68a7c2e6887010a83c3ae303278a49451c7ca847f72c4b31aa645f92e192",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/ed94711ea227e882ea7c2b3c76c586bf76cda095",
+      "title": "ci: narrow adoption PR to SEP verification",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/ed94711ea227e882ea7c2b3c76c586bf76cda095",
+      "updated": "2026-11-04T23:56:37Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "c763feca61dc4ed32bb92ab374931e361205c230dfa28505b1ffa08f800ef7b5",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/1103ff1264dfabe5c5fb3a3ea4ada2769e61cdb1",
+      "title": "ci: adopt checked squash merges and conventional bot titles",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/1103ff1264dfabe5c5fb3a3ea4ada2769e61cdb1",
+      "updated": "2026-11-04T23:29:29Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    }
+  ],
+  "feeds": [
+    {
+      "feed_id": "transformers",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "trl",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "vllm",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "sglang",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "mcp",
+      "status": "ok",
+      "new_count": 6
+    },
+    {
+      "feed_id": "skills",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "graphrag",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "lightrag",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "swebench",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "osworld",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-lm-eval",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-opencompass",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-mlperf",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-agentdojo",
+      "status": "ok",
+      "new_count": 0
+    }
+  ]
+}
