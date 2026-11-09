@@ -1,64 +1,44 @@
 {
-  "checked_at": "2026-11-08T11:57:23.004498+08:00",
+  "checked_at": "2026-11-09T12:13:06.791298+08:00",
   "status": "changed",
   "candidates": [
     {
-      "id": "0939ff843ab3e70a085c1a9230791f5447d0ac6124f65c383eee6d5b0ac54490",
+      "id": "ed0b2bdc0cd0cd59eabfb25de090ebc6a4097b5f2043e974d9b1c1d29a6bf0b5",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/fd502785f2732ae0028de7e9fa34d6ebcd950c65",
-      "title": "docs: rework the authorization guide for the 2026-07-28 specification…",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/fd502785f2732ae0028de7e9fa34d6ebcd950c65",
-      "updated": "2026-11-08T01:19:26Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/222640c8e771dd57f41e655d3c3eef6e5dec8b34",
+      "title": "docs: update OAuth Client ID Metadata Document references to draft 03…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/222640c8e771dd57f41e655d3c3eef6e5dec8b34",
+      "updated": "2026-11-09T03:02:24Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "a29fada88f22f2cbdac4bd0600aecdb3cc9bc3be4f4b27d248965c1fec50d484",
+      "id": "e6f349ba80f5dfcc1df74cb187b14518e6fc9176001bf7c4de6f783af2e503f9",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/cf59bb0d8b43e711420f5f7313aa6cca3f1e1898",
-      "title": "Merge pull request #3508 from modelcontextprotocol/ci/adopt-checked-s…",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/cf59bb0d8b43e711420f5f7313aa6cca3f1e1898",
-      "updated": "2026-11-07T11:03:06Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/94f4ebc8ecb3764584bc30d5139d57c03692b734",
+      "title": "Point Skills specification links at specification/beta/ (#3466)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/94f4ebc8ecb3764584bc30d5139d57c03692b734",
+      "updated": "2026-11-08T05:01:53Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "5cfb4d232baa599257dceae3049786ee5b04f7cc27786e358bc3134d651dd98c",
+      "id": "b84cccfe452ccdd7b50216371617b384880c7947a6b095ae2a4f0f347a9863da",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/781687f6c996b7a641b8416de2c0fd5f6fd04b08",
-      "title": "Merge main into ci/adopt-checked-squash-merges",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/781687f6c996b7a641b8416de2c0fd5f6fd04b08",
-      "updated": "2026-11-06T18:47:22Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/92e1221b3d915ca3e08b77d36e64a57412363dce",
+      "title": "build(deps): bump adm-zip (#3519)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/92e1221b3d915ca3e08b77d36e64a57412363dce",
+      "updated": "2026-11-08T04:55:44Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "5ebcdf410b190ecf2cb163450c73bff37f8d600b27eef4caffcf9513ab92e8d8",
+      "id": "d795647f8e32f0240a65059aeaf5768d571a8c2bada5581cb01aaaa7d8c5f8f5",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/77d4f1afd50e3563dc26cefef106e79c049a4a99",
-      "title": "build: pin documentation build tools",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/77d4f1afd50e3563dc26cefef106e79c049a4a99",
-      "updated": "2026-11-05T13:00:49Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "a9ab68a7c2e6887010a83c3ae303278a49451c7ca847f72c4b31aa645f92e192",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/ed94711ea227e882ea7c2b3c76c586bf76cda095",
-      "title": "ci: narrow adoption PR to SEP verification",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/ed94711ea227e882ea7c2b3c76c586bf76cda095",
-      "updated": "2026-11-04T23:56:37Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "c763feca61dc4ed32bb92ab374931e361205c230dfa28505b1ffa08f800ef7b5",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/1103ff1264dfabe5c5fb3a3ea4ada2769e61cdb1",
-      "title": "ci: adopt checked squash merges and conventional bot titles",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/1103ff1264dfabe5c5fb3a3ea4ada2769e61cdb1",
-      "updated": "2026-11-04T23:29:29Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/e5a28a6841fd85b4624399c77d1d7ce764dc5420",
+      "title": "Document working-group-based contribution policy (#3514)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/e5a28a6841fd85b4624399c77d1d7ce764dc5420",
+      "updated": "2026-11-08T04:53:50Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     }
@@ -87,7 +67,7 @@
     {
       "feed_id": "mcp",
       "status": "ok",
-      "new_count": 6
+      "new_count": 4
     },
     {
       "feed_id": "skills",

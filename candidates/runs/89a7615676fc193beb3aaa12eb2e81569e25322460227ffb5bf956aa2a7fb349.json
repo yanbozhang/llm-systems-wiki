@@ -1,0 +1,118 @@
+{
+  "checked_at": "2026-11-09T12:13:06.791298+08:00",
+  "status": "changed",
+  "candidates": [
+    {
+      "id": "ed0b2bdc0cd0cd59eabfb25de090ebc6a4097b5f2043e974d9b1c1d29a6bf0b5",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/222640c8e771dd57f41e655d3c3eef6e5dec8b34",
+      "title": "docs: update OAuth Client ID Metadata Document references to draft 03…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/222640c8e771dd57f41e655d3c3eef6e5dec8b34",
+      "updated": "2026-11-09T03:02:24Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "e6f349ba80f5dfcc1df74cb187b14518e6fc9176001bf7c4de6f783af2e503f9",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/94f4ebc8ecb3764584bc30d5139d57c03692b734",
+      "title": "Point Skills specification links at specification/beta/ (#3466)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/94f4ebc8ecb3764584bc30d5139d57c03692b734",
+      "updated": "2026-11-08T05:01:53Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "b84cccfe452ccdd7b50216371617b384880c7947a6b095ae2a4f0f347a9863da",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/92e1221b3d915ca3e08b77d36e64a57412363dce",
+      "title": "build(deps): bump adm-zip (#3519)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/92e1221b3d915ca3e08b77d36e64a57412363dce",
+      "updated": "2026-11-08T04:55:44Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "d795647f8e32f0240a65059aeaf5768d571a8c2bada5581cb01aaaa7d8c5f8f5",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/e5a28a6841fd85b4624399c77d1d7ce764dc5420",
+      "title": "Document working-group-based contribution policy (#3514)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/e5a28a6841fd85b4624399c77d1d7ce764dc5420",
+      "updated": "2026-11-08T04:53:50Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    }
+  ],
+  "feeds": [
+    {
+      "feed_id": "transformers",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "trl",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "vllm",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "sglang",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "mcp",
+      "status": "ok",
+      "new_count": 4
+    },
+    {
+      "feed_id": "skills",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "graphrag",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "lightrag",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "swebench",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "osworld",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-lm-eval",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-opencompass",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-mlperf",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-agentdojo",
+      "status": "ok",
+      "new_count": 0
+    }
+  ]
+}

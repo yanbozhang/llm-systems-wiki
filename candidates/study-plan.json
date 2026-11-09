@@ -1,9 +1,9 @@
 {
-  "date": "2026-11-08",
-  "module": "benchmark",
-  "topic": "benchmark-contamination",
+  "date": "2026-11-09",
+  "module": "network",
+  "topic": "ffn-norm",
   "reason": "七模块轮换；模块内按登记顺序持续推进",
-  "review_due": true,
-  "learning_objective": "能定义并解释文本规范化规则，区分字节相同、规范化相同与语义相同。",
-  "deliverable": "准备两份大小写与空白不同的自然语言文本，再准备一对大小写敏感的代码标识符，解释同一规范化规则为何可能不适用于两者。手算二元词组Jaccard，改变n观察可比较性与命中变化。最后为三条题目制作发布/撤回时间线，冻结两个日期的成员列表，并记录哪些变化需要重新评测。"
+  "review_due": false,
+  "learning_objective": "推导门控参数预算",
+  "deliverable": "参数激活预算、归一化对照与残差雅可比表"
 }
