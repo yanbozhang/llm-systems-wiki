@@ -1,0 +1,168 @@
+{
+  "checked_at": "2026-11-11T12:16:33.337698+08:00",
+  "status": "changed",
+  "candidates": [
+    {
+      "id": "d7eb2ac3034273eb0726906b02371f99d29241b16e0cdc04efc30befeea9eb93",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/200d5339bbc7649ee92d6445dc17368e2b5b11ba",
+      "title": "docs(community): reconcile working and interest group lists (#3533)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/200d5339bbc7649ee92d6445dc17368e2b5b11ba",
+      "updated": "2026-11-11T01:57:42Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "c695fc3952f4729ceac019ddf20da00f81e68a2821aca9da0cdc0dbd0e95ab69",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/c6d8d167677c0bda559ead9daf16f43e75cb71cc",
+      "title": "docs(community): state who can open pull requests and how to get ther…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/c6d8d167677c0bda559ead9daf16f43e75cb71cc",
+      "updated": "2026-11-11T01:55:59Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "7285d0d267e1ec0582996ce789a155f25ac27f5a514e333db0659dfd3f6393f8",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/283d8d6a10ca9c4de63bc3a8d798762dfed52e86",
+      "title": "fix(sep-automation): drop the proposal state and sponsor-hunt comment…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/283d8d6a10ca9c4de63bc3a8d798762dfed52e86",
+      "updated": "2026-11-11T01:54:50Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "78d5a05cd5b2c116f59914c73123757666232b1ab5c20a1b83840e3d4c77063a",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/9466ba2c7e19ad6dea076ad9cf27a2eca6f11336",
+      "title": "Merge pull request #689 from xlang-ai/release/desktop-env-1.0.3-publish",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/9466ba2c7e19ad6dea076ad9cf27a2eca6f11336",
+      "updated": "2026-11-10T17:13:17Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "7d25bb806aadf4ede730538619b9c4476bd9f8fdb2af55f837f2df5dc8ceb2d9",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/4e536c17bd1be096925e60346baa10eb261ba9c1",
+      "title": "ci: stage verified desktop-env 1.0.3 publication",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/4e536c17bd1be096925e60346baa10eb261ba9c1",
+      "updated": "2026-11-10T17:12:38Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "bc15be9f2ae9e87fa37f9624ad25a286cd5779043bb1856b9ecf9810dd9eb673",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/9d6f711d234b84cbff1b5199211610baa03b000c",
+      "title": "Merge pull request #688 from xlang-ai/prep/desktop-env-1.0.3",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/9d6f711d234b84cbff1b5199211610baa03b000c",
+      "updated": "2026-11-10T16:37:46Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "b3fde6d7da17c561a292fddb675d193551f409f5ffac41041cc4606d405452f4",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/8093cdab4816ac563df68fc1162b5066415ba51f",
+      "title": "ci: retain verified desktop-env release artifacts from main",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/8093cdab4816ac563df68fc1162b5066415ba51f",
+      "updated": "2026-11-10T16:36:18Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "c5bcc55de0b2f06760c1242c313f0e2c0d90c05e9a8dc0055d474b137adbe6de",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/89548c49649cfe6e07b887994123c6b8afd60064",
+      "title": "fix(packaging): validate trusted suites before submission checks",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/89548c49649cfe6e07b887994123c6b8afd60064",
+      "updated": "2026-11-10T15:38:34Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "3de905b2b2bd8cc4f41adddab19578ef32a741cda6e5b3662fc64cb4b5251e97",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/c3abecadf87d797d2fa1939d44a27f17fcad1822",
+      "title": "fix(packaging): isolate desktop-env builds and bundle trusted suites",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/c3abecadf87d797d2fa1939d44a27f17fcad1822",
+      "updated": "2026-11-09T14:19:50Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    }
+  ],
+  "feeds": [
+    {
+      "feed_id": "transformers",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "trl",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "vllm",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "sglang",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "mcp",
+      "status": "ok",
+      "new_count": 3
+    },
+    {
+      "feed_id": "skills",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "graphrag",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "lightrag",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "swebench",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "osworld",
+      "status": "ok",
+      "new_count": 6
+    },
+    {
+      "feed_id": "bench-lm-eval",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-opencompass",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-mlperf",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-agentdojo",
+      "status": "ok",
+      "new_count": 0
+    }
+  ]
+}

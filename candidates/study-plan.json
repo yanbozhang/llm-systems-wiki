@@ -1,9 +1,9 @@
 {
-  "date": "2026-11-10",
-  "module": "training",
-  "topic": "policy-optimization",
+  "date": "2026-11-11",
+  "module": "inference",
+  "topic": "inference-frameworks",
   "reason": "七模块轮换；模块内按登记顺序持续推进",
   "review_due": false,
-  "learning_objective": "计算组优势及缺失奖励边界",
-  "deliverable": "组优势、裁剪区域、KL期望和变长归约对照表"
+  "learning_objective": "写出可重复性能协议",
+  "deliverable": "填写一份性能评测协议，先做输出正确性和停止条件检查，再安排warm-up及稳态采样。保存逐请求结果，区分请求失败、生成截断和超时；不把失败请求从分母悄悄删除。"
 }

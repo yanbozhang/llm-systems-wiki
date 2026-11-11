@@ -1,154 +1,94 @@
 {
-  "checked_at": "2026-11-10T13:41:07.630554+08:00",
+  "checked_at": "2026-11-11T12:16:33.337698+08:00",
   "status": "changed",
   "candidates": [
     {
-      "id": "01dff68c408a8b48d9b75387bf687b8bca1d60091cae83fb771c414ae7434897",
-      "feed_id": "vllm",
-      "entry_id": "tag:github.com,2008:Repository/599547518/v0.34.0rc0",
-      "title": "v0.34.0rc0: [Transformers backend] Migrate Gemma and StableLM (#66393)",
-      "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0rc0",
-      "updated": "2026-11-08T18:38:57Z",
+      "id": "d7eb2ac3034273eb0726906b02371f99d29241b16e0cdc04efc30befeea9eb93",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/200d5339bbc7649ee92d6445dc17368e2b5b11ba",
+      "title": "docs(community): reconcile working and interest group lists (#3533)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/200d5339bbc7649ee92d6445dc17368e2b5b11ba",
+      "updated": "2026-11-11T01:57:42Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "5ef97d97ed835139ee8c8c66309d3903fcf022c3119b0edf7489f241e66c04b8",
+      "id": "c695fc3952f4729ceac019ddf20da00f81e68a2821aca9da0cdc0dbd0e95ab69",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/632a0c9a65c9b4fbc889d8aface5c9cf5edef3b7",
-      "title": "Merge pull request #3525 from modelcontextprotocol/dependabot/npm_and…",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/632a0c9a65c9b4fbc889d8aface5c9cf5edef3b7",
-      "updated": "2026-11-09T17:21:26Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/c6d8d167677c0bda559ead9daf16f43e75cb71cc",
+      "title": "docs(community): state who can open pull requests and how to get ther…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/c6d8d167677c0bda559ead9daf16f43e75cb71cc",
+      "updated": "2026-11-11T01:55:59Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "43ecb719cdcb5dfb92cf0003ffba5f3a84b5d0e210e1f75d651b6545bece8c17",
+      "id": "7285d0d267e1ec0582996ce789a155f25ac27f5a514e333db0659dfd3f6393f8",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/a8df9b04df17305a0e4e67be0d54ae4c818b36c8",
-      "title": "Merge pull request #3524 from modelcontextprotocol/dependabot/npm_and…",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/a8df9b04df17305a0e4e67be0d54ae4c818b36c8",
-      "updated": "2026-11-09T17:21:01Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/283d8d6a10ca9c4de63bc3a8d798762dfed52e86",
+      "title": "fix(sep-automation): drop the proposal state and sponsor-hunt comment…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/283d8d6a10ca9c4de63bc3a8d798762dfed52e86",
+      "updated": "2026-11-11T01:54:50Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "bd5cf7067f97a1d5d0079d72b34b27de7b29c6012ee2f0ae82316f800e53c698",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/c1d7587934b7b8568c47ae86161c3c16d8b050ee",
-      "title": "Merge pull request #3523 from modelcontextprotocol/dependabot/github_…",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/c1d7587934b7b8568c47ae86161c3c16d8b050ee",
-      "updated": "2026-11-09T17:19:32Z",
+      "id": "78d5a05cd5b2c116f59914c73123757666232b1ab5c20a1b83840e3d4c77063a",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/9466ba2c7e19ad6dea076ad9cf27a2eca6f11336",
+      "title": "Merge pull request #689 from xlang-ai/release/desktop-env-1.0.3-publish",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/9466ba2c7e19ad6dea076ad9cf27a2eca6f11336",
+      "updated": "2026-11-10T17:13:17Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "b70faf611bceeddb0528220dff883887cbec7e637e9f91b2b4ec959e98b545a4",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/394567887feccae8b3e27c7c84106edb5fbac116",
-      "title": "Merge pull request #3441 from sarahnovotny/pr-3363-rebase",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/394567887feccae8b3e27c7c84106edb5fbac116",
-      "updated": "2026-11-09T13:28:26Z",
+      "id": "7d25bb806aadf4ede730538619b9c4476bd9f8fdb2af55f837f2df5dc8ceb2d9",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/4e536c17bd1be096925e60346baa10eb261ba9c1",
+      "title": "ci: stage verified desktop-env 1.0.3 publication",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/4e536c17bd1be096925e60346baa10eb261ba9c1",
+      "updated": "2026-11-10T17:12:38Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "2eace4029a741ef9cc047bf1361a7b4ccf3f002ec5626c68b45bb3ed39be09bc",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/7827b68705e7fcaa024fc76ebfddc027cc37227d",
-      "title": "docs(community): reconcile when a sponsor appears in the SEP process",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/7827b68705e7fcaa024fc76ebfddc027cc37227d",
-      "updated": "2026-11-09T09:31:44Z",
+      "id": "bc15be9f2ae9e87fa37f9624ad25a286cd5779043bb1856b9ecf9810dd9eb673",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/9d6f711d234b84cbff1b5199211610baa03b000c",
+      "title": "Merge pull request #688 from xlang-ai/prep/desktop-env-1.0.3",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/9d6f711d234b84cbff1b5199211610baa03b000c",
+      "updated": "2026-11-10T16:37:46Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "20fee02e816b562f85282a8cd1e184ec80d3add80e8a99a3c3896fb899cf929f",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/9ee7e0918d4e75fe594712da48e479524579260f",
-      "title": "docs(community): address the review of the community docs restructure",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/9ee7e0918d4e75fe594712da48e479524579260f",
-      "updated": "2026-11-09T08:39:50Z",
+      "id": "b3fde6d7da17c561a292fddb675d193551f409f5ffac41041cc4606d405452f4",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/8093cdab4816ac563df68fc1162b5066415ba51f",
+      "title": "ci: retain verified desktop-env release artifacts from main",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/8093cdab4816ac563df68fc1162b5066415ba51f",
+      "updated": "2026-11-10T16:36:18Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "5705d2825455233a700816da75296f7658c853b7874efcf7f6293edbd4961a73",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/d3bcb0d593f486ea689bd615ec88e362c2862bb0",
-      "title": "Merge main into the community docs restructure",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/d3bcb0d593f486ea689bd615ec88e362c2862bb0",
-      "updated": "2026-11-09T08:34:45Z",
+      "id": "c5bcc55de0b2f06760c1242c313f0e2c0d90c05e9a8dc0055d474b137adbe6de",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/89548c49649cfe6e07b887994123c6b8afd60064",
+      "title": "fix(packaging): validate trusted suites before submission checks",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/89548c49649cfe6e07b887994123c6b8afd60064",
+      "updated": "2026-11-10T15:38:34Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "b2b7cae2d4ff0aab834f027f694e66c3cda0bc3571ab5c2f772d49360862f286",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/329a210d877cd582b7215828715103cc068a43ab",
-      "title": "Merge pull request #2 from modelcontextprotocol/localden/contributing…",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/329a210d877cd582b7215828715103cc068a43ab",
-      "updated": "2026-11-09T08:25:48Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "eb932bba90e165fa35ad8e9a558f1e4d225213198c59ee3c8e648b7f94c83ad4",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/ef79bc742bfad34bd69fcb03203661a069eb551e",
-      "title": "build(deps-dev): bump eslint from 10.13.0 to 10.14.0",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/ef79bc742bfad34bd69fcb03203661a069eb551e",
-      "updated": "2026-11-09T08:09:27Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "e8496d6898c87d630931d70d1a6f682f7cbe1efe38074447692a39c7d212517d",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/be9b25a6dc78b3801eedd9908f95f6d8bdd676e3",
-      "title": "build(deps-dev): bump glob from 14.0.3 to 14.0.4",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/be9b25a6dc78b3801eedd9908f95f6d8bdd676e3",
-      "updated": "2026-11-09T08:09:19Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "e0b9c135da87169a0af6f253bc83354dff4652848e9e9ef84d452d45ad7f3b47",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/bec8a19bdb10463773aa27533ba40285a7c6e5e0",
-      "title": "build(deps): bump actions/github-script from 8.0.0 to 9.0.0",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/bec8a19bdb10463773aa27533ba40285a7c6e5e0",
-      "updated": "2026-11-09T08:08:54Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "bb4f556f84f36bc3446c39a9d2dc66b55a8816878d016aa16389ba38231c7381",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/10897920871fbd92772cd4a06d314e1bc4395e4c",
-      "title": "Update docs/community/contributing.mdx",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/10897920871fbd92772cd4a06d314e1bc4395e4c",
-      "updated": "2026-11-08T04:57:37Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "62212b235338b5f7fdec9dd5dc0d0f4e763081af3aa57b4b9b89285389d21b5b",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/befb7fd376cf2b5773bd5dc696b0530ed9ede63f",
-      "title": "Update docs/community/contributing.mdx",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/befb7fd376cf2b5773bd5dc696b0530ed9ede63f",
-      "updated": "2026-11-08T04:57:28Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "6539cd2b5a61e2bfb74b4fb7c23e16f0301239011626405c148018527565346e",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/5e49a92ff67f54b1e2c0decd4992137c202f0d86",
-      "title": "Update docs/community/contributing.mdx",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/5e49a92ff67f54b1e2c0decd4992137c202f0d86",
-      "updated": "2026-11-08T04:57:20Z",
+      "id": "3de905b2b2bd8cc4f41adddab19578ef32a741cda6e5b3662fc64cb4b5251e97",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/c3abecadf87d797d2fa1939d44a27f17fcad1822",
+      "title": "fix(packaging): isolate desktop-env builds and bundle trusted suites",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/c3abecadf87d797d2fa1939d44a27f17fcad1822",
+      "updated": "2026-11-09T14:19:50Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     }
@@ -167,7 +107,7 @@
     {
       "feed_id": "vllm",
       "status": "ok",
-      "new_count": 1
+      "new_count": 0
     },
     {
       "feed_id": "sglang",
@@ -177,7 +117,7 @@
     {
       "feed_id": "mcp",
       "status": "ok",
-      "new_count": 14
+      "new_count": 3
     },
     {
       "feed_id": "skills",
@@ -202,7 +142,7 @@
     {
       "feed_id": "osworld",
       "status": "ok",
-      "new_count": 0
+      "new_count": 6
     },
     {
       "feed_id": "bench-lm-eval",
