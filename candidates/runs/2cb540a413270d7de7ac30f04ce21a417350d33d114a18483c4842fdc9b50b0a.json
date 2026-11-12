@@ -1,0 +1,148 @@
+{
+  "checked_at": "2026-11-12T13:26:27.449350+08:00",
+  "status": "changed",
+  "candidates": [
+    {
+      "id": "e756312ab471e706003d06635662e83d846e4341d149df692438f7b9e0cdc16a",
+      "feed_id": "vllm",
+      "entry_id": "tag:github.com,2008:Repository/599547518/v0.34.0rc1",
+      "title": "v0.34.0rc1",
+      "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0rc1",
+      "updated": "2026-11-11T19:37:13Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "7f7298b88bdf7c39e409347d7cfb0f231c53fa78bc15f0576ae2fbfe26d5b7e2",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/0b22bfed6e94c0c7751046d2e845fac954cac8a7",
+      "title": "docs(community): fix dead links and anchors in community pages (#3532)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/0b22bfed6e94c0c7751046d2e845fac954cac8a7",
+      "updated": "2026-11-11T19:28:49Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "2f718291c6eccf9927eec839c0cd8db3d0cd69ae9229c8d6f1bf1252991b7081",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/9a67316897f90f97bcd2ee939ca8e7e1532a27d3",
+      "title": "docs(blog): announce the MCP release cycle (#3541)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/9a67316897f90f97bcd2ee939ca8e7e1532a27d3",
+      "updated": "2026-11-11T19:27:17Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "28269decfae0ef9fa90b9cab930b29b3022d4a8d246cb11bd33a870d8025315b",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/751ea06c2310978c85c1bcef7f6e22f9dbf4e2c9",
+      "title": "fix(blog): keep code blocks dark in the light theme (#3542)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/751ea06c2310978c85c1bcef7f6e22f9dbf4e2c9",
+      "updated": "2026-11-11T19:24:50Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "8bc71b38d8fb4c24fe3ea5973d5fdd20feddfcd2f58ca2f135c60e692e3f43c1",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/ddbbf0f8ab3038a3406844e9ee063644eae57cc3",
+      "title": "docs(community): add working groups overview page (#3513)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/ddbbf0f8ab3038a3406844e9ee063644eae57cc3",
+      "updated": "2026-11-11T15:50:10Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "9a34bafee12793af231d6a3e0e3a8b390023ad566334cbb0a30c70b590870772",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/a40b29a92906d43f2ffaff8c9ba8217b5e5a68d4",
+      "title": "docs: mark MCP Inspector Apps support as partial (#3540)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/a40b29a92906d43f2ffaff8c9ba8217b5e5a68d4",
+      "updated": "2026-11-11T15:17:30Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "35da17b74df327c87fadbfc686fd926d2144d4ce1796d46f566656b8fea7ec39",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/5324218639be4a6c696902d70f98f225326bbe4b",
+      "title": "docs(blog): add post on the file uploads and downloads extension (#3515)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/5324218639be4a6c696902d70f98f225326bbe4b",
+      "updated": "2026-11-11T10:59:59Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    }
+  ],
+  "feeds": [
+    {
+      "feed_id": "transformers",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "trl",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "vllm",
+      "status": "ok",
+      "new_count": 1
+    },
+    {
+      "feed_id": "sglang",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "mcp",
+      "status": "ok",
+      "new_count": 6
+    },
+    {
+      "feed_id": "skills",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "graphrag",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "lightrag",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "swebench",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "osworld",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-lm-eval",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-opencompass",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-mlperf",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-agentdojo",
+      "status": "ok",
+      "new_count": 0
+    }
+  ]
+}

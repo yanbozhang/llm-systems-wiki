@@ -1,9 +1,9 @@
 {
-  "date": "2026-11-11",
-  "module": "inference",
-  "topic": "inference-frameworks",
+  "date": "2026-11-12",
+  "module": "harness",
+  "topic": "tools-skills",
   "reason": "七模块轮换；模块内按登记顺序持续推进",
   "review_due": false,
-  "learning_objective": "写出可重复性能协议",
-  "deliverable": "填写一份性能评测协议，先做输出正确性和停止条件检查，再安排warm-up及稳态采样。保存逐请求结果，区分请求失败、生成截断和超时；不把失败请求从分母悄悄删除。"
+  "learning_objective": "区分工具Schema与任务方法",
+  "deliverable": "为一个只读查询工具写输入、输出和错误表，再为一个模拟写工具加幂等键与回读接口。对缺字段、错误类型、语义歧义、超时和重复请求分别指定宿主动作。"
 }
