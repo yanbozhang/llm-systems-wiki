@@ -1,0 +1,328 @@
+{
+  "checked_at": "2026-11-13T12:42:29.476020+08:00",
+  "status": "changed",
+  "candidates": [
+    {
+      "id": "281c9ac0e5c811230da2a646ad7e587fd6d077136ed87696a4554d0e3f15c1bf",
+      "feed_id": "vllm",
+      "entry_id": "tag:github.com,2008:Repository/599547518/v0.34.0rc2",
+      "title": "v0.34.0rc2",
+      "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0rc2",
+      "updated": "2026-11-12T06:21:02Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "a6c425ea2cd23b46076761a226044d0fb10da0873a62ea8b0c500ad9b8f1ae3d",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/06e923405df3df242f1471b9300d9db90ebd10fd",
+      "title": "docs: pull registry docs from v1.8.9 (#3480)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/06e923405df3df242f1471b9300d9db90ebd10fd",
+      "updated": "2026-11-12T13:28:21Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "51db44241d33634cd57a0c47fc090bf361b23383db8e0cbbe8d534a8b3ad6d8a",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/99a8e4605c4278b6f905c98e585f98b393b15623",
+      "title": "docs: working-group sponsored SEP process (#3529)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/99a8e4605c4278b6f905c98e585f98b393b15623",
+      "updated": "2026-11-12T12:37:38Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "a8e81e6da2da6983ae18b906e876b0a71597e3c45b76b19b5f17794378ca292e",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/d72c778b468f82b2c6431e5d64f7524c4ad01374",
+      "title": "docs(community): list Core Primitives WG on working groups overview (…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/d72c778b468f82b2c6431e5d64f7524c4ad01374",
+      "updated": "2026-11-12T12:32:45Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "922d00e8ffa18f5b18cede46ec6cb898f8ab18d21fae46f74ca22e27f7314d3c",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/2eb3a8e345aaee53461a3c5c5f6900659d3ecb27",
+      "title": "docs(seps): fix dead link targets in SEP documents (#3547)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/2eb3a8e345aaee53461a3c5c5f6900659d3ecb27",
+      "updated": "2026-11-12T12:31:12Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "500889938b15171272bf787ac48895c21254a2a94766d78e7a089c5d5dab9db8",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/5123bfdbbc34b947bcffcff564abc62d0ab7072d",
+      "title": "Merge pull request #709 from xlang-ai/fix/arxiv-official-source-697",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/5123bfdbbc34b947bcffcff564abc62d0ab7072d",
+      "updated": "2026-11-12T16:40:37Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "e6be4f325c98254d70996cef42679cd90c0199cba3666fca63415c588cd8d389",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/c805e0ecc287777893bbc522e22b9f4a05e02581",
+      "title": "Merge pull request #708 from xlang-ai/fix/preserved-apple-searching-700",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/c805e0ecc287777893bbc522e22b9f4a05e02581",
+      "updated": "2026-11-12T16:36:56Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "d6be8d518d99e46617ae93e5cfcea6a5048ede5a6b03e7f57753df7a23a64139",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/0e9bb970b6cfd5eb2a177f508e06b133f9aa36e9",
+      "title": "Merge pull request #707 from xlang-ai/fix/video-reference-timestamps-696",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/0e9bb970b6cfd5eb2a177f508e06b133f9aa36e9",
+      "updated": "2026-11-12T16:33:17Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "c9913b84ccca0de3f850dd4edfb45f5f191171499a457678c5616c7d0437c713",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/ba277c04a151659a5af0298f4f3700ecf0f60095",
+      "title": "Clarify the original v1 PDF URL format required by the example row",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/ba277c04a151659a5af0298f4f3700ecf0f60095",
+      "updated": "2026-11-12T16:30:02Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "a98b1f68209232867d591ce446d4c24d855b066af895a92e01e7b6db017c3164",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/3082e69575d99940d182ab1680fe23d73d30be09",
+      "title": "fix(tasks): recover missing model papers from the official arXiv archive",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/3082e69575d99940d182ab1680fe23d73d30be09",
+      "updated": "2026-11-12T16:28:19Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "dcbdeccaca0f8aa1e3e8ec948762d9410213b2d0d3129284b52ac62ed440a132",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/aa6124d7a9db3076f49199b77ddc9530124abe9f",
+      "title": "fix(tasks): preserve Searching source content with its original refer…",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/aa6124d7a9db3076f49199b77ddc9530124abe9f",
+      "updated": "2026-11-12T16:26:35Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "61d82d281878235bb87b83a795dd925c102009106d51ef7321e5b312cae1b019",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/087b6dff457d05e80b5086ce767eafba8e812a99",
+      "title": "fix(evaluators): align video references and score full GIF timelines",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/087b6dff457d05e80b5086ce767eafba8e812a99",
+      "updated": "2026-11-12T16:20:32Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "9f9d8fb1c02783d6588ef813e5a27c40a985cd1a66b1865e7aa979aae1b58592",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/33c5c0b3e8d3545bdb9a535784f6f8056f327958",
+      "title": "Merge pull request #704 from linussorg/fix/vlc-snapshot-frame-window",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/33c5c0b3e8d3545bdb9a535784f6f8056f327958",
+      "updated": "2026-11-12T16:03:56Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "c596a65f54fcc8b9a1a7d48cfef4ce4024b85cf5579c22e11818ca51dc77bf36",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/4b18263eb1777b76c4c2360bd7a9b63118cf1165",
+      "title": "Merge pull request #706 from xlang-ai/fix/active-tab-exact-match-prec…",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/4b18263eb1777b76c4c2360bd7a9b63118cf1165",
+      "updated": "2026-11-12T15:29:05Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "5f6f2b748e335a8fba65ae23a4cc390962e344eb180cff86c6abfeb64e9ec831",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/26747e2074fe39289d349b2ce70bbf45046d3e19",
+      "title": "Merge pull request #705 from xlang-ai/fix/pptx-split-run-boundaries",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/26747e2074fe39289d349b2ce70bbf45046d3e19",
+      "updated": "2026-11-12T15:28:52Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "d5cc6ee3e92f2c3e4e8506c1a1683e66277859feadc2eae466d1d008e04b721b",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/dcc0f9081e27a28be741969f473890b4cb879fb0",
+      "title": "Merge pull request #703 from linussorg/fix/scholar-scrape-failure-is-…",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/dcc0f9081e27a28be741969f473890b4cb879fb0",
+      "updated": "2026-11-12T15:21:32Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "bc4284e4ce05a408409320c36f561f27b2283d4ffb03d67a52067feac334b7e6",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/1e744b7c5be4c2ba8dc82bf2bea41c6c0361f0ce",
+      "title": "Merge pull request #692 from linussorg/fix/185f29bd-pdf-form-rules-fr…",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/1e744b7c5be4c2ba8dc82bf2bea41c6c0361f0ce",
+      "updated": "2026-11-12T15:21:19Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "15b75ec1d4f0bb31f49f6d84ef05159014731f041b58bb35b722cf61a8899469",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/1bffd22128a811a04e24d55358a9e45982a4414e",
+      "title": "Merge pull request #694 from linussorg/fix/thunderbird-08c73485-strin…",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/1bffd22128a811a04e24d55358a9e45982a4414e",
+      "updated": "2026-11-12T15:19:01Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "66b904bd7817f6894131f4d72a6c47f24804deb0a3f41a81a463745fe5ce0803",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/fbb8d31c56d708827e383df848da133b06151e53",
+      "title": "Merge pull request #693 from linussorg/fix/tripadvisor-b7895e80-class…",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/fbb8d31c56d708827e383df848da133b06151e53",
+      "updated": "2026-11-12T15:18:25Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "920daaec4693886a448b787da54ae17333af24fc6c313ddffb545f2d07d19c54",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/2939435c315f3a2a639dddec17845672d3309a1d",
+      "title": "fix(chrome): prefer exact active-tab URLs and reject ambiguous aliases",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/2939435c315f3a2a639dddec17845672d3309a1d",
+      "updated": "2026-11-12T15:16:49Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "e86998d02b3541d25346b06f33589a57cc23aeaa9277fb3db6e88dd967def10c",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/7a1261765af57246a9bf4d4e5f5620a74c609271",
+      "title": "fix(slides): preserve formatting span boundaries when coalescing runs",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/7a1261765af57246a9bf4d4e5f5620a74c609271",
+      "updated": "2026-11-12T15:16:40Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "a7380700613ea144d657617b8a23577d747e6a5b4d0e2855c25655c2b389834d",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/31c29c42bdbcfc55ec15c15ea566eb99b447af9b",
+      "title": "Merge pull request #695 from linussorg/fix/e1e75309-gold-pdf-print-op…",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/31c29c42bdbcfc55ec15c15ea566eb99b447af9b",
+      "updated": "2026-11-12T15:15:50Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "bf944da2051a5f70576458b20283160c06dd009f47f472813e3e2ee28dc8a3c8",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/4da8ddd7f0f81e02113a68fde20a69b10ed6dfa3",
+      "title": "Merge pull request #690 from linussorg/fix/delta-fc6d8143-results-sel…",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/4da8ddd7f0f81e02113a68fde20a69b10ed6dfa3",
+      "updated": "2026-11-12T15:15:06Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "6d13c71bc64e4e179edc589b8e69108f77eabcfe2c05d3e479bd0ef3acaa3438",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/208c7904febd9eaac2b2cd9c834d02a3e03e41cd",
+      "title": "fix(vlc): score fba2c100 and efcf0d81 snapshots against the frames VL…",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/208c7904febd9eaac2b2cd9c834d02a3e03e41cd",
+      "updated": "2026-11-11T20:41:57Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "12f26ceb09a7504b1565431ce99e1ada360ef157da2ed8ebfd71693ee9a08f12",
+      "feed_id": "osworld",
+      "entry_id": "tag:github.com,2008:Grit::Commit/b86eb1a348e65b2a0d969241cdf0e6d97249b98a",
+      "title": "fix(chrome): leave 5990457f unscored when Google Scholar cannot be read",
+      "url": "https://github.com/xlang-ai/OSWorld/commit/b86eb1a348e65b2a0d969241cdf0e6d97249b98a",
+      "updated": "2026-11-11T20:11:11Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    }
+  ],
+  "feeds": [
+    {
+      "feed_id": "transformers",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "trl",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "vllm",
+      "status": "ok",
+      "new_count": 1
+    },
+    {
+      "feed_id": "sglang",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "mcp",
+      "status": "ok",
+      "new_count": 4
+    },
+    {
+      "feed_id": "skills",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "graphrag",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "lightrag",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "swebench",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "osworld",
+      "status": "ok",
+      "new_count": 20
+    },
+    {
+      "feed_id": "bench-lm-eval",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-opencompass",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-mlperf",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-agentdojo",
+      "status": "ok",
+      "new_count": 0
+    }
+  ]
+}

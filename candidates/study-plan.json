@@ -1,9 +1,9 @@
 {
-  "date": "2026-11-12",
-  "module": "harness",
-  "topic": "tools-skills",
+  "date": "2026-11-13",
+  "module": "knowledge",
+  "topic": "graph-wiki",
   "reason": "七模块轮换；模块内按登记顺序持续推进",
   "review_due": false,
-  "learning_objective": "区分工具Schema与任务方法",
-  "deliverable": "为一个只读查询工具写输入、输出和错误表，再为一个模拟写工具加幂等键与回读接口。对缺字段、错误类型、语义歧义、超时和重复请求分别指定宿主动作。"
+  "learning_objective": "区分编纂与检索",
+  "deliverable": "选一条来源变更，画出“来源→声明→主题→能力目标→练习”的影响链。分别标记正式先修和普通关联，检查是否出现不合理的先修循环。"
 }
