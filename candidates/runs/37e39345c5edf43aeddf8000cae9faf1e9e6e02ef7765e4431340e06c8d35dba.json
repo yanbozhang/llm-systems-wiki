@@ -1,0 +1,128 @@
+{
+  "checked_at": "2026-11-14T12:37:34.532833+08:00",
+  "status": "changed",
+  "candidates": [
+    {
+      "id": "4bb447516e2aec34621d1b7c5b4d21ce84af9c38edf73c60aa2b54914c2a60ad",
+      "feed_id": "transformers",
+      "entry_id": "tag:github.com,2008:Repository/155220641/v5.23.0",
+      "title": "Release v5.23.0",
+      "url": "https://github.com/huggingface/transformers/releases/tag/v5.23.0",
+      "updated": "2026-11-13T14:10:57Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "42ff4c20914cedb1ea2d8d2038e07635e85cd0bee40ada88961e09c423f7bf09",
+      "feed_id": "trl",
+      "entry_id": "tag:github.com,2008:Repository/250510075/v1.18.0",
+      "title": "v1.18.0",
+      "url": "https://github.com/huggingface/trl/releases/tag/v1.18.0",
+      "updated": "2026-11-13T15:37:19Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "a201f14e5fbaba4da30365fe1cd300f54f9b4b7c6e64d67db379ad805f6291b7",
+      "feed_id": "vllm",
+      "entry_id": "tag:github.com,2008:Repository/599547518/v0.34.0rc3",
+      "title": "v0.34.0rc3",
+      "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0rc3",
+      "updated": "2026-11-13T22:52:29Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "ba4f869e2b84e5f994d14301fd3cc357e84eb71949ebfe516320e6f727bf74cc",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/0175d20f8b2c49e0402c37c37ed39ae2be47277e",
+      "title": "ci: build and validate website content (#3509)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/0175d20f8b2c49e0402c37c37ed39ae2be47277e",
+      "updated": "2026-11-14T00:02:45Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "58b9f2ba75a02ee61a70bcea81ddd50d3ec7fc0b535121c2cc2678ebfaca05f8",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/122e27e869b71a7947661b60c1cb10dc512346fa",
+      "title": "docs: add EU Cyber Resilience Act stewardship guidance (#3526)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/122e27e869b71a7947661b60c1cb10dc512346fa",
+      "updated": "2026-11-13T23:58:26Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    }
+  ],
+  "feeds": [
+    {
+      "feed_id": "transformers",
+      "status": "ok",
+      "new_count": 1
+    },
+    {
+      "feed_id": "trl",
+      "status": "ok",
+      "new_count": 1
+    },
+    {
+      "feed_id": "vllm",
+      "status": "ok",
+      "new_count": 1
+    },
+    {
+      "feed_id": "sglang",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "mcp",
+      "status": "ok",
+      "new_count": 2
+    },
+    {
+      "feed_id": "skills",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "graphrag",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "lightrag",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "swebench",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "osworld",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-lm-eval",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-opencompass",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-mlperf",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-agentdojo",
+      "status": "ok",
+      "new_count": 0
+    }
+  ]
+}

@@ -1,9 +1,9 @@
 {
-  "date": "2026-11-13",
-  "module": "knowledge",
-  "topic": "graph-wiki",
+  "date": "2026-11-14",
+  "module": "agents",
+  "topic": "agent-evaluation",
   "reason": "七模块轮换；模块内按登记顺序持续推进",
   "review_due": false,
-  "learning_objective": "区分编纂与检索",
-  "deliverable": "选一条来源变更，画出“来源→声明→主题→能力目标→练习”的影响链。分别标记正式先修和普通关联，检查是否出现不合理的先修循环。"
+  "learning_objective": "建立分层评测",
+  "deliverable": "为五个模拟任务填写结果表，至少包含一次结果未知和一次评估器误判。然后设计怎样复核假阳性、怎样保留重试历史及怎样比较两版Harness。"
 }
