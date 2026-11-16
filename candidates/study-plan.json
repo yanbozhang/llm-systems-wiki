@@ -1,9 +1,9 @@
 {
-  "date": "2026-11-15",
-  "module": "benchmark",
-  "topic": "benchmark-general",
+  "date": "2026-11-16",
+  "module": "network",
+  "topic": "transformer",
   "reason": "七模块轮换；模块内按登记顺序持续推进",
-  "review_due": true,
-  "learning_objective": "能从对数似然构造选择题预测，解释长度归一化可能改变排序。",
-  "deliverable": "为两个长度不同的候选手算原始与归一化排序，并分别记录字符和token口径。对混合四选一/十选一题集计算随机基线。准备正常答案、无标记答案、越界字母和矛盾答案四类输出，检查解析状态；最后比较严格计错与随机回退的理论期望，解释为什么不能只报告较高分。"
+  "review_due": false,
+  "learning_objective": "推导缩放方差与因果mask",
+  "deliverable": "三token双头计算表与两步采样重放记录"
 }

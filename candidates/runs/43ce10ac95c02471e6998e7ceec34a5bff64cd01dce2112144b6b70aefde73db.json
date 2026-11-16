@@ -1,0 +1,118 @@
+{
+  "checked_at": "2026-11-16T12:24:22.007013+08:00",
+  "status": "changed",
+  "candidates": [
+    {
+      "id": "b276c22aec8f17af2166042b62c9129294b769697aa622c87aef1da859fc7053",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/ac00313ff7f5e9f47b0e0d1ebdf9c0ad6411380b",
+      "title": "docs: correct 2026-07-28 and draft content (#3516)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/ac00313ff7f5e9f47b0e0d1ebdf9c0ad6411380b",
+      "updated": "2026-11-16T04:15:09Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "c10e0e4f59124ac7a56c8b9ff6d1def7f9e1ba36843e3210c2ee1df0ba3dd419",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/2be673cfa63064b243a6016588411343c0f9fdee",
+      "title": "feat(blog): draw a share card for every post (#3553)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/2be673cfa63064b243a6016588411343c0f9fdee",
+      "updated": "2026-11-15T21:39:00Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "86e652075350d329be21cba457896bc8a073222eaada52d4087cef902a93016a",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/4414a49c82d7fcc5f2a2ed9ddfc76139a09c1789",
+      "title": "feat(blog): open search in a dialog and even out the header buttons (…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/4414a49c82d7fcc5f2a2ed9ddfc76139a09c1789",
+      "updated": "2026-11-15T19:26:14Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "5c2b20d592406244a5f33d125242bb9833ae06ef208e0022cb5c52cb7ca4d91c",
+      "feed_id": "lightrag",
+      "entry_id": "tag:github.com,2008:Repository/866513204/v1.5.8rc1",
+      "title": "v1.5.8rc1",
+      "url": "https://github.com/HKUDS/LightRAG/releases/tag/v1.5.8rc1",
+      "updated": "2026-11-15T13:03:37Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    }
+  ],
+  "feeds": [
+    {
+      "feed_id": "transformers",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "trl",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "vllm",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "sglang",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "mcp",
+      "status": "ok",
+      "new_count": 3
+    },
+    {
+      "feed_id": "skills",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "graphrag",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "lightrag",
+      "status": "ok",
+      "new_count": 1
+    },
+    {
+      "feed_id": "swebench",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "osworld",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-lm-eval",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-opencompass",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-mlperf",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-agentdojo",
+      "status": "ok",
+      "new_count": 0
+    }
+  ]
+}
