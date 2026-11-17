@@ -1,44 +1,34 @@
 {
-  "checked_at": "2026-11-16T12:24:22.007013+08:00",
+  "checked_at": "2026-11-17T14:08:49.200604+08:00",
   "status": "changed",
   "candidates": [
     {
-      "id": "b276c22aec8f17af2166042b62c9129294b769697aa622c87aef1da859fc7053",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/ac00313ff7f5e9f47b0e0d1ebdf9c0ad6411380b",
-      "title": "docs: correct 2026-07-28 and draft content (#3516)",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/ac00313ff7f5e9f47b0e0d1ebdf9c0ad6411380b",
-      "updated": "2026-11-16T04:15:09Z",
+      "id": "95b7047b440d1f30ecb51fd10f84e15cf7f6bf7b66335aeef22b2904ee2902e9",
+      "feed_id": "vllm",
+      "entry_id": "tag:github.com,2008:Repository/599547518/v0.34.0",
+      "title": "v0.34.0",
+      "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0",
+      "updated": "2026-11-16T23:50:15Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "c10e0e4f59124ac7a56c8b9ff6d1def7f9e1ba36843e3210c2ee1df0ba3dd419",
+      "id": "0a07e883d43c66d6ed8841a451e8cc85abc5c2772982ac7c798a823128b84f11",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/2be673cfa63064b243a6016588411343c0f9fdee",
-      "title": "feat(blog): draw a share card for every post (#3553)",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/2be673cfa63064b243a6016588411343c0f9fdee",
-      "updated": "2026-11-15T21:39:00Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/05aeb07b2db0c02adc4813a7c09f208ca8774152",
+      "title": "feat(blog): add a quote block for person quotes (#3563)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/05aeb07b2db0c02adc4813a7c09f208ca8774152",
+      "updated": "2026-11-17T01:20:41Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "86e652075350d329be21cba457896bc8a073222eaada52d4087cef902a93016a",
+      "id": "1eaa6d90407442bab6014d44abad8381da2dfb4927454cbde4fea3a1784a53b0",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/4414a49c82d7fcc5f2a2ed9ddfc76139a09c1789",
-      "title": "feat(blog): open search in a dialog and even out the header buttons (…",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/4414a49c82d7fcc5f2a2ed9ddfc76139a09c1789",
-      "updated": "2026-11-15T19:26:14Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "5c2b20d592406244a5f33d125242bb9833ae06ef208e0022cb5c52cb7ca4d91c",
-      "feed_id": "lightrag",
-      "entry_id": "tag:github.com,2008:Repository/866513204/v1.5.8rc1",
-      "title": "v1.5.8rc1",
-      "url": "https://github.com/HKUDS/LightRAG/releases/tag/v1.5.8rc1",
-      "updated": "2026-11-15T13:03:37Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/de3550c9fea3c5269e42ac95204eef44a2b2cb92",
+      "title": "docs: stop presenting deprecated features as current on the spec over…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/de3550c9fea3c5269e42ac95204eef44a2b2cb92",
+      "updated": "2026-11-16T17:32:45Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     }
@@ -57,7 +47,7 @@
     {
       "feed_id": "vllm",
       "status": "ok",
-      "new_count": 0
+      "new_count": 1
     },
     {
       "feed_id": "sglang",
@@ -67,7 +57,7 @@
     {
       "feed_id": "mcp",
       "status": "ok",
-      "new_count": 3
+      "new_count": 2
     },
     {
       "feed_id": "skills",
@@ -82,7 +72,7 @@
     {
       "feed_id": "lightrag",
       "status": "ok",
-      "new_count": 1
+      "new_count": 0
     },
     {
       "feed_id": "swebench",

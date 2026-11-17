@@ -1,9 +1,9 @@
 {
-  "date": "2026-11-16",
-  "module": "network",
-  "topic": "transformer",
+  "date": "2026-11-17",
+  "module": "training",
+  "topic": "pretraining",
   "reason": "七模块轮换；模块内按登记顺序持续推进",
   "review_due": false,
-  "learning_objective": "推导缩放方差与因果mask",
-  "deliverable": "三token双头计算表与两步采样重放记录"
+  "learning_objective": "定位目标错位和mask",
+  "deliverable": "标签位置表、有效token损失表和重复候选清单"
 }
