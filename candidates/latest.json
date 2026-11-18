@@ -1,34 +1,34 @@
 {
-  "checked_at": "2026-11-17T14:08:49.200604+08:00",
+  "checked_at": "2026-11-18T13:37:42.864591+08:00",
   "status": "changed",
   "candidates": [
     {
-      "id": "95b7047b440d1f30ecb51fd10f84e15cf7f6bf7b66335aeef22b2904ee2902e9",
-      "feed_id": "vllm",
-      "entry_id": "tag:github.com,2008:Repository/599547518/v0.34.0",
-      "title": "v0.34.0",
-      "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0",
-      "updated": "2026-11-16T23:50:15Z",
+      "id": "855124a4f557db445395a515dc5876b0ec0c7d334a93ed75ec8aaa0a17b9c32e",
+      "feed_id": "trl",
+      "entry_id": "tag:github.com,2008:Repository/250510075/v1.18.1",
+      "title": "v1.18.1",
+      "url": "https://github.com/huggingface/trl/releases/tag/v1.18.1",
+      "updated": "2026-11-17T12:21:07Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "0a07e883d43c66d6ed8841a451e8cc85abc5c2772982ac7c798a823128b84f11",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/05aeb07b2db0c02adc4813a7c09f208ca8774152",
-      "title": "feat(blog): add a quote block for person quotes (#3563)",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/05aeb07b2db0c02adc4813a7c09f208ca8774152",
-      "updated": "2026-11-17T01:20:41Z",
+      "id": "7dc68a1883cb4893f3c5cfee688701881504aa7219a368072ca063a7bc396de1",
+      "feed_id": "sglang",
+      "entry_id": "tag:github.com,2008:Repository/740303686/router-v0.1.0",
+      "title": "router-v0.1.0",
+      "url": "https://github.com/sgl-project/sglang/releases/tag/router-v0.1.0",
+      "updated": "2026-11-18T00:34:15Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "1eaa6d90407442bab6014d44abad8381da2dfb4927454cbde4fea3a1784a53b0",
+      "id": "625a2b61d747124bc965f1943885376d369a5c68eaf80d4c64b063ce61a16cf8",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/de3550c9fea3c5269e42ac95204eef44a2b2cb92",
-      "title": "docs: stop presenting deprecated features as current on the spec over…",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/de3550c9fea3c5269e42ac95204eef44a2b2cb92",
-      "updated": "2026-11-16T17:32:45Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/d4b317231161ee96d3eefb2448bda4230c76f4c6",
+      "title": "docs: align the extensions overview with SEP-3392 (#3565)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/d4b317231161ee96d3eefb2448bda4230c76f4c6",
+      "updated": "2026-11-17T17:06:53Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     }
@@ -42,22 +42,22 @@
     {
       "feed_id": "trl",
       "status": "ok",
-      "new_count": 0
+      "new_count": 1
     },
     {
       "feed_id": "vllm",
       "status": "ok",
-      "new_count": 1
+      "new_count": 0
     },
     {
       "feed_id": "sglang",
       "status": "ok",
-      "new_count": 0
+      "new_count": 1
     },
     {
       "feed_id": "mcp",
       "status": "ok",
-      "new_count": 2
+      "new_count": 1
     },
     {
       "feed_id": "skills",
