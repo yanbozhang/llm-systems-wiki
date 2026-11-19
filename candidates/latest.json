@@ -1,34 +1,84 @@
 {
-  "checked_at": "2026-11-18T13:37:42.864591+08:00",
+  "checked_at": "2026-11-19T13:35:57.663614+08:00",
   "status": "changed",
   "candidates": [
     {
-      "id": "855124a4f557db445395a515dc5876b0ec0c7d334a93ed75ec8aaa0a17b9c32e",
-      "feed_id": "trl",
-      "entry_id": "tag:github.com,2008:Repository/250510075/v1.18.1",
-      "title": "v1.18.1",
-      "url": "https://github.com/huggingface/trl/releases/tag/v1.18.1",
-      "updated": "2026-11-17T12:21:07Z",
+      "id": "c69f64b3715c83e633749ec250d193540536218f92223dea033217a86b79fe51",
+      "feed_id": "vllm",
+      "entry_id": "tag:github.com,2008:Repository/599547518/v0.34.0",
+      "title": "v0.34.0",
+      "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0",
+      "updated": "2026-11-18T21:02:33Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "7dc68a1883cb4893f3c5cfee688701881504aa7219a368072ca063a7bc396de1",
-      "feed_id": "sglang",
-      "entry_id": "tag:github.com,2008:Repository/740303686/router-v0.1.0",
-      "title": "router-v0.1.0",
-      "url": "https://github.com/sgl-project/sglang/releases/tag/router-v0.1.0",
-      "updated": "2026-11-18T00:34:15Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "625a2b61d747124bc965f1943885376d369a5c68eaf80d4c64b063ce61a16cf8",
+      "id": "8ea5c5e9dc6efb7a15274908dbe63d469deea8bca5a9c589e326817b289203b6",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/d4b317231161ee96d3eefb2448bda4230c76f4c6",
-      "title": "docs: align the extensions overview with SEP-3392 (#3565)",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/d4b317231161ee96d3eefb2448bda4230c76f4c6",
-      "updated": "2026-11-17T17:06:53Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/c5c0da721c2e08390dbe172a6ccffdb53348c2a4",
+      "title": "docs(inspector): add load testing and Active Sessions docs (#3503)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/c5c0da721c2e08390dbe172a6ccffdb53348c2a4",
+      "updated": "2026-11-18T20:28:59Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "4614cc1be13896dbb148f30b7f708fbb6b033b556730dd0b7b0388766f57ee2f",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/553d5cc4da7bb074c8e43471361632fb2b098282",
+      "title": "build(deps-dev): bump mint from 4.3.5 to 4.3.34 (#3561)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/553d5cc4da7bb074c8e43471361632fb2b098282",
+      "updated": "2026-11-18T19:31:17Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "8314b4c8e621d35b31557933573612d468bc5eb142e5776b9118769f87eb06a2",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/5c9593cb64824474020da83ecfbddbb09aea7fe2",
+      "title": "build(deps-dev): bump typescript-eslint from 8.72.1 to 8.72.2 (#3560)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/5c9593cb64824474020da83ecfbddbb09aea7fe2",
+      "updated": "2026-11-18T19:28:43Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "704581ff23bf46f381318ed199fbebf200c590a4b3260d876e20d1273177aab0",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/c511d9a4a56c7a90117eea959da412f2f0425bd6",
+      "title": "build(deps-dev): bump prettier from 3.9.10 to 3.10.1 (#3559)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/c511d9a4a56c7a90117eea959da412f2f0425bd6",
+      "updated": "2026-11-18T19:25:30Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "8fb04af36652095ab5466f92e606cb76fe20d7434d293862089c9d98ce3c667d",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/f34ae49d339832ae0a87b28891f7f250cda48697",
+      "title": "build(deps-dev): bump glob from 14.0.4 to 14.0.6 (#3558)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/f34ae49d339832ae0a87b28891f7f250cda48697",
+      "updated": "2026-11-18T19:06:30Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "32ad461a6208d817b0023f387d263b788df10aad661bec75d04da825c9c7bd6d",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/40bb4f23f6c51ce484f810658c8b53c0b38717de",
+      "title": "build(deps): bump peter-evans/create-pull-request from 8.1.1 to 8.1.3…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/40bb4f23f6c51ce484f810658c8b53c0b38717de",
+      "updated": "2026-11-18T19:02:32Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "11328e764e37c0554ab3ebec7d9779580b2ced33dd1c26fa187264bfe0ab2475",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/51735935c3b64787340bfbd23ec3e7292711f7fc",
+      "title": "docs: fix links, examples, and typos in the 2026-07-28 and draft docs…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/51735935c3b64787340bfbd23ec3e7292711f7fc",
+      "updated": "2026-11-18T18:56:30Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     }
@@ -42,22 +92,22 @@
     {
       "feed_id": "trl",
       "status": "ok",
-      "new_count": 1
+      "new_count": 0
     },
     {
       "feed_id": "vllm",
       "status": "ok",
-      "new_count": 0
+      "new_count": 1
     },
     {
       "feed_id": "sglang",
       "status": "ok",
-      "new_count": 1
+      "new_count": 0
     },
     {
       "feed_id": "mcp",
       "status": "ok",
-      "new_count": 1
+      "new_count": 7
     },
     {
       "feed_id": "skills",

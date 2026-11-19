@@ -1,9 +1,9 @@
 {
-  "date": "2026-11-18",
-  "module": "inference",
-  "topic": "prefill-decode",
+  "date": "2026-11-19",
+  "module": "harness",
+  "topic": "langgraph",
   "reason": "七模块轮换；模块内按登记顺序持续推进",
   "review_due": false,
-  "learning_objective": "分解请求时间线",
-  "deliverable": "画出两个请求的到达、首token和完成时间线，分别计算延迟与观测区间吞吐。设计长提示/短输出与短提示/长输出两类负载，不把它们平均成一个无法解释的数字。"
+  "learning_objective": "解释超步写入与状态归并",
+  "deliverable": "构造两个节点同时写total的超步，比较sum与last；为两个thread_id各写同序号pending记录并手算隔离结果。再设计含两个interrupt的节点，演示无答案、一个答案、两个答案的三次重跑，解释前置动作怎样避免重复影响。"
 }
