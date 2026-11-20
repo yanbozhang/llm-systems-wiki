@@ -1,0 +1,98 @@
+{
+  "checked_at": "2026-11-20T13:24:00.209613+08:00",
+  "status": "changed",
+  "candidates": [
+    {
+      "id": "140639bed88abf5016b4520c0a07798e2e5aba3674371c2e1a889e090b169931",
+      "feed_id": "trl",
+      "entry_id": "tag:github.com,2008:Repository/250510075/v1.18.2",
+      "title": "v1.18.2",
+      "url": "https://github.com/huggingface/trl/releases/tag/v1.18.2",
+      "updated": "2026-11-19T17:05:22Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "bfb1dc3a652b72f1ac7d6d7c160f80b121fed430a5679449a7f99d12967f044e",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/8a18b4b3292b9f9b3aee73f6325f9f62f19a89f9",
+      "title": "sep(SEP-3415): Events Extension (#3415)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/8a18b4b3292b9f9b3aee73f6325f9f62f19a89f9",
+      "updated": "2026-11-19T15:06:34Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    }
+  ],
+  "feeds": [
+    {
+      "feed_id": "transformers",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "trl",
+      "status": "ok",
+      "new_count": 1
+    },
+    {
+      "feed_id": "vllm",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "sglang",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "mcp",
+      "status": "ok",
+      "new_count": 1
+    },
+    {
+      "feed_id": "skills",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "graphrag",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "lightrag",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "swebench",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "osworld",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-lm-eval",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-opencompass",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-mlperf",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-agentdojo",
+      "status": "ok",
+      "new_count": 0
+    }
+  ]
+}

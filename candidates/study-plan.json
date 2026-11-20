@@ -1,9 +1,9 @@
 {
-  "date": "2026-11-19",
-  "module": "harness",
-  "topic": "langgraph",
+  "date": "2026-11-20",
+  "module": "knowledge",
+  "topic": "rag",
   "reason": "七模块轮换；模块内按登记顺序持续推进",
   "review_due": false,
-  "learning_objective": "解释超步写入与状态归并",
-  "deliverable": "构造两个节点同时写total的超步，比较sum与last；为两个thread_id各写同序号pending记录并手算隔离结果。再设计含两个interrupt的节点，演示无答案、一个答案、两个答案的三次重跑，解释前置动作怎样避免重复影响。"
+  "learning_objective": "拆分检索和回答误差",
+  "deliverable": "从自建小资料集设计12个问题：单源、多源、无答案、版本冲突各3个。先人工冻结相关证据和判据，再比较检索与回答，不让候选系统同时制定自己的标准答案。"
 }
