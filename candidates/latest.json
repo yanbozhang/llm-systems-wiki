@@ -1,24 +1,14 @@
 {
-  "checked_at": "2026-11-20T13:24:00.209613+08:00",
+  "checked_at": "2026-11-21T13:15:39.940269+08:00",
   "status": "changed",
   "candidates": [
     {
-      "id": "140639bed88abf5016b4520c0a07798e2e5aba3674371c2e1a889e090b169931",
-      "feed_id": "trl",
-      "entry_id": "tag:github.com,2008:Repository/250510075/v1.18.2",
-      "title": "v1.18.2",
-      "url": "https://github.com/huggingface/trl/releases/tag/v1.18.2",
-      "updated": "2026-11-19T17:05:22Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "bfb1dc3a652b72f1ac7d6d7c160f80b121fed430a5679449a7f99d12967f044e",
+      "id": "fd0e757b54fb26dfe259388f6f073c2ee0e073d7ffadcfa7626d48e0317eb437",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/8a18b4b3292b9f9b3aee73f6325f9f62f19a89f9",
-      "title": "sep(SEP-3415): Events Extension (#3415)",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/8a18b4b3292b9f9b3aee73f6325f9f62f19a89f9",
-      "updated": "2026-11-19T15:06:34Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/bbc31f8ded5762eae4df115b93942f5e71c8b3a7",
+      "title": "docs(SEP-3415): register the Events extension (#3568)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/bbc31f8ded5762eae4df115b93942f5e71c8b3a7",
+      "updated": "2026-11-20T10:50:43Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     }
@@ -32,7 +22,7 @@
     {
       "feed_id": "trl",
       "status": "ok",
-      "new_count": 1
+      "new_count": 0
     },
     {
       "feed_id": "vllm",
