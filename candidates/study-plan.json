@@ -1,9 +1,9 @@
 {
-  "date": "2026-10-24",
-  "module": "agents",
-  "topic": "task-loop",
+  "date": "2026-11-24",
+  "module": "training",
+  "topic": "sft",
   "reason": "七模块轮换；模块内按登记顺序持续推进",
   "review_due": false,
-  "learning_objective": "把用户目标转换成终态契约",
-  "deliverable": "为模拟资料整理任务设计正常、缺资料、重复触发和中途失败四个场景。每个场景明确终态断言与恢复动作，并区分可自动回查和需要人工判断的部分。"
+  "learning_objective": "核验模板mask和监督目标",
+  "deliverable": "监督位置、初始化梯度、合并输出三份对照表"
 }
