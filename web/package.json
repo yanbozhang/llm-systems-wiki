@@ -12,7 +12,8 @@
     "preview": "astro preview --host 0.0.0.0",
     "check": "astro check",
     "test": "tsx --test --test-concurrency=1 tests/*.test.ts",
-    "test:built": "tsx --test --test-concurrency=1 tests/built/*.test.ts"
+    "test:built": "tsx --test --test-concurrency=1 tests/built/*.test.ts",
+    "benchmark:search": "tsx scripts/benchmark-search.ts"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.5",

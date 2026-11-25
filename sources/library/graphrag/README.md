@@ -7,7 +7,7 @@
 ## 这份资料用在哪里
 
 - [RAG检索与回答评测](../../../wiki/topics/RAG检索与回答评测.md)
-- [GraphRAG与LLMWiki](../../../wiki/topics/GraphRAG与LLMWiki.md)
+- [GraphRAG：实体、社区与证据查询](../../../wiki/topics/GraphRAG与LLMWiki.md)
 - [混合检索与重排](../../../wiki/topics/混合检索与重排.md)
 - [RAG与引用回答](../../../wiki/topics/RAG与引用回答.md)
 

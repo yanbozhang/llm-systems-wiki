@@ -6,8 +6,9 @@
 
 ## 这份资料用在哪里
 
-- [GraphRAG与LLMWiki](../../../wiki/topics/GraphRAG与LLMWiki.md)
+- [GraphRAG：实体、社区与证据查询](../../../wiki/topics/GraphRAG与LLMWiki.md)
 - [来源接入与版本管理](../../../wiki/topics/来源接入与版本管理.md)
+- [LLMwiki：知识编纂与更新](../../../wiki/topics/LLMwiki知识编纂与更新.md)
 - [Agent记忆与保鲜](../../../wiki/topics/Agent记忆与保鲜.md)
 
 ## 阅读与版本

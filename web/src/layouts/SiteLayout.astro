@@ -2,12 +2,12 @@
 import {Search, ArrowUpRight, Github, Sun, Moon, Menu, House, Library, Route, Map, Layers, BookOpen, ExternalLink} from 'lucide-astro';
 import Logo from '../components/Logo.astro';
 import ModuleIcon from '../components/ModuleIcon.astro';
-import {modules,topics} from '../lib/content';
+import {modules,topics,units} from '../lib/content';
 import {sitePath,REPOSITORY} from '../lib/navigation';
 import '../styles/global.css';
 import 'katex/dist/katex.min.css';
 interface Props { title?:string; description?:string; active?:string; section?:string; }
-const {title='从公式到源码，系统学习大模型',description='45个主题、135个知识点。连接大模型公式、代码、结构图与源码的开放学习手册。',active='home',section='知识总览'}=Astro.props;
+const {title='从公式到源码，系统学习大模型',description=`${modules.length}个模块、${topics.length}个主题、${units.length}个知识点。连接系统架构、公式、代码与来源的开放学习手册。`,active='home',section='知识总览'}=Astro.props;
 const nav=[{id:'home',label:'知识总览',en:'Overview',url:'/',icon:House},{id:'library',label:'探索知识',en:'Explore the library',url:'/library/',icon:Library},{id:'paths',label:'学习路径',en:'Learning paths',url:'/paths/',icon:Route},{id:'map',label:'能力地图',en:'Capability map',url:'/guides/map/',icon:Map},{id:'research',label:'2026研究进展',en:'Research 2026',url:'/research/',icon:BookOpen}];
 const canonical=new URL(Astro.url.pathname,'https://yanbozhang.github.io');
 ---

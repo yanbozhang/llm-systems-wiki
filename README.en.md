@@ -12,7 +12,9 @@ An open engineering field guide that connects research papers, official document
 [![Release](https://img.shields.io/github/v/release/yanbozhang/llm-systems-wiki)](https://github.com/yanbozhang/llm-systems-wiki/releases)
 [![Stars](https://img.shields.io/github/stars/yanbozhang/llm-systems-wiki?style=social)](https://github.com/yanbozhang/llm-systems-wiki/stargazers)
 
-**7 areas · 45 topics · 135 knowledge units · 45 Python examples · 6 learning paths.** Every knowledge unit connects equations and assumptions, code and implementation notes, a Mermaid diagram, and traceable references.
+**8 areas · 50 topics · 150 knowledge units · 50 Python examples · 6 learning paths.** Modules start with system architecture and explanation; topics start with an overview before equations, code, diagrams and boundaries. Historical v1.0 release manifests remain unchanged.
+
+The update adds [Recursive Self-Improvement (RSI)](wiki/modules/RSI.md), organizes [Harness](wiki/modules/Harness.md) around eight responsibilities, and separates [GraphRAG](wiki/topics/GraphRAG与LLMWiki.md) from [LLMwiki](wiki/topics/LLMwiki知识编纂与更新.md).
 
 The website supports search, module filters, learning paths, article navigation, code highlighting, mathematical notation, diagrams, saved articles, light/dark themes, and Chinese/English navigation. **The knowledge articles are currently written in Chinese.** This English README and the translated interface do not imply that the full library has been translated.
 
@@ -53,9 +55,10 @@ The new reading collection connects 14 ICML/ACL 2026 papers and 14 open-source p
 | [Training](wiki/modules/训练.md) | 4 / 12 | Pretraining, SFT, LoRA, DPO, GRPO |
 | [Inference](wiki/modules/推理.md) | 4 / 12 | Prefill/decode, KV cache, paging, scheduling, performance |
 | [Agent harnesses](wiki/modules/Harness.md) | 6 / 18 | State, context, memory, tools, LangGraph, AutoGen |
-| [Knowledge and RAG](wiki/modules/知识库.md) | 4 / 12 | Retrieval, source versions, hybrid search, GraphRAG, LLMWiki |
+| [Knowledge and RAG](wiki/modules/知识库.md) | 5 / 15 | Retrieval, source versions, hybrid search, separate GraphRAG and LLMwiki topics |
 | [Applied agents](wiki/modules/业务Agent.md) | 12 / 36 | Task completion, GUI, coding, failure analysis, eight implementation case studies |
 | [Evaluation](wiki/modules/Benchmark.md) | 11 / 33 | Protocols, statistics, contamination, model/agent/RAG/multimodal tasks, judges, systems, safety |
+| [RSI](wiki/modules/RSI.md) | 4 / 12 | Improvement loops, memory and skills, system and improver evolution, evaluation and attribution |
 
 Choose a path: [foundations](wiki/paths/基础入门路径.md), [systems engineering](wiki/paths/系统工程路径.md), [agent development](wiki/paths/Agent开发路径.md), [evaluation](wiki/paths/Benchmark学习路径.md), [GUI agents](wiki/paths/GUI智能体实践路径.md), or [coding agents](wiki/paths/AI编程智能体实践路径.md). The [resource guide](docs/系统学习资源指南.md) connects courses, papers, source code, and exercises.
 

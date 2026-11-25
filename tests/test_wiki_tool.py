@@ -10,6 +10,7 @@ from contextlib import redirect_stderr, redirect_stdout
 from datetime import date, datetime, timedelta, timezone
 import io
 import json
+import socket
 from pathlib import Path
 import tempfile
 import unittest
@@ -17,6 +18,7 @@ from unittest.mock import patch
 from xml.sax.saxutils import escape
 
 from scripts import wiki_tool as wiki
+from scripts.public_http import PublicHTTPSHandler
 
 
 def atom(identity='paper-1', title='候选论文', url='https://example.org/paper', updated='2026-10-24T08:00:00Z'):
@@ -32,7 +34,7 @@ class TempCase(unittest.TestCase):
     def setUp(self):
         tmp = tempfile.TemporaryDirectory()
         self.addCleanup(tmp.cleanup)
-        self.base = Path(tmp.name)
+        self.base = Path(tmp.name).resolve()
         self.root = self.base / 'repo'
         self.root.mkdir()
 
@@ -376,7 +378,9 @@ class PlanTests(unittest.TestCase):
         modules = json.loads((root / 'knowledge/modules.json').read_text(encoding='utf-8'))
         for module in modules:
             expected = [t['id'] for t in topics if t['module'] == module['id']]
-            rows = [wiki.plan(start + timedelta(days=module['weekday'] + 7 * week))
+            group = [entry for entry in modules if entry['weekday'] == module['weekday']]
+            position = group.index(module)
+            rows = [wiki.plan(start + timedelta(days=module['weekday'] + 7 * (position + len(group) * week)))
                     for week in range(len(expected) + 1)]
             self.assertEqual([row['topic'] for row in rows[:-1]], expected)
             self.assertEqual(rows[0]['topic'], rows[-1]['topic'])
@@ -391,7 +395,10 @@ class PlanTests(unittest.TestCase):
             expected.setdefault(topic['module'], set()).add(topic['id'])
         scheduled = {}
         monday = date(2026, 10, 19)
-        for offset in range(7 * max(map(len, expected.values()))):
+        modules = wiki.load_modules(manifest.parents[1])
+        repetitions = max(len(expected[module['id']]) * sum(
+            entry['weekday'] == module['weekday'] for entry in modules) for module in modules)
+        for offset in range(7 * repetitions):
             row = wiki.plan(monday + timedelta(days=offset))
             scheduled.setdefault(row['module'], set()).add(row['topic'])
         self.assertEqual(scheduled, expected)
@@ -1002,6 +1009,9 @@ class FakeResponse(io.BytesIO):
 
 class NetworkCase(unittest.TestCase):
     def network(self, responses):
+        self.enterContext(patch('socket.getaddrinfo', return_value=[
+            (socket.AF_INET, socket.SOCK_STREAM, 6, '', ('8.8.8.8', 443))
+        ]))
         opened = []
         response_objects = []
         class Opener:
@@ -1079,8 +1089,11 @@ class FetchTests(NetworkCase):
         response.msg = 'Found'
         self.addCleanup(response.close)
         # 保留真实opener和重定向处理器，只替换HTTPS传输边界。
-        with patch.object(wiki.urllib.request.HTTPSHandler, 'https_open',
-                          autospec=True, return_value=response) as transport:
+        with patch.object(PublicHTTPSHandler, 'https_open',
+                          autospec=True, return_value=response) as transport, \
+                patch('socket.getaddrinfo', return_value=[
+                    (socket.AF_INET, socket.SOCK_STREAM, 6, '', ('8.8.8.8', 443))
+                ]):
             with self.assertRaises(HTTPError) as raised:
                 wiki.fetch_feed('https://example.org/feed')
         self.addCleanup(raised.exception.close)

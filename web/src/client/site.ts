@@ -1,4 +1,4 @@
-import {readBookmarks,saveBookmarks,toggleBookmark,searchTopics,sitePath,type SearchItem} from '../lib/navigation';
+import {readBookmarks,saveBookmarks,toggleBookmark,createTopicSearch,parseSearchIndex,sitePath,type SearchItem} from '../lib/navigation';
 import {bindCatalog} from './catalog';
 const $=<T extends HTMLElement>(selector:string)=>document.querySelector<T>(selector);
 let language:'zh'|'en'='zh';
@@ -34,8 +34,11 @@ document.querySelectorAll<HTMLElement>('[data-bookmark]').forEach(button=>button
 }));
 document.addEventListener('language-change',syncBookmarks);
 let indexPromise:Promise<SearchItem[]>|undefined;
+let topicSearch= createTopicSearch([]);
 function loadIndex(){
-  return indexPromise??=(fetch(sitePath('/search-index.json')).then(r=>{if(!r.ok)throw new Error('Search unavailable');return r.json();}).then((value:unknown)=>{if(!Array.isArray(value))throw new Error('Invalid search index');return value as SearchItem[];}).catch(error=>{indexPromise=undefined;throw error;}));
+  return indexPromise??=(fetch(sitePath('/search-index.json')).then(r=>{if(!r.ok)throw new Error('Search unavailable');return r.json();}).then((value:unknown)=>{
+    const items=parseSearchIndex(value);topicSearch=createTopicSearch(items);return items;
+  }).catch(error=>{indexPromise=undefined;throw error;}));
 }
 bindCatalog(loadIndex,()=>bookmarks);
 const dialog=$<HTMLDialogElement>('#search-dialog');
@@ -46,8 +49,9 @@ function message(text:string){if(!results)return;results.replaceChildren();const
 async function displaySearch(){
   if(!search||!results)return;const revision=++searchRevision;
   try{
-    const rows=searchTopics(await loadIndex(),search.value).slice(0,18);
+    await loadIndex();
     if(revision!==searchRevision)return;
+    const rows=topicSearch(search.value).slice(0,18);
     results.replaceChildren();
     if(!rows.length){message(language==='zh'?'没有找到相关主题，试试其他关键词。':'No topics found. Try a different keyword.');return;}
     rows.forEach(row=>{const link=document.createElement('a');link.className='search-result';link.href=row.url;const title=document.createElement('strong');title.textContent=row.title;const detail=document.createElement('small');detail.textContent=`${language==='zh'?row.moduleTitle:row.moduleEnglish} · ${row.description}`;link.append(title,detail);results.append(link);});

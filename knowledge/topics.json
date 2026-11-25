@@ -463,29 +463,28 @@
   },
   {
     "id": "graph-wiki",
-    "title": "GraphRAG与LLMWiki",
+    "title": "GraphRAG：实体、社区与证据查询",
     "module": "knowledge",
     "page": "wiki/topics/GraphRAG与LLMWiki.md",
     "aliases": [
-      "LLM Wiki",
       "GraphRAG"
     ],
     "coverage": "source_guided",
-    "page_version": 3,
-    "last_checked": "2026-10-24",
+    "page_version": 4,
+    "last_checked": "2026-11-25",
     "learning_objectives": [
-      "区分编纂与检索",
-      "建立类型化关系",
-      "设计增量知识更新"
+      "解释局部实体与片段排序",
+      "推演社区全局查询预算",
+      "区分来源覆盖与事实支持"
     ],
     "depth": "worked",
     "practice_status": "designed",
-    "deliverable": "选一条来源变更，画出“来源→声明→主题→能力目标→练习”的影响链。分别标记正式先修和普通关联，检查是否出现不合理的先修循环。",
+    "deliverable": "局部与全局查询中间结果、预算表及来源覆盖反例",
     "example": "examples/knowledge/graph-wiki.py",
     "unit_ids": [
       "graph-wiki-local-query",
       "graph-wiki-global-query",
-      "graph-wiki-wiki-impact"
+      "graph-wiki-provenance"
     ]
   },
   {
@@ -1087,5 +1086,85 @@
       "autogen-termination-step",
       "autogen-snapshot-team"
     ]
+  },
+  {
+    "id": "llm-wiki",
+    "title": "LLMwiki：知识编纂与更新",
+    "module": "knowledge",
+    "page": "wiki/topics/LLMwiki知识编纂与更新.md",
+    "aliases": ["LLMWiki", "LLM Wiki"],
+    "coverage": "source_guided",
+    "page_version": 1,
+    "last_checked": "2026-11-25",
+    "learning_objectives": ["区分来源、声明与页面", "核对发布证据版本", "推演类型化更新影响"],
+    "depth": "worked",
+    "practice_status": "designed",
+    "deliverable": "分层知识图、发布准入记录与更正影响表",
+    "example": "examples/knowledge/llm_wiki.py",
+    "unit_ids": ["llm-wiki-layers", "llm-wiki-publication", "graph-wiki-wiki-impact"]
+  },
+  {
+    "id": "rsi-loop",
+    "title": "RSI改进闭环与版本准入",
+    "module": "rsi",
+    "page": "wiki/topics/RSI改进闭环与版本准入.md",
+    "aliases": [],
+    "coverage": "source_guided",
+    "page_version": 1,
+    "last_checked": "2026-11-25",
+    "learning_objectives": ["区分重试与跨任务持久变化", "设计候选准入", "保留可回退版本"],
+    "depth": "worked",
+    "practice_status": "designed",
+    "deliverable": "候选准入与拒绝后的状态记录",
+    "example": "examples/rsi/loop.py",
+    "unit_ids": ["rsi-loop-persistence", "rsi-loop-admission", "rsi-loop-version"]
+  },
+  {
+    "id": "rsi-memory",
+    "title": "RSI记忆与技能更新",
+    "module": "rsi",
+    "page": "wiki/topics/RSI记忆与技能更新.md",
+    "aliases": [],
+    "coverage": "source_guided",
+    "page_version": 1,
+    "last_checked": "2026-11-25",
+    "learning_objectives": ["筛选有来源且适用的经验", "限制技能改动范围", "区分采用率与真实收益"],
+    "depth": "worked",
+    "practice_status": "designed",
+    "deliverable": "经验筛选表与技能消融实验设计",
+    "example": "examples/rsi/memory.py",
+    "unit_ids": ["rsi-memory-eligibility", "rsi-memory-budget", "rsi-memory-adoption"]
+  },
+  {
+    "id": "rsi-evolution",
+    "title": "RSI系统与改进器演化",
+    "module": "rsi",
+    "page": "wiki/topics/RSI系统与改进器演化.md",
+    "aliases": [],
+    "coverage": "source_guided",
+    "page_version": 1,
+    "last_checked": "2026-11-25",
+    "learning_objectives": ["设计参数与框架交叉实验", "选择质量成本非支配候选", "在同起点同预算下比较改进器"],
+    "depth": "worked",
+    "practice_status": "designed",
+    "deliverable": "四格归因表、候选前沿及改进器对照",
+    "example": "examples/rsi/evolution.py",
+    "unit_ids": ["rsi-evolution-interaction", "rsi-evolution-front", "rsi-evolution-improver"]
+  },
+  {
+    "id": "rsi-evaluation",
+    "title": "RSI评测与归因",
+    "module": "rsi",
+    "page": "wiki/topics/RSI评测与归因.md",
+    "aliases": [],
+    "coverage": "source_guided",
+    "page_version": 1,
+    "last_checked": "2026-11-25",
+    "learning_objectives": ["按任务族隔离数据", "分开统计新增与丢失能力", "核算完整改进成本"],
+    "depth": "worked",
+    "practice_status": "designed",
+    "deliverable": "四类基线、旧能力回放与全成本账本",
+    "example": "examples/rsi/evaluation.py",
+    "unit_ids": ["rsi-evaluation-splits", "rsi-evaluation-retention", "rsi-evaluation-cost"]
   }
 ]

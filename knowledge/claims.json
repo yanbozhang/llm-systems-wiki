@@ -4759,7 +4759,7 @@
   },
   {
     "id": "claim-graph-wiki-wiki-impact-v1",
-    "topic": "graph-wiki",
+    "topic": "llm-wiki",
     "text": "普通反向链接只说明页面引用关系，传递影响分析需先明确支持与依赖的语义类型。",
     "version": 1,
     "status": "active",
@@ -4787,6 +4787,88 @@
         "source_version": "text-sha256:7c4bb4d83507e0cfcc337bcca23db2de1a63679e46753a04eae50aa21fd121b2",
         "locator": "§3.1 GraphRAG Workflow"
       }
+    ]
+  },
+  {
+    "id": "claim-graph-wiki-provenance", "topic": "graph-wiki",
+    "text": "查询上下文保留来源片段身份；可回查覆盖率是教学审计指标，不等于语义支持或事实正确率。",
+    "version": 1, "status": "active", "replicated": false,
+    "evidence_mode": "source_reading_and_teaching_model",
+    "conditions": "原文片段身份已核对；指标为本库定义",
+    "evidence": [
+      {"source_id": "v1-systems-graph-paper", "source_version": "text-sha256:7c4bb4d83507e0cfcc337bcca23db2de1a63679e46753a04eae50aa21fd121b2", "locator": "GraphRAG Workflow"},
+      {"source_id": "v1-systems-gr-local-doc", "source_version": "text-sha256:260b15b16a7f9207e3bddbdeb3efc47a1820666d6ca8b87770c21e5c55976261", "locator": "Local search context"}
+    ]
+  },
+  {
+    "id": "claim-llm-wiki-layers", "topic": "llm-wiki",
+    "text": "原始来源、编纂页面与规则分层；本库教学进一步显式区分声明，不将总结替代原文。",
+    "version": 1, "status": "active", "replicated": false,
+    "evidence_mode": "source_reading_and_teaching_model",
+    "conditions": "声明层是教学细化，不声称与上游数据模型完全相同",
+    "evidence": [
+      {"source_id": "v1-systems-wiki-architecture", "source_version": "text-sha256:0b0f6d59bed782983b595de16299757966ec3b15f01b39a5bfe4ed33b07c3b28", "locator": "Three-Layer Architecture"},
+      {"source_id": "v1-systems-wiki-doc", "source_version": "text-sha256:8c5cc5b33bdcd36198153ba9a3fee63eb1ba6855ed2ce3327a860b77a2f7bc93", "locator": "Architecture"}
+    ]
+  },
+  {
+    "id": "claim-llm-wiki-publication", "topic": "llm-wiki",
+    "text": "本库编纂教学要求证据版本匹配并记录核验状态；标签不代替来源的语义支持检查。",
+    "version": 1, "status": "active", "replicated": false,
+    "evidence_mode": "source_reading_and_teaching_model",
+    "conditions": "本库设计策略，非上游官方准入API",
+    "evidence": [
+      {"source_id": "v1-systems-wiki-architecture", "source_version": "text-sha256:0b0f6d59bed782983b595de16299757966ec3b15f01b39a5bfe4ed33b07c3b28", "locator": "Three-Layer Architecture"},
+      {"source_id": "wiki-pattern", "source_version": "text-sha256:dc3efe98ae62f23dd08acad13aba2e95287beb20b6bec2f4af0423557fe37401", "locator": "Architecture; Operations"}
+    ]
+  },
+  {
+    "id": "claim-rsi-loop", "topic": "rsi-loop",
+    "text": "持久状态更新与候选选择组成跨任务改进循环；本库以显式准入和版本复制演示该设计，不据此证明递归加速。",
+    "version": 1, "status": "active", "replicated": false,
+    "evidence_mode": "source_abstract_and_original_teaching_model",
+    "conditions": "只读取摘要，代码是本库状态模型；阈值不是论文算法",
+    "evidence": [
+      {"source_id": "rsi-survey-2026", "source_version": "text-sha256:6112ddb3b1d0a26f8c1a823d937d816d734b34bb8441d1b1ee3063112d4631f8", "locator": "Abstract"},
+      {"source_id": "rsi-rrsi-2026", "source_version": "text-sha256:d5f3edc963ffd1ca41df0ebc72fccd097c5f41fb9ab34e63b658087fd5d66581", "locator": "Abstract"},
+      {"source_id": "rsi-audit-2026", "source_version": "text-sha256:81d22b89eb1371fa4d2cb0cac65c23a12347b42088bf61ab4117b6ce91ed6370", "locator": "Abstract"}
+    ]
+  },
+  {
+    "id": "claim-rsi-memory", "topic": "rsi-memory",
+    "text": "记忆和技能是持久更新对象；有限修改和采用记录帮助归因，但保存与采用都不能单独证明任务增益。",
+    "version": 1, "status": "active", "replicated": false,
+    "evidence_mode": "source_abstract_and_original_teaching_model",
+    "conditions": "比例预算、版本筛选与采用率为教学设计；来源只读摘要",
+    "evidence": [
+      {"source_id": "rsi-survey-2026", "source_version": "text-sha256:6112ddb3b1d0a26f8c1a823d937d816d734b34bb8441d1b1ee3063112d4631f8", "locator": "Abstract"},
+      {"source_id": "rsi-rrsi-2026", "source_version": "text-sha256:d5f3edc963ffd1ca41df0ebc72fccd097c5f41fb9ab34e63b658087fd5d66581", "locator": "Abstract"},
+      {"source_id": "rsi-audit-2026", "source_version": "text-sha256:81d22b89eb1371fa4d2cb0cac65c23a12347b42088bf61ab4117b6ce91ed6370", "locator": "Abstract"}
+    ]
+  },
+  {
+    "id": "claim-rsi-evolution", "topic": "rsi-evolution",
+    "text": "任务系统与改进器的更新需要分别验证；本库用交叉对照、非支配选择和同起点同预算比较解释归因。",
+    "version": 1, "status": "active", "replicated": false,
+    "evidence_mode": "source_abstract_and_original_teaching_model",
+    "conditions": "所列公式为教学实验设计，不是论文性能结果或显著性检验",
+    "evidence": [
+      {"source_id": "rsi-survey-2026", "source_version": "text-sha256:6112ddb3b1d0a26f8c1a823d937d816d734b34bb8441d1b1ee3063112d4631f8", "locator": "Abstract"},
+      {"source_id": "rsi-rrsi-2026", "source_version": "text-sha256:d5f3edc963ffd1ca41df0ebc72fccd097c5f41fb9ab34e63b658087fd5d66581", "locator": "Abstract"},
+      {"source_id": "rsi-hyperagents-2026", "source_version": "text-sha256:a38af8c11ee0b7db18384c2b21498b8f4a9482bce8949b279578b6184b411a3f", "locator": "Abstract"},
+      {"source_id": "rsi-audit-2026", "source_version": "text-sha256:81d22b89eb1371fa4d2cb0cac65c23a12347b42088bf61ab4117b6ce91ed6370", "locator": "Abstract"}
+    ]
+  },
+  {
+    "id": "claim-rsi-evaluation", "topic": "rsi-evaluation",
+    "text": "产物评测不能单独建立过程改进结论；需区分独立测试、旧能力变化和完整循环成本。",
+    "version": 1, "status": "active", "replicated": false,
+    "evidence_mode": "source_abstract_and_original_teaching_model",
+    "conditions": "集合与效率公式是本库教学模型；未独立复核论文统计样本",
+    "evidence": [
+      {"source_id": "rsi-survey-2026", "source_version": "text-sha256:6112ddb3b1d0a26f8c1a823d937d816d734b34bb8441d1b1ee3063112d4631f8", "locator": "Abstract"},
+      {"source_id": "rsi-rrsi-2026", "source_version": "text-sha256:d5f3edc963ffd1ca41df0ebc72fccd097c5f41fb9ab34e63b658087fd5d66581", "locator": "Abstract"},
+      {"source_id": "rsi-audit-2026", "source_version": "text-sha256:81d22b89eb1371fa4d2cb0cac65c23a12347b42088bf61ab4117b6ce91ed6370", "locator": "Abstract"}
     ]
   }
 ]

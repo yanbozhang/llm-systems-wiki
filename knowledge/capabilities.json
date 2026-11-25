@@ -1176,7 +1176,7 @@
     "deliverable": "召回融合计算表和来源到练习的影响闭包。",
     "topic_ids": [
       "hybrid-search",
-      "graph-wiki"
+      "llm-wiki"
     ],
     "status": "learning_target",
     "evidence_required": true,
@@ -1196,7 +1196,7 @@
     ],
     "example_paths": [
       "examples/knowledge/hybrid-search.py",
-      "examples/knowledge/graph-wiki.py"
+      "examples/knowledge/llm_wiki.py"
     ],
     "example_functions": [
       {
@@ -1211,7 +1211,7 @@
       },
       {
         "unit_id": "graph-wiki-wiki-impact",
-        "path": "examples/knowledge/graph-wiki.py",
+        "path": "examples/knowledge/llm_wiki.py",
         "function": "wiki_impact"
       }
     ],
@@ -1980,5 +1980,25 @@
       }
     ],
     "evidence_scope": "已编纂的标准库教学示例与实践设计；真实模型、设备及生产环境实验未执行，学习者达成状态需独立证据。"
+  },
+  {
+    "id": "rsi-understand", "module": "rsi", "level": "understand",
+    "outcome": "区分任务重试、跨任务改进与改进器更新", "deliverable": "系统、改进器和验证器的边界图",
+    "topic_ids": ["rsi-loop", "rsi-evolution"], "unit_ids": ["rsi-loop-persistence", "rsi-evolution-improver"]
+  },
+  {
+    "id": "rsi-derive", "module": "rsi", "level": "derive",
+    "outcome": "计算准入条件、能力保留与同预算改进效率", "deliverable": "候选准入、旧能力变化和费用手算表",
+    "topic_ids": ["rsi-loop", "rsi-evaluation"], "unit_ids": ["rsi-loop-admission", "rsi-evaluation-retention", "rsi-evaluation-cost"]
+  },
+  {
+    "id": "rsi-build", "module": "rsi", "level": "build",
+    "outcome": "设计带版本、来源和回退路径的有限技能更新", "deliverable": "最小技能修改和失败候选记录",
+    "topic_ids": ["rsi-memory", "rsi-loop"], "unit_ids": ["rsi-memory-eligibility", "rsi-memory-budget", "rsi-loop-version"]
+  },
+  {
+    "id": "rsi-evaluate", "module": "rsi", "level": "evaluate",
+    "outcome": "用四类基线与同起点对照区分产物和过程收益", "deliverable": "数据切分、四格对照、全成本与不确定性报告",
+    "topic_ids": ["rsi-evolution", "rsi-evaluation"], "unit_ids": ["rsi-evolution-interaction", "rsi-evolution-improver", "rsi-evaluation-splits"]
   }
 ]

@@ -38,17 +38,45 @@ export interface SearchItem {
 }
 export const normalize = (value: string) => value.normalize('NFKC').toLocaleLowerCase().trim();
 
-export function searchTopics(items: SearchItem[], query: string, module = 'all'): SearchItem[] {
-  const terms = normalize(query).split(/\s+/).filter(Boolean);
-  return items.map((item, index) => {
+export function parseSearchIndex(value: unknown): SearchItem[] {
+  if (!Array.isArray(value)) throw new Error('Invalid search index');
+  const ids = new Set<string>();
+  for (const item of value) {
+    if (!item || typeof item !== 'object'
+        || !['id', 'title', 'module', 'moduleTitle', 'moduleEnglish', 'text', 'url', 'description']
+          .every(key => typeof item[key] === 'string')
+        || !['unitTitles', 'objectives'].every(key =>
+          Array.isArray(item[key]) && item[key].every((entry: unknown) => typeof entry === 'string'))
+        || !/^[a-z0-9][a-z0-9._-]*$/.test(item.id) || ids.has(item.id)
+        || item.url !== sitePath(`/read/${item.id}/`)) {
+      throw new Error('Invalid search index');
+    }
+    ids.add(item.id);
+  }
+  return value as SearchItem[];
+}
+
+export function createTopicSearch(items: SearchItem[]) {
+  const indexed = items.map((item, index) => {
     const title = normalize(`${item.title} ${item.id}`);
     const units = normalize(item.unitTitles.join(' '));
     const objectives = normalize(item.objectives.join(' '));
     const body = normalize(`${title} ${units} ${objectives} ${item.text} ${item.moduleTitle} ${item.moduleEnglish}`);
-    const matches = (module === 'all' || item.module === module) && terms.every(t => body.includes(t));
-    const score = terms.reduce((sum, t) => sum + (title.includes(t) ? 8 : units.includes(t) ? 4 : objectives.includes(t) ? 2 : 1), 0);
-    return { item, index, score, matches };
-  }).filter(row => row.matches).sort((a, b) => b.score - a.score || a.index - b.index).map(row => row.item);
+    return { item, index, title, units, objectives, body };
+  });
+  return (query: string, module = 'all'): SearchItem[] => {
+    const terms = normalize(query).split(/\s+/).filter(Boolean);
+    return indexed.filter(row => (module === 'all' || row.item.module === module)
+      && terms.every(term => row.body.includes(term)))
+      .map(row => ({...row, score: terms.reduce((sum, term) => sum
+        + (row.title.includes(term) ? 8 : row.units.includes(term) ? 4 : row.objectives.includes(term) ? 2 : 1), 0)}))
+      .sort((left, right) => right.score - left.score || left.index - right.index)
+      .map(row => row.item);
+  };
+}
+
+export function searchTopics(items: SearchItem[], query: string, module = 'all'): SearchItem[] {
+  return createTopicSearch(items)(query, module);
 }
 
 export function readBookmarks(storage: Pick<Storage, 'getItem'> | undefined): string[] {

@@ -1,3 +1,59 @@
+.module-reading-order {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  margin-top: 24px;
+  font-size: 13px;
+}
+.module-system {
+  padding: 8px 0 30px;
+  border-bottom: 1px solid var(--border);
+}
+.module-system .markdown {
+  max-width: 100%;
+}
+.module-topic-section {
+  margin-top: 40px;
+}
+.module-topic-hint {
+  color: var(--muted);
+  margin: 0 0 22px;
+  line-height: 1.8;
+}
+.module-topic-section .topic-card > p {
+  font-size: 13px;
+  -webkit-line-clamp: 4;
+  min-height: 98px;
+}
+.topic-overview {
+  padding: 24px;
+  margin-bottom: 32px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+.topic-unit-map {
+  display: grid;
+  gap: 10px;
+  margin-top: 22px;
+}
+.topic-unit-map a {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 13px;
+}
+.topic-unit-map strong {
+  font-weight: 550;
+}
+.topic-unit-map span {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
 .reader-wrap {
   max-width: 1280px;
   margin: 0 auto;
@@ -331,6 +387,24 @@
   width: 100%;
   height: auto;
   margin: auto;
+}
+.diagram-zoom {
+  padding: 5px 9px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--accent);
+  background: var(--surface);
+  font-size: 11px;
+  cursor: pointer;
+}
+.diagram-zoom:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+.diagram-canvas.diagram-expanded svg {
+  width: var(--diagram-width);
+  min-width: var(--diagram-width);
+  max-width: none !important;
 }
 .diagram-source {
   margin-top: 13px;

@@ -241,5 +241,14 @@
       "EleutherAI/lm-evaluation-harness",
       "huggingface/lighteval"
     ]
+  },
+  {
+    "id": "rsi", "module": "rsi", "title": "RSI研究进展",
+    "page": "wiki/frontiers/RSI研究进展.md", "as_of": "2026-11-25",
+    "summary": "从持久经验与有限候选更新，走向区分系统收益和改进器收益的独立评测。",
+    "topic_ids": ["rsi-loop", "rsi-memory", "rsi-evolution", "rsi-evaluation"],
+    "source_ids": ["rsi-survey-2026", "rsi-rrsi-2026", "rsi-hyperagents-2026", "rsi-audit-2026"],
+    "paper_ids": ["rsi-survey-2026", "rsi-rrsi-2026", "rsi-hyperagents-2026", "rsi-audit-2026"],
+    "repository_ids": []
   }
 ]

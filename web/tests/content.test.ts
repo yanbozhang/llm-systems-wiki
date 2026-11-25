@@ -7,7 +7,7 @@ import { readFileSync, readdirSync, existsSync, mkdtempSync, writeFileSync, rmSy
 import { tmpdir } from 'node:os';
 import { resolve, join, posix } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { modules, topics, units, paths, guides, routes, frontiers, sourceCards, readDocument, topicDescription, buildSearchIndex, type Topic, type Unit } from '../src/lib/content';
+import { modules, topics, units, paths, guides, routes, frontiers, sourceCards, readDocument, readModuleOverview, splitTopicContent, topicDescription, topicIntroduction, buildSearchIndex, type Topic, type Unit } from '../src/lib/content';
 import { resolveLink, type SearchItem } from '../src/lib/navigation';
 import { GET } from '../src/pages/search-index.json.js';
 
@@ -22,16 +22,16 @@ function withDocument(source: string, assertion: (path:string)=>void): void {
   finally { rmSync(directory,{recursive:true,force:true}); }
 }
 
-test("清单：七模块保留权威数据且生成稳定路由", async () => {
-  assert.equal(modules.length,7); assert.deepEqual(modules.map(m=>m.id),rawModules.map(m=>m.id)); for (const expected of rawModules) { const actual=modules.find(m=>m.id===expected.id)!; assert.ok(actual); assert.equal(actual.title,expected.title); assert.equal(actual.page,expected.page); assert.equal(routes[expected.page],'/modules/'+expected.id+'/'); }
+test("清单：全部模块保留权威数据且生成稳定路由", async () => {
+  assert.equal(modules.length,rawModules.length); assert.deepEqual(modules.map(m=>m.id),rawModules.map(m=>m.id)); for (const expected of rawModules) { const actual=modules.find(m=>m.id===expected.id)!; assert.ok(actual); assert.equal(actual.title,expected.title); assert.equal(actual.page,expected.page); assert.equal(routes[expected.page],'/modules/'+expected.id+'/'); }
 });
 
-test("清单：45主题保留示例学习目标和全部源字段", async () => {
-  assert.equal(topics.length,45); assert.deepEqual(topics,rawTopics); for(const topic of rawTopics){ assert.ok(topic.example); assert.ok(existsSync(resolve(repo,topic.example))); assert.ok(topic.learning_objectives.length>0); assert.equal(routes[topic.page],'/read/'+topic.id+'/'); }
+test("清单：全部主题保留示例学习目标和全部源字段", async () => {
+  assert.equal(topics.length,rawTopics.length); assert.deepEqual(topics,rawTopics); for(const topic of rawTopics){ assert.ok(topic.example); assert.ok(existsSync(resolve(repo,topic.example))); assert.ok(topic.learning_objectives.length>0); assert.equal(routes[topic.page],'/read/'+topic.id+'/'); }
 });
 
-test("清单：135知识点完整并能沿父主题路由访问", async () => {
-  assert.equal(units.length,135); assert.deepEqual(units,rawUnits); assert.equal(new Set(units.map(u=>u.id)).size,135); for(const unit of units){ const topic=rawTopics.find(t=>t.id===unit.topic); assert.ok(topic); assert.ok(topic.unit_ids.includes(unit.id)); assert.equal(routes[topic.page],'/read/'+topic.id+'/'); }
+test("清单：全部知识点完整并能沿父主题路由访问", async () => {
+  assert.equal(units.length,rawUnits.length); assert.deepEqual(units,rawUnits); assert.equal(new Set(units.map(u=>u.id)).size,rawUnits.length); for(const unit of units){ const topic=rawTopics.find(t=>t.id===unit.topic); assert.ok(topic); assert.ok(topic.unit_ids.includes(unit.id)); assert.equal(routes[topic.page],'/read/'+topic.id+'/'); }
 });
 
 test("学习路径：覆盖全部六份真实路径文档且路由唯一", async () => {
@@ -74,8 +74,8 @@ test("正文：普通分割线与代码样例", async () => {
   withDocument("# 正文\n\n---\n\n必要知识\n\n```python\nprint('不要执行源文')\n```", path=>assert.equal(readDocument(path),"# 正文\n\n---\n\n必要知识\n\n```python\nprint('不要执行源文')\n```"));
 });
 
-test("搜索：45条条目按权威主题顺序完整输出", async () => {
-  const index=buildSearchIndex(); assert.equal(index.length,45); assert.deepEqual(index.map(row=>row.id),rawTopics.map(t=>t.id)); assert.equal(new Set(index.map(row=>row.id)).size,45);
+test("搜索：按权威主题顺序完整输出", async () => {
+  const index=buildSearchIndex(); assert.equal(index.length,rawTopics.length); assert.deepEqual(index.map(row=>row.id),rawTopics.map(t=>t.id)); assert.equal(new Set(index.map(row=>row.id)).size,rawTopics.length);
 });
 
 test("搜索：标题模块学习目标和知识点逐条对应源数据", async () => {
@@ -99,7 +99,7 @@ test("摘要：没有学习目标时不生成虚假文字", async () => {
 });
 
 test("接口：GET直接返回成功JSON与UTF8内容类型", async () => {
-  const response=GET(); assert.equal(response.status,200); assert.match(response.headers.get('content-type')||'',/^application\/json\s*;\s*charset=utf-8$/i); const value=await response.json() as SearchItem[]; assert.equal(value.length,45); assert.deepEqual(value.map(row=>row.id),rawTopics.map(t=>t.id));
+  const response=GET(); assert.equal(response.status,200); assert.match(response.headers.get('content-type')||'',/^application\/json\s*;\s*charset=utf-8$/i); const value=await response.json() as SearchItem[]; assert.equal(value.length,rawTopics.length); assert.deepEqual(value.map(row=>row.id),rawTopics.map(t=>t.id));
 });
 
 test("接口：GET载荷保留主题目标知识点和可打开链接", async () => {
@@ -121,12 +121,49 @@ test("前沿清单：直接保留权威JSON的全部字段", () => {
   for(const frontier of frontiers){assert.ok(frontier.id);assert.ok(frontier.title);assert.ok(frontier.summary);assert.ok(frontier.as_of);}
 });
 
-test("前沿路由：七模块均有唯一研究入口且不依赖正文预加载", () => {
-  assert.equal(frontiers.length,7);
+test("前沿路由：所有模块均有唯一研究入口且不依赖正文预加载", () => {
+  assert.equal(frontiers.length,rawModules.length);
   assert.deepEqual(new Set(frontiers.map(f=>f.module)),new Set(rawModules.map(m=>m.id)));
   assert.equal(new Set(frontiers.map(f=>f.id)).size,frontiers.length);
   assert.equal(new Set(frontiers.map(f=>f.page)).size,frontiers.length);
   for(const frontier of frontiers)assert.equal(routes[frontier.page],'/research/'+frontier.id+'/');
+});
+
+test("模块：架构图和系统说明在主题列表之前，均来自Markdown", () => {
+  assert.ok(modules.some(module=>module.id==='rsi'));
+  for(const module of modules){
+    const overview=readModuleOverview(module);
+    assert.match(overview,/## 系统架构[\s\S]*```mermaid[\s\S]*## 系统说明/);
+    assert.ok(!overview.includes('## 核心知识单元'),module.id);
+  }
+});
+
+test("主题：每篇先有实质总览，再展开已登记知识点", () => {
+  for(const topic of topics){
+    const sections=splitTopicContent(readDocument(topic.page));
+    assert.ok(sections.overview.length>40,topic.id);
+    assert.match(sections.details,/^## /);
+    for(const id of topic.unit_ids){
+      assert.ok(sections.details.includes(units.find(unit=>unit.id===id)!.title),id);
+    }
+  }
+});
+
+test("知识库：GraphRAG和LLMwiki有独立主题与知识点", () => {
+  const graph=topics.find(topic=>topic.id==='graph-wiki')!,wiki=topics.find(topic=>topic.id==='llm-wiki')!;
+  assert.equal(graph.module,'knowledge');assert.equal(wiki.module,'knowledge');
+  assert.notEqual(graph.page,wiki.page);assert.notEqual(routes[graph.page],routes[wiki.page]);
+  assert.equal(graph.unit_ids.some(id=>wiki.unit_ids.includes(id)),false);
+  assert.ok(wiki.unit_ids.includes('graph-wiki-wiki-impact'));
+});
+
+test("主题卡片：展示原文的整体介绍而不是只拼接学习目标", () => {
+  for(const topic of topics){
+    const introduction=topicIntroduction(topic);
+    assert.ok(introduction.length>30,topic.id);
+    assert.notEqual(introduction,topicDescription(topic),topic.id);
+    assert.ok(!introduction.startsWith('>'),topic.id);
+  }
 });
 
 test("来源清单：读取资料卡索引并保留身份主题与归档状态", () => {

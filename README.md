@@ -12,7 +12,9 @@
 [![版本](https://img.shields.io/github/v/release/yanbozhang/llm-systems-wiki)](https://github.com/yanbozhang/llm-systems-wiki/releases)
 [![Stars](https://img.shields.io/github/stars/yanbozhang/llm-systems-wiki?style=social)](https://github.com/yanbozhang/llm-systems-wiki/stargazers)
 
-**v1.0：7 个模块 · 45 个主题 · 135 个知识点 · 45 份 Python 教学示例。** 每个知识点都有公式与符号说明、代码与步骤解释、Mermaid 实现图、原始来源与边界条件。
+**当前版本：8 个模块 · 50 个主题 · 150 个知识点 · 50 份 Python 教学示例。** 模块先呈现系统架构与说明；主题先给出整体介绍，再展开公式、代码、结构图与边界条件。历史 v1.0 保留原发布清单。
+
+本轮新增 [RSI](wiki/modules/RSI.md)，按八个职责模块重组 [Harness](wiki/modules/Harness.md)，并将 [GraphRAG](wiki/topics/GraphRAG与LLMWiki.md) 与 [LLMwiki](wiki/topics/LLMwiki知识编纂与更新.md) 分为独立主题。
 
 [开始学习](docs/大模型持续学习知识库.md) · [全部知识点](docs/知识点索引.md) · [能力地图](docs/能力地图.md) · [Agent 方案导读](docs/Agent开源方案导读.md) · [版本变化](CHANGELOG.md)
 
@@ -23,7 +25,7 @@
 | 你想做什么 | 入口 |
 |---|---|
 | 系统学习基础、运行小例子 | [仓库导览](docs/仓库导览.md) · [基础入门](wiki/paths/基础入门路径.md) |
-| 看2026年论文和开源工程的变化 | [七模块研究进展](wiki/frontiers/README.md) · [在线阅读](https://yanbozhang.github.io/llm-systems-wiki/research/) |
+| 看2026年论文和开源工程的变化 | [模块研究进展](wiki/frontiers/README.md) · [在线阅读](https://yanbozhang.github.io/llm-systems-wiki/research/) |
 | 找原文、版本和本地保存记录 | [来源资料库](sources/README.md) · [完整索引](sources/来源索引.md) |
 
 本轮研究选读覆盖14篇ICML/ACL 2026论文和14个开源项目，明确区分会议论文、已读取全文、官方摘要、发布版本和当前提交。每条来源都有独立资料目录；本地全文缓存不随GitHub仓库公开分发。
@@ -45,7 +47,7 @@
 
 ## 系统学习地图
 
-![七模块知识地图](assets/知识地图预览.svg)
+![八模块知识地图](assets/知识地图预览.svg)
 
 | 模块 | 主题 / 知识点 | 内容 |
 |---|---:|---|
@@ -53,9 +55,10 @@
 | [训练](wiki/modules/训练.md) | 4 / 12 | 预训练、SFT、LoRA、DPO、GRPO |
 | [推理](wiki/modules/推理.md) | 4 / 12 | Prefill/Decode、KV 缓存、分页、调度与性能 |
 | [Harness](wiki/modules/Harness.md) | 6 / 18 | 状态、上下文、记忆、工具、LangGraph、AutoGen |
-| [知识库](wiki/modules/知识库.md) | 4 / 12 | RAG、来源版本、混合检索、GraphRAG 与 LLMWiki |
+| [知识库](wiki/modules/知识库.md) | 5 / 15 | RAG、来源版本、混合检索、GraphRAG、独立的 LLMwiki |
 | [业务 Agent](wiki/modules/业务Agent.md) | 12 / 36 | 任务闭环、GUI、AI Coding、失败归因与八个工程案例（含 Codex CLI、Claude Code） |
 | [Benchmark](wiki/modules/Benchmark.md) | 11 / 33 | 协议、统计、污染、通用/代码/Agent/RAG/多模态、裁判、性能与安全 |
+| [RSI](wiki/modules/RSI.md) | 4 / 12 | 改进闭环、记忆技能、系统与改进器演化、评测归因 |
 
 选择[基础入门](wiki/paths/基础入门路径.md)、[系统工程](wiki/paths/系统工程路径.md)、[Agent 开发](wiki/paths/Agent开发路径.md)、[Benchmark](wiki/paths/Benchmark学习路径.md)、[GUI 智能体](wiki/paths/GUI智能体实践路径.md)或[AI 编程智能体路径](wiki/paths/AI编程智能体实践路径.md)。课程与源码入口见[系统学习资源指南](docs/系统学习资源指南.md)，能力目标以[能力地图](docs/能力地图.md)为准。
 

@@ -61,6 +61,11 @@ def wiki_impact(page_links, changed, relation_types=("supported_by", "requires")
     return sorted(visited - roots)
 
 
+def provenance_coverage(selected_chunks, available_chunks):
+    selected = set(selected_chunks)
+    return len(selected & set(available_chunks)) / len(selected) if selected else 0.0
+
+
 def demo():
     """给出局部片段排序、全局预算与来源到练习的影响链。"""
     relations = [{"source": "A", "target": "B", "chunks": {"b"}},

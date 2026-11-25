@@ -21,6 +21,7 @@
     "id": "harness",
     "title": "Harness",
     "weekday": 3,
+    "rotation_group": "agent-systems",
     "page": "wiki/modules/Harness.md"
   },
   {
@@ -40,5 +41,12 @@
     "title": "Benchmark",
     "weekday": 6,
     "page": "wiki/modules/Benchmark.md"
+  },
+  {
+    "id": "rsi",
+    "title": "RSI",
+    "weekday": 3,
+    "rotation_group": "agent-systems",
+    "page": "wiki/modules/RSI.md"
   }
 ]
