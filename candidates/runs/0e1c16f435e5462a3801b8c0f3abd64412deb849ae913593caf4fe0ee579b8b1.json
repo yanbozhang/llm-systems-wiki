@@ -1,0 +1,138 @@
+{
+  "checked_at": "2026-11-25T14:38:13.467432+08:00",
+  "status": "changed",
+  "candidates": [
+    {
+      "id": "d5728d32d850152be279a03c1bb7ed671f707522de03dd76fc8e7f78de7b1f37",
+      "feed_id": "transformers",
+      "entry_id": "tag:github.com,2008:Repository/155220641/v5.24.1",
+      "title": "Patch release v5.24.1",
+      "url": "https://github.com/huggingface/transformers/releases/tag/v5.24.1",
+      "updated": "2026-11-24T16:13:08Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "139093c33eff19cca05af0ad08089ccc5820a0bb243bdecceee82441bacb2f0e",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/2bbace557bbf2cb5d03d6f9b48905415cd7607b0",
+      "title": "docs: fix small errors in the 2026-07-28 and draft specification (#3586)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/2bbace557bbf2cb5d03d6f9b48905415cd7607b0",
+      "updated": "2026-11-24T21:51:25Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "6c2a15375c00b6bb32f5da2be7142ede9eb763c20e91f5b63b85c3696bd3bf9f",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/3c8eb0c4e70b0b3af6471fc0cf3419c7098fdf39",
+      "title": "docs: mark Skills support for Claude and Claude Code in the extension…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/3c8eb0c4e70b0b3af6471fc0cf3419c7098fdf39",
+      "updated": "2026-11-24T21:48:36Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "79f58d5b9261d76b748a8ad9593c3fe1c7e75b7331cffdb669c37940938571af",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/b7a22b5b15a5db59de002a08699091e0808b7784",
+      "title": "docs: fix small errors in the 2026-07-28 and draft docs (#3587)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/b7a22b5b15a5db59de002a08699091e0808b7784",
+      "updated": "2026-11-24T21:47:46Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "8c7a46def3d507b65531fe431c287ad9981f5657b9f1edcb7e4d94b7815af75e",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/50145009cb63c9363962408fcdb0758adcadc87b",
+      "title": "docs(blog): celebrate two years of MCP (#3584)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/50145009cb63c9363962408fcdb0758adcadc87b",
+      "updated": "2026-11-24T17:43:14Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "b1dd210c4794af1a66b8a5765625e48836aff5cfe50b42b44a09693690384c01",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/b878313e34638206d13ddd9df57501567fac58fc",
+      "title": "docs(community): align IG charters with SEP sponsorship guidelines (#…",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/b878313e34638206d13ddd9df57501567fac58fc",
+      "updated": "2026-11-24T17:39:34Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    }
+  ],
+  "feeds": [
+    {
+      "feed_id": "transformers",
+      "status": "ok",
+      "new_count": 1
+    },
+    {
+      "feed_id": "trl",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "vllm",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "sglang",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "mcp",
+      "status": "ok",
+      "new_count": 5
+    },
+    {
+      "feed_id": "skills",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "graphrag",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "lightrag",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "swebench",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "osworld",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-lm-eval",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-opencompass",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-mlperf",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-agentdojo",
+      "status": "ok",
+      "new_count": 0
+    }
+  ]
+}
