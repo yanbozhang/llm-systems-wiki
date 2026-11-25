@@ -1,0 +1,16 @@
+{
+  "id": "rsi-rrsi-2026",
+  "title": "RRSI: Regularized Recursive Self-Improvement of Agent Harnesses",
+  "url": "https://arxiv.org/abs/2609.24972",
+  "version": "text-sha256:d5f3edc963ffd1ca41df0ebc72fccd097c5f41fb9ab34e63b658087fd5d66581",
+  "text_sha256": "d5f3edc963ffd1ca41df0ebc72fccd097c5f41fb9ab34e63b658087fd5d66581",
+  "native_version": "arXiv:2609.24972v3",
+  "published_at": null,
+  "checked_at": "2026-11-25",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "已读取官方摘要及版本记录；未阅读全文，未复现实验",
+  "locator": "Abstract; Submission history",
+  "excerpt": "The proposer operates with a temporally annealed budget, limiting how many edits a candidate can bundle.",
+  "archive_policy": "仅保存短摘和摘要指纹；不分发论文全文"
+}

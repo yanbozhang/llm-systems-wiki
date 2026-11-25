@@ -2,21 +2,21 @@
 id: graph-wiki
 module: knowledge
 status: published
-page_version: 3
-last_checked: 2026-10-24
+page_version: 4
+last_checked: 2026-11-25
 depth: worked
 practice_status: designed
-claim_ids: [claim-graph-wiki-v1, claim-graph-wiki-local-query-v1, claim-graph-wiki-global-query-v1, claim-graph-wiki-wiki-impact-v1]
+claim_ids: [claim-graph-wiki-v1, claim-graph-wiki-local-query-v1, claim-graph-wiki-global-query-v1, claim-graph-wiki-provenance]
 ---
-# GraphRAG与LLMWiki
+# GraphRAG：实体、社区与证据查询
 
-图检索组织实体、关系和社区以选择证据，LLM Wiki组织持久知识页以支持阅读与修订。它们可以组合，但不能把图相邻、页面互链和事实支持视为同一种关系。本页分别展开局部查询、全局社区查询和Wiki影响传播。
+GraphRAG 将来源片段组织为实体、关系及社区摘要，再分别支持局部问题和全局问题。先理解“来源—抽取—组织—查询—证据回查”的整体路径，再展开局部排序、全局预算和来源覆盖。持久知识页的编纂与更正另见独立主题 [LLMwiki](LLMwiki知识编纂与更新.md)；本页保留原文件与路由，避免已有引用失效。
 
 ## 学习目标
 
-- 区分编纂与检索
-- 建立类型化关系
-- 设计增量知识更新
+- 解释局部实体与片段排序
+- 推演社区全局查询预算
+- 区分来源覆盖与事实支持
 
 ## 前置知识
 
@@ -30,7 +30,7 @@ GraphRAG论文从chunk提取实体、关系和声明，合并成图，经社区�
 
 ## 推导或示例
 
-完整教学文件：[graph-wiki.py](../../examples/knowledge/graph-wiki.py)。每个函数对应下列一个知识点，只使用标准库与小型合成输入；教学计算不代表模型或服务实验。
+完整教学文件：[graph-wiki.py](../../examples/knowledge/graph-wiki.py)。下列三个知识点只使用标准库与小型合成输入；文件中的旧Wiki函数为兼容既有调用而保留，独立主题使用[llm_wiki.py](../../examples/knowledge/llm_wiki.py)。教学计算不代表模型或服务实验。
 
 ### 知识点一：实体入口、邻接关系与原始片段排序
 
@@ -134,51 +134,31 @@ flowchart TD
 
 [GraphRAG GlobalSearch.search](https://github.com/microsoft/graphrag/blob/c600ff80b77b9b62c47d539a3ac9569e95d8949b/packages/graphrag/graphrag/query/structured_search/global_search/search.py#L142)；[GraphRAG _reduce_response](https://github.com/microsoft/graphrag/blob/c600ff80b77b9b62c47d539a3ac9569e95d8949b/packages/graphrag/graphrag/query/structured_search/global_search/search.py#L306)；[GraphRAG Global Search](https://github.com/microsoft/graphrag/blob/c600ff80b77b9b62c47d539a3ac9569e95d8949b/docs/query/global_search.md)；[GraphRAG §3.1.4–3.1.6](https://arxiv.org/html/2404.16130v2).
 
-### 知识点三：Wiki反向链接与类型化知识影响闭包
+### 知识点三：查询上下文的来源覆盖
 
-LLM Wiki关注可阅读、可修订的持久知识页，图检索关注查询时怎样选取上下文；两者可以共用来源与索引。Microsoft LLM Wiki的公开设计分raw、wiki、schema三层，其 `getBacklinks`扫描所有页面，提取Markdown链接并按源页面目录解析相对路径，找出谁链接了目标。这个实现证明的是直接链接关系，不证明链接双方存在语义依赖。
-
-教学上给边显式类型：页面 `p`的 `supported_by`指向证据，`requires`指向其内容依赖对象，`related`只表示关联。来源变更集合为 $C$ ，允许传播的反向邻接为 $R_\Sigma$ ；影响集通过固定点得到：
+图中存在一条边，并不说明原文支持沿边传播的所有结论。局部或全局上下文应保留来源片段的稳定身份。设被查询使用的片段 ID 集合为 $C$ ，当前可回查的原文片段集合为 $R$ ，本库定义一个最低限度的可回查覆盖指标：
 
 $$
-I_0=C,\qquad I_{k+1}=I_k\cup\lbrace p:\exists v\in I_k,(v,p)\in R_\Sigma\rbrace .
+p=|C\cap R|/|C|.
 $$
-
-有限图上最多加入 $|V|$ 个新节点后稳定；使用visited避免循环重复入队。它产生待复核对象集合，不自动撤销这些对象的每条结论。多来源支持的页面可能复核后仍然有效。
 
 ```python
-def wiki_impact(page_links, changed, relation_types=("supported_by", "requires")):
-    """对人工核验的类型化依赖建反向索引，求来源变更的传递影响；普通related不传播。"""
-    reverse = defaultdict(set)
-    allowed = set(relation_types)
-    for page, links in page_links.items():
-        for target, kind in links:
-            if kind in allowed:
-                reverse[target].add(page)
-    roots = set(changed)
-    visited, queue = set(roots), deque(sorted(roots))
-    while queue:
-        target = queue.popleft()
-        for dependent in sorted(reverse.get(target, ())):
-            if dependent not in visited:
-                visited.add(dependent)
-                queue.append(dependent)
-    return sorted(visited - roots)
+def provenance_coverage(selected_chunks, available_chunks):
+    selected = set(selected_chunks)
+    return len(selected & set(available_chunks)) / len(selected) if selected else 0.0
 ```
-
-例子是source-v1→claim→topic→exercise；另有neighbor与topic仅related。变更source-v1应影响claim、topic、exercise，不能沿related把整个Wiki都标为失效。函数先构建反向索引，再BFS，核心遍历为 $O(|V|+|E_\Sigma|)$ ；为确定性输出对邻接与结果排序，额外有排序成本。输入关系没有语义标签时，不能假装靠算法已经推断出了标签。
 
 ```mermaid
 flowchart LR
- A["来源版本更正"] --> B["受支持声明待复核"]
- B --> C["依赖主题待复核"]
- C --> D["练习与能力目标待复核"]
- E["仅 related 的邻居"] --> F["不自动传播失效"]
+  Query["实体或社区查询"] --> Selected["实际使用的片段ID"]
+  Selected --> Resolve["回查固定版本原文"]
+  Resolve --> Coverage["统计可回查比例"]
+  Coverage --> Review["进一步核对是否支持回答"]
 ```
 
-本函数是基于反向链接思想的类型化教学扩展；所读 `getBacklinks`本身不做这个闭包，也不验证先修环。正式学习先修关系若出现环，需要另行检查并解释，不能因为BFS能终止就认为关系合理。GraphRAG社区摘要同样是预先生成的持久知识，因此“预先总结”不是Wiki与GraphRAG唯一分界。Wiki还需稳定页面身份、编辑历史和更正记录，图查询还需排名、预算与引用支持；两类机制各自保留审计证据。
+例如使用 a、b 两个片段，只能回查 a 时覆盖为二分之一；重复引用 a 不应提高覆盖。空上下文按教学接口约定返回零。覆盖为一也只证明出处可访问，不证明摘要忠实或答案正确；语义支持和版本匹配仍需独立检查。函数是教学审计指标，不是 GraphRAG 官方评分器。
 
-[Microsoft LLM Wiki getBacklinks](https://github.com/microsoft/llmwiki/blob/e09126f257c1fcf8e63234382748a51cf6a5df7f/packages/core/src/backlinks.ts#L23)；[Microsoft LLM Wiki 三层设计](https://github.com/microsoft/llmwiki/blob/e09126f257c1fcf8e63234382748a51cf6a5df7f/README.md#L19)；[LLM Wiki Three-Layer Architecture](https://github.com/microsoft/llmwiki/blob/e09126f257c1fcf8e63234382748a51cf6a5df7f/ARCHITECTURE.md#L38)；[GraphRAG §3.1.5 社区摘要](https://arxiv.org/html/2404.16130v2).
+依据见[GraphRAG 局部上下文](https://github.com/microsoft/graphrag/blob/c600ff80b77b9b62c47d539a3ac9569e95d8949b/docs/query/local_search.md)与[GraphRAG 工作流](https://arxiv.org/html/2404.16130v2)。Wiki更正传播已迁移至[独立主题](LLMwiki知识编纂与更新.md)。
 
 ## 适用条件与限制
 
@@ -188,13 +168,13 @@ flowchart LR
 
 ## 实践任务
 
-建立A/B/C/D实体与a/b/c片段，手算局部排序b、a、c。再构造两个社区map要点，分别模拟零分和首项超预算。最后建立来源→声明→主题→能力/练习链，标注supported_by、requires与related，模拟来源更正并列出复核集合；验证普通关联不会扩大正式依赖范围。
+建立A/B/C/D实体与a/b/c片段，手算局部排序b、a、c。再构造两个社区map要点，分别模拟零分和首项超预算。最后移除一个被引用的来源片段，计算覆盖变化，说明“可回查”和“真正支持答案”的区别。
 
 本页完整实践保持 `designed`。示例测试由统一 UT 流程记录，本页不宣称已测试或论文复现。
 
 ## 掌握标准
 
-能说清三种“图”分别索引什么；能追踪实体到片段的具体排序；能解释全局map帮助度与事实正确率不同；能计算类型化影响闭包而不把待复核等同全部错误。最终应交付查询中间结果和可审核关系表，保留原始来源定位。
+能追踪实体到片段的具体排序，解释全局map帮助度与事实正确率不同，计算来源覆盖而不把出处存在等同于答案正确。最终应交付局部与全局查询中间结果、预算记录和原文定位。
 
 
 ## 源码导读与边界推演

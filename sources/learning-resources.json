@@ -387,5 +387,12 @@
     "access": "公开资料与源码阅读，不代表完成真实框架实验",
     "reviewed_at": "2026-10-24",
     "source_id": "v1-harnesscase-ag-readme"
+  },
+  {
+    "id": "rsi-taxonomy", "title": "RSI方法分类与研究维度",
+    "url": "https://arxiv.org/abs/2610.14625", "module_ids": ["rsi"],
+    "kind": "paper", "reading_scope": "官方摘要与版本记录；未阅读全文",
+    "access": "public", "reviewed_at": "2026-11-25", "source_id": "rsi-survey-2026",
+    "adopted_practice": "先声明修改对象、反馈与选择方式，再设计实验"
   }
 ]

@@ -3,7 +3,6 @@ from __future__ import annotations
 import argparse
 import copy
 import hashlib
-import ipaddress
 import json
 import re
 import string
@@ -15,6 +14,11 @@ from datetime import date, datetime
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 from zoneinfo import ZoneInfo
+
+if __package__:
+    from .public_http import public_opener, validate_url
+else:
+    from public_http import public_opener, validate_url
 
 # 仅用于旧版最小知识包的结构校验；正式轮换只使用版本化模块清单。
 MODULES = ('network', 'training', 'inference', 'harness', 'knowledge', 'agents', 'benchmark')
@@ -43,25 +47,34 @@ def write_json(path, data):
 
 def load_modules(root):
     rows = read_json(Path(root) / 'knowledge/modules.json')
-    if not isinstance(rows, list) or len(rows) != 7:
-        raise ValueError('模块清单必须包含七个模块')
-    ids, days = set(), set()
+    if not isinstance(rows, list) or len(rows) < 7:
+        raise ValueError('模块清单必须覆盖七个学习日')
+    ids, days = set(), {}
     for row in rows:
         if not isinstance(row, dict):
             raise ValueError('模块必须是对象')
         key, day = row.get('id'), row.get('weekday')
         if not isinstance(key, str) or not key.strip() or key in ids:
             raise ValueError('模块 ID 缺失或重复')
-        if type(day) is not int or day not in range(7) or day in days:
-            raise ValueError('模块 weekday 必须唯一且位于 0 至 6')
+        if type(day) is not int or day not in range(7):
+            raise ValueError('模块 weekday 必须位于 0 至 6')
+        group = row.get('rotation_group')
+        if group is not None and (not isinstance(group, str) or not group.strip()):
+            raise ValueError('rotation_group 必须为非空字符串')
+        if day in days and (not group or group != days[day]):
+            raise ValueError('重复weekday必须声明相同的rotation_group')
         if not all(isinstance(row.get(field), str) and row[field].strip() for field in ('title', 'page')):
             raise ValueError('模块名称与页面不能为空')
         ids.add(key)
-        days.add(day)
+        days[day] = group
+    if set(days) != set(range(7)):
+        raise ValueError('模块清单必须覆盖七个学习日')
     if 'benchmark' not in ids:
         raise ValueError('模块清单缺少 benchmark')
     if any(row['id'] == 'benchmark' and row['weekday'] != 6 for row in rows):
         raise ValueError('benchmark 必须安排在周日')
+    if sum(row['weekday'] == 6 for row in rows) != 1:
+        raise ValueError('周日保留给benchmark复习')
     return sorted(rows, key=lambda row: row['weekday'])
 
 
@@ -340,18 +353,19 @@ def plan(day, root=None):
     day = date.fromisoformat(day) if isinstance(day, str) else day
     root = Path(root) if root is not None else Path(__file__).resolve().parents[1]
     modules = load_modules(root)
-    module = modules[day.weekday()]
+    week = (day - date(2026, 10, 19)).days // 7
+    scheduled = [module for module in modules if module['weekday'] == day.weekday()]
+    module = scheduled[week % len(scheduled)]
     topics = read_json(root / 'knowledge/topics.json')
     if not isinstance(topics, list):
         raise ValueError('主题清单必须是数组')
     options = [t for t in topics if isinstance(t, dict) and t.get('module') == module['id']]
     if not options or not all(isinstance(t.get('id'), str) and t['id'].strip() for t in options):
         raise ValueError(f'{module["id"]}: 缺少可轮换主题')
-    week = (day - date(2026, 10, 19)).days // 7
-    topic = options[week % len(options)]
+    topic = options[(week // len(scheduled)) % len(options)]
     goals = topic.get('learning_objectives') or [topic.get('title', topic['id'])]
     return {'date': day.isoformat(), 'module': module['id'], 'topic': topic['id'],
-            'reason': '七模块轮换；模块内按登记顺序持续推进', 'review_due': day.weekday() == 6,
+            'reason': '按学习日轮换；同组模块交替，模块内按登记顺序推进', 'review_due': day.weekday() == 6,
             'learning_objective': goals[0],
             'deliverable': topic.get('deliverable') or '完成本主题的实践任务与自测，记录证据和未解决问题'}
 
@@ -392,22 +406,8 @@ def parse_feed(xml, feed_id):
 
 
 def fetch_feed(url):
-    parsed = urlsplit(url)
-    host = (parsed.hostname or '').rstrip('.').lower()
-    if (parsed.scheme != 'https' or parsed.username or parsed.password or not host
-            or host == 'localhost' or host.endswith('.localhost')):
-        raise ValueError('订阅地址必须是无凭证的 HTTPS 域名')
-    try:
-        ipaddress.ip_address(host)
-    except ValueError:
-        pass
-    else:
-        raise ValueError('订阅地址不接受 IP 字面量')
-    # 禁止跳转到未经登记的目标，维护者应更新源配置。
-    class NoRedirect(urllib.request.HTTPRedirectHandler):
-        def redirect_request(self, req, fp, code, msg, headers, newurl):
-            return None
-    opener = urllib.request.build_opener(NoRedirect)
+    url = validate_url(url)
+    opener = public_opener()
     req = urllib.request.Request(url, headers={'User-Agent': 'llmwiki-source-monitor/0.1'})
     with opener.open(req, timeout=20) as response:
         body = response.read(2 * 1024 * 1024 + 1)

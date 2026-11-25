@@ -3,10 +3,8 @@
 import argparse
 import hashlib
 from http.client import HTTPException
-import ipaddress
 import json
 import re
-import socket
 import tempfile
 import urllib.error
 import urllib.request
@@ -14,6 +12,11 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import quote, unquote, urljoin, urlsplit, urlunsplit
+
+if __package__:
+    from .public_http import public_opener, validate_url
+else:
+    from public_http import public_opener, validate_url
 
 ROOT = Path(__file__).resolve().parents[1]
 MAX_BYTES = 20 * 1024 * 1024
@@ -162,27 +165,6 @@ def materialize(root):
     return index
 
 
-def validate_url(url, resolver=socket.getaddrinfo):
-    if not isinstance(url, str) or re.search(r'[\x00-\x20\x7f]', url):
-        raise ValueError('原文地址无效')
-    parsed = urlsplit(url)
-    host = (parsed.hostname or '').lower().rstrip('.')
-    if (parsed.scheme != 'https' or parsed.username is not None or parsed.password is not None or not host
-            or '%' in host or host == 'localhost' or host.endswith('.localhost')
-            or parsed.port not in (None, 443)):
-        raise ValueError('仅接受无凭证的公网HTTPS地址')
-    try:
-        ipaddress.ip_address(host)
-    except ValueError:
-        pass
-    else:
-        raise ValueError('原文地址不接受IP字面量')
-    addresses = resolver(host, 443, type=socket.SOCK_STREAM)
-    if not addresses or any(not ipaddress.ip_address(row[4][0]).is_global for row in addresses):
-        raise ValueError('原文地址必须解析到公网')
-    return urlunsplit((parsed.scheme, parsed.netloc, parsed.path, parsed.query, ''))
-
-
 def candidates(url):
     parsed = urlsplit(url)
     clean = urlunsplit((parsed.scheme, parsed.netloc, parsed.path, parsed.query, ''))
@@ -200,10 +182,7 @@ def candidates(url):
 
 
 def fetch_public(url, max_bytes=MAX_BYTES):
-    class NoRedirect(urllib.request.HTTPRedirectHandler):
-        def redirect_request(self, req, fp, code, msg, headers, newurl):
-            return None
-    opener = urllib.request.build_opener(NoRedirect)
+    opener = public_opener()
     for hop in range(4):
         url = validate_url(url)
         request = urllib.request.Request(url, headers={'User-Agent': 'LLM-Systems-Wiki-source-library/1.0'})

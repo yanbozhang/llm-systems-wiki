@@ -1,0 +1,16 @@
+{
+  "id": "rsi-hyperagents-2026",
+  "title": "Hyperagents",
+  "url": "https://arxiv.org/abs/2603.19461",
+  "version": "text-sha256:a38af8c11ee0b7db18384c2b21498b8f4a9482bce8949b279578b6184b411a3f",
+  "text_sha256": "a38af8c11ee0b7db18384c2b21498b8f4a9482bce8949b279578b6184b411a3f",
+  "native_version": "arXiv:2603.19461v2",
+  "published_at": "2026-03-19",
+  "checked_at": "2026-11-25",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "已读取官方摘要及版本记录；未阅读全文，未复现实验",
+  "locator": "Abstract; Submission history",
+  "excerpt": "the meta-level modification procedure is itself editable, enabling metacognitive self-modification",
+  "archive_policy": "仅保存短摘和摘要指纹；不分发论文全文"
+}

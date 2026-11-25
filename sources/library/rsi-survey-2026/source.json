@@ -1,0 +1,16 @@
+{
+  "id": "rsi-survey-2026",
+  "title": "From Existing Methods to New Research Ideas: Two Perspectives on Recursive Self-Improvement",
+  "url": "https://arxiv.org/abs/2610.14625",
+  "version": "text-sha256:6112ddb3b1d0a26f8c1a823d937d816d734b34bb8441d1b1ee3063112d4631f8",
+  "text_sha256": "6112ddb3b1d0a26f8c1a823d937d816d734b34bb8441d1b1ee3063112d4631f8",
+  "native_version": "arXiv:2610.14625v1",
+  "published_at": "2026-10-10",
+  "checked_at": "2026-11-25",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "已读取官方摘要及版本记录；未阅读全文，未复现实验",
+  "locator": "Abstract; Submission history",
+  "excerpt": "Recent methods allow language agents to retain changes to their parameters, memory, skills, and code.",
+  "archive_policy": "仅保存短摘和摘要指纹；不分发论文全文"
+}

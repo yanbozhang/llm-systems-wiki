@@ -1,0 +1,16 @@
+{
+  "id": "rsi-audit-2026",
+  "title": "Auditing the Product, Not the Recursion: The Evaluation Evidence Behind Recursive Self-Improvement Claims",
+  "url": "https://arxiv.org/abs/2610.27610",
+  "version": "text-sha256:81d22b89eb1371fa4d2cb0cac65c23a12347b42088bf61ab4117b6ce91ed6370",
+  "text_sha256": "81d22b89eb1371fa4d2cb0cac65c23a12347b42088bf61ab4117b6ce91ed6370",
+  "native_version": "arXiv:2610.27610v1",
+  "published_at": "2026-10-20",
+  "checked_at": "2026-11-25",
+  "status": "active",
+  "kind": "paper",
+  "reading_scope": "已读取官方摘要及版本记录；未阅读全文，未独立复核统计样本",
+  "locator": "Abstract; Submission history",
+  "excerpt": "Evaluating this promise requires separating product claims about the final system from process claims about the improvement process itself.",
+  "archive_policy": "仅保存短摘和摘要指纹；不分发论文全文"
+}

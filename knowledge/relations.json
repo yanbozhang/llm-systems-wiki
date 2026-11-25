@@ -818,5 +818,12 @@
     "to": "autogen",
     "type": "prerequisite",
     "reason": "先理解通用机制，再阅读具体工程实现"
-  }
+  },
+  {"id": "pre-ingestion-llm-wiki", "from": "ingestion", "to": "llm-wiki", "type": "prerequisite", "basis": "先明确来源身份再设计持久编纂", "version": 1},
+  {"id": "compare-graph-wiki-llm-wiki", "from": "graph-wiki", "to": "llm-wiki", "type": "compares", "basis": "图查询与持久知识编纂独立学习", "version": 1},
+  {"id": "pre-agent-loop-rsi-loop", "from": "agent-loop", "to": "rsi-loop", "type": "prerequisite", "basis": "先理解执行闭环再理解改进闭环", "version": 1},
+  {"id": "pre-rsi-loop-memory", "from": "rsi-loop", "to": "rsi-memory", "type": "prerequisite", "basis": "先定义准入再修改持久经验", "version": 1},
+  {"id": "pre-rsi-loop-evolution", "from": "rsi-loop", "to": "rsi-evolution", "type": "prerequisite", "basis": "先定义版本与预算再研究演化", "version": 1},
+  {"id": "pre-rsi-evolution-evaluation", "from": "rsi-evolution", "to": "rsi-evaluation", "type": "prerequisite", "basis": "按具体主张设计产物与过程评测", "version": 1},
+  {"id": "rel-rsi-evaluation-protocol", "from": "rsi-evaluation", "to": "benchmark-protocol", "type": "related", "basis": "共享可复现与独立测试协议", "version": 1}
 ]

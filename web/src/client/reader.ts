@@ -18,17 +18,31 @@ if(article){
   async function draw(pre:HTMLElement,index:number){
     const source=pre.textContent||'';
     const frame=document.createElement('div');frame.className='diagram-frame';
-    const label=document.createElement('div');label.className='diagram-label';label.textContent=document.documentElement.lang==='en'?'IMPLEMENTATION DIAGRAM':'实现结构图';
+    const label=document.createElement('div');label.className='diagram-label';
+    const caption=document.createElement('span');
+    const zoom=document.createElement('button');zoom.type='button';zoom.className='diagram-zoom';zoom.disabled=true;zoom.setAttribute('aria-pressed','false');
+    label.append(caption,zoom);
     const canvas=document.createElement('div');canvas.className='diagram-canvas';
     const waiting=document.createElement('p');waiting.className='diagram-loading';waiting.textContent=document.documentElement.lang==='en'?'Drawing the structure…':'正在绘制结构图…';canvas.append(waiting);
     const details=document.createElement('details');details.className='diagram-source';
     const summary=document.createElement('summary');summary.textContent=document.documentElement.lang==='en'?'View diagram source':'查看图示源码';
     const code=document.createElement('pre');code.textContent=source;details.append(summary,code);frame.append(label,canvas,details);pre.replaceWith(frame);
+    const updateLabels=()=>{
+      const english=document.documentElement.lang==='en',expanded=canvas.classList.contains('diagram-expanded');
+      caption.textContent=english?'IMPLEMENTATION DIAGRAM':'实现结构图';
+      zoom.textContent=expanded?(english?'Fit width':'适应宽度'):(english?'Original size ↔':'原始比例 ↔');
+      summary.textContent=english?'View diagram source':'查看图示源码';
+    };
+    zoom.addEventListener('click',()=>{const expanded=canvas.classList.toggle('diagram-expanded');zoom.setAttribute('aria-pressed',String(expanded));updateLabels();});
+    document.addEventListener('language-change',updateLabels);updateLabels();
     try{
       renderer??=import('mermaid');const {default:mermaid}=await renderer;
       mermaid.initialize({startOnLoad:false,securityLevel:'strict',theme:'neutral',fontFamily:'Inter, PingFang SC, Noto Sans CJK SC, sans-serif',flowchart:{htmlLabels:true,useMaxWidth:true}});
       const {svg}=await mermaid.render(`knowledge-diagram-${index}`,source);
       canvas.innerHTML=svg;
+      const width=Number(canvas.querySelector('svg')?.getAttribute('viewBox')?.trim().split(/\s+/)[2]);
+      canvas.style.setProperty('--diagram-width',`${Number.isFinite(width)&&width>0?Math.max(width,400):800}px`);
+      zoom.disabled=false;
     }catch{
       canvas.replaceChildren();const note=document.createElement('p');note.className='diagram-error';note.textContent=document.documentElement.lang==='en'?'The diagram could not load. Its source is available below.':'结构图暂未加载，展开下方源码即可查看完整关系。';canvas.append(note);details.open=true;
     }

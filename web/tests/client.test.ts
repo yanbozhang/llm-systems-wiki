@@ -6,6 +6,38 @@ import { Window } from 'happy-dom';
 import { bindCatalog } from '../src/client/catalog';
 import type { SearchItem } from '../src/lib/navigation';
 
+test("搜索：损坏的索引条目失败后可重新加载", async (t) => {
+  let calls=0;
+  await boot(t,{fetch:async()=>response(++calls===1?[null]:rows)});
+  click('[data-open-search]'); await flush();
+  assert.match(q('#search-results').textContent||'',/搜索暂时不可用/);
+  input('#global-search','needle'); await flush();
+  assert.equal(calls,2);
+  assert.equal(q('#search-results a strong').textContent,'KV Cache 缓存');
+});
+
+test("搜索：索引中可执行的结果链接不能进入页面", async (t) => {
+  await boot(t,{fetch:async()=>response([make('unsafe','Unsafe','training',{url:'javascript:alert(1)'})])});
+  click('[data-open-search]'); await flush();
+  assert.equal(document.querySelectorAll('#search-results a').length,0);
+  assert.match(q('#search-results').textContent||'',/搜索暂时不可用/);
+});
+
+test("目录：离线筛选仍遵循NFKC与全部关键词匹配", async (t) => {
+  mount(t);
+  bindCatalog(async()=>{throw new Error('offline');},()=>[]);
+  input('[data-catalog-search]','ＫＶ　缓存'); await flush();
+  assert.deepEqual(visibleCards(),['b']);
+});
+
+test("目录：索引中的额外主题不计入当前页面结果", async (t) => {
+  mount(t);
+  bindCatalog(async()=>[...rows,make('extra','KV Extra','inference')],()=>[]);
+  input('[data-catalog-search]','kv'); await flush();
+  assert.deepEqual(visibleCards(),['b','c','d']);
+  assert.equal(q('[data-result-count]').textContent,'3');
+});
+
 const make=(id:string,title:string,module:string,extra:Partial<SearchItem>={}):SearchItem=>({
   id,title,module,moduleTitle:module==='inference'?'推理':'训练',moduleEnglish:module==='inference'?'Inference':'Training',
   unitTitles:[],objectives:[],text:'',url:'/llm-systems-wiki/read/'+id+'/',description:'主题说明',...extra

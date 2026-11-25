@@ -1,7 +1,7 @@
 /** 契约：web/实现契约.md；API 边界补充见本轮验收点。 */
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { sitePath, resolveLink, normalize, searchTopics, readBookmarks, toggleBookmark, saveBookmarks, type SearchItem } from '../src/lib/navigation';
+import { sitePath, resolveLink, normalize, searchTopics, createTopicSearch, parseSearchIndex, readBookmarks, toggleBookmark, saveBookmarks, type SearchItem } from '../src/lib/navigation';
 
 const routes: Record<string, string> = {
   'wiki/topics/注意力.md': '/read/attention/',
@@ -16,6 +16,45 @@ function item(id: string, overrides: Partial<SearchItem> = {}): SearchItem {
     description: '', ...overrides };
 }
 function ids(items: SearchItem[]): string[] { return items.map(value => value.id); }
+
+test("预编译搜索：重复查询不再读取与规范化全文", () => {
+  let reads = 0;
+  const topic = item('cache');
+  Object.defineProperty(topic, 'text', {get() { reads++; return 'ＫＶ 缓存'; }});
+  const search = createTopicSearch([topic]);
+  for (let iteration = 0; iteration < 20; iteration++) {
+    assert.deepEqual(ids(search('kv 缓存')), ['cache']);
+    assert.deepEqual(ids(search('kv', 'training')), []);
+  }
+  assert.equal(reads, 1);
+});
+
+test("预编译搜索：排名、模块过滤和稳定顺序与普通查询一致", () => {
+  const items = [item('body', {text:'cache'}), item('unit', {unitTitles:['cache']}),
+    item('title', {title:'cache', module:'training'}), item('objective', {objectives:['cache']})];
+  const search = createTopicSearch(items);
+  for (const query of ['', 'cache', 'ＣＡＣＨＥ', 'cache 不存在']) {
+    for (const module of ['all', 'network', 'training']) {
+      assert.deepEqual(search(query, module), searchTopics(items, query, module));
+    }
+  }
+});
+
+test("索引验证：完整索引保留原引用，允许空结果", () => {
+  const items = [item('cache')];
+  assert.equal(parseSearchIndex(items), items);
+  assert.deepEqual(parseSearchIndex([]), []);
+});
+
+test("索引验证：拒绝损坏字段、重复ID与非站内结果地址", () => {
+  const topic = item('cache');
+  for (const invalid of [null, {}, [null], [topic, topic], [{...topic, text:3}],
+    [{...topic, objectives:['ok', null]}], [{...topic, unitTitles:'cache'}],
+    [{...topic, id:'../cache'}], [{...topic, url:'javascript:alert(1)'}],
+    [{...topic, url:'https://example.org/'}], [{...topic, url:sitePath('/read/other/')}]] ) {
+    assert.throws(() => parseSearchIndex(invalid), /Invalid search index/);
+  }
+});
 function assertInert(value: string): void {
   assert.ok(value === '' || value.startsWith('#'), '危险或越界地址必须成为不可导航占位，实际：' + value);
 }

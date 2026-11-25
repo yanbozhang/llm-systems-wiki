@@ -6,7 +6,7 @@
 
 ## 这份资料用在哪里
 
-- [GraphRAG与LLMWiki](../../../wiki/topics/GraphRAG与LLMWiki.md)
+- [GraphRAG：实体、社区与证据查询](../../../wiki/topics/GraphRAG与LLMWiki.md)
 - [混合检索与重排](../../../wiki/topics/混合检索与重排.md)
 - [来源接入与版本管理](../../../wiki/topics/来源接入与版本管理.md)
 - [RAG与引用回答](../../../wiki/topics/RAG与引用回答.md)

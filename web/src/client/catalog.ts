@@ -1,16 +1,21 @@
-import {searchTopics, type SearchItem} from '../lib/navigation';
+import {createTopicSearch, normalize, type SearchItem} from '../lib/navigation';
 export function bindCatalog(load:()=>Promise<SearchItem[]>, bookmarks:()=>string[]) {
   const catalog=document.querySelector<HTMLElement>('[data-catalog]');
   if(!catalog)return;
   const input=catalog.querySelector<HTMLInputElement>('[data-catalog-search]')!;
   const cards=[...catalog.querySelectorAll<HTMLElement>('[data-topic-card]')];
+  const cardIds=new Set(cards.map(card=>card.dataset.id));
   const grid=catalog.querySelector<HTMLElement>('[data-topic-grid]')!;
   let module=catalog.dataset.initialModule||'all',savedOnly=false,request=0;
+  let searchItems:SearchItem[]|undefined,topicSearch=createTopicSearch([]);
   const render=async()=>{
     const current=++request;
     try{
-      const result=searchTopics(await load(),input.value,module).filter(t=>!savedOnly||bookmarks().includes(t.id));
+      const items=await load();
       if(current!==request)return;
+      if(items!==searchItems){topicSearch=createTopicSearch(items);searchItems=items;}
+      const savedIds=new Set(bookmarks());
+      const result=topicSearch(input.value,module).filter(topic=>cardIds.has(topic.id)&&(!savedOnly||savedIds.has(topic.id)));
       const ids=new Set(result.map(t=>t.id));
       cards.forEach(card=>{card.hidden=!ids.has(card.dataset.id!);});
       // 在筛选结果内保留搜索相关性顺序。
@@ -21,8 +26,12 @@ export function bindCatalog(load:()=>Promise<SearchItem[]>, bookmarks:()=>string
     }catch{
       if(current!==request)return;
       // 索引不可达时仍保留服务端生成的内容和基本标题筛选。
-      const query=input.value.trim().toLowerCase();let count=0;
-      cards.forEach(card=>{card.hidden=!((module==='all'||card.dataset.module===module)&&(!savedOnly||bookmarks().includes(card.dataset.id!))&&(card.textContent||'').toLowerCase().includes(query));if(!card.hidden)count++;});
+      const terms=normalize(input.value).split(/\s+/).filter(Boolean),savedIds=new Set(bookmarks());let count=0;
+      cards.forEach((card,index)=>{
+        const text=normalize(card.textContent||'');
+        card.hidden=!((module==='all'||card.dataset.module===module)&&(!savedOnly||savedIds.has(card.dataset.id!))&&terms.every(term=>text.includes(term)));
+        card.style.order=String(index);if(!card.hidden)count++;
+      });
       catalog.querySelector('[data-result-count]')!.textContent=String(count);
       catalog.querySelector<HTMLElement>('[data-catalog-empty]')!.hidden=count!==0;
     }

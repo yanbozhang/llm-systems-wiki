@@ -47,12 +47,39 @@ function validateCards(doc:Document){
   }
 }
 
-test("首页：统计模块入口及推荐卡片关联真实清单", async()=>{
-  await page('index.html',doc=>{assert.deepEqual([...doc.querySelectorAll('.stats-strip strong')].map(e=>parseInt(e.textContent||'',10)),[7,45,135,6]); const cards=[...doc.querySelectorAll<HTMLAnchorElement>('.module-card')]; assert.equal(cards.length,7); for(const module of rawModules){const card=cards.find(c=>c.getAttribute('href')===base+'/modules/'+module.id+'/')!; assert.ok(card,module.id); assert.ok(card.textContent?.includes(module.title)); const ids=new Set(rawTopics.filter(t=>t.module===module.id).map(t=>t.id)); assert.deepEqual((get(card,'.module-card-foot').textContent||'').match(/\d+/g)?.map(Number),[ids.size,rawUnits.filter(u=>ids.has(u.topic)).length]);} validateCards(doc);});
+test("模块：系统架构图先于主题卡片，八个模块均有真实概览", async()=>{
+  for(const module of rawModules){
+    await page('modules/'+module.id+'/index.html',doc=>{
+      const overview=get(doc,'#module-system'),catalog=get(doc,'#module-topics');
+      assert.ok(overview.compareDocumentPosition(catalog)&4,module.id);
+      assert.ok(overview.querySelector('[data-diagram]'),module.id);
+      assert.match(overview.textContent||'',/系统架构[\s\S]*系统说明/);
+      assert.ok(doc.querySelectorAll('[data-topic-card]').length>0,module.id);
+    });
+  }
 });
 
-test("知识库：45张主题卡完整映射标题链接收藏与知识点数", async()=>{
-  await page('library/index.html',doc=>{const cards=[...doc.querySelectorAll<HTMLElement>('[data-topic-card]')]; assert.equal(cards.length,45); assert.deepEqual(cards.map(c=>c.dataset.id),rawTopics.map(t=>t.id)); validateCards(doc); assert.equal(get(doc,'[data-result-count]').textContent,'45');});
+test("主题：总览先于细节，阅读路线逐项链接真实知识点", async()=>{
+  for(const topic of rawTopics){
+    await page('read/'+topic.id+'/index.html',doc=>{
+      const overview=get(doc,'.topic-overview'),details=get(doc,'.topic-details');
+      assert.ok(overview.compareDocumentPosition(details)&4,topic.id);
+      const links=[...overview.querySelectorAll<HTMLAnchorElement>('.topic-unit-map a')];
+      assert.equal(links.length,topic.unit_ids.length,topic.id);
+      for(const link of links){
+        const target=doc.getElementById(decodeURIComponent(link.hash.slice(1)));
+        assert.ok(target&&details.contains(target),topic.id+' '+link.hash);
+      }
+    });
+  }
+});
+
+test("首页：统计模块入口及推荐卡片关联真实清单", async()=>{
+  await page('index.html',doc=>{assert.deepEqual([...doc.querySelectorAll('.stats-strip strong')].map(e=>parseInt(e.textContent||'',10)),[rawModules.length,rawTopics.length,rawUnits.length,paths.length]); const cards=[...doc.querySelectorAll<HTMLAnchorElement>('.module-card')]; assert.equal(cards.length,rawModules.length); for(const module of rawModules){const card=cards.find(c=>c.getAttribute('href')===base+'/modules/'+module.id+'/')!; assert.ok(card,module.id); assert.ok(card.textContent?.includes(module.title)); const ids=new Set(rawTopics.filter(t=>t.module===module.id).map(t=>t.id)); assert.deepEqual((get(card,'.module-card-foot').textContent||'').match(/\d+/g)?.map(Number),[ids.size,rawUnits.filter(u=>ids.has(u.topic)).length]);} validateCards(doc);});
+});
+
+test("知识库：全部主题卡完整映射标题链接收藏与知识点数", async()=>{
+  await page('library/index.html',doc=>{const cards=[...doc.querySelectorAll<HTMLElement>('[data-topic-card]')]; assert.equal(cards.length,rawTopics.length); assert.deepEqual(cards.map(c=>c.dataset.id),rawTopics.map(t=>t.id)); validateCards(doc); assert.equal(get(doc,'[data-result-count]').textContent,String(rawTopics.length));});
 });
 
 test("模块页：七个getStaticPaths输出只装配所属主题与能力", async()=>{
@@ -84,7 +111,7 @@ test("来源页：全部条目保持来源链接标题和读取范围", async()=
 });
 
 test("布局：canonical与主导航站内地址包含一次项目base", async()=>{
-  for(const name of ['index.html','library/index.html','read/transformer/index.html']){await page(name,doc=>{const route=name==='index.html'?'/':('/'+name.replace(/index\.html$/,'')); assert.equal(get<HTMLLinkElement>(doc,'link[rel="canonical"]').href,'https://yanbozhang.github.io'+base+route); const links=[...doc.querySelectorAll<HTMLAnchorElement>('.primary-nav a, .module-nav a')]; assert.equal(doc.querySelectorAll('.module-nav a').length,7); for(const link of links){const value=link.getAttribute('href')!; assert.ok(value.startsWith(base+'/')); assert.equal(value.split(base).length-1,1);} assert.ok(doc.querySelector('#search-dialog #global-search')); assert.ok(doc.querySelector('[data-language-toggle]'));});}
+  for(const name of ['index.html','library/index.html','read/transformer/index.html']){await page(name,doc=>{const route=name==='index.html'?'/':('/'+name.replace(/index\.html$/,'')); assert.equal(get<HTMLLinkElement>(doc,'link[rel="canonical"]').href,'https://yanbozhang.github.io'+base+route); const links=[...doc.querySelectorAll<HTMLAnchorElement>('.primary-nav a, .module-nav a')]; assert.equal(doc.querySelectorAll('.module-nav a').length,rawModules.length); for(const link of links){const value=link.getAttribute('href')!; assert.ok(value.startsWith(base+'/')); assert.equal(value.split(base).length-1,1);} assert.ok(doc.querySelector('#search-dialog #global-search')); assert.ok(doc.querySelector('[data-language-toggle]'));});}
 });
 
 test("404：提供可打开的站点首页入口", async()=>{
@@ -103,8 +130,8 @@ test("首屏主题：存储读取失败时保持默认主题可读", async()=>{
   const document={documentElement:{dataset:{theme:'light'}}}; new Script(themeScript).runInNewContext({document,localStorage:{getItem(){throw new Error('blocked');}}}); assert.equal(document.documentElement.dataset.theme,'light');
 });
 
-test("研究总览：七模块卡片关联正确标题摘要日期及详情路由", async()=>{
-  assert.equal(rawFrontiers.length,7);
+test("研究总览：模块卡片关联正确标题摘要日期及详情路由", async()=>{
+  assert.equal(rawFrontiers.length,rawModules.length);
   await page('research/index.html',doc=>{
     const cards=[...doc.querySelectorAll<HTMLAnchorElement>('[data-research-card]')];
     assert.equal(cards.length,rawFrontiers.length);

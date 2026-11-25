@@ -2061,9 +2061,9 @@
   },
   {
     "id": "graph-wiki-wiki-impact",
-    "topic": "graph-wiki",
+    "topic": "llm-wiki",
     "title": "知识点三：Wiki反向链接与类型化知识影响闭包",
-    "example": "examples/knowledge/graph-wiki.py",
+    "example": "examples/knowledge/llm_wiki.py",
     "function": "wiki_impact",
     "source_ids": [
       "v1-systems-wiki-backlinks",
@@ -2074,5 +2074,113 @@
     "claim_id": "claim-graph-wiki-wiki-impact-v1",
     "conditions": "依赖边由人工核验，方向为页面指向所依赖对象；普通related边不参与传播。",
     "implementation_scope": "teaching_model_with_source_reading"
+  },
+  {
+    "id": "graph-wiki-provenance", "topic": "graph-wiki",
+    "title": "知识点三：查询上下文的来源覆盖",
+    "example": "examples/knowledge/graph-wiki.py", "function": "provenance_coverage",
+    "source_ids": ["v1-systems-graph-paper", "v1-systems-gr-local-doc"],
+    "claim_id": "claim-graph-wiki-provenance",
+    "conditions": "只检查ID可回查，不能证明语义支持", "implementation_scope": "teaching_model"
+  },
+  {
+    "id": "llm-wiki-layers", "topic": "llm-wiki",
+    "title": "知识点一：来源、声明与页面分层",
+    "example": "examples/knowledge/llm_wiki.py", "function": "source_layers",
+    "source_ids": ["v1-systems-wiki-architecture", "v1-systems-wiki-doc"],
+    "claim_id": "claim-llm-wiki-layers",
+    "conditions": "本库在raw、wiki、schema思路上显式区分声明", "implementation_scope": "teaching_model"
+  },
+  {
+    "id": "llm-wiki-publication", "topic": "llm-wiki",
+    "title": "知识点二：来源版本与编纂准入",
+    "example": "examples/knowledge/llm_wiki.py", "function": "publication_ready",
+    "source_ids": ["v1-systems-wiki-architecture", "wiki-pattern"],
+    "claim_id": "claim-llm-wiki-publication",
+    "conditions": "元数据已核验；状态标签不代替事实审阅", "implementation_scope": "teaching_model"
+  },
+  {
+    "id": "rsi-loop-persistence", "topic": "rsi-loop",
+    "title": "知识点一：持久变化与后续采用",
+    "example": "examples/rsi/loop.py", "function": "persistent_changes",
+    "source_ids": ["rsi-survey-2026", "rsi-rrsi-2026"], "claim_id": "claim-rsi-loop",
+    "conditions": "读取记录由调用方提供，不衡量任务质量", "implementation_scope": "teaching_model_from_abstract"
+  },
+  {
+    "id": "rsi-loop-admission", "topic": "rsi-loop",
+    "title": "知识点二：候选准入不能放宽验证器",
+    "example": "examples/rsi/loop.py", "function": "accept_candidate",
+    "source_ids": ["rsi-rrsi-2026", "rsi-audit-2026"], "claim_id": "claim-rsi-loop",
+    "conditions": "确定性教学阈值，不是统计显著性检验", "implementation_scope": "teaching_model_from_abstract"
+  },
+  {
+    "id": "rsi-loop-version", "topic": "rsi-loop",
+    "title": "知识点三：拒绝候选与版本不变性",
+    "example": "examples/rsi/loop.py", "function": "advance_version",
+    "source_ids": ["rsi-survey-2026", "rsi-rrsi-2026"], "claim_id": "claim-rsi-loop",
+    "conditions": "只处理内存状态，不实现外部副作用回滚", "implementation_scope": "teaching_model_from_abstract"
+  },
+  {
+    "id": "rsi-memory-eligibility", "topic": "rsi-memory",
+    "title": "知识点一：有来源且适用的经验筛选",
+    "example": "examples/rsi/memory.py", "function": "eligible_experience",
+    "source_ids": ["rsi-survey-2026", "rsi-rrsi-2026"], "claim_id": "claim-rsi-memory",
+    "conditions": "范围与来源版本由调用方核验", "implementation_scope": "teaching_model_from_abstract"
+  },
+  {
+    "id": "rsi-memory-budget", "topic": "rsi-memory",
+    "title": "知识点二：有限改动与可归因修订",
+    "example": "examples/rsi/memory.py", "function": "bounded_edit",
+    "source_ids": ["rsi-rrsi-2026"], "claim_id": "claim-rsi-memory",
+    "conditions": "修改单元固定，比例不是论文原始算法", "implementation_scope": "teaching_model_from_abstract"
+  },
+  {
+    "id": "rsi-memory-adoption", "topic": "rsi-memory",
+    "title": "知识点三：采用率不是有效性",
+    "example": "examples/rsi/memory.py", "function": "adoption_rate",
+    "source_ids": ["rsi-survey-2026", "rsi-audit-2026"], "claim_id": "claim-rsi-memory",
+    "conditions": "采用集合来自真实读取记录，采用不代表收益", "implementation_scope": "teaching_model_from_abstract"
+  },
+  {
+    "id": "rsi-evolution-interaction", "topic": "rsi-evolution",
+    "title": "知识点一：参数与框架的交叉对照",
+    "example": "examples/rsi/evolution.py", "function": "cross_effect",
+    "source_ids": ["rsi-survey-2026", "rsi-audit-2026"], "claim_id": "claim-rsi-evolution",
+    "conditions": "同一任务与预算；差分不证明统计显著", "implementation_scope": "teaching_model_from_abstract"
+  },
+  {
+    "id": "rsi-evolution-front", "topic": "rsi-evolution",
+    "title": "知识点二：质量与成本的非支配候选",
+    "example": "examples/rsi/evolution.py", "function": "pareto_front",
+    "source_ids": ["rsi-survey-2026", "rsi-rrsi-2026"], "claim_id": "claim-rsi-evolution",
+    "conditions": "质量越高越好，成本越低越好；不自动部署", "implementation_scope": "teaching_model_from_abstract"
+  },
+  {
+    "id": "rsi-evolution-improver", "topic": "rsi-evolution",
+    "title": "知识点三：从相同起点比较改进器",
+    "example": "examples/rsi/evolution.py", "function": "compare_improvers",
+    "source_ids": ["rsi-hyperagents-2026", "rsi-audit-2026"], "claim_id": "claim-rsi-evolution",
+    "conditions": "早晚改进器同起点、配对任务和同预算", "implementation_scope": "teaching_model_from_abstract"
+  },
+  {
+    "id": "rsi-evaluation-splits", "topic": "rsi-evaluation",
+    "title": "知识点一：按任务族隔离数据用途",
+    "example": "examples/rsi/evaluation.py", "function": "disjoint_splits",
+    "source_ids": ["rsi-audit-2026", "rsi-rrsi-2026"], "claim_id": "claim-rsi-evaluation",
+    "conditions": "ID不相交并不能排除语义泄漏", "implementation_scope": "teaching_model_from_abstract"
+  },
+  {
+    "id": "rsi-evaluation-retention", "topic": "rsi-evaluation",
+    "title": "知识点二：新增能力与遗忘必须分开",
+    "example": "examples/rsi/evaluation.py", "function": "capability_changes",
+    "source_ids": ["rsi-survey-2026", "rsi-audit-2026"], "claim_id": "claim-rsi-evaluation",
+    "conditions": "相同任务宇宙；没有旧成功任务时保留率未定义", "implementation_scope": "teaching_model_from_abstract"
+  },
+  {
+    "id": "rsi-evaluation-cost", "topic": "rsi-evaluation",
+    "title": "知识点三：全部改进成本下的效率",
+    "example": "examples/rsi/evaluation.py", "function": "net_efficiency",
+    "source_ids": ["rsi-rrsi-2026", "rsi-audit-2026"], "claim_id": "claim-rsi-evaluation",
+    "conditions": "包含失败候选且使用同一成本单位", "implementation_scope": "teaching_model_from_abstract"
   }
 ]

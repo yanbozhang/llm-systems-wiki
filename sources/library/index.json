@@ -6,6 +6,7 @@
     "topic_ids": [
       "graph-wiki",
       "ingestion",
+      "llm-wiki",
       "memory"
     ],
     "module_ids": [
@@ -3532,7 +3533,8 @@
     "title": "From Local to Global: A Graph RAG Approach to Query-Focused Summarization",
     "path": "sources/library/v1-systems-graph-paper/README.md",
     "topic_ids": [
-      "graph-wiki"
+      "graph-wiki",
+      "llm-wiki"
     ],
     "module_ids": [
       "knowledge"
@@ -3556,7 +3558,7 @@
     "title": "ARCHITECTURE.md",
     "path": "sources/library/v1-systems-wiki-architecture/README.md",
     "topic_ids": [
-      "graph-wiki"
+      "llm-wiki"
     ],
     "module_ids": [
       "knowledge"
@@ -3568,7 +3570,7 @@
     "title": "packages/core/src/backlinks.ts",
     "path": "sources/library/v1-systems-wiki-backlinks/README.md",
     "topic_ids": [
-      "graph-wiki"
+      "llm-wiki"
     ],
     "module_ids": [
       "knowledge"
@@ -3580,7 +3582,7 @@
     "title": "README.md",
     "path": "sources/library/v1-systems-wiki-doc/README.md",
     "topic_ids": [
-      "graph-wiki"
+      "llm-wiki"
     ],
     "module_ids": [
       "knowledge"
@@ -4599,5 +4601,65 @@
       "training"
     ],
     "archive_status": "saved"
+  },
+  {
+    "id": "rsi-survey-2026",
+    "title": "From Existing Methods to New Research Ideas: Two Perspectives on Recursive Self-Improvement",
+    "path": "sources/library/rsi-survey-2026/README.md",
+    "topic_ids": [
+      "rsi-evaluation",
+      "rsi-evolution",
+      "rsi-loop",
+      "rsi-memory"
+    ],
+    "module_ids": [
+      "rsi"
+    ],
+    "archive_status": "not_requested"
+  },
+  {
+    "id": "rsi-rrsi-2026",
+    "title": "RRSI: Regularized Recursive Self-Improvement of Agent Harnesses",
+    "path": "sources/library/rsi-rrsi-2026/README.md",
+    "topic_ids": [
+      "rsi-evaluation",
+      "rsi-evolution",
+      "rsi-loop",
+      "rsi-memory"
+    ],
+    "module_ids": [
+      "rsi"
+    ],
+    "archive_status": "not_requested"
+  },
+  {
+    "id": "rsi-audit-2026",
+    "title": "Auditing the Product, Not the Recursion: The Evaluation Evidence Behind Recursive Self-Improvement Claims",
+    "path": "sources/library/rsi-audit-2026/README.md",
+    "topic_ids": [
+      "rsi-evaluation",
+      "rsi-evolution",
+      "rsi-loop",
+      "rsi-memory"
+    ],
+    "module_ids": [
+      "rsi"
+    ],
+    "archive_status": "not_requested"
+  },
+  {
+    "id": "rsi-hyperagents-2026",
+    "title": "Hyperagents",
+    "path": "sources/library/rsi-hyperagents-2026/README.md",
+    "topic_ids": [
+      "rsi-evaluation",
+      "rsi-evolution",
+      "rsi-loop",
+      "rsi-memory"
+    ],
+    "module_ids": [
+      "rsi"
+    ],
+    "archive_status": "not_requested"
   }
 ]
