@@ -1,9 +1,9 @@
 {
-  "date": "2026-11-25",
-  "module": "inference",
-  "topic": "kv-cache",
-  "reason": "七模块轮换；模块内按登记顺序持续推进",
+  "date": "2026-11-26",
+  "module": "rsi",
+  "topic": "rsi-evolution",
+  "reason": "按学习日轮换；同组模块交替，模块内按登记顺序推进",
   "review_due": false,
-  "learning_objective": "估算不同请求的缓存",
-  "deliverable": "做一张请求长度表，计算有效KV、padding布局与分页布局的估计值。再列出跨请求复用所需身份：模型版本、adapter、token序列、位置与缓存精度等，并设计一个不兼容前缀的反例。"
+  "learning_objective": "设计参数与框架交叉实验",
+  "deliverable": "四格归因表、候选前沿及改进器对照"
 }
