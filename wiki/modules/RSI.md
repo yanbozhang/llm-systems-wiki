@@ -2,18 +2,27 @@
 
 ## 系统架构
 
+![RSI：候选改进、独立准入、拒绝回退与改进器的单独评估](../../assets/architecture-rsi.svg)
+
+[查看完整架构图](../../assets/architecture-rsi.svg)。系统改进与改进器改进分开归因；验证器不能由候选任意改写。
+
+<details>
+<summary>查看架构图权威源码（Mermaid）</summary>
+
 ```mermaid
 flowchart LR
-  Version["当前系统版本"] --> Run["执行任务并保存轨迹"]
-  Run --> Propose["改进器提出有限修改"]
-  Propose --> Candidate["候选：参数 / 记忆 / 技能 / 代码"]
-  Candidate --> Gate["独立验证与旧能力回放"]
+  Version["当前系统版本"] --> Run["执行任务<br/>并保存轨迹"]
+  Run --> Propose["改进器提出<br/>有限修改"]
+  Propose --> Candidate["候选：参数 / 记忆<br/>技能 / 代码"]
+  Candidate --> Gate["独立验证<br/>与旧能力回放"]
   Gate -->|拒绝并记账| Version
   Gate -->|接收、留档、可回退| Next["下一系统版本"]
   Next --> Run
-  Gate --> Meta["同起点同预算评估改进器"]
+  Gate --> Meta["同起点、同预算<br/>评估改进器"]
   Meta -->|单独证明后更新| Propose
 ```
+
+</details>
 
 ## 系统说明
 

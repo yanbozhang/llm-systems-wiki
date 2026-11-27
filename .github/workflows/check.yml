@@ -30,6 +30,8 @@ jobs:
         run: python scripts/source_library.py check
       - name: 知识与能力地图同步
         run: python scripts/render_maps.py --check
+      - name: 模块架构图与权威源同步
+        run: python scripts/render_diagrams.py --check
       - name: 单进程维护工具与教学示例测试
         env:
           PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'

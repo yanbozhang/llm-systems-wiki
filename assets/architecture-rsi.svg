@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="830" viewBox="0 0 1040 830" role="img" aria-labelledby="title description">
+<title id="title">RSI · 系统架构</title><desc id="description">候选不能改写验证器；改进器更新另做同起点、同预算对照，不由系统增益直接推出。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#596f88" stroke-width="1.5"/></marker></defs>
+<rect width="1040" height="830" rx="16" fill="#ffffff"/>
+<g font-family="Inter, PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#183654">
+<text x="32" y="49" font-size="30" font-weight="700">RSI · 系统架构</text>
+<text x="32" y="81" font-size="17" fill="#607286">先看边界与主路径，再看状态、反馈与约束</text>
+<rect x="28" y="112" width="984" height="644" rx="12" fill="#f4effc" fill-opacity=".4" stroke="#aa91ce" stroke-opacity=".45"/>
+<text x="46" y="141" font-size="17" font-weight="600" fill="#664492">跨任务改进 · 候选与准入分离</text>
+<path d="M270 224 L420 224" fill="none" stroke="#596f88" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M620 224 L770 224" fill="none" stroke="#596f88" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M870 268 L870 405" fill="none" stroke="#596f88" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M770 449 L620 449" fill="none" stroke="#596f88" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M470 405 L470 335 L170 335 L170 268" fill="none" stroke="#596f88" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M420 449 L270 449" fill="none" stroke="#596f88" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M70 449 L45 449 L45 155 L520 155 L520 180" fill="none" stroke="#596f88" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M520 493 L520 679 L770 679" fill="none" stroke="#596f88" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M970 679 L990 679 L990 224 L970 224" fill="none" stroke="#596f88" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="70" y="180" width="200" height="88" rx="9" fill="#eaf7f5" stroke="#74aaa4" stroke-width="1.5"/>
+<text x="170.0" y="231.0" text-anchor="middle" font-size="20" font-weight="550" fill="#175e59">当前系统版本</text>
+<rect x="420" y="180" width="200" height="88" rx="9" fill="#eef4ff" stroke="#728eb7" stroke-width="1.5"/>
+<text x="520.0" y="218.5" text-anchor="middle" font-size="20" font-weight="550" fill="#183654">执行任务</text>
+<text x="520.0" y="243.5" text-anchor="middle" font-size="20" font-weight="550" fill="#183654">并保存轨迹</text>
+<rect x="770" y="180" width="200" height="88" rx="9" fill="#f4effc" stroke="#aa91ce" stroke-width="1.5"/>
+<text x="870.0" y="218.5" text-anchor="middle" font-size="20" font-weight="550" fill="#664492">改进器提出</text>
+<text x="870.0" y="243.5" text-anchor="middle" font-size="20" font-weight="550" fill="#664492">有限修改</text>
+<rect x="70" y="405" width="200" height="88" rx="9" fill="#eaf7f5" stroke="#74aaa4" stroke-width="1.5"/>
+<text x="170.0" y="456.0" text-anchor="middle" font-size="20" font-weight="550" fill="#175e59">下一系统版本</text>
+<rect x="420" y="405" width="200" height="88" rx="9" fill="#edf7ee" stroke="#82a78a" stroke-width="1.5"/>
+<text x="520.0" y="443.5" text-anchor="middle" font-size="20" font-weight="550" fill="#285b39">独立验证</text>
+<text x="520.0" y="468.5" text-anchor="middle" font-size="20" font-weight="550" fill="#285b39">与旧能力回放</text>
+<rect x="770" y="405" width="200" height="88" rx="9" fill="#f4effc" stroke="#aa91ce" stroke-width="1.5"/>
+<text x="870.0" y="443.5" text-anchor="middle" font-size="20" font-weight="550" fill="#664492">候选：参数 / 记忆</text>
+<text x="870.0" y="468.5" text-anchor="middle" font-size="20" font-weight="550" fill="#664492">技能 / 代码</text>
+<rect x="770" y="635" width="200" height="88" rx="9" fill="#edf7ee" stroke="#82a78a" stroke-width="1.5"/>
+<text x="870.0" y="673.5" text-anchor="middle" font-size="20" font-weight="550" fill="#285b39">同起点、同预算</text>
+<text x="870.0" y="698.5" text-anchor="middle" font-size="20" font-weight="550" fill="#285b39">评估改进器</text>
+<text x="300" y="319" text-anchor="middle" font-size="16" fill="#425a73" stroke="#ffffff" stroke-width="5" paint-order="stroke">拒绝并记账</text>
+<text x="346" y="475" text-anchor="middle" font-size="16" fill="#425a73" stroke="#ffffff" stroke-width="5" paint-order="stroke">接收 / 留档 / 可回退</text>
+<text x="830" y="598" text-anchor="middle" font-size="16" fill="#425a73" stroke="#ffffff" stroke-width="5" paint-order="stroke">单独证明后更新</text>
+<text x="32" y="785" font-size="17" fill="#607286">候选不能改写验证器；改进器更新另做同起点、同预算对照，不由系统增益直接推出。</text>
+</g></svg>

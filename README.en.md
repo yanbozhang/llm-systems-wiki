@@ -20,6 +20,8 @@ The website supports search, module filters, learning paths, article navigation,
 
 [Browse the library](https://yanbozhang.github.io/llm-systems-wiki/library/) · [Learning paths](https://yanbozhang.github.io/llm-systems-wiki/paths/) · [Capability map](docs/能力地图.md) · [Agent framework guide](docs/Agent开源方案导读.md) · [Changelog](CHANGELOG.md)
 
+[Full knowledge diagram](assets/知识地图.svg) · [Full capability diagram](assets/能力地图.svg) · [Editable diagram sources](docs/图示索引.md). Diagram labels remain in Chinese.
+
 [![Knowledge library website preview](assets/site-preview.png)](https://yanbozhang.github.io/llm-systems-wiki/)
 
 ## Choose a starting point

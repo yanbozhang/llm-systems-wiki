@@ -17,3 +17,9 @@ PR运行可复用的check工作流，包含Python检查和测试、网站类型�
 收藏与主题保存在本机浏览器；存储不可用时不影响阅读。中英切换覆盖导航与操作界面，原有知识正文仍为中文。README.md和README.en.md提供完整的两种仓库介绍。
 
 测试与交互验收依据见[实现契约](实现契约.md)及仓库贡献指南。自动部署只在检查通过后发布；固定更新时间不是网站功能或内容承诺。
+
+## 图示展示
+
+全部正文图示共用 `src/client/diagrams.ts` 控件；Mermaid 主题和长横向流程的纵向适配位于 `src/lib/diagram-theme.ts`。静态 SVG 与局部 Mermaid 都支持缩放、原始比例、适应宽度、全屏、原图下载和键盘操作。深色页面保留浅色图纸，不对图内语义色反色。
+
+模块使用 `assets/architecture-*.svg` 固定布局，原 Markdown 的折叠 Mermaid 是唯一内容源，网站不重复渲染源码区。修改模块源图后在仓库根目录运行 `python scripts/render_diagrams.py --write`；地图运行 `python scripts/render_maps.py --write`。CI 检查导出是否同步，构建测试核对站点子路径与真实产物。详细规范与验证边界见 [绘图标准](../docs/GitHub仓库绘图标准指南.md) 和 [验收记录](../docs/绘图优化与验收记录.md)。

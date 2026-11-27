@@ -1,40 +1,81 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="710" viewBox="0 0 1100 710" role="img" aria-labelledby="title description">
-<title id="title">8模块能力地图</title><desc id="description">50个主题 · 150个知识点 · 32项分层能力；先系统架构，再主题总览，最后细化知识点。</desc>
-<rect width="1100" height="710" fill="#f8f9f6"/>
-<g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#202824">
-<text x="35" y="48" font-size="28" font-weight="700">8模块能力地图</text>
-<text x="35" y="78" font-size="16" fill="#59675f">50个主题 · 150个知识点 · 32项分层能力</text>
-<rect x="35" y="105" width="500" height="116" rx="12" fill="#ffffff" stroke="#d9e0d9"/>
-<text x="57" y="140" font-size="21" font-weight="650">模型网络</text>
-<text x="57" y="172" font-size="15" fill="#3158d4">理解 → 推导 → 实践 → 评估</text>
-<text x="57" y="200" font-size="13" fill="#59675f">4个主题 · 12个知识点 · 4项能力</text>
-<rect x="570" y="105" width="500" height="116" rx="12" fill="#ffffff" stroke="#d9e0d9"/>
-<text x="592" y="140" font-size="21" font-weight="650">训练</text>
-<text x="592" y="172" font-size="15" fill="#3158d4">理解 → 推导 → 实践 → 评估</text>
-<text x="592" y="200" font-size="13" fill="#59675f">4个主题 · 12个知识点 · 4项能力</text>
-<rect x="35" y="245" width="500" height="116" rx="12" fill="#ffffff" stroke="#d9e0d9"/>
-<text x="57" y="280" font-size="21" font-weight="650">推理</text>
-<text x="57" y="312" font-size="15" fill="#3158d4">理解 → 推导 → 实践 → 评估</text>
-<text x="57" y="340" font-size="13" fill="#59675f">4个主题 · 12个知识点 · 4项能力</text>
-<rect x="570" y="245" width="500" height="116" rx="12" fill="#ffffff" stroke="#d9e0d9"/>
-<text x="592" y="280" font-size="21" font-weight="650">Harness</text>
-<text x="592" y="312" font-size="15" fill="#3158d4">理解 → 推导 → 实践 → 评估</text>
-<text x="592" y="340" font-size="13" fill="#59675f">6个主题 · 18个知识点 · 4项能力</text>
-<rect x="35" y="385" width="500" height="116" rx="12" fill="#ffffff" stroke="#d9e0d9"/>
-<text x="57" y="420" font-size="21" font-weight="650">知识库</text>
-<text x="57" y="452" font-size="15" fill="#3158d4">理解 → 推导 → 实践 → 评估</text>
-<text x="57" y="480" font-size="13" fill="#59675f">5个主题 · 15个知识点 · 4项能力</text>
-<rect x="570" y="385" width="500" height="116" rx="12" fill="#ffffff" stroke="#d9e0d9"/>
-<text x="592" y="420" font-size="21" font-weight="650">业务Agent</text>
-<text x="592" y="452" font-size="15" fill="#3158d4">理解 → 推导 → 实践 → 评估</text>
-<text x="592" y="480" font-size="13" fill="#59675f">12个主题 · 36个知识点 · 4项能力</text>
-<rect x="35" y="525" width="500" height="116" rx="12" fill="#ffffff" stroke="#d9e0d9"/>
-<text x="57" y="560" font-size="21" font-weight="650">Benchmark</text>
-<text x="57" y="592" font-size="15" fill="#3158d4">理解 → 推导 → 实践 → 评估</text>
-<text x="57" y="620" font-size="13" fill="#59675f">11个主题 · 33个知识点 · 4项能力</text>
-<rect x="570" y="525" width="500" height="116" rx="12" fill="#ffffff" stroke="#d9e0d9"/>
-<text x="592" y="560" font-size="21" font-weight="650">RSI</text>
-<text x="592" y="592" font-size="15" fill="#3158d4">理解 → 推导 → 实践 → 评估</text>
-<text x="592" y="620" font-size="13" fill="#59675f">4个主题 · 12个知识点 · 4项能力</text>
-<text x="35" y="690" font-size="13" fill="#59675f">由knowledge清单生成；教学模型与真实复现实验保持区分。</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="1160" viewBox="0 0 1120 1160" role="img" aria-labelledby="title description">
+<title id="title">8模块能力地图</title><desc id="description">50个主题 · 150个知识点 · 32项分层能力；模块为学习分类，不表示严格执行顺序。全部条目由权威清单生成。</desc>
+<rect width="1120" height="1160" rx="16" fill="#ffffff"/>
+<g font-family="Inter, PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#183654">
+<text x="36" y="36" font-size="15" letter-spacing="3" fill="#607286">LLM SYSTEMS / LEARNING ATLAS</text>
+<text x="36" y="77" font-size="32" font-weight="700">8模块能力地图</text>
+<text x="36" y="109" font-size="19" fill="#607286">50个主题 · 150个知识点 · 32项分层能力</text>
+<rect x="36" y="138" width="512" height="226" rx="12" fill="#f6f8fc" stroke="#ccd6e3"/>
+<rect x="54" y="159" width="36" height="30" rx="7" fill="#e5edfa"/>
+<text x="72" y="181" text-anchor="middle" font-size="18" fill="#3158a0">01</text>
+<text x="102" y="182" font-size="25" font-weight="650">模型网络</text>
+<text x="56" y="343" font-size="18" fill="#607286">4 主题 / 12 知识点 / 4 能力</text>
+<text x="56" y="220" font-size="19">理解 · 解释token到logits的计算路径</text>
+<text x="56" y="247" font-size="19">推导 · 推导注意力、位置与参数预算</text>
+<text x="56" y="274" font-size="19">实践 · 设计小规模结构正确性实验</text>
+<text x="56" y="301" font-size="19">评估 · 区分结构、数值与内核性能变化</text>
+<rect x="572" y="138" width="512" height="226" rx="12" fill="#f6f8fc" stroke="#ccd6e3"/>
+<rect x="590" y="159" width="36" height="30" rx="7" fill="#e5edfa"/>
+<text x="608" y="181" text-anchor="middle" font-size="18" fill="#3158a0">02</text>
+<text x="638" y="182" font-size="25" font-weight="650">训练</text>
+<text x="592" y="343" font-size="18" fill="#607286">4 主题 / 12 知识点 / 4 能力</text>
+<text x="592" y="220" font-size="19">理解 · 区分预训练、SFT、偏好与策略优化</text>
+<text x="592" y="247" font-size="19">推导 · 计算损失、低秩参数与相对优势</text>
+<text x="592" y="274" font-size="19">实践 · 设计数据切分、模板与奖励检查</text>
+<text x="592" y="301" font-size="19">评估 · 以独立任务和污染分析判断训练效果</text>
+<rect x="36" y="386" width="512" height="226" rx="12" fill="#f6f8fc" stroke="#ccd6e3"/>
+<rect x="54" y="407" width="36" height="30" rx="7" fill="#e5edfa"/>
+<text x="72" y="429" text-anchor="middle" font-size="18" fill="#3158a0">03</text>
+<text x="102" y="430" font-size="25" font-weight="650">推理</text>
+<text x="56" y="591" font-size="18" fill="#607286">4 主题 / 12 知识点 / 4 能力</text>
+<text x="56" y="468" font-size="19">理解 · 解释Prefill、Decode与缓存调度</text>
+<text x="56" y="495" font-size="19">推导 · 计算KV体积、块分配与时延</text>
+<text x="56" y="522" font-size="19">实践 · 设计固定版本服务对照实验</text>
+<text x="56" y="549" font-size="19">评估 · 综合质量、吞吐、长尾与失败率选运行点</text>
+<rect x="572" y="386" width="512" height="226" rx="12" fill="#f6f8fc" stroke="#ccd6e3"/>
+<rect x="590" y="407" width="36" height="30" rx="7" fill="#e5edfa"/>
+<text x="608" y="429" text-anchor="middle" font-size="18" fill="#3158a0">04</text>
+<text x="638" y="430" font-size="25" font-weight="650">Harness</text>
+<text x="592" y="591" font-size="18" fill="#607286">6 主题 / 18 知识点 / 4 能力</text>
+<text x="592" y="468" font-size="19">理解 · 解释模型、工具、上下文和宿主责任</text>
+<text x="592" y="495" font-size="19">推导 · 推演状态转移、预算与恢复条件</text>
+<text x="592" y="522" font-size="19">实践 · 设计有回读能力的任务执行循环</text>
+<text x="592" y="549" font-size="19">评估 · 评估恢复、记忆有效性与边界失效</text>
+<rect x="36" y="634" width="512" height="226" rx="12" fill="#f6f8fc" stroke="#ccd6e3"/>
+<rect x="54" y="655" width="36" height="30" rx="7" fill="#e5edfa"/>
+<text x="72" y="677" text-anchor="middle" font-size="18" fill="#3158a0">05</text>
+<text x="102" y="678" font-size="25" font-weight="650">知识库</text>
+<text x="56" y="839" font-size="18" fill="#607286">5 主题 / 15 知识点 / 4 能力</text>
+<text x="56" y="716" font-size="19">理解 · 解释来源、索引、声明和Wiki职责</text>
+<text x="56" y="743" font-size="19">推导 · 计算检索指标并推演更新影响链</text>
+<text x="56" y="770" font-size="19">实践 · 设计可追溯的小型RAG或Wiki实验</text>
+<text x="56" y="797" font-size="19">评估 · 评估引用支持、更新一致性与维护成本</text>
+<rect x="572" y="634" width="512" height="226" rx="12" fill="#f6f8fc" stroke="#ccd6e3"/>
+<rect x="590" y="655" width="36" height="30" rx="7" fill="#e5edfa"/>
+<text x="608" y="677" text-anchor="middle" font-size="18" fill="#3158a0">06</text>
+<text x="638" y="678" font-size="25" font-weight="650">业务Agent</text>
+<text x="592" y="839" font-size="18" fill="#607286">12 主题 / 36 知识点 / 4 能力</text>
+<text x="592" y="716" font-size="19">理解 · 区分感知、动作和业务终态</text>
+<text x="592" y="743" font-size="19">推导 · 推演坐标、任务状态与重试结果</text>
+<text x="592" y="770" font-size="19">实践 · 设计可回查的GUI或代码任务</text>
+<text x="592" y="797" font-size="19">评估 · 按执行证据和协议比较系统可靠性</text>
+<rect x="36" y="882" width="512" height="226" rx="12" fill="#f6f8fc" stroke="#ccd6e3"/>
+<rect x="54" y="903" width="36" height="30" rx="7" fill="#e5edfa"/>
+<text x="72" y="925" text-anchor="middle" font-size="18" fill="#3158a0">07</text>
+<text x="102" y="926" font-size="25" font-weight="650">Benchmark</text>
+<text x="56" y="1087" font-size="18" fill="#607286">11 主题 / 33 知识点 / 4 能力</text>
+<text x="56" y="964" font-size="19">理解 · 识别基准任务、协议与测量范围</text>
+<text x="56" y="991" font-size="19">推导 · 计算统计、排名和采样指标</text>
+<text x="56" y="1018" font-size="19">实践 · 设计可复现的多类评测协议</text>
+<text x="56" y="1045" font-size="19">评估 · 校准裁判、检查污染并解释结论边界</text>
+<rect x="572" y="882" width="512" height="226" rx="12" fill="#f6f8fc" stroke="#ccd6e3"/>
+<rect x="590" y="903" width="36" height="30" rx="7" fill="#e5edfa"/>
+<text x="608" y="925" text-anchor="middle" font-size="18" fill="#3158a0">08</text>
+<text x="638" y="926" font-size="25" font-weight="650">RSI</text>
+<text x="592" y="1087" font-size="18" fill="#607286">4 主题 / 12 知识点 / 4 能力</text>
+<text x="592" y="964" font-size="19">理解 · 区分任务重试、跨任务改进与改进器更新</text>
+<text x="592" y="991" font-size="19">推导 · 计算准入条件、能力保留与同预算改进效率</text>
+<text x="592" y="1018" font-size="19">实践 · 设计带版本、来源和回退路径的有限技能更新</text>
+<text x="592" y="1045" font-size="19">评估 · 用四类基线与同起点对照区分产物和过程收益</text>
+<text x="36" y="1141" font-size="18" fill="#607286">由 knowledge 清单生成；编号表示目录顺序，不代表依赖关系或学习成果。</text>
 </g></svg>

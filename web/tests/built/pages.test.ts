@@ -53,6 +53,14 @@ test("模块：系统架构图先于主题卡片，八个模块均有真实概�
       const overview=get(doc,'#module-system'),catalog=get(doc,'#module-topics');
       assert.ok(overview.compareDocumentPosition(catalog)&4,module.id);
       assert.ok(overview.querySelector('[data-diagram]'),module.id);
+      const diagram = get<HTMLImageElement>(overview, `img[src$="architecture-${module.id}.svg"]`);
+      assert.ok(diagram.alt.length > 10, module.id);
+      assert.equal(diagram.getAttribute('src'), `${base}/architecture-${module.id}.svg`);
+      assert.equal(
+        readFileSync(resolve(repo, `web/dist/architecture-${module.id}.svg`), 'utf8'),
+        readFileSync(resolve(repo, `assets/architecture-${module.id}.svg`), 'utf8'),
+      );
+      assert.ok(overview.querySelector('details [data-diagram]'), module.id);
       assert.match(overview.textContent||'',/系统架构[\s\S]*系统说明/);
       assert.ok(doc.querySelectorAll('[data-topic-card]').length>0,module.id);
     });

@@ -1,40 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="710" viewBox="0 0 1100 710" role="img" aria-labelledby="title description">
-<title id="title">8模块知识地图</title><desc id="description">50个主题 · 150个知识点 · 32项分层能力；先系统架构，再主题总览，最后细化知识点。</desc>
-<rect width="1100" height="710" fill="#f8f9f6"/>
-<g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#202824">
-<text x="35" y="48" font-size="28" font-weight="700">8模块知识地图</text>
-<text x="35" y="78" font-size="16" fill="#59675f">50个主题 · 150个知识点 · 32项分层能力</text>
-<rect x="35" y="105" width="500" height="116" rx="12" fill="#ffffff" stroke="#d9e0d9"/>
-<text x="57" y="140" font-size="21" font-weight="650">模型网络</text>
-<text x="57" y="172" font-size="15" fill="#3158d4">系统架构 → 主题总览 → 细化知识点</text>
-<text x="57" y="200" font-size="13" fill="#59675f">4个主题 · 12个知识点 · 4项能力</text>
-<rect x="570" y="105" width="500" height="116" rx="12" fill="#ffffff" stroke="#d9e0d9"/>
-<text x="592" y="140" font-size="21" font-weight="650">训练</text>
-<text x="592" y="172" font-size="15" fill="#3158d4">系统架构 → 主题总览 → 细化知识点</text>
-<text x="592" y="200" font-size="13" fill="#59675f">4个主题 · 12个知识点 · 4项能力</text>
-<rect x="35" y="245" width="500" height="116" rx="12" fill="#ffffff" stroke="#d9e0d9"/>
-<text x="57" y="280" font-size="21" font-weight="650">推理</text>
-<text x="57" y="312" font-size="15" fill="#3158d4">系统架构 → 主题总览 → 细化知识点</text>
-<text x="57" y="340" font-size="13" fill="#59675f">4个主题 · 12个知识点 · 4项能力</text>
-<rect x="570" y="245" width="500" height="116" rx="12" fill="#ffffff" stroke="#d9e0d9"/>
-<text x="592" y="280" font-size="21" font-weight="650">Harness</text>
-<text x="592" y="312" font-size="15" fill="#3158d4">系统架构 → 主题总览 → 细化知识点</text>
-<text x="592" y="340" font-size="13" fill="#59675f">6个主题 · 18个知识点 · 4项能力</text>
-<rect x="35" y="385" width="500" height="116" rx="12" fill="#ffffff" stroke="#d9e0d9"/>
-<text x="57" y="420" font-size="21" font-weight="650">知识库</text>
-<text x="57" y="452" font-size="15" fill="#3158d4">系统架构 → 主题总览 → 细化知识点</text>
-<text x="57" y="480" font-size="13" fill="#59675f">5个主题 · 15个知识点 · 4项能力</text>
-<rect x="570" y="385" width="500" height="116" rx="12" fill="#ffffff" stroke="#d9e0d9"/>
-<text x="592" y="420" font-size="21" font-weight="650">业务Agent</text>
-<text x="592" y="452" font-size="15" fill="#3158d4">系统架构 → 主题总览 → 细化知识点</text>
-<text x="592" y="480" font-size="13" fill="#59675f">12个主题 · 36个知识点 · 4项能力</text>
-<rect x="35" y="525" width="500" height="116" rx="12" fill="#ffffff" stroke="#d9e0d9"/>
-<text x="57" y="560" font-size="21" font-weight="650">Benchmark</text>
-<text x="57" y="592" font-size="15" fill="#3158d4">系统架构 → 主题总览 → 细化知识点</text>
-<text x="57" y="620" font-size="13" fill="#59675f">11个主题 · 33个知识点 · 4项能力</text>
-<rect x="570" y="525" width="500" height="116" rx="12" fill="#ffffff" stroke="#d9e0d9"/>
-<text x="592" y="560" font-size="21" font-weight="650">RSI</text>
-<text x="592" y="592" font-size="15" fill="#3158d4">系统架构 → 主题总览 → 细化知识点</text>
-<text x="592" y="620" font-size="13" fill="#59675f">4个主题 · 12个知识点 · 4项能力</text>
-<text x="35" y="690" font-size="13" fill="#59675f">由knowledge清单生成；教学模型与真实复现实验保持区分。</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="960" viewBox="0 0 1120 960" role="img" aria-labelledby="title description">
+<title id="title">8模块知识地图</title><desc id="description">50个主题 · 150个知识点 · 32项分层能力；模块为学习分类，不表示严格执行顺序。预览每模块首项，完整地图保留全部条目。</desc>
+<rect width="1120" height="960" rx="16" fill="#ffffff"/>
+<g font-family="Inter, PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#183654">
+<text x="36" y="36" font-size="15" letter-spacing="3" fill="#607286">LLM SYSTEMS / LEARNING ATLAS</text>
+<text x="36" y="77" font-size="32" font-weight="700">8模块知识地图</text>
+<text x="36" y="109" font-size="19" fill="#607286">50个主题 · 150个知识点 · 32项分层能力</text>
+<rect x="36" y="138" width="512" height="176" rx="12" fill="#f6f8fc" stroke="#ccd6e3"/>
+<rect x="54" y="159" width="36" height="30" rx="7" fill="#e5edfa"/>
+<text x="72" y="181" text-anchor="middle" font-size="18" fill="#3158a0">01</text>
+<text x="102" y="182" font-size="25" font-weight="650">模型网络</text>
+<text x="56" y="293" font-size="18" fill="#607286">4 主题 / 12 知识点 / 4 能力</text>
+<text x="56" y="220" font-size="19">Transformer与自回归生成</text>
+<rect x="572" y="138" width="512" height="176" rx="12" fill="#f6f8fc" stroke="#ccd6e3"/>
+<rect x="590" y="159" width="36" height="30" rx="7" fill="#e5edfa"/>
+<text x="608" y="181" text-anchor="middle" font-size="18" fill="#3158a0">02</text>
+<text x="638" y="182" font-size="25" font-weight="650">训练</text>
+<text x="592" y="293" font-size="18" fill="#607286">4 主题 / 12 知识点 / 4 能力</text>
+<text x="592" y="220" font-size="19">预训练目标与数据</text>
+<rect x="36" y="336" width="512" height="176" rx="12" fill="#f6f8fc" stroke="#ccd6e3"/>
+<rect x="54" y="357" width="36" height="30" rx="7" fill="#e5edfa"/>
+<text x="72" y="379" text-anchor="middle" font-size="18" fill="#3158a0">03</text>
+<text x="102" y="380" font-size="25" font-weight="650">推理</text>
+<text x="56" y="491" font-size="18" fill="#607286">4 主题 / 12 知识点 / 4 能力</text>
+<text x="56" y="418" font-size="19">Prefill与Decode</text>
+<rect x="572" y="336" width="512" height="176" rx="12" fill="#f6f8fc" stroke="#ccd6e3"/>
+<rect x="590" y="357" width="36" height="30" rx="7" fill="#e5edfa"/>
+<text x="608" y="379" text-anchor="middle" font-size="18" fill="#3158a0">04</text>
+<text x="638" y="380" font-size="25" font-weight="650">Harness</text>
+<text x="592" y="491" font-size="18" fill="#607286">6 主题 / 18 知识点 / 4 能力</text>
+<text x="592" y="418" font-size="19">Harness任务循环</text>
+<rect x="36" y="534" width="512" height="176" rx="12" fill="#f6f8fc" stroke="#ccd6e3"/>
+<rect x="54" y="555" width="36" height="30" rx="7" fill="#e5edfa"/>
+<text x="72" y="577" text-anchor="middle" font-size="18" fill="#3158a0">05</text>
+<text x="102" y="578" font-size="25" font-weight="650">知识库</text>
+<text x="56" y="689" font-size="18" fill="#607286">5 主题 / 15 知识点 / 4 能力</text>
+<text x="56" y="616" font-size="19">RAG与引用回答</text>
+<rect x="572" y="534" width="512" height="176" rx="12" fill="#f6f8fc" stroke="#ccd6e3"/>
+<rect x="590" y="555" width="36" height="30" rx="7" fill="#e5edfa"/>
+<text x="608" y="577" text-anchor="middle" font-size="18" fill="#3158a0">06</text>
+<text x="638" y="578" font-size="25" font-weight="650">业务Agent</text>
+<text x="592" y="689" font-size="18" fill="#607286">12 主题 / 36 知识点 / 4 能力</text>
+<text x="592" y="616" font-size="19">业务Agent任务闭环</text>
+<rect x="36" y="732" width="512" height="176" rx="12" fill="#f6f8fc" stroke="#ccd6e3"/>
+<rect x="54" y="753" width="36" height="30" rx="7" fill="#e5edfa"/>
+<text x="72" y="775" text-anchor="middle" font-size="18" fill="#3158a0">07</text>
+<text x="102" y="776" font-size="25" font-weight="650">Benchmark</text>
+<text x="56" y="887" font-size="18" fill="#607286">11 主题 / 33 知识点 / 4 能力</text>
+<text x="56" y="814" font-size="19">评测协议与可复现性</text>
+<rect x="572" y="732" width="512" height="176" rx="12" fill="#f6f8fc" stroke="#ccd6e3"/>
+<rect x="590" y="753" width="36" height="30" rx="7" fill="#e5edfa"/>
+<text x="608" y="775" text-anchor="middle" font-size="18" fill="#3158a0">08</text>
+<text x="638" y="776" font-size="25" font-weight="650">RSI</text>
+<text x="592" y="887" font-size="18" fill="#607286">4 主题 / 12 知识点 / 4 能力</text>
+<text x="592" y="814" font-size="19">RSI改进闭环与版本准入</text>
+<text x="36" y="941" font-size="18" fill="#607286">预览仅列各模块首项；完整清单见原图。学习目标不等于已完成真实复现实验。</text>
 </g></svg>

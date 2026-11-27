@@ -11,6 +11,12 @@
   --sidebar: #f5f6f2;
   --shadow: 0 10px 30px #20282408;
   --radius: 14px;
+  --diagram-sheet: #fff;
+  --diagram-ink: #183654;
+  --diagram-muted: #52677d;
+  --diagram-border: #ccd6e3;
+  --diagram-toolbar: #f6f8fc;
+  --diagram-accent: #3158a0;
   color-scheme: light;
   font-family:
     Inter,

@@ -3,40 +3,74 @@ import argparse
 from html import escape
 import json
 from pathlib import Path
+import unicodedata
 
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def render(root=ROOT, capabilities=False):
+def text_lines(text, limit=25):
+    lines, current, used = [], "", 0
+    for character in text:
+        size = 1 if unicodedata.east_asian_width(character) in "WF" else 0.55
+        if used + size > limit and current:
+            lines.append(current)
+            current, used = "", 0
+        current += character
+        used += size
+    return lines + ([current] if current else [])
+
+
+def render(root=ROOT, capabilities=False, preview=False):
     def load(name):
         return json.loads((Path(root) / "knowledge" / (name + ".json")).read_text(encoding="utf-8"))
     modules, topics, units, goals = (load(name) for name in ("modules", "topics", "units", "capabilities"))
-    height = 150 + ((len(modules) + 1) // 2) * 140
     title = f'{len(modules)}模块{"能力" if capabilities else "知识"}地图'
     subtitle = f'{len(topics)}个主题 · {len(units)}个知识点 · {len(goals)}项分层能力'
-    parts = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="{height}" viewBox="0 0 1100 {height}" role="img" aria-labelledby="title description">',
-        f'<title id="title">{title}</title><desc id="description">{subtitle}；先系统架构，再主题总览，最后细化知识点。</desc>',
-        f'<rect width="1100" height="{height}" fill="#f8f9f6"/>',
-        '<g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#202824">',
-        f'<text x="35" y="48" font-size="28" font-weight="700">{title}</text>',
-        f'<text x="35" y="78" font-size="16" fill="#59675f">{subtitle}</text>',
+    levels = {"understand": "理解", "derive": "推导", "build": "实践", "practice": "实践", "evaluate": "评估"}
+    cards = []
+    for module in modules:
+        selected = [topic for topic in topics if topic["module"] == module["id"]]
+        selected_ids = {topic["id"] for topic in selected}
+        selected_goals = [goal for goal in goals if goal["module"] == module["id"]]
+        entries = [
+            f'{levels.get(goal["level"], goal["level"])} · {goal["outcome"]}'
+            for goal in selected_goals
+        ] if capabilities else [topic["title"] for topic in selected]
+        lines = [line for entry in (entries[:1] if preview else entries) for line in text_lines(entry)]
+        count = sum(unit["topic"] in selected_ids for unit in units)
+        detail = f'{len(selected)} 主题 / {count} 知识点 / {len(selected_goals)} 能力'
+        cards.append((module, lines, detail))
+    row_heights = [
+        max(176, 118 + max(len(card[1]) for card in cards[index:index + 2]) * 27)
+        for index in range(0, len(cards), 2)
     ]
-    for position, module in enumerate(modules):
-        left, top = 35 + (position % 2) * 535, 105 + (position // 2) * 140
-        selected = {topic["id"] for topic in topics if topic["module"] == module["id"]}
-        count = sum(unit["topic"] in selected for unit in units)
-        goal_count = sum(goal["module"] == module["id"] for goal in goals)
-        route = "理解 → 推导 → 实践 → 评估" if capabilities else "系统架构 → 主题总览 → 细化知识点"
-        detail = f'{len(selected)}个主题 · {count}个知识点 · {goal_count}项能力'
+    height = 190 + sum(row_heights) + max(0, len(row_heights) - 1) * 22
+    parts = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="{height}" viewBox="0 0 1120 {height}" role="img" aria-labelledby="title description">',
+        f'<title id="title">{title}</title><desc id="description">{subtitle}；模块为学习分类，不表示严格执行顺序。{"预览每模块首项，完整地图保留全部条目。" if preview else "全部条目由权威清单生成。"}</desc>',
+        f'<rect width="1120" height="{height}" rx="16" fill="#ffffff"/>',
+        '<g font-family="Inter, PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#183654">',
+        '<text x="36" y="36" font-size="15" letter-spacing="3" fill="#607286">LLM SYSTEMS / LEARNING ATLAS</text>',
+        f'<text x="36" y="77" font-size="32" font-weight="700">{title}</text>',
+        f'<text x="36" y="109" font-size="19" fill="#607286">{subtitle}</text>',
+    ]
+    for position, (module, lines, detail) in enumerate(cards):
+        row = position // 2
+        left = 36 + (position % 2) * 536
+        top = 138 + sum(row_heights[:row]) + row * 22
+        card_height = row_heights[row]
         parts.extend([
-            f'<rect x="{left}" y="{top}" width="500" height="116" rx="12" fill="#ffffff" stroke="#d9e0d9"/>',
-            f'<text x="{left + 22}" y="{top + 35}" font-size="21" font-weight="650">{escape(module["title"])}</text>',
-            f'<text x="{left + 22}" y="{top + 67}" font-size="15" fill="#3158d4">{route}</text>',
-            f'<text x="{left + 22}" y="{top + 95}" font-size="13" fill="#59675f">{detail}</text>',
+            f'<rect x="{left}" y="{top}" width="512" height="{card_height}" rx="12" fill="#f6f8fc" stroke="#ccd6e3"/>',
+            f'<rect x="{left + 18}" y="{top + 21}" width="36" height="30" rx="7" fill="#e5edfa"/>',
+            f'<text x="{left + 36}" y="{top + 43}" text-anchor="middle" font-size="18" fill="#3158a0">{position + 1:02}</text>',
+            f'<text x="{left + 66}" y="{top + 44}" font-size="25" font-weight="650">{escape(module["title"])}</text>',
+            f'<text x="{left + 20}" y="{top + card_height - 21}" font-size="18" fill="#607286">{detail}</text>',
         ])
-    parts.extend([f'<text x="35" y="{height - 20}" font-size="13" fill="#59675f">由knowledge清单生成；教学模型与真实复现实验保持区分。</text>', '</g></svg>'])
+        for index, line in enumerate(lines):
+            parts.append(f'<text x="{left + 20}" y="{top + 82 + index * 27}" font-size="19">{escape(line)}</text>')
+    footer = "预览仅列各模块首项；完整清单见原图。学习目标不等于已完成真实复现实验。" if preview else "由 knowledge 清单生成；编号表示目录顺序，不代表依赖关系或学习成果。"
+    parts.extend([f'<text x="36" y="{height - 19}" font-size="18" fill="#607286">{footer}</text>', '</g></svg>'])
     return "\n".join(parts) + "\n"
 
 
@@ -47,8 +81,8 @@ def main(argv=None):
     args = parser.parse_args(argv)
     stale = []
     for name, is_capability in (("知识地图", False), ("能力地图", True)):
-        text = render(capabilities=is_capability)
         for suffix in ("", "预览"):
+            text = render(capabilities=is_capability, preview=bool(suffix))
             path = ROOT / "assets" / (name + suffix + ".svg")
             if args.write and not args.check:
                 path.write_text(text, encoding="utf-8")

@@ -2,15 +2,24 @@
 
 ## 系统架构
 
+![Benchmark：待验证主张、固定协议、运行证据与可追溯结论](../../assets/architecture-benchmark.svg)
+
+[查看完整架构图](../../assets/architecture-benchmark.svg)。结论必须保留版本、预算、方差和适用限制。
+
+<details>
+<summary>查看架构图权威源码（Mermaid）</summary>
+
 ```mermaid
 flowchart LR
-  Claim["待验证主张"] --> Protocol["任务、数据切分与预算"]
+  Claim["待验证主张"] --> Protocol["任务、数据切分<br/>与预算"]
   Protocol --> Run["固定版本运行"]
-  Run --> Evidence["输出、轨迹与成本"]
-  Evidence --> Judge["执行判定 / 人工校准"]
-  Judge --> Statistics["聚合、方差与对照"]
-  Statistics --> Report["可追溯结论与限制"]
+  Run --> Evidence["输出、轨迹<br/>与成本"]
+  Evidence --> Judge["执行判定<br/>人工校准"]
+  Judge --> Statistics["聚合、方差<br/>与对照"]
+  Statistics --> Report["可追溯结论<br/>与限制"]
 ```
+
+</details>
 
 ## 系统说明
 

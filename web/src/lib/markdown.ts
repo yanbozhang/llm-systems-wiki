@@ -21,6 +21,7 @@ const highlighter = createHighlighter({themes:['github-light','github-dark'],lan
 export async function renderMarkdown(markdown: string, file: string, routes: Record<string,string> = {}) {
   const headings: Heading[]=[];
   const slugger = new GithubSlugger();
+  let diagramTitle = '结构图';
   const colorizer=await highlighter;
   const schema: typeof defaultSchema = {...defaultSchema, attributes: {...defaultSchema.attributes,
     code: [...(defaultSchema.attributes?.code || []).filter(rule => typeof rule === 'string' ? rule !== 'className' : rule[0] !== 'className'), ['className', /^language-/, 'math-inline', 'math-display']]
@@ -31,6 +32,7 @@ export async function renderMarkdown(markdown: string, file: string, routes: Rec
         if (/^h[1-6]$/.test(node.tagName)) {
           const text=toString(node), id=slugger.slug(text);
           node.properties.id=id;
+          diagramTitle=text;
           if (node.tagName==='h2'||node.tagName==='h3') headings.push({id,text,level:Number(node.tagName[1])});
         }
         if (node.tagName==='a' && typeof node.properties.href==='string') {
@@ -50,6 +52,7 @@ export async function renderMarkdown(markdown: string, file: string, routes: Rec
         if(language==='mermaid') {
           node.properties.className=['mermaid-source'];
           node.properties['data-diagram']='';
+          node.properties['data-diagram-title']=diagramTitle;
           return;
         }
         const lang=colorizer.getLoadedLanguages().includes(language)?language:'text';

@@ -2,16 +2,25 @@
 
 ## 系统架构
 
+![业务 Agent：授权目标、真实状态、执行证据、独立验收与修复](../../assets/architecture-agents.svg)
+
+[查看完整架构图](../../assets/architecture-agents.svg)。验收未通过返回观察；通过后才交付。
+
+<details>
+<summary>查看架构图权威源码（Mermaid）</summary>
+
 ```mermaid
 flowchart LR
-  Task["业务目标与授权"] --> Observe["页面、代码或业务状态"]
-  Observe --> Plan["任务规划与行动选择"]
-  Plan --> Execute["GUI / 代码 / API 执行"]
-  Execute --> Evidence["产物与真实状态回读"]
+  Task["业务目标与授权"] --> Observe["页面、代码<br/>或业务状态"]
+  Observe --> Plan["任务规划<br/>与行动选择"]
+  Plan --> Execute["GUI / 代码 / API<br/>执行"]
+  Execute --> Evidence["产物与真实状态<br/>回读"]
   Evidence --> Verify["独立验收"]
   Verify -->|修复| Observe
   Verify -->|通过| Deliver["交付与审计记录"]
 ```
+
+</details>
 
 ## 系统说明
 

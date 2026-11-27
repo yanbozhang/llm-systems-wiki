@@ -2,23 +2,39 @@
 
 ## 系统架构
 
+![Harness 运行闭环：内部职责、外部模型与执行资源、权限支撑和真实状态](../../assets/architecture-harness.svg)
+
+[查看完整运行架构](../../assets/architecture-harness.svg)。实线表示调用、结果或反馈；虚线表示权限约束与状态支撑。M7 贯穿运行，不是执行一次就结束的步骤。成功由 M1 根据 M6 的验收结果判定，修复返回 M5。
+
+![Harness 离线改进：运行事实与验证证据进入 M8，经离线评测发布后续版本](../../assets/architecture-harness-improvement.svg)
+
+[查看完整离线改进图](../../assets/architecture-harness-improvement.svg)。离线改进只影响后续运行版本，不得在当前任务中改写验收标准。两图共用下方唯一权威源，固定布局由生成脚本维护。
+
+<details>
+<summary>查看架构图权威源码（Mermaid）</summary>
+
 ```mermaid
 flowchart TB
-  Goal["M1 目标、约束与完成判定"] --> Schedule["M5 规划、调度与协作"]
-  Schedule --> Context["M2 上下文与持久记忆"]
-  Context --> Model["基础模型：提出行动"]
-  Model --> Guard["M7 权限、隔离与证据保护"]
-  Guard --> Tools["M3 工具与环境接口"]
-  Tools --> Verify["M6 验证、诊断与修复建议"]
+  Goal["M1 目标、约束<br/>与完成判定"] --> Schedule["M5 规划、调度<br/>与协作"]
+  Schedule --> Context["M2 上下文<br/>与持久记忆"]
+  Context --> Model["基础模型<br/>提出行动建议"]
+  Model --> Schedule
+  Schedule --> Tools["M3 工具与<br/>环境接口"]
+  Guard["M7 权限、隔离与证据保护（贯穿运行）"] -.-> Tools
+  Tools --> Resource["外部执行资源<br/>工作区、浏览器<br/>与服务"]
+  Resource --> Tools
+  Tools --> Verify["M6 验证、诊断<br/>与修复建议"]
   Tools --> Schedule
   Verify -->|需要修复或补证| Schedule
   Verify -->|验收结果| Goal
-  Tools --> State["M4 运行状态与故障恢复"]
-  State --> Schedule
-  State --> Improve["M8 评测、归因与自动优化"]
+  Tools -.-> State["M4 运行状态<br/>与故障恢复"]
+  State -.-> Schedule
+  State --> Improve["M8 评测、归因<br/>与自动优化"]
   Verify --> Improve
   Improve -->|离线评测后发布新版本| Schedule
 ```
+
+</details>
 
 ## 系统说明
 

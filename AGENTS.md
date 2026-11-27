@@ -19,3 +19,12 @@
 
 - 2026研究进展在wiki/frontiers/，以knowledge/frontiers.json登记，与基础主题交叉链接。严格区分论文录用年份、读取版本、仓库release与当前commit。
 - 每条来源在sources/library/<id>/有独立资料卡；原文缓存位于Git忽略的sources/.local/。遵循schema/来源资料库契约.md，运行python scripts/source_library.py check；本地缓存验证另加--local。
+
+## 图示制作与维护
+
+新增、修改或生成图示前阅读 [GitHub仓库绘图标准指南](docs/GitHub仓库绘图标准指南.md)；图示入口见 [图示索引](docs/图示索引.md)。
+
+- 先核对对象、边界、关系和条件，再安排布局；复杂总体架构使用固定 SVG，局部流程保留 Mermaid。
+- Markdown 与 knowledge 是唯一内容源；同步生成展示图、索引、原图入口和相关正文，不手工改导出 SVG。
+- 运行 `python scripts/render_diagrams.py --check`、`python scripts/render_maps.py --check` 和相应测试。
+- 必须真实渲染，检查文字、连线、主题、窄屏与目标页面；语法或单测不能代替视觉验收。交付明确未验证渠道。

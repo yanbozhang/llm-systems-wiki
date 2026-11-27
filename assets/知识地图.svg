@@ -1,40 +1,99 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="710" viewBox="0 0 1100 710" role="img" aria-labelledby="title description">
-<title id="title">8模块知识地图</title><desc id="description">50个主题 · 150个知识点 · 32项分层能力；先系统架构，再主题总览，最后细化知识点。</desc>
-<rect width="1100" height="710" fill="#f8f9f6"/>
-<g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#202824">
-<text x="35" y="48" font-size="28" font-weight="700">8模块知识地图</text>
-<text x="35" y="78" font-size="16" fill="#59675f">50个主题 · 150个知识点 · 32项分层能力</text>
-<rect x="35" y="105" width="500" height="116" rx="12" fill="#ffffff" stroke="#d9e0d9"/>
-<text x="57" y="140" font-size="21" font-weight="650">模型网络</text>
-<text x="57" y="172" font-size="15" fill="#3158d4">系统架构 → 主题总览 → 细化知识点</text>
-<text x="57" y="200" font-size="13" fill="#59675f">4个主题 · 12个知识点 · 4项能力</text>
-<rect x="570" y="105" width="500" height="116" rx="12" fill="#ffffff" stroke="#d9e0d9"/>
-<text x="592" y="140" font-size="21" font-weight="650">训练</text>
-<text x="592" y="172" font-size="15" fill="#3158d4">系统架构 → 主题总览 → 细化知识点</text>
-<text x="592" y="200" font-size="13" fill="#59675f">4个主题 · 12个知识点 · 4项能力</text>
-<rect x="35" y="245" width="500" height="116" rx="12" fill="#ffffff" stroke="#d9e0d9"/>
-<text x="57" y="280" font-size="21" font-weight="650">推理</text>
-<text x="57" y="312" font-size="15" fill="#3158d4">系统架构 → 主题总览 → 细化知识点</text>
-<text x="57" y="340" font-size="13" fill="#59675f">4个主题 · 12个知识点 · 4项能力</text>
-<rect x="570" y="245" width="500" height="116" rx="12" fill="#ffffff" stroke="#d9e0d9"/>
-<text x="592" y="280" font-size="21" font-weight="650">Harness</text>
-<text x="592" y="312" font-size="15" fill="#3158d4">系统架构 → 主题总览 → 细化知识点</text>
-<text x="592" y="340" font-size="13" fill="#59675f">6个主题 · 18个知识点 · 4项能力</text>
-<rect x="35" y="385" width="500" height="116" rx="12" fill="#ffffff" stroke="#d9e0d9"/>
-<text x="57" y="420" font-size="21" font-weight="650">知识库</text>
-<text x="57" y="452" font-size="15" fill="#3158d4">系统架构 → 主题总览 → 细化知识点</text>
-<text x="57" y="480" font-size="13" fill="#59675f">5个主题 · 15个知识点 · 4项能力</text>
-<rect x="570" y="385" width="500" height="116" rx="12" fill="#ffffff" stroke="#d9e0d9"/>
-<text x="592" y="420" font-size="21" font-weight="650">业务Agent</text>
-<text x="592" y="452" font-size="15" fill="#3158d4">系统架构 → 主题总览 → 细化知识点</text>
-<text x="592" y="480" font-size="13" fill="#59675f">12个主题 · 36个知识点 · 4项能力</text>
-<rect x="35" y="525" width="500" height="116" rx="12" fill="#ffffff" stroke="#d9e0d9"/>
-<text x="57" y="560" font-size="21" font-weight="650">Benchmark</text>
-<text x="57" y="592" font-size="15" fill="#3158d4">系统架构 → 主题总览 → 细化知识点</text>
-<text x="57" y="620" font-size="13" fill="#59675f">11个主题 · 33个知识点 · 4项能力</text>
-<rect x="570" y="525" width="500" height="116" rx="12" fill="#ffffff" stroke="#d9e0d9"/>
-<text x="592" y="560" font-size="21" font-weight="650">RSI</text>
-<text x="592" y="592" font-size="15" fill="#3158d4">系统架构 → 主题总览 → 细化知识点</text>
-<text x="592" y="620" font-size="13" fill="#59675f">4个主题 · 12个知识点 · 4项能力</text>
-<text x="35" y="690" font-size="13" fill="#59675f">由knowledge清单生成；教学模型与真实复现实验保持区分。</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="1619" viewBox="0 0 1120 1619" role="img" aria-labelledby="title description">
+<title id="title">8模块知识地图</title><desc id="description">50个主题 · 150个知识点 · 32项分层能力；模块为学习分类，不表示严格执行顺序。全部条目由权威清单生成。</desc>
+<rect width="1120" height="1619" rx="16" fill="#ffffff"/>
+<g font-family="Inter, PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#183654">
+<text x="36" y="36" font-size="15" letter-spacing="3" fill="#607286">LLM SYSTEMS / LEARNING ATLAS</text>
+<text x="36" y="77" font-size="32" font-weight="700">8模块知识地图</text>
+<text x="36" y="109" font-size="19" fill="#607286">50个主题 · 150个知识点 · 32项分层能力</text>
+<rect x="36" y="138" width="512" height="226" rx="12" fill="#f6f8fc" stroke="#ccd6e3"/>
+<rect x="54" y="159" width="36" height="30" rx="7" fill="#e5edfa"/>
+<text x="72" y="181" text-anchor="middle" font-size="18" fill="#3158a0">01</text>
+<text x="102" y="182" font-size="25" font-weight="650">模型网络</text>
+<text x="56" y="343" font-size="18" fill="#607286">4 主题 / 12 知识点 / 4 能力</text>
+<text x="56" y="220" font-size="19">Transformer与自回归生成</text>
+<text x="56" y="247" font-size="19">MHA与MQA及GQA</text>
+<text x="56" y="274" font-size="19">位置编码与RoPE</text>
+<text x="56" y="301" font-size="19">前馈网络与归一化</text>
+<rect x="572" y="138" width="512" height="226" rx="12" fill="#f6f8fc" stroke="#ccd6e3"/>
+<rect x="590" y="159" width="36" height="30" rx="7" fill="#e5edfa"/>
+<text x="608" y="181" text-anchor="middle" font-size="18" fill="#3158a0">02</text>
+<text x="638" y="182" font-size="25" font-weight="650">训练</text>
+<text x="592" y="343" font-size="18" fill="#607286">4 主题 / 12 知识点 / 4 能力</text>
+<text x="592" y="220" font-size="19">预训练目标与数据</text>
+<text x="592" y="247" font-size="19">监督微调与LoRA</text>
+<text x="592" y="274" font-size="19">偏好学习与DPO</text>
+<text x="592" y="301" font-size="19">策略优化与GRPO</text>
+<rect x="36" y="386" width="512" height="280" rx="12" fill="#f6f8fc" stroke="#ccd6e3"/>
+<rect x="54" y="407" width="36" height="30" rx="7" fill="#e5edfa"/>
+<text x="72" y="429" text-anchor="middle" font-size="18" fill="#3158a0">03</text>
+<text x="102" y="430" font-size="25" font-weight="650">推理</text>
+<text x="56" y="645" font-size="18" fill="#607286">4 主题 / 12 知识点 / 4 能力</text>
+<text x="56" y="468" font-size="19">Prefill与Decode</text>
+<text x="56" y="495" font-size="19">KV缓存原理与显存估算</text>
+<text x="56" y="522" font-size="19">缓存分页与连续批处理</text>
+<text x="56" y="549" font-size="19">推理框架与性能实验</text>
+<rect x="572" y="386" width="512" height="280" rx="12" fill="#f6f8fc" stroke="#ccd6e3"/>
+<rect x="590" y="407" width="36" height="30" rx="7" fill="#e5edfa"/>
+<text x="608" y="429" text-anchor="middle" font-size="18" fill="#3158a0">04</text>
+<text x="638" y="430" font-size="25" font-weight="650">Harness</text>
+<text x="592" y="645" font-size="18" fill="#607286">6 主题 / 18 知识点 / 4 能力</text>
+<text x="592" y="468" font-size="19">Harness任务循环</text>
+<text x="592" y="495" font-size="19">上下文选择与压缩</text>
+<text x="592" y="522" font-size="19">Agent记忆与保鲜</text>
+<text x="592" y="549" font-size="19">工具协议与MCP及Skill</text>
+<text x="592" y="576" font-size="19">LangGraph状态图与持久化</text>
+<text x="592" y="603" font-size="19">AutoGen对话团队与终止</text>
+<rect x="36" y="688" width="512" height="442" rx="12" fill="#f6f8fc" stroke="#ccd6e3"/>
+<rect x="54" y="709" width="36" height="30" rx="7" fill="#e5edfa"/>
+<text x="72" y="731" text-anchor="middle" font-size="18" fill="#3158a0">05</text>
+<text x="102" y="732" font-size="25" font-weight="650">知识库</text>
+<text x="56" y="1109" font-size="18" fill="#607286">5 主题 / 15 知识点 / 4 能力</text>
+<text x="56" y="770" font-size="19">RAG与引用回答</text>
+<text x="56" y="797" font-size="19">来源接入与版本管理</text>
+<text x="56" y="824" font-size="19">混合检索与重排</text>
+<text x="56" y="851" font-size="19">GraphRAG：实体、社区与证据查询</text>
+<text x="56" y="878" font-size="19">LLMwiki：知识编纂与更新</text>
+<rect x="572" y="688" width="512" height="442" rx="12" fill="#f6f8fc" stroke="#ccd6e3"/>
+<rect x="590" y="709" width="36" height="30" rx="7" fill="#e5edfa"/>
+<text x="608" y="731" text-anchor="middle" font-size="18" fill="#3158a0">06</text>
+<text x="638" y="732" font-size="25" font-weight="650">业务Agent</text>
+<text x="592" y="1109" font-size="18" fill="#607286">12 主题 / 36 知识点 / 4 能力</text>
+<text x="592" y="770" font-size="19">业务Agent任务闭环</text>
+<text x="592" y="797" font-size="19">GUI定位与执行</text>
+<text x="592" y="824" font-size="19">AI代码开发与反馈</text>
+<text x="592" y="851" font-size="19">Agent评测与失败归因</text>
+<text x="592" y="878" font-size="19">OpenHands事件流与运行时</text>
+<text x="592" y="905" font-size="19">SWEAgent与智能体计算机接口</text>
+<text x="592" y="932" font-size="19">Aider仓库地图与编辑协议</text>
+<text x="592" y="959" font-size="19">MobileAgent多智能体协作</text>
+<text x="592" y="986" font-size="19">AppAgent探索与技能学习</text>
+<text x="592" y="1013" font-size="19">UITARS感知与动作执行</text>
+<text x="592" y="1040" font-size="19">CodexCLI架构与执行</text>
+<text x="592" y="1067" font-size="19">ClaudeCode工作流与扩展边界</text>
+<rect x="36" y="1152" width="512" height="415" rx="12" fill="#f6f8fc" stroke="#ccd6e3"/>
+<rect x="54" y="1173" width="36" height="30" rx="7" fill="#e5edfa"/>
+<text x="72" y="1195" text-anchor="middle" font-size="18" fill="#3158a0">07</text>
+<text x="102" y="1196" font-size="25" font-weight="650">Benchmark</text>
+<text x="56" y="1546" font-size="18" fill="#607286">11 主题 / 33 知识点 / 4 能力</text>
+<text x="56" y="1234" font-size="19">评测协议与可复现性</text>
+<text x="56" y="1261" font-size="19">评测指标与统计推断</text>
+<text x="56" y="1288" font-size="19">数据污染与评测集治理</text>
+<text x="56" y="1315" font-size="19">通用能力基准与选型</text>
+<text x="56" y="1342" font-size="19">推理与代码生成评测</text>
+<text x="56" y="1369" font-size="19">多模态与界面感知评测</text>
+<text x="56" y="1396" font-size="19">Agent任务基准与执行评估</text>
+<text x="56" y="1423" font-size="19">RAG检索与回答评测</text>
+<text x="56" y="1450" font-size="19">模型裁判与人工校准</text>
+<text x="56" y="1477" font-size="19">推理系统性能基准</text>
+<text x="56" y="1504" font-size="19">稳健性与工具安全评测</text>
+<rect x="572" y="1152" width="512" height="415" rx="12" fill="#f6f8fc" stroke="#ccd6e3"/>
+<rect x="590" y="1173" width="36" height="30" rx="7" fill="#e5edfa"/>
+<text x="608" y="1195" text-anchor="middle" font-size="18" fill="#3158a0">08</text>
+<text x="638" y="1196" font-size="25" font-weight="650">RSI</text>
+<text x="592" y="1546" font-size="18" fill="#607286">4 主题 / 12 知识点 / 4 能力</text>
+<text x="592" y="1234" font-size="19">RSI改进闭环与版本准入</text>
+<text x="592" y="1261" font-size="19">RSI记忆与技能更新</text>
+<text x="592" y="1288" font-size="19">RSI系统与改进器演化</text>
+<text x="592" y="1315" font-size="19">RSI评测与归因</text>
+<text x="36" y="1600" font-size="18" fill="#607286">由 knowledge 清单生成；编号表示目录顺序，不代表依赖关系或学习成果。</text>
 </g></svg>
