@@ -1,9 +1,9 @@
 {
-  "date": "2026-11-26",
-  "module": "rsi",
-  "topic": "rsi-evolution",
+  "date": "2026-11-27",
+  "module": "knowledge",
+  "topic": "rag",
   "reason": "按学习日轮换；同组模块交替，模块内按登记顺序推进",
   "review_due": false,
-  "learning_objective": "设计参数与框架交叉实验",
-  "deliverable": "四格归因表、候选前沿及改进器对照"
+  "learning_objective": "拆分检索和回答误差",
+  "deliverable": "从自建小资料集设计12个问题：单源、多源、无答案、版本冲突各3个。先人工冻结相关证据和判据，再比较检索与回答，不让候选系统同时制定自己的标准答案。"
 }

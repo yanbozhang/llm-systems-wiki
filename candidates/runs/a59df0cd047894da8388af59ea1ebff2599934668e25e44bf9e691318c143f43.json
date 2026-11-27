@@ -1,0 +1,118 @@
+{
+  "checked_at": "2026-11-27T14:19:03.517556+08:00",
+  "status": "changed",
+  "candidates": [
+    {
+      "id": "0585e8cea139fb031c940a1bec32732176ea8d7bd6a9a37c2c5b1c010467f6df",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/024d5255eb4466ba4fab21e044b5ba84d6a79327",
+      "title": "docs: add release cycle page (#3550)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/024d5255eb4466ba4fab21e044b5ba84d6a79327",
+      "updated": "2026-11-26T20:04:01Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "e1024b0edca0167cdc47b19b96ff2a1d31b7e06d7379d851c68862f5c4daa025",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/bdfe59b8cb25b2182d7617b9426455feb406bc1b",
+      "title": "build(deps-dev): bump mint from 4.3.34 to 4.3.75 (#3580)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/bdfe59b8cb25b2182d7617b9426455feb406bc1b",
+      "updated": "2026-11-26T19:13:40Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "efcd7c9a93d4ba7ab4b45674bbb9ced1e5cbde6d6374f72b0da4ac3e74f9c43a",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/29336ab3a9a9ae77152c94a8b35a9e61f3ea69da",
+      "title": "build(deps-dev): bump typescript-eslint from 8.72.2 to 8.73.0 (#3579)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/29336ab3a9a9ae77152c94a8b35a9e61f3ea69da",
+      "updated": "2026-11-26T19:12:55Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    },
+    {
+      "id": "1fe249c120879acad35968a7d1ea85c1fed1e37c99ad701af582c003ba85a6d6",
+      "feed_id": "mcp",
+      "entry_id": "tag:github.com,2008:Grit::Commit/f8c8f485d281ce8eef1f5383628cad5fe4259956",
+      "title": "build(deps-dev): bump eslint from 10.14.0 to 10.15.0 (#3578)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/f8c8f485d281ce8eef1f5383628cad5fe4259956",
+      "updated": "2026-11-26T19:11:40Z",
+      "status": "pending_read",
+      "reading_scope": "feed_metadata"
+    }
+  ],
+  "feeds": [
+    {
+      "feed_id": "transformers",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "trl",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "vllm",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "sglang",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "mcp",
+      "status": "ok",
+      "new_count": 4
+    },
+    {
+      "feed_id": "skills",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "graphrag",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "lightrag",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "swebench",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "osworld",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-lm-eval",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-opencompass",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-mlperf",
+      "status": "ok",
+      "new_count": 0
+    },
+    {
+      "feed_id": "bench-agentdojo",
+      "status": "ok",
+      "new_count": 0
+    }
+  ]
+}
