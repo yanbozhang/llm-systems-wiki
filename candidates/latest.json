@@ -1,44 +1,34 @@
 {
-  "checked_at": "2026-11-27T14:19:03.517556+08:00",
+  "checked_at": "2026-11-28T13:57:03.581348+08:00",
   "status": "changed",
   "candidates": [
     {
-      "id": "0585e8cea139fb031c940a1bec32732176ea8d7bd6a9a37c2c5b1c010467f6df",
+      "id": "fa63f943eac8207969b06c01926da2c1c3a7316904c0ef01f12dec3adf1f44f5",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/024d5255eb4466ba4fab21e044b5ba84d6a79327",
-      "title": "docs: add release cycle page (#3550)",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/024d5255eb4466ba4fab21e044b5ba84d6a79327",
-      "updated": "2026-11-26T20:04:01Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/fdc75bd0668db05f5b43e4fc76c2e5aa54296a42",
+      "title": "docs: add a site-wide Discord banner (#3597)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/fdc75bd0668db05f5b43e4fc76c2e5aa54296a42",
+      "updated": "2026-11-27T21:20:47Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "e1024b0edca0167cdc47b19b96ff2a1d31b7e06d7379d851c68862f5c4daa025",
+      "id": "bb13252fcf869974eb1c05b6820d9edceda803262cbfbde24bf027c882ab1c7b",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/bdfe59b8cb25b2182d7617b9426455feb406bc1b",
-      "title": "build(deps-dev): bump mint from 4.3.34 to 4.3.75 (#3580)",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/bdfe59b8cb25b2182d7617b9426455feb406bc1b",
-      "updated": "2026-11-26T19:13:40Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/c0bdba6e1e168f8e3b3198be03282c4c0065837f",
+      "title": "docs: link roadmap to release cycle (#3549)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/c0bdba6e1e168f8e3b3198be03282c4c0065837f",
+      "updated": "2026-11-27T20:48:42Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     },
     {
-      "id": "efcd7c9a93d4ba7ab4b45674bbb9ced1e5cbde6d6374f72b0da4ac3e74f9c43a",
+      "id": "7b875442919e298ef72883b8551c6a49d691cf9920472a2301ad035d661fc143",
       "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/29336ab3a9a9ae77152c94a8b35a9e61f3ea69da",
-      "title": "build(deps-dev): bump typescript-eslint from 8.72.2 to 8.73.0 (#3579)",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/29336ab3a9a9ae77152c94a8b35a9e61f3ea69da",
-      "updated": "2026-11-26T19:12:55Z",
-      "status": "pending_read",
-      "reading_scope": "feed_metadata"
-    },
-    {
-      "id": "1fe249c120879acad35968a7d1ea85c1fed1e37c99ad701af582c003ba85a6d6",
-      "feed_id": "mcp",
-      "entry_id": "tag:github.com,2008:Grit::Commit/f8c8f485d281ce8eef1f5383628cad5fe4259956",
-      "title": "build(deps-dev): bump eslint from 10.14.0 to 10.15.0 (#3578)",
-      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/f8c8f485d281ce8eef1f5383628cad5fe4259956",
-      "updated": "2026-11-26T19:11:40Z",
+      "entry_id": "tag:github.com,2008:Grit::Commit/bd5bc16fb0b4eee9e0a1994ffaa1d67f213865ac",
+      "title": "docs: add OpenCode to the extension client matrix (#3595)",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/commit/bd5bc16fb0b4eee9e0a1994ffaa1d67f213865ac",
+      "updated": "2026-11-27T17:21:14Z",
       "status": "pending_read",
       "reading_scope": "feed_metadata"
     }
@@ -67,7 +57,7 @@
     {
       "feed_id": "mcp",
       "status": "ok",
-      "new_count": 4
+      "new_count": 3
     },
     {
       "feed_id": "skills",
